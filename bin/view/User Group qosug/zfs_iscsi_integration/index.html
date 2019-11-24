@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>ZFS iSCSI pool integration (User Group qosug.zfs_iscsi_integration) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/User+Group+qosug/zfs_iscsi_integration" />
+                    <link rel="canonical" href="/bin/view/User+Group+qosug/zfs_iscsi_integration" />
+                            <meta name="document" content="User Group qosug.zfs_iscsi_integration"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="User Group qosug"/>
+    <meta name="page" content="zfs_iscsi_integration"/>
+    <meta name="version" content="1.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/User+Group+qosug/pages/zfs_iscsi_integration"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="ZFS iSCSI pool integration" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "User Group qosug";
+XWiki.currentPage = "zfs_iscsi_integration";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/User+Group+qosug/zfs_iscsi_integration";
+window.docediturl = "/bin/edit/User+Group+qosug/zfs_iscsi_integration";
+window.docsaveurl = "/bin/save/User+Group+qosug/zfs_iscsi_integration";
+window.docgeturl = "/bin/get/User+Group+qosug/zfs_iscsi_integration";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-User_Group_qosug viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FUser%2BGroup%2Bqosug%2Fzfs_iscsi_integration"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/User+Group+qosug/"><strong>User Group qosug</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=User+Group+qosug" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+            </td>
+            <td id="logo-text" style="width: 1%;">
+                Solaris
+            </td>         
+            <td style="width: 98%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                              <a href='/bin/view/User+Group+qosug/how%2Dtos'>How-to&#39;s</a> <span class='separator'>&#187;</span> <span class='current'>ZFS iSCSI pool integration</span>
+                </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/User+Group+qosug/zfs_iscsi_integration?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/User+Group+qosug/zfs_iscsi_integration?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/User+Group+qosug/zfs_iscsi_integration?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/User+Group+qosug/zfs_iscsi_integration?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/User+Group+qosug/zfs_iscsi_integration?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/User+Group+qosug/zfs_iscsi_integration?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/User+Group+qosug/zfs_iscsi_integration?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/User+Group+qosug/zfs_iscsi_integration?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/User+Group+qosug/zfs_iscsi_integration?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/User+Group+qosug/zfs_iscsi_integration?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/User+Group+qosug/zfs_iscsi_integration?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          <span class="submenuitem "><a href="/bin/view/User+Group+qosug/zfs_iscsi_integration?xpage=copy" id="tmActionCopy" class="tmActionCopy">Copy</a></span>
+      </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>ZFS iSCSI pool integration</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<p>One of the biggest problems we face today, as consolidation specialists, in storage, is attempting to actually push everything to a unified <em>"one size fits all"</em> standfast. In thinking about the concept of one-size-fits-all storage consolidation, I realised that ZFS is somewhat adept at this, given the intrinsic variable sector allocation that takes place seamlessly.</p><p>&nbsp;In this tangent, I began trying to come up with a way to make better backup mechanisms from Mac OS X, Vista and "other" desktop operating systems, floating around my network. One of the biggest problems thus far with Time Machine and WHS (Windows Home Server) amongst other non-enterprise desktop OS's is that, they don't really play well with ZFS pools when shared across CIFS or Samba (or NFS), and oftentimes, it is quite hackish, just to get them to work at all. Those familiar with Time Machine architecture will know this string off by heart:</p><pre>
+defaults write com.apple.systempreferences TMShowUnsupportedNetworkVolumes 1
+</pre><p>&nbsp;You are left, on the zpool, with what is known as a "sparse bundle", whereby you force Apple's Time Machine to recognise that an smb/NFS share is "legal" as a backup store, then it writes, what looks like an ever-expanding ISO file to the zpool. Unfortunately, no matter how you construe it, this won't work correctly with the TimeMachine interface, and you'll eventually get TM errors thrown as a result of the inability of the TM interface to read hard links from the ZFS pool, which is full of CoW soft links.</p><p>&nbsp;So, I had a few thoughts about the use of <em>iscsitadm</em> and using proper iscsi exported LUN's back to the clients to achieve this task a little more succinctly.</p><ol><li>Installed OpenSolaris snv_103 on Intel Core2Duo Q6600 system</li></ol><p>&nbsp;2. Created a raidz1 array</p><pre>
+
+bash 3.2# zpool create raidz1 backups c1t1d0 c1t1d1 c1t1d2
+
+</pre><p>&nbsp;3. Add some on the fly compression</p><pre>
+
+zfs set compression=on backups
+
+</pre><p>&nbsp;4. Created iSCSI backing stores for separated backup volumes for each environment I wanted to cater for:</p><pre>
+
+bash-3.2# zfs create -s -V 100GB backups/zebra_osx_backup
+bash-3.2# zfs create -s -V 100GB backups/zebra_linux_backup
+bash-3.2# zfs create -s -V 250GB backups/zebra_windows_backup
+
+</pre><p>&nbsp;Next, they needed to be shared out:</p><pre>
+
+bash-3.2# zfs set shareiscsi=on backups/zebra_osx_backup
+bash-3.2# zfs set shareiscsi=on backups/zebra_linux_backup
+bash-3.2# zfs set shareiscsi=on backups/zebra_windows_backup
+
+</pre><p>&nbsp;5. At this point, it would be wise to check the LUN mapping information:</p><pre>
+
+bash-3.2# iscsitadm list target
+Target: backups/zebra_osx_backup
+    iSCSI Name: iqn.1986-03.com.sun:02:b32135fe-29fe-ce68-a3de-83bd0ec088b1
+    Connections: 0
+
+Target: backups/zebra_linux_backup
+    iSCSI Name: iqn.1986-03.com.sun:02:42859bd6-2b40-6b7c-beeb-a3d0a2be647e
+    Connections: 0
+
+Target: backups/zebra_windows_backup
+    iSCSI Name: iqn.1986-03.com.sun:02:f6fcb58a-b3ac-4d09-f473-b62b6126adcc
+    Connections: 0
+
+</pre><p>&nbsp;6. Mac OS X has some problems talking iSCSI without a few modifications. A non-product documented plist needs to be added, to make any initiator of any use to us. As follows, from /Library/Preferences/iSCSIconfig.plst:</p><pre>
+
+	Manually Added Targets
+
+	Portals
+
+			IPSec ESP Mode
+			Normal
+			IPSec IKE Mode
+			Normal
+			IPSec PFS Mode
+			0
+			Portal Name
+			192.168.0.8
+			Portal Port
+			3260
+			Use Data Digest
+			0
+			Use Header Digest
+			0
+			Use IPSec
+			0
+
+</pre><p>&nbsp;So, Mac OS X now understands iSCSI, but we'll need an initiator daemon!</p><p>&nbsp;7. I found a wonderful FREE iscsi-initiator from globalSAN Inc, for Mac OS X. Once installed, I directed it to look for iSCSI targets at the IP address of the Solaris host:</p><p> <img src="https://markebrooks.github.io/bin/download/User+Group+qosug/files/zfsinteg1.png" alt="zfsinteg1.png"/></p><p>&nbsp;8. Once this is dealt with, you can then take a look in disk utility, to make the LUN act as real HFS+, just as Apple would prefer it:</p><p> <img src="https://markebrooks.github.io/bin/download/User+Group+qosug/files/zfsinteg2.png" alt="zfsinteg2.png"/></p><p>&nbsp;At this point, one should check if Time Machine actually works:</p><p> <img src="https://markebrooks.github.io/bin/download/User+Group+qosug/files/zfsinteg3.png" alt="zfsinteg3.png"/></p><p>&nbsp;Indeed, it appears to. Let's check the navigation GUI Apple provide:</p><p> <img src="https://markebrooks.github.io/bin/download/User+Group+qosug/files/zfsinteg4.png" alt="zfsinteg4.png"/></p><p>&nbsp;The same can be said for Windows Vista. We can make it behave just like any other disk internally to the system, with all the same behavioural patterns of NTFS, albeit, atop a ZFS zvol. We need to simply point the inbuilt Vista iSCSI initiator at the OpenSolaris host and discover targets.</p><p>&nbsp;Finally, import it using the disk management utility that Windows offers, and format as a normal NTFS volume. Enjoy.</p>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:17<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by admin on 2009/10/26 12:17
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">User Group qosug Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/User+Group+qosug/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+qosug/how%2Dtos">How&#45;to's</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/User+Group+qosug/opensolarisupgrade">Fast root ZFS boot SXCE Upgrade using lu tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+qosug/sam%2Dand%2Dzfs">SAM&#45;FS atop ZFS.</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+qosug/zfs_iscsi_integration">ZFS iSCSI pool integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+qosug/zraidvdevexpansion">ZFS vdev on the fly expansion &#45; sort of</a></span></li>
+</ul></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2012, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

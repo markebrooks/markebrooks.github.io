@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>SCM console specification (Community Group tools.scmconsolespec) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Community+Group+tools/scmconsolespec" />
+                    <link rel="canonical" href="/bin/view/Community+Group+tools/scmconsolespec" />
+                            <meta name="document" content="Community Group tools.scmconsolespec"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Community Group tools"/>
+    <meta name="page" content="scmconsolespec"/>
+    <meta name="version" content="1.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Community+Group+tools/pages/scmconsolespec"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="SCM console specification" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Community Group tools";
+XWiki.currentPage = "scmconsolespec";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Community+Group+tools/scmconsolespec";
+window.docediturl = "/bin/edit/Community+Group+tools/scmconsolespec";
+window.docsaveurl = "/bin/save/Community+Group+tools/scmconsolespec";
+window.docgeturl = "/bin/get/Community+Group+tools/scmconsolespec";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Community_Group_tools viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FCommunity%2BGroup%2Btools%2Fscmconsolespec"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+tools/"><strong>Community Group tools</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Community+Group+tools" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+            </td>
+            <td id="logo-text" style="width: 1%;">
+                Solaris
+            </td>         
+            <td style="width: 98%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                              <a href='/bin/view/Community+Group+tools/scm'>OpenSolaris Source Code Management</a> <span class='separator'>&#187;</span> <span class='current'>SCM console specification</span>
+                </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Community+Group+tools/scmconsolespec?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Community+Group+tools/scmconsolespec?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+tools/scmconsolespec?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+tools/scmconsolespec?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+tools/scmconsolespec?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Community+Group+tools/scmconsolespec?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+tools/scmconsolespec?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+tools/scmconsolespec?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+tools/scmconsolespec?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+tools/scmconsolespec?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Community+Group+tools/scmconsolespec?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          <span class="submenuitem "><a href="/bin/view/Community+Group+tools/scmconsolespec?xpage=copy" id="tmActionCopy" class="tmActionCopy">Copy</a></span>
+      </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>SCM console specification</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h1 id="HOpenSolaris"><span>OpenSolaris</span></h1><h1 id="HSCMProjectConsoleSpecification"><span>SCM Project Console Specification</span></h1><h1 id="H28DRAFT29"><span>(DRAFT)</span></h1><p><em>Copyright 2006 Sun Microsystems, Inc. All rights reserved. Use is subject to license terms.</em></p><p><em>ident "@(#)d-scm-operational.txt 1.2 06/02/17 SMI"</em></p><h2 id="H1.Summary"><span>1. Summary</span></h2><p>This document, in concert with the approach outlined in "OpenSolaris source code management implementation" [1], specifies the technical requirements to be added to the Projects feature to support managed source code repositories.</p><h2 id="H2.Discussion"><span>2. Discussion</span></h2><p>Items suffixed with a (II) are for implementation during the distributed SCM phase. Items suffixed with a <img src="/resources/icons/silk/star.gif" class="wikimodel-freestanding" alt="star"/>&nbsp;are future implementation possibilities.</p><h3 id="H2.1.Components"><span>2.1. Components</span></h3><p>The implementation requires support from multiple components within the larger infrastructure. Components affected include:</p><ul><li>the web application,</li><li>a PAM session module,</li><li>an identity update facility,</li><li>an automount map generator, and</li><li>one or more SCM-specific local execution programs.</li></ul><p>(The latter four are assumed to be running on a separate host from the web application, and will be implemented by Sun employees.) This document outlines the changes to the web application that integrate the remaining components. As such, informational text describing the other four components follows.</p><h4 id="H2.1.1.PAMsessionmodule."><span>2.1.1. PAM session module.</span></h4><p>A PAM session module, pam_host_scm.so, will be placed in the local PAM configuration of the SCM host machine. This module will chroot(2) the user to a safe environment and set the umask(2) to 0000.</p><h4 id="H2.1.2.Identityupdatefacility."><span>2.1.2. Identity update facility.</span></h4><p>A cron(1M)-driven job, the update facility will examine the user table on a periodic basis.</p><p>Passwords are encoded in the webapp database with an MD5 hash.</p><h4 id="H2.1.3.Automountmapgenerator"><span>2.1.3. Automount map generator</span></h4><p>The safe environment is constructed from a set of key-tied automount entries. These entries are based on each user's status as a committer in one or more projects.</p><h4 id="H2.1.4.SCM-specificlocalexecutionprograms."><span>2.1.4. SCM-specific local execution programs.</span></h4><p>The local execution programs may be separated into three classes: reporting only, modifying, and notification hooks.</p><p>Reporting only programs will be implemented as CGI scripts or equivalents that will report as text/plain in response to an HTTP GET query at one or more defined URLs. For example, the svnlook(1) command of Subversion can have its reporting capabilities wrapped in a simple CGI script.</p><p>Modifying programs, which require a more complex error channel, will be implemented to invoke functionality from the SCM host daemon. See 2.1.5 for more details.</p><p>Minimal use of hook functionality will be offered in the initial release. The only hook, which may need to be installed for multiple operations, will notify the mail alias associated with the repository on SCM operations that modify the files within the repository. (Notification is not provided for administrative operations, such as description changes or committer modifications.)</p><h4 id="H2.1.5SCMhostdaemon"><span>2.1.5 SCM host daemon</span></h4><p>This daemon is responsible for allowing the web application to interact with the SCM host. Specific responsibilities include:</p><ul><li>Authenticating and Performing remote requests</li><li>Securing Remote Requests</li></ul><p>Since this is written in Java to facilitate interoperation with the web application, the "SCM-specific local execution programs" must be able to easily interact with Java. The lowest common denominator approach would be to provide Java clients which can be invoked as sub-processes if the "SCM-specific local execution programs" aren't written in Java.</p><h5 id="HInterfaceDefinition"><span>Interface Definition</span></h5><p>The SCM host daemon offers the following remote interfaces:</p><p><em>Admin interface</em></p><p>The interface that an Admin server must implement so that an Admin client can determine which operations may be performed by the server and operations that facilitate synchronous or asynchronous execution of a task.</p><pre>
+
+String[] getOps() throws RemoteException;
+TaskResult executeTask(Task t) throws RemoteException;
+URL executeAsyncTask(Task t) throws RemoteException;
+
+</pre><p><em>Task interface</em></p><p>The interface that an Admin client must implement to allow execution by the Admin server.</p><pre>
+
+TaskResult execute();
+String getName();
+
+</pre><h3 id="H2.2.Databasemodifications."><span>2.2. Database modifications.</span></h3><p>A new object, called a repository, is now tracked by the application. A repository is associated with a project and has a "short name" and a description. The repository is associated with an SCM system of a given type; the first supported type is "svn". A table to track these objects is expected to exist. The repository may or may not be able to be accessed anonymously; the initial setting for the field tracking this access is "true", implying that all repositories allow anonymous access. Each repository has an associated email alias for change notifications. Each repository has a timestamp field containing the date of its creation.</p><p>Determining the list of repositories associated with a specific project is accomplished by a query on the repository table that specifies the project ID of the requested project.</p><p>Each project now has an additional field, an integer specifying the maximum number of repositories permitted for this project.</p><p>Each user now has an additional relationship with each repository on the system. The existence of an entry in the committer table, between a user ID and a repository ID, indicates the ability to perform SCM client operations on that repository. In the initial implementation, although the committer-repository relations are tracked separately, the application will expose only one set of committers per project, and assign each committer to each repository associated with the project.</p><p>If a user is made a "project editor", his or her account should also be given committer privileges for the repositories associated with that project. Upon loss of editorship, the user retains committer rights (which may be removed manually).</p><p>Upon user deletion, committer rights entries should be removed.</p><p>The database is implemented in MySQL. See Appendix A for MySQL specific tables outlining the required database changes.</p><h3 id="H2.3.Projectpagechangesandrelatedmodifications"><span>2.3. Project page changes and related modifications</span></h3><p>The project page, <span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://opensolaris.org/os/project/"><span class="wikigeneratedlinkcontent">http://opensolaris.org/os/project/</span></a></span>[project], shall have a new left hand menu item entitled "Repositories". Clicking on that link will load a new page, as described in the following section.</p><p>The project profile page, entitled "Edit Project" and with URL <span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://www.opensolaris.org/os/projects/editProject.jspa"><span class="wikigeneratedlinkcontent">http://www.opensolaris.org/os/projects/editProject.jspa</span></a></span>, needs a new property entry, "Maximum number of repositories".</p><h3 id="H2.4.Repositoriespage"><span>2.4. Repositories page</span></h3><p>The new "Repositories" page is the primary reporting page for a project's source code repositories. The page will consist of a table that lists the code repositories, displaying their names and descriptions, the mailing list they send notifications to, and the URLs used to access them from their appropriate SCM and from HTTP access. The table will further list the committers to the repository.</p><p>Furthermore, each repository will offer a list of status operation links to the SCM host. The URL for these links for repositories of type "svn" is</p><div class="box code">&nbsp;http:<span style="color: #666666; ">//</span>svn.opensolaris.org<span style="color: #666666; ">/</span>svnlook.cgi?project=[project]<span style="color: #666666; ">&amp;</span> <span style="color: #666666; ">\</span> repository=[repository]<span style="color: #666666; ">&amp;</span>operation=[operation]<span style="color: #666666; ">&amp;</span>result=xhtml&nbsp;</div><p>Valid operations for this listing are "author", "changed", "date", "dirs-changed", "info", "log", "uuid", "youngest". (The svnlook.cgi script, noted in 2.1.4, may support additional invocation options that can be supported at a later date.)</p><h3 id="H2.5.Projectleadermenu"><span>2.5. Project leader menu</span></h3><p>The project leader menu will require the addition of items allowing access to repository operations. To be consistent with the other menus of this kind, items entitled "Find Repositories" and "Add Repository" will be added.</p><p>Additionally, to manage committers, a "Manage Committers" item will be needed.</p><p>Each of these items brings up a distinct page, as explained in the following subsections.</p><h4 id="H2.5.1.FindRepositoriespage"><span>2.5.1. Find Repositories page</span></h4><p>The Find Repository page allows the querying of the set of repositories owned by this project. Upon page load, the Find Repositories page will display the results of the default query, which is unpopulated and meant to match all repositories. The project leader may then perform an additional filtering query to reduce the result set.</p><p>The query form should present three fields for the query: short name, description, and repository type. The short name and description fields are text entry fields. The repository type is a radio selection from "Subversion" and "Don't Care".</p><p>Selecting a specific repository from the result set table leads to the "Manage Repository" page being loaded.</p><h4 id="H2.5.2.ManageRepositorypage"><span>2.5.2. Manage Repository page</span></h4><p>The Manage Repository page allows the modification of mutable repository properties and the invocation of repository administrative operations. It also permits the deletion of repositories.</p><p>The mutable fields for the initial release are the Description text field and the Notification Alias text field. The top portion of the page should present these fields and a "Save" button that submits the operation. Completing the submission should result in a reload of the Manage Repository page, with a short banner encoded as a DIV entity with class "appResult" (henceforth an "appResult" banner) that outlines the success or failure of the modification.</p><p>The middle section of the page is concerned with repository operations. These are specific to the repository type, which should be identified in the header at the beginning of the page section.</p><p>At this point, the only supported operation is "verify". XXX How is this operation requested?</p><p>Completion of the submission of a repository operation should again result in a reload of the Manage Repository page, with a short "appResult" banner at the top of the middle section that describes the outcome of the operation.</p><p>The bottom section of the page consists of a single question, "Delete this repository?", and a submit button. A submission of this kind should result in a second verification question ("Are you certain?"). Following this confirmation, the application should request of the SCM host that the repository be deleted. Upon a successful deletion, the application may delete the repository and associated entries from the database. The application should then load the Find Repositories page, and display an "appResult" banner outlining the deletion's success. In the cases that SCM deletion was unsuccessful, the Manage Repositories page should be displayed with an appropriate "appResult" banner. (The SCM execution agent will send a notification message to the site administrator that contains the reason for the failure.)</p><h4 id="H2.5.3.AddRepositorypage"><span>2.5.3. Add Repository page</span></h4><p>The Add Repository page allows the creation of new repositories on the system.</p><p>The page asks for the following:</p><ul><li>a short name, as a text field,</li><li>a description, as a text field,</li><li>a notification alias, as a text field,</li><li>a repository type, as a radio button field with one choice, "Subversion", and</li><li>an allow anonymous access field, as a radio button field with one choice, "Yes".</li></ul><p>This should be followed by a submit button with label "Save". The short name must be unique to the repositories managed by this project. The default short name is "main". The submission will result in a request of the SCM execution agent.</p><p>On success, the application will record these values, along with the timestamp of the operation, and also create appropriate committer entries. (The initial set of committers is comprised of the project leads at the time of repository creation.) The application should the Find Repositories page, with an appropriate appResult banner at the top of the page.</p><p>On failure, the application will redisplay the Add Repository page, with an appResult banner explaining the failure.</p><h4 id="H2.5.4.ManageCommitterspage"><span>2.5.4. Manage Committers page</span></h4><p>This feature is the first where a role other than the Site Administrator can grant capabilites to an individual user. Committers only have capabilities on the SCM host(s), and have no new role in the sense of the web application.</p><p>The Manage Committers page presents a selection list of the committers associated with the project. Then, a text field, labelled "New Committers", with an associated submit button, "Add", constitutes the add committer operation. The text field contents may be a space or comma separated list. Each user ID must be a valid OpenSolaris ID.</p><p>A further submit button, labelled "Delete Selected", submits a request to removed the selected committer entries from the displayed list.</p><p>Both of these operations should reload the Manage Committers page, with an appResult banner outlining the operational outcome.</p><h2 id="H3.Futurework"><span>3. Future work</span></h2><p>If the site develops support for in-line content macro expansion, macros that generate a list of the project's repositories should be provided.</p><p>Anonymous access may be disallowed for repositories in future ("committers only").</p><p>At least one additional repository SCM type is expected.</p><p>Additional access to repository information via the Repositories page, such as to OpenGrok-based code browsing is expected.</p><h2 id="H4.References"><span>4. References</span></h2><p>[1] S. Hahn, "OpenSolaris source code management implementation", 2006.</p><p>[2] B. Collins-Sussman, B. W. Fitzpatrick, and C. M. Pilato, "Version Control with Subversion", <span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://svnbook.red-bean.com/"><span class="wikigeneratedlinkcontent">http://svnbook.red-bean.com/</span></a></span>, 2006.</p><h2 id="HAppendixA"><span>Appendix A</span></h2><p>Database Modifications</p><h3 id="HNewTableDefinitions"><span>New Table Definitions</span></h3><h4 id="HRepository"><span>Repository</span></h4><pre>
+
++~-------------+~------------+~-----+~---+~-----------+~-------------------------+
+|Column Name  |Data Type   |Null |Key|Default    |Notes                    |
+|             |            |     |   |           |                         |
++~-------------+~------------+~-----+~---+~-----------+~-------------------------+
+|ShortName    |TINYTEXT    |  N  | Y |           |Only one row initially   |
+|             |            |     |   |           |with the value svn.      |
+|             |            |     |   |           |                         |
+|             |            |     |   |           |                         |
++~-------------+~------------+~-----+~---+~-----------+~-------------------------+
+|Description  |TEXT        |  Y  | N |           |                         |
+|             |            |     |   |           |                         |
+|             |            |     |   |           |                         |
++~-------------+~------------+~-----+~---+~-----------+~-------------------------+
+|ProjectID    |INT UNSIGNED|  N  | N |           |Foreign Key from Project |
+|             |            |     |   |           |Table. Confirm data type |
+|             |            |     |   |           |                         |
++~-------------+~------------+~-----+~---+~-----------+~-------------------------+
+|SCMType      |TINYTEXT    |  N  | N |           |Foreign Key to SCMType   |
+|             |            |     |   |           |table, ShortName Column. |
+|             |            |     |   |           |                         |
++~-------------+~------------+~-----+~---+~-----------+~-------------------------+
+|AnonymousAcc\|TINYINT     |  N  | N |1          |MySQL doesn't have a     |
+|ess          |            |     |   |           |BOOLEAN type, so use     |
+|             |            |     |   |           |TINYINT(1).              |
++~-------------+~------------+~-----+~---+~-----------+~-------------------------+
+|Email        |TINYTEXT    |  N  | N |           |                         |
+|             |            |     |   |           |                         |
+|             |            |     |   |           |                         |
++~-------------+~------------+~-----+~---+~-----------+~-------------------------+
+|Created      |DATETIME    | N   | N |           |Requirements say         |
+|             |            |     |   |           |TIMESTAMP, but I think   |
+|             |            |     |   |           |this is better.          |
++~-------------+~------------+~-----+~---+~-----------+~-------------------------+
+
+</pre><h4 id="HSCMType"><span>SCMType</span></h4><pre>
+
++~-------------+~------------+~-----+~---+~-----------+~-------------------------+
+|Column Name  |Data Type   |Null |Key|Default    |Notes                    |
+|             |            |     |   |           |                         |
++~-------------+~------------+~-----+~---+~-----------+~-------------------------+
+|ShortName    |TINYTEXT    |  N  | Y |           |Only one row initially   |
+|             |            |     |   |           |with the value svn.      |
+|             |            |     |   |           |                         |
+|             |            |     |   |           |                         |
++~-------------+~------------+~-----+~---+~-----------+~-------------------------+
+|Description  |TEXT        |  Y  | N |           |                         |
+|             |            |     |   |           |                         |
+|             |            |     |   |           |                         |
++~-------------+~------------+~-----+~---+~-----------+~-------------------------+
+
+</pre><h4 id="HUserRepositories28AKACommitterTable3F29"><span>UserRepositories (AKA Committer Table ?)</span></h4><pre>
+
++~-------------+~------------+~-----+~---+~-----------+~-------------------------+
+|Column Name  |Data Type   |Null |Key|Default    |Notes                    |
+|             |            |     |   |           |                         |
++~-------------+~------------+~-----+~---+~-----------+~-------------------------+
+|UserName     |TEXT        | N   | Y |           |Foreign Key to UserName  |
+|             |            |     |   |           |on User Table. Confirm   |
+|             |            |     |   |           |Data Type.               |
+|             |            |     |   |           |                         |
++~-------------+~------------+~-----+~---+~-----------+~-------------------------+
+|RepositoryNa\|TINYTEXT    |  N  | Y |           |Foreign Key to ShortName |
+|me           |            |     |   |           |on Repository Table.     |
+|             |            |     |   |           |                         |
+|             |            |     |   |           |                         |
++~-------------+~------------+~-----+~---+~-----------+~-------------------------+
+
+</pre><h3 id="HModifiedTableDefinitions"><span>Modified Table Definitions</span></h3><h4 id="HProject"><span>Project</span></h4><pre>
+
++~-------------+~------------+~-----+~---+~-----------+~-------------------------+
+|Column Name  |Data Type   |Null |Key|Default    |Notes                    |
+|             |            |     |   |           |                         |
++~-------------+~------------+~-----+~---+~-----------+~-------------------------+
+|MaxRepositor\|INT         |  N  | N |           |                         |
+|ies          |            |     |   |           |                         |
+|             |            |     |   |           |                         |
+|             |            |     |   |           |                         |
++~-------------+~------------+~-----+~---+~-----------+~-------------------------+
+
+</pre><h4 id="HUser"><span>User</span></h4><pre>
+
++~-------------+~------------+~-----+~---+~-----------+~-------------------------+
+|Column Name  |Data Type   |Null |Key|Default    |Notes                    |
+|             |            |     |   |           |                         |
++~-------------+~------------+~-----+~---+~-----------+~-------------------------+
+|ProjectEditor|TINYINT(1)  |  N  | N |           |If set to TRUE, associate|
+|             |            |     |   |           |the user with all project|
+|             |            |     |   |           |repositories.            |
++~-------------+~------------+~-----+~---+~-----------+~-------------------------+
+
+</pre><p><em>Stephen Hahn, PhD Solaris Kernel Development, Sun Microsystems<br/>&nbsp;stephen dot hahn at sun dot com <span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://blogs.sun.com/sch///"><span class="wikigeneratedlinkcontent">http://blogs.sun.com/sch///</span></a></span></em></p>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:11<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by admin on 2009/10/26 12:11
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Community Group tools Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/building_opensolaris">Build/Install OpenSolaris (Part 1)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/building_opensolaris_part2">Build/Install OpenSolaris (Part 2)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/downloads">Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/gcc">GCC</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/bug_fixing_notes">Bug Fixing Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/build_instr">Build Instructions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/flagday">Important Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/on_policy">ONNV Policy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/rationale">Background and Rationale</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/shadow">Shadow Compilation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/status">Current Status</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/hg">Mercurial Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/linker">Dynamic Linking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/scm">OpenSolaris Source Code Management</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/bzr%2Deval">OpenSolaris DSCM Evaluation: Bzr (Interim Report)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/dcm_evaluation_mercurial">OpenSolaris DSCM Evaluation: Mercurial</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/dscmreqdoc">DSCM Requirements Document</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/evalform">Candidate Evaluation Form</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/evalplan">Evaluation Plan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/hg_help">How To Use Mercurial (hg) Repositories</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/hg_teamware_transition">How To Transition from Teamware to Mercurial</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/history">SCM Project History</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/on%2Dscm%2Dtools">ON SCM&#45;Related Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/scm_milestone">Source Code Management for OpenSolaris: MILESTONES</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/scmconsolespec">SCM console specification</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/scmhostspec">SCM hosting implementation specification</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/svn_help">How To Use SVN Repositories</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/scmdownloads">Source Code Management Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_tools">Sun Studio Downloads</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/faqs">Sun Studio FAQs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/getstarted">Sun Studio Getting Started</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sss11ent">Sun Studio 11 License</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sss12ent_license">Sun Studio 12 License</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sssent">Sun Studio 10 License</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_10_tools">Sun Studio 10 Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_11_tools">Sun Studio 11 Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_11_tools_previous">Sun Studio 11&#45;&#45; Previous Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_12_tools">Sun Studio 12 Compilers and Tools for the OpenSolaris Common Build Environment (CBE)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/support">Sun Studio Support</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/testing+nightly">testing nightly</a></span></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2012, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

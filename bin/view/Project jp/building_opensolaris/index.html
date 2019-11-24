@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>OpenSolaris のビルドとインストール (パート1) (Project jp.building_opensolaris) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+jp/building_opensolaris" />
+                    <link rel="canonical" href="/bin/view/Project+jp/building_opensolaris" />
+                            <meta name="document" content="Project jp.building_opensolaris"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Project jp"/>
+    <meta name="page" content="building_opensolaris"/>
+    <meta name="version" content="1.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Project+jp/pages/building_opensolaris"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="OpenSolaris のビルドとインストール (パート1)" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project jp";
+XWiki.currentPage = "building_opensolaris";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Project+jp/building_opensolaris";
+window.docediturl = "/bin/edit/Project+jp/building_opensolaris";
+window.docsaveurl = "/bin/save/Project+jp/building_opensolaris";
+window.docgeturl = "/bin/get/Project+jp/building_opensolaris";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Project_jp viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bjp%2Fbuilding_opensolaris"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+jp/"><strong>Project jp</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Project+jp" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+            </td>
+            <td id="logo-text" style="width: 1%;">
+                Solaris
+            </td>         
+            <td style="width: 98%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                              <a href='/bin/view/Project+jp/tools'>OpenSolaris コミュニティ: Tools</a> <span class='separator'>&#187;</span> <span class='current'>OpenSolaris のビルドとインストール (パート1)</span>
+                </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+jp/building_opensolaris?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+jp/building_opensolaris?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+jp/building_opensolaris?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+jp/building_opensolaris?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+jp/building_opensolaris?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+jp/building_opensolaris?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+jp/building_opensolaris?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+jp/building_opensolaris?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+jp/building_opensolaris?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+jp/building_opensolaris?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+jp/building_opensolaris?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          <span class="submenuitem "><a href="/bin/view/Project+jp/building_opensolaris?xpage=copy" id="tmActionCopy" class="tmActionCopy">Copy</a></span>
+      </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>OpenSolaris のビルドとインストール (パート1)</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h2 id="HOpenSolaris306E30D330EB30C9306830A430F330B930C830FC30EB2830D130FC30C8129"><span>OpenSolaris のビルドとインストール (パート 1)</span></h2><p><strong>著者:Rich Teer</strong><br/><strong>2005 年 6 月</strong></p><p><strong>はじめに</strong></p><p>これは、OpenSolaris のソースコードを入手してビルドする方法について解説した 2 つの記事のうちの最初のものです。最初の記事では、必要な背景情報 (専門用語、ツールの入手場所など) を提供し、基本的なコンパイルとインストールについて説明します。<span class="wikiexternallink"><a href="http://jp.opensolaris.org/tools/building_opensolaris_part2/">2 番目の記事</a></span>では、より複雑なコンパイルとインストールについて説明します。これらの記事の内容は執筆時点では正確なものでしたが、OpenSolaris は進化し続けています。最新の詳細情報については、<span class="wikiexternallink"><a href="http://jp.opensolaris.org/on/devref_toc/">ON 開発者参照情報</a></span>を参照してください。</p><p>これらの記事は、OpenSolaris のビルドとインストールの方法について解説したものであって、OpenSolaris 開発者向けのガイドとして使用するものではありません。したがって、OpenSolaris のビルドとインストールに必要とされる以上の情報は収録されていません。ただし、ほかのほとんどの大規模なオープンソースプロジェクトと同様に、この情報を必要とするアクティブな OpenSolaris 開発者の数は、自己啓発のためにこれをビルドする人たちの数に比べておそらく少ないため、このことを問題視する必要はありません。</p><p>これらの記事は、大規模なソフトウェアプロジェクトのビルドに関する基本的な知識と、C プログラミングについての多少の知識を前提としています。「Hello World」のコンパイルに奮闘している人が OpenSolaris をコンパイルしようとするとは思えません。ただし、Solaris のビルドに関する知識はないことを想定しており、必要な手順はすべて解説します。</p><p><strong>専門用語</strong></p><p>OpenSolaris のビルド方法について説明する前に、いくつかの用語を定義する必要があります。このリストをできるだけ簡潔にしておくため、OpenSolaris のビルドとインストールに直接関連している用語だけを記述します。ここで解説する用語は、OpenSolaris の開発者が使用する用語の一部です。必要に応じて、新しい用語を紹介するときにそれらをときどき定義します。</p><p>定義する必要のある最初の用語は、OpenSolaris そのものです。OpenSolaris の Web サイト <span class="wikiexternallink"><a href="http://jp.opensolaris.org/os/about/">jp.opensolaris.org/os/about/</a></span> には、Sun が承認した公式の定義が収録されていますが、この記事では、「OpenSolaris」とは Sun がリリースしてきた Solaris のソースコードと、そのソースコードからビルドされたバイナリを指します。したがって、OpenSolaris のソースコードのコピーを持っている、または OpenSolaris を実行している (後者は前者からビルドされる) と言うことができます。OpenSolaris の立ち上げにあたり、Sun は OpenSolaris の独自の「ディストリビューション」をリリースするつもりはありませんが、そのことでほかのユーザーが独自のディストリビューションをリリースできなくなるわけではありません (著者は OpenSolaris を使ってビルドされるディストリビューションプロジェクトが最低 3 つはあり、それらに PowerPC プラットフォームへの移植までもが含まれていることを知っています)。</p><p>正確には、Solaris DVD または CD で出荷されるすべてのものが OpenSolaris であるわけではありません。この記事の執筆時点 (2005 年 6 月) では、OpenSolaris は ON コンソリデーションのみで構成されています。「コンソリデーション」 とは、一緒に開発および配布される、関連したソフトウェアコンポーネントのセットです。ON 以外に、コンソリデーションの例としては、ウィンドウシステム、Java Desktop System などがあります。「ON」は「OS/Net」または「OS/Networking」の略語であり、カーネル、ファイルシステム、基本コマンド、いくつかのモジュールとドライバ、デーモン、ヘッダーファイル、およびライブラリを含むコンソリデーションです。ちなみに、Sun が出荷する Solaris DVD および CD の内容はひとまとめにして「WOS (Wad Of Stuff)」として知られています。これは、Solaris 製品を構成するすべてのコンソリデーションを合わせたものです。</p><p>これまでのところ、ON を構成するすべてのコンポーネントがソース形式で利用できるわけではありません。その理由については、<span class="wikiexternallink"><a href="http://jp.opensolaris.org/os/no_source/">jp.opensolaris.org/os/no_source/</a></span> に説明されています。時間の経過とともに、ほとんど (すべてではないが) のクローズドソースはオープンソースコード (Sun が開発したコードまたは OpenSolaris コミュニティーが寄与したコード) に置き換えられますが、そうなるまでは、ビルド済みのバイナリオブジェクトが、OpenSolaris のビルドを容易にするために提供されます。</p><p>OpenSolaris は開発の最先端であるため、新たにコンパイルされたバージョンをインストールすると、マシンの「ブリック化」が発生する可能性があります。つまり、マシンがブート不能になったり、使用できなくなったりします。不適切なインストールや壊れたコンポーネントのインストールを行うと、マシンが「ウォームブリック」になることがあります。この状態から回復するには、通常、ブートできることがわかっているほかのメディアからブートするのが適切な方法です。</p><p>OpenSolaris を扱うときに目にすることがある最後の 1 組の用語は、Nevada と Tonic です。「Nevada」は、Solaris 10 のあとに続く Solaris リリースの内部名です。OpenSolaris は Solaris Nevada ソースに基づいています (つまり、OpenSolaris のソースコードは Solaris 10 の First Customer Shipment (FCS) バージョンに基づいているのではなく、Solaris 10 が進化したものなのです)。「Tonic」は、OpenSolaris プロジェクトの内部名です。したがって、この用語を使用するのは、おそらく Sun の従業員とパイロットプログラムの参加者だけです。</p><p>OpenSolaris を使って作業する際に認識しておく必要のあるいくつかの専門用語についての説明が終わったので、実際のビルドに必要な前提条件を見ていきましょう。</p><p><strong>前提条件</strong></p><p>OpenSolaris のビルドに最初に必要なものは、適切なマシンです。一般的には、Solaris 10 を実行できるコンピュータであれば十分です。つまり、SPARC のビルドには、200 MHz 以上の UltraSPARC-II またはそれより新しいプロセッサを搭載したマシンが必要です。x86 にはさまざまなハードウェアがあるため、ビルドの要件は少々複雑になります。この記事で x86 とある場合、特に明記しないかぎり、32 ビットの x86 プラットフォームと 64 ビットの AMD64 プラットフォームの両方を意味します。AMD64 プラットフォームはマーケティングタイプによって x64 と呼ばれることもあります。しかし、Solaris x86 HCL (ハードウェア互換リスト) に載っていれば、それなりに最近のハードウェアで問題ありません。HCL は、<span class="wikiexternallink"><a href="http://www.sun.com/bigadmin/hcl/">www.sun.com/bigadmin/hcl/</a></span> にあります。</p><p>現在では、SPARC と x86 の両方のアーキテクチャーがサポートされていますが、クロスコンパイルはサポートされていません (つまり、OpenSolaris を配備するプラットフォームはそのビルドに使用するプラットフォームと同じでなければなりません)。OpenSolaris ソースツリーのビルドはかなり長時間にわたるプロセスなので、十分な仕様のマシンを使用することを推奨します (著者は、x86 のビルドには 2G バイトの RAM と 7200 RPM ハードドライブが搭載された Acer Ferrari 3400 を使用し、SPARC のビルドには 2 つの 450 MHz プロセッサと 2G バイトの RAM が搭載された Ultra 60 を使用しました)。この記事を執筆した時点では、使用するマシンは Solaris Express: Community Release (SXCR) Build 16 以降を実行している必要があります。ただし、SXCR の最新のビルドを「強く」お勧めします。より新しい OpenSolaris のバージョンでは最小要件としてより新しい SXCR のバージョンが要求される可能性が高いからです。</p><p>Solaris、OpenSolaris、および Solaris Express という用語は初心者の方の混乱を招く可能性があるため、これらの内容について 簡単に説明します。まず第一に、Solaris とは Sun から提供される商標の付いた製品です。新規バージョンは 2 ～ 3 年ごとに出荷され、アップデートはおよそ四半期ごとに発行されます。本稼働環境で使用するべきなのは、このバージョンの OS です。</p><p>Solaris Express は、現在の開発ツリーのスナップショットで、約 1 か月ごとに発行されます。リリース日と以前の Solaris Express との間で「最良の」ビルド (もっとも安定し、問題の少ないもの) がリリースされるビルドとなります。Solaris Express のコードには十分なテストを行なっていますが、ベータ品質である (Sun の通常の厳しいテスト手順を経ていない) ため、本稼働で使用してはならないことを記憶に留めておくことが重要です。とはいえ、Solaris Express は Solaris の新機能や改善された機能を利用できるもっとも簡単で、おそらく最良の方法です。たとえば、Solaris Express のユーザーは、FCS バージョンが利用できるようになる約 2 年前から、Solaris 10 に導入された機能 (ゾーンや DTrace のような機能を含む) を使用していました。著者の経験では、Solaris Express は非常に安定しています。Solaris Express のビルドは、Sun の最新エンジニアリングビルドを数バージョン (1 ～ 2 か月) のみの遅れで追従します。例として、この記事の執筆時点では、Solaris Express は Nevada のビルド 15 に基づいていましたが、この時点のエンジニアリングバージョンはビルド 16 でした。前述したように、Solaris Express には Community Release もあり、これはビルドごとにリリースされます。SXCR は標準の Solaris Express に比べて受けるテストが少なくなっています。また、OpenSolaris の開発者だけを対象としているので、相応の注意を払って配備する必要があります。</p><p>前述のように、OpenSolaris は Sun エンジニアリングからの現在の最先端のビルドに基づいています。まさにその性質により、OpenSolaris は Solaris Express に比べて受けるテストが少ないため、扱いと配備に若干の困難が伴います。重要な本稼働に使用するものでは決してありません。</p><p>最後に、十分なディスク容量が必要です。ソースコード、クローズドバイナリ、およびツールには約 90M バイト必要です。また、各ビルドツリーには最低でも 1.5G バイト必要です。このことを念頭に置いて、ビルドする予定のツリーごとに約 2G バイトの空きディスク容量を用意する必要があります。おそらく、OpenSolaris に組み込まれるソースコードがさらに増えれば、必要なディスク容量も増えるでしょう。</p><p><strong>Solaris のバイナリディストリビューションのインストール</strong></p><p>前述したように、OpenSolaris をビルドするためのマシンは、適切な最新バージョンの Solaris Express または SXCR (あるいは、以前の OpenSolaris ビルド) を実行している必要があります。著者は Developer クラスタのみがインストールされているマシンで OpenSolaris のビルドに成功しましたが、Sun では全クラスタがインストールされていることを推奨しています。</p><p>Solaris のインストール方法については、記事の範囲外となります。Sun の『<em>Release and Installation</em> Collection』 (<span class="wikiexternallink"><a href="http://docs.sun.com">docs.sun.com</a></span>) に詳しく解説されています。</p><p>前提条件 (必要な場合は Solaris のバイナリディストリビューションのインストールを含む) を満たしたら、必要な各種コンポーネントおよびツールのダウンロードをいつでも開始できます。</p><p><strong>必要なコンポーネントのダウンロード</strong></p><p>OpenSolaris のコンポーネントやツールをダウンロードする前に、作業用のディレクトリを作成するようにしてください。このディレクトリとその子ディレクトリは「ワークスペース」と呼ばれます。次の例では、ホームディレクトリにある open_solaris というディレクトリをベースワークスペースとして使用します。このディレクトリには、ビルドごとにサブディレクトリを作成し、そこに格納するビルドにちなんで名前を付けます (例: build-17)。各 build ディレクトリには、testws というビルド用のワークスペースを作成します。</p><p>これにより、次のようなディレクトリ階層が作られます。</p><p>$HOME/open_solaris ベースディレクトリ</p><p>$HOME/open_solaris/build-17 ビルド 17 のソースとその他のコンポーネント</p><p>$HOME/open_solaris/build-n ビルド n のソースとその他のコンポーネント</p><p>$HOME/open_solaris/build-n/testws コンパイル用のワークスペース</p><p>OpenSolaris の Web サイト (おそらくほかのサイトでも OpenSolaris コンポーネントを提供していますが、この記事では <span class="wikiexternallink"><a href="http://jp.opensolaris.org/">jp.opensolaris.org</a></span> を使用するものとします) から「build」ディレクトリにダウンロードする必要があるファイルは多数あります。最低でも、ソースコード、クローズドソースコードからビルドされたバイナリ、ON ビルドツール、コンパイラなどのツールは必要です。リリースノートもダウンロードするようにしてください。</p><p>次の例では、Nevada の ビルド 17 をコンパイルするものとします。また、Solaris Express: Community Release ビルド 16 (Nevada ビルド 16) はすでにインストールされているものとします。ビルド 17 を使用するため、ベースワークスペースは $HOME/open_solaris/build-17 となり、ダウンロードするファイルはこの場所に格納するようにしてください。簡潔にするために、次の例ではこのディレクトリを $OPEN_SOL と呼びます。</p><p><strong>コンパイラとその他のツールのインストール</strong></p><p>必要なファイルのダウンロードが完了したら、コンパイラと ON ビルドツールをインストールする必要があります。後者は、特に OpenSolaris のビルドとインストールに使用するプログラムとスクリプトで構成されます。コンパイラとその他の Sun Studio ツールは、tar ball またはパッケージセットのどちらかで提供され、ON ビルドツールはパッケージとして提供されます。次のすべての例では、ファイル名は実在のものを表していますが、実際のファイル名はここで示すファイル名とはおそらく異なっています。たとえば、ファイル名の多くは日付スタンプを取り入れていますが、これは場合によって変わります。</p><p>まず、パッケージ SUNWonbld をインストールして、ON ビルドツールを追加します。</p><p># cd /tmp<br/># bzip2 -dc $OPEN_SOL/SUNWonbld-20050322.i386.tar.bz2 | tar xf -<br/># cd onbld<br/># pkgadd -d . SUNWonbld<br/># cd ..</p><p>簡潔にするために、pkgadd コマンドからの出力は省略しました。また、ON ビルドパッケージの実際のファイル名はおそらく異なっています。これは、各ビルドの要件を反映するように、これらのツールが頻繁に更新されるためです。</p><p>次に、Sun Studio コンパイラとその他のツールの tar インストールイメージをインストールします。</p><p># cd /opt<br/># bzip2 -dc $OPEN_SOL/sunstudio10-20050613.x86.tar.bz2 | tar xf -</p><p>コンパイラとツールのインストールが完了したら、それらのディレクトリがユーザーの PATH に含まれていることを確認し、OpenSolaris の実際のビルドを行うためのディレクトリを作成する必要があります (この作業を root ではなく自身のユーザーとして行ったあと、$OPEN_SOL/build-n に戻ります)。</p><p>$ export PATH=/opt/onbld/bin:/opt/SUNWspro/bin:$PATH<br/>$ mkdir testws</p><p>適切な PATH が含まれるようにログインスクリプトを変更するのも一案です。</p><p><strong>ソースコードとクローズドバイナリの展開</strong></p><p>次のステップでは、クローズドバイナリとソースコードを展開します。</p><p>$ cd testws</p><p>$ bzip2 -dc ../opensolaris-closed-bins-20050322.i386.tar.bz2 | tar xf -</p><p>$ bzip2 -dc ../opensolaris-src-20050322.tar.bz2 | tar xf -</p><p><strong>OpenSolaris コードのビルド</strong></p><p>OpenSolaris ソースコードのビルドの準備が整うまで、あともう少しです。ビルド環境の準備にはスクリプトを使用します。このスクリプトは多数の環境変数を設定します。このスクリプトをユーザーの環境に合わせてカスタマイズする必要があります。このスクリプトのローカルコピーを作成してから、それを変更します。</p><p>$ cp usr/src/tools/env/opensolaris.sh .</p><p>$ chmod 644 opensolaris.sh</p><p>opensolaris.sh を編集します。必要に応じて、環境変数 GATE、CODEMGR_WS、STAFFER、および VERSION の定義を変更してください。STAFFER、CODEMGR_WS、および VERSION 以外の環境変数はデフォルト値のままとします。STAFFER、CODEMGR_WS、および VERSION は、それぞれ「rich」、「/home/rich/open_solaris/build-17/$GATE」、および「OpenSolaris_build-17」に変更します (言うまでもありませんが、CODEMGR_WS の値は適宜変更するようにしてください)。</p><p>最後に、nightly スクリプトを使用して、実際のビルドを行います (nightly は、カーネルだけでなく、すべてのコンポーネントをビルドします)。</p><p>$ nightly opensolaris.sh</p><p>このステップにはしばらく時間がかかることがあるため、ほかに行うべきことを見つけるのに良い時間です (著者の 2 GHz Ferrari 3400 ラップトップでは、このステップが完了するのに約 90 分かかります)。ビルドが完了すると、3 つのログファイルがディレクトリ log/log.mmdd (ここでの mm は月、dd は日にち) に生成されます。これらのログファイルは、mail_msg、nightly.log、および proto_list_i386 (または類似したもの) です。最初のファイルには、完了時に $STAFFER に送信される電子メールのコピーが含まれており、ビルドの概要が記載されています。2 番目のファイルにはビルドプロセスの詳細ログが含まれており、最後のファイルはパッケージの作成に使用できるプロトタイプリストです (詳細については、この記事では触れない)。</p><p>mail_msg ファイルにエラーが含まれていない場合は、ビルドが正常に行われたことになります。ビルドが正常に行われなかった場合は、nightly.log を調べて、その原因を突き止めることができます。</p><p><strong>OpenSolaris のインストール (パート 1)</strong></p><p>すべてがうまくいったと想定して、新たにコンパイルしたコンポーネントをインストールできます。新しいコンポーネント (特に、カーネルまたは重要なライブラリやアプリケーション) のインストールはブリック化を引き起こすことがあるため、Install (cap eye install と呼ばれる) ユーティリティーを使用します。このユーティリティーは、新しくビルドしたカーネルの tar ball を作成します。この tar ball を既存のものと並行してインストールできます (ビルドしたマシン以外のマシン上でテストすることを強く推奨します)。Install では新しいユーザーランドのコンポーネントをインストールしないので注意してください。新しいカーネルとモジュールだけがインストールされます。Install プロシージャーでは、現在インストール済みのカーネルが上書きされることがないため、ブリック化の危険が緩和されます。</p><p>root になり、使用しているワークスペースディレクトリ (前に $OPEN_SOL と呼ばれていたもの) に移動します。/opt/onbld/bin および /opt/SUNWspro/bin に存在するツールとコンパイラが root の PATH に含まれていることを確認します (または単にコマンドのフルパス名を使用します)。</p><p>最初に、bldenv スクリプトを実行して、必要なすべての環境変数が適切な値に設定されていることを確認する必要があります。</p><p># bldenv opensolaris.sh</p><p>次のステップでは、Install tar ball を作成し、ビルドと同じマシンでテストしていることを前提として、それをインストールします。</p><p># Install -k i86pc -G kernel-17</p><p># cd /</p><p># tar xf /tmp/Install.root/Install.i86pc.tar</p><p>Install コマンドの -k フラグはインストールしているカーネルアーキテクチャーを通知し、-G フラグは glomname を指定します。後者は、新しいカーネルが格納される /platform/&lt;arch&gt; のサブディレクトリ名であり、この場合は /platform/i86pc/kernel-17 (SPARC では、現在 /platform/sun4u/kernel-17) に格納されます。glomname を指定しない場合は、新しくコンパイルしたカーネルによって現在のカーネルが上書きされます。これによってブリック化が発生した場合は、代替メディアからのブートによって回復するしか方法はありません。</p><p>x86 では、新しいカーネルをブートする前に実行しなければならない作業がもう 1 つあります。tar ball が抽出されたら、新しいカーネルディレクトリの名前を /boot/solaris/filelist.ramdisk ファイルに追加する必要があります。SPARC プラットフォームでインストールを行っている場合、このステップは該当しません。SPARC プラットフォームでは GRUB ブートローダーを使用しないためです。</p><p>あとは、新しいカーネルを使ってブートするだけです。</p><p># reboot -- kernel-17/amd64/unix</p><p>この例では、64 ビットの amd64 マシンを使用しているものとします。64 ビットの SPARC マシンでは kernel-17/sparcv9/unix、32 ビットの x86 マシンでは kernel-17/unix をそれぞれ使用します。</p><p>すべてうまくいった場合は、opensolaris.sh の VERSION 変数に入力した文字列が起動バナーに表示されるはずです。</p><p>rich@orac3559# uname -a</p><p>SunOS orac 5.11 OpenSolaris_build-17 i86pc i386 i86pc</p><p>一部のマシンでは、OpenSolaris の一環として提供されないデバイスドライバが欠落しているために、この方法でブートできない場合があります。この場合は、元となる OS のインストールで提供されるモジュールとドライバをユーザーのテストディレクトリにコピーし、それをインストールするという方法を試してみてください。</p><p>この対処方法を次に示します。</p><p># cd /platform/i86pc</p><p># rm -fr kernel-17/*</p><p># (cd kernel; tar cf - .) | (cd kernel-17; tar xf -)</p><p># cd $OPEN_SOL</p><p># Install -k i86pc -G kernel-17</p><p># cd /</p><p># tar xf /tmp/Install.root/Install.i86pc.tar</p><p># reboot -- kernel-17/amd64/unix</p><p>新しいカーネルだけでなく、そのほかのコンポーネントもインストールする場合は、BFU と呼ばれるプロセスを使用する必要があります。BFU については、もう一つの記事で説明します。BFU はよく注意して使用するようにしてください。 最新の最先端のコンポーネントがどうしても必要な開発者だけにお勧めします。</p><p><strong>まとめ</strong></p><p>この記事では、OpenSolaris を扱うときに目にする専門用語の一部を定義しました。また、OpenSolaris のソースコードとそのコンパイルに必要なその他のコンポーネントの入手方法について説明し、最後に、OpenSolaris の簡単なコンパイルとインストールに必要な手順について説明しました。これらの手順は、次のとおりです。</p><ol><li>ソースコード、クローズドバイナリ、コンパイラ、およびビルドツールを <span class="wikiexternallink"><a href="http://jp.opensolaris.org/">jp.opensolaris.org</a></span> またはそのいずれかのミラーから入手します。</li><li>ON ビルドツールと Sun Studio コンパイラを /opt にインストールし、それらのディレクトリをユーザーの PATH に追加します。</li><li>ソースコードとクローズドバイナリの tar ball を展開します。</li><li>opensolaris.sh スクリプトをコピーして編集します。</li><li>nightly スクリプトを使用して、ソースコードをビルドします。</li><li>Install スクリプトを使用して、結果として生成された新しいカーネルをインストールします。</li><li>新しいカーネルを使ってリブートします。</li></ol><p><strong>推薦ドキュメント</strong></p><p>Web サイト opensolaris.org には、『OpenSolaris 開発者向けリファレンス・ガイド』などのいくつかのドキュメントが含まれています。また、OpenSolaris Tools Community サイト、特に Sun Studio ダウンロードサイト (<span class="wikiexternallink"><a href="http://jp.opensolaris.org/os/community/tools/sun_studio_tools/">jp.opensolaris.org/os/community/tools/sun_studio_tools/</a></span>) についても詳しく確認するようにしてください。著者の書籍『<em>Solaris Systems Programming</em>』 [Teer 著、2005 年] は、ユーザーランドの OpenSolaris コードを使って作業する読者には不可欠です。また、Jim Mauro 氏および Richard McDougall 氏による 『<em>SOLARIS インターナル - カーネル構造のすべて</em>』 [Mauro、McDougall 共著、2001 年] は、OpenSolaris のすべてのカーネルハッカーの書棚に置くことをお勧めします。コミュニティーのブログ (<span class="wikiexternallink"><a href="http://jp.opensolaris.org/os/blogs/">jp.opensolaris.org/os/blogs/</a></span>) は、もう一つの重要な情報源です。</p><p>[Mauro、McDougall 共著、2001 年]: 『<em>SOLARIS インターナル - カーネル構造のすべて</em>』 ISBN 4-89471-458-2。詳細は、<span class="wikiexternallink"><a href="http://www.solarisinternals.com/">www.solarisinternals.com/</a></span> を参照してください。</p><p>[Teer 著、2005 年]: 『<em>Solaris Systems Programming</em>』 ISBN 0-201-75039-2。詳細は、 <span class="wikiexternallink"><a href="http://www.rite-group.com/rich/ssp/">www.</a></span><span class="wikiexternallink"><a href="http://www.rite-group.com/rich/ssp/">rite-group.com/rich/ssp/</a></span> を参照してください。</p><hr/><p>英文: <span class="wikilink"><a href="/bin/view/Community+Group+tools/building_opensolaris">Building and Installing OpenSolaris (Part 1)</a></span> Page Last Modified: 14 Sep 2007</p>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:14<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by admin on 2009/10/26 12:14
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Project jp Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+jp/TopDetail">OpenSolaris プロジェクトとは</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/Topics">OpenSolaris 関連記事</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/about">プロジェクトの概要</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/downloads">ダウンロードセンター</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/faq">FAQ センター</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+jp/binary_licensing_faq">OpenSolaris バイナリライセンスに関する FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/general_faq">一般的な内容に関する FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/getting_started_developers">はじめての開発者のための FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/licensing_faq">Common Development and Distribution License (CDDL) に関する FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/pdl_faq">Public Documentation License (PDL) に関する FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/sca_faq">Sun Contributor Agreement (SCA) に関する FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/trademark_faq">OpenSolaris の商標とロゴの使用に関する FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/website_faq">Web サイトに関する FAQ</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/forums">ディスカッション</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/ha%2Dclusters">OpenSolaris コミュニティ: 高可用性クラスタ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/licensing">ライセンス</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/links">リンク</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/material">資料のページ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/nfsv41">プロジェクト: NFS version 4.1 pNFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/on">OpenSolaris コミュニティ: OS/Net (ON)</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+jp/devref_toc">OpenSolaris 開発者向けリファレンス・ガイド</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/os_dev_process">開発プロセス</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/participation">参加方法</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/tools">OpenSolaris コミュニティ: Tools</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+jp/building_opensolaris">OpenSolaris のビルドとインストール (パート1)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/building_opensolaris_part2">OpenSolaris のビルドとインストール (パート2)</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/zfs">OpenSolaris コミュニティ: ZFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/%EF%BC%AF%EF%BD%90%EF%BD%85%EF%BD%8E%EF%BC%B3%EF%BD%8F%EF%BD%8C%EF%BD%81%EF%BD%92%EF%BD%89%EF%BD%93%E3%80%80%EF%BD%8D%EF%BD%81%EF%BD%8E%EF%BD%90%EF%BD%81%EF%BD%87%EF%BD%85%E3%80%80%EF%BD%94%EF%BD%92%EF%BD%81%EF%BD%8E%EF%BD%93%EF%BD%8C%EF%BD%81%EF%BD%94%EF%BD%89%EF%BD%8F%EF%BD%8E">OpenSolaris Manual Page Translation</a></span></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2012, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

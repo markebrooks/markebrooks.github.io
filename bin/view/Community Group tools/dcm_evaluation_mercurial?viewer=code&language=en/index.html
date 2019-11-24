@@ -1,0 +1,1004 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>OpenSolaris DSCM Evaluation: Mercurial (Community Group tools.dcm_evaluation_mercurial) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Community+Group+tools/dcm_evaluation_mercurial" />
+                                <meta name="document" content="Community Group tools.dcm_evaluation_mercurial"/>
+    <meta name="space" content="Community Group tools"/>
+    <meta name="page" content="dcm_evaluation_mercurial"/>
+    <meta name="version" content="1.1"/>
+                    <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="OpenSolaris DSCM Evaluation: Mercurial" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                <!-- com.xpn.xwiki.plugin.skinx.LinkExtensionPlugin -->
+    <link href="/bin/skin/skins/colibri/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/>
+
+    
+    <link href="/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript" src="/resources/js/xwiki/suggest/ajaxSuggest.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Community Group tools";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes" ];
+window.docviewurl = "/bin/view/Community+Group+tools/dcm_evaluation_mercurial";
+window.docediturl = "/bin/edit/Community+Group+tools/dcm_evaluation_mercurial";
+window.docsaveurl = "/bin/save/Community+Group+tools/dcm_evaluation_mercurial";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js'></script><script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js'></script><script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js'></script>
+
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/compatibility.js"></script>
+
+  </head>
+        <body id="body" class="xwiki viewbody hideright">
+  <div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+<div id="menuview">
+  <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div class="topmenuentry " id="tmLogin"><a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FCommunity%2BGroup%2Btools%2Fdcm_evaluation_mercurial%3Fviewer%3Dcode%26%2338%3Blanguage%3Den"><strong>Log-in</strong></a></div>
+  </div>
+<div class="leftmenu">
+  <div class="topmenuentry hasIcon" id="tmWiki"><a class="tme" href="/bin/view/Main/"><strong>xwiki</strong></a></div>
+  <div class="topmenuentry hasIcon" id="tmSpace"><a class="tme" href="/bin/view/Community+Group+tools/"><strong>Community Group tools</strong></a></div>
+
+<div class="topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmSubSites">
+<span class="tme-extensible"><a class="tme"><strong>Subsites</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="http://cr.opensolaris.org/" id="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth">Auth</a></span>
+</span></div>
+
+
+</div>
+</div>
+
+</div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+
+  <div id="company">
+  <div id="companylogo">
+    <a href="/bin/view/Main/" title="Home" rel="home">
+    <img src="/skins/colibri/logo.png" alt="Wiki Logo"/>
+    </a>
+  </div>   </div> 
+  <div id="Iconbar">
+    <a id="CollectivesIcon" href="/bin/view/Main/collectives">Collectives</a>
+    <a id="DiscussionsIcon" href="/bin/view/Main/discussions">Discussions</a>
+    <a id="DocumentationIcon" href="/bin/view/Main/documentation">Documentation</a>
+    <a id="DownloadIcon" href="/bin/view/Main/downloads">Download</a>
+    <a id="SourceBrowserIcon" href="http://src.opensolaris.org">Source Browser</a>
+  </div>
+  <div class="clearfloats"></div>
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/WebSearch">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+   <div id="hierarchy">
+                <a href='/bin/view/Community+Group+tools/scm'>OpenSolaris Source Code Management</a> <span class='separator'>&raquo;</span> <a href='/bin/view/Community+Group+tools/dcm_evaluation_mercurial'>OpenSolaris DSCM Evaluation: Mercurial</a>
+      </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Community+Group+tools/dcm_evaluation_mercurial?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+        <div class="main layoutsubsection">
+  <div id="contentmenu" class="actionmenu">
+  <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div class="topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmExport">
+<span class="tme-extensible"><a class="tme"><strong>Export</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Community+Group+tools/dcm_evaluation_mercurial?format=pdf&amp;language=en" id="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+tools/dcm_evaluation_mercurial?format=rtf&amp;language=en" id="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+tools/dcm_evaluation_mercurial?format=html&amp;language=en" id="tmExportHtml">Export as HTML</a></span>
+  </span></div>
+
+<div class="topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmShow">
+<span class="tme-extensible"><a class="tme" href="/bin/view/Community+Group+tools/dcm_evaluation_mercurial?viewer=code&amp;language=en"><strong>View</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Community+Group+tools/dcm_evaluation_mercurial?viewer=comments&amp;language=en" id="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+tools/dcm_evaluation_mercurial?viewer=attachments&amp;language=en" id="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+tools/dcm_evaluation_mercurial?viewer=history&amp;language=en" id="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+tools/dcm_evaluation_mercurial?viewer=information&amp;language=en" id="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+tools/dcm_evaluation_mercurial?viewer=code&amp;language=en" id="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div class="topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmMoreActions">
+<span class="tme-extensible"><a class="tme"><strong>More actions</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Community+Group+tools/dcm_evaluation_mercurial?xpage=print&amp;language=en" id="tmPrintPreview">Print preview</a></span>
+    </span></div>
+  </div>
+
+
+  </div>
+  <div id="mainContentArea">
+      <h1><span>Wiki source code of <a href="/bin/view/Community+Group+tools/dcm_evaluation_mercurial">OpenSolaris DSCM Evaluation: Mercurial</a></span></h1>
+  <a href="/bin/view/Community+Group+tools/dcm_evaluation_mercurial?viewer=code&showlinenumbers=0&language=en">Hide line numbers</a>
+    <textarea readonly="readonly" style="width: 100%; height: 300px;">
+1: = OpenSolaris DSCM Evaluation: Mercurial
+2: 
+3: == A. Tool Information
+4: 
+5: Mercurial version 0.8.
+6: 
+7: == B. Configuration Details
+8: 
+9: === 1. CPU architecture and machine specifics
+10: 
+11: {{{
+12: 
+13: kosh$ psrinfo -v
+14: Status of virtual processor 0 as of: 03/30/2006 14:15:16
+15:   on-line since 03/09/2006 16:44:59.
+16:   The i386 processor operates at 1600 MHz,
+17:         and has an i387 compatible floating point processor.
+18: kosh$ uname -a
+19: SunOS kosh 5.11 snv_35 i86pc i386 i86pc
+20: 
+21: }}}
+22: 
+23: === 2. Memory available
+24: 
+25: {{{
+26: 
+27: Memory size: 1024 Megabytes
+28: 
+29: }}}
+30: 
+31: === 3. Size of the repository (space)
+32: 
+33: 641MB, including working directory. This repository mirrors ON&#8217;s internal Teamware workspace as of 2006-04-11 16:52:19Z and has history back to build 18 (shortly after the OpenSolaris launch).
+34: 
+35: === 4. Number of files in the repository
+36: 
+37: 43,311.
+38: 
+39: === 5. Average number of deltas per file
+40: 
+41: 1.3.
+42: 
+43: More details: 1,884 changesets, 57,173 changes. (57173/43311=1.3)
+44: 
+45: == C. Evaluation Areas
+46: 
+47: === 1. Operation Functionality
+48: 
+49: (Refer to the Requirements Document for detail.)
+50: 
+51: ==== e1. unbiased and disconnected distribution
+52: 
+53: Mercurial implements a model of independent repositories, though a repository can be configured to have a [[de-facto parent&#62;&#62;http://www.opensolaris.org/jive/message.jspa?messageID=30643&#38;tstart=0]].
+54: 
+55: Mercurial supports updates between two repositories with a common ancestor. If child-2 pulls from child-1 and has one or more changesets that aren&#8217;t in child-1 (a common scenario in ON development), child-2 will have to do an &#34;update -m&#34;, even if the changes are non-conflicting. Unlike Teamware, the merge must then be explicitly committed. (This is a feature, since it means you can test the merge before committing it, but it seems likely to cause confusion for Sun engineers. If we use Mercurial Queues for most development work, this issue probably goes away.)
+56: 
+57: The &#34;disconnected-use&#34; requirements are all satisfied.
+58: 
+59: ==== e2. networked operation
+60: 
+61: As mentioned in the requirements document, Mercurial supports remote access via {{code}}ssh{{/code}}. Pulls can also be done over HTTP. (And of course NFS can be used for pushes and pulls).
+62: 
+63: ==== e3. interface stability and completeness
+64: 
+65: ===== storage
+66: 
+67: The storage representation appears to be well-documented. Certainly there&#8217;s more [[information&#62;&#62;http://www.selenic.com/mercurial/wiki/index.cgi/Design]] on the Mercurial website than we&#8217;ve been able to find for SCCS&#8217;s storage representation.
+68: 
+69: Mercurial&#8217;s storage representation does not use Unix i-numbers, so snapshots such as those provided by ZFS or Network Appliance filers should not cause problems.
+70: 
+71: A ZFS snapshot can be used as the source for a Mercurial clone operation.
+72: 
+73: At least some of the on-disk data structures do not appear to be versioned. This is a potential hazard. At least one storage representation change is planned: &#34;RevlogNG&#34;, which is [[planned for Mercurial 0.9&#62;&#62;http://marc.theaimsgroup.com/?l=mercurial&#38;m=114375669405791&#38;w=2]]. This change is expected to address the versioning issue.
+74: 
+75: On-disk data structures are binary files, but I had no problems using the same repository from both SPARC and x86 systems. Binary files give improved performance, but in the unlikely event that manual repairs are needed, we&#8217;ll need a binary editing program.
+76: 
+77: Mercurial does not provide its own access control mechanism for controlling access to subtrees within a repository. While it might be possible to restrict user access to certain subtrees using filesystem ACLs, it would probably be better to use various pre-operation hooks (e.g., {{code}}pretxnchangegroup{{/code}}) to implement that sort of control. Bryan O&#8217;Sullivan reports that there is a recipe in the wiki for doing [[access control over {{code}}ssh{{/code}}&#62;&#62;http://www.selenic.com/mercurial/wiki/index.cgi/SharedSSH]], without needing to create a separate user account for everyone.
+78: 
+79: ===== command-line interface, hooks
+80: 
+81: The [[command-line&#62;&#62;http://www.selenic.com/mercurial/hg.1.html]] and [[hook&#62;&#62;http://www.selenic.com/mercurial/hgrc.5.html]] interfaces appear to be adequately documented.
+82: 
+83: One nit: the current documentation appears to reflect the current development version of the code, rather than the most recent release[[[1]&#62;&#62;#docexample]]; there is nothing in the documentation to clarify what version it applies to. If OpenSolaris uses Mercurial, we may wish to place snapshots of the code and documentation on opensolaris.org to avoid confusion.
+84: 
+85: The hook infrastructure invokes the named hook(s) with a few tokens such as the changeset ID passed in via the environment. This means that the hook may need to invoke various Mercurial commands to find out more about the changeset. A potential issue is that it may not always be possible to get the desired information back from the existing Mercurial command-line interfaces. For example, &#34;hg log&#34; gives the old and new names of a renamed file, along with the names of any other files involved in the changeset, but it can&#8217;t tell you that file &#34;foo&#34; was renamed to &#34;bar&#34;. Fortunately, all the known examples of this problem are considered bugs and have fixes planned.
+86: 
+87: Bryan O&#8217;Sullivan reports that the Mercurial team is also considering support for Python hooks that would run in the Mercurial process.
+88: 
+89: Lock-reentrancy does not appear to be a problem. Mercurial does not need read locks, and hooks are currently limited to only doing read operations.
+90: 
+91: At least one unexpected behavior was noted while testing: pushing a changeset from repository A to repository B caused A&#8217;s {{code}}commit{{/code}} hook to fire. This appears to be a [[known bug&#62;&#62;http://www.selenic.com/mercurial/bts/issue113]].
+92: 
+93: ===== network protocol(s)
+94: 
+95: There is some documentation on the [[network protocol&#62;&#62;http://www.selenic.com/mercurial/wiki/index.cgi/WireProtocol]], though it&#8217;s a bit sketchy. The protocol is versioned.
+96: 
+97: ==== e4. standard operations and transactions
+98: 
+99: Mercurial operates on files. Rename or remove of a directory is translated into a rename or remove on the directory&#8217;s contents.
+100: 
+101: Rename is implemented as copy and delete. More work is needed here: merges don&#8217;t track renames, and rename conflicts are not detected.
+102: 
+103: Deleting a file and creating a new file with the same path is supported. The new instance includes the history of the old instance.
+104: 
+105: Mercurial supports the scenario where a file is deleted in one workspace, the deletion is backed out in the &#34;gate&#34; repository, and the file is edited concurrently in a second workspace. The backout was done via
+106: 
+107: &#62;  $ hg revert -r lastrev
+108:  $ hg add file
+109:  $ hg commit -m &#34;back out deletion of file&#34;
+110: 
+111: where lastrev refers to the last changeset before the deletion.
+112: 
+113: The merge in the second workspace was a little messy: after the &#34;update -m&#34;, the working copy of the file had the old and new versions of the file concatenated together.
+114: 
+115: Deleted files can still be referenced using the path and the -r option, for example
+116: 
+117: &#62;  $ hg cat -r rev file
+118:  $ hg diff -r rev1 -r rev2 file
+119: 
+120: ==== e5. per-changeset metadata
+121: 
+122: Mercurial associates a text comment with each changeset; this is added as part of the {{code}}commit{{/code}} operation. The first line of the comment is displayed as a summary of the changeset for operations like &#34;log&#34;, though the full comment can be displayed with the &#34;-v&#34; option. This is somewhat inconsistent with the current conventions for putbacks into ON; we&#8217;ll want to think about what we want to do. Mercurial supports customization of &#34;log&#34; output, so that&#8217;s one option.
+123: 
+124: ==== c6. ease of use
+125: 
+126: Although I haven&#8217;t built Mercurial from source, Bryan O&#8217;Sullivan reports
+127: 
+128: &#62;  It builds out of the box on Solaris 10, once the system Python&#8217;s Makefile is fixed to use gcc.
+129: 
+130: The primary interface is the {{code}}hg{{/code}} command, with subcommands for the various options. This is pretty standard.
+131: 
+132: The model is straightforward: you {{code}}commit{{/code}} one or more changesets to the repository that you&#8217;re working in, then you {{code}}push{{/code}} or {{code}}pull{{/code}} them to other repositories. Note that pushing (or pulling) a changeset updates the target repository, but updating the target&#8217;s source tree is a separate step (&#34;hg update&#34;).
+133: 
+134: Mercurial offers subcommands specifically for generating and accepting source patches.
+135: 
+136: Mercurial supplies an HTTP server, as well. This can be used for browsing and for pulls over HTTP.
+137: 
+138: Support for backouts: the {{code}}revert{{/code}} subcommand can be used to back out all changesets back to a particular revision. Backing out a changeset after the files have been subsequently modified is less straightforward. There is currently an [[open feature request&#62;&#62;http://www.selenic.com/mercurial/bts/issue146]] for this. In the meantime, one can generate a source patch for the changeset that you want to back out, then apply the patch using &#34;patch -R&#34;.
+139: 
+140: By default, &#34;hg status&#34; lists files that aren&#8217;t tracked in the repository (e.g., compiled binaries, editor backup files). While this is not peculiar to Mercurial, it&#8217;s a change from Teamware, and it will generate an impossible level of noise in most real-life scenarios with ON. While doing &#34;dmake clobber&#34; will reduce the noise considerably[[[2]&#62;&#62;#clobber]], that is inconvenient for a tree the size of ON. Mercurial does provide mechanisms to filter out noise (e.g., {{code}}status{{/code}} subcommand options, and {{code}}.hgignore{{/code}} files), but it&#8217;s not clear they can be used to give the desired results (show untracked source files and makefiles, but ignore all other untracked files).
+141: 
+142: Files should be imported with read-write permission. Mercurial keeps track of the permissions, and it complains if you try to update a read-only file (e.g., after a push or pull).
+143: 
+144: ===== merging
+145: 
+146: Mercurial&#8217;s default for resolving conflicts is the {{code}}hgmerge{{/code}} script. This script checks for the presence of various third-party conflict resolver programs, such as {{code}}tkdiff{{/code}}. At least some of these programs (e.g., {{code}}tkdiff{{/code}}) offer functionality that is comparable to what is available with Teamware and Filemerge. It should be easy to add Filemerge support to {{code}}hgmerge{{/code}} if that&#8217;s desired.
+147: 
+148: If {{code}}hgmerge{{/code}} can&#8217;t find any of the expected conflict resolvers, it falls back to using {{code}}diff(1){{/code}} and {{code}}patch(1){{/code}}. If {{code}}patch{{/code}} rejects any part of the diffs, {{code}}hgmerge{{/code}} invokes an editor so that the user can manually repair the conflict.
+149: 
+150: While first experimenting with Mercurial, I found it very easy to get my repository into a state where it would keep complaining about &#34;outstanding uncommitted changes&#34;, but it was hard to figure out how to get out of that state. (Answer: use &#34;hg update -C&#34;.) This probably needs to go into a FAQ.
+151: 
+152: ===== mismerges
+153: 
+154: The current version of {{code}}hgmerge{{/code}} has some problems that make it easy to introduce mismerges. One of the Mercurial developers is looking at reducing the likelihood of mismerges. We may also wish to consider our own changes.
+155: 
+156: First, if {{code}}hgmerge{{/code}} uses {{code}}patch{{/code}}, we may want to force a review of the changes, even if the patch applies cleanly.
+157: 
+158: Second, the code for invoking the editor and determining whether the conflict was resolved is a bit brittle[[[3]&#62;&#62;#conflicts]]. This may just be a bug that needs fixing. But we may also want a more explicit &#34;yes I have resolved the conflicts&#34; action from the user (which is something Subversion does).
+159: 
+160: There is at least one [[open issue in the Mercurial bug database&#62;&#62;http://www.selenic.com/mercurial/bts/issue12]] related to failed merges. Resolving this issue may address the brittleness problem mentioned above.
+161: 
+162: ===== intermediary snapshots
+163: 
+164: The current ON convention is that putbacks should not introduce SCCS deltas for intermediary snapshots or Teamware merges. This is achieved by using the {{code}}redelget{{/code}} and {{code}}reedit{{/code}} subcommands in {{code}}wx{{/code}}. Similar functionality is available with Mercurial using the [[Mercurial Queue (mq)&#62;&#62;http://www.selenic.com/mercurial/wiki/index.cgi/MqExtension]] extension.
+165: 
+166: ==== c7. no-dedicated-server mode
+167: 
+168: Mercurial can run without any server daemons. {{code}}ssh{{/code}} support is handled by starting a remote, transient Mercurial server automatically, which communicates with the local system over the {{code}}ssh{{/code}} connection.
+169: 
+170: ==== c8. tool community health
+171: 
+172: Mercurial has an active developer community. At least one developer (Bryan O&#8217;Sullivan) has helped with our evaluation of Mercurial, and he is interested in helping to address issues that we have run into so far (e.g., rename).
+173: 
+174: There have been a few Solaris-specific problems with Mercurial. The Mercurial developers have been quick to respond. And in at least one case they installed Solaris so that they could troubleshoot the issue. Also, the developers have paid attention to larger issues, rather than applying a steady stream of band-aids. For example, to address the recurring shell-compatibility problems with {{code}}hgmerge{{/code}}, one developer suggested rewriting {{code}}hgmerge{{/code}} in Python.
+175: 
+176: ==== c9. OpenSolaris community expertise
+177: 
+178: Mercurial is almost entirely written in Python; {{code}}hgmerge{{/code}} is a shell script, though there is some talk of rewriting it in Python, too. It&#8217;s unclear (to me) how much Python expertise there is in the OpenSolaris community. Fortunately, Python appears easy to learn, and the code tends to be more readable than, say, Perl. Commenting is a bit sparse, but I haven&#8217;t had problems following the code.
+179: 
+180: ==== c10. interface extensibility
+181: 
+182: Mercurial has a [[hooks mechanism&#62;&#62;http://www.selenic.com/mercurial/hgrc.5.html]] as well as a documented [[extensions mechanism&#62;&#62;http://www.selenic.com/mercurial/wiki/index.cgi/ExtensionHowto]]. Some hooks can abort the current operation.
+183: 
+184: ==== c11. transactional operations and corruption recovery
+185: 
+186: Mercurial&#8217;s state files are updating by appending. So corrupted files can be repaired by rolling back to a consistent set of files.
+187: 
+188: Signal handling (e.g., {{code}}SIGINT{{/code}}) appears sensible.
+189: 
+190: I simulated a crash using {{code}}SIGKILL{{/code}} during a clone operation and was able to get the workspace into a state where there were many missing files. That is, the files were in the repository, but they were not in the visible source tree. This experiment raised a couple issues that we&#8217;ll want to look at more carefully.
+191: 
+192: * the child repository was left with two lock files which would block some operations but not others. A push to the parent was not blocked. Either this is a bug or we need to understand Mercurial&#8217;s use of locks better.
+193: * Mercurial seemed confused by the contents of the child. I edited a file in the workspace~--{{code}}README.opensolaris{{/code}}~--and tried to commit it, but Mercurial said there were no changes. Mercurial let me clone the child, edit {{code}}README.opensolaris{{/code}} in the second child, and push the changes to the first child. Trying to work with {{code}}README.opensolaris{{/code}} in the first child was still troublesome~--it was as though Mercurial did not realize that {{code}}README.opensolaris{{/code}} was already in the repository. For operational simplicitly, we&#8217;ll want some sort of cleanup and repair script, with simple guidelines on when to run it.
+194: 
+195: There also appear to be a couple open issues related to locking[[[4]&#62;&#62;#locking]].
+196: 
+197: ==== c12. content generality
+198: 
+199: Mercurial supports binary files as well as text. However, the merge code appears to assume text files. We&#8217;ll need to think about to handle binary files.
+200: 
+201: ==== o13. partial trees
+202: 
+203: Not currently supported, though there have been discussions about adding support for it..
+204: 
+205: ==== o14. per-file histories
+206: 
+207: Changesets are for the entire repository, not per-file. But you can get a per-file history by specifying the file name with &#34;hg log&#34;.
+208: 
+209: === 2. Storage
+210: 
+211: We didn&#8217;t have any problems running out of storage or swap. No storage spikes were observed.
+212: 
+213: One thing that deserves further investigation is the storage consumed by the conflict tests in the test harness that we used. The first test introduces a content conflict in usr/src/cmd/sort/Makefile.com. The second test introduces a couple rename conflicts in usr/src/cmd/pwd. This led to a size increase of 2.3MB in the test repository, which seems excessive.
+214: 
+215: === 3. Performance
+216: 
+217: A local clone of the OpenSolaris ON 20060222 tree takes a couple minutes on the above hardware using ZFS; about twice that on UFS.
+218: 
+219: Using the [[repo with history&#62;&#62;#repo]], performance looks like this (times are in mm:ss):
+220: 
+221: |=operation|=Local (zfs)|=LAN (NFS)|=LAN (ssh)|=WAN (Menlo Park-United Kingdom) (ssh)
+222: |clone (6 samples)|2:55 (std dev: 1:00)|6:54 (std dev: 0:17)|4:01 (std dev: 0:08)|35:42 (std dev: 2:45)
+223: |local commit (1 file; 6 samples)|0:23 (std dev: 0:13)|0:17 (std dev: 0:09)|0:19 (std dev: 0:11)|0:19 (std dev: 0:10)
+224: |push (1 file, 1-3 deltas; 4 samples)|0:01|0:02|0:03|0:06
+225: |pull (1 file, 1-3 deltas; 6 samples)|0:01|0:01|0:02|0:06
+226: 
+227: == D. Changes/Features Required/Desired
+228: 
+229: === Must Have Initially
+230: 
+231: * rename/merge integration
+232: * versioning of on-disk data structures (this should be in the upcoming RevlogNG changes)
+233: * a reliable mechanism for checking a tree (repository plus working directory) after a crash and making any necessary repairs (see [[Section c11&#62;&#62;#c11]] above)
+234: 
+235: === Want Eventually
+236: 
+237: * detection of rename conflicts
+238: * supported interface for showing renames and deletions in the log (planned for Mercurial 0.9)
+239: * better handling of failed merges ([[issue12&#62;&#62;http://www.selenic.com/mercurial/bts/issue12]] in the Mercurial issue database)
+240: 
+241: == Notes
+242: 
+243: [1] For example, the 2006-03-22 version of the {{code}}hgrc(5){{/code}} man page lists hooks that were apparently added after 0.8, although 0.8 is the most recent release.
+244: 
+245: [2] Besides leaving editor backup files, our clobber builds leave some generated files behind.
+246: 
+247: [3] The relevant code is
+248: 
+249: {{{
+250: 
+251: $EDITOR &#34;$LOCAL&#34; &#34;$LOCAL.rej&#34; &#38;&#38; test -s &#34;$LOCAL.rej&#34; || exit 0
+252: 
+253: }}}
+254: 
+255: If {{code}}$EDITOR{{/code}} can&#8217;t be invoked for some reason, we&#8217;ll take the &#34;exit 0&#34;, which indicates a successful merge.
+256: 
+257: [4] [[issue132&#62;&#62;http://www.selenic.com/mercurial/bts/issue132]] &#34;hg should revalidate its data after locking the repo&#34; and [[issue154&#62;&#62;http://www.selenic.com/mercurial/bts/issue154]] &#34;race between undo and all readers&#34;
+258: 
+259: == History
+260: 
+261: ; 2006-04-20
+262: : Resolved TBDs. More information on use with ZFS snapshots. Minor editorial changes.
+263: ; 2006-04-13
+264: : Updates after email discussion with Bryan O&#8217;Sullivan &#60;bos@serpentine.com&#62;
+265: ; 2006-03-31
+266: : First draft.
+267: 
+268: // Last change: 2006-04-20 11:29 PDT //
+  </textarea>
+
+    <div class="clearfloats"></div>
+  </div>    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSNav','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSNav'); togglePanelVisibility(this.parentNode);">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavCommunity Group">
+            <div id="xwikinavCommunity GroupHeader" class="accordionTabTitleBar"><h6>Community Group</h6>
+            </div>
+            <div id="xwikinavCommunity GroupContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+edu/">Academic and Research</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+accessibility/">Accessibility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+advocacy/">Advocacy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+appliances/">Appliances</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+approachability/">Approachability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/">Architecture Process and Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+brandz/">BrandZ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+chinese_users/">Chinese Users</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/">Community Advisory Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+dtrace/">DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+databases/">Databases</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+desktop/">Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/">Device Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+distribution/">Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+emerging_platforms/">Emerging Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+fm/">Fault Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+games/">Games on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ha%2Dclusters/">HA Clusters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+hpcdev/">HPC Developer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+install/">Installation and Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+int_localization/">Internationalization and Localization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+laptop/">Laptop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ldoms/">Logical Domains</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+mdb/">Modular Debugger (MDB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+nfs/">NFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/">Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/">OS/Net (ON)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+observability/">Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ogb/">OpenSolaris Governing Board (OGB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+printing/">OpenSolaris Printing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/">Performance</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+pm/">Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+power_pc/">PowerPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/">Security</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+smf/">Service Management Facility (smf(5))</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sw%2Dporters/">Software Porters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+volume_manager/">Solaris Volume Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+storage/">Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sysadmin/">Systems Administration Community Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+testing/">Testing</a></span></li>
+<li><em class="underline"><em><span class="wikilink"><a href="/bin/view/Community+Group+tools/">Tools Home</a></span></em></em></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ufs/">Unix File Systems (UFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+web/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+x_win/">X Window System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+xen/">Xen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/">ZFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/">Zones</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavProject">
+            <div id="xwikinavProjectHeader" class="accordionTabTitleBar"><h6>Project</h6>
+            </div>
+            <div id="xwikinavProjectContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/"></a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+adsl/">ADSL Modem Enhancement</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+arc%2Dprocess/">ARC Process Definition</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osarm/">ARM Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bind/">BIND Update</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bluetooth/">Bluetooth Stack & Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dinitiator/">Brocade FC HBA &#45; Initiator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dtarget/">Brocade FC HBA &#45; Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brussels/">Brussels &#45; unified network link configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cifs%2Dserver/">CIFS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smbfs/">CIFS client for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cmt/">CMT</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/">COMSTAR: Common Multiprotocol SCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpufs/">CPU Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/">Caiman, Solaris Install Revisited</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+celeste/">Celeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/">Chime Visualization Tool for DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+clearview/">Clearview: Network Interface Coherence</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dinformix/">Cluster Agent: Informix Dynamic Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dcontainer/">Cluster Agent: OpenSolaris Container</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dxvm/">Cluster Agent: OpenSolaris xVM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Debs/">Cluster Agent: Oracle E&#45;Business Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dsmb/">Cluster Agent: Samba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dtomcat/">Cluster Agent: Tomcat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dpostgresql/">Cluster agent: PostgreSQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+data%2Dflow/">Coarse Data Flow Parallelism</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+colorado/">Colorado: Open HA Cluster on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+commandassist/">Command Assistant</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cam/">Common Array Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+companion/">Companion &#45; /opt/sfw: Free and Open Source software</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+content/">Content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+contest/">Contest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpg/">Credentials Process Groups</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crossbow/">Crossbow: Network Virtualization and Resource Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmsagenttoolkit/">Crypto KMS Agent Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/">Cryptographic Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Ddoc/">DTrace Guide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dmm/">Data Migration Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+datatethers/">Data Tethers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+de/">Deutsches Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ddtool/">Device Detection Tool</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+driver%2Dutility/">Device Driver Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devicemgr/">Device Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devmapper/">Device Mapper</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dri/">Direct Rendering Infrastructure & 3D drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/">Duckwater: Simplified name services management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+phpEasyTools/">Easy Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emancipation/">Emancipation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex%2Dcna/">Emulex Advanced Ethernet Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex/">Emulex Fibre Channel Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+intel%2Dplatform/">Enable/Enhance Solaris support for Intel Platform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webcams/">Enhance the support of USB webcams</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Dprofiles/">Enhanced SMF Profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+amd/">Enhancements for AMD&#45;based Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+erlang%2Ddtrace/">Erlang DTrace Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ethbridge/">Ethernet bridge module for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+conary%2Deval/">Evaluate Conary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+events%2Dregistry/">Events Registry</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ext3/">Ext3 file system support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+facilitation/">Facilitation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fcoe/">Fibre Channel over Ethernet</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fgap/">Fine Grained Access Policy (FGAP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fingerprint%2Dauthentication/">Fingerprint Authentication</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fmac/">Flexible Mandatory Access Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+forensics/">Forensic Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fox/">Fully Open X Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fuse/">Fuse on Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+generic%2Dmca/">Generic Machine Check Architecture Improvements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+raidcfg/">Generic RAID Configuration Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+summerofcode/">Google SOC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Djboss/">HA&#45;JBoss</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dmysql/">HA&#45;MySQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hpc%2Dstack/">HPC Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livehadoop/">Hadoop Live CD</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hitachi/">Hitachi</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+honeycomb/">HoneyComb Fixed Content Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hotplug/">Hotplug Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ip%2Drefactor/">IP Datapath Refactoring</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ipoib/">IP over Infiniband</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tref/">IPsec Tunnel Reform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/">Image Packaging System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isc/">Immutable Service Containers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+perfmib/">Improved Performance MIB</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/">Indiana</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+awards/">Innovation Awards</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/">Input Method</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+intelgraphics/">Intel Graphics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ikev2/">Internet Key Exchange, version 2 (IKEv2)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+irm/">Interrupt Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jkstat/">JKstat &#45; a java binding for libkstat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jeos/">JeOS &#45; Just enough Operating System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jfs/">Journaled File System (JFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kde/">K Desktop Environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kerberos/">Kerberos</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kssl/">Kernel SSL Enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kernel%2Dsockets/">Kernel Sockets</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmf/">Key Management Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ksh93%2Dintegration/">Korn Shell 93 integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ldoms%2Dmgr/">LDoms Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+txipsec/">Labeled IPsec</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+latencytop/">LatencyTOP</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+l2filter/">Layer 2 Filtering</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lending/">Lending</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lld/">Link Layer Discovery</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livemedia/">Live Media: Technologies for distributions running from CD and other media</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+localedata/">Locale Data</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mips/">MIPS Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohac%2Davs/">MRSL.NONsharedDevice</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mega_sas/">Mega_sas</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mx/">Mexico</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+milax/">MilaX minimal Live Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mozilla%2Ddtrace/">Mozilla DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+glossary/">Multi&#45;lingual Glossary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mpxio/">Multi&#45;pathing software (MPxIO)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+multiple%2Ddoi/">Multiple DOI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+large%2Dsector/">Multiple disk sector size support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+muskoka/">Muskoka: An open repository for OpenSolaris technical content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsrdma/">NFS RDMA transport update and performance analysis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dzones/">NFS Server in non&#45;Global Zones</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsv41/">NFS version 4.1 pNFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dnamespace/">NFSv4 namespace extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npiv/">NPort ID Virtualization (NPIV)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+numa/">NUMA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+navigator/">Navigator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nemo/">Nemo: A Framework for High&#45;Performance Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/">Network Auto&#45;Magic</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ndmp/">Network Data Management Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+net%2Dmib/">Network MIBs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npp/">Network Performance Projects</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dpm/">Network Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nws/">Network Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ntp/">Network Time Protocol (NTP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nv%2Dg11n/">Nevada Globalization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+4over6/">New Design of 4over6 Mechanism Based on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nightingale/">Nightingale: Port Songbird to OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohacge%2Dsbp/">OHACGE Script Based Plug&#45;in</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+onnv/">ON/Nevada (ONNV) Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osd/">Object Storage Device (OSD) support for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opendev/">Open Development Infrastructure</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dutilities/">Open HA Cluster Utilities</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opensound/">Open Sound System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/">OpenGrok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cim%2Dserver/">OpenPegasus CIM Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+openrti/">OpenRTI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+busybox/">OpenSolaris Busybox</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/">OpenSolaris Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+es/">OpenSolaris Hispano</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+audit/">OpenSolaris Security Audit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/">OpenSolaris support for the QEMU processor emulator: host and guest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pef/">PEF: Packet Event Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+performance%2Dwrappers/">Performance Wrappers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkgfactory/">Pkgfactory</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pl/">Polski Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fr/">Portail Francophone</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+br/">Portal Brasileiro de OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+portals/">Portals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmui/">Power Management Usability Interfaces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+presto/">Presto: Automatic Printing Configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmpsm/">Printable Many Page Solaris Manuals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+promise%2Dstorage/">Promise SuperTrak RAID HBA Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qlogic%2Dcna/">QLogic Converged Network Adapter GLDv3 NIC Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+quagga/">Quagga Routing Protocol Suite Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rbridges/">RBridge (IETF TRILL) support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rof/">RDMA Offload Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+releasenotes/">Release Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+reno/">Reno: Login Process Enhancements for Interop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/">Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+samqfs/">SAM/QFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+scm%2Dmigration/">SCM Migration Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+srp/">SCSI RDMA Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sdcard%2Ddrivers/">SDcard Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sfwnv/">SFW</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sm%2Dhba/">SM&#45;HBA Based SAS HBA Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Ddoc/">SMF Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+svr4_packaging/">SVR4 Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sensors/">Sensor Abstraction Layer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dsip/">Session Initiation Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+shell/">Shell: bourne shell, korn shell, C shell, etc.</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sierra/">Sierra: Intel WiFi Chipsets Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+simplepanels/">Simple Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/">Solaris PowerPC Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iscsitgt/">Solaris iSCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sourcejuicer/">SourceJuicer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/">Sparks: name service switch/nscd enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+squashfs/">Squashfs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+star/">Star integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starfish/">Starfish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starterkit/">Starter Kit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+storagepm/">Storage Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sst/">Sun Security Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+avs/">Sun StorageTek Availability Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ofuv/">Support for OpenFabrics User Verbs / API on OpenSolaris OS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/">Support gcc4/GCCfss in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+suspend%2Dresume/">Suspend/Resume</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+systemz/">Systemz</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tipc/">TIPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tamarack/">Tamarack: Removable Media Enhancements in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+test%2Ddev/">Test Development</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/">Tickless Kernel Architecture</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+branding/">Trademarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tpm/">Trusted Platform Module support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tnipdb/">Trusted networking interface policy database for Trusted Extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+usecase/">Use Case</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+userland/">Userland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vrrp/">VRRP: Virtual Router Redundancy Protocol Implementation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vscan/">VSCAN service</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+valex/">Validated Execution Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vconsole/">Virtual Console</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vnm/">Virtual Network Machines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/">Visual Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+visualization%2Dhpc/">Visualization for HPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+volo/">Volo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/">Web Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+website/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+winchester/">Winchester: Schema mapping and ID mapping for AD Interoperability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wusb/">Wireless USB Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wwan/">Wireless Wide Area Network</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x%2Dcons/">X Consolidation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xkblayout/">X Keyboard Layout</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xen%2Dgate/">Xen Gate</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xfce/">Xfce: A lightweight desktop environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfsboot/">ZFS Boot and Install</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfs%2Dcrypto/">ZFS on disk encryption support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonemgr/">Zone Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonestat/">Zone Statistics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gcore/">gcore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iser/">iSCSI Extensions for Remote DMA (iSER)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isns/">iSNS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+libmicro/">libMicro &#45; portable microbenchmarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+loficc/">lofi compression and cryptography support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lx64/">lx64 brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+s10brand/">s10brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x86gentopo/">x86 Generic FMA Topology Enumerator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cz/">Český portál</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ru/">Русский портал</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ar/">البوابة العربية</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+in/">भारतीय पोर्टल</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cn/">中国门户</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/">日本ポータル</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kr/">한국 포탈</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavUser Group">
+            <div id="xwikinavUser GroupHeader" class="accordionTabTitleBar"><h6>User Group</h6>
+            </div>
+            <div id="xwikinavUser GroupContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+kr/"></a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+adl%2Dauosug/">Adelaide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+aosug/">Argentina</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+azosug/">Arizona</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+atl%2Dosug/">Atlanta OpenSolaris Users Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bwosug/">Baltimore&#45;Washington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bosug/">Bangalore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bkkosug/">Bangkok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bdosug/">Bangladesh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bjosug/">Beijing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+brosug/">Berlin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bvrm%2Dosug/">Bhimavaram</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+btn%2Dosug/">Bloomington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfosug/">Brasilia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+blmosug/">Bélem</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+crosug/">Capital Region</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cfosug/">Cardiff</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ccosug/">Caribbean OSUG</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ceosug/">Ceara</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cltosug/">Charlotte</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cdosug/">Chengdu</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chennai/">Chennai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chmxosug/">Chihuahua</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+closug/">Chile</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cle%2Dosug/">Cleveland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+colosug/">Colombia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cmh%2Dosug/">Columbus</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ctosug/">Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+knp%2Duek/">Cracow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+czosug/">Czech</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfw%2Dosug/">Dallas/Ft. Worth</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dosug/">Danish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+deosug/">Delaware</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+eduosug/">Edinburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+egosug/">Egypt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fiosug/">Finland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+flosug/">Florida</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fraosug/">Frankfurt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+frosug/">Front Range</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fzosug/">FuZhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+glug/">Great Lakes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+grosug/">Greece</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hzosug/">Hangzhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hi%2Dosug/">Hawaii</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hkosug/">Hong Kong</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hugs/">Houston</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hosug/">Hyderabad</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+idosug/">Indonesia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madridosug/">Inicio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ie%2Dosug/">Irish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+iosug/">Israel</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+istosug/">Istanbul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+itl%2Dosug/">Italian</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jnosug/">Jinan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jogja%2Dosug/">Jogja</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kbosug/">Kabul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kc%2Dosug/">Kansas City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+lavosug/">Latvia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+losug/">London</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madosug/">Madurai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mansug/">Manchester</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mssosug/">Mato Grosso</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+msosug/">Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mgosug/">Minas Gerais</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mnosug/">Minnesota</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mtlosug/">Montreal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mosug/">Moscow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mmosug/">Mumbai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mucosug/">Munich</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+neaosug/">NEA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nit%2Dhamirpur%2Dosug/">NIT Hamirpur</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nlosug/">Netherlands</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ne%2Dosug/">New England</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nycosug/">New York City OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nzosug/">New Zealand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+norosug/">Noroeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nerosug/">Nuremberg&#45;Erlangen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+okcosug/">Oklahoma City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ososug/">Osnabrück</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+peosug/">Peru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+paosug/">Philadelphia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+piaski%2Dosug/">Piaski</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ptosug/">Pittsburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+poaosug/">Porto Alegre</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+psosug/">Puget Sound</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+posug/">Pune</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+qosug/">Queensland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rtp%2Dosug/">Research Triangle Park</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+riosug/">Rio de Janeiro</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ro%2Dosug/">Romania</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ruosug/">Russia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+alamo%2Dosug/">San Antonio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sdosug/">San Diego</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sfosug/">San Francisco</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+scosug/">Scottish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rs%2Dosug/">Serbia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szosug/">Shenzhen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svosug/">Silicon Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sgosug/">Singapore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+skosug/">Slovak</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+saosug/">South African</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+soctosug/">Southern Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+stl%2Dosug/">St. Louis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svgosug/">Stavanger</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+swosug/">Sweden</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chosug/">Switzerland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sosug/">Sydney</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szc%2Dosug/">Szczecin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sampaosug/">São Paulo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+twosug/">Taiwan OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ostug/">Tecum</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tvosug/">Thames Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tsug/">Tokyo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+torosug/">Toronto</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+trosug/">Trondheim</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+toss/">Tulsa</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tosug/">Turkey</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ufaosug/">Ufa OSUG</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+uaosug/">Ukraine OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+unimelb%2Dosug/">University of Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+valeosug/">Vale do Paraíba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vanosug/">Vancouver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vosug/">Venezuela &#45; Pagina de incio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vvoosug/">Vladivostok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wosug/">Welsh &#45; Cymru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wiosug/">Wisconsin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+xaosug/">Xi'an</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+</div><p/>
+<script type="text/javascript">
+var obj = {div:'xwikinav',no:0,height:250};
+var acc = createAccordion(obj);
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSDocs','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSDocs'); togglePanelVisibility(this.parentNode);">Community Group tools Pages</h1>
+<div class="xwikipanelcontents"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/building_opensolaris">Build/Install OpenSolaris (Part 1)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/building_opensolaris_part2">Build/Install OpenSolaris (Part 2)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/downloads">Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/gcc">GCC</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/bug_fixing_notes">Bug Fixing Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/build_instr">Build Instructions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/flagday">Important Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/on_policy">ONNV Policy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/rationale">Background and Rationale</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/shadow">Shadow Compilation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/status">Current Status</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/hg">Mercurial Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/linker">Dynamic Linking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/scm">OpenSolaris Source Code Management</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/bzr%2Deval">OpenSolaris DSCM Evaluation: Bzr (Interim Report)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/dcm_evaluation_mercurial">OpenSolaris DSCM Evaluation: Mercurial</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/dscmreqdoc">DSCM Requirements Document</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/evalform">Candidate Evaluation Form</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/evalplan">Evaluation Plan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/hg_help">How To Use Mercurial (hg) Repositories</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/hg_teamware_transition">How To Transition from Teamware to Mercurial</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/history">SCM Project History</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/on%2Dscm%2Dtools">ON SCM&#45;Related Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/scm_milestone">Source Code Management for OpenSolaris: MILESTONES</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/scmconsolespec">SCM console specification</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/scmhostspec">SCM hosting implementation specification</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/svn_help">How To Use SVN Repositories</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/scmdownloads">Source Code Management Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_tools">Sun Studio Downloads</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/faqs">Sun Studio FAQs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/getstarted">Sun Studio Getting Started</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sss11ent">Sun Studio 11 License</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sss12ent_license">Sun Studio 12 License</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sssent">Sun Studio 10 License</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_10_tools">Sun Studio 10 Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_11_tools">Sun Studio 11 Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_11_tools_previous">Sun Studio 11&#45;&#45; Previous Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_12_tools">Sun Studio 12 Compilers and Tools for the OpenSolaris Common Build Environment (CBE)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/support">Sun Studio Support</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/testing+nightly">testing nightly</a></span></li>
+</ul>
+                        </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div>  <div id="footerglobal" class="layoutsection">
+  <div class="minwidth"></div>
+
+  <script language="JavaScript" src="/resources/js/s_code_remote.js"></script>
+
+
+          <div id="xwikiplatformversion">XWiki Enterprise 2.1.1.25889 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+  <br/>
+
+
+    <hr/>
+    <div><a href="/bin/view/Main/tou">Terms Of Use</a> |
+         <a href="http://www.sun.com/privacy/">Privacy</a> | 
+         <a href="/bin/view/Main/trademark">Trademarks</a> |
+         <a href="/bin/view/Main/copyrights">Copyright Policy</a> |
+         <a href="/bin/view/Main/site_guidelines">Site Guidelines</a> |
+         <a href="/bin/view/Main/site%2Dmap">Site map</a> |
+         <a href="/bin/view/Main/help">Help</a></div>
+    <div>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.</div>
+    <div id="xwikilicence">© 2010, Oracle Corporation and/or its affiliates</div>
+    <img src="http://opensolaris.org/oracle/logo_oracle_footer.gif")" alt="Oracle"/>
+  <hr/>
+  
+  </div>
+
+
+</div></div></body>
+</html>

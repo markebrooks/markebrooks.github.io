@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Cyclic Backend - Timers (Project ppc-dev.cbe) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+ppc%2Ddev/cbe" />
+                    <link rel="canonical" href="/bin/view/Project+ppc%2Ddev/cbe" />
+                            <meta name="document" content="Project ppc-dev.cbe"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Project ppc-dev"/>
+    <meta name="page" content="cbe"/>
+    <meta name="version" content="1.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Project+ppc-dev/pages/cbe"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Cyclic Backend - Timers" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project ppc-dev";
+XWiki.currentPage = "cbe";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Project+ppc%2Ddev/cbe";
+window.docediturl = "/bin/edit/Project+ppc%2Ddev/cbe";
+window.docsaveurl = "/bin/save/Project+ppc%2Ddev/cbe";
+window.docgeturl = "/bin/get/Project+ppc%2Ddev/cbe";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Project_ppc-dev viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bppc%252Ddev%2Fcbe"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+ppc%2Ddev/"><strong>Project ppc-dev</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Project+ppc%2Ddev" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>
+            </td>
+            <td style="width: 99%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                              <a href='/bin/view/Project+ppc%2Ddev/task_map'>Project Task Map</a> <span class='separator'>&#187;</span> <span class='current'>Cyclic Backend - Timers</span>
+                </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+ppc%2Ddev/cbe?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+ppc%2Ddev/cbe?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+ppc%2Ddev/cbe?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+ppc%2Ddev/cbe?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+ppc%2Ddev/cbe?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+ppc%2Ddev/cbe?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+ppc%2Ddev/cbe?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+ppc%2Ddev/cbe?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+ppc%2Ddev/cbe?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+ppc%2Ddev/cbe?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+ppc%2Ddev/cbe?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          <span class="submenuitem "><a href="/bin/view/Project+ppc%2Ddev/cbe?xpage=copy" id="tmActionCopy" class="tmActionCopy">Copy</a></span>
+      </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>Cyclic Backend - Timers</h1></div>
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h2 id="HCyclicBackend-Timers-Counters"><span>Cyclic Backend - Timers - Counters</span></h2><h2 id="HStatus062F062F2007"><span>Status 06/06/2007</span></h2><p>The decrementer exception and firing of the cyclic subsystem is functional. The rollover of the decrementer for a 10ms tick is set during the cbe_init, clock_init execution in main. The creation of an specific do_dec_interrupt() in intr.c was thought to be a way of keeping the operations seperate for debugging purposes. The dec irq functionality could easily be folded back into do_interrupt() once both are up.</p><p>The decrementer exception is taken in locore and clock_intr does a small bit of housekeeping before jumping to do_dec_interrupt(). It returns to locore to execute the _sys_rtt. This process takes you through the cyclic backend and interrupt processing for the 3 distinct clock related priorities.&nbsp;</p><h3 id="HOverview"><span>Overview</span></h3><p>Solaris has a concept of a cyclic subsystem, which has been designed to take advantage of chip architectures with the capacity to interrupt based on absolute, high resolution values of time.</p><p>Subsystem Overview: The cyclic subsystem is a low-level kernel subsystem designed to provide arbitrarily high resolution, per-CPU interval timers (to avoid colliding with existing terms, we dub such an interval timer a “cyclic”). Cyclics can be specified to fire at high, lock or low interrupt level, and may be optionally bound to a CPU or a CPU partition. A cyclic’s CPU or CPU partition binding may be changed dynamically; the cyclic will be “juggled” to a CPU which satisfies the new binding. Alternatively, a cyclic may be specified to be “omnipresent”, denoting firing on all online CPUs.&nbsp;</p><p>In the book Solaris Internals 2nd Ed the cyclic subsystem is covered in some detail but those who want to dive right into this would be better served to look at uts/common/os/cyclic.c and the overview that is embedded there.</p><h3 id="HImplementation"><span>Implementation</span></h3><p>For the PPC architecture you have a decrementer that is programmable in it's count to generate an exception. The EE bit in the MSR, when set, will allow this processing to occur. Once a rollover has transpired the decrementer exception is pending and there is no way to clear it. The exception must be taken.&nbsp;</p><p>Addtionally there is a 64 bit Time Based Unit which is a free running counter sync'd in time with the decrementer count. They both run at 1/4 the bus frequency of the cpu. In the case of the ODW this is 33.333mhz.&nbsp;</p><p>So we use the decrementer to generate the exception but the TBU is similar to the x86 time stamp counter, much of the same approach was taken in processing the time gathered was done by subtituting the TBU for the TSC.</p><p>The two main files created are in chrp/io - cbe.c, hardclk.c. Initally started with the SPARC based files but ended up with an x86 like implementation. Some of the cyclic DTrace related funcs are temporarily located there. Also in hardclk.c the TOD and other periodic funcs.</p><h3 id="HTODandotherrelateditems"><span>TOD and other related items</span></h3><p>The integration of the TOD functionality is pending. A small framework of TOD code was located in hardclk.c in order to get cbe up. The ODW does have an PC type TOD chip that hangs off of the southbridge so that bringing this is not an issue. The EFIKA and a number of other embedded type processors do not typically include them so alternative approaches need to be investigated.</p><p>The Host processor family (32 bit PPC) from Freescale require a Northbridge to be functional. The Marvell 64360 / 64460 family are utilized on the ODW target. These parts are targeted towards networking based applications and have multiple counters, timers that could be utilized in certain situations.&nbsp;</p>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:17<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by admin on 2009/10/26 12:17
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Project ppc-dev Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/GetStarted">Getting Started</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/faq">FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/kickstart">Kickstarting OpenSolaris on PowerPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/status">Status</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/task_map">Project Task Map</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/atomic">Low Level Atomic Operations</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/bld_env">GNU Toolchain and Host Environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/boot_ldr">Bootloader &#45; Net/Disc</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/cache_behav">Cache Behavior</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/cbe">Cyclic Backend &#45; Timers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/chk_res">Checkpoint and Restore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/console">Console Items</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/ctf">CTF &#45; Compressed Text Format</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/ddi">DDI &#45; Device Driver Interface</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/dtrace">DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/hw_tools">Hardware Tools for the Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/inst">Installer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/ism">ISM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/kern_init">Kernel Inititalization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/kmdb_mdb">KMDB / MDB / PMDB</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/krn_swtch">Kernel  Context Switching</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/krtld">Kernel Runtime Loader</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/modstubs">Module Stubs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/mp">MP Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/openfirm">Openfirmware &#45; VOF</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/panic">Panic Handling</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/psm">Platform Specific Modules</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/root_nex">Root Nexus</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/rtld_ld">RTLD and ld</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/sys_calls">System Calls</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/traps">Exceptions, Traps and Interrupts</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/usr_libs">User Libraries</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/usr_swtch">User Context Switching</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/vm">Virtual Memory &#45; HAT</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/tools">Project Tools</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/proj_xtra">Project Extras</a></span></li>
+</ul></li>
+</ul>
+                    </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2011, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

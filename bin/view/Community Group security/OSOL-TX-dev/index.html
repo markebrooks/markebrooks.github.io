@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Running Trusted Extensions using the OpenSolaris Dev Repository (Community Group security.OSOL-TX-dev) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Community+Group+security/OSOL%2DTX%2Ddev" />
+                    <link rel="canonical" href="/bin/view/Community+Group+security/OSOL%2DTX%2Ddev" />
+                            <meta name="document" content="Community Group security.OSOL-TX-dev"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Community Group security"/>
+    <meta name="page" content="OSOL-TX-dev"/>
+    <meta name="version" content="20.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Community+Group+security/pages/OSOL-TX-dev"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Running Trusted Extensions using the OpenSolaris Dev Repository" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="Glenn Faden" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Community Group security";
+XWiki.currentPage = "OSOL-TX-dev";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Community+Group+security/OSOL%2DTX%2Ddev";
+window.docediturl = "/bin/edit/Community+Group+security/OSOL%2DTX%2Ddev";
+window.docsaveurl = "/bin/save/Community+Group+security/OSOL%2DTX%2Ddev";
+window.docgeturl = "/bin/get/Community+Group+security/OSOL%2DTX%2Ddev";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Community_Group_security viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FCommunity%2BGroup%2Bsecurity%2FOSOL%252DTX%252Ddev"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+security/"><strong>Community Group security</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Community+Group+security" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>
+            </td>
+            <td style="width: 99%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                                          <a href='/bin/view/Community+Group+security/projects'>Community Projects</a> <span class='separator'>&#187;</span> <a href='/bin/view/Community+Group+security/tx'>Trusted Extensions</a> <span class='separator'>&#187;</span> <span class='current'>Running Trusted Extensions using the OpenSolaris Dev Repository</span>
+                      </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Community+Group+security/OSOL%2DTX%2Ddev?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Community+Group+security/OSOL%2DTX%2Ddev?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+security/OSOL%2DTX%2Ddev?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+security/OSOL%2DTX%2Ddev?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+security/OSOL%2DTX%2Ddev?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Community+Group+security/OSOL%2DTX%2Ddev?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+security/OSOL%2DTX%2Ddev?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+security/OSOL%2DTX%2Ddev?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+security/OSOL%2DTX%2Ddev?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+security/OSOL%2DTX%2Ddev?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Community+Group+security/OSOL%2DTX%2Ddev?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>Running Trusted Extensions using the OpenSolaris Dev Repository</h1></div>
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h2 id="HRunningTrustedExtensionsusingOpenSolarisDevRepository"><span>Running Trusted Extensions using OpenSolaris Dev Repository</span></h2><p>Trusted Extensions is a feature of OpenSolaris. As such it is continuously updated in the <strong>dev</strong> (development) repository. The procedures for installing and configuring Trusted Extensions are specific to particular releases &nbsp;This document will be updated as necessary, corresponding to the most recent version in the Dev repository. These notes are currently based on 0.5.11-0.125 (build 125).</p><p>The latest media release of OpenSolaris is 2009.06, so you should start with the LiveCD for the release. These instructions assume that you have created a user account during the initial installation, and that <strong>root</strong> is a role that you can assume. After you have completed the default installation of OpenSolaris 2009.06 (either running directly on the hardware or as a VirtualBox guest) you should start the Package Manager. Select <strong>File-&gt;Manage Repositories</strong>. Select the <strong>opensolaris.org</strong> repository and click <strong>Modify</strong>. Change the &nbsp;URL to <span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://pkg.opensolaris.org/dev/"><span class="wikigeneratedlinkcontent">http://pkg.opensolaris.org/dev/</span></a></span> and click <strong>OK</strong>. Then click on <strong>Update All</strong> to create a new boot environment running the latest bits in the Dev repository. Note that you can always boot back to the 2009.06 distribution if the you have a problem with the newly installed system.</p><h3 id="HInstalltheTrustedExtensionsPackage"><span>Install the Trusted Extensions Package</span></h3><p>After upgrading to the latest Dev release, and rebooting the system, open the Package Manager again to get the Trusted Extensions package. Enter <strong>trusted</strong> in the <strong>Search</strong> text area to get a list of Trusted Extensions packages. Select &nbsp;<strong>trusted-extensions</strong> . Then select <strong>Install/Update</strong>.</p><p>There is also a new <strong>trusted-nonglobal</strong> package which &nbsp;enumerates the initial set of packages required in a labeled brand zone to run the Trusted Desktop. This will be retrieved from the respository when you install your first zone. Note that the <strong>inherit-pkg-dir</strong> option is no longer supported. Instead, the package requirements are specified as part of the labeled zone brand.</p><h3 id="HWorkarounds"><span>Workarounds</span></h3><h4 id="HSetuptheAutomounter28requiredforTX29"><span>Set up the Automounter (required for TX)</span></h4><p>Edit <strong>/etc/passwd</strong>, changing your home directory from</p><pre>    /export/home/you</pre><p>to</p><pre>    /home/you</pre><div class="wikimodel-emptyline"></div><p>Edit <strong>/etc/auto_home</strong> adding the following:</p><pre>
+    * -fstype=lofs :/export/home/&amp;
+</pre><div class="wikimodel-emptyline"></div><div class="wikimodel-emptyline"></div><h4 id="HMakeRoomfortheTrustedStripeattheTop"><span>Make Room for the Trusted Stripe at the Top</span></h4><p><br/></p><p>In the top GNOME panel, right click and select <strong>Properties</strong>.<br/>Change the <strong>Orientation</strong> of the top panel to <strong>Bottom</strong></p><p>or if you want to make this the default for all users, you can do this:</p><pre>
+    # export SETUPPANEL="/etc/gconf/schemas/panel-default-setup.entries"
+    # export TMPPANEL="/tmp/panel-default-setup.entries"
+    # sed 's/&gt;top&lt;/&gt;bottom&lt;/' $SETUPPANEL &gt; $TMPPANEL
+    # cp $TMPPANEL $SETUPPANEL
+    # svcadm restart gconf-cache
+</pre><p>All new users will then have both of their panels set to the bottom of the display.</p><h4 id="HMountingandUnmountingtheZoneBootEnvironments"><span>Mounting and Unmounting the Zone Boot Environments</span></h4><p><br/></p><p>Zones now have boot environments similar to the global zone functionality, with dataset names like <strong>rpool/zones/public/ROOT/zbe</strong>. The boot environment is supposed to be unmounted when a zone is halted and re-mounted when it is made <strong>ready</strong>. There is bug that is causing the <strong>umount</strong> to fail:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6872581 zfs unmount fails with "device busy" if lofs mount/unmount was done on top of it.&nbsp;</p><p>The workaround is to edit the shell script <strong>/usr/lib/brand/ipkg/poststate</strong>, adding a <strong>-f</strong> option to force the umount, as follows:</p><div class="wikimodel-emptyline"></div><pre>
+        # Umount dataset on the root.
+        /usr/sbin/umount -f $zonepath/root || fail**fatal "$f**umount"
+</pre><h4 id="HScreensaverCrashingtheXServer"><span>Screensaver Crashing the X Server</span></h4><p><br/></p><p>There is a bug in the Xorg screensaver policy that results in a SEGV. The workaround is to disable it. <strong>Select System-&gt;Preferences-&gt;Screensaver</strong> and then select <strong>Disable Screen Saver</strong> from the <strong>Mode</strong> menu.</p><h3 id="HEnableTrustedExtensions"><span>Enable Trusted Extensions</span></h3><pre>
+    # svcadm enable -s labeld
+    # reboot
+</pre><h3 id="HInitialLogintoTrustedExtensions"><span>Initial Login to Trusted Extensions</span></h3><p>After the system reboots and the gdm login window appear, select</p><pre>
+    Options
+    Select Session...
+    Solaris Trusted Extensions (GNOME)
+    Change Session
+    Make Default
+</pre><p>Login as yourself</p><p>Click OK twice (once for the status window and once for the clearance window). There seems to be a problem using the keyboard in these dialogs, so just use the mouse.</p><p>GNOME will complain four times (once per workspace) that <em>The label PUBLIC has no matching zone</em>.</p><p>Dismiss each of the four dialogs.</p><h3 id="HAssumetheRootRole"><span>Assume the Root Role</span></h3><p>Switch to 4th workspace and assume root role using the pull down in the trusted stripe where your name is displayed.</p><h3 id="HCreatingthePublicZone"><span>Creating the Public Zone</span></h3><p>Bring up a Terminal and run</p><pre>    # txzonemgr</pre><p>Assuming you have not created any zone yet, you should see the following dialog:</p><pre>     Do you want to create the public zone using default settings?</pre><p>Click <strong>OK</strong>. A Terminal window should pop up displaying the title <strong>Installing public zone</strong>. After this completes and exits, another Terminal window displaying the title <strong>Zone Terminal Console: public</strong> should pop up. The zone should automatically boot, initialize and prompt for the <strong>root</strong> password. Enter F2 twice since the password is automatically the same as the current <strong>root</strong> password in the global zone. The zone will reboot again. There may be a message about the DNS multicast service failing which can be ignored, or you can disable the service by entering the command:</p><pre>    # svcadm disable multicast</pre><p>You should also see a zenity dialog showing the state and options for the <strong>public</strong> zone. Select the following:</p><pre>    Halt</pre><p>You should see the message <strong>Notice: Zone Halted</strong> in the <strong>Zone Console</strong> window. In <strong>public</strong> zone options list, pick the following:</p><pre>    Select another zone...</pre><h3 id="HGlobalZoneConfigurations"><span>Global Zone Configurations</span></h3><p>Select the <strong>global</strong> zone. Then select</p><pre>    Configure Network Interfaces..</pre><p>Select the interface corresponding to your hostname. It should be listed with a type of <strong>physical</strong>, a valid IP address, a template of <strong>cipso</strong> and the state &nbsp;<strong>Up</strong>. From the list of commands, select</p><pre>    Share with Shared-IP Zones</pre><p>Then select <strong>Cancel</strong> to pop back to the <strong>global</strong> zone command list. If you have other systems running Trusted Extensions on your network, you can add access to them by selecting</p><pre>    Add Multilevel Access to Remote Host...</pre><p>and entering the IP address of the other TX system. You will need to run the corresponding commands on that system, too, specifying the peer's IP address. As a test of <strong>txzonemgr</strong>, you can add and delete entries to the single and multilevel remote host lists. Verify the lists are updated with the values you have entered.</p><h3 id="HCloningaSnapshotofthePublicZone"><span>Cloning a Snapshot of the Public Zone</span></h3><p>The <strong>public</strong> zone should still be halted. Select</p><pre>    Create a new zone...</pre><p>You should be prompted to</p><pre>      Enter Zone Name:</pre><p>Enter &nbsp;<strong>snapshot</strong> as the zone name. Then you should see a list of options for the <strong>snapshot</strong> zone. Choose</p><pre>    Clone...</pre><p>You should see the name <strong>public</strong> in the list of installed zones. Select <strong>public</strong> by doubling clicking it or by single clicking and clicking <strong>OK</strong>. The <strong>snapshot</strong> zone is not supposed to be run automatically, so select</p><pre>    Set Manual Booting</pre><p>The <strong>snapshot</strong> zone doesn't need a label since it is never booted. Verify the <strong>Boot</strong> option is not available.</p><h3 id="HSharedInterfaceNetworking"><span>Shared Interface Networking</span></h3><pre>    Select another zone</pre><p>and choose <em>public</em>*. Select the following:</p><pre>    Add Single-level Access to Remote Host...</pre><p>Enter the IP address of a system on your network not running TX. Then enter</p><pre>    Boot</pre><p>You see the zone booting messages in the Zone Console window. Login as <strong>root</strong>, and run&nbsp;</p><pre>    ifconfig -a</pre><div class="wikimodel-emptyline"></div><div class="wikimodel-emptyline"></div><p>Verify that the primary interface and IP address are available in this zone. Verify that you can <strong>ping</strong> the host to which you previously added remote access. Now logout and close the <strong>Zone Console</strong> window.</p><h3 id="HCloningtheInternalZonefromtheSnapshot"><span>Cloning the Internal Zone from the Snapshot</span></h3><p>Switch back to the <strong>Labeled Zone Manager</strong>. Make the following selections:</p><pre>    Select another zone</pre><p>Choose <strong>global</strong> and then select</p><pre>    Create a  new zone:</pre><p>You should be prompted to</p><pre>    Enter Zone Name:</pre><p>Specify <strong>internal</strong>. Then you should see a list of options for the <strong>internal</strong> zone. &nbsp;Choose</p><pre>    Select Label...</pre><p>A label selection dialog should pop up. Select <strong>:INTERNAL USE ONLY</strong> from the <strong>Sensitivity</strong> column, and click <strong>OK</strong>.</p><p>In the list of options for the <strong>internal</strong> zone, select</p><pre>    Clone...</pre><p>Then select <strong>snapshot</strong> from the list of installed zones. It should be the only item in the list. Then select</p><pre>    Boot</pre><h3 id="HActivatethePublicandInternalWorkspaces"><span>Activate the Public and Internal Workspaces</span></h3><p>Switch back to the first workspace and bring up a Terminal. The desktop background should appear. Then bring up the Terminal again. It should be labeled <strong>PUBLIC</strong>.</p><p>Switch to the second workspace. Right-click and select <strong>Change Workspace Label...</strong></p><p>Select <strong>INTERNAL USE ONLY", click&nbsp;</strong>OK<strong>.</strong></p><p>Bring up another Terminal. This one should be labeled <strong>CONFIDENTIAL : INTERNAL USE ONLY</strong>.</p><h3 id="HConfigureTrustedNetworking"><span>Configure Trusted Networking</span></h3><p>There are several strategies for configuring your network. These are described in the <span class="wikilink"><a href="/bin/view/Community+Group+security/txzonemgr_test_plan">test plan for the Labeled Zone Manager</a></span>.</p><p>Also see Glenn Faden's blog for additional steps to configure <span class="wikiexternallink"><a href="http://blogs.sun.com/gfaden/entry/some_issues_with_network_auto">Trusted Networking</a></span> and <span class="wikiexternallink"><a href="http://blogs.sun.com/gfaden/entry/suepend_and_resume_in_opensolaris">Suspend and Resume</a></span>.</p>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:10<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by Glenn Faden on 2009/11/12 23:30
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Community Group security Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/library">Library</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/long_usernames">Username length</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/secprog">Secure Programming</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/preso">Presentations</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/projects">Community Projects</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/SSH">SSH</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/audit">Auditing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/ef">Cryptographic Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/gsoc2006">Basic File Privs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/java">Java</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/kerberos">Kerberos</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/pam">Pluggable Authentication Module</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/privdebug">Privilege Debugging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/rbac">RBAC &#45; Role Based Access Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/sbd">Secure By Default</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/tx">Trusted Extensions</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/txzonemgr_test_plan">Test Plan for txzonemgr</a></span></li>
+</ul>
+                    </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2011, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

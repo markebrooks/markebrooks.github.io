@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Bourne/Korn Shell Coding Conventions (Community Group on.shellstyle) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Community+Group+on/shellstyle" />
+                    <link rel="canonical" href="/bin/view/Community+Group+on/shellstyle" />
+                            <meta name="document" content="Community Group on.shellstyle"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Community Group on"/>
+    <meta name="page" content="shellstyle"/>
+    <meta name="version" content="3.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Community+Group+on/pages/shellstyle"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Bourne/Korn Shell Coding Conventions" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="John Beck" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Community Group on";
+XWiki.currentPage = "shellstyle";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Community+Group+on/shellstyle";
+window.docediturl = "/bin/edit/Community+Group+on/shellstyle";
+window.docsaveurl = "/bin/save/Community+Group+on/shellstyle";
+window.docgeturl = "/bin/get/Community+Group+on/shellstyle";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Community_Group_on viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FCommunity%2BGroup%2Bon%2Fshellstyle%3Flanguage%3Den"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+on/"><strong>Community Group on</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Community+Group+on" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>
+            </td>
+            <td style="width: 99%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                  <span class='current'>Bourne/Korn Shell Coding Conventions</span>
+          </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Community+Group+on/shellstyle?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Community+Group+on/shellstyle?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+on/shellstyle?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+on/shellstyle?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+on/shellstyle?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Community+Group+on/shellstyle?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+on/shellstyle?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+on/shellstyle?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+on/shellstyle?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+on/shellstyle?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Community+Group+on/shellstyle?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+                      
+<div id="document-title"><h1>Bourne/Korn Shell Coding Conventions</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h1 class='hidden'>Bourne/Korn Shell Coding Conventions</h1><p>Original version by Mike Shapiro<br/>Updated with contributions from <span class="wikilink"><a href="/bin/view/Project+shell/">the OpenSolaris Shell Project</a></span></p><p>&nbsp;This document describes the shell coding style used for all the ON shell script changes integrated into Solaris.</p><p>&nbsp;All new shell code should conform to this coding standard, which is intended to match our existing C coding standard.</p><p>&nbsp;When in doubt, think "what would be the C-Style equivalent?"</p><table><tr><td><strong>Table of contents</strong></td></tr><tr><td><span class="wikilink"><a href="#HBasicFormat">1 Basic Format</a></span><br/><span class="wikilink"><a href="#HIf2CFor2CandWhile">2 If, For, and While</a></span><br/><span class="wikilink"><a href="#HTestBuilt-in">3 Test Built-in</a></span><br/><span class="wikilink"><a href="#HSingle-lineif-statements">4 Single-line if-statements</a></span><br/><span class="wikilink"><a href="#HInfiniteLoops">5 Infinite Loops</a></span><br/><span class="wikilink"><a href="#HExitStatusandIf.2FWhileStatements">6 Exit Status and If/While Statements</a></span><br/><span class="wikilink"><a href="#HVariableReferences">7 Variable References</a></span><br/><span class="wikilink"><a href="#HVariableNaming">8 Variable Naming</a></span><br/><span class="wikilink"><a href="#HQuoting">9 Quoting</a></span><br/><span class="wikilink"><a href="#HTestingfor28Non-29EmptyStrings">10 Testing for (Non-)Empty Strings</a></span><br/><span class="wikilink"><a href="#HCommenting">11 Commenting</a></span><br/><span class="wikilink"><a href="#HPathnames">12 Pathnames</a></span><br/><span class="wikilink"><a href="#HCommandarguments">13 Command arguments</a></span><br/><span class="wikilink"><a href="#HInterpreterMagic">14 Interpreter Magic</a></span><br/><span class="wikilink"><a href="#HTemporaryfiles">15 Temporary files</a></span><br/><span class="wikilink"><a href="#HUseoftheCshell">16 Use of the C shell</a></span></td></tr></table><h2 id="HBasicFormat"><span>Basic Format</span></h2><p>&nbsp;Similar to cstyle, the basic format is that all lines are indented by TABs, and continuation lines (which in the shell end with "\") are indented by an equivalent number of TABs and then an additional four spaces, e.g.</p><div class="box code">cp foo bar<br/>cp some_realllllllllllllllly_realllllllllllllly_long_path <span style="font-weight: bold; color: #BB6622; ">\<br/></span> &nbsp;&nbsp;to_another_really_long_path</div><h2 id="HIf2CFor2CandWhile"><span>If, For, and While</span></h2><p>&nbsp;To match cstyle, the sh token equivalent to the C "{" should appear on the same line, separated by a ";", as in:</p><div class="box code"><span style="font-weight: bold; color: #008000; ">if</span> <span style="color: #666666; ">[</span> <span style="color: #19177C; ">$x</span> <span style="color: #666666; ">=</span> hello <span style="color: #666666; ">]</span>; <span style="font-weight: bold; color: #008000; ">then<br/>&nbsp;</span><span style="color: #008000; ">echo</span> <span style="color: #19177C; ">$x</span><br/><span style="font-weight: bold; color: #008000; ">fi<br/><br/>for&nbsp;</span>i in 1 2 3; <span style="font-weight: bold; color: #008000; ">do<br/>&nbsp;&nbsp;</span><span style="color: #008000; ">echo</span> <span style="color: #19177C; ">$i</span><br/><span style="font-weight: bold; color: #008000; ">done<br/><br/>while</span> <span style="color: #666666; ">[</span> <span style="color: #19177C; ">$#&nbsp;</span>-gt 0 <span style="color: #666666; ">]</span>; <span style="font-weight: bold; color: #008000; ">do<br/>&nbsp;&nbsp;</span><span style="color: #008000; ">echo</span> <span style="color: #19177C; ">$1</span><br/> &nbsp;<span style="color: #008000; ">shift<br/></span><span style="font-weight: bold; color: #008000; ">done</span></div><h2 id="HTestBuilt-in"><span>Test Built-in</span></h2><p><strong>DO NOT</strong> use the test built-in. Sorry, executive decision. In our Bourne shell, the test built-in is the same as the "[" built-in (if you don't believe me, try "type test" or refer to usr/src/cmd/sh/msg.c). So please do not write:</p><div class="box code"><span style="font-weight: bold; color: #008000; ">if&nbsp;</span><span style="color: #008000; ">test</span> <span style="color: #19177C; ">$#&nbsp;</span>-gt 0; <span style="font-weight: bold; color: #008000; ">then</span></div><p>&nbsp;instead use:</p><div class="box code"><span style="font-weight: bold; color: #008000; ">if</span> <span style="color: #666666; ">[</span> <span style="color: #19177C; ">$#&nbsp;</span>-gt 0 <span style="color: #666666; ">]</span>; <span style="font-weight: bold; color: #008000; ">then</span></div><p>&nbsp;In the Korn shell, the <span class="box code"> <span style="color: #666666; ">[[</span> <span style="color: #666666; ">]]</span>&nbsp;</span> syntax is preferred, as this adds additional operators not available in the Bourne shell, such as short-circuit &amp;&amp; and ||:</p><div class="box code"><span style="font-weight: bold; color: #008000; ">if</span> <span style="color: #666666; ">[[</span> <span style="color: #19177C; ">$#&nbsp;</span>-gt 0 <span style="color: #666666; ">&amp;&amp;</span> <span style="color: #19177C; ">$?</span> -eq 0 <span style="color: #666666; ">]]</span>; <span style="font-weight: bold; color: #008000; ">then</span></div><p>&nbsp;In the Korn shell, you may also use the <span class="box code"> <span style="color: #666666; ">((</span> <span style="color: #666666; ">))</span>&nbsp;</span> syntax for more natural arithmetic expressions, for instance you may replace:</p><div class="box code"><span style="font-weight: bold; color: #008000; ">if</span> <span style="color: #666666; ">[</span> <span style="color: #19177C; ">$i</span> -gt 5 <span style="color: #666666; ">]</span> ; <span style="font-weight: bold; color: #008000; ">then</span></div><p>with</p><div class="box code"><span style="font-weight: bold; color: #008000; ">if</span> <span style="color: #666666; ">((</span> i &gt; 5 <span style="color: #666666; ">))</span> ; <span style="font-weight: bold; color: #008000; ">then</span></div><h2 id="HSingle-lineif-statements"><span>Single-line if-statements</span></h2><p>&nbsp;It is permissible to use &amp;&amp; and || to construct shorthand for an "if" statement in the case where the if statement has a single consequent line:</p><div class="box code"><span style="color: #666666; ">[</span> <span style="color: #19177C; ">$#&nbsp;</span>-eq 0 <span style="color: #666666; ">]</span> <span style="color: #666666; ">&amp;&amp;</span> <span style="color: #008000; ">exit&nbsp;</span>0<br/></div><p>instead of the longer:</p><div class="box code"><span style="font-weight: bold; color: #008000; ">if</span> <span style="color: #666666; ">[</span> <span style="color: #19177C; ">$#&nbsp;</span>-eq 0 <span style="color: #666666; ">]</span>; <span style="font-weight: bold; color: #008000; ">then<br/>&nbsp;&nbsp;</span><span style="color: #008000; ">exit&nbsp;</span>0<br/><span style="font-weight: bold; color: #008000; ">fi</span><br/></div><p><strong>DO NOT</strong> combine &amp;&amp; with { }, as in:</p><div class="box code"><span style="color: #666666; ">[</span> <span style="color: #19177C; ">$#&nbsp;</span>-eq 0 <span style="color: #666666; ">]</span> <span style="color: #666666; ">&amp;&amp;</span> <span style="color: #666666; ">{</span><br/> &nbsp;<span style="font-weight: bold; color: #008000; ">do&nbsp;</span>something<br/> &nbsp;<span style="font-weight: bold; color: #008000; ">do&nbsp;</span>something <span style="font-weight: bold; color: #008000; ">else</span><br/><span style="color: #666666; ">}</span><br/></div><p>Use a complete "if-then-fi" construct for this instead.</p><h2 id="HInfiniteLoops"><span>Infinite Loops</span></h2><p>&nbsp;The proper way to write an infinite loop in the Bourne shell is to use the ":" built-in, which evaluates to true (exit status 0). This is better than using "true", because that is *not* a built-in in the Bourne shell and thus runs /bin/true.</p><div class="box code"><span style="font-weight: bold; color: #008000; ">while</span> :; <span style="font-weight: bold; color: #008000; ">do<br/>&nbsp;</span><span style="color: #008000; ">echo&nbsp;</span>infinite loop<br/><span style="font-weight: bold; color: #008000; ">done</span><br/></div><h2 id="HExitStatusandIf2FWhileStatements"><span>Exit Status and If/While Statements</span></h2><p>&nbsp;Recall that "if" and "while" operate on the exit status of the statement to be executed. In the shell, zero (0) means true and non-zero means false. The exit status of the last command which was executed is available in the $? variable. When using "if" and "while", it is typically not necessary to use $? explicitly, as in:</p><div class="box code">grep foo /etc/passwd &gt;/dev/null 2&gt;&amp;1<br/><span style="font-weight: bold; color: #008000; ">if</span> <span style="color: #666666; ">[</span> <span style="color: #19177C; ">$?</span> -eq 0 <span style="color: #666666; ">]</span>; <span style="font-weight: bold; color: #008000; ">then<br/>&nbsp;&nbsp;</span><span style="color: #008000; ">echo&nbsp;</span>found<br/><span style="font-weight: bold; color: #008000; ">fi</span><br/></div><p>&nbsp;Instead, you can more concisely write:</p><div class="box code"><span style="font-weight: bold; color: #008000; ">if&nbsp;</span>grep foo /etc/passwd &gt;/dev/null 2&gt;&amp;1; <span style="font-weight: bold; color: #008000; ">then<br/>&nbsp;&nbsp;</span><span style="color: #008000; ">echo&nbsp;</span>found<br/><span style="font-weight: bold; color: #008000; ">fi</span><br/></div><p>&nbsp;Or, when appropriate:</p><div class="box code">grep foo /etc/passwd &gt;/dev/null 2&gt;&amp;1 <span style="color: #666666; ">&amp;&amp;</span> <span style="color: #008000; ">echo&nbsp;</span>found<br/></div><p> <strong>DO NOT</strong> attempt to make pseudo-booleans by setting variables to "true" and "false" and then running the variable as a command instead &nbsp;of using a comparison test. &nbsp;&nbsp;This is non-idiomatic and confusing to many long-time shell programmers.</p><p>&nbsp;Use:</p><div class="box code"><span style="color: #19177C; ">good</span><span style="color: #666666; ">=</span><span style="color: #008000; ">true<br/></span><span style="font-weight: bold; color: #008000; ">if</span> <span style="color: #666666; ">[[</span> <span style="color: #19177C; ">$good</span> <span style="color: #666666; ">=</span> <span style="color: #BA2121; ">"true"</span> <span style="color: #666666; ">]]</span> ; <span style="font-weight: bold; color: #008000; ">then</span></div><p>&nbsp;Not:</p><div class="box code"><span style="color: #19177C; ">good</span><span style="color: #666666; ">=</span><span style="color: #008000; ">false<br/></span><span style="font-weight: bold; color: #008000; ">if</span> <span style="color: #19177C; ">$good</span> ; <span style="font-weight: bold; color: #008000; ">then</span></div><div class="wikimodel-emptyline"></div><h2 id="HVariableReferences"><span>Variable References</span></h2><p>&nbsp;Variable references begin with $ and *may* have their name enclosed in {}'s. I prefer to only see the {}'s when <strong><em>required</em></strong>. Do not spuriously enclose all your variable names in braces, like this:</p><div class="box code"><span style="color: #19177C; ">foo</span><span style="color: #666666; ">=</span><span style="font-weight: bold; color: #008000; ">${</span><span style="color: #19177C; ">bar</span><span style="font-weight: bold; color: #008000; ">}</span><br/></div><p>&nbsp;This is kind of like writing all your C variable assignments like this:</p><div class="box code"><span style="color: #19177C; ">foo</span> <span style="color: #666666; ">=</span> <span style="color: #666666; ">(</span>bar<span style="color: #666666; ">)</span>;<br/></div><p>&nbsp;It compiles, but it looks stupid.</p><p>&nbsp;Braces are required around variable names in two specific cases:</p><p>&nbsp;(1) when you are forming the string concatenation of your variable with another string:</p><div class="box code"><span style="color: #666666; ">[</span> <span style="color: #19177C; ">$install</span> <span style="color: #666666; ">=</span> yes <span style="color: #666666; ">]</span> <span style="color: #666666; ">&amp;&amp;</span> <span style="color: #19177C; ">root</span><span style="color: #666666; ">=</span><span style="color: #BA2121; ">"/a/"</span> <span style="color: #666666; ">||</span> <span style="color: #19177C; ">root</span><span style="color: #666666; ">=</span><span style="color: #BA2121; ">"/"</span><br/><span style="color: #19177C; ">hosts</span><span style="color: #666666; ">=</span><span style="font-weight: bold; color: #008000; ">${</span><span style="color: #19177C; ">root</span><span style="font-weight: bold; color: #008000; ">}</span>etc/inet/hosts<br/></div><p>&nbsp;and (2) when you are using one of the various substitution/assignment operators:</p><div class="box code"><span style="color: #008000; ">echo</span> <span style="font-weight: bold; color: #008000; ">${</span><span style="color: #19177C; ">BASEDIR</span><span style="font-weight: bold; color: #008000; ">:-</span>/a<span style="font-weight: bold; color: #008000; ">}</span><br/></div><h2 id="HVariableNaming"><span>Variable Naming</span></h2><p>&nbsp;For our init scripts, I prefer that you adopt a shell variable naming scheme where capitalization provides additional meaning (as in our C style): use CAPITAL letters for variables that are exported into the environment, or are equivalent to C constants or #defines. Use lowercase letters for other variable names:</p><div class="box code"><span style="color: #19177C; ">BASEDIR</span><span style="color: #666666; ">=</span>/a; <span style="color: #008000; ">export&nbsp;</span>BASEDIR<br/><span style="color: #19177C; ">argc</span><span style="color: #666666; ">=</span><span style="color: #19177C; ">$#</span><br/></div><p>&nbsp;This helps your reader immediately understand the implication of modifying a given variable (i.e. whether it will be inherited by child processes).</p><h2 id="HQuoting"><span>Quoting</span></h2><p>&nbsp;Quick review of the quoting basics:</p><pre>
+ single quotes ('') mean quote but do not expand variable or backquote substitutions.  
+ Double quotes ("") mean quote but allow expansion.  
+ Backquotes (``) mean execute the command and substitute its standard output
+ (note: stderr is unchanged and may "leak" through unless properly redirected)
+
+</pre><p>&nbsp;Use whatever quotes are appropriate for your situation, but please do not unnecessarily quote everything (also see 7 above).</p><p>&nbsp;For example, references to variables controlled by your script do not have to be quoted unless you are expecting your variable to expand to multiple tokens, or to the empty string.</p><p>&nbsp;However, any variable which contains values from outside the script, such as user input or filenames, should be quoted to avoid errors from special characters, including whitespace. &nbsp;&nbsp;Remember that an increasing number of filenames will contain spaces on Solaris systems used as CIFS file servers from Windows hosts.</p><p>&nbsp;In ksh scripts, <span class="box code"><span style="font-weight: bold; color: #008000; ">$(</span><span style="color: #008000; ">command</span><span style="font-weight: bold; color: #008000; ">)</span></span> syntax is preferred over <span class="box code"><span style="color: #BA2121; ">`</span><span style="color: #008000; ">command</span><span style="color: #BA2121; ">`</span></span> for better nesting and fewer issues with escaping special characters.</p><h2 id="HTestingfor28Non-29EmptyStrings"><span>Testing for (Non-)Empty Strings</span></h2><p>&nbsp;DO NOT test for (non-)/empty strings by comparing to "" or ''. <strong>ALWAYS</strong> use the test operators -n (non-zero-length string) and -z (zero-length string):</p><div class="box code"><span style="font-weight: bold; color: #008000; ">if</span> <span style="color: #666666; ">[</span> -z <span style="color: #BA2121; ">"$foo"</span> <span style="color: #666666; ">]</span>; <span style="font-weight: bold; color: #008000; ">then<br/>&nbsp;&nbsp;&nbsp;</span><span style="color: #008000; ">echo</span> <span style="color: #BA2121; ">'you forgot to set $foo'</span><br/><span style="font-weight: bold; color: #008000; ">fi<br/><br/>if</span> <span style="color: #666666; ">[</span> -n <span style="color: #BA2121; ">"$BASEDIR"</span> <span style="color: #666666; ">]</span>; <span style="font-weight: bold; color: #008000; ">then<br/>&nbsp;&nbsp;&nbsp;</span><span style="color: #008000; ">echo</span> <span style="color: #BA2121; ">"\$BASEDIR is set to $BASEDIR"</span><br/><span style="font-weight: bold; color: #008000; ">fi</span><br/></div><h2 id="HCommenting"><span>Commenting</span></h2><p>&nbsp;Shell comments are preceded by the '#' character. Place single-line comments in the right-hand margin. Use an extra '#' above and below the comment in the case of multi-line comments:</p><div class="box code">cp foo bar		<span style="font-weight: italic; color: #408080; "># Copy foo to bar<br/></span><br/><span style="font-weight: italic; color: #408080; ">#<br/># Modify the permissions on bar. &nbsp;We need to set them to root/sys<br/># in order to match the package prototype.<br/>#<br/></span>chown root bar<br/>chgrp sys bar<br/></div><h2 id="HPathnames"><span>Pathnames</span></h2><p>&nbsp;It is always a good idea to be careful about $PATH settings and pathnames when writing shell scripts. This allows them to function correctly even when the user invoking your script has some strange $PATH set in their environment.</p><p>&nbsp;There are two acceptable ways to do this:</p><p>&nbsp;(1) make *all* command references in your script use explicit pathnames:</p><div class="box code">/usr/bin/chown root bar<br/>/usr/bin/chgrp sys bar<br/></div><p>&nbsp;or (2) explicitly reset $PATH in your script:</p><div class="box code"><span style="color: #19177C; ">PATH</span><span style="color: #666666; ">=</span>/usr/bin; <span style="color: #008000; ">export&nbsp;</span>PATH<br/><br/>chown root bar<br/>chgrp sys bar<br/></div><p><strong>DO NOT</strong> use a mixture of (1) and (2) in the same script. Pick one method and use it consistently.</p><h2 id="HCommandarguments"><span>Command arguments</span></h2><p>&nbsp;When passing user input to commands, if the first operand of a command is a variable, use -- for any command that accepts this to flag the end of arguments to avoid problems if the variable expands to a value starting with -.&nbsp;</p><h2 id="HInterpreterMagic"><span>Interpreter Magic</span></h2><p>&nbsp;The proper interpreter magic for a Solaris 11 shell script should be simply either <span class="box code"><span style="font-weight: italic; color: #408080; ">#!/bin/sh<br/></span></span> or <span class="box code"><span style="font-weight: italic; color: #408080; ">#!/bin/ksh</span></span>. &nbsp;&nbsp;The -p flag is not necessary with ksh93.</p><p>&nbsp;For Solaris 10 and older, it should be one of these:</p><div class="box code">#!<span style="color: #666666; ">/</span>bin<span style="color: #666666; ">/</span>sh	Standard Bourne shell script<br/><br/>#!<span style="color: #666666; ">/</span>sbin<span style="color: #666666; ">/</span>sh	Init.d script or other Bourne shell script which must run<br/>		early in single<span style="color: #666666; ">-</span>user mode (when <span style="color: #666666; ">/</span>usr is not mounted).<br/>#!<span style="color: #666666; ">/</span>bin<span style="color: #666666; ">/</span>ksh <span style="color: #666666; ">-</span>p	Standard Korn shell script. &nbsp;You should always write ksh<br/>		scripts with <span style="color: #666666; ">-</span>p so that $ENV (<span style="font-weight: bold; color: #008000; ">if</span> set by the user) is not<br/>		sourced into your script by the shell.<br/></div><h2 id="HTemporaryfiles"><span>Temporary files</span></h2><p>On Solaris 10 and later, use mktemp(1) to generate temporary files and directories in /tmp or /var/tmp instead of relying on <span class="box code"><span style="color: #19177C; ">$$</span></span> to generate unique filenames.</p><h2 id="HUseoftheCshell"><span>Use of the C shell</span></h2><p>&nbsp;Don't use the C shell for any scripts. Executive decision. End of discussion.</p>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:09<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by John Beck on 2011/10/01 02:37
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Community Group on Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/ON+IPS+FAQ">ON IPS FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/crt">CRT</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/advocates">Advocates & Sponsors</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/becoming%2Da%2Dsponsor">Becoming a Sponsor</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/becoming%2Dan%2Dadvocate">Becoming a CRT Advocate</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/charter">Charter</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/rti%2Dnits">RTI nits to avoid</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/sponsor%2Dtasks">Sponsor Tasks</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/dev_solaris">Developing Solaris</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/qual_death_spiral">Quality Death Spiral</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/devref_toc">Developer’s Reference</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/devref_1">Introduction</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/devref_2">Prerequisites</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/devref_3a">The Source Tree, part 1</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/devref_3b">The Source Tree, part 2</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/devref_4">Building OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/devref_5">Installing and Testing OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/devref_6">Integration Procedure</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/devref_7">Best Practices and Requirements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/devref_glossary">Glossary</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/findunref">findunref and unreferenced files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/flag%2Ddays">ONNV Flag Days, Heads Ups, and Project Integration History</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/101%2D105">Builds 101&#45;105</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/106%2D110">Builds 106&#45;110</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/111%2D115">Builds 111&#45;115</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/116%2D120">Builds 116&#45;120</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/121%2D125">Builds 121&#45;125</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/126%2D130">Builds 126&#45;130</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/21%2D25">Builds 21&#45;25</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/26%2D30">Builds 26&#45;30</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/31%2D35">Builds 31&#45;35</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/36%2D40">Builds 36&#45;40</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/41%2D45">Builds 41&#45;45</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/46%2D50">Builds 46&#45;50</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/51%2D55">Builds 51&#45;55</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/56%2D60">Builds 56&#45;60</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/61%2D65">Builds 61&#45;65</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/66%2D70">Builds 66&#45;70</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/71%2D75">Builds 71&#45;75</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/76%2D80">Builds 76&#45;80</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/81%2D85">Builds 81&#45;85</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/86%2D90">Builds 86&#45;90</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/91%2D95">Builds 91&#45;95</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/96%2D100">Builds 96&#45;100</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/install_quickstart">Installation (from source) Quickstart</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/example_nightly">Annotated nightly(1) Mail Example</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/known_issues">Currently Known Issues</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/onnv_putback_logs">Putback Logs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/os_dev_process">Development Process</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/schedule">Schedule</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/shellstyle">Bourne/Korn Shell Coding Conventions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/wx">wx</a></span></li>
+</ul>
+                    </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2011, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

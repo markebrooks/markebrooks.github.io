@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Building the Code (Project jds.building) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+jds/building" />
+                    <link rel="canonical" href="/bin/view/Project+jds/building" />
+                            <meta name="document" content="Project jds.building"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Project jds"/>
+    <meta name="page" content="building"/>
+    <meta name="version" content="1.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Project+jds/pages/building"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Building the Code" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project jds";
+XWiki.currentPage = "building";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Project+jds/building";
+window.docediturl = "/bin/edit/Project+jds/building";
+window.docsaveurl = "/bin/save/Project+jds/building";
+window.docgeturl = "/bin/get/Project+jds/building";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Project_jds viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bjds%2Fbuilding"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+jds/"><strong>Project jds</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Project+jds" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+            </td>
+            <td id="logo-text" style="width: 1%;">
+                Solaris
+            </td>         
+            <td style="width: 98%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                              <a href='/bin/view/Project+jds/contributing'>Getting Involved</a> <span class='separator'>&#187;</span> <span class='current'>Building the Code</span>
+                </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+jds/building?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+jds/building?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+jds/building?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+jds/building?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+jds/building?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+jds/building?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+jds/building?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+jds/building?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+jds/building?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+jds/building?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+jds/building?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          <span class="submenuitem "><a href="/bin/view/Project+jds/building?xpage=copy" id="tmActionCopy" class="tmActionCopy">Copy</a></span>
+      </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>Building the Code</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h2 id="HBuildingOSDonOpenSolaris"><span>Building OSD on OpenSolaris</span></h2><h3 id="HIntroduction"><span>Introduction</span></h3><ol><li><span class="wikilink"><a href="#jds-compilers">Compilers</a></span></li><li><span class="wikilink"><a href="#jds-package-requirements">Package Requirements</a></span></li><li><span class="wikilink"><a href="#jds-cbe">OSD Common Build Environment</a></span></li><li><span class="wikilink"><a href="#jds-build-sources">OSD Build Sources</a></span></li><li><span class="wikilink"><a href="#jds-build-quickstart-jds">Quickstart to building OSD</a></span></li><li><span class="wikilink"><a href="#jds-build-solaris-packages">Building Solaris Packages</a></span></li><li><span class="wikilink"><a href="#jds-build-manual-pkgbuild">Manually building packages with pkgbuild</a></span></li><li><span class="wikilink"><a href="#jds-build-automatic-pkgtool">Automatically building packages with pkgtool</a></span></li></ol><h3 id="H1.Compilers"><span>1. Compilers</span></h3><p>&nbsp;We recommend to build OSD with <span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_11_tools">Sun Studio 11</a></span> or <span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_tools">Sun Studio 10</a></span>. Building with <span class="wikilink"><a href="/bin/view/Community+Group+tools/gcc">gcc</a></span> is also possible, but may require a little extra work during the build. We would much welcome patches to fix this so that both compilers can be used out of the box. The rest of this document assumes you are building the OSD sources with Sun Studio.</p><h3 id="H2.PackageRequirements"><span>2. Package Requirements</span></h3><p>&nbsp;Some of the OSD components require other packages to be available on your system in order for you to build.</p><table><tr><td>SUNWgpch</td><td>SUNWgtar</td><td>SUNWwgetu</td></tr></table><p>&nbsp;You can find these packages on your Solaris install media. The cbe-install script will assist with installing them.</p><h3 id="H3.OSDCommonBuildEnvironment"><span>3. OSD Common Build Environment</span></h3><p>&nbsp;The OSD Common Build Environment (CBE) is a set of build tools required to build GNOME, Mozilla and Evolution on Solaris. It includes the following tools -</p><blockquote><p>&nbsp;|Apache ant|GNU autoconf|GNU automake</p></blockquote><table><tr><td>GNU bison</td><td>CVS</td><td>GNU diffutils</td></tr><tr><td>GNU fileutils</td><td>GNU flex</td><td>GNU gettext</td></tr><tr><td>GNU libtool</td><td>GNU m4</td><td>GNU make</td></tr><tr><td>pkgbuild</td><td>rsync *</td><td>subversion</td></tr></table><p>&nbsp;*=optional</p><p>&nbsp;Download the latest tarball from the <span class="wikiexternallink"><a href="http://dlc.sun.com/osol/jds/downloads/cbe/">OSD download center</a></span>.</p><p>&nbsp;The latest version of CBE builds packages by default in /packages, while installing the tools in /opt/jdsbld. Installing the CBE for your architecture gives you the opportunity of easily installing packages, rather than having to build the tools yourself.</p><p>&nbsp;You don't need root access for installing the CBE or building GNOME, but the build user needs to have the 'Software Installation' profile for installing the packages that the CBE creates. In a typical case, you need to add the following profile to /etc/user_attr -</p><pre>
+
+       osduser::::profiles=Software Installation
+
+</pre><p>&nbsp;Then run the cbe-install script as follows -</p><pre>
+
+osduser@osdbuild:~&gt; ./cbe-install 
+Checking for required packages...
+Installing the OSD Common Build Environment (CBE) version 1.6.1
+The recommended C compiler(s) for this version of the OSD CBE is/are:
+        Sun Studio 11 (Venus) (cc: Sun C 5.8 Patch 121016-02 2006/03/31)
+        Sun Studio 10 (Vulcan) (cc: Sun C 5.7 Patch 117837-04 2005/05/11)
+Enter the path to the C compiler [/opt/SUNWspro/bin/cc]: 
+This version of the CBE comes with some optional utilities.
+These are not required for building the OSD code, nevertheless
+they are useful to have on your system.
+Please see the README file for the list of optional utilities.
+Would you like to install the optional packages? [yes]: 
+Installing package SFpkgbuild
+
+Installation of  was successful.
+Installing package CBEmake
+....
+....
++ cd /home/osduser/packages/BUILD
++ rm -rf /var/tmp/pkgbuild-osduser/CBEenv-1.6.1-build
++ exit 0
+Installing package CBEenv
+
+Installation of  was successful.
+CBE setup complete
+Run
+  . /opt/jdsbld/bin/env.sh
+or
+  source /opt/jdsbld/bin/env.csh
+depending on your shell, to use this build environment.
+Installation log saved in /tmp/jds-cbe-1.6.1.install.log.4030
+
+</pre><p>&nbsp;You may want to put the following in your profile, adjusting to your shell of preference - <span class="box code">&nbsp;</span></p><pre>
+
+JDS_CBE_ENV_QUIET=1 . /opt/jdsbld/bin/env.sh
+
+</pre><p>&nbsp;Note: if you already have a previous version of the OSD CBE installed, the cbe-install script will upgrade it to the new version.</p><p>&nbsp;The OSD CBE sets up the following default directory structure for you to build packages -</p><blockquote><p>&nbsp;|=Location|=Description</p></blockquote><table><tr><td>$HOME/packages/BUILD/</td><td>Sources are unpacked, patched and built</td></tr><tr><td>$HOME/packages/PKGMAPS/</td><td>Information for contents of Solaris packages and any pre/post install scripts</td></tr><tr><td>$HOME/packages/PKGS/</td><td>Binary packages are produced</td></tr><tr><td>$HOME/packages/SOURCES/</td><td>Source code, patches and other miscellaneous files used in the build</td></tr><tr><td>$HOME/packages/SPECS/</td><td>Spec files</td></tr><tr><td>$HOME/packages/SPKGS/</td><td>Source packages are produced</td></tr></table><h3 id="H4.OSDBuildSources"><span>4. OSD Build Sources</span></h3><p>&nbsp;Once you have installed the OSD CBE, you are now ready to fetch the build sources. You can get the latest set of OSD sources from the SVN repository with anonymous access - <span class="box code">&nbsp;</span></p><pre>
+
+osduser@osdbuild:~/&gt; svn co svn+ssh://anon@svn.opensolaris.org/svn/jds/spec-files/trunk spec-files
+
+</pre><p>&nbsp;Once you have downloaded the sources, take some time to take a <span class="wikilink"><a href="/bin/view/Project+jds/source_code_tour">&nbsp;source code tour</a></span> to get a feel of the build structure. The current OSD source code on 'trunk' is based on <strong>GNOME 2.24</strong>, along with a number of other components. Other branches are available by doing the following - <span class="box code">&nbsp;</span></p><pre>
+
+osduser@osdbuild:~/&gt; svn list svn+ssh://anon@svn.opensolaris.org/svn/jds/spec-files/branches
+217update/
+gnome-2-10/
+gnome-2-12/
+gnome-2-14/
+gnome-2-16/
+osduser@osdbuild:~/&gt; svn co svn+ssh://anon@svn.opensolaris.org/svn/jds/spec-files/branches/gnome-2-16 spec-files-gnome-2-16-branch
+
+</pre><p>&nbsp;As part of our policy for developing on OSD, we only apply and manage patches on top of a pre existing community released tarball. Not only does this allow us to separate out our work into atomic changes, it also maximizes the chances of getting these changes upstream in the original community. Along with the build sources that you just downloaded, you will also need to download the original community tarball - this can be done manually, or automatically using pkgtool.</p><p>&nbsp;Solaris specific manual pages are found in tarballs named SUNWgnome-something-manpages-<em>version</em>.tar.bz2. These tarballs are generated from the manual page files found in spec-files/manpages. To generate the tarballs, use the following commands:</p><div class="box code">&nbsp;</div><pre>
+
+osduser@osdbuild:~&gt; cd spec-files/manpages
+osduser@osdbuild:~&gt; make
+
+</pre><p>&nbsp;The manpage tarballs will be placed in the spec-files/sun-manpage-tarballs directory.</p><p>&nbsp;Solaris specific changes to translations are found in tarballs named module-po-sun-<em>version</em>.tar.bz2. These tarballs are generated from the .po files found in spec-files/po-sun. To generate the tarballs, use the following commands:</p><div class="box code">&nbsp;</div><pre>
+
+osduser@osdbuild:~&gt; cd spec-files/po-sun
+osduser@osdbuild:~&gt; make
+
+</pre><p>&nbsp;The manpage tarballs will be placed in the spec-files/po-sun/po-sun-tarballs directory.</p><h3 id="H5.QuickstarttobuildingOSD"><span>5. Quickstart to building OSD</span></h3><p>&nbsp;First, set up the environment for building OSD -</p><pre>
+
+osduser@osdbuild:~&gt; . /opt/jdsbld/bin/env.sh
+
+</pre><p>&nbsp;Uninstall the existing OSD packages using pkgtool -</p><pre>
+
+osduser@osdbuild:~&gt; cd spec-files
+osduser@osdbuild:~&gt; pkgtool uninstall-pkgs *.spec
+
+</pre><p>&nbsp;This command extracts the package names from the spec files and then uninstalls them using the pkgrm command. Packages are uninstalled even if other installed packages require them. It is advised that you are not logged into GNOME during this step as it uninstalls all GNOME packages. Use a CDE session, remote login or a failsafe session instead.</p><p>&nbsp;Now build the entire stack -</p><pre>
+
+osduser@osdbuild:~&gt; pkgtool ~--download build -v *.spec
+
+</pre><p>&nbsp;pkgtool will read all spec files to determine the build order, then builds and installs them one by one. For more details on building OSD manually, see the following sections.</p><p>&nbsp;Build log files for individual packages are placed in /tmp by default. You can change this using the --logdir option or specifying logdir in /.pkgtoolrc:</p><pre>
+
+osduser@osdbuild:~&gt; echo 'logdir: /path/to/my/logdir' &gt;&gt; ~/.pkgtoolrc
+
+</pre><h3 id="H6.BuildingSolarisPackages"><span>6. Building Solaris Packages</span></h3><p>&nbsp;At the heart of the OSD build environment is <span class="wikiexternallink"><a href="http://pkgbuild.sourceforge.net/">pkgbuild</a></span>, a perl script for building Solaris SVr4 packages from an RPM spec file. It is intended to be a plug-in replacement of the rpmbuild command on many Linux distributions. pkgbuild allows you to build a <strong>single package</strong> at a time.</p><p>&nbsp;Building a package goes through 4 stages -</p><blockquote><p>&nbsp;|=Stage|=Description</p></blockquote><table><tr><td>Preparation</td><td>Sources are unpacked, and patched.</td></tr><tr><td>Compilation</td><td>Sources are compiled locally.</td></tr><tr><td>Installation</td><td>The compiled binaries and data are installed into a temporary directory.</td></tr><tr><td>Package</td><td>The compiled binaries and data in the temporary directory are put into a package.</td></tr></table><p>&nbsp;A command summary of pkgbuild is as follows -</p><pre>
+
+osduser@osdbuild:~&gt; pkgbuild ~--help
+pkgbuild version 1.3.2
+Copyright 2003-2008 - Sun Microsystems, Inc.
+This may be freely redistributed under the terms of the GNU GPL
+
+* = the option is implemented
+
+ Usage:
+*  ~--help                  - print this message
+*  ~--version               - print the version of rpm being used
+*  ~--interactive           - start a shell in the build directory if fails
+                             and allow to continue after the shell terminates
+   all modes support the following arguments:
+      ~--rcfile &lt;file&gt;      - use &lt;file&gt; instead of /etc/rpmrc and $HOME/.rpmrc
+     -v                    - be a little more verbose
+     -vv                   - be incredibly verbose (for debugging)
+*   -b&lt;stage&gt; &lt;spec&gt;
+    -t&lt;stage&gt; &lt;tarball&gt;    - build package, where &lt;stage&gt; is one of:
+*         p                - prep (unpack sources and apply patches)
+          l                - list check (do some cursory checks on %files)
+*         c                - compile (prep and compile)
+*         i                - install (prep, compile, install)
+*         b                - binary package (prep, compile, install, package)
+*         a                - bin/src package (prep, compile, install, package)
+*     ~--short-circuit      - skip straight to specified stage (only for c,i)
+      ~--clean              - remove build tree when done
+      ~--rmsource           - remove sources and spec file when done
+      ~--sign               - generate PGP/GPG signature
+      ~--buildroot &lt;dir&gt;    - use &lt;dir&gt; as the build root
+      ~--target=&lt;platform&gt;+ - build the packages for the build targets
+                             platform1...platformN.
+      ~--nobuild            - do not execute any stages
+      ~--timecheck &lt;secs&gt;   - set the time check to &lt;secs&gt; seconds (0 disables)
+*     ~--define "&lt;name&gt; &lt;value&gt;"
+                           - define &lt;name&gt; as &lt;value&gt; as if you had
+                             "%define &lt;name&gt; &lt;value&gt;" in the spec file
+
+*   ~--rebuild &lt;src_pkg&gt;    - install source package, build binary package and
+                             remove spec file, sources, patches, and icons.
+    ~--rmsource &lt;spec&gt;      - remove sources and spec file
+    ~--recompile &lt;src_pkg&gt;  - like ~--rebuild, but don't build any package
+
+</pre><h3 id="H7.Manuallybuildingyourfirstpackagewithpkgbuild"><span>7. Manually building your first package with pkgbuild</span></h3><p>&nbsp;As an example package to build, take SUNWspeex. Speex is an open source and patent-free speech multimedia codec. As mentioned in the <span class="wikilink"><a href="/bin/view/Project+jds/source_code_tour">source code tour</a></span>, the Solaris SUNWspeex package is built from a RPM spec file. Looking at the SUNWspeex.spec file within the <strong>spec-files</strong> directory of the OSD build sources, you will notice the lines -</p><pre>
+
+%include Solaris.inc
+%use speex = speex.spec
+
+</pre><p>&nbsp;The SUNWspeex.spec file includes much of the core information already detailed in the speex.spec "base" spec file, which is in the <strong>spec-files/base-specs</strong>. As such, the SUNWspeex.spec file is an <strong>extension</strong>, detailing how the Solaris package is created. You will need both of these files to successfully build the package - copy them to <strong>/packages/SPECS</strong>. Along with that, you'll notice it includes some default settings as detailed in Solaris.inc. This, and other include files are in the <strong>spec-files/include</strong> directory. Copy this file, along with default-depend.inc into <strong>/packages/SPECS</strong>. Also, copy the default-copyright.txt file, (which is available in the <strong>ext-sources</strong> top-level directory) into <strong>/packages/SOURCES</strong>.</p><p>&nbsp;Within the speex.spec file you will notice the block of lines -</p><pre>
+
+Name:              speex
+License:           Xiph
+Group:             Application/Devel
+Version:           1.0.5
+Distribution:      Java Desktop System
+Vendor:            Sun Microsystems, Inc.
+Summary:           An open-source, patent-free speech codec
+Source:            http://www.speex.org/download/%{name}-%{version}.tar.gz
+URL:               http://www.speex.org/
+
+</pre><p>&nbsp;This describes much of the core information about the package - what version and license it uses, along with details of where to download it. While we have automated much of the process of downloading the sources from their original community as you will see a little later, for now, proceed to download <span class="wikiexternallink"><a href="http://www.speex.org/download/speex-1.0.5.tar.gz">speex-1.0.5.tar.gz</a></span>. Copy the downloaded file to <strong>/jds/packages/SOURCES</strong>.</p><p>&nbsp;Now you are ready to build your first package. All the spec files and the sources are in the correct directory locations under <strong>/packages/</strong>, as follows -</p><blockquote><p>&nbsp;|=Location|=Contents</p></blockquote><table><tr><td>$HOME/packages/SOURCES/</td><td>speex-1.0.5.tar.gz, default-copyright.txt</td></tr><tr><td>$HOME/packages/SPECS/</td><td>speex.spec, SUNWspeex.spec, Solaris.inc, default-depend.inc</td></tr></table><p>&nbsp;We want to create a full binary and source SUNWspeex package, so we will use the -ba option with pkgbuild -</p><pre>
+
+osduser@osdbuild:~&gt; . /opt/jdsbld/bin/env.sh
+osduser@osdbuild:~&gt; cd ~/packages/SPECS
+osduser@osdbuild:~&gt; pkgbuild -ba SUNWspeex.spec
+Executing(%prep): /bin/bash /var/tmp/pkgbuild-tmp-1.11242
++ umask 022
++ uname -a
+SunOS zenity 5.10 Generic i86pc i386 i86pc
++ cd /home/osduser/packages/BUILD
++ rm -rf SUNWspeex-2.12.0
++ mkdir SUNWspeex-2.12.0
++ cd /home/osduser/packages/BUILD
++ cd /home/osduser/packages/BUILD/SUNWspeex-2.12.0
++ rm -rf speex-1.0.5
++ /usr/bin/gzip -dc /home/osduser/packages/SOURCES/speex-1.0.5.tar.gz
++ /bin/tar xf -
++ STATUS=0
++ '[' 0 -ne 0 ']'
++ cd speex-1.0.5
++ ++ /usr/xpg4/bin/id -u
++ '[' 100 = 0 ']'
++ ++ /usr/xpg4/bin/id -u
++ '[' 100 = 0 ']'
++ /bin/chmod -Rf a+rX,g-w,o-w .
++ cd ..
++ exit 0
+Executing(%build): /bin/bash /var/tmp/pkgbuild-tmp-2.11242
++ umask 022
++ uname -a
+SunOS zenity 5.10 Generic i86pc i386 i86pc
++ cd /home/osduser/packages/BUILD
++ cd SUNWspeex-2.12.0
++ cd /home/osduser/packages/BUILD/SUNWspeex-2.12.0
++ cd speex-1.0.5
+++ /usr/sbin/psrinfo
+++ grep on-line
+++ wc -l
+++ tr -d ' '
++ CPUS=1
++ test x1 = x -o 1 = 0
++ CFLAGS='-i -x04 -xspace -xstrconst -xpentium -mr'
++ ./configure ~--enable-shared ~--enable-static ~--prefix=/usr ~--sysconfdir=/etc ~--mandir=/usr/share/man
+.....
+.....
+## Packaging one part.
+/home/osduser/packages/SPKGS/SUNWspeex-src/pkgmap
+/home/osduser/packages/SPKGS/SUNWspeex-src/pkginfo
+/home/osduser/packages/SPKGS/SUNWspeex-src/install/copyright
+/home/osduser/packages/SPKGS/SUNWspeex-src/reloc/share/src/SUNWspeex-2.12.0/SOURCES/default-copyright.txt
+/home/osduser/packages/SPKGS/SUNWspeex-src/reloc/share/src/SUNWspeex-2.12.0/SOURCES/speex-1.0.5.tar.gz
+/home/osduser/packages/SPKGS/SUNWspeex-src/reloc/share/src/SUNWspeex-2.12.0/SPECS/..pkgbuild
+/home/osduser/packages/SPKGS/SUNWspeex-src/reloc/share/src/SUNWspeex-2.12.0/SPECS/SUNWspeex.spec
+/home/osduser/packages/SPKGS/SUNWspeex-src/reloc/share/src/SUNWspeex-2.12.0/SPECS/Solaris.inc
+/home/osduser/packages/SPKGS/SUNWspeex-src/reloc/share/src/SUNWspeex-2.12.0/SPECS/default-depend.inc
+/home/osduser/packages/SPKGS/SUNWspeex-src/reloc/share/src/SUNWspeex-2.12.0/SPECS/speex.spec
+## Validating control scripts.
+## Packaging complete.
+Executing(%clean): /bin/bash /var/tmp/pkgbuild-tmp-15.11388
++ umask 022
++ uname -a
+SunOS zenity 5.10 Generic i86pc i386 i86pc
++ cd /home/osduser/packages/BUILD
++ cd SUNWspeex-2.12.0
++ rm -rf /var/tmp/SUNWspeex-2.12.0-build
++ exit 0
+
+</pre><h3 id="H8.Automaticallybuildingpackageswithpkgtool"><span>8. Automatically building packages with pkgtool</span></h3><p>&nbsp;While using pkgbuild allows you to build Solaris packages easily, it doesn't allow for automatic dependency checking, and very much relies on the spec files and the sources to be in the correct place. pkgtool is a wrapper script around pkgbuild that helps to solve this problem. pkgtool will also allow you to download the original source community tarballs. Not only is pkgtool very useful in this respect, it also acts as a tinderbox script allowing you log your builds and report any errors that might have occurred. A command summary of pkgtool is as follows -</p><pre>
+
+osduser@osdbuild:~&gt; pkgtool ~--help
+pkgtool [options] [command] specs...
+
+Options:
+
+  General:
+
+    -v|~--verbose:
+                  Increase verbosity: the more -v's the more diag messages.
+
+    -q|~--quiet:
+                  Silent operation.
+
+    ~--halt-on-errors:
+                  Halt on the first build error, do not attempt to continue.
+
+    ~--rcfile=file
+                  Read default configuration from file.
+                  Default: ./.pkgtoolrc, ~/.pkgtoolrc
+
+    ~--norc
+                  Ignore the default rc files.
+
+    ~--dumprc
+                  Print the current configuration in a format suitable
+                  for an rc file, then exit.
+
+    ~--download
+
+                  Automatically download sources if not found in the local
+                  search paths (requires wget)  Specify your proxy servers
+                  using the http_proxy and ftp_proxy environment variables.
+
+    ~--download-to=dir
+
+                  Save downloaded files in dir.  By default, files are
+                  downloaded to /usr/src/packages/SOURCES.  Implies ~--download.
+
+    ~--interactive  [EXPERIMENTAL]
+
+                  Interactive mode: pkgbuild/rpm output is displayed on
+                  the standard output; pkgbuild is executed in interactive
+                  mode which makes it start a subshell if the build fails
+
+  Directories and search paths:
+
+    ~--specdirs=path, ~--spec=path:
+                  Specify a colon separated list of directories to search
+                  for spec files in
+
+    ~--tarballdirs=path, ~--tarballs=path, ~--tar=path:
+                  Specify a colon separated list of directories to search
+                  for tarballs in
+
+    ~--sourcedirs=path, ~--src=path:
+                  Specify a colon separated list of directories to search
+                  for additional source files in
+
+    ~--patchdirs=path, ~--patches=path, ~--patch=path
+                  Specify a colon separated list of directories to search
+                  for patches (source diffs) in
+
+    ~--topdir=dir
+                  Use dir as the rpm base directory (aka %topdir, where the
+                  SPECS, SOURCES, RPMS, SRPMS, BUILD directories are found).
+                  Default: /usr/src/packages
+
+    ~--logdir=dir, ~--log=dir:
+                  Write build logs to dir.
+
+  Options controlling the build:
+
+    ~--nodeps, ~--deps:
+                  Ignore/verify dependencies before building a component.
+                  Default: ~--deps
+
+    ~--with foo, ~--without foo
+                  This option is passed on to rpm/pkgbuild as is.  Use it
+                  for enabling/disabling conditional build options.
+
+    ~--target=arch
+                  This option is passed on to rpm/pkgbuild as is.
+
+    ~--pkgformat={filesystem|fs|datastream|ds}
+                  Create Solaris packages in filesystem or datastream format.
+                  This option is ignored when running on Linux.
+                  Default: filesystem
+
+    ~--nightly, ~--nonightly:
+                  Suffix/Don't suffix the rpm Release with the current date.
+                  Default: ~--nonightly;  See also: ~--date-format
+
+    ~--date-format=format, ~--date=format:
+                  Use "date +format" to generate the date suffix for
+                  the nightly builds.  Default: %y%m%d
+
+  Reporting:
+
+    ~--mail-errors-to=address
+
+                  Send the last few lines of the build log to address
+                  if the build fails
+
+    ~--report=file
+
+                  Write a build report to file (in HTML format)
+
+    ~--prodname=string
+
+                  The name of the product as appears in the build report
+
+    ~--full-path:
+                  Print the full path to the package when running install-order
+
+Commands:
+
+    build-install  Build and install the specs listed on the command line.
+                   The build order is determined by the dependencies
+                   defined in the spec files.
+
+    build          Same as build-install
+
+    build-only     Build the specs listed on the command line, don't install
+                   them.
+
+    prep           run the %prep section of the spec files listed on the
+                   command line
+
+    spkg           create source package(s) only (no build done)
+
+    build-order    Print the build order of the specs listed on the
+                   command line.
+
+    install-order  Print the rpms in the order they should be installed
+
+    install-pkgs   (not implemented yet): install the packages defined
+                   by the spec files listed on the command line from
+                   the PKGS directory.  No build is done.  Useful to
+                   install packages previously built using the build-only
+                   command.
+
+    uninstall-pkgs Uninstall all packages defined in the spec files listed
+                   on the command line. (runs rpm ~--erase ~--nodeps on
+                   Linux, pkgrm on Solaris)
+
+    download       Download the source files from the URLs specified in
+                   the spec files listed on the command line.  Source
+                   files found in the local search paths will not be
+                   downloaded.  (See ~--tarballdirs, ~--sourcedirs,
+                   ~--download-to)
+
+specs...
+
+    List of spec files to build. Either full path names or names of spec
+    files in the spec directory search path.
+
+</pre><h4 id="HBuildexampleswithpkgtool"><span>Build examples with pkgtool</span></h4><p>&nbsp;Print out the build order of the packages -</p><pre>
+
+osduser@osdbuild:Solaris&gt; pkgtool -q build-order *.spec
+/export/home/osduser/osd-spec-files/SUNWPython.spec
+/export/home/osduser/osd-spec-files/SUNWTiff.spec
+/export/home/osduser/osd-spec-files/SUNWaspell.spec
+....
+
+</pre><p>&nbsp;Download all the community source tarballs needed to build the SUNWgnome-panel package -</p><pre>
+
+osduser@osdbuild:~&gt; pkgtool download SUNWgnome-panel.spec
+
+</pre><p>&nbsp;Download, build, and install all the packages in the correct order. You will need to set the environmental variables http_proxy and ftp_proxy if necessary -</p><pre>
+
+osduser@osdbuild:~&gt; pkgtool ~--download build-install *.spec
+
+</pre><p>&nbsp;Uninstall packages SUNWgnome-utils and SUNWgnome-config-editor -</p><pre>
+
+osduser@osdbuild:~&gt; pkgtool uninstall-pkgs SUNWgnome-utils.spec SUNWgnome-config-editor.spec
+
+</pre><p>&nbsp;Build the SUNWgnome-img-viewer package, but don't install it -</p><pre>
+
+osduser@osdbuild:~&gt; pkgtool build-only SUNWgnome-img-viewer.spec
+
+</pre>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:14<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by admin on 2009/10/26 12:14
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Project jds Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+jds/contributing">Getting Involved</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+jds/building">Building the Code</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/documents">Documents</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+jds/bug_lifecycle">Bug Lifecycle</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/code_review">Code Review Process</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/desktop_gaps">Solaris Desktop Gaps</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/development_guidelines">Development Guidelines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/development_model">Development Model</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/indiana_build">Building GNOME for OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/installing_from_ips">Installing Development Desktop Builds</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/jds_schedule">OSD Build Schedule</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/patch_comments">Format of Patch Comments</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/pkging_guidelines">Packaging Guidelines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/requesting_svn_account">Requesting an SVN Account</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/source_code_tour">OSD Source Code Tour</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/tasks">Tasks</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+jds/MetaTracker">MetaTracker</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/desktop_printing">Desktop Printing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/gdesklets">gDesklets</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/jpack">JPack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/netbeans_java_gnome">Java GNOME Plugin for Netbeans</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/single_sys_admin">Single System Admin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/virt%2Dmanager">Virtual Machine Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/zfs_nautilus">ZFS Support in Nautilus</a></span></li>
+</ul></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2013, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

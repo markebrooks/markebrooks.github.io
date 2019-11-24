@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Build/Install OpenSolaris (Part 1) (Community Group tools.building_opensolaris) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Community+Group+tools/building_opensolaris" />
+                    <link rel="canonical" href="/bin/view/Community+Group+tools/building_opensolaris" />
+                            <meta name="document" content="Community Group tools.building_opensolaris"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Community Group tools"/>
+    <meta name="page" content="building_opensolaris"/>
+    <meta name="version" content="2.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Community+Group+tools/pages/building_opensolaris"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Build/Install OpenSolaris (Part 1)" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="kupfer" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Community Group tools";
+XWiki.currentPage = "building_opensolaris";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Community+Group+tools/building_opensolaris";
+window.docediturl = "/bin/edit/Community+Group+tools/building_opensolaris";
+window.docsaveurl = "/bin/save/Community+Group+tools/building_opensolaris";
+window.docgeturl = "/bin/get/Community+Group+tools/building_opensolaris";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Community_Group_tools viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FCommunity%2BGroup%2Btools%2Fbuilding_opensolaris"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+tools/"><strong>Community Group tools</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Community+Group+tools" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+            </td>
+            <td id="logo-text" style="width: 1%;">
+                Solaris
+            </td>         
+            <td style="width: 98%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                  <span class='current'>Build/Install OpenSolaris (Part 1)</span>
+          </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Community+Group+tools/building_opensolaris?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Community+Group+tools/building_opensolaris?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+tools/building_opensolaris?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+tools/building_opensolaris?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+tools/building_opensolaris?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Community+Group+tools/building_opensolaris?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+tools/building_opensolaris?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+tools/building_opensolaris?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+tools/building_opensolaris?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+tools/building_opensolaris?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Community+Group+tools/building_opensolaris?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>Build/Install OpenSolaris (Part 1)</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h2 id="HBuildingandInstallingOpenSolaris28Part129"><span>Building and Installing OpenSolaris (Part 1)</span></h2><p><strong>Author:Rich Teer<br/>June 2005<br/></strong></p><p><strong>Introduction</strong></p><p>This is the first of two articles in which we describe how to acquire and build the source code for OpenSolaris. The first article provides all the necessary background information (terminology, where to get the tools, and so on) and describes a basic compilation and installation, and <span class="wikilink"><a href="/bin/view/Community+Group+tools/building_opensolaris_part2">the second article</a></span> will describe a more complicated compilation and installation. While these articles were accurate at the time they were written, OpenSolaris is continually evolving. For the most recent details, please consult <span class="wikilink"><a href="/bin/view/Community+Group+on/devref_toc">the ON Developers Reference</a></span>.</p><p>These articles describe how to build and install OpenSolaris; they are not intended to be an "OpenSolaris developers' guide", so information beyond that which is required for building and installing OpenSolaris is not included. This should not be seen as a problem, however, because (as with most other large-scale open source projects) the number of active OpenSolaris developers who will need this knowledge is likely to be small compared to the number of people who will want to build it for their own edification.</p><p>These articles assume at least a passing familiarity with building major software projects and some C programming. It is unlikely that someone who is struggling to compile "Hello World" would be trying to compile OpenSolaris! However, we will otherwise assume no knowledge of building Solaris, and describe all the necessary steps.</p><p><strong><br/>Terminology</strong></p><p>Before we can describe how to build OpenSolaris, we need to define a few terms. To keep this list as short as possible, we will describe only those that are directly relevant to building and installing OpenSolaris. The terms we describe here are a subset of those used by OpenSolaris developers. As the need arises, we will occasionally define new terms when we introduce them.</p><p>The first term we need to define is OpenSolaris itself. The OpenSolaris website, <span class="wikilink"><a href="/bin/view/Main/about">&nbsp;opensolaris.org/os/about/</a></span>, contains the Sun-blessed, official definition, but for our purposes, <em>OpenSolaris</em> refers to the Solaris source code that has been released by Sun, and binaries built from that source code. Hence we can say that we have a copy of the OpenSolaris source code, or we are running OpenSolaris (the latter being built from the former). For the OpenSolaris launch, Sun does not plan to release their own "distribution" of OpenSolaris, but that does not preclude others from doing so (the author is aware of at least three distribution projects that will be built using OpenSolaris, not least of which is a port to the PowerPC platform).</p><p>One thing that OpenSolaris is definitely <em>not</em> is everything that ships on the Solaris DVD or CDs. At the time of this writing (June 2005), OpenSolaris consists of only the ON consolidation. A <em>consolidation</em> is a set of related software components that are developed and delivered together. In addition to ON, other examples of consolidations include the windowing system, Java Desktop System, and so on. <em>ON</em> is an abbreviation of "OS/Net" or "OS/Networking", and is the consolidation that contains the kernel, file systems, basic commands, some modules and drivers, daemons, header files, and libraries. (Incidentally, the contents of the Solaris DVDs and CDs shipped by Sun are collectively known as the <em>WOS</em>, or wad of stuff: it is the integration of all the consolidations that make up the Solaris product.)</p><p>Not all of the components that make up ON are currently available in source form, for reasons explained in <span class="wikilink"><a href="/bin/view/Main/no_source">opensolaris.org/os/about/no_source/</a></span>. As time passes, most, if not all, of the closed sources will be replaced by open source code (i.e., code which is developed by Sun or contributed by the OpenSolaris community), but until that happens a set of pre-built binary objects are supplied to facilitate the building of OpenSolaris.</p><p>Because of its bleeding-edge nature, it is possible that installing our newly compiled version of OpenSolaris might <em>brickify</em> our machine, that is render it unbootable or otherwise unusable. Improper installation, or installing broken bits, can make our machine a "warm brick". The usual way to recover from this situation is to boot from some other media (that we know to be good).</p><p>One final pair of terms that we might encounter when dealing with OpenSolaris are Nevada and Tonic. <em>Nevada</em> is the internal name of the release of Solaris that will come after Solaris 10; OpenSolaris is based on the Solaris Nevada sources. (In other words, the OpenSolaris source code is not based on the First Customer Shipment (FCS) version of Solaris 10, but an evolution thereof.) <em>Tonic</em> is the internal name of the OpenSolaris project; as such, Sun employees and pilot program participants are likely to be the only people using this term.</p><p>Now that we've described some of the terminology we need to be cognizant of when working with OpenSolaris, let's take a look at the prerequisites necessary for us to actually build it.</p><p><strong>Prerequisites</strong></p><p>At the risk of stating the obvious, the first thing we need to build OpenSolaris is a suitable machine: generally speaking, any computer that can run Solaris 10 is sufficient. This means that a machine with a 200 MHz or faster UltraSPARC-II or newer processor is required for SPARC builds. Due to the large variety of hardware, the requirements for x86 builds is a bit more complicated (when we say x86, unless we state otherwise, we mean both the 32-bit x86 platform as well as the 64-bit amd64 platform, which is sometimes referred to as x64 by marketing types). However, any reasonably recent hardware should be OK, provided it is on the Solaris x86 HCL (hardware compatibility list); the HCL can be found at <span class="wikiexternallink"><a href="http://www.sun.com/bigadmin/hcl/">www.sun.com/bigadmin/hcl/</a></span>.</p><p>Presently, although both SPARC and x86 architectures are supported, cross-compilation is not (in other words, the platform we deploy OpenSolaris on must be the same as the one we use to build it). Building the OpenSolaris source tree is a fairly lengthy process, so a well specified machine is recommended (the author used an Acer Ferrari 3400 with 2 GB of RAM and a 7200 RPM hard drive for x86 builds, and an Ultra 60 with two 450 MHz processors and 2 GB of RAM for SPARC builds). At the time of writing, the machine we use must be running Solaris Express: Community Release (SXCR) Build 16 or later; the latest build of SXCR is <em>strongly</em> recommended, because it is likely that later versions of OpenSolaris will require later versions of SXCR as a minimum.</p><p>All this talk of Solaris, OpenSolaris, and Solaris Express can become confusing for new people, so we should take a minute or two to explain what these things are. First and foremost, Solaris is the branded product offering from Sun. A new version ships every two to three years, and updates are issued on an approximately quarterly basis. It is this version of the OS that should be used in production environments.</p><p>Solaris Express is monthly or so snapshots of the current development tree. The "best" build (i.e., most stable and least problematic) between the release date and the previous Solaris Express is the one that is released. Although it is reasonably well tested, it is important to remember that the code in Solaris Express is beta quality (i.e., has not been subjected to Sun's usual rigorous testing procedures), and should therefore not be used in production. That being said, Solaris Express is the easiest (and probably best) way to get access to new and improved Solaris features: for example, Solaris Express users were using what became Solaris 10 (including features like Zones and DTrace) for about two years before the FCS version was available. In the author's experience, Solaris Express is remarkably stable. Solaris Express builds trail the very latest Sun engineering builds by several versions (i.e., a month or two). As an example, at the time this article was written, Solaris Express was based on build 15 of Nevada, but build 16 was the current engineering version. (As we mentioned previously, there is also a Community Release of Solaris Express, which is released for every build. It receives less testing than the regular Solaris Express and is intended for OpenSolaris developers only, so should be deployed with suitable caution.)</p><p>As we alluded to previously, OpenSolaris is based on the current, bleeding edge, build of Solaris from Sun engineering. By its very nature, it has received less testing than Solaris Express, so tends to be a bit more challenging to work with and deploy. Definitely not for mission-critical production use!</p><p>Finally, we need sufficient disk space: about 90 MB is required for the source code, closed binaries, and tools, and each build tree needs at least 1.5 GB. With this in mind, we should have about 2 GB of free disk space for each tree that we intend to build. Doubtless, as more source code gets incorporated into OpenSolaris, the disk space requirements will increase.</p><p><strong>Install a Binary Distribution of Solaris</strong></p><p>As we mentioned previously, the machine on which we build OpenSolaris must be running a suitably recent version of Solaris Express or SXCR (or, indeed, a previous OpenSolaris build). Although the author has successfully built OpenSolaris on a machine with just the Developer cluster installed, Sun recommends that the Full cluster be installed.</p><p>Describing how to install Solaris is beyond the scope of these articles, and is well documented in Sun's <em>Release and Installation</em> collection, available from <span class="wikiexternallink"><a href="http://docs.sun.com">docs.sun.com</a></span>.</p><p>Once we've satisfied the prerequisites (including installing a binary distribution of Solaris if necessary), we're ready to start downloading the various components and tools we need.</p><p><strong>Download the Necessary Components</strong></p><p>Before we download any of the OpenSolaris components and tools, we should create a directory in which we will work; this directory and its children is called a <em>workspace</em>. For the sake of these examples, we'll use a directory in our home directory called open_solaris as our base workspace. In this directory, we'll have a subdirectory for each build, named after the build contained therein (e.g., build-17). In each build directory, we'll have a build workspace that we'll call testws.</p><p>This will give us the following directory hierarchy:</p><table><tr><td>$HOME/open_solaris</td><td>Base directory</td></tr><tr><td>$HOME/open_solaris/build-17</td><td>Source and other bits for build 17</td></tr><tr><td>$HOME/open_solaris/build-n</td><td>Source and other bits for build n</td></tr><tr><td>$HOME/open_solaris/build-n/testws</td><td>Compilation workspace</td></tr></table><p>&nbsp;There are a number of files we need to download into our "build" directory from the OpenSolaris web site (other sites will also probably offer the OpenSolaris components, but this article assumes the use of opensolaris.org). At the very least, we need the source code, the binaries built from closed source code, the ON build tools, the compiler and other tools. We should also download the release notes.</p><p>For the sake of this example, we'll assume that we want to compile build 17 of Nevada, and that we've already installed Solaris Express: Community Release build 16 (which is Nevada build 16). Because we're using build 17, our base workspace is $HOME/open_solaris/build-17; the files we download should be placed in there, and for the sake of brevity we'll refer to this directory as $OPEN_SOL in the following examples.</p><p><strong>Install the Compiler and Other Tools</strong></p><p>Having downloaded the necessary files, we need to install the compilers and ON build tools. The latter consists of programs and scripts that are specifically for use in building and installing OpenSolaris. The compiler and other Sun Studio tools are supplied as either a tar ball or a set of packages, while the ON build tools are supplied as a package. Note that in all of the following examples the filenames are representative of the actual ones, but they will likely be different to what we show here. For example, many of the filenames incorporate date stamps, which will obviously change from time to time.</p><p>First we'll add the ON build tools, by installing the package SUNWonbld:</p><pre>
+
+#cd /tmp
+# bzip2 -dc $OPEN_SOL/SUNWonbld-20050322.i386.tar.bz2 | tar xf -
+# cd onbld
+# pkgadd -d . SUNWonbld
+# cd ..
+
+</pre><p>&nbsp;For reasons of brevity, we've omitted the output from the pkgadd command. Also note that the actual filename of the ON build package will probably be different, as these tools are frequently updated to reflect the requirements of each build.</p><p>Next we install the tar install image of the Sun Studio compiler and other tools:</p><pre>
+
+# cd /opt
+# bzip2 -dc $OPEN_SOL/sunstudio10-20050613.x86.tar.bz2 | tar xf -
+
+</pre><p>Having installed the compilers and tools, we to ensure that their directories are in our PATH, and create the directory in which we'll perform the actual build of OpenSolaris (note we do this as our own user rather than root, and we're back in $OPEN_SOL/build-n):</p><pre>
+
+$ export PATH=/opt/onbld/bin:/opt/SUNWspro/bin:$PATH
+$ mkdir testws
+
+</pre><p>&nbsp;Modifying our login script to contain the appropriate PATH is a good idea.</p><p><strong>Unpack the Source Code and Closed Binaries</strong></p><p>The next step is to unpack the closed binaries and source code:</p><pre>
+
+$ cd testws
+$ bzip2 -dc ../opensolaris-closed-bins-20050322.i386.tar.bz2 | tar xf -
+$ bzip2 -dc ../opensolaris-src-20050322.tar.bz2 | tar xf -
+
+</pre><p><strong>Build the OpenSolaris Code</strong></p><p>We are nearly ready to build the OpenSolaris source code! A script is used to prepare the build environment; this script sets numerous environment variables, which we must customize to suit our environment. We'll make a local copy and modify it:</p><pre>
+
+$ cp usr/src/tools/env/opensolaris.sh .
+$ chmod 644 opensolaris.sh
+
+</pre><p>&nbsp;We edit opensolaris.sh, changing the definitions of the GATE, CODEMGR_WS,STAFFER, and VERSION environment variables as required. We'll leave them at their default values, except for STAFFER, CODEMGR_WS and VERSION, which we'll change to "rich", "/home/rich/open_solaris/build-17/$GATE" and "OpenSolaris_build-17" respectively (obviously the value of CODEMGR_WS should be modified as appropriate).</p><p>&nbsp;Finally,the nightly script is used to perform the actual build (note that nightly builds everything, not just the kernel):</p><pre>
+
+$ nightly opensolaris.sh
+
+</pre><p>&nbsp;This step can take a while, so now would be a good time to find something else to do (on the author's 2 GHz Ferrari 3400 laptop, this step takes about 90 minutes to complete). When the build completes, three log files can be found in the directory log/log.mmdd (where mm is the month and dd is the day), called mail_msg, nightly.log, and proto_list_i386 (or similar). The first of these contains a copy of the email that is sent to $STAFFER upon completion, and contains a summary of the build. The second file contains a verbose log of the build process, and the last file is a prototype list which can be used to create packages (the details of which are beyond the scope of this article).</p><p>&nbsp;If the mail_msg file contains no errors, we no our build was successful. If it wasn't, we can examine nightly.log to determine the reason.</p><p><strong>Installing OpenSolaris (Part One)</strong></p><p>Assuming all is well, we can install our newly compiled bits. Because installing new bits (specifically, the kernel or critical libraries and applications) can result in brickification, we'll use the Install (pronounced "cap eye install") utility. This utility creates a tar ball of the newly-built kernel, that we can install alongside the existing one (testing on a machine other than the build one is highly recommended). Note that Install does <em>not</em> install the new userland bits; only the new kernel and modules are installed. Because the Install procedure does not overwrite the currently installed kernel, the risk of brickification is mitigated.</p><p>Become root and change to the workspace directory we're using (i.e., what we have previously called $OPEN_SOL). Make sure that the tools and compilers that live in /opt/onbld/bin and /opt/SUNWspro/bin are in root's PATH (or just use the commands' full path name).</p><p>The first thing we need to do is make sure that all the required environment variables are set to the correct values, by running the bldenv script:</p><pre>
+
+# bldenv opensolaris.sh
+
+</pre><p>&nbsp;The next step creates the Install tar ball, and, on the assumption that we're testing on the same machine we build on, installs it:</p><pre>
+
+# Install -k i86pc -G kernel-17
+# cd /
+# tar xf /tmp/Install.root/Install.i86pc.tar
+
+</pre><p>&nbsp;The -k flag for the Install command informs it what kernel architecture we're Installing, and the -G flag specifies the glomname. The latter is the name of the subdirectory in /platform/&lt;arch&gt; that the new kernel will go into, so in our case they will go into /platform/i86pc/kernel-17 (on SPARC this would currently be /platform/sun4u/kernel-17). If we don't specify a glomname, our newly-compiled kernel will overwrite the current one. If this leads to brickification, our only recourse is to recover by booting from alternative media.</p><p>On x86 there's one more task we must perform before booting our new kernel: once the tar ball has been extracted, we must add the name of our new kernel directory to the file /boot/solaris/filelist.ramdisk. This step doesn't apply if we're installing on the SPARC platform, because it doesn't use the GRUB boot loader.</p><p>The only thing left to do is booting using the new kernel:</p><pre>
+
+# reboot -- kernel-17/amd64/unix
+
+</pre><p>&nbsp;This example assumes the use of a 64-bit amd64 machine; for 64-bit SPARC use kernel-17/sparcv9/unix and for 32-bit x86 use kernel-17/unix.</p><p>If all goes well, the booting banner should display the string we put into the VERSION variable in opensolaris.sh:</p><pre>
+
+rich@orac3559# uname -a
+SunOS orac 5.11 OpenSolaris_build-17 i86pc i386 i86pc
+
+</pre><p>&nbsp;Some machines may not be able to boot in this manner due to missing device drivers that are not supplied as part of OpenSolaris. In this event, we can try to work around this by copying the modules and drivers supplied by the base OS install into our test directory, installing the new bits on top.</p><p>&nbsp;Here's how we would do this:</p><pre>
+
+# cd /platform/i86pc
+# rm -fr kernel-17/*
+# (cd kernel; tar cf - .) | (cd kernel-17; tar xf -)
+# cd $OPEN_SOL
+# Install -k i86pc -G kernel-17
+# cd /
+# tar xf /tmp/Install.root/Install.i86pc.tar
+# reboot -- kernel-17/amd64/unix
+
+</pre><p>&nbsp;If we want to install more than just the new kernel, we must use a process called BFU, which we will describe in another article. BFUing is not for the feint of heart, and is recommended only for developers who absolutely must have the latest bleeding edge bits.</p><p><strong><br/>&nbsp;Summary</strong></p><p>In this article we defined some of the terminology we'll encounter when dealing with OpenSolaris. We also described how to obtain the source code and other bits necessary to compile it, and finally, we described the steps necessary to perform a simple compilation and installation of OpenSolaris. These steps are:</p><ol><li>Obtain the source code, closed binaries, compilers and build tools from <span class="wikiexternallink"><a href="http://www.opensolaris.org/">www.opensolaris.org</a></span> or one of its mirrors.</li><li>Install the ON build tools and Sun Studio compilers into /opt and add their directories to our PATH.</li><li>Unpack the source and closed binaries tar balls.</li><li>Copy and edit the opensolaris.sh script.</li><li>Build the source code using the nightly script.</li><li>Install the resulting new kernel using the Install script.</li><li>Reboot using the new kernel.</li></ol><p><strong>Recommended Reading</strong></p><p>The opensolaris.org web site contains several documents, including the <em>OpenSolaris Developer's Reference</em>. Also, be sure to check out details regarding the OpenSolaris Tools Community site and specifically the Sun Studio download site at <span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_tools">/os/community/tools/sun_studio_tools/</a></span>. The author's book, <em>Solaris Systems Programming</em> [Teer 2005], is essential for readers wishing to work with the userland OpenSolaris code, and<em>Solaris Internals&nbsp;</em>[Mauro and McDougall 2001] by Jim Mauro and Richard McDougall should be on every OpenSolaris kernel hacker's bookshelf. The community blogs at <span class="wikicreatelink"><a href="/bin/create/Main/blogs?parent=Community+Group+tools.building_opensolaris">www.opensolaris.org/os/blogs/</a></span> are another great source of information.</p><p>[Mauro and McDougall 2001]: <em>Solaris Internals</em>, ISBN 0-13-022496-0. See <span class="wikiexternallink"><a href="http://www.solarisinternals.com/">www.solarisinternals.com/</a></span> for more details.</p><p>[Teer 2005]: <em>Solaris Systems Programming</em>, ISBN 0-201-75039-2. See <span class="wikiexternallink"><a href="http://www.rite-group.com/rich/ssp/">www.rite-group.com/rich/ssp/</a></span> for more details.</p>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:11<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by kupfer on 2009/12/04 21:25
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Community Group tools Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/building_opensolaris">Build/Install OpenSolaris (Part 1)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/building_opensolaris_part2">Build/Install OpenSolaris (Part 2)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/downloads">Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/gcc">GCC</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/bug_fixing_notes">Bug Fixing Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/build_instr">Build Instructions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/flagday">Important Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/on_policy">ONNV Policy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/rationale">Background and Rationale</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/shadow">Shadow Compilation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/status">Current Status</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/hg">Mercurial Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/linker">Dynamic Linking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/scm">OpenSolaris Source Code Management</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/bzr%2Deval">OpenSolaris DSCM Evaluation: Bzr (Interim Report)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/dcm_evaluation_mercurial">OpenSolaris DSCM Evaluation: Mercurial</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/dscmreqdoc">DSCM Requirements Document</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/evalform">Candidate Evaluation Form</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/evalplan">Evaluation Plan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/hg_help">How To Use Mercurial (hg) Repositories</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/hg_teamware_transition">How To Transition from Teamware to Mercurial</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/history">SCM Project History</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/on%2Dscm%2Dtools">ON SCM&#45;Related Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/scm_milestone">Source Code Management for OpenSolaris: MILESTONES</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/scmconsolespec">SCM console specification</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/scmhostspec">SCM hosting implementation specification</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/svn_help">How To Use SVN Repositories</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/scmdownloads">Source Code Management Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_tools">Sun Studio Downloads</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/faqs">Sun Studio FAQs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/getstarted">Sun Studio Getting Started</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sss11ent">Sun Studio 11 License</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sss12ent_license">Sun Studio 12 License</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sssent">Sun Studio 10 License</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_10_tools">Sun Studio 10 Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_11_tools">Sun Studio 11 Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_11_tools_previous">Sun Studio 11&#45;&#45; Previous Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_12_tools">Sun Studio 12 Compilers and Tools for the OpenSolaris Common Build Environment (CBE)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/support">Sun Studio Support</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/testing+nightly">testing nightly</a></span></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2012, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Reno: Login Process Enhancements for Interop (Project reno.WebHome) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+reno/WebHome" />
+                    <link rel="canonical" href="/bin/view/Project+reno/" />
+                            <meta name="document" content="Project reno.WebHome"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Project reno"/>
+    <meta name="page" content="WebHome"/>
+    <meta name="version" content="4.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Project+reno/pages/WebHome"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Reno: Login Process Enhancements for Interop" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="Doug Leavitt" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project reno";
+XWiki.currentPage = "WebHome";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Project+reno/";
+window.docediturl = "/bin/edit/Project+reno/WebHome";
+window.docsaveurl = "/bin/save/Project+reno/WebHome";
+window.docgeturl = "/bin/get/Project+reno/WebHome";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Project_reno viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Breno%2F"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+reno/"><strong>Project reno</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Project+reno" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>
+            </td>
+            <td style="width: 99%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                  <span class='current'>Reno: Login Process Enhancements for Interop</span>
+          </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+            <a href="/bin/view/Project+reno/?language=" class="language-default language-current"></a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+reno/WebHome?format=pdf" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+reno/WebHome?format=rtf" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+reno/WebHome?format=html" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+reno/?viewer=code"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+reno/?viewer=comments" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+reno/?viewer=attachments" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+reno/?viewer=history" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+reno/?viewer=information" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+reno/?viewer=code" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+reno/?xpage=print" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>Reno: Login Process Enhancements for Interop</h1></div>
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h2 id="HAbstract"><span>Abstract</span></h2><p><em><strong>This project is currently idle.</strong></em></p><h2 id="HFromtheARCmaterials:"><span>From the ARC materials:</span></h2><pre>
+    This project is related to the [[SPARKS&gt;&gt;Project sparks.WebHome]] project, falls under the SPARKS
+    umbrella case to be presented at PSARC on 04/19/2006, and has a soft
+    defpendency on SPARKS.
+</pre><pre>
+    Some directories require that lookups be "self-credentialled,"
+    meaning that clients use user credentials, as opposed to host or
+    "proxy" credentials.
+</pre><pre>
+    The Solaris login process, however, works in such a way that
+    directory lookups must be performed prior to the point at which user
+    network authentication credentials are available.  A chicken and egg
+    problem ensues.
+</pre><pre>
+    Further, network authentication (single sign-on) is not well
+    integrated with PAM, which is related to the chicken-egg problem in
+    that delegated credentials and/or authorization-data could be used in
+    certain contexts in addressing the chicken-egg problem, but not
+    easily without a closer tie between PAM and network authentication.
+</pre><pre>
+    This project revamps the Solaris login process to allow for
+    directories that require self-credentialled lookups for information
+    needed during the Solaris login process and to better integrate
+    network authentication with PAM.
+</pre><pre>
+    We borrow from JAAS the notion of a "Subject" object that represents
+    information about users needed during the login process, and we tie
+    this notion to PAM, allowing PAM modules to provide subject
+    information, which in turn breaks the chicken-egg problem by
+    eschewing name service lookups in PAM applications.  Additionally we
+    move certain tasks from GSS-API applications to PAM, such as
+    authorization of remote principals to Unix user accounts and handling
+    of credential delegation.
+</pre><pre>
+    These changes will also enable us to better cope with future Solaris
+    process credentials extensions and with infrastructures and
+    authentication mechanisms that deliver user process credential
+    information through network authentication.
+</pre><h2 id="HSummary"><span>Summary</span></h2><p>Reno extends PAM as follows:</p><p><em>&nbsp;Adds a <span class="box code"><span style="color: #666666; ">//*</span>PAM<span style="color: #666666; ">~</span>_USER<span style="color: #666666; ">~</span>_TYPE<span style="color: #666666; ">**</span></span> item to identify the type of user account named by <span class="box code">PAM<span style="color: #666666; ">~</span>_USER</span>. &nbsp;Solaris PAM modules will, of course, only support "Unix" user accounts.</em></p><p><em>&nbsp;Adds a <span class="box code"><span style="color: #666666; ">//*</span>PAM<span style="color: #666666; ">~</span>_USER<span style="color: #666666; ">~</span>_INFO<span style="color: #666666; ">**</span></span> item by which PAM applications can pass a <span class="box code"><span style="color: #666666; ">**</span>userinfo<span style="color: #666666; ">~</span>_t<span style="color: #666666; ">**</span></span> object to PAM modules, which can then fill in information about the <span class="box code">PAM<span style="color: #666666; ">~</span>_USER</span> that is relevant to the login process (see below).</em></p><ul><li>Related to this, there is a new API, the User Info API. &nbsp;A User Info object is a template that represents everything about an authenticated user that must be known at logon-time, such as:<ul><li>UID</li><li>Primary GID</li><li>Supplementary GIDs</li><li>Home directory</li><li>Shell</li><li>Default and limit privilege sets</li><li>Project</li><li>User account type (i.e., user vs. role)</li></ul></li></ul><p>&nbsp;&nbsp;as well as how to apply such templates to processes.</p><p><em>&nbsp;Adds new items, <span class="box code"><span style="color: #666666; ">//*</span>PAM<span style="color: #666666; ">~</span>_GSS<span style="color: #666666; ">~</span>_MECH<span style="color: #666666; ">**</span></span>, <span class="box code"><span style="color: #666666; ">**</span>PAM<span style="color: #666666; ">~</span>_GSS<span style="color: #666666; ">~</span>_NAME<span style="color: #666666; ">**</span></span> and <span class="box code"><span style="color: #666666; ">**</span>PAM<span style="color: #666666; ">~</span>_GSS<span style="color: #666666; ">~</span>_CRED<span style="color: #666666; ">**</span></span> by which PAM applications can communicate to PAM modules informations about client principals authenticated with the GSS-API by passing <span class="box code">gss<span style="color: #666666; ">~</span>_OID</span>, <span class="box code">gss<span style="color: #666666; ">~</span>_name<span style="color: #666666; ">~</span>_t</span> and <span class="box code">gss<span style="color: #666666; ">~</span>_cred<span style="color: #666666; ">~</span>_id<span style="color: #666666; ">~</span>_t</span> objects, respectively.</em></p><p>PAM modules and applications will be modified accordingly.</p><p>Among other interesting changes: sshd(1M), in.telnetd(1M), and friends will no longer be responsible for handling authorization of client principals to Unix accounts, nor for handling of delegated credentials. &nbsp;Additionally, pam_ldap(5) and pam_krb5(5) will, when self-credentialled LDAP is configured, perform self-credentialled lookups in the directory and fill in applications' <span class="box code">userinfo<span style="color: #666666; ">~</span>_t&nbsp;</span>objects.</p><p>Backwards compatibility is addressed as follows:</p><ul><li>Existing module behave as usual when <span class="box code">PAM<span style="color: #666666; ">~</span>_USER<span style="color: #666666; ">~</span>_INFO</span> is not set;</li><li>Modules will have a <span class="box code">nouserinfo</span> argument to disable new behaviour even when <span class="box code">PAM<span style="color: #666666; ">~</span>_USER<span style="color: #666666; ">~</span>_INFO</span> is not set;</li><li>Applications will fallback on using name services to discover users' UIDs, GIDs, etc.. when PAM modules fail to fill in the applications' <span class="box code">userinfo<span style="color: #666666; ">~</span>_t</span> object.</li></ul><h2 id="HPer-UserPAMConfiguration"><span>Per-User PAM Configuration</span></h2><p>A project related to Reno, PSARC 2005/275, extends the PAM framework by adding a new PAM function, <span class="box code"><span style="color: #666666; ">**</span>pam<span style="color: #666666; ">~</span>_eval(3PAM)<span style="color: #666666; ">**</span></span>, that loads the PAM configuration in a file named by its argument, and evaluates the current service module for the current PAM service, returning the result to the caller. &nbsp;This function is intended to be called by PAM modules, specifically a new Solaris PAM module: <span class="box code"><span style="color: #666666; ">**</span>pam_user<span style="color: #666666; ">~</span>_policy(5)<span style="color: #666666; ">**</span></span>, which determines a configuration file to evaluate by first looking for the PAM_USER's <span class="box code"><span style="color: #666666; ">**</span>pam<span style="color: #666666; ">~</span>_policy<span style="color: #666666; ">**</span></span> user_attr(5) key, falling back on the <span class="box code"><span style="color: #666666; ">**</span>pam<span style="color: #666666; ">~</span>_policy<span style="color: #666666; ">**</span></span> of the first RBAC profile granted in policy.conf(5) that has such a key.</p><p>Reno depends on this functionality.</p><h2 id="HDocuments"><span>Documents</span></h2><p>A slightly updated version of the <span class="wikilink"><a href="/bin/view/Project+reno/brief">brief</a></span> in the ARC commitment materials directory. &nbsp;(Some of the man page links therein are broken; they will be fixed shortly.)</p><p>For now here are the man pages for the User Info API:</p><ul><li><span class="wikicreatelink"><a href="/bin/create/manpage%2Duserinfo_new/txt?parent=Project+reno.WebHome">userinfo_new(3LIB)</a></span></li><li><span class="wikicreatelink"><a href="/bin/create/manpage%2Duserinfo_get/txt?parent=Project+reno.WebHome">userinfo_get(3LIB)</a></span></li><li><span class="wikicreatelink"><a href="/bin/create/manpage%2Duserinfo_load/txt?parent=Project+reno.WebHome">userinfo_load(3LIB)</a></span></li><li><span class="wikicreatelink"><a href="/bin/create/manpage%2Duserinfo_apply/txt?parent=Project+reno.WebHome">userinfo_apply(3LIB)</a></span></li><li><span class="wikicreatelink"><a href="/bin/create/manpage%2Duserinfo_export/txt?parent=Project+reno.WebHome">userinfo_export(3LIB)</a></span></li><li><span class="wikicreatelink"><a href="/bin/create/manpage%2Duserinfo_getfromucred/txt?parent=Project+reno.WebHome">userinfo_getfromucred(3LIB)</a></span></li><li><span class="wikicreatelink"><a href="/bin/create/manpage%2Duserinfo_get_adt/txt?parent=Project+reno.WebHome">userinfo_get_adt(3LIB)</a></span></li></ul>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by  on 2009/10/26 11:41<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by Doug Leavitt on 2010/04/06 18:30
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Project reno Pages</h1>
+<div class="xwikipanelcontents">
+                                 <span class="wikilink"><a href="#">Reno: Login Process Enhancements for Interop</a></span>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+reno/brief">Brief on PSARC 2005/717 (from commitment + some changes)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+reno/files">Files</a></span></li>
+</ul>
+                    </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2011, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

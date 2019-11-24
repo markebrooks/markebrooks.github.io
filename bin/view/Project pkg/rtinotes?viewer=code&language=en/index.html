@@ -1,0 +1,1391 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Integration Notes (Project pkg.rtinotes) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+pkg/rtinotes" />
+                                <meta name="document" content="Project pkg.rtinotes"/>
+    <meta name="space" content="Project pkg"/>
+    <meta name="page" content="rtinotes"/>
+    <meta name="version" content="11.1"/>
+                    <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Integration Notes" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="Shawn Walker" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                <!-- com.xpn.xwiki.plugin.skinx.LinkExtensionPlugin -->
+    <link href="/bin/skin/skins/colibri/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/>
+
+    
+    <link href="/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript" src="/resources/js/xwiki/suggest/ajaxSuggest.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project pkg";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes" ];
+window.docviewurl = "/bin/view/Project+pkg/rtinotes";
+window.docediturl = "/bin/edit/Project+pkg/rtinotes";
+window.docsaveurl = "/bin/save/Project+pkg/rtinotes";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js'></script><script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js'></script><script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js'></script>
+
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/compatibility.js"></script>
+
+  </head>
+        <body id="body" class="xwiki viewbody hideright">
+  <div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+<div id="menuview">
+  <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div class="topmenuentry " id="tmLogin"><a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bpkg%2Frtinotes%3Fviewer%3Dcode%26%2338%3Blanguage%3Den"><strong>Log-in</strong></a></div>
+  </div>
+<div class="leftmenu">
+  <div class="topmenuentry hasIcon" id="tmWiki"><a class="tme" href="/bin/view/Main/"><strong>xwiki</strong></a></div>
+  <div class="topmenuentry hasIcon" id="tmSpace"><a class="tme" href="/bin/view/Project+pkg/"><strong>Project pkg</strong></a></div>
+
+<div class="topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmSubSites">
+<span class="tme-extensible"><a class="tme"><strong>Subsites</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="http://cr.opensolaris.org/" id="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth">Auth</a></span>
+</span></div>
+
+
+</div>
+</div>
+
+</div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+
+  <div id="company">
+  <div id="companylogo">
+    <a href="/bin/view/Main/" title="Home" rel="home">
+    <img src="/skins/colibri/logo.png" alt="Wiki Logo"/>
+    </a>
+  </div>   </div> 
+  <div id="Iconbar">
+    <a id="CollectivesIcon" href="/bin/view/Main/collectives">Collectives</a>
+    <a id="DiscussionsIcon" href="/bin/view/Main/discussions">Discussions</a>
+    <a id="DocumentationIcon" href="/bin/view/Main/documentation">Documentation</a>
+    <a id="DownloadIcon" href="/bin/view/Main/downloads">Download</a>
+    <a id="SourceBrowserIcon" href="http://src.opensolaris.org">Source Browser</a>
+  </div>
+  <div class="clearfloats"></div>
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/WebSearch">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+   <div id="hierarchy">
+                <a href='/bin/view/Project+pkg/devinfo'>Developer information</a> <span class='separator'>&raquo;</span> <a href='/bin/view/Project+pkg/rtinotes'>Integration Notes</a>
+      </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+pkg/rtinotes?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+        <div class="main layoutsubsection">
+  <div id="contentmenu" class="actionmenu">
+  <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div class="topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmExport">
+<span class="tme-extensible"><a class="tme"><strong>Export</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+pkg/rtinotes?format=pdf&amp;language=en" id="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+pkg/rtinotes?format=rtf&amp;language=en" id="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+pkg/rtinotes?format=html&amp;language=en" id="tmExportHtml">Export as HTML</a></span>
+  </span></div>
+
+<div class="topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmShow">
+<span class="tme-extensible"><a class="tme" href="/bin/view/Project+pkg/rtinotes?viewer=code&amp;language=en"><strong>View</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+pkg/rtinotes?viewer=comments&amp;language=en" id="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+pkg/rtinotes?viewer=attachments&amp;language=en" id="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+pkg/rtinotes?viewer=history&amp;language=en" id="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+pkg/rtinotes?viewer=information&amp;language=en" id="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+pkg/rtinotes?viewer=code&amp;language=en" id="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div class="topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmMoreActions">
+<span class="tme-extensible"><a class="tme"><strong>More actions</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+pkg/rtinotes?xpage=print&amp;language=en" id="tmPrintPreview">Print preview</a></span>
+    </span></div>
+  </div>
+
+
+  </div>
+  <div id="mainContentArea">
+      <h1><span>Wiki source code of <a href="/bin/view/Project+pkg/rtinotes">Integration Notes</a></span></h1>
+  <a href="/bin/view/Project+pkg/rtinotes?viewer=code&showlinenumbers=0&language=en">Hide line numbers</a>
+    <textarea readonly="readonly" style="width: 100%; height: 300px;">
+1: == Integration Notes ==
+2: 
+3: Below you will find a list of repository revisions that have &#34;Heads Up&#34; notices or other upgrade considerations users and/or developers should be aware of.
+4: 
+5: == Notable Revisions ==
+6: 
+7: === [[**Revision 2268 / 1f313c3e7cdf**&#62;&#62;http://src.opensolaris.org/source/history/pkg/gate/src]] ===
+8: 
+9: With the putback of changeset 2268:1f313c3e7cdf to the pkg(5) gate, publication tools such as pkgsend, pkgrecv, and pkgsign now always require that a destination repository be specified for operations that require it using environment variables or options to the program.  pkgsign also accepts filesystem-based repository locations in path form.
+10: 
+11: ====  What changed? ====
+12: For historical reasons that are no longer understood, publication tools such as pkgrecv, pkgsend, and pkgsign previously would automatically attempt to connect to a pkg.depotd(1M) process on port 10000 if a target repository was not specified either through environment or program options.
+13: 
+14: This is no longer the case.  (This behaviour was never intended for long-term use.)
+15: 
+16: Operations that publication tools perform that require a destination repository will now always exit with an error if the user has not specified a destination repository.
+17: 
+18: Additionally, pkgsign now accepts relative and absolute paths to filesystem-based repositories instead of requiring that their location is in URI form.
+19: 
+20: ====  How could this change impact me? ====
+21: If a consumer has relied on the publication tool&#8217;s historical (and sometimes undocumented) behaviour of defaulting to port 10000 for a destination repository, whatever publication operations it was performing will now fail with a usage error.
+22: 
+23: The consumers in question must be updated to either set the relevant environment variables to indicate the destination repository, or must specify the destination repository using the relevant options to the publication tool in question.
+24: 
+25: See pkgsend(1), pkgrecv(1), or pkgsign(1) for more information on how to specify a destination repository for each tool. 
+26: 
+27: ==== What are the related bug entries? ====
+28: 
+29: The following RFEs/Bugs were resolved by changeset 2268:
+30: 
+31: * [[17728&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=17728]] publication tools should require a repository to be specified
+32: * [[18041&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=18041]] pkgsign should accept paths for filesystem-based repositories
+33: 
+34: === [[**Revision 1895 / 0a260cc2a689**&#62;&#62;http://src.opensolaris.org/source/history/pkg/gate/src]] ===
+35: 
+36: With the putback of changeset 1895 to the pkg(5) gate, pkg(1) now supports filesystem-based repository access.  Please note that this functionality is not expected to be available in an OS build until after b139.
+37: 
+38: ==== What changed? ====
+39: 
+40: There are no user-visible changes to command syntax or client operation.  The only noticeable change is that any command that accepted a repository URI such as &#8217;http://localhost:10000&#8217; now also accepts URIs for filesystem locations such as &#8217;file:/path/to/my/repository&#8217;.
+41: 
+42: For example, if you were creating a new image and had a repository located at &#8217;/export/myrepo&#8217;, you could do this:
+43: 
+44: {{{
+45: pkg image-create -p file:/export/myrepo /path/to/image
+46: }}}
+47: 
+48: See the pkg(1) man page for more examples.
+49: 
+50: ==== What does this mean? ====
+51: 
+52: This change means that pkg.depotd(1m) is no longer required for serving package data if a client can access the package repository via the filesystem (e.g. NFS mounts, etc.). 
+53: 
+54: ==== What are the related bug entries? ====
+55: 
+56: The following RFEs/Bugs were resolved by changeset 1895:
+57: 
+58: * [[15762&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=15762]] client support for filesystem-based repository access
+59: * [[10244&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=10244]] caching dictionaries as a class variable prevents multi-image and repo search
+60: * [[14802&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=14802]] ability to have separate read / write download caches
+61: * [[15763&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=15763]] test suite should not start depot server unless necessary
+62: * [[15764&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=15764]] file_manager insert needs to stat() less and return more
+63: 
+64: ==== What are the potential issues? ====
+65: 
+66: Currently, the client will not cache data from a repository that is accessed via the filesystem in the image&#8217;s download cache (e.g. /var/pkg/download), with the assumption that access to the repository via filesystem is reliable and/or reasonably fast.
+67: 
+68: In some use case scenarios (such as NFS, SMB, etc.) filesystem-based access may be slow, unreliable, or otherwise unsuitable for client transport.  In those cases, it is advised that http-based access to the repository via pkg.depotd(1m) is used instead.  It is hoped that the client can account for the performance of available filesystem-based resources automatically in the future when retrieving package content.
+69: 
+70: Search operations performed using a file-based repository can use substantially more memory when a repository contains a large number of packages (such as /dev).  This is because the client is essentially acting as the search server in addition to the client.
+71: 
+72: To avoid this overhead, the related publisher can be configured with both an http(s) origin and the file-based origin.  When performing search operations, the client will use the http(s) based origin(s) first to perform searches, but check the file-based origin first for all package file retrieval operations.  For example:
+73: 
+74: {{{
+75: pkg set-publisher -g file:/export/myrepo \
+76:   -g http://localhost:10000 example.com 
+77: }}}
+78: 
+79: ==== Thanks ====
+80: 
+81: Many thanks to the individuals who collaborated on, reviewed, or contributed to this project.
+82: 
+83: Feedback is welcomed on the pkg-discuss mailing list.
+84: 
+85: === [[**Revision 1736 / 727dda1e7968**&#62;&#62;http://src.opensolaris.org/source/history/pkg/gate/src]] ===
+86: 
+87: Changeset 1736 in the pkg(5) gate made the following changes:
+88: 
+89: * [[11522&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=11522]] pkg should require publisher prefix to match repository information
+90: * [[7156&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=7156]] client image api needs image creation interface
+91: * [[12744&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=12744]] update_publisher over-zealously testing publisher validity
+92: * [[14203&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=14203]] image-create usage doesn&#8217;t mention mirror / origin options
+93: 
+94: ==== What changed? ====
+95: 
+96: The pkg(1) client and the pkg.client.api will now attempt to retrieve publisher configuration information from package repositories.  This information is used to auto-configure new publishers, validate configuration requests, and to update the configuration of existing publishers.
+97: 
+98: These changes were made with a focus on simplifying publisher addition and updates of existing publisher configuration.
+99: 
+100: Further improvements and additions to this functionality are planned for future releases.
+101: 
+102: ==== Are there any pkg.depotd(1m) changes? ====
+103: 
+104: While the pkg.depotd(1m) program did not change, clients are now more reliant on its correct configuration.
+105: 
+106: As already mentioned in the past, please be certain that you set the publisher.prefix property found in the repository&#8217;s cfg_cache file correctly.  The pkg.depotd man page contains instructions on how to set this property.
+107: 
+108: Please also note that the repository.origins and/or repository.mirrors properties should be set as clients will use these to automatically configure new publishers and to update existing publishers.  You might also want to consider providing a description so that users have an idea of what sort of packages the repository contains.
+109: 
+110: Part of an example cfg_cache might look like this:
+111: 
+112: {{{
+113: [publisher]
+114: prefix = example.com
+115: alias = None
+116: ...
+117: [repository]
+118: origins = http://pkg-us.example.com/,http://pkg-ca.example.com/
+119: mirrors = http://pkg-us-mirror1.example.com/,http://pkg-ca-mirror1.example.com/
+120: ...
+121: }}}
+122: 
+123: ==== How has pkg(1) image-create changed? ====
+124: 
+125: The client remains completely compatible syntax-wise, so no changes to existing scripts are required, and behaviour when using the older syntax (other than validating publisher configuration) remains unchanged.
+126: 
+127: However, image-create now also accepts -p &#60;uri&#62; where &#60;uri&#62; is the URI of a package repository and example usage is as follows:
+128: 
+129: {{{
+130: pkg image-create -p &#60;uri&#62; /target
+131: }}}
+132: 
+133: When using this syntax, image-create will retrieve all of the publisher&#8217;s configuration information from the target package repository and add all of the publishers it finds to the image.
+134: 
+135: ==== How has pkg(1) set-publisher changed? ====
+136: 
+137: The syntax of the set-publisher command remains backwards compatible, so no changes to existing scripts, etc. are required.  However, set-publisher now accepts the -p option which accepts the URI of a package repository from which all publisher configuration information will be retrieved.
+138: 
+139: Any new publishers found in the retrieved configuration information will be added, while existing ones will be updated if the provided URI is already in the list of configured origins for the publisher being updated.
+140: 
+141: If a publisher name is provided, then -p will only use publisher configuration information that matches the provided name.
+142: 
+143: As an example, the old syntax to add the contrib repository might have been:
+144: 
+145: {{{
+146: pkg set-publisher -g http://pkg.opensolaris.org/contrib \
+147:   contrib.opensolaris.org
+148: }}}
+149: 
+150: The new syntax is:
+151: 
+152: {{{
+153: pkg set-publisher -p http://pkg.opensolaris.org/contrib
+154: }}}
+155: 
+156: ==== How has pkg.client.api changed? ====
+157: 
+158: Incompatible with clients using API versions 0-31.
+159: 
+160: The ImageInterface class has changed as follows:
+161: 
+162: * The add_publisher and update_publisher methods now validate the image&#8217;s publisher configuration against the origins of the publisher.  If any of the origins are found to not match, an UnknownRepositoryPublishers exception will be raised.  If one of the new repository origins does not provide publisher configuration information or it is incomplete, a RepoPubConfigUnavailable exception will be raised.
+163: 
+164: The pkg.client.api module has changed as follows:
+165: 
+166: * A new method named image_create has been added.  See &#8217;pydoc pkg.client.api&#8217; for details.
+167: 
+168: The pkg.client.api_errors modules has changed as follows:
+169: 
+170: * UnknownRepositoryPublishers, RepoPubConfigUnavailable, and UnknownErrors expections have been added for use by the pkg.client.api.  API consumers are reminded that they should catch all ApiException class exceptions, although catching specific exception subclasses for case-by-case handling in addition to that is acceptable.
+171: 
+172: Feedback is welcomed on the pkg-discuss mailing list.
+173: 
+174: === [[**Revision 1618 / 04f7471c9e72**&#62;&#62;http://src.opensolaris.org/source/history/pkg/gate/src]] ===
+175: 
+176: The following fixes and enhancements were integrated:
+177: 
+178: * [[5943&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=5943]] add &#8217;must-accept&#8217; attribute to license actions
+179: * [[5586&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=5586]] licenseinfo api needs to expose license action attributes
+180: * [[13155&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=13155]] add &#8217;must-display&#8217; attribute to license actions
+181: * [[13158&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=13158]] change pkg.client.api to understand and require license acceptance
+182: * [[13160&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=13160]] pkg(1) needs update for client api license acceptance changes 
+183: 
+184: These changes were made to support packages that require display or acceptance of license related data during package install and update operations.  As a result of these changes, the pkg(1) client and client API require explicit acceptance and/or indication of license display during install and update operations.
+185: 
+186: Please note that (currently) no packages exist that use this functionality, but they are expected in the near future.
+187: 
+188: ==== Client Considerations ====
+189: 
+190: If any of the license actions contained in a package being installed or updated have must-accept=true, the following pkg(1) subcommands require that the new ~-~-accept option be provided before the operation will proceed:
+191: 
+192: * install
+193: * fix
+194: * image-update
+195: * change-variant
+196: * change-facet
+197: 
+198: In addition, all of the above subcommands also now have a ~-~-licenses option to display the payload of all the licenses for packages part of the operation.  For example:
+199: 
+200: {{{
+201: pkg install -n --licenses foo
+202: }}}
+203: 
+204: The above command would display all of the licenses for the packages that would be installed or updated if the package &#8217;foo&#8217; were installed or updated.  If the ~-~-accept option is not provided, and a license requires acceptance, the pkg(1) client will now exit with exit code 6, indicating license acceptance failure.  If a license requires display, the pkg(1) client will display it during install/update operations; this cannot be suppressed.
+205: 
+206: ==== Client API Changes ====
+207: 
+208: Version 29:
+209: Incompatible with clients using versions 0-28:
+210:     The ImageInterface class has changed as follows:
+211: 
+212: * set_plan_license_status() was added.  This is used to indicate
+213:           whether licenses for the packages being operated on have been
+214:           accepted or displayed.  Clients must do this if the related
+215:           license requires acceptance or display.
+216: 
+217:     The LicenseInfo class has changed as follows:
+218: 
+219: * get_text() may now trigger a remote retrieval of the license
+220:           payload if needed to return the text.
+221: 
+222: * The related package FMRI and license attributes are now
+223:           properties: fmri, license, must_accept, and must_display.
+224: 
+225:     The PlanDescription class has changed as follows:
+226: 
+227: * get_changes() is now a generator function.
+228: 
+229: * get_licenses() was added to allow clients to retrieve the
+230:           list of licenses related to the plan&#8217;s operations as well
+231:           as the current accepted and displayed status of each.  Please
+232:           note that this function returns _all_ licenses related to the
+233:           operation; not just those that require acceptance or display.
+234: 
+235: ==== Publication Considerations ====
+236: 
+237: To use this new license acceptance functionality, simply add must-accept=true or must-display=true (as appropriate) to license actions in your package manifest.  An example pkgsend sequence might look like this:
+238: 
+239: {{{
+240: open licensed@1.3,5.11-0
+241: add depend type=require fmri=baz@1.0
+242: add file /tmp/libc.so.1 mode=0555 owner=root group=bin path=/lib/libc.so.1
+243: add license /tmp/libc.copyright license=libc.copyright must-display=True
+244: add license /tmp/libc.license license=libc.license must-accept=True
+245: close
+246: }}}
+247: 
+248: Please note that this functionality is not supported before build 131, and that you should use this functionality sparingly.  must-accept=true should not be placed on the majority of open source licenses (BSD, GPL, etc.) and must-display should only be set if absolutely necessary. 
+249: 
+250: Comments or concerns should be sent to the pkg-discuss mailing list on opensolaris.org.
+251: 
+252: === [[**Revision 1504 / 265a1d6b86bd**&#62;&#62;http://src.opensolaris.org/source/history/pkg/gate/src]] ===
+253: 
+254: With the putback for the following issues in revision 1504:
+255: 
+256: * [[9969&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=9969]] client support for multiple origins desired
+257: * [[11715&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=11715]] ImageConfig does not handle None for publisher correctly
+258: * [[11793&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=11793]] image-create example partially disagrees with the usage
+259: 
+260: ...the client now supports multiple origins for publisher repositories.  The purpose of this change was to enable greater pkg (5) server availability and redundancy.
+261: 
+262: ==== What is an origin? ====
+263: 
+264: An origin is simply a location of a package repository that contains package file, manifest, and catalog data; such as: http://pkg.opensolaris.org/dev.  The default mode for the pkg.depotd process is to run as an &#8217;origin&#8217;.
+265: 
+266: A mirror, in contrast, only contains package file data and is currently provided by a pkg.depotd server running in mirror mode.
+267: 
+268: ==== What does this change mean? ====
+269: 
+270: This change means that redundancy can now more easily be built into package server infrastructure.  For example, you could have http://pkg1.example.com/, http://pkg2.example.com/, and http://pkg3.example.com/.
+271: 
+272: A client, once configured, would have pkg publisher output similar to the following:
+273: 
+274: {{{
+275: PUBLISHER                TYPE   STATUS URI
+276: example.com  (preferred) origin online http://pkg1.example.com/
+277: example.com  (preferred) origin online http://pkg2.example.com/
+278: example.com  (preferred) origin online http://pkg3.example.com/
+279: }}}
+280: 
+281: During package operations, the client will automatically attempt to select and use the best repository origin if any data needs to be retrieved for that publisher.
+282: 
+283: In addition, ipkg branded zone creation and attach has been updated to use this additional origin and mirror information when configuring zones.
+284: 
+285: ==== How do I use this? ====
+286: 
+287: For consistency, and to support this new client functionality, the image-create and set-publisher subcommands for pkg(1) have changed as follows:
+288: 
+289: {{{
+290: image-create
+291:  New Options:
+292:   [-g|--origin ...] [-m|--mirror ...]
+293: 
+294: set-publisher
+295:  New Options:
+296:   [-g origin_to_add | --add-origin=origin_to_add ...]
+297:   [-G origin_to_remove | --remove-origin=origin_to_remove ...]
+298: 
+299:  Deprecated Options:
+300:   [-O uri]
+301: }}}
+302: 
+303: So, as an example, to create a new, full image, with publisher example.com, that also has an additional mirror, two additional origins and that is stored at /aux0/example_root:
+304: 
+305: {{{
+306: $ pkg image-create -F -p example.com=http://pkg.example.com:10000 \
+307:   -g http://alternate1.example.com:10000/ \
+308:   -g http://alternate2.example.com:10000/ \
+309:   -m http://mirror.example.com:10000/ \
+310:   /aux0/example_root
+311: }}}
+312: 
+313: Alternatively, to add a new publisher or update an existing publisher with the above information:
+314: 
+315: {{{
+316: $ pkg set-publisher \
+317:   -g http://pkg.example.com:10000 \
+318:   -g http://alternate1.example.com:10000/ \
+319:   -g http://alternate2.example.com:10000/ \
+320:   -m http://mirror.example.com:10000/ \
+321:   example.com
+322: }}}
+323: 
+324: ==== Are there are any client compatibility concerns? ====
+325: 
+326: No.  Clients upgrading from older versions of the pkg client software to this version of the client software will not experience any issues.  In addition, some care has been taken to ensure older clients that understand the current image format are compatible with this new configuration, although they will be limited to using the first origin for a repository.
+327: 
+328: ==== Do I need to update my scripts or client usage? ====
+329: 
+330: While the &#8217;-O&#8217; option has been deprecated for the set-publisher command and is no longer documented, it will continue to work exactly as it has in the past so no change is strictly necessary.  The command-line option compatibility for -O is currently planned to be maintained through the next major OpenSolaris release (2010.x), but will be dropped after that.
+331: 
+332: However, if you are using any scripts or programs that parse the output of the &#8217;pkg publisher&#8217; command, and only expect a single origin to be listed for each publisher, they will need to be updated to account for this.
+333: 
+334: Comments or concerns should be sent to the pkg-discuss mailing list on opensolaris.org.
+335: 
+336: === [[**Revision 1431 / 62b6033670e4**&#62;&#62;http://src.opensolaris.org/source/history/pkg/gate/src]] ===
+337: 
+338: Please **READ THIS**  if you publish packages or run a pkg.depotd server!
+339: 
+340: Also be aware that if you have multiple instances of the opensolaris.org publisher repositories configured (i.e. ipkg.sfbay/dev, pkg.opensolaris.org, pkg.opensolaris.org/release); that will no longer work.  Please read this flag day message if have configured a publisher with any name except &#8217;opensolaris.org&#8217; for pkg.opensolaris.org/dev, pkg.opensolaris.org/relesae or ipkg.sfbay/dev. 
+341: 
+342: Revision 1431:62b6033670e4 integrated the following fixes and enhancements:
+343: 
+344: * 10416 server catalog v1 support desired
+345: * 243 need localized descriptions, other metadata at catalog level
+346: * 2424 Need to use UTC consistently everywhere
+347: * 3092 messaging api/framework needed for pkg clients (cli, gui, etc.)
+348: * 7063 &#34;pkg list -a -s&#34; needs performance improvement
+349: * 7163 manifests are modified by client before being written to disk
+350: * 8217 package fmri should be added to manifest during publishing
+351: * 9061 importer should not refresh indexes
+352: * 9446 traceback for cfg_cache operations if read-only filesystem
+353: * 10415 client catalog v1 support desired
+354: * 11094 Client transport for catalog v1
+355: * 11523 only permit FMRIs from same publisher for network repositories
+356: * 11831 server api version incompatible templates can cause traceback
+357: * 11832 depot needs ability to seed / alter repository configuration
+358: * 11954 importer shows zero packages processed unless debug enabled
+359: * 12006 merge utility should have a test suite
+360: 
+361: == Client Software Considerations ==
+362: 
+363: The pkg(1) client now requires that the name (prefix) that you have configured your publisher with matches that reported by its repository (origin) when the package repository provides a version 1 catalog.
+364: 
+365: For example, if you have your client configured this way:
+366: 
+367: 
+368: {{{
+369:     $ pkg publisher
+370:     PUBLISHER   TYPE     STATUS   URI
+371:     dev         (preferred)  origin   online http://pkg.opensolaris.org/dev
+372: }}}
+373: 
+374: Then the next time a pkg refresh is performed, you will see the following warning:
+375: 
+376: {{{
+377:     $ pkg refresh
+378:     Refreshing catalog 1/1 test
+379:     The catalog retrieved for publisher &#8217;dev&#8217; only contains package data for these publisher(s): opensolaris.org.  To resolve this issue, update this publisher to use the correct repository origin, or add one of the listed publishers using this publisher&#8217;s repository origin.
+380:     
+381:     To correct the repository origin, execute the following command as a privileged user:
+382: 
+383:     pkg set-publisher -O &#60;url&#62; dev
+384: 
+385:     To add a new publisher using this publisher&#8217;s repository origin, execute the following command as a privileged user:
+386: 
+387:     pkg set-publisher -O http://pkg.opensolaris.org/dev &#60;publisher&#62;
+388: 
+389:     After the new publisher has been added, this one should be removed by executing the following command as a privileged user:
+390: 
+391:     pkg unset-publisher test
+392: }}}
+393: 
+394: Please note that this means that available packages from that publisher (excluding already installed packages) will **NOT** be shown in pkg list, pkg info, etc.
+395: 
+396: This change is the first step in a set of changes to not require that a user specify the publisher&#8217;s name (prefix) when using image-create, set-publisher, etc. and to further simplify configuration.
+397: 
+398: Disk space usage will also increase for the client when it is configured to use a publisher repository that contains catalog v1 data.  As an example, when pkg.opensolaris.org/dev&#8217;s depot software is upgraded, it now requires roughly 36MB of disk space (uncompressed) for local metadata storage (51K+ packages).  This information does compress extremely well (around 7MB gzip&#8217;d).
+399: 
+400: Disk space usage will continue to slightly increase for each new build until historical and obsolete packages are implemented, at which point it will significantly decrease again.
+401: 
+402: == Depot Software Considerations ==
+403: 
+404: As a result of these changes, if you use the new depot server with an existing repository without using the ~-~-readonly option it will be automatically upgraded to a new repository format.
+405: 
+406: If you use an older repository with the newer depot software, but want to use it with the newer depot software, you must specify ~-~-readonly and ~-~-writable-root.  If you do that, a new catalog will be written to the ~-~-writable-root directory based on the contents of the repository.
+407: 
+408: In addition, there is now a hard requirement that you specify a default publisher prefix for the repository.  Carefully consider what you specify here as it will be used during publication if the FMRI specified at publication time does not include a publisher prefix.  The publisher prefix of any published packages will be placed into package manifests, the catalog, etc. and so changing it once set will not update the existing package data inside the repository as it is only a default.
+409: 
+410: Once a repository has been upgraded to the new format, you will be unable to use older pkg(5) depot server software, pksend, or pkgrecv with the new repository.  If you attempt to use an older client with the upgraded repository, it will fail.
+411: 
+412: As a reminder, parallel publication is not supported at this time via file://, only with http://.  Various import tests have been performed to verify that publication performance is roughly the same as it was before.
+413: 
+414: Finally, please note that this upgrade behaviour also applies if you are using &#8217;file://&#8217; locations for destination repositories with pkgrecv or pkgsend.
+415: 
+416: == Thanks ==
+417: 
+418: Enough thanks cannot be given to team members that helped complete this phase of the catalog v1 project over the past month.
+419: 
+420: Transport work provided by our resident guru: johansen. 
+421: 
+422: === [[**Revision 1117 / 667aecade0ab**&#62;&#62;http://src.opensolaris.org/source/history/pkg/gate/src]] ===
+423: 
+424: This revision integrated enhancements and fixes for the following issues:
+425: 
+426: Changset r1117 in the pkg(5) gate implemented the following enhancements:
+427: 
+428: * [[7862&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=7862]] install links using p5i for search results desired
+429: * [[8723&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=8723]] repository should contain publisher and repository client metadata
+430: * [[8724&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=8724]] publisher metadata retrieval operation desired
+431: 
+432: The purpose of this new functionality is to allow &#34;one-click&#34; web-based installation of packaging software and to enable clients to retrieve metadata about the publisher and repository that can be used for policy determination and auto-configuration.
+433: 
+434: As a result of this change, repository administrators will need to add additional information to the cfg_cache file located in the repository directory (e.g. /var/pkg/repo/cfg_cache) to enable this new 
+435: functionality and to allow correct identification of depot RSS/Atom feed entries.
+436: 
+437: If you do not provide this new information, the new functionality will be disabled (return 404 errors to clients) but the depot server will otherwise function correctly.
+438: 
+439: To do this, simply start and stop the pkg.depotd server while the repository is not in use.  Once you&#8217;ve done that, you will see one new configuration section entitled &#8217;publisher&#8217; and several new configuration attributes under the &#8217;repository&#8217; section.
+440: 
+441: The easiest way to do this is to stop and start the depot server (not in readonly mode) so that the new sections and attributes will be written to the configuration file.  An example of what information you might provide is below:
+442: 
+443: {{{
+444:     [publisher]
+445:     alias =
+446:     prefix = opensolaris.org
+447:     
+448:     [repository]
+449:     collection~_type = core
+450:     description = This repository serves the currently in-development release of OpenSolaris.
+451:     detailed~_url = http://www.opensolaris.com
+452:     legal~_uris = http://www.opensolaris.org/os/copyrights/,http://www.opensolaris.org/os/tou/,http://www.opensolaris.org/os/trademark/
+453:     maintainer~_url = http://www.opensolaris.org/os/project/indiana/
+454:     maintainer = Project Indiana &#60;indi...@opensolaris.org&#62;
+455:     name = OpenSolaris Packaging Repository
+456:     origins = http://pkg.opensolaris.org/dev
+457:     refresh~_seconds = 14400
+458:     registration~_uri =
+459:     related_uris = http://pkg.opensolaris.org/contrib,http://pkg.opensolaris.org/pending
+460: }}}
+461: 
+462: A detailed explanation of these attributes, their purpose, and allowed  values can be found in &#34;pydoc pkg.client.publisher&#34; under the &#34;Publisher&#34; and &#34;Repository&#34; class headings.
+463: 
+464: === [[**Revision 926 / 6ee411c9026a**&#62;&#62;http://src.opensolaris.org/source/history/pkg/gate/src]] ===
+465: 
+466: This revision integrated enhancements and fixes for the following issues:
+467: 
+468: * [[5871&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=5871]] publisher apis desired
+469: * [[3682&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=3682]] pkg publisher should show mirrors in default listing
+470: * [[5071&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=5071]] provide direct way to change publisher to not use certificate
+471: * [[5373&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=5373]] pkg commands shouldn&#8217;t traceback when client can&#8217;t read a key/cert file
+472: * [[6843&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=6843]] problems with empty string for ssl_cert, ssl_key
+473: * [[6897&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=6897]] &#34;authority&#34; should be &#34;publisher&#34;
+474: * [[7046&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=7046]] client intent is not sent if same api object used for multiple operations / reasons
+475: 
+476: The pkg(5) team is always looking for ways to improve the user experience for those using the pkg(5) system and to promote a better understanding of it.  One of the ways to do that is to ensure that clear, consistent terminology is used to describe ideas and concepts.  That is why it was recently decided that a name change was in order for one of the core concepts in the pkg(5) system: authorities.
+477: 
+478: An authority is a forward or reverse domain name that identifies an organization (or group of individuals) responsible for providing one or more packages.  However, the name that was chosen for that concept caused some confusion among our users.  This was also further exacerbated by the interchangeable usage of the words &#34;Authority&#34; and &#34;Repository&#34; which are decidedly different in meaning.  As a result, starting with revision 926 of the pkg gate code,  an &#34;Authority&#34; is now called a &#34;Publisher&#34;.
+479: 
+480: Before moving on to the details of the changes involved, it is important to summarise what the current overall vision is for the structure of publishers and repositories and how the client is intended to use them:
+481: 
+482: * Publisher - a forward or reverse domain name (e.g. &#34;opensolaris.org&#34; or &#34;org.opensolaris&#34;) that can be used to identify an organization that is responsible for one or more packaging repositories.  While a publisher may have (publish to) one or more repositories, pkg(5) clients are only intended to access one of them at a time (such as the &#34;development&#34; or &#34;release&#34; repositories for OpenSolaris).  Please note that for compatibility reasons, the client is currently restricted to a single repository per publisher; this will change after the 2009.06 release of OpenSolaris.
+483: 
+484: * Repository - a location where clients can publish and retrieve package content (files contained within the package such as programs, documents, etc.) and / or metadata (information about the package such as its name, description, etc.).  It has the following characteristics:
+485: ** may have one or more origins (URIs) used for publication and retrieval of package metadata and content (the client currently only supports one of these)
+486: ** may have zero or more mirrors (URIs) for retrieval of package content
+487: ** can only contain packages from a single publisher
+488: 
+489: Now that you know what a publisher and a repository is, here is a high-level summary of the changes that were needed to make this happen:
+490: 
+491: * All references to &#34;authority&#34; were replaced with &#34;publisher&#34;.
+492: * A publisher management and client history logging interface was added to pkg.client.api so that all pkg(5) clients can consistently and easily manage publisher and repository information.
+493: * The output of the &#34;pkg publisher&#34; subcommand (aka &#34;pkg authority&#34;) was changed to include mirrors in the default listing.
+494: * The cli and gui clients included with the pkg(5) system were updated to use the new publisher management interfaces.
+495: * Support for generating and parsing .p5i data (pkg(5) publisher and package information files) was added to the api and to the gui client.  This functionality will eventually allow users to trigger installation of new software just by clicking a link in their web browser.
+496: * Fixed SSL Certificate handling to be more robust so that the client won&#8217;t fail with a Python traceback when performing network operations (such as downloading package data from a repository) and so that the user will know why the failure occurred (expired certificate, etc.).
+497: * Fixed &#34;pkg publisher&#34; command to return a partial failure code of 3 if the information for one of the publishers or repositories couldn&#8217;t be read (such as the SSL Certificate).
+498: 
+499: 
+500: As a result of these changes the following commands have been renamed and altered as follows:
+501: 
+502: * pkg authority -&#62; pkg publisher
+503: ** The output of this command also changed.  Before, executing &#34;pkg authority&#34; would have given you a list of authorities and the origin URIs for each repository.  Now it shows repository mirrors as well and indicates their status and type and ensures that the preferred publisher is always listed first and the rest in alphabetical order by name.  Here is a before and after comparison from my own system:
+504: 
+505: {{{
+506:     $ pkg authority
+507:     AUTHORITY                           URL
+508:     opensolaris.org                     http://pkg.opensolaris.org/dev/
+509:     ipkg (preferred)                    http://ipkg.sfbay/dev/
+510:     extra                               https://pkg.sun.com/opensolaris/extra/
+511: }}}
+512: 
+513: {{{
+514:     $ pkg publisher
+515:     PUBLISHER                             TYPE     STATUS   URI
+516:     ipkg                     (preferred)  origin   online   http://ipkg.sfbay/dev/
+517:     extra                                 origin   online   https://pkg.sun.com/opensolaris/extra/
+518:     opensolaris.org                       origin   online   http://pkg.opensolaris.org/dev/
+519: }}}
+520: 
+521: * pkg set-authority -&#62; pkg set-publisher
+522: * pkg unset-authority -&#62; pkg unset-publisher
+523: 
+524: All of the man pages and other technical documentation provided with the packaging system has been updated, and the IPS User Guide is in the process of being updated.  Please note that the old commands are still recognised for the purposes of backwards compatibility, but they will be removed after the 2009.06 release of OpenSolaris.
+525: 
+526: === [[**Revision 873 / b95d76c53b5e**&#62;&#62;http://src.opensolaris.org/source/history/pkg/gate/src]] ===
+527: 
+528: This revision integrated enhancements and fixes for the following issues:
+529: 
+530: * [[2691&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=2691]] ability to publish packages to local disk repository
+531: * [[850&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=850]] pkgsend traceback if invalid or unavailable repository url specified
+532: * [[894&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=894]] pkgsend should do more action verification
+533: * [[1236&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=1236]] pkgsend open should not allow both -e and -n
+534: * [[2430&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=2430]] pkgsend add of non-existent file causes traceback
+535: * [[5088&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=5088]] server can still create a repo when in ~-~-readonly mode
+536: * [[5294&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=5294]] pkgsend doesn&#8217;t provide server response when operations fail
+537: * [[5944&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=5944]] pkgsend traceback if invalid or no action type specified
+538: * [[6566&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=6566]] catalog is always rebuilt when server config is not readonly
+539: 
+540: As a result of these changes, the following changes in behaviour should be noted:
+541: 
+542: * pkg.depotd will no longer automatically create or populate the inst_root specified using pkg/inst_root or the -d option if started with ~-~-readonly.  Instead, it will exit with an error message.  Starting the server in a mode other than readonly will create the specified directory and any necessary subdirectories or files.
+543: 
+544: * pkg.depotd will no longer automatically rebuild the repository catalog if not started with ~-~-readonly.  However, search indices will continue to be refreshed automatically if needed.  If, for some reason, the package catalog does need to be rebuilt on pkg.depotd startup or the old behaviour is desired, pkg.depotd can be started with the ~-~-rebuild option.  This change should result in significantly faster startup (and less disk I/O) for large repositories served by pkg.depotd in publishing mode.
+545: 
+546: * pkgsend and the importer now support file:// URLs for publishing.  In the case of pkgsend:
+547: 
+548: {{{
+549:     PKG_REPO=file:///path/to/repo pkgsend open foo@1.0
+550:     pkgsend -s file:///path/to/repo open foo@1.0
+551: }}}
+552: 
+553: In the case of solaris.py (the importer), you will need to set the REPO variable in the makefile or override it another way.  Be aware that if you specify a directory that is not a valid pkg(5) repository, publishing will fail with an error indicating that.  You must create a repository first by starting the pkg.depotd server with the desired path and then exiting.  A subcommand to create repositories will be added to pkgsend in the near future (bug 6574).
+554: 
+555: * It is important to note that only one user at a time should publish directly to a file:// repository URL; the result of more than one user publishing to a file:// reopsitory URL at a time is completely untested and is likely to fail.  Bug 2696 will help enforce this by ensuring that a repository lock is obtained during publishing mode.  If you need the ability to allow multiple users to simultaneously publish to a repository, you must use pkg.depotd and publish to a http:// repository URL.  The tradeoff is that file:// repository URL publishing can be significantly faster and will result in significantly reduced memory usage and disk I/O.
+556: 
+557: // Significantly more verification is now done during the publishing process.  Expect things that may have //appeared to work* before to no longer be accepted by the server or by the pkgsend client. Additionally, pkgsend once more produces useful error information when operations fail. 
+558: 
+559: === [[**Revision 852 / 96c4a4dace99**&#62;&#62;http://src.opensolaris.org/source/history/pkg/gate/src]] ===
+560: 
+561: The following notice only applies to users running pkg gate development bits on systems running a OpenSolaris build 106 version of pkg.depotd (revision 848 / 048096a95369) or to users that have written their own depot templates for older versions of the depot software.
+562: 
+563: The changes for revision 852 / 96c4a4dace99 fixed these issues:
+564: 
+565: * [[5999&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=5999]] catalog.extract_matching_fmris - version filtering not correct
+566: * [[6010&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=6010]] packages page should show only latest version of packages by default
+567: 
+568: As a result of these changes, the server/api used for depot templates changed incompatibly with previous versions.  As such, if you attempt to run a version of pkg.depotd after revision 848 on a system that has an older version installed, you may see this error in the logs when attempting to access depot pages:
+569: 
+570: VersionException: Incompatible API version &#8217;1&#8217; specified; expected: &#8217;2&#8217;.
+571: 
+572: The cause is that the newer development server is attempting to load the older depot templates from the system&#8217;s installed /usr/share/lib/pkg directory.
+573: 
+574: To correct this, you must run the pkg.depotd process with ~-~-content-root=/path/to/new/usr/share/lib/pkg; if you are running the depot.py program from an the pkg gate src/ directory, you can do it this way:
+575: 
+576: ./depot.py ~-~-content-root=../proto/root_{{code}}uname -p{{/code}}/usr/share/lib/pkg
+577: 
+578: === [[**Revision 838 / aafbe4737188**&#62;&#62;http://src.opensolaris.org/source/history/pkg/gate/src]] ===
+579: 
+580: This revision integrated enhancements and fixes for the following issues:
+581: 
+582: * [[3245&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=3245]] need to support creation of multi-architecture (fat) packages
+583: * [[5862&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=5862]] gen_actions_by_type isn&#8217;t filtered, caching breaks filter changes
+584: 
+585: Packages produced using solaris.py may contain set actions with more than two tags; this will cause exceptions in either client or depot software.
+586: 
+587: Upgrade to new versions of SUNWipkg before attempting to install such packages.
+588: 
+589: Read more about fattening packages [[here&#62;&#62;http://blogs.sun.com/barts/entry/phattening_packages_supporting_multiple_variants]].
+590: 
+591: === [[**Revision 742 / 909b912fa942**&#62;&#62;http://src.opensolaris.org/source/history/pkg/gate/src]] ===
+592: 
+593: This revision integrated enhancements for the following bugs:
+594: 
+595: * * [[3011&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=3011]] new depot index page desired
+596: * * [[3014&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=2751]] revamped depot bui (web ui) desired
+597: 
+598: As part of the changes for the above bugs, Mako Templates version 0.2.2 or newer is now required to launch the pkg.depotd process.  The depot process will fail to start if you do not have it installed.
+599: 
+600: Also note that SUNWpython-setuptools is now required to build SUNWpython-mako in the pkg gate.  setuptools version 0.6c9 or later is known to work on OpenSolaris and other platforms.
+601: 
+602: Be aware that this drastically changes the presentation of the depot facing web pages.  As a result, the following repository configuration attributes are now ignored:
+603: 
+604: * repository
+605: * icon
+606: * logo
+607: * style
+608: 
+609: In its place, are a set of [[**Mako templates**&#62;&#62;http://makotemplates.org]] that can be found in the /usr/share/lib/pkg/web, that are comprised of a set of base pages and three themes.  The three themes included are: default, opensolaris.org, and sun.com.  The last two themes can only be used with appropriate authorisation by Sun Microsystems, Inc.
+610: 
+611: At the moment, to customise the included pages or themes, the /usr/share/lib/pkg directory will need to be copied to a new location (such as /var/my-new-directory), altered, and then the pkg.depotd process should be started with ~-~-content-root=/var/my-new-directory.
+612: 
+613: The repository cfg_cache located in /path/to/repo/cfg_cache also needs to be updated.  Specifically, the icon and logo paths for the repository feed have changed from this:
+614: 
+615: {{{
+616:     [repository]
+617:     logo = pkg-block-logo.png
+618:     icon = pkg-block-icon.png
+619: }}}
+620: 
+621: ...to this:
+622: 
+623: {{{
+624:     [repository]
+625:     logo = ../~_themes/pkg-block-logo.png
+626:     icon = ../~_themes/pkg-block-icon.png
+627: }}}
+628: 
+629: Since the cfg_cache is written out upon repository initialisation, and these values are intended to be customised by the repository maintainer, they are never updated automatically.
+630: 
+631: === [[**Revision 452 / 01f53c6381af**&#62;&#62;http://src.opensolaris.org/source/history/pkg/gate/src]] ===
+632: 
+633: This revision integrated fixes or enhancements for the following bugs:
+634: 
+635: * * [[2714&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=2714]] image-update failure during update phase
+636: * * [[2751&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=2751]] test suite fails to detect tracebacks in log
+637: * * [[2752&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=2752]] repository - rename function fails during exception handling
+638: 
+639: As part of the changes for bug 2714, CherryPy 3.1.0 is now required to launch the pkg.depotd process.  The depot process will fail to start with a message indicating that 3.1.0 is required if you do not have it installed.
+640: 
+641: Please also note that you should run &#34;make clobber&#34; in any hg workspaces for pkg and delete src/pkgdefs/SUNWpython-cherrypy/prototype, the contents of the packages/ directory, and finally the contents of the proto/ directory.
+642: 
+643: === [[**Revision 451 / 74f1fe85fe2d**&#62;&#62;http://src.opensolaris.org/source/history/pkg/gate/src]] ===
+644: 
+645: This revision integrated fixes or enhancements for the following bugs:
+646: 
+647: * [[1324&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=1324]] RSS / Atom feeds of repository updates
+648: 
+649: As part of the changes for bug 1324, a new parameter to pkg.depotd was added, &#34;~-~-proxy-base&#34; and a new SMF property pkg/proxy_base:
+650: 
+651: 
+652:       pkg/proxy_base             (uri) This changes the base URL for the
+653:                                  depot server and is most useful when
+654:                                  running behind Apache or some other
+655:                                  webserver in a reverse proxy
+656:                                  configuration.
+657: 
+658: So, if your depot server is running as:
+659: http://zoltar:10000
+660: 
+661: ...yet, it is referenced as:
+662: 
+663: http://pkg.foo.com
+664: 
+665: ...then you need to start the depot with:
+666: \~-~-proxy-base=http://pkg.foo.com
+667: 
+668: This is especially important for feed functionality to operate correctly.
+669: 
+670: Please also note that if you change this value, you need to restart the server in non-readonly mode at least once, and then visit http://repo_url/feed so that the feed.xml cache file is created.
+671: 
+672: === [[**Revision 428 / e011e45fe2cd**&#62;&#62;http://src.opensolaris.org/source/history/pkg/gate/src]] ===
+673: 
+674: This revision integrated fixes or enhancements for the following bugs:
+675: 
+676: * [[2239&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=2239]] repository attribute system needed
+677: * [[2603&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=2603]] hgignore needs to be updated for package gui
+678: * [[2622&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=2622]] testutils directory structure problematic
+679: 
+680: As part of the changes for bug 2239, various meta-data and configuration attributes were added for repositories.  Among the attributes added was an RSS/Atom feed identifier.
+681: 
+682: This identifier is used by RSS Readers to identify the feed content generated by the pkg.depotd(1M) process.  The Universally Unique Identifier (UUID) for the feed will be generated for the repository upon initialization (usually at depot startup) if it is not already present.
+683: 
+684: If multiple copies of the same repository are being served by multiple depot processes, the feed id must be the same for each copy of the repository; otherwise RSS Readers serviced by the depot process will not be able to correctly identify new RSS entries or process the feed correctly when they connect to different depot processes.
+685: 
+686: The need for this identifier to be the same is a requirement of the RSS / Atom feed format.  It is recommended that you simply copy the attributes in the //[feed]// section of the _cfg\//cache// file (or the entire file) to the _inst\//dir// of any duplicate repositories.
+687: 
+688: Finally, be aware that this work is preparation for integration of bug [[1324&#62;&#62;http://defect.opensolaris.org/bz/show_bug.cgi?id=1324]] which actually provides the RSS / Atom feed functionality that will use this new attribute.
+  </textarea>
+
+    <div class="clearfloats"></div>
+  </div>    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSNav','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSNav'); togglePanelVisibility(this.parentNode);">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavCommunity Group">
+            <div id="xwikinavCommunity GroupHeader" class="accordionTabTitleBar"><h6>Community Group</h6>
+            </div>
+            <div id="xwikinavCommunity GroupContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+edu/">Academic and Research</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+accessibility/">Accessibility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+advocacy/">Advocacy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+appliances/">Appliances</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+approachability/">Approachability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/">Architecture Process and Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+brandz/">BrandZ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+chinese_users/">Chinese Users</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/">Community Advisory Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+dtrace/">DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+databases/">Databases</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+desktop/">Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/">Device Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+distribution/">Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+emerging_platforms/">Emerging Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+fm/">Fault Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+games/">Games on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ha%2Dclusters/">HA Clusters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+hpcdev/">HPC Developer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+int_localization/">Internationalization and Localization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+laptop/">Laptop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ldoms/">Logical Domains</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+mdb/">Modular Debugger (MDB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+nfs/">NFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/">Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/">OS/Net (ON)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+observability/">Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ogb/">OpenSolaris Governing Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+printing/">OpenSolaris Printing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/">Performance</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+pm/">Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+power_pc/">PowerPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/">Security</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+smf/">Service Management Facility (smf(5))</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sw%2Dporters/">Software Porters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+volume_manager/">Solaris Volume Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+storage/">Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sysadmin/">Systems Administration Community Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+testing/">Testing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/">Tools Home</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ufs/">Unix File Systems (UFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+web/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+x_win/">X Window System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+xen/">Xen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/">ZFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/">Zones</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavProject">
+            <div id="xwikinavProjectHeader" class="accordionTabTitleBar"><h6>Project</h6>
+            </div>
+            <div id="xwikinavProjectContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/"></a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+adsl/">ADSL Modem Enhancement</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+arc%2Dprocess/">ARC Process Definition</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osarm/">ARM Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bluetooth/">Bluetooth Stack & Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dinitiator/">Brocade FC HBA &#45; Initiator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dtarget/">Brocade FC HBA &#45; Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brussels/">Brussels &#45; unified network link configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cifs%2Dserver/">CIFS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smbfs/">CIFS client for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cmt/">CMT</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/">COMSTAR: Common Multiprotocol SCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpufs/">CPU Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/">Caiman, Solaris Install Revisited</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+celeste/">Celeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/">Chime Visualization Tool for DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+clearview/">Clearview: Network Interface Coherence</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dinformix/">Cluster Agent: Informix Dynamic Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dcontainer/">Cluster Agent: OpenSolaris Container</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dxvm/">Cluster Agent: OpenSolaris xVM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Debs/">Cluster Agent: Oracle E&#45;Business Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dsmb/">Cluster Agent: Samba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dtomcat/">Cluster Agent: Tomcat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dpostgresql/">Cluster agent: PostgreSQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+data%2Dflow/">Coarse Data Flow Parallelism</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+colorado/">Colorado: Open HA Cluster on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+commandassist/">Command Assistant</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cam/">Common Array Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+companion/">Companion &#45; /opt/sfw: Free and Open Source software</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+content/">Content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+contest/">Contest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpg/">Credentials Process Groups</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crossbow/">Crossbow: Network Virtualization and Resource Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmsagenttoolkit/">Crypto KMS Agent Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/">Cryptographic Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Ddoc/">DTrace Guide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dmm/">Data Migration Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+datatethers/">Data Tethers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+de/">Deutsches Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ddtool/">Device Detection Tool</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+driver%2Dutility/">Device Driver Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devicemgr/">Device Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devmapper/">Device Mapper</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dri/">Direct Rendering Infrastructure & 3D drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/">Duckwater: Simplified name services management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+phpEasyTools/">Easy Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emancipation/">Emancipation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex%2Dcna/">Emulex Advanced Ethernet Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex/">Emulex Fibre Channel Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webcams/">Enhance the support of USB webcams</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Dprofiles/">Enhanced SMF Profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+amd/">Enhancements for AMD&#45;based Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+erlang%2Ddtrace/">Erlang DTrace Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ethbridge/">Ethernet bridge module for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+conary%2Deval/">Evaluate Conary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+events%2Dregistry/">Events Registry</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ext3/">Ext3 file system support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+facilitation/">Facilitation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fcoe/">Fibre Channel over Ethernet</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fgap/">Fine Grained Access Policy (FGAP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fingerprint%2Dauthentication/">Fingerprint Authentication</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fmac/">Flexible Mandatory Access Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+forensics/">Forensic Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fox/">Fully Open X Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fuse/">Fuse on Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+generic%2Dmca/">Generic Machine Check Architecture Improvements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+raidcfg/">Generic RAID Configuration Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+summerofcode/">Google SOC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Djboss/">HA&#45;JBoss</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dmysql/">HA&#45;MySQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hpc%2Dstack/">HPC Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livehadoop/">Hadoop Live CD</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hitachi/">Hitachi</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+honeycomb/">HoneyComb Fixed Content Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hotplug/">Hotplug Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ip%2Drefactor/">IP Datapath Refactoring</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ipoib/">IP over Infiniband</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tref/">IPsec Tunnel Reform</a></span></li>
+<li><em class="underline"><em><span class="wikilink"><a href="/bin/view/Project+pkg/">Image Packaging System</a></span></em></em></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isc/">Immutable Service Containers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+perfmib/">Improved Performance MIB</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/">Indiana</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ikev2/">Internet Key Exchange, version 2 (IKEv2)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+irm/">Interrupt Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jkstat/">JKstat &#45; a java binding for libkstat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jeos/">JeOS &#45; Just enough Operating System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jfs/">Journaled File System (JFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kde/">K Desktop Environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kerberos/">Kerberos</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kssl/">Kernel SSL Enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kernel%2Dsockets/">Kernel Sockets</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmf/">Key Management Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ksh93%2Dintegration/">Korn Shell 93 integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ldoms%2Dmgr/">LDoms Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+txipsec/">Labeled IPsec</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+l2filter/">Layer 2 Filtering</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lending/">Lending</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lld/">Link Layer Discovery</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livemedia/">Live Media: Technologies for distributions running from CD and other media</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+localedata/">Locale Data</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mips/">MIPS Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohac%2Davs/">MRSL.NONsharedDevice</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mega_sas/">Mega_sas</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mx/">Mexico</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+milax/">MilaX minimal Live Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mozilla%2Ddtrace/">Mozilla DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+glossary/">Multi&#45;lingual Glossary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mpxio/">Multi&#45;pathing software (MPxIO)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+multiple%2Ddoi/">Multiple DOI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+large%2Dsector/">Multiple disk sector size support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+muskoka/">Muskoka: An open repository for OpenSolaris technical content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsrdma/">NFS RDMA transport update and performance analysis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dzones/">NFS Server in non&#45;Global Zones</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsv41/">NFS version 4.1 pNFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dnamespace/">NFSv4 namespace extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npiv/">NPort ID Virtualization (NPIV)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+navigator/">Navigator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nemo/">Nemo: A Framework for High&#45;Performance Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/">Network Auto&#45;Magic</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ndmp/">Network Data Management Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+net%2Dmib/">Network MIBs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npp/">Network Performance Projects</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dpm/">Network Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nws/">Network Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ntp/">Network Time Protocol (NTP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nv%2Dg11n/">Nevada Globalization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+4over6/">New Design of 4over6 Mechanism Based on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nightingale/">Nightingale: Port Songbird to OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+onnv/">ON/Nevada (ONNV) Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osd/">Object Storage Device (OSD) support for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opendev/">Open Development Infrastructure</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dutilities/">Open HA Cluster Utilities</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opensound/">Open Sound System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/">OpenGrok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cim%2Dserver/">OpenPegasus CIM Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+openrti/">OpenRTI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+busybox/">OpenSolaris Busybox</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/">OpenSolaris Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+es/">OpenSolaris Hispano</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+audit/">OpenSolaris Security Audit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/">OpenSolaris support for the QEMU processor emulator: host and guest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pef/">PEF: Packet Event Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+performance%2Dwrappers/">Performance Wrappers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkgfactory/">Pkgfactory</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pl/">Polski Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fr/">Portail Francophone</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+br/">Portal Brasileiro de OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+portals/">Portals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmui/">Power Management Usability Interfaces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+presto/">Presto: Automatic Printing Configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmpsm/">Printable Many Page Solaris Manuals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+promise%2Dstorage/">Promise SuperTrak RAID HBA Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qlogic%2Dcna/">QLogic Converged Network Adapter GLDv3 NIC Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+quagga/">Quagga Routing Protocol Suite Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rbridges/">RBridge (IETF TRILL) support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rof/">RDMA Offload Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+releasenotes/">Release Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+reno/">Reno: Login Process Enhancements for Interop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/">Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+samqfs/">SAM/QFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+scm%2Dmigration/">SCM Migration Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+srp/">SCSI RDMA Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sdcard%2Ddrivers/">SDcard Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sfwnv/">SFW</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sm%2Dhba/">SM&#45;HBA Based SAS HBA Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Ddoc/">SMF Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+svr4_packaging/">SVR4 Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sensors/">Sensor Abstraction Layer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dsip/">Session Initiation Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+shell/">Shell: bourne shell, korn shell, C shell, etc.</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+simplepanels/">Simple Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/">Solaris PowerPC Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iscsitgt/">Solaris iSCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sourcejuicer/">SourceJuicer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/">Sparks: name service switch/nscd enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+squashfs/">Squashfs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+star/">Star integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starfish/">Starfish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starterkit/">Starter Kit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+storagepm/">Storage Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sst/">Sun Security Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+avs/">Sun StorageTek Availability Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ofuv/">Support for OpenFabrics User Verbs / API on OpenSolaris OS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/">Support gcc4/GCCfss in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+suspend%2Dresume/">Suspend/Resume</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+systemz/">Systemz</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tipc/">TIPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+branding/">Trademarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tpm/">Trusted Platform Module support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tnipdb/">Trusted networking interface policy database for Trusted Extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+usecase/">Use Case</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+userland/">Userland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vrrp/">VRRP: Virtual Router Redundancy Protocol Implementation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vscan/">VSCAN service</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+valex/">Validated Execution Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vconsole/">Virtual Console</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vnm/">Virtual Network Machines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/">Visual Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+visualization%2Dhpc/">Visualization for HPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+volo/">Volo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/">Web Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+website/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+winchester/">Winchester: Schema mapping and ID mapping for AD Interoperability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wusb/">Wireless USB Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wwan/">Wireless Wide Area Network</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x%2Dcons/">X Consolidation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xkblayout/">X Keyboard Layout</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xen%2Dgate/">Xen Gate</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xfce/">Xfce: A lightweight desktop environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfsboot/">ZFS Boot and Install</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfs%2Dcrypto/">ZFS on disk encryption support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonemgr/">Zone Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonestat/">Zone Statistics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gcore/">gcore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iser/">iSCSI Extensions for Remote DMA (iSER)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isns/">iSNS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+libmicro/">libMicro &#45; portable microbenchmarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+loficc/">lofi compression and cryptography support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lx64/">lx64 brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+s10brand/">s10brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x86gentopo/">x86 Generic FMA Topology Enumerator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ztest/">ztest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cz/">Český portál</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ru/">Русский портал</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ar/">البوابة العربية</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+in/">भारतीय पोर्टल</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cn/">中国门户</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/">日本ポータル</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kr/">한국 포탈</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavUser Group">
+            <div id="xwikinavUser GroupHeader" class="accordionTabTitleBar"><h6>User Group</h6>
+            </div>
+            <div id="xwikinavUser GroupContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+kr/"></a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+adl%2Dauosug/">Adelaide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+aosug/">Argentina</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+azosug/">Arizona</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+atl%2Dosug/">Atlanta OpenSolaris Users Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bwosug/">Baltimore&#45;Washington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bosug/">Bangalore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bkkosug/">Bangkok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bdosug/">Bangladesh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bjosug/">Beijing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+brosug/">Berlin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bvrm%2Dosug/">Bhimavaram</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+btn%2Dosug/">Bloomington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfosug/">Brasilia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+blmosug/">Bélem</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+crosug/">Capital Region</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cfosug/">Cardiff</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ccosug/">Caribbean OSUG</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ceosug/">Ceara</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cltosug/">Charlotte</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chennai/">Chennai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chmxosug/">Chihuahua</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+closug/">Chile</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cle%2Dosug/">Cleveland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+colosug/">Colombia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cmh%2Dosug/">Columbus</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ctosug/">Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+knp%2Duek/">Cracow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+czosug/">Czech</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfw%2Dosug/">Dallas/Ft. Worth</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dosug/">Danish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+deosug/">Delaware</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+eduosug/">Edinburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+egosug/">Egypt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fiosug/">Finland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+flosug/">Florida</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fraosug/">Frankfurt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+frosug/">Front Range</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+glug/">Great Lakes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+grosug/">Greece</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hzosug/">Hangzhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hi%2Dosug/">Hawaii</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hkosug/">Hong Kong</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hugs/">Houston</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hosug/">Hyderabad</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+idosug/">Indonesia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madridosug/">Inicio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ie%2Dosug/">Irish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+iosug/">Israel</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+istosug/">Istanbul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+itl%2Dosug/">Italian</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jnosug/">Jinan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jogja%2Dosug/">Jogja</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kbosug/">Kabul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kc%2Dosug/">Kansas City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+lavosug/">Latvia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+losug/">London</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madosug/">Madurai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mansug/">Manchester</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mssosug/">Mato Grosso</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+msosug/">Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mgosug/">Minas Gerais</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mnosug/">Minnesota</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mtlosug/">Montreal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mosug/">Moscow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mmosug/">Mumbai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mucosug/">Munich</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+neaosug/">NEA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nlosug/">Netherlands</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ne%2Dosug/">New England</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nycosug/">New York City OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nzosug/">New Zealand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+norosug/">Noroeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nerosug/">Nuremberg&#45;Erlangen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+okcosug/">Oklahoma City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ososug/">Osnabrück</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+peosug/">Peru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+paosug/">Philadelphia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+piaski%2Dosug/">Piaski</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ptosug/">Pittsburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+poaosug/">Porto Alegre</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+psosug/">Puget Sound</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+posug/">Pune</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+qosug/">Queensland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rtp%2Dosug/">Research Triangle Park</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+riosug/">Rio de Janeiro</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ro%2Dosug/">Romania</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ruosug/">Russia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+alamo%2Dosug/">San Antonio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sdosug/">San Diego</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sfosug/">San Francisco</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+scosug/">Scottish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rs%2Dosug/">Serbia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szosug/">Shenzhen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svosug/">Silicon Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sgosug/">Singapore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+skosug/">Slovak</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+saosug/">South African</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+soctosug/">Southern Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+stl%2Dosug/">St. Louis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svgosug/">Stavanger</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+swosug/">Sweden</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chosug/">Switzerland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sosug/">Sydney</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szc%2Dosug/">Szczecin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sampaosug/">São Paulo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+twosug/">Taiwan OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ostug/">Tecum</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tvosug/">Thames Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tsug/">Tokyo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+torosug/">Toronto</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+trosug/">Trondheim</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+toss/">Tulsa</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tosug/">Turkey</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ufaosug/">Ufa OSUG</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+uaosug/">Ukraine OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+unimelb%2Dosug/">University of Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+valeosug/">Vale do Paraíba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vanosug/">Vancouver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vosug/">Venezuela &#45; Pagina de incio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vvoosug/">Vladivostok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wosug/">Welsh &#45; Cymru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wiosug/">Wisconsin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+xaosug/">Xi'an</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+</div><p/>
+<script type="text/javascript">
+var obj = {div:'xwikinav',no:1,height:250};
+var acc = createAccordion(obj);
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSDocs','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSDocs'); togglePanelVisibility(this.parentNode);">Project pkg Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/FAQ">FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/Mirroring">Mirroring repositories</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/Renamed">OpenSolaris Packages Renamed in Oracle Solaris 11 Express</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/add_package">Adding Packages to IPS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/devinfo">Developer information</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/IPS+for+Consolidations">IPS for Consolidations</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/bestpractices">Best Practices</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/rtinotes">Integration Notes</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/documents">Documentation</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/May2008">Getting Started with IPS for 2008.05</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/Nov2008">Getting Started with IPS for 2008.11</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/Using+repositories">Repositories</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/testing">Testing</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/testplan">Test Plan</a></span></li>
+</ul></li>
+</ul>
+                    </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div>  <div id="footerglobal" class="layoutsection">
+  <div class="minwidth"></div>
+
+  <script language="JavaScript" src="/resources/js/s_code_remote.js"></script>
+
+
+          <div id="xwikiplatformversion">XWiki Enterprise 2.1.1.25889 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+  <br/>
+
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2011, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+  </div>
+
+
+</div></div></body>
+</html>

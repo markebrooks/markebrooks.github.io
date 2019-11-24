@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>OpenSolaris のビルドとインストール (パート2) (Project jp.building_opensolaris_part2) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+jp/building_opensolaris_part2" />
+                    <link rel="canonical" href="/bin/view/Project+jp/building_opensolaris_part2" />
+                            <meta name="document" content="Project jp.building_opensolaris_part2"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Project jp"/>
+    <meta name="page" content="building_opensolaris_part2"/>
+    <meta name="version" content="1.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Project+jp/pages/building_opensolaris_part2"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="OpenSolaris のビルドとインストール (パート2)" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project jp";
+XWiki.currentPage = "building_opensolaris_part2";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Project+jp/building_opensolaris_part2";
+window.docediturl = "/bin/edit/Project+jp/building_opensolaris_part2";
+window.docsaveurl = "/bin/save/Project+jp/building_opensolaris_part2";
+window.docgeturl = "/bin/get/Project+jp/building_opensolaris_part2";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Project_jp viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bjp%2Fbuilding_opensolaris_part2"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+jp/"><strong>Project jp</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Project+jp" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+            </td>
+            <td id="logo-text" style="width: 1%;">
+                Solaris
+            </td>         
+            <td style="width: 98%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                              <a href='/bin/view/Project+jp/tools'>OpenSolaris コミュニティ: Tools</a> <span class='separator'>&#187;</span> <span class='current'>OpenSolaris のビルドとインストール (パート2)</span>
+                </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+jp/building_opensolaris_part2?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+jp/building_opensolaris_part2?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+jp/building_opensolaris_part2?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+jp/building_opensolaris_part2?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+jp/building_opensolaris_part2?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+jp/building_opensolaris_part2?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+jp/building_opensolaris_part2?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+jp/building_opensolaris_part2?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+jp/building_opensolaris_part2?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+jp/building_opensolaris_part2?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+jp/building_opensolaris_part2?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          <span class="submenuitem "><a href="/bin/view/Project+jp/building_opensolaris_part2?xpage=copy" id="tmActionCopy" class="tmActionCopy">Copy</a></span>
+      </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>OpenSolaris のビルドとインストール (パート2)</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h2 id="HOpenSolaris306E30D330EB30C9306830A430F330B930C830FC30EB2830D130FC30C8229"><span>OpenSolaris のビルドとインストール (パート 2)</span></h2><p><strong>著者:Rich Teer</strong><br/><strong>はじめに</strong><br/>これは、OpenSolaris のビルドとインストールの方法について解説した 2 つの記事のうちの 2 番目のものです。<span class="wikiexternallink"><a href="http://jp.opensolaris.org/tools/building_opensolaris/">最初の記事</a></span>では、必要な背景情報 (専門用語、ツールの入手場所など) を提供し、基本的なコンパイルとインストールについて説明しています。最初の記事で実行した手順だけではニーズが十分に満たされていない場合があります。この記事では、このような不足している点に対処するために必要な作業について説明します。<br/>この記事では、読者が最初の記事の内容をよく理解していること、つまり少なくとも OpenSolaris のソースコードの入手方法、ビルド方法、およびインストール方法を認識していることを前提としています。最初の記事の掲載から次の記事の掲載までの間に新しいバージョンが使用できるようになったとしても、一貫性を保つために、この記事では最初の記事で扱ったものと同じバージョンのコードを使用します。<br/>これらの記事の内容は執筆時点では正確なものでしたが、OpenSolaris は進化し続けています。最新の詳細情報については、<span class="wikiexternallink"><a href="http://jp.opensolaris.org/on/devref_toc/">ON 開発者参照情報</a></span>を参照してください。<br/><strong>要点のまとめ</strong><br/>最初の記事では、OpenSolaris を扱うときに目にする専門用語のほとんどを定義しました。また、OpenSolaris のソースコードとそのコンパイルに必要なその他のコンポーネントの入手方法について説明し、最後に、OpenSolaris の簡単なコンパイルとインストールに必要な手順について説明しました。これらの手順は、次のとおりです。</p><ol><li>ソースコード、クローズドバイナリ、コンパイラ、およびビルドツールを jp.opensolaris.org またはそのいずれかのミラーから入手します。</li><li>ON ビルドツールと Sun Studio コンパイラを /opt にインストールし、それらのディレクトリをユーザーの PATH に追加します。</li><li>ソースコードとクローズドバイナリの tar ball を展開します。</li><li>opensolaris.sh スクリプトをコピーして編集します。</li><li>nightly スクリプトを使用して、ソースコードをビルドします。</li><li>Install スクリプトを使用して、結果として生成された新しいカーネルをインストールします。</li><li>新しいカーネルを使ってリブートします。</li></ol><p>新しいカーネルをビルドしてテストするだけなら、この手順でかまわないのですが、それでは不十分な場合があります。新しいユーザーランドのコンポーネントをいくつかインストールする場合や、新しくビルドしたカーネルが、現在インストールされているユーザーランドのライブラリやアプリケーションと互換性がない場合です。後者のシナリオは、Flag Day と呼ばれます。Flag Day のもう一つの例は、ライブラリと、そのライブラリに依拠しているコマンドを同時に更新する必要がある場合です。<br/><strong>Flag Day</strong><br/>「Flag Day」とは、ON コンポーネントの新しいバージョンを使用する前に、新しいバージョンのシステムパッケージを 1 つ以上インストールしておく必要がある場合です。この状況が発生すると、Flag Day のお知らせが OpenSolaris の Web サイト (jp.opensolaris.org/os/community/onnv) に掲載されます。これらのお知らせには、通常の Solaris パッケージツールと互換性がない可能性のある、必要な新規ソフトウェアの構築やインストールのための手順が記載されています。特に、コンポーネントを更新するための BFU ユーティリティー (この記事で取り上げられている) を使用すると、それらのコンポーネントは標準の Solaris パッケージでアップグレードできなくなります。これが心配の原因となる場合は、最新の Solaris Express リリースを使用することがおそらく最良の方法です。実のところ、BFU の使用は、アクティブな ON コード開発者 (または常に最先端を走り続けなければならない方) にしかお勧めしていません。<br/><strong>BFU の概要</strong><br/>すべての新しい ON コンポーネントをインストールするためのプロセスを「BFU」と呼びます。BFU は、Blindingly Fast Upgrade または Bonwick-Faulkner Upgrade (当初の開発者 Jeff Bonwick 氏と Roger Faulkner 氏にちなんでつけた名称) の略です。BFU は、1 組の cpio アーカイブを使って、システムの既存のコンポーネントを直接上書きします (これが、一度 BFU を実行すると、通常の Solaris パッケージツールが使用できなくなる理由です)。これらのアーカイブは、nightly ビルドプロセスの一環として作成されます。このプロセスについては、前の記事に説明してあります。<br/>新たにコンパイルしたコンポーネントを、BFU を使ってインストールする前に、3 つの環境変数を定義しておく必要があります。これらの環境変数は次のとおりです。<br/>FASTFS 通常は /opt/onbld/bin/`uname -p`/fastfs に設定します。<br/>BFULD 通常は /opt/onbld/bin/`uname -p`/bfuld に設定します。<br/>GZIPBIN 通常は /bin/gzip に設定します。<br/>特に BFU を頻繁に計画している場合は、これらの環境変数をシェルの初期設定ドットファイル (.profile など) 内に設定しておくことが、おそらくもっとも便利な方法です。前の記事で説明した opensolaris.sh 環境ファイルでも、これらの変数を設定できます。bfu を実行する前に、bldenv opensolaris.sh を (まず usr/src/tools/env/opensolaris.sh からコピーしてから、必要に応じて編集して) 使用するのがおそらく最良の方法です。新しいソースデリバリのたびに opensolaris.sh のコピーを更新する習慣をつけておくのも一案です。こうしておけば、環境変数が新しく追加された場合に、自然と気付くことができるからです。<br/><strong>BFU を使用して ON をインストールする</strong><br/>BFU を使用して OpenSolaris の ON 部分をインストールするのは、比較的簡単な作業です。1 つの引数 (インストールするアーカイブのパス) を指定して bfu コマンドを呼び出すだけです。<br/>前の記事では、$HOME/open_solaris/build-17/testws をワークスペースディレクトリとして使用しました。同じディレクトリを引き続き使用していると想定して、次のように bfu を実行できます。<br/># bfu `pwd`/archives/`uname -p`/nightly<br/>システムファイルが上書きされるので、bfu を root として実行してください。また、/opt/onbld/bin が root の PATH に含まれていることを確認してください。<br/>次に、bfu からの出力の一部を示します。<br/># bfu `pwd`/archives/`uname -p`/nightly<br/>Copying /opt/onbld/bin/bfu to /tmp/bfu.1100<br/>Executing /tmp/bfu.1100 /home/rich/open_solaris/build-17/testws/archives/i386/nightly<br/>Loading /home/rich/open_solaris/build-17/testws/archives/i386/nightly on /<br/>Creating bfu execution environment ...<br/>/tmp/bfu.1100[2261]:/net/onnv.eng/export/gate/public/bin/acr:cannot open<br/>chmod:WARNING:can't access /tmp/bfubin/acr<br/>Verifying archives ...<br/>Performing basic sanity checks ...<br/>/etc/svc/repository.db:passed integrity check<br/>Disabling kernel module unloading ...moddebug:0 = 0x20000<br/>Quiescing init ...<br/>Unmounting /lib/libc.so.1 ...<br/>Disabling sendmail temporarily ...<br/>Disabling remote logins ...<br/>Disabling syslog temporarily ...<br/>Killing httpd ...<br/>Disabling fmd temporarily ...<br/>Killing nscd ...<br/>Turning on delayed i/o ...<br/>Filesystem Mode<br/>/ safe<br/>/usr safe<br/>2423 blocks<br/>Saving configuration files in /bfu.child ...4464 blocks<br/>Removing init.d links ...done.<br/>Removing obsolete rc.d scripts ...done.<br/>Preserving user-installed perl modules...<br/>cp:cannot access /usr/perl5/site_perl/5.8.3/*<br/>Removing perl 5.8.3 packages<br/>Removing perl 5.8.3 from /var/sadm/install/contents<br/>Removing perl 5.8.3 from /usr/perl5<br/>Extracting ufs modules for boot block ...410 blocks<br/>Extracting generic.usr ...269143 blocks<br/>Extracting i86pc.usr ...410 blocks<br/>Extracting generic.lib ...34359 blocks<br/>Extracting generic.sbin ...1420 blocks<br/>Extracting generic.kernel ...108072 blocks<br/>Extracting generic.root ...3962 blocks<br/>Extracting i86pc.root ...6790 blocks<br/>Extracting i86pc.boot ...2430 blocks<br/>Removing duplicate kernel binaries ...<br/>Simulating SUNWcry* installation...<br/>Cleaning up old Kerberos GSS-API mechanisms...<br/>[...Conflict info (see later) omitted for brevity ...]<br/>Create /platform/i86pc/boot_archive<br/>updating /platform/i86pc/boot_archive...this may take a minute<br/>For each file in conflict, your version has been restored.<br/>The new versions are under /bfu.conflicts.<br/>MAKE SURE YOU RESOLVE ALL CONFLICTS BEFORE REBOOTING.<br/>To install resolved changes required for reboot in the boot<br/>archive, invoke 'bootadm update-archive'<br/>Removing obsolete smf services ...<br/>Disabling unneeded inetd.conf entries ...<br/>Connecting platform and name service profiles ...<br/>Marking converted services as enabled ...<br/>cp:cannot access /net/greenline.eng/meta0/smf/post-5090532/sysidtool.xml<br/>bfu:could not copy /net/greenline.eng/meta0/smf/post-5090532/sysidtool.xml<br/>cp:cannot access /net/greenline.eng/meta0/smf/post-5090532/kdmconfig.xml<br/>bfu:could not copy /net/greenline.eng/meta0/smf/post-5090532/kdmconfig.xml<br/>Upgrade of orac took 2:09.<br/>Turning off delayed i/o and syncing filesystems ...<br/>Filesystem Mode<br/>/ safe<br/>/usr safe<br/>Entering post-bfu protected environment (shell:ksh).<br/>Edit configuration files as necessary, then reboot.<br/>BFU プロシージャー (著者の Acer Ferrari 3400 ラップトップでは約 2 分かかる) が完了すると、新しく作成されたサブシェルに切り替わります。これは、新しいコマンドやライブラリが現在実行中の古いカーネルと互換性がない可能性があるからです。新しいサブシェルでは、その PATH が /tmp/bfubin に設定され、LD_LIBRARY_PATH が /tmp/bfulib に設定されています。これらのディレクトリには、問題を解決してシステムをリブートするために通常必要とされる旧バージョンのコマンドとライブラリが入っています (/net/greenline.eng へのアクセスに関するエラーは、bfu.sh に含まれるバグ 4865419 によるもので、無視してかまいません)。BFU を実行したあとは、システムのリブートに init または shutdown を使用しないようにしてください。代わりに、reboot コマンドを使用してください。<br/>bfu の出力には、競合の解決に関する情報が記載されています。競合は、bfu の出力で、次のような行を捜すことによって確認できます。<br/>NEW conflict:boot/grub/menu.lst<br/>NEW conflict:boot/solaris/bootenv.rc<br/>NEW conflict:boot/solaris/devicedb/master<br/>update:etc/.login<br/>update:etc/aggregation.conf<br/>NEW conflict:etc/auto_home<br/>update:etc/auto_master<br/>update:etc/bootrc<br/>ブリック化が起きないようにする場合は、システムをリブートする前に、これらの競合を解決しておく必要があります。<br/><strong>競合を解決する</strong><br/>Solaris を実行しているどのマシンにも多数の構成ファイルがあり、そのほとんどはデフォルトのインストールから変更されます。これらの構成ファイルの例として、/etc/auto_home、/etc/nsswitch.conf、および /etc/path_to_inst があげられます。bfu コマンドは、「競合データベース」と呼ばれる、これらのファイルのリストを保持します。<br/>BFU が構成ファイルを上書きすると、現在のファイルのコピーがまず /bfu.child の下に保存されます。また、cpio アーカイブからの新しいファイルのコピーが /bfu.parent の下に置かれます。以前の bfu の /bfu.parent (存在する場合) は /bfu.ancestor (本質的には親の親) に移されます。これらのディレクトリの下にあるファイルは、それぞれ「子」、「親」、「祖先」と呼ばれます。<br/>cpio アーカイブの抽出が終わると、bfu はこれらのファイルのさまざまなバージョンの差分処理を行い、次の規則に従います。</p><ul><li>ファイルが変更されていない (つまり、親と子が同じ) 場合は、実行することはないため、レポートされるものもありません。</li><li>ファイルが、前回の BFU の実行時に親から承認された (つまり、子が祖先と同じ) 場合は、現時点で親が自動的に承認され、ファイルは「update」と指定されます。  これは、BFU をはじめて実行したときにも起こることであり、ほかの規則は適用されません。</li><li>ファイルが前回のファイルの先頭と同じ場合、BFU は、ユーザーがファイルの最後に行を追加した (つまり、子が親と連結行で構成される) とみなします。子のバージョンが復元され、ファイルは「restore」と指定されます。 </li><li>親と子は異なっているが、親と祖先が同じである場合は、競合は過去のものとみなされ、ファイルは「old」と指定されます。 </li><li>最後に、親と子が異なっており、親と祖先も異なっている場合は、競合は新しいものとみなされ、ファイルは「NEW」と指定されます。 </li></ul><p>したがって、「NEW」の競合は、デフォルトとは異なるファイルを指すため、デフォルトは更新されたことになります。これを解決するには、新規ビルドで導入された変更内容を既存のファイルに移行する必要があります。<br/>詳しい調査を行わないで親を承認することも可能ですが、その場合、子に対して行われたカスタマイズがすべて失われます。これらのカスタマイズの多くは、ON 以外のパッケージからクラスアクションスクリプトによって実行されるため、親をやみくもに承認すると、多くの時間が無駄になることがあります。したがって、競合は手動または自動のどちらかで解決するようにしてください。この方法についてはあとで説明しますが、すべての競合が自動的に解決できるとは限らない (あるいは、それらを手動で解決することにした) 場合、適切なベースライン競合データベースを持つことはとても良い考えです。そして、これを実現するには、システムで現在実行されているリリースに対応する BFU アーカイブをインストールします。<br/>別の手段ですでにインストールしてある同じビルドに対して BFU を実行するときは、現在の構成ファイルが正常に動作することがわかっているため、すべての競合を無視してかまいません。それ以降のビルドに対して BFU を実行する場合は、その前にリブートする必要があります。<br/><strong>自動の競合解決</strong><br/>ほとんど (すべてではないが) の競合は、acr と呼ばれるスクリプトを使って自動的に解決できます。このスクリプトは通常、BFU 実行後の保護環境で呼び出されます。この方法で呼び出された場合は、コマンド行オプションを指定する必要はありません (特殊な用途の場合、acr は 1 つまたは 2 つのコマンド行パラメータを使用します。最初のパラメータには代替ルートディレクトリの名前を指定し、2 番目のパラメータには BFU アーカイブが含まれているディレクトリの名前を指定します)。<br/>acr は、conflict_resolution.gz というファイルを使用します。このファイルは、-a オプションを指定して nightly を実行するたびに作成され、BFU アーカイブが含まれているディレクトリに格納されます。acr スクリプトは、処理しているファイルのリストを標準出力に表示し、詳細な結果を allresults というファイルに書き込みます。このファイルは、/tmp のサブディレクトリに格納されます。次に、acr 呼び出しの例を示します。<br/>bfu# acr<br/>Getting conflict resolution information from /home/rich/open_solaris/build-17/testws/archives/i386/nightly/conflict_resolution.gz:590 blocks<br/>Building command list for the class action scripts:<br/>Begin processing files<br/>PROCESSING etc/devlink.tab<br/>PROCESSING etc/driver_classes<br/>PROCESSING etc/security/device_policy<br/>PROCESSING etc/path_to_inst<br/>PROCESSING etc/shadow<br/>PROCESSING etc/vold.conf<br/>PROCESSING etc/rmmount.conf<br/>PROCESSING etc/inet/hosts<br/>PROCESSING etc/inet/ipnodes<br/>PROCESSING var/spool/cron/crontabs/root<br/>PROCESSING etc/passwd<br/>PROCESSING etc/inet/inetd.conf<br/>PROCESSING etc/default/init<br/>PROCESSING etc/remote<br/>PROCESSING etc/nsswitch.conf<br/>PROCESSING etc/inet/services<br/>PROCESSING etc/security/auth_attr<br/>PROCESSING etc/security/exec_attr<br/>PROCESSING etc/security/prof_attr<br/>PROCESSING etc/user_attr<br/>PROCESSING etc/vfstab<br/>PROCESSING etc/auto_home<br/>PROCESSING etc/datalink.conf<br/>PROCESSING boot/grub/menu.lst<br/>PROCESSING etc/krb5/krb5.conf<br/>PROCESSING etc/openwin/server/etc/OWconfig<br/>PROCESSING kernel/drv/sd.conf<br/>PROCESSING boot/solaris/bootenv.rc<br/>PROCESSING boot/solaris/devicedb/master<br/>See /tmp/acr.Yda49i/allresults for more information.<br/>さらに、対応する allresults ファイルを示します。<br/>bfu# cat /tmp/acr.Yda49i/allresults<br/>PROCESSING etc/devlink.tab<br/>RETURN CODE :0<br/>PROCESSING etc/driver_classes<br/>RETURN CODE :0<br/>PROCESSING etc/security/device_policy<br/>RETURN CODE :0<br/>PROCESSING etc/path_to_inst<br/>RETURN CODE :0<br/>PROCESSING etc/shadow<br/>RETURN CODE :0<br/>PROCESSING etc/vold.conf<br/>RETURN CODE :0<br/>PROCESSING etc/rmmount.conf<br/>RETURN CODE :0<br/>PROCESSING etc/inet/hosts<br/>RETURN CODE :0<br/>PROCESSING etc/inet/ipnodes<br/>RETURN CODE :0<br/>PROCESSING var/spool/cron/crontabs/root<br/>RETURN CODE :0<br/>PROCESSING etc/passwd<br/>RETURN CODE :0<br/>PROCESSING etc/inet/inetd.conf<br/>RETURN CODE :0<br/>PROCESSING etc/default/init<br/>RETURN CODE :0<br/>PROCESSING etc/remote<br/>RETURN CODE :0<br/>PROCESSING etc/nsswitch.conf<br/>RETURN CODE :0<br/>PROCESSING etc/inet/services<br/>RETURN CODE :0<br/>PROCESSING etc/security/auth_attr<br/>RETURN CODE :0<br/>PROCESSING etc/security/exec_attr<br/>RETURN CODE :0<br/>PROCESSING etc/security/prof_attr<br/>RETURN CODE :0<br/>PROCESSING etc/user_attr<br/>RETURN CODE :0<br/>PROCESSING etc/vfstab<br/>RETURN CODE :0<br/>PROCESSING etc/auto_home<br/>RETURN CODE :0<br/>PROCESSING etc/datalink.conf<br/>RETURN CODE :0<br/>PROCESSING boot/grub/menu.lst<br/>RETURN CODE :0<br/>PROCESSING etc/krb5/krb5.conf<br/>RETURN CODE :0<br/>PROCESSING etc/openwin/server/etc/OWconfig<br/>Converting old OWconfig file to new format.<br/>RETURN CODE :0<br/>PROCESSING kernel/drv/sd.conf<br/>RETURN CODE :0<br/>PROCESSING boot/solaris/bootenv.rc<br/>RETURN CODE :0<br/>PROCESSING boot/solaris/devicedb/master<br/>RETURN CODE :0<br/>allresults ファイルを調べて、acr プロセスの実行中にエラーが発生していないことを確認するようにしてください。エラーが発生している場合は、手動で競合を解決する必要があります。acr の失敗は、1 つ以上のアップグレードスクリプト内のバグを示していることがあるため、opensolaris-bugs メーリングリストに投稿するのも一案です。<br/><strong>手動の競合解決</strong><br/>手動で競合を解決するには、問題となっているファイルの祖先と親のバージョンの差分処理を行います。より一般的には、次のコマンドを実行し、差分処理を手動で適用します。<br/>bfu# diff /bfu.ancestor/$file /bfu.parent/$file<br/>BFU の実行が今回、はじめての場合は、/bfu.ancestor が存在しないため、前述のように、ベースライン競合データベースを作成しておくことをお勧めします。多くのファイルに対しては、ショートカットを使用できます。変更内容の大半が追加や変更であり、BFU プロセスによって /bfu.conflicts というディレクトリに切り替わる場合、次のコマンドを実行し、<br/>bfu# pw<br/>/bfu.conflicts<br/>bfu# diff $file /$file<br/>差分がすべて右向きの矢印 (「&lt;」ではなく「&gt;」) になっていることを確認すれば、うまく行きます。次に例を示します。<br/>bfu# diff boot/solaris/bootenv.rc /boot/solaris/bootenv.rc<br/>5d4<br/>&lt; # CDDL HEADER START<br/>7,10c6<br/>&lt; # The contents of this file are subject to the terms of the<br/>&lt; # Common Development and Distribution License, Version 1.0 only<br/>&lt; # (the "License").You may not use this file except in compliance<br/>&lt; # with the License.<br/>-</p><blockquote><p>&nbsp;#pragma ident "@(#)bootenv.rc 1.34 05/04/15 SMI"</p></blockquote><p>12,26d7<br/>&lt; # You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE<br/>&lt; # or <span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://www.opensolaris.org/os/licensing."><span class="wikigeneratedlinkcontent">http://www.opensolaris.org/os/licensing.</span></a></span><br/>&lt; # See the License for the specific language governing permissions<br/>&lt; # and limitations under the License.<br/>&lt; #<br/>&lt; # When distributing Covered Code, include this CDDL HEADER in each<br/>&lt; # file and include the License file at usr/src/OPENSOLARIS.LICENSE.<br/>&lt; # If applicable, add the following below this CDDL HEADER, with the<br/>&lt; # fields enclosed by brackets "[]" replaced with your own identifying<br/>&lt; # information:Portions Copyright [yyyy] [name of copyright owner]<br/>&lt; #<br/>&lt; # CDDL HEADER END<br/>&lt; #<br/>&lt; #pragma ident "@(#)bootenv.rc 1.35 05/06/08 SMI"<br/>&lt; #<br/>38a20,22</p><blockquote><p>&nbsp;setprop prealloc-chunk-size 0x2000<br/>&nbsp;setprop bootpath /pci@0,0/pci-ide@11,1/ide@0/cmdk@0,0:a<br/>&nbsp;setprop console 'text'</p></blockquote><p>この例では、重要な差分の行が右向きの矢印になっているので問題ありません。<br/>ほとんどの場合はこのプロセスが有効ですが、例外がいくつかあります。次に、その例外について詳しく説明します。これらの例外は、etc/name_to_major、etc/security/*_attr、および /etc/path_to_inst です。<br/>etc/name_to_major ファイルは、デバイス名をそのメジャー番号に対応づけます。各デバイスには、一意のメジャー番号が割り当てられている必要があります。まずは、祖先と親とを差分処理で比較すると良いでしょう。デバイス名は重要ですが、メジャー番号はそれぞれ異なります。サポートされなくなったデバイスは削除することをお勧めしますが、残しておいても、通常は問題ありません。確かでない場合は、残しておいてください。<br/>新しいデバイスは、未使用のメジャー番号 (可能であれば、差分処理から得られる番号) を割り当てて追加するようにしてください。<br/>終了したら、次の 2 つのソートコマンドを実行して、変更内容を確認できます。<br/>bfu# sort -k1,1 /etc/name_to_major | sort -uc -k1,1<br/>bfu# sort -k2n /etc/name_to_major | sort -uc -k2n<br/>最初のコマンドは最初に重複したデバイス名をレポートし、2 番目のコマンドは重複したメジャー番号のうちでもっとも低いものをレポートします。リブートの前に、どちらのコマンドからも出力がない状態にすべきです。リブートの際にカーネルがこのような競合について警告しますが、そのときにはすでに遅すぎることがあります。<br/>etc/security/*_attr ファイルは、クラスアクションスクリプトによって大幅に変更されるため、親と子のバージョンも大きく異なることがあります。このことは、前述の差分処理のショートカットにあまり効果がないことを意味します。ただし、親と祖先に関するより一般的な差分処理は引き続き有効です。<br/>最後の例外は、/etc/path_to_inst です。実行している内容を正確に把握していないかぎり、このファイルには触れないようにしてください。<br/>一般に、「NEW」と指定されている競合だけを調べる必要があります。<br/><strong>BFU とゾーン</strong><br/>BFU を実行しているマシンが大域ゾーンのほかにゾーンをホストしている場合は、もう少し作業を行う必要があります。ゾーンを作成するたびに大域ゾーンの内容がコピーされるため (大域ゾーンが「空白 (sparse)」でない場合)、すべての非大域ゾーンの内容が大域ゾーンと整合性が取れていることを確認する必要があります。幸運にも、大域ゾーンが更新されたあとで各ゾーンを更新することにより、BFU が代わりにこの処理を行います。各ゾーンには大域ゾーンとは異なる構成ファイルが含まれていることがあるため、各ゾーンには独自の BFU 競合管理ディレクトリセットがあります。BFU を実行する前に、すべてのゾーンをシャットダウンすることが得策です。これにより、新しいファイルによって依存関係が侵害されても、ゾーンが破壊されずに済むからです。また、BFU を実行したあとに新しいゾーンを追加する場合は、bfu を再実行して、新しいゾーンが確実に更新されるようにすることも一案です。<br/>単独のゾーンを対象に BFU を実行することはできません。ゾーン内のユーザーランドへの変更をテストする場合は、ビルドワークスペースからそのゾーンにファイルを手動でコピーする必要があります。<br/>まず大域ゾーンで競合を解決し、その後それぞれの非大域ゾーンで競合を解決してから、リブートする必要があります。ゾーン内の競合の解決は、大域ゾーンと同じ方法で行われますが、多くのファイルが大域ゾーンの対応するファイルと同じであるため、手動で結合する必要のあるファイルはほとんどありません。大域ゾーンからファイルをコピーすれば十分です。<br/>大域ゾーンとすべての非大域ゾーン内の競合がすべて解決したら、システムをリブートできます。非大域ゾーンを再起動する前に、システムをリブートしてください。<br/><strong>ビルドを行わずに BFU を実行する</strong><br/>これまでは、OpenSolaris の副産物として自分自身でビルドしたアーカイブを使って BFU を実行することを想定していました。最新のコンポーネントをコンパイルしないで使用する場合は、どうなるでしょうか。幸いなことに、ビルド済みの BFU アーカイブを利用できます。ソースからビルドしないで BFU を実行するには、BFU の対象となるリリースに対応している BFU アーカイブと ON ビルドツールをダウンロードする必要があります。現在のビルドと BFU の対象となるビルドとの間にかなりの相違があるときは、場合により BFU を数回実行する必要があることも承知しておいてください。<br/>最近 BFU を実行したビルド 17 のシステムに対して BFU を実行してビルド 18 にする例を見てみましょう。このシリーズのパート 1 と同様に、2 つの必要なファイルを $HOME/open_solaris/build-18 というディレクトリにダウンロードし、カレントディレクトリがそのディレクトリになっているものと想定します。便宜上、このディレクトリを $OPEN_SOL と呼びます。<br/>まず、BFU アーカイブを展開します。<br/>$ bzip2 -dc opensolaris-bfu-20050720.i386.tar.bz2 | tar xf -<br/>これにより、archives-20050720 というディレクトリが作成され、この中に BFU アーカイブが格納されます (このファイルや類似したファイルの名前はリリースごとに変わります)。ここで、root になり、ON ビルドツールをインストールする必要があります。<br/># cd /tmp<br/># bzip2 -dc $OPEN_SOL/SUNWonbld-20050720.i386.tar.bz2 | tar xf -<br/># cd onbld<br/># pkgadd -d .SUNWonbld<br/>簡潔にするため、pkgadd からの出力は省略しました。次に、前述の例に類似したコマンドを使って BFU を実行します (まず FASTFS、BFULD、および GZIPBIN が適切に定義されていることを確認し、次に /opt/onbld/bin がユーザーの PATH に含まれていることを確認します)。<br/># bfu $OPEN_SOL/archives-20050720/`uname -p`<br/>次に、競合があれば解決し (この例では競合はありません)、リブートします。<br/>bfu# acr<br/>No conflicts to resolve.<br/>bfu# reboot<br/>updating /platform/i86pc/boot_archive...this may take a minute<br/>/platform/i86pc/boot_archive の更新に関するメッセージは、x86 固有のものです。すべてが順調に進んでいると想定して、マシンは新しいビルド (この場合は、ビルド 18) でブートします。いつものように確認するには、ログインして、uname を実行します。<br/>$ uname -a<br/>SunOS orac 5.11 opensol-20050720 i86pc i386 i86pc<br/><strong>まとめ</strong><br/>この記事では、自分自身でビルドしたソース、あるいは Web サイトの opensolaris.org (またはほかの場所) からダウンロードした BFU アーカイブのどちらかから BFU を使用して OpenSolaris のバージョンを更新する方法について説明しました。前者の例として、前回の記事でビルドしたビルド 17 に対して BFU を実行しました。後者の例として、ビルド 17 から BFU を実行してビルド 18 にしました。<br/>自分自身でビルドしたソースから BFU を実行するための手順は、次のとおりです。</p><ol><li>FASTFS、BFULD、および GZIPBIN 環境変数が正しく設定されていることを確認します。</li><li>ワークスペースディレクトリから root として bfu コマンドを実行します。その際、コマンド行オプションとしてアーカイブの名前を渡します。たいてい、これは `pwd`/archives/`uname -p`/nightly となります。</li><li>競合があれば、acr スクリプトを使って解決します。</li><li>残っている競合があれば、手動で解決します。</li><li>reboot コマンド (init または shutdown ではなく) を使用してリブートします。</li></ol><p>ビルド済みの BFU アーカイブのインストールに必要な手順は似ており、次のとおりです。</p><ol><li>Web サイト opensolaris.org またはそのいずれかのミラーから、BFU の対象となるビルド向けの BFU アーカイブと ON ビルドツールをダウンロードします。</li><li>BFU アーカイブを展開します。</li><li>ON ビルドツールをインストールします。</li><li>FASTFS、BFULD、および GZIPBIN 環境変数が正しく設定されていることを確認します。</li><li>root として bfu コマンドを実行します。その際、手順 2 で展開した BFU アーカイブの名前を渡します。</li><li>競合があれば、acr スクリプトを使って解決します。</li><li>残っている競合があれば、手動で解決します。</li><li>reboot コマンドを使用してリブートします。</li></ol><p>また、一度 BFU を実行すると、システムを更新するための通常の方法 (パッチやアップグレードインストールなど) はそれ以降使用できなくなることも警告しました。新規インストールを行うか、もう一度 BFU を実行する必要があります。最後に、BFU がアクティブな OpenSolaris 開発者だけを対象にしていることを記述しました。一般のユーザーは Solaris Express を使用すればおそらく十分です。<br/><strong>推薦ドキュメント</strong><br/>Web サイト opensolaris.org には、『OpenSolaris 開発者向けリファレンス・ガイド』などのいくつかのドキュメントが含まれています。 また、OpenSolaris Tools Community サイト、特に Sun Studio ダウンロードサイト (<span class="wikiexternallink"><a href="http://jp.opensolaris.org/os/community/tools/sun_studio_tools/">jp.opensolaris.org/os/community/tools/sun_studio_tools/</a></span>) についても詳しく確認するようにしてください。著者の書籍『<em>Solaris Systems Programming</em>』 [Teer 著、2005 年] は、ユーザーランドの OpenSolaris コードを使って作業する読者には不可欠です。また、Jim Mauro 氏および Richard McDougall 氏による 『<em>SOLARIS インターナル - カーネル構造のすべて</em>』 [Mauro、McDougall 共著、2001 年] は、OpenSolaris のすべてのカーネルハッカーの書棚に置くことをお勧めします。コミュニティーのブログ (<span class="wikiexternallink"><a href="http://jp.opensolaris.org/os/blogs/">jp.opensolaris.org/os/blogs/</a></span>) は、もう一つの重要な情報源です。</p><p>[Mauro、McDougall 共著、2001 年]: 『<em>SOLARIS インターナル - カーネル構造のすべて</em>』 ISBN 4-89471-458-2。詳細は、<span class="wikiexternallink"><a href="http://www.solarisinternals.com/">www.solarisinternals.com/</a></span> を参照してください。<br/>[Teer 著、2005 年]:『<em>Solaris Systems Programming</em>』 ISBN 0-201-75039-2。詳細は、<span class="wikiexternallink"><a href="http://www.rite-group.com/rich/ssp/">www.</a></span><span class="wikiexternallink"><a href="http://www.rite-group.com/rich/ssp/">rite-group.com/rich/ssp/</a></span> を参照してください。<br/><strong>著者の経歴</strong><br/><em>Rich Teer 氏は、独立した Solaris コンサルタントであり、10 年以上も Solaris コミュニティーのアクティブなメンバーです。彼は、ベストセラーの Sun Microsystems Press の書籍</em>『Solaris Systems Programming<em>』の著者であり、Solaris 関連の記事もいくつか執筆しています。彼は、OpenSolaris パイロットプログラムのメンバーであり、現在は OpenSolaris Community Advisory Board (CAB) の委員を務めています。Rich 氏は、ブリティッシュコロンビア州のケローナで、妻の Jenny、子犬の Judge とともに暮らしています。彼の Web サイトは&nbsp;</em><span class="wikiexternallink"><a href="http://www.rite-group.com/rich">www.</a></span><span class="wikiexternallink"><a href="http://www.rite-group.com/rich">rite-group.com/rich</a></span><em>&nbsp;にあります。</em></p><hr/><p>英文: <span class="wikilink"><a href="/bin/view/Community+Group+tools/building_opensolaris_part2">Building and Installing OpenSolaris (Part 2)</a></span> Page Last Modified: 27 Jul 2007</p>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:14<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by admin on 2009/10/26 12:14
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Project jp Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+jp/TopDetail">OpenSolaris プロジェクトとは</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/Topics">OpenSolaris 関連記事</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/about">プロジェクトの概要</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/downloads">ダウンロードセンター</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/faq">FAQ センター</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+jp/binary_licensing_faq">OpenSolaris バイナリライセンスに関する FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/general_faq">一般的な内容に関する FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/getting_started_developers">はじめての開発者のための FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/licensing_faq">Common Development and Distribution License (CDDL) に関する FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/pdl_faq">Public Documentation License (PDL) に関する FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/sca_faq">Sun Contributor Agreement (SCA) に関する FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/trademark_faq">OpenSolaris の商標とロゴの使用に関する FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/website_faq">Web サイトに関する FAQ</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/forums">ディスカッション</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/ha%2Dclusters">OpenSolaris コミュニティ: 高可用性クラスタ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/licensing">ライセンス</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/links">リンク</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/material">資料のページ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/nfsv41">プロジェクト: NFS version 4.1 pNFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/on">OpenSolaris コミュニティ: OS/Net (ON)</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+jp/devref_toc">OpenSolaris 開発者向けリファレンス・ガイド</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/os_dev_process">開発プロセス</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/participation">参加方法</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/tools">OpenSolaris コミュニティ: Tools</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+jp/building_opensolaris">OpenSolaris のビルドとインストール (パート1)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/building_opensolaris_part2">OpenSolaris のビルドとインストール (パート2)</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/zfs">OpenSolaris コミュニティ: ZFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/%EF%BC%AF%EF%BD%90%EF%BD%85%EF%BD%8E%EF%BC%B3%EF%BD%8F%EF%BD%8C%EF%BD%81%EF%BD%92%EF%BD%89%EF%BD%93%E3%80%80%EF%BD%8D%EF%BD%81%EF%BD%8E%EF%BD%90%EF%BD%81%EF%BD%87%EF%BD%85%E3%80%80%EF%BD%94%EF%BD%92%EF%BD%81%EF%BD%8E%EF%BD%93%EF%BD%8C%EF%BD%81%EF%BD%94%EF%BD%89%EF%BD%8F%EF%BD%8E">OpenSolaris Manual Page Translation</a></span></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2012, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

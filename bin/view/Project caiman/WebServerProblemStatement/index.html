@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Web Server Design Problem Statement (Project caiman.WebServerProblemStatement) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+caiman/WebServerProblemStatement" />
+                    <link rel="canonical" href="/bin/view/Project+caiman/WebServerProblemStatement" />
+                            <meta name="document" content="Project caiman.WebServerProblemStatement"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Project caiman"/>
+    <meta name="page" content="WebServerProblemStatement"/>
+    <meta name="version" content="2.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Project+caiman/pages/WebServerProblemStatement"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Web Server Design Problem Statement" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="Ethan Quach" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project caiman";
+XWiki.currentPage = "WebServerProblemStatement";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Project+caiman/WebServerProblemStatement";
+window.docediturl = "/bin/edit/Project+caiman/WebServerProblemStatement";
+window.docsaveurl = "/bin/save/Project+caiman/WebServerProblemStatement";
+window.docgeturl = "/bin/get/Project+caiman/WebServerProblemStatement";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Project_caiman viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bcaiman%2FWebServerProblemStatement"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+caiman/"><strong>Project caiman</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Project+caiman" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <div id="header_banner">
+	<table style="width: 100%;">
+	    <tr>
+		<td style="width: 1%;">
+		    <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+		</td>
+		<td id="logo-text" style="width: 1%;">
+		    Solaris
+		</td>         
+		<td style="width: 98%;">
+		    <table id="loading-indicator">
+			<tr>
+			    <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+				    alt="Loading" title="Loading"/></td>
+			    <td>Loading...</td>
+			</tr>
+		    </table>
+		</td>
+		<td style="width: 1%;">
+		    <table id="iconbar">
+			<tr>
+			<td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+			    Collectives</a></td>
+			<td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+				Discussions</a></td>
+			<td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+				Documentation</a></td>
+			<td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+				Download</a></td>
+			<td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+				Source Browser</a></td>
+			</tr>
+		    </table>
+		</td>
+	    </tr>
+	</table>
+    </div>
+    <div id="site-notice">
+	<span>
+	    <a href="https://markebrooks.github.io/bin/view/Main/">ATTENTION: This website and all services within the opensolaris.org domain will be unavailable after March 24, 2013.</a>	   
+	</span>
+    </div>
+</div>
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                                          <a href='/bin/view/Project+caiman/'>Caiman, Solaris Install Revisited</a> <span class='separator'>&#187;</span> <a href='/bin/view/Project+caiman/auto_install'>Automated Installation Project</a> <span class='separator'>&#187;</span> <span class='current'>Web Server Design Problem Statement</span>
+                      </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+caiman/WebServerProblemStatement?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+caiman/WebServerProblemStatement?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+caiman/WebServerProblemStatement?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+caiman/WebServerProblemStatement?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+caiman/WebServerProblemStatement?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+caiman/WebServerProblemStatement?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+caiman/WebServerProblemStatement?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+caiman/WebServerProblemStatement?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+caiman/WebServerProblemStatement?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+caiman/WebServerProblemStatement?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+caiman/WebServerProblemStatement?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+                      
+<div id="document-title"><h1>Web Server Design Problem Statement</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h1 class='hidden'>Web Server Design Problem Statement</h1><p>&nbsp;"To provide a modular mechanism for securely delivering the required data to the AI client. The mechanism is scalable, delivers high performance, and provides a compelling user experience."</p><h2 id="HGoals"><span>Goals</span></h2><p>&nbsp;The goals listed here are scalability, performance, and compelling user experience.Listed in order of importance:</p><ol><li>User Experience</li><li>scalability</li><li>performance</li></ol><h2 id="HCriteriaforChoosingaMechanism"><span>Criteria for Choosing a Mechanism</span></h2><ol><li>Mechanism must be scalable</li><li>Mechanism must work across subnets</li><li>Mechanism must be tunable</li><li>Mechanism must provide a logging feature</li><li>Mechanism must transport data securely</li><li>Mechanism must allocate resources appropriately</li></ol><h2 id="HAnalysisofProblemStatement"><span>Analysis of Problem Statement</span></h2><h3 id="H1.Modularity"><span>1. Modularity</span></h3><p>&nbsp;The modularity applies to the ability to easily use different mechanisms for data transfer. Whatever mechanism ischosen initially, it shouldn't preclude adding other mechanisms.</p><h3 id="H2.MechanismsforDataTransfer"><span>2. Mechanisms for Data Transfer</span></h3><p>&nbsp;There are numerous mechanisms available for data transfer. What are the advantages and disadvantages of each.</p><ul><li>Point-to-Point<ul><li>HTTP:<ul><li><strong>Apache Webserver</strong><ul><li><em>Advantages</em> - well tested, broadly used, high amount of configurability. Highly scalable - has a history of use in large production environments. Large install base means the software will not fade from existence in near future, and is already well tuned for use.</li><li><em>Disadvantages</em> - potentially more flexible than necessary (meaning bulkier). The multitude of configuration options presents more than we need. Would have to consider some sort of CGI or server-side application to select which manifest to serve -- could be Python, PERL, C, shell, etc.</li></ul></li><li><strong>Cherrypy Webserver</strong><ul><li><em><span class="wikiexternallink"><a class="wikimodel-freestanding" href="Summary://"><span class="wikigeneratedlinkcontent">Summary://</span></a></span> CherryPy is actually a two-fold program. The first portion is a simplified web server. The second portion (and its "selling point" as a product, not necessarily as a solution to the problem being presented here) is an object oriented Python development toolkit. Because it is segmented as such, the Python features can be hooked into other web servers besides the one provided with CherryPy - web servers including Apache.</em></li><li><span class="wikiexternallink"><a href="http://www.cherrypy.org/wiki/CherryPySpeed">How fast is CherryPy?</a></span></li><li><em><span class="wikiexternallink"><a class="wikimodel-freestanding" href="Advantages://"><span class="wikigeneratedlinkcontent">Advantages://</span></a></span> Easier to configure, performance range&nbsp;</em>may<em>&nbsp;be within the limits of what we desire (the CherryPy page states estimated 400-500 responses/sec under "reasonable configurations" <span class="wikiexternallink"><a href="http://www.cherrypy.org/wiki/CherryPyTutorial">From the CherryPy website</a></span>). Additionally, could theoretically configure Apache as the web server, and take advantage of CherryPy as an object oriented framework, to get the "best of both worlds"</em></li><li><em><span class="wikiexternallink"><a class="wikimodel-freestanding" href="Disadvantages://"><span class="wikigeneratedlinkcontent">Disadvantages://</span></a></span> Concurrent connections may not be as robust as other solutions such as Apache. CherryPy's website itself recommends use of other web servers in enterprise environments. CherryPy website recommends using Apache as the front-end webserver for <span class="wikiexternallink"><a href="http://www.cherrypy.org/wiki/CherryPyTutorial#WhatCherryPyisNOT">enterprise conditions</a></span> and for <span class="wikiexternallink"><a href="http://www.cherrypy.org/ticket/571">static content delivery</a></span>.</em></li></ul></li><li><strong>SQUID Proxy</strong></li><li>Does it make sense to use Apache for static data and Cherrypy for dynamic data? Apache with cherrypy module -- something like this is what serves <span class="wikiexternallink"><a href="http://pkg.opensolaris.org">pkg.os.org</a></span>? Why can't we use Apache for all files? Do we have enough dynamic data to justify Apache with Cherrypy? Further, should Apache just be used as a cache. Could we mirror/cache more like an IPS repo?</li></ul></li><li>Secure Copy</li><li>FUSE supported filesystems (sshfs, davfs, etc.)</li><li>FTP (including TFTP, SFTP, Anonymous FTP)</li></ul></li><li>Point-to-Many (traditional multicast)<ul><li>Linux and Apple are using multicast. We would have to change our client/server mechanism in order to use this protocol. It could be interesting in the future.</li></ul></li><li>Many-to-Many<ul><li><strong>bittorrent</strong> - Use of bittorent requires 2 components: (1) A central tracker, which manages peer connections, and (2) a system of peers. The client code is available in the SUNWtransmission package. Tracker code is written in python (among other languages) and could be ported. Another minor requirement is delivery of a .torrent file to all the peers - this detail could present a "chicken/egg" problem, as the .torrent file will need to be sent to the clients somehow.<ul><li><em>Advantages</em>: Distributes network load across multiple systems, de-stressing the AI server.</li><li><em>Disadvantages</em>: Distributes network load across multiple systems, stressing the clients. Offline clients cannot participate. Must implement method for delivering initial .torrent file. For maximum effectiveness, each client must maintain a copy of every AI image to be used on the network.</li></ul></li><li><strong>GNUtella</strong> - GNUtella is a protocol for searching for files on an extended network. While the search is peer2peer, the file transfer is generally done via HTTP. As such, it is not a method of file transfer in and of itself.</li></ul></li></ul><h3 id="H3.RequiredData"><span>3. Required Data</span></h3><ul><li><strong>the initial boot file</strong><ul><li><em>X86:&nbsp;</em>135KB PXE GRUB over TFTP</li><li><em>SPARC:&nbsp;</em>1.1MB for WANBoot. WANboot-cgi currently used. (WANboot could be changed)</li></ul></li><li><strong>Boot Archive</strong><ul><li><em>X86:&nbsp;</em>57MB file over TFTP acquired by GRUB</li><li><em>SPARC:&nbsp;</em>170MB file over HTTP acquired by WANBoot</li></ul></li><li><strong>Any required configuration files</strong><ul><li><em>X86:&nbsp;</em>&lt;1KB file - menu.lst</li><li><em>SPARC:&nbsp;</em>&lt;1KB file - wanboot.conf</li></ul></li><li><strong>AI Manifest</strong><ul><li><em>All:&nbsp;</em>&lt;10KB file -- dynamically chosen</li></ul></li><li><strong>zlib files</strong><ul><li><em>X86:&nbsp;</em>79MB (combined solaris.zlib and solarismisc.zlib)</li><li><em>SPARC:&nbsp;</em>82.9MB (combined solaris.zlib and solarismisc.zlib)</li></ul></li><li><strong>Client Criteria</strong><ul><li><em>All:&nbsp;</em>&lt;10KB sent in HTTP/1.1 request (limited by maximum HTTP/1.1 POST size 2MB)</li></ul></li><li><strong>Future data we might look at delivering</strong></li></ul><p>&nbsp;Note: Architectural Consideration - What order of downloading files would provide the most flexibility? There is no choice regarding the boot archive, boot files, and configuration files. They must be downloaded first. We do have a choice with the others.</p><h3 id="H4.Networking"><span>4. Networking</span></h3><ul><li>Single vs. Multiple Servers - It is quite possible that some data can come from one server and some other data can come some other server. Choosing the transport will not be affected whether the data is coming from one server or multiple server.</li><li>Single vs. Multiple Subnets - This could affect scalability and performance. When you talk about multiple subnets, there is a router involved. Some protocols are allowed by routers by default. Some other protocols are not allowed and need to be configured. So not all mechanisms may work across subnets.</li><li>Single vs. Multiple Clients - clients will access the mechanism for the data, and the mechanism on the server needs to be smart enough to add more resources to handle an increased client load. When requests go down, the resource usage on the server side should go down. (Falls under scalability and performance).</li><li>For these network configurations, the action of the mechanism will be the same no matter which on is used:<ul><li>DHVP vs. statically configured IP Addresses</li><li>Multicast DNS</li><li>Unicast DNS</li><li>Wired vs. Wireless Ethernet</li><li>Infiniband</li></ul></li></ul><h3 id="H5.Scalability"><span>5. Scalability</span></h3><ul><li>One client and one server</li><li>Serving the same image to many systems (HPC, for example)</li><li>Serving many images to many systems ( co-located Data Center, for example)</li><li>Tunable - The mechanism should be tunable according to the environment. If only one client/server, it should be tunable so that it doesn't use too many resources. And as the load increases, it should add resources. As the load decreases, it should release the resources. We need to answer the question: Which mechanisms are scalable? (can be tuned) Which ones aren't?</li></ul><h3 id="H6.Performance"><span>6. Performance</span></h3><ul><li>Provisioning<br/>Something that can be done quickly to set up systems. It can quickly install a number of systems. Provides good performance over a short period of time.</li><li>Types of installs - the mechanism we use might be used in all of these cases. They all require good performance.<br/>Interactive install: gui install; text install<br/>Replication install</li><li>Volume of installs - Provide good performance and reliability over a long period of time. Want to have resources allocated appropriately. For example, the mechanism might give good performance over a short period but slow down as time increases.</li><li>Peak Loads- Can the mechanism handle the peak load. Can the mechanism ramp up to keep up with the load.</li></ul><h3 id="H7.CompellingUserExperience"><span>7. Compelling User Experience</span></h3><ul><li>Logging<br/>Some mechanisms already have logging feature. If the mechanism doesn't have a logging feature, the requirement is that some type of logging will be made available.</li><li>Setup Tools<br/>Should be simple and straight forward. If possible, automatic setup. The mechanism must be set up before the AI client talks to the server.<br/>Note: This may not be part of the webserver project. This may be a requirement that needs to be relayed to another installadm design.</li><li>Observability tools<br/>Note: not exactly part of web server. We need to relay to installadm design. We need to tell them where to log files. Requirement for Webserver Design for installadm design to be able to identify what mechanism we are using.<br/>&nbsp;May also include Monitoring log files on the server side and detecting fatal errors.<br/>Status sent from the client the server. Have the ability of pushing the client log files to the server.</li><li>Maintenance tools<br/>Tools for tuning the mechanism. Could be a simple set of instructions, or it could be a command.</li><li>Status tools<br/>We should be plugged into smf. The transport mechanism should be an smf service. installadm list should list the clients as well as their transport mechanism<br/>server - Could show the status of what is happening. We could look at paramters and see how the resources are being used<br/>client - also want to show the status of what is happening.</li><li>fault management on both client and server side:<br/>We need to evaluate how to recover from infrastructure failure.<br/>What do you do in the case of data corruption failure.<br/>Incorrect user configuration.</li></ul><h3 id="H8.SecureDelivery"><span>8. Secure Delivery</span></h3><ul><li>Does the transport offers end-end security?<ul><li>DHCP -- none, only obscurity</li><li>TFTP -- none</li><li>HTTP -- end to end via SSL</li><li>BitTorrent -- end to end via SSL</li></ul></li><li>Client side security<ul><li>Encryption -- to prevent data tampering</li><li>Authentication -- to ensure server is correct and expected server</li></ul></li><li>Server side security<ul><li>Encryption -- to prevent data leaking</li><li>Authentication -- to ensure only authorized clients receive data</li><li>Non-Repudiation -- to ensure client got all data sent</li></ul></li><li>What special setup needed to enable security?<ul><li>Key management<ul><li>Server side (setting up SSL keys)</li><li>Client side (distributing keys to clients)<ul><li><em>X86:&nbsp;</em>perhaps a CD or USB</li><li><em>SPARC:&nbsp;</em>WAN Boot has ways of storing key in OBP</li></ul></li><li>Certificate host?</li></ul></li></ul></li></ul><h2 id="HQuestionsweneedtoanswer"><span>Questions we need to answer</span></h2><ol><li>What transport issues could occur when the auto installation process is scaled up to multiple clients?<br/>1* It depends on the number of clients and the amount of server resources available. If the server cannot handle all the requests, there will be performance issues, and reliability issues.<br/>1* It depends on where in the process the failure occurs<br/>1<strong>&nbsp;Initial boot:<br/>1</strong>* <em>X86:&nbsp;</em>Uses DHCP and TFTP if one step fails to respond in time, the boot fails<br/>1<strong>* <em>SPARC:&nbsp;</em>Uses DHCP and HTTP. If one step fails the boot is retried, perhaps 10 times?<br/>1</strong> Boot archive downloads<br/>1<strong>* <em>All:&nbsp;</em>If the download fails, wget(1) can retry, BitTorrent could retry too. This would be specified in the SMF method under the auto-install service</strong></li><li>What factors limit the number of simultaneous client installations, and how can those be scaled?<br/>1* Server resources<br/>1* limitation on the transport we cannot change<br/>1* The inability of the transport to adapt to the scaling</li><li>What steps will a user need to follow in order to set up an AI for multiple clients?<br/>1* This depends on the other tools (installadm etc.)<br/>1* If we are sticking to transport, the user needs to tune the configuration files needed by the transport depending on the need of the environment</li><li>What type of observability tools could we provide to the user that would allow the user to observe the installation, failures that occur in the client, the server, or the data transfer?<br/>1* The transport logs<br/>1* Status monitor for all clients<br/>1* Tool(s) to monitor client transmission to catch status and failures<br/>1* server failure will make the client fail or hang during data transfer</li><li>How will we scale the observability tools to handle simultaneous client installations?</li><li>How will we scale the observability tools if multiple clients are installing from multiple install servers? What about from multiple networks?</li><li>Where is the user located during the installation process? We need to determine this.</li><li>If you have 300 client installations and 35 fail, how do you determine which 35 clients failed?</li><li>What tools do we currently have that might help us develop an observability tool?</li><li>1* Logging in /tmp<br/>1* Networking<br/>1* SNMP traps<br/>1* Others?</li><li>There two phases we need to consider:<br/>1* Before Solaris boots, and the client is in PXEgrub<br/>1* After the Solaris boots</li><li>What failure scenarios should we consider?<br/>1* mechansim could go down<br/>1* Install Server could go down<br/>1* Client could go down</li><li>We need to think about how to make sure that the user can observe what is happening when you have a large number of clients:<br/>1* What points are observable?<br/>1* How will we observe those points?<br/>1* Is there value in observing a particular point?<br/>1* What are the characteristics/attributes a user wants to observe?<br/>1* How will we provide the useful information to the user?<br/>1* What is observable on the client side, the server side, and the interaction between the two?</li><li>What are the logical phases for implementing this design?</li></ol>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by Administrator on 2009/10/26 12:12<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by Ethan Quach on 2009/11/30 22:45
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Project caiman Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Automated_Installer_Wipe_Disk_and_custom_layout_functionality">Automated Installer Wipe Disk and custom layout functionality</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/CUD">Caiman Architecture</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/CUE_docs">Caiman Unified Engine Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Meeting_notes">Meetings</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/CVERS">Caiman Version Compatibility</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/CVERS%2DFUNC">Install Versioning functional spec</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Meet5%2D20">Meeting Notes for 5/20/09</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Meet5%2D28">Meetings Notes from 5/28 and 5/29</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Meet6%2D10">Meeting notes for 6/10/2009</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/NOTES">Meeting notes 5/14/2009</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/mor%2Dnotes">Thoughts and Ideas</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/proposal">Draft Proposal Notes</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Constructor">Distribution Constructor Project</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/DC+Changes+for+CUD_TI">Project caiman.DC Changes for CUD_TI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/DC+Changes+for+Language+Facets">Project caiman.DC Changes for Language Facets</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/DC+to+CUD+Migration">DC to CUD Migration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/DC_docs">Distribution Constructor Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/design_notes">Design Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/weekly_meetings">Distribution Constructor Meetings</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/DataObjectCache">OpenSolaris Installer &#45; Data Object Cache</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Developers">Developer Information</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Driver_Update">Driver Update</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/dduGUIspec">DDU GUI Specification</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Dwarf">Dwarf Caiman Project</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Agendas">Dwarf Project Team Meetings</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Dwarf_Demo">Dwarf Caiman Demo Page</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Extended_Partition_Support">Extended Partition Support</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/EP_Design_Notes">EP Design Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/EP_Reqts_Scope">Extended Partition Support Requirements and Scope</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/SM_design_notes">Slice Modification Design Notes</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Flag+Days">Flag Days</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/AI+Image+Management+Changes">AI Image Management Changes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/AI+support+for+Zones">AI support for Zones</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/AI+support+for+timezone+configuration">AI support for timezone configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/AI_Manifest_Changes">Flag Day: AI Manifest Changes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/DC+Changes+for+Boot+Menu">DC Changes for Boot Menu</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/DCfor169">Project caiman.DCfor169</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Derived_Manifests_1">Derived_Manifests_1</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Driver_Update_Heads_Up">Driver Update Heads Up</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Flag+Day+for+DC+for+AI+image+build+167">Flag Day for DC for AI image build 167</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Flag+Day+for+Distro+constructor">Flag Day for DC in build 164</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Flag+Day+for+bug+15372">Flag Day for bug 15372</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Flag+Day+for+bug+15723">Flag Day for bug 15723</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Flag+Day+for+bug+15784">Flag Day for bug 15784</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Flag+Day+for+bug+4322">Flag Day for bug 4322</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Flag+Day+for+bug+6984618">Flag Day for bug 6984618</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Flag+Day+for+bug+6998550">Flag Day for bug 6998550</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Flag+Day+for+bug+7012389">Flag Day for bug 7012389</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Flag+Day+for+bugs+15678%2D4585">Flag Day for bugs 15678&#45;4585</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Flag+Day+for+bugs+7850%2C10781">Flag Day for bugs 7850,10781</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Flag+day+16740">Flag day 16740</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Flag+day+bug+10039">FLAG DAY: Bootable AI project/defect 10039</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Flag+day+bug+10687">FLAG DAY: Build Machine Maintainers &#45;  additional package required to build slim_source</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Flag+day+bug+13042">Flag Day/Heads Up for bug 13043</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Flag+day+bug+8140">Flag day bug 8140</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Flag+day+bug+8347%2D6092">Flag day bug 8347&#45;6092</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Flag+day+for+AI+manifest+missing+slice+size">Flag day for AI manifest missing slice size</a></span></li>
+<li><a class="wikicreatelink" href="/bin/edit/Project+caiman/+CDDL+stripping+on+binary+product+objects?parent=Project+caiman.WebServerProblemStatement"><span class="wikicreatelinktext">Flag day: CDDL stripping on binary product objects</span><span class="wikicreatelinkqm">?</span></a></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Heads+Up+for+CBE+change">Project caiman.Heads Up for CBE change</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Heads+Up+for+bug+14082">Heads Up for bug 14082</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Heads+Up+for+bug+8205">Heads Up for bug 8205</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Heads+up+for+bug+10039">Heads up: AI from media (aka Bootable AI)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Heads+up+for+bug+13393">Heads up for bug 13393</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Heads+upFlag+day+for+bugs+5451%2C7057%2C7058">Heads up/Flag day for bugs 5451,7057,7058</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Install+Media+Root+Password">Install Media Root Password</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Name+Services">Project caiman.Name Services</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Pre%2DFlag+Day+for+bug+16423">Flag Day for bug 16423</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/SC+Profiles+for+AI">Project Caiman SC Profiles for AI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/SCIv1">Heads up: SCIv1</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Text+Installer+via+AI">Text Installer via AI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/create+service+from+pkg">Project caiman.create service from pkg</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/flag+day+bug+11827">Flag day bug 11827</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/heads_up_Derived_Manifests_script_freedom">Project caiman.Derived_Manifests_script_freedom</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/heads_up_create_manifest">Project caiman.heads_up_create_manifest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/minilander+install+changes">Project caiman.minilander install changes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/system_config_renamed">smf service configuring user and root account renamed in 171</a></span></li>
+</ul></li>
+<li><a class="wikicreatelink" rel="_tags removed from AI manifest" href="/bin/edit/Project+caiman/Heads%2Dup+%3Cadd_drivers?parent=Project+caiman.WebServerProblemStatement"><span class="wikicreatelinktext">Project caiman: Heads&#45;up: add_drivers tags removed from AI manifest</span><span class="wikicreatelinkqm">?</span></a></li>
+<li><a class="wikicreatelink" href="/bin/edit/Project+caiman/+AI+usage+of+prompt+bootarg+needs+a+revisit?parent=Project+caiman.WebServerProblemStatement"><span class="wikicreatelinktext">Heads&#45;up: AI usage of prompt bootarg needs a revisit</span><span class="wikicreatelinkqm">?</span></a></li>
+<li><a class="wikicreatelink" href="/bin/edit/Project+caiman/+DTD+Versioning+in+install+XML+manifests?parent=Project+caiman.WebServerProblemStatement"><span class="wikicreatelinktext">Heads&#45;up: DTD Versioning in install XML manifests</span><span class="wikicreatelinkqm">?</span></a></li>
+<li><a class="wikicreatelink" href="/bin/edit/Project+caiman/+Separate%2Dvar%2Ddataset%2Dfor%2Dinitial%2Dglobal%2Dzone%2Dinstalls%2Din%2Dbuild%2D174?parent=Project+caiman.WebServerProblemStatement"><span class="wikicreatelinktext">Heads&#45;up: Separate var dataset for initial global zone installs in build 174</span><span class="wikicreatelinkqm">?</span></a></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Logging">OpenSolaris Install Logging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/OpenSolarisInstaller+%2D+ManifestParser+and+ManifestWriter">OpenSolarisInstaller &#45; ManifestParser and ManifestWriter</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/SPARC">Caiman on SPARC</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/SPARC_Minutes">SPARC meeting minutes</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Separate+var+dataset+for+initial+Zones+install">Separate var dataset for initial Zones install</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Slim_Install">Slim Install Project</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Meeting_page">Slim Install Meetings</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/issues">Issues Tracked for Oct 2007</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/project_documents">Slim Install Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/slim_annoucememts">Slim Install Announcements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/uiroadmap">Slim UI Roadmap</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/uispec">UI Specification</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Snap_Upgrade">Snap Upgrade Project</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Meetings">Meetings</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Snap_Upgrade_Test">Snap Upgrade Test</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/snap%2Ddocuments">Snap Upgrade Documentation</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/System+Configuration+Project">System Configuration Project</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/SMF_SC_for_AI">SMF based SysConfig manifest</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/TextInstallerProject">Text Based Installer Project</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Prototype">Text Installer Prototype</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Text+Install+b131+Notes">Text Install b131 Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Text+Install+b134+Notes">Text Install b134 Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Text_Install_Prog_Language">Text Installer Programming Language</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/Text_Install_Reqts_Scope">Text Installer Requirements and Scope</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/UI+Code+Review">UI Functionality and Code Review TODO List</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/UI_Specification">Text Installer UI Specification and UI Mockup Screenshots</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/UML_Diagrams">Text Installer UML Diagrams</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/integration_tests">integration_tests</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/UEFI+support">UEFI and Grub2 support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/VMC">Virtual Machine Constructor</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/XML_Parsing">XML Parsing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/auto_install">Automated Installation Project</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/AI+Image+Management">AI Image Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/AI_Documentation">Automated Installation Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/AI_Reqs_Final">Ai Requirements, June 2008</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/AI_Testing">Automated Installation Testing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/AI_mtg">Automated Installer Team Meeting</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/DerivedManifests">Derived Manifests</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/WebServerProblemStatement">Web Server Design Problem Statement</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/WebserverUseCases">WebServer Design Use Cases</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/ai_design">Design Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/ai_prototype">Automated Installer Prototype</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/auto_requirements">Automated Installer Requirements&#45;Initial</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/iSCSI+Boot">iSCSI Boot</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/test_info_summary">Test Information Summary</a></span></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2013, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

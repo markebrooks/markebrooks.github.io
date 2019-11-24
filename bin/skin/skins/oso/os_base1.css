@@ -1,0 +1,385 @@
+/*
+ * CDDL HEADER START
+ * The contents of this file are subject to the terms of the Common
+ * Development and Distribution License (the "License").  You can find a copy
+ * of the License in the file OPENSOLARIS.LICENSE at the root of the source
+ * archive containing this file or at http://www.opensolaris.org/os/licensing.
+ * When distributing Covered Code, include this CDDL header in each file and
+ * include the License file at the root of your source archive.
+ * CDDL HEADER END
+ */
+
+/*
+ * Copyright 2009 Sun Microsystems, Inc.  All rights reserved.
+ */
+
+/* Presentation stylesheet */
+
+/* The document body */
+body {
+    padding: 1em;
+    margin: 0;
+    background-color: white;
+    font-size: 75.01%; /* 12px [1] */
+    line-height: 1.5em; /* 18px [2] */
+    color: black;
+    font-family: "Bitstream Vera Sans", "Lucida Sans", "DejaVu Sans", Arial;
+
+}
+
+/*
+ * #PageBox creates a box surrounding all the content.
+ * The minimum width of the content is controlled here.
+ */
+
+#PageBox {
+    background-color: white;
+    border: none;
+    min-width: 50em;
+    margin: 0;
+}
+
+/*
+ * #Masthead contains the OpenSolaris logo and high level navigation icons.
+ */
+
+#Masthead {
+    height: 60px;
+    background: none;
+    border: none;
+    border-bottom: 4px solid #FFC726;
+}
+#Masthead h1 {
+  display: none;
+}
+#MastheadLogo {
+    background-color: white;
+    background-image: url(icons/header.png);
+    background-position: 0px 20px;
+    background-repeat: no-repeat;
+    float: left;
+    height: 60px;
+    width: 300px;
+    border: none;
+    text-decoration: none;
+}
+div#Iconbar {
+    float: right;
+    margin-top: 4px;
+    margin-right: 2em;
+}
+div#Iconbar a {
+    font-size: 11px;
+    color: #444;
+    text-decoration: none;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    display: block;
+    float: left;
+    margin: 0 0.6em;
+    padding-top: 34px;
+}
+
+div#Iconbar a#CollectivesIcon {
+   background-image: url(icons/collectives.gif);
+}
+div#Iconbar a#DocumentationIcon {
+   background-image: url(icons/documentation.gif);
+}
+div#Iconbar a#DiscussionsIcon {
+    background-image: url(icons/discussions.gif);
+}
+div#Iconbar a#CommunitiesIcon {
+    background-image: url(icons/communities.gif);
+}
+div#Iconbar a#ProjectsIcon {
+    background-image: url(icons/projects.gif);
+}
+div#Iconbar a#DownloadIcon {
+    background-image: url(icons/download.gif);
+}
+div#Iconbar a#SourceBrowserIcon {
+    background-image: url(icons/srcbrowse.gif);
+}
+div#Iconbar a#HelpIcon {
+    background-image: url(icons/help.gif);
+}
+div#Iconbar a#FreeCD {
+    background-image: url(icons/os_com_icon.gif);
+}
+
+/*
+ * #Context provides authentication information
+ */
+
+#Context {
+    background-color: white;
+    float: right;
+}
+/*
+ * #Footer is the area that appears at the bottom of the page.
+ */
+
+#Footer {
+    background-color: white;
+    color: #777;
+    font-size: 95%;
+    margin-top: 1em;
+}
+#Footer p {
+    margin: 0.6em 0 1em 0;
+}
+#Footer a {
+    color: #555;
+}
+#Footer p.LastModified {
+    text-align: right;
+}
+
+span.kr_our_lawyer {
+    color: #E76F00;
+}
+
+/*
+ * General styles used throughout the site.
+ */
+
+th.Row {
+    text-align: left;
+}
+.Help {
+    color: #444;
+    font-size: 0.9em;
+    font-weight: normal;
+}
+.OSBlue {
+    color: #5382a1; /* logo blue */
+}
+.OSRed {
+    color: #e76f00; /* logo red */
+}
+.Center {
+    text-align: center;
+}
+.Small {
+    font-size: 0.95em;
+}
+.Tiny {
+    font-size: 0.90em;
+}
+
+/*
+ * Used for the search box
+ */
+form#Search {
+    padding: 2px;
+    margin: 2px;
+    margin-bottom: 1em;
+}
+form#Search input#criteria_query {
+    background-color: white;
+    color: #444;
+    border: 1px solid #bbf;
+    border-right-color: #93a8bb;
+    border-bottom-color: #93a8bb;
+    font-weight: normal;
+}
+form#Search input#Submit {
+    background-color: #a3b8cb;
+    color: #444;
+    padding: 0;
+    border: 1px solid #bbf;
+    border-right-color: #93a8bb;
+    border-bottom-color: #93a8bb;
+    font-weight: bold;
+}
+
+
+ /* Used for error text */
+
+div.Warning,
+p.Warning,
+h3.Warning {
+    color: red;
+    background-image: url(icons/warning.gif);
+    background-position: top left;
+    background-repeat: no-repeat;
+    padding-left: 19px; /* make space for background image */
+}
+
+ /* Used for invisble tables */
+table.NoBorder th,
+table.NoBorder td {
+    border-style: none;
+}
+
+ /* Base styles for os.org */
+
+h1, h2, h3 {
+    margin-bottom: 0.5em;
+}
+h1+p, h2+p, h3+p, h4+p, h5+p {
+    margin-top: 0;
+}
+h1 {
+    color: #5382A1;
+}
+h2 {
+	font-size: 200%;
+	color: #5382A1;
+	line-height: 1em;
+}
+h3 {
+    font-size: 150%;
+}
+h4 {
+    font-size: 125%;
+}
+h5, h6 {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+    margin-top: 0.2em;
+}
+
+address {}
+
+/* Base Text Styles */
+em {}
+strong {}
+dfn {
+	font-style: normal;
+}
+abbr[title], acronym[title], dfn[title] {
+	cursor: help;
+}
+code, pre {
+    color: black;
+    font-family: "Bitstream Vera Sans Mono", "DejaVu Sans Mono", "Lucida Sans Typewriter", "Lucida Console", Monaco, monospace;
+}
+
+pre {
+    background-color: #efefef;
+    border: 1px solid #ccc;
+    font-size: 100.01%;
+    padding: 0.5em;
+    overflow: visible;
+}
+samp {}
+kbd {}
+var {}
+cite {}
+abbr {}
+acronym {}
+blockquote {}
+q {}
+sub {}
+sup {}
+p {}
+ins {}
+del {}
+
+/* Lists */
+ul, ol {
+    margin-left: 0;
+    padding-left: 1.5em;
+}
+li {
+    margin: 0;
+    padding: 0;
+}
+dl {}
+dt {}
+dd {}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    empty-cells: show;
+    margin: 1em 0 1em 0;
+}
+caption {
+    text-align: left;
+    font-weight: bold;
+}
+thead {}
+tfoot {}
+tbody {}
+colgroup {}
+col {}
+th, td {
+    padding: 0.3em 0.8em;
+    border: 1px solid #999;
+    vertical-align: top;
+}
+
+/* The A element */
+a:link {}
+a:visited {}
+a:link:hover {} /* [4] */
+a:visited:hover {}
+a:active {}
+a:focus {}
+a:focus:hover {}
+
+a img {
+    border-style: none;
+}
+
+
+/* Objects, Images, and Applets */
+img {}
+object {}
+applet {}
+
+/* Alignment, font styles, and horizontal rules */
+
+tt { font-family: "Bitstream Vera Sans Mono","DejaVu Sans Mono","Lucida Sans Typewriter","Lucida Console",Monaco,monospace;}
+i {}
+b {}
+big {}
+small {}
+hr {}
+
+/* Frames */
+iframe {}
+
+/* Forms */
+form {}
+input {
+    font-size: 0.95em;
+}
+textarea {
+    font-size: 1.1em;
+    overflow: auto;
+}
+textarea:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=checkbox]:focus,
+input[type=radio]:focus,
+input[type=file]:focus {
+    background-color: #efefff;
+}
+
+select,
+optgroup,
+option {
+    font-size: 1em;
+}
+
+button {}
+button:focus {}
+select:focus {}
+label {}
+fieldset {}
+legend {}
+
+
+/*
+  [1] All calculations are based on the assumption that 1em is 12px.
+  [2] If you specify a font-size, also consider to specify a line-height property.
+  [3] If you don't specify something other than monospace, mozilla will calculate
+      its own font-size based on the user preferences.
+  [4] "... prevents hover styles from being applied to non-hyperlink anchors."
+      <http://devedge.netscape.com/viewsource/2003/arbitrary-hover/>
+*/

@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>ZFS Dedup FAQ (Community Group zfs.dedup) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Community+Group+zfs/dedup" />
+                    <link rel="canonical" href="/bin/view/Community+Group+zfs/dedup" />
+                            <meta name="document" content="Community Group zfs.dedup"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Community Group zfs"/>
+    <meta name="page" content="dedup"/>
+    <meta name="version" content="88.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Community+Group+zfs/pages/dedup"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="ZFS Dedup FAQ" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="Cindy Swearingen" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/fullScreen.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Community Group zfs";
+XWiki.currentPage = "dedup";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Community+Group+zfs/dedup";
+window.docediturl = "/bin/edit/Community+Group+zfs/dedup";
+window.docsaveurl = "/bin/save/Community+Group+zfs/dedup";
+window.docgeturl = "/bin/get/Community+Group+zfs/dedup";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/viewers/code.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/fullScreen.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Community_Group_zfs viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FCommunity%2BGroup%2Bzfs%2Fdedup%3Fviewer%3Dcode%26%2338%3Blanguage%3Den"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+zfs/"><strong>Community Group zfs</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Community+Group+zfs" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>
+            </td>
+            <td style="width: 99%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                              <a href='/bin/view/Community+Group+zfs/faq'>ZFS FAQ</a> <span class='separator'>&#187;</span> <span class='current'>ZFS Dedup FAQ</span>
+                </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Community+Group+zfs/dedup?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+        <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Community+Group+zfs/dedup?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+zfs/dedup?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+zfs/dedup?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+zfs/dedup?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Community+Group+zfs/dedup?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+zfs/dedup?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+zfs/dedup?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+zfs/dedup?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+zfs/dedup?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Community+Group+zfs/dedup?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+<div id="document-title"><h1>Wiki source code of <a href="/bin/view/Community+Group+zfs/dedup">ZFS Dedup FAQ</a></h1></div>
+                <div id="document-info">
+    <div>
+                      <span id="contentshortcut"><a href="/bin/view/Community+Group+zfs/dedup?viewer=content">Content</a></span>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+
+
+
+
+
+
+<div>
+  <a href="/bin/view/Community+Group+zfs/dedup?viewer=code&amp;showlinenumbers=0&amp;language=en" id="toggleLineNumbers">Hide line numbers</a>
+                                  <textarea readonly="readonly" class="wiki-code" rows="25" cols="80">
+  1: == ZFS Deduplication Frequently Asked Questions (FAQ) ==
+  2: 
+  3: {{toc start=&quot;3&quot; depth=&quot;3&quot; numbered=&quot;true&quot; scope=&quot;local&quot;/}}
+  4: 
+  5: ===**What is ZFS deduplication?**===
+  6: 
+  7: {{toc start=&quot;4&quot; depth=&quot;4&quot; numbered=&quot;true&quot; scope=&quot;local&quot;/}}
+  8: 
+  9: The ZFS deduplication feature removes redundant data from your ZFS file systems. If a file system has the dedup property enabled, duplicate data blocks are removed synchronously. The result is that only unique data is stored and common components are shared between files. For a detailed description of dedup, see [[Jeff's blog entry. &gt;&gt;http://blogs.sun.com/roller/page/bonwick?entry/zfs_dedup]]
+ 10: 
+ 11: * Deduplication occurs at the block level and file block sizes might vary.
+ 12: * Only file data is deduplicated. File metadata is not deduplicated.
+ 13: * Only synchronous deduplication is available.
+ 14: 
+ 15: ===**When are the dedup features available?**===
+ 16: 
+ 17: {{toc start=&quot;4&quot; depth=&quot;4&quot; numbered=&quot;true&quot; scope=&quot;local&quot;/}}
+ 18: 
+ 19: SXCE, build 129, with dedup features and fixes, is available in December 2009.
+ 20: 
+ 21: Known dedup CRs and issues:
+ 22: 
+ 23: 
+ 24: * lack of accounting for DDT in dedup'd frees can oversubscribe txg [[CR 6958873&gt;&gt;http://bugs.opensolaris.org/view_bug.do?bug_id=6958873]]
+ 25: * Writing the same data using different compression algorithms will result in data that cannot be deduplicated.
+ 26: 
+ 27: The SXCE build 129 releases provide the following deduplication features:
+ 28: 
+ 29: * On-disk deduplication - duplicate ZFS data is removed when written to disk if dedup is enabled on a ZFS file system
+ 30: * ZFS send deduplication - duplicate ZFS data is removed over the wire when transmitted by using the zfs send -D option
+ 31: on ZFS file systems whether dedup is enabled or not
+ 32: 
+ 33: The above dedup features are available in ZFS pool version 22.
+ 34: 
+ 35: ===**What should I consider before enabling dedup?**===
+ 36: 
+ 37: {{toc start=&quot;4&quot; depth=&quot;4&quot; numbered=&quot;true&quot; scope=&quot;local&quot;/}}
+ 38: 
+ 39: If you enable dedup on file systems with duplicate data, you should see the benefits of saving space and better performance because less data is written and stored. If you enable dedup on file systems with little duplicate data, you will add system overhead with little benefits gained.
+ 40: 
+ 41: Note: The zdb debugging command can be used to determine the in-core dedup table requirements, but it must be
+ 42: run on pools that are not in use.
+ 43: 
+ 44: Before you enable dedup, review the following recommendations:
+ 45: 
+ 46: 1. Make sure you review the list of known issues that are provided above.
+ 47: 2. You can use the zdb command to simulate the potential space savings of enabling dedup on your pool data.
+ 48: The following command must be run on a quiet pool.
+ 49: 
+ 50: {{{# zdb -S pool-name}}}
+ 51: 
+ 52:    If the estimated dedup ratio is greater than 2, then you might see dedup space savings.
+ 53: 
+ 54: 3. Make sure your system has enough memory to support dedup. Determine the memory requirements for deduplicating your data as follows:
+ 55: 
+ 56: A. Use the zdb -S ouput to determine the in-core dedup table requirements:
+ 57: * Each in-core dedup table entry is approximately 320 bytes
+ 58: * Multiply the number of allocated blocks times 320. For example:
+ 59:   {{{in-core DDT size = 3.75M x 320 = 1200M}}}
+ 60: 
+ 61: B. Additional memory considerations from Roch's excellent blog:
+ 62: 
+ 63: 20 TB of unique data stored in 128K records or more than 1TB of unique data in 8K records would require about 32 GB of physical memory. If you need to store more unique data than what these ratios provide, strongly consider allocating some large read optimized SSD to hold the deduplication table (DDT). The DDT lookups are small random I/Os that are well handled by current generation SSDs.
+ 64: 
+ 65: ===**What are the performance impacts of enabling dedup?**===
+ 66: 
+ 67: {{toc start=&quot;4&quot; depth=&quot;4&quot; numbered=&quot;true&quot; scope=&quot;local&quot;/}}
+ 68: 
+ 69: In general, dedup performance is optimal when the deduplication table fits into memory. If the dedup table has to be written to disk, then performance will decrease. For example, removing a large file system with dedup enabled will severely decrease system performance if the system doesn't meet the memory requirements described above.
+ 70: 
+ 71: Use zdb -DD to display the size of the DDT. This command must be run on a quiet pool.
+ 72: 
+ 73: {{{# zdb -DD pool-name}}}
+ 74: 
+ 75: DDT is considered metadata. Up to 25% of memory (zfs_arc_meta_limit) can be used to store metadata. Monitor size of ZFS memory cache in bytes:
+ 76: 
+ 77: {{{# kstat zfs::arcstats:size}}}
+ 78: 
+ 79: See [[Roch's blog&gt;&gt;http://blogs.sun.com/roch/entry/dedup_performance_considerations1]] that describes factors that might impact deduplication performance.
+ 80: 
+ 81: ===**How do I enable dedup on my ZFS file systems?**===
+ 82: 
+ 83: {{toc start=&quot;4&quot; depth=&quot;4&quot; numbered=&quot;true&quot; scope=&quot;local&quot;/}}
+ 84: 
+ 85: The dedup property can be enabled on a ZFS file system by using the following syntax:
+ 86: 
+ 87: {{{# zfs set dedup=on export}}}
+ 88: 
+ 89: Enabling the dedup property on an existing file system means that all newly written data is deduplicated. Existing file system data remains duplicated.
+ 90: 
+ 91: Deuplication has a pool-wide scope so a read-only pool property, dedupratio, is provided to determine the deduplication ratio realized for your file systems. For example:
+ 92: 
+ 93: {{{# zpool list
+ 94: NAME     SIZE  ALLOC   FREE    CAP  DEDUP  HEALTH  ALTROOT
+ 95: export   928G  47.5G   881G     5%  1.77x  ONLINE  -
+ 96: rpool    928G  25.7G   902G     2%  1.40x  ONLINE  - }}}
+ 97: 
+ 98: A DEDUP ratio of 1.00x generally means that the dedup property is disabled or it has been initially set. As file system deduplication occurs, the DEDUP ratio will generally increase over time.
+ 99: 
+100: The zpool list output has changed in this Solaris release. These changes are described in [[Why has the zpool command changed? &gt;&gt;https://markebrooks.github.io/bin/view/Community+Group+zfs/faq#HWhyhasthezpoolcommandchanged]]
+101: 
+102: **How do I send deduplicated data?**
+103: 
+104: You must use the zfs send -D syntax to send a deduplicated send stream even if the data is already deduped. If your ZFS data is not deduped, then you can send a deduplicated send stream by using the zfs send -D syntax.
+105: 
+106: **What is the dedup checksum?**
+107: 
+108: The default deduplication checksum is sha256. The following syntax is equivalent:
+109: 
+110: {{{# zfs set dedup=on export
+111: # zfs set dedup=sha256 export}}}
+112: 
+113: After the dedup property is enabled on a ZFS file system, the default file system checksum is sha256 for newly created files. Any previously set file system checksum property value, such as the default checksum of fletcher4, is overridden by the dedup property checksum.
+114: 
+115: **Can I verify deduplicated hash comparisons?**
+116: 
+117: You can ask ZFS to verify the SHA256 hash comparisons of blocks to be deduplicated as described in Jeff's blog by using this syntax:
+118: 
+119: {{{# zfs set dedup=verify export}}}
+120: 
+121: However, ZFS uses its own copy of SHA256 and doesn't currently use a crypto accelerator or crypto framework.
+122: 
+123: **How does the dedup property interact with the copies property?
+124: 
+125: A block with copies set to N will always have at least N copies on the system regardless of the number of deduplicated references. 
+126: 
+127: You can use the dedupditto property to specify a threshold, and if the reference count for a deduped block goes above the threshold, another ditto copy of the block is stored automatically. Need dedupditto values here.
+128: 
+129: 
+130: ===**How does ZFS dedup space accounting work?**===
+131: 
+132: {{toc start=&quot;4&quot; depth=&quot;4&quot; numbered=&quot;true&quot; scope=&quot;local&quot;/}}
+133: 
+134: Deduplicated space accounting is reported at the pool level. You must use the ##zpool list## command rather than the ##zfs list## command to identify disk space consumption when ##dedup## is enabled. If you use the ##zfs list## command to review deduplicated space, you might see that the file system appears to be increasing because we're able to store more data on the same physical device. Using the ##zpool list## will show you how much physical space is being consumed and it will also show you the dedup ratio.
+135: 
+136: The ##df## command is not dedup-aware and will not provide accurate space accounting.
+137: 
+</textarea>
+</div>
+
+    <div class="clearfloats"></div>
+  </div>    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Community Group zfs Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/boot">ZFS Boot</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/flash">ZFS Flash Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/zfsbootFAQ">ZFS Boot  Project FAQ</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/demos">Demos</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/basics">ZFS Basics Screencast</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/selfheal">ZFS Self Healing</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/docs">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/faq">ZFS FAQ</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/dedup">ZFS Dedup FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/encrypt">ZFS Encryption FAQ</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/intro">Getting Started</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/links">Links</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/porting">Porting ZFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/source">Source Tour</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/structures">Data Structures</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/translations">Translations</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/french">French</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/japanese">Japanese</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/ptBR">Brazilian Portuguese</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/russian">Russian</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/simplifiedchinese">Simplified Chinese</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/spanish">Spanish</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/version">version</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/1">ZFS Pool Version 1</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/1%2D1">ZFS File System Version 1</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/10">ZFS Pool Version 10</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/11">ZFS Pool Version 11</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/12">ZFS Pool Version 12</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/13">ZFS Pool Version 13</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/14">ZFS Pool Version 14</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/15">ZFS Pool Version 15</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/16">ZFS Pool Version 16</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/17">ZFS Pool Version 17</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/18">ZFS Pool Version 18</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/19">ZFS Pool Version 19</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/2">ZFS Pool Version 2</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/2%2D1">ZFS File System Version 2</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/20">ZFS Pool Version 20</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/21">ZFS Pool Version 21</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/22">ZFS Pool Version 22</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/23">ZFS Pool Version 23</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/24">ZFS Pool Version 24</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/25">ZFS Pool Version 25</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/26">ZFS Pool Version 26</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/27">ZFS Pool Version 27</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/28">ZFS Pool Version 28</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/29">ZFS Pool Version 29</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/3">ZFS Pool Version 3</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/3%2D1">ZFS File System Version 3</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/30">ZFS Pool Version 30</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/31">ZFS Pool Version 31</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/4">ZFS Pool Version 4</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/4%2D1">ZFS File System Version 4</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/5">ZFS Pool Version 5</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/5%2D1">ZFS File System Version 5</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/6">ZFS Pool Version 6</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/7">ZFS Pool Version 7</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/8">ZFS Pool Version 8</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/9">ZFS Pool Version 9</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/N">versionN</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/N%2D1">zplN</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/whatis">What is ZFS?</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/zfstestsuite">ZFS Test Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/ztest">ZTEST</a></span></li>
+</ul>
+                    </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2012, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

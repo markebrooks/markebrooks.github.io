@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Plugable Authentication Modules (Community Group arc.PAM) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Community+Group+arc/PAM" />
+                    <link rel="canonical" href="/bin/view/Community+Group+arc/PAM" />
+                            <meta name="document" content="Community Group arc.PAM"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Community Group arc"/>
+    <meta name="page" content="PAM"/>
+    <meta name="version" content="16.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Community+Group+arc/pages/PAM"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Plugable Authentication Modules" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="Asa Romberger" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Community Group arc";
+XWiki.currentPage = "PAM";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Community+Group+arc/PAM";
+window.docediturl = "/bin/edit/Community+Group+arc/PAM";
+window.docsaveurl = "/bin/save/Community+Group+arc/PAM";
+window.docgeturl = "/bin/get/Community+Group+arc/PAM";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Community_Group_arc viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FCommunity%2BGroup%2Barc%2FPAM"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+arc/"><strong>Community Group arc</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Community+Group+arc" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+            </td>
+            <td id="logo-text" style="width: 1%;">
+                Solaris
+            </td>         
+            <td style="width: 98%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                              <a href='/bin/view/Community+Group+arc/policies'>ARC Policies</a> <span class='separator'>&#187;</span> <span class='current'>Plugable Authentication Modules</span>
+                </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Community+Group+arc/PAM?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Community+Group+arc/PAM?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+arc/PAM?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+arc/PAM?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+arc/PAM?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Community+Group+arc/PAM?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+arc/PAM?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+arc/PAM?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+arc/PAM?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+arc/PAM?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Community+Group+arc/PAM?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+                      
+<div id="document-title"><h1>Plugable Authentication Modules</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h1 class='hidden'>Plugable Authentication Modules</h1><p>Copyright 2006, Sun Microsystems, Inc</p><h3 id="HPolicySynopsis"><span>Policy Synopsis</span></h3><p>Identification, Authentication or Re-authentication, Password Change requires the use of PAM</p><h3 id="HContents"><span>Contents</span></h3><ul><li><span class="wikilink"><a href="#HApplicability">Applicability</a></span></li><li><span class="wikilink"><a href="#HAudience">Audience</a></span></li><li><span class="wikilink"><a href="#HBackground">Background</a></span></li><li><span class="wikilink"><a href="#HPolicy">Policy</a></span></li><li><span class="wikilink"><a href="#HDocumentation">Documentation</a></span></li><li><span class="wikilink"><a href="#HAdvice">Advice</a></span></li><li><span class="wikilink"><a href="#HAppeals">Appeals</a></span></li><li><span class="wikilink"><a href="#HCaseHistory">CaseHistory</a></span></li><li><span class="wikilink"><a href="#HManPages">ManPages</a></span></li><li><span class="wikilink"><a href="#HReferences">References</a></span></li><li><span class="wikilink"><a href="#HPolicyChangeLog">PolicyChangeLog</a></span></li></ul><h3 id="HOverview"><span>Overview</span></h3><table><tr><th scope="col">Category</th><th scope="col">Software</th></tr><tr><td>Owner</td><td>SAC</td></tr><tr><td>Author</td><td>Gary.Winiger</td></tr><tr><td>Changes</td><td>Gary.Winiger</td></tr><tr><td>Authority</td><td>PSARC</td></tr><tr><td>Policy Version</td><td>1.0-1.16</td></tr><tr><td>Status</td><td>Draft</td></tr><tr><td>Effective</td><td>Solaris 2.6</td></tr></table><h2 id="HApplicability"><span>Applicability</span></h2><p>All Sun programs which are delivered with, installed on, or executed on Solaris/Linux which perform user identification and authentication, re-authentication, user session establishment or password change of Solaris/Linux user accounts</p><h2 id="HAudience"><span>Audience</span></h2><p>ARCs, Project teams</p><h2 id="HBackground"><span>Background</span></h2><p>The general concept of this best practice is that all Sun programs which use PAM (see pam(3PAM)) should do so in a uniform manner. PAM provides for a set of service modules (see pam_sm(3PAM)) which implement the semantics of the PAM interfaces. These service modules may be delivered with Solaris or may come from ISVs or local sites. The local site administrator is responsible for building an appropriate pam.conf(4) file to define the site's policy. Assumptions cannot be made on what the configured service modules actually do, only that they will return various success and failure codes to the application.</p><p>Furthermore, PAM service modules can communicate with the user through PAM conversation call backs (see pam_start(3PAM)). Applications need to ensure that communication with the user is free from alteration. Applications can make no assumptions relative to this communication other than it is already in the application's locale. They must not interpret the information content of messages supplied to the conversation functions. Applications should code conversation functions to communicate whatever comes from the PAM service modules and to return user input as requested.</p><p>Messages may contain multiple lines denoted by the newline character (<span class="box code"><span style="color: #BA2121; ">'\n'</span></span>) and other C language formatting characters such as alert (bell, <span class="box code"><span style="color: #BA2121; ">'\a'</span></span>), backspace (<span class="box code"><span style="color: #BA2121; ">'\b'</span></span>), and tab (<span class="box code"><span style="color: #BA2121; ">'\t'</span></span>). When processing prompting messages (PAM_PROMPT_ECHO_OFF, PAM_PROMPT_ECHO_ON), a final newline should not be output. When processing error (PAM_ERROR_MSG) and informational (PAM_TEXT_INFO) messages, a final newline should be output.</p><h2 id="HPolicy"><span>Policy</span></h2><ul><li><strong>Applies to</strong> Software that runs on Solaris that does any form of authentication, re-authentication, or password change.</li><li><strong>Authority</strong> PSARC</li><li><strong>Effective</strong> Solaris 2.6</li><li><strong>Policy</strong> PAM provides a set of interfaces that all Solaris programs which do user identification and authentication, or re-authentication, or user session establishment, or user password change of Solaris user accounts are required to use.</li><li><strong>Details</strong> When using the PAM interfaces outlined below, a single "PAM session" should be maintained across the calls. <span class="box code">pam_start()</span> returns a "PAM handle", which defines the PAM session. <span class="box code">pam_end()</span> ends the PAM session and frees the PAM resources.<div><p>The program calling PAM interfaces must be sufficiently privileged to do the requested operations (authentication, password change, process credential manipulation, audit state initialization).</p><h3 id="HUserIdentificationandAuthentication28orre-authentication29"><span>User Identification and Authentication (or re-authentication)</span></h3><p>The interfaces necessary to use whenever authenticating a user are:</p><ul><li>Initialization<div><div class="box code">pam_start()</div><div class="box code">pam_set_item()</div><p>As needed, various PAM items should be set. In particular, PAM_TTY should reflect the terminal through which the user communication takes place; PAM_RHOST should reflect the remote host from which the user is entering the system (such as from a TELNET or XDMCP request); PAM_REPOSITORY should reflect any user account repository restrictions; PAM_RESOURCE should reflect any specific resource controls.</p></div></li></ul><ul><li>Authentication<div><div class="box code">pam_authenticate()</div><p>The PAM_DISALLOW_NULL_AUTHTOK flag must be passed, if the application configuration file specifies whether null passwords are disallowed. If the application does not have a configuration file which has a null password configuration option, /etc/default/login:PASSREQ=YES, must be used.</p><div class="box code">pam_acct_mgmt()</div><p>Similarly, if the PAM_DISALLOW_NULL_AUTHTOK flag would be passed to pam_authenticate above, it must also be passed here.</p><p>If pam_acct_mgmt() returns PAM_SUCCESS, the user is authenticated.</p><p>If pam_acct_mgmt() returns PAM_NEW_AUTHTOK_REQD, then pam_chauthtok() should be called to allow the user to change password. See Password Change below for more details. Following a correct password change, the user is authenticated.</p><p>If pam_acct_mgmt() returns any other value, then the authentication has failed and the application should terminate the PAM session and take action consistent with an authentication failure.&nbsp;</p></div></li></ul><ul><li>Credential Establishment<div><p>pam_setcred() should be called with the PAM_ESTABLISH_CRED flag if a new user session is being established (such as login would do).</p><p>pam_setcred() should be called with the PAM_REFRESH_CRED flag if the user session is the renewal of an existing session (such as re-authentication unlocking an existing session).</p><p>pam_setcred() should be called with the PAM_REINITIALIZE_CRED flag if the session is changing the credentials (such as su or role assumption).&nbsp;</p></div></li></ul><ul><li>Session Establishment<div><p>pam_open_session() should be called if a new user session is being established (such as login would do).&nbsp;</p></div></li></ul><ul><li>Environment Establishment<div><p>pam_getenvlist() should be called and the returned environment merged with the environment being established if a new environment is being established (such as login would do).</p></div></li></ul><ul><li>Termination<div><p>pam_end() should be called to cleanup the storage associated with the PAM session when the entire process is complete.</p><p>For a successful process, the PAM_SUCCESS status should be passed.</p><p>For an unsuccessful process, the status returned by the failed PAM interface should be passed.</p></div></li></ul><h3 id="HPasswordChange"><span>Password Change</span></h3><p>The interfaces necessary to use when changing a user's password (such as passwd(1) would do) are:</p><div class="box code">pam_start()</div><p><span class="box code">pam_set_item()</span> - as needed</p><p><span class="box code">pam_authenticate()</span> - to authenticate the old password</p><p><span class="box code">pam_acct_mgmt()</span> - to validate the account</p><div><p>Only PAM_SUCCESS and PAM_NEW_AUTHTOK_REQD are valid return codes to continue with password change. Any other value, should be treated as an authentication failure and the application should terminate the PAM session and take action consistent with an authentication failure.</p></div><p><span class="box code">pam_chauthtok()</span> - to change the new password</p><div><p>A return code of PAM_SUCCESS indicates a successful password change.</p><p>Return codes PAM_AUTHTOK_LOCK_BUSY and PAM_TRY_AGAIN indicates temporary conditions that are not a password change error and pam_chauthtok() should be retried later.</p><p>A return code of PAM_AUTHTOK_ERR indicates a user error that should count against the number of tries the user is given before the password change is considered a password change failure.</p><p>All other return codes indicate a fatal failure and the application should terminate the PAM session and take action consistent with a password change failure.</p></div><div class="box code">pam_end()</div><div class="wikimodel-emptyline"></div><h3 id="HExportedInterfaces"><span>Exported Interfaces</span></h3><p>The service name(s) that <span class="box code">pam_start()</span> is invoked with are part of the exported interfaces of programs calling PAM and must be included in ARC review. They are an administrative interface consumed by pam.conf(4). It is suggested that the service name represent the program or function name (e.g., "login" for login(1), "su" for su(1M), "dtlogin" for CDE login, "xlock" for X display xlock(1), "ftp" for in.ftpd(1M)).&nbsp;</p><h2 id="HDocumentation"><span>Documentation</span></h2><p>It is required that the PAM service name(s) and the service module types that are used be documented on the program manual page. Service module types are: authentication, account management, session management, and password management.</p></div></li></ul><h2 id="HAdvice"><span>Advice</span></h2><h3 id="HAWordonAuditing"><span>A Word on Auditing</span></h3><p>Though not directly part of user identification, authentication, or password change, auditing successful and failed authentication and password change is a requirement of Solaris. See <span class="wikiexternallink"><a href="http://sac.eng/cgi-bin/bp.cgi?NAME=audit.bp">&nbsp;Solaris Auditing Policy.</a></span></p><h2 id="HAppeals"><span>Appeals</span></h2><p>Discuss during your ARC review.</p><h2 id="HCaseHistory"><span>CaseHistory</span></h2><table><tr><th scope="col">Case</th><th scope="col">Type</th><th scope="col">Name</th><th scope="col">Comment</th></tr><tr><td><span class="wikiexternallink"><a href="http://arc.opensolaris.org/caselog/PSARC/1995/269">/PSARC/1995/269</a></span></td><td>OnePager</td><td>&nbsp;PAM Upgrade Project  </td><td>&nbsp;Plugable Authentication Modules (PAM) Upgrade</td></tr><tr><td><span class="wikiexternallink"><a href="http://arc.opensolaris.org/caselog/PSARC/2001/255">/PSARC/2001/255</a></span></td><td>FastTrack</td><td>&nbsp;PAM_REPOSITORY pam_item  </td><td>&nbsp;PAM_REPOSITORY pam_item</td></tr><tr><td><span class="wikiexternallink"><a href="http://arc.opensolaris.org/caselog/PSARC/2003/530">/PSARC/2003/530</a></span></td><td>FastTrack</td><td>&nbsp;PAM_RESOURCE  </td><td>&nbsp;PAM_RESOURCE pam_item</td></tr><tr><td><span class="wikiexternallink"><a href="http://arc.opensolaris.org/caselog/PSARC/2004/516">/PSARC/2004/516</a></span></td><td>FastTrack</td><td>&nbsp;PAM_SERVICE item policy enforcement  </td><td>&nbsp;PAM_SERVICE item policy enforcement</td></tr></table><h2 id="HManPages"><span>ManPages</span></h2><table><tr><th scope="col">Document</th><th scope="col">Description</th></tr><tr><td>pam.3pam</td><td> </td></tr><tr><td>pam_sm.3pam</td><td> </td></tr><tr><td>pam_acct_mgmt.3pam</td><td> </td></tr><tr><td>pam_authenticate.3pam</td><td> </td></tr><tr><td>pam_chauthtok.3pam</td><td> </td></tr><tr><td>pam_getenvlist.3pam</td><td> </td></tr><tr><td>pam_open_session.3pam</td><td> </td></tr><tr><td>pam_setcred.3pam</td><td> </td></tr><tr><td>pam_set_item.3pam</td><td> </td></tr><tr><td>pam_start.3pam</td><td> </td></tr><tr><td>pam.conf.4</td><td> </td></tr></table><h2 id="HReferences"><span>References</span></h2><p><span class="wikicreatelink"><a href="/bin/create/pam_tty_conv/c?parent=Community+Group+arc.PAM">&nbsp;Code sample of a tty based PAM conversation function</a></span></p><h2 id="HPolicyChangeLog"><span>PolicyChangeLog</span></h2><table><tr><th scope="col">Version</th><th scope="col">Date</th><th scope="col">By</th><th scope="col">Description</th></tr><tr><td>1.16  </td><td>07/12/06  </td><td>plocher  </td><td>added SCCS-I to Version  </td></tr><tr><td>1.15  </td><td>07/01/18  </td><td>gww  </td><td>communication alteration  </td></tr><tr><td>1.14  </td><td>07/01/18  </td><td>gww  </td><td>Add pointer to Solaris Auditing Policy  </td></tr><tr><td>1.13  </td><td>04/08/24  </td><td>gww  </td><td>Add code sample conversation function  </td></tr><tr><td>1.12  </td><td>04/08/06  </td><td>gww  </td><td>Joep comments  </td></tr><tr><td>1.11  </td><td>04/08/06  </td><td>gww  </td><td>Darren  </td></tr><tr><td>1.10  </td><td>04/08/04  </td><td>gww  </td><td>add detail relative to re-authentication<br/>still have outstanding review comments from Darren and Joep to<br/>integrate.  </td></tr><tr><td>1.9  </td><td>04/05/14  </td><td>gww  </td><td>typo  </td></tr><tr><td>1.8  </td><td>04/05/14  </td><td>gww  </td><td>Add environment  </td></tr><tr><td>1.7  </td><td>03/12/20  </td><td>gww  </td><td>grammar  </td></tr><tr><td>1.6  </td><td>03/12/20  </td><td>gww  </td><td>fix typo  </td></tr><tr><td>1.5  </td><td>03/12/06  </td><td>gww  </td><td>Update conversation function requirements  </td></tr><tr><td>1.4  </td><td>03/11/21  </td><td>gww  </td><td>Add service name and documentation requirements  </td></tr><tr><td>1.3  </td><td>02/12/04  </td><td>plocher  </td><td>fixed man page list syntax  </td></tr><tr><td>1.2  </td><td>02/11/27  </td><td>gww  </td><td>From Darren and Joep review comments  </td></tr><tr><td>1.1  </td><td>02/11/26  </td><td>plocher  </td><td>date and time created 02/11/26 11:50:37 by plocher  </td></tr></table>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:07<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by Asa Romberger on 2010/03/05 21:42
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Community Group arc Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/ARCAgenda">ARCAgenda</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dfaq">FAQ</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dalias%2Dusage">Use of the OpenSolaris aliases</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dfasttrack%2Dhandbook">ARC Fasttrack Handbook</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dlifecycle">When should developers interact with the ARC?</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dproject%2Dsize">What sort of changes need ARC approval?</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dpublish%2Dhistorical%2Dchecklist">How do I publish/request an existing Sun ARC Case?</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dreview%2Dadvice">How to succeed with an Architectural review</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dreview%2Doverview">What is an ARC Review?</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dreview%2Dprep">Planning for the Architectural Review</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dsponsor%2Dhandbook">ARC Fast&#45;Track Sponsor Duties</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/faq%2Dprinciples%2Dfor%2Dchanges">General Principles for Requiring Changes to Projects</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/sun%2Darc%2Dcharter">Announcing the Systems Architecture Process</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dglossary">Glossary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bestpractices">ARC Best Practices</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Darc%2Dalias%2Dusage">ARC Alias Usage Guidelines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Darch%2Dcomponents%2Dinterfaces">Architecture = Components + Interfaces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Dcommandlines">Command Lines and arguments</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Dconfigfiles">Configuration Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Ddevice%2Ddrivers">Device Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Denvariables">Environment Variables</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Dhardware%2Ddependencies">Hardware Platform Dependencies</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Di18n">Internationalization (I18n)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Dinterfaces">Changes to interfaces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Dinterproject%2Dcompatibility">Inter&#45;Project Compatibility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Dlibraries">Libraries</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Dnamespaces">Namespace Management and Conventions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Dos%2Ddependencies">Operating System Compatibility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Dperformance">Performance</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Dsignals">Signals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Dstandards">Standards Conformance</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/overview%2Dadmin%2Dsecurity">Administrative and Security Precedents and Policies</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/passwords%2Dcli">Reusable Passwords In Command Line Arguments and Environment Variables</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/passwords%2Dfiles">Storing Reusable Passwords on a Filesystem</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/rbac%2Dauths">Adding RBAC Authorizations</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/rbac%2Dintro">When to use setuid &#45;vs&#45; RBAC roles and profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/rbac%2Dprofiles">Building RBAC Rights Profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/security%2Dquestions">Security Questions</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/caselog">Caselog</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/handbook">ARC Handbook</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Ddev%2Dprocess">ARC Process Proposal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dgoals">Goals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dinvite">Introduction to the ARC message for project teams</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dscope">Responsibilities</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/case%2Dpub%2Dtool%2Dinfo">Case Publishing Tool Information</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/consolidation%2Dcharter">Chartering a Consolidation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/contract">Template for interface "contract"</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/onepager">Template for ARC Project creation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/opinion">Template for ARC Opinion</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/questionnaire">10 Questions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/sun%2Dreviewprocess">Reference: Sun’s current internal ARC process</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/policies">ARC Policies</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/ITS">Install Time Security</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/NITS%2Dpolicy">Network Install&#45;Time Security</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/PAM">Plugable Authentication Modules</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/SMF%2Dpolicy">Service Management Facility (SMF) usage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/audit%2Dpolicy">Audit Policy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/fma%2Devent%2Dprotocol">FMA Event Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/install%2Dlocations">Recommended Installation Locations for Solaris&#45;compatible Software Components</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/interface%2Dtaxonomy">Interface Taxonomy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/libraries">Library and Shared Object Requirements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/obsolete%2Deof">Obsolete and the EOF process</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/release%2Dtaxonomy">Release Taxonomy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/secure%2Dby%2Ddefault">Secure &#45; By Default</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/shared%2Dsharable">Packaging rules for system extensions (Shared and sharable components)</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/projects">Projects</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/testbed">Testing area for automated scripts</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/Developers">OpenSolaris Developers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/Distros">OpenSolaris Distros</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/Users">OpenSolaris Users</a></span></li>
+</ul></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2012, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

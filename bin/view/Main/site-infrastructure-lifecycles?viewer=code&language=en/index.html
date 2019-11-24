@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Site Infrastructure (Main.site-infrastructure-lifecycles) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Main/site%2Dinfrastructure%2Dlifecycles" />
+                    <link rel="canonical" href="/bin/view/Main/site%2Dinfrastructure%2Dlifecycles" />
+                            <meta name="document" content="Main.site-infrastructure-lifecycles"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Main"/>
+    <meta name="page" content="site-infrastructure-lifecycles"/>
+    <meta name="version" content="14.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Main/pages/site-infrastructure-lifecycles"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="google-site-verification" content="w1hwBFkJyIZhLy6Y6RK5S5lEb29buQ48gG3nCUMTR28" />
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/fullScreen.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Main";
+XWiki.currentPage = "site-infrastructure-lifecycles";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Main/site%2Dinfrastructure%2Dlifecycles";
+window.docediturl = "/bin/edit/Main/site%2Dinfrastructure%2Dlifecycles";
+window.docsaveurl = "/bin/save/Main/site%2Dinfrastructure%2Dlifecycles";
+window.docgeturl = "/bin/get/Main/site%2Dinfrastructure%2Dlifecycles";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/viewers/code.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/fullScreen.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Main viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FMain%2Fsite%252Dinfrastructure%252Dlifecycles%3Fviewer%3Dcode%26%2338%3Blanguage%3Den"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Main/"><strong>Main</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Main" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <div id="header_banner">
+	<table style="width: 100%;">
+	    <tr>
+		<td style="width: 1%;">
+		    <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+		</td>
+		<td id="logo-text" style="width: 1%;">
+		    Solaris
+		</td>         
+		<td style="width: 98%;">
+		    <table id="loading-indicator">
+			<tr>
+			    <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+				    alt="Loading" title="Loading"/></td>
+			    <td>Loading...</td>
+			</tr>
+		    </table>
+		</td>
+		<td style="width: 1%;">
+		    <table id="iconbar">
+			<tr>
+			<td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+			    Collectives</a></td>
+			<td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+				Discussions</a></td>
+			<td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+				Documentation</a></td>
+			<td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+				Download</a></td>
+			<td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+				Source Browser</a></td>
+			</tr>
+		    </table>
+		</td>
+	    </tr>
+	</table>
+    </div>
+    <div id="site-notice">
+	<span>
+	    <a href="https://markebrooks.github.io/bin/view/Main/">ATTENTION: This website and all services within the opensolaris.org domain will be unavailable after March 24, 2013.</a>	   
+	</span>
+    </div>
+</div>
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                  <span class='current'>Site Infrastructure</span>
+          </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Main/site%2Dinfrastructure%2Dlifecycles?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+        <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Main/site%2Dinfrastructure%2Dlifecycles?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Main/site%2Dinfrastructure%2Dlifecycles?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Main/site%2Dinfrastructure%2Dlifecycles?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Main/site%2Dinfrastructure%2Dlifecycles?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Main/site%2Dinfrastructure%2Dlifecycles?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Main/site%2Dinfrastructure%2Dlifecycles?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Main/site%2Dinfrastructure%2Dlifecycles?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Main/site%2Dinfrastructure%2Dlifecycles?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Main/site%2Dinfrastructure%2Dlifecycles?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Main/site%2Dinfrastructure%2Dlifecycles?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          <span class="submenuitem "><a href="/bin/view/Main/site%2Dinfrastructure%2Dlifecycles?xpage=copy" id="tmActionCopy" class="tmActionCopy">Copy</a></span>
+      </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+<div id="document-title"><h1>Wiki source code of <a href="/bin/view/Main/site%2Dinfrastructure%2Dlifecycles">Site Infrastructure</a></h1></div>
+                <div id="document-info">
+    <div>
+                      <span id="contentshortcut"><a href="/bin/view/Main/site%2Dinfrastructure%2Dlifecycles?viewer=content">Content</a></span>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+
+
+
+
+
+
+<div>
+  <a href="/bin/view/Main/site%2Dinfrastructure%2Dlifecycles?viewer=code&amp;showlinenumbers=0&amp;language=en" id="toggleLineNumbers">Hide line numbers</a>
+                            <textarea readonly="readonly" class="wiki-code" rows="25" cols="80">
+ 1: = Website Infrastructure Life Cycles =
+ 2: 
+ 3: == Introduction ==
+ 4: 
+ 5: This document outlines the policies and procedures for managing community website infrastructure on opensolaris.org.
+ 6: 
+ 7: The website supports three types of community infrastructure ~-~- Community Groups, Projects, and User Groups. During regular operations, members of the community propose and manage their own groups on the site as per the OpenSolaris Constitution. But the processes for actually activating, deactivating, reactivating, transitioning, and terminating the infrastructure are managed by administrators from the Website Engineering Team ^^[1]^^. In the sections below, the interactions between the community and the website administrators are described, and the materials community members need to properly manage their groups are documented.
+ 8: 
+ 9: === Contacts ===
+10: 
+11: * For questions concerning the implementation of community infrastructure, post to **website-admin AT opensolaris DOT org**.
+12: 
+13: == Life Cycles ==
+14: 
+15: The policies for approving Community Groups, Projects, and User Groups are the same, and the implementation procedures are largely the same as well. Any distinctions or exceptions involving implementation are are called out in the text below.
+16: 
+17: === Activation ===
+18: 
+19: Community Groups, Projects, and User Groups are approved via processes outlined in the OpenSolaris Governing Board's &quot;Lifecycle Administrative Procedures&quot; document, which is part of the OpenSolaris Constitution. To engage the implementation procedures after a group is approved, send mail to [[website-admin&gt;&gt;mailto:website-admin@opensolaris.org]] requesting that the group be set up on the site. All communication from that point forward will take place on website-admin. Note that the website-admin list is private, and the following information is required:
+20: 
+21: * The bug ID and link to the bug report documenting the original request and approval.
+22: * The full title ^^[2]^^ of the group and the abbreviation name ^^[2]^^ for the group's URL (For example: Full title: Installation and Packaging. Abbreviation name for URL: install). Do not use &quot;Solaris&quot; or &quot;OpenSolaris&quot; in the name of a Community Group or Project. Solaris and OpenSolaris are trademarks ^^[3]^^ of Oracle Corporation and will not be used without Oracle legal approval. Use a generic name instead. Although &quot;OpenSolaris&quot; is a trademark, it is considered fair use to use OpenSolaris in the name of a User Group, such as Tokyo OpenSolaris User Group. We encourage this format.
+23: * A brief public description of the group.
+24: * The opensolaris.org user names and email addresses of the group's Facilitator and Leaders.
+25: * If the group requires a mailing list, the name of the list ^^[2]^^, and the names of Leaders who will administer the list. Names for group lists should be in the following format:
+26: ** For Community Groups: **[name]-discuss AT opensolaris DOT org**
+27: ** For Projects: **[name]-dev AT opensolaris DOT org**
+28: ** For Projects: **[name]-discuss AT opensolaris DOT org**
+29: ** For Projects: **[name]-notify AT opensolaris DOT org**
+30: ** For User Groups: **ug-[name]osug AT opensolaris DOT org**
+31: 
+32: If everything is in order, a space will be set up on the site and Leaders will be added to the group in the Auth database. The OGB Secretary will add the Facilitator to the group's Electorate in Auth since that is a governance role (NOTE: Currently, governance roles will only be added to Community Group Electorates]. Leaders of all groups are expected to populate their pages with content and announce their new group on **opensolaris-announce AT opensolaris DOT org** ([[subscribe here&gt;&gt;http://mail.opensolaris.org/mailman/listinfo/opensolaris-announce]]). To properly maintain their website infrastructure, all group Leaders are also responsible for following these website policies:
+33: 
+34: 1. [[OpenSolaris Website Guidelines&gt;&gt;Main.site_guidelines]]
+35: 1. [[OpenSolaris Trademarks Policy&gt;&gt;Main.trademark]]
+36: 1. [[Website User Guide&gt;&gt;Main.site-user-guide]]
+37: 1. [[Posting Source and Binaries&gt;&gt;Main.posting_instr]]
+38: 1. [[OpenSolaris Mailing List Policy&gt;&gt;Community Group web.Mail List Overview]]
+39: 
+40: === Deactivation and/or Termination ===
+41: 
+42: There are two ways a group's website infrastructure can be deactivated and/or terminated:
+43: 
+44: 1. The Website Team can deactivate and/or terminate website infrastructure if it is not well maintained (filled with spam or violations of the TOU, etc) or abandoned for 3 months based on the [[OpenSolaris Website Guidelines&gt;&gt;Main.site_guidelines]].
+45: 1. Group Leaders can request that their group be deactivated and/or terminated.
+46: 
+47: In these cases, the procedures below will be followed:
+48: 
+49: * If the Website Team initiates this action, the team will post mail to the group's list requesting that action be taken to maintain the site's infrastructure properly. If a group's website infrastructure becomes completely abandoned, the Website Team will post mail to the OGB requesting that action be taken to replace the Leaders and/or deactivate/terminate the group. If a decision is not made within 3 months, the Website Team can deactivate and/or terminate the group.
+50: ** In the case of deactivation, mailing lists and forums will be reset to disable new subscriptions and new postings but archives will be saved. If there has been no activity to archive, the lists and forums will be deleted. In the case of termination instructions the group's Leaders, the mailing list infrastructure will be deleted.
+51: ** In the case of deactivation, the group's web pages will be tagged with text indicating that the group is no longer active, and the members of the group who have website edit privileges will no longer have the ability to edit the group's web pages unless the group is reactivated. However, any governance privileges among group members will remain unless the OGB specifies otherwise. In the case of termination instructions the group's Leaders, the group space on the site will be deleted.
+52: * If Community Group Leaders initiate the process, they will follow the Lifecycle Administrative Procedures&quot; document.
+53: * Source Code Management for Projects
+54: ** Access to SCM repositories will be disabled if a Project is deactivated. SCM repositories will be deleted if a Project is terminated.
+55: ** To request that repositories be deleted on active Projects, the Leaders should post to **tonic-ops AT sun DOT com** and/or **website-admin AT opensolaris DOT org **and the Website Team will delete the repos. In the future, this feature will be added to the SCM Console so Leaders can delete repositories themselves.
+56: 
+57: === Reactivation and/or Transition ===
+58: 
+59: To reactivate an inactive group or transition a group to a different type, follow the OGB's the Lifecycle Administrative Procedures document and send mail to [[website-admin&gt;&gt;mailto:website-admin@opensolaris.org]] with the following information:
+60: 
+61: * The names of the group and mailing list.
+62: * The opensolaris.org user names and email addresses of the group's Facilitator and Leaders.
+63: * The opensolaris.org user names and email addresses of the Leaders who will administer the mailing list.
+64: 
+65: == References ==
+66: 
+67: === Website Documents ===
+68: 
+69: * [[OpenSolaris Website Community&gt;&gt;Community Group web.WebHome]]
+70: * [[Website User Guide&gt;&gt;Main.site-user-guide]]
+71: * [[OpenSolaris Website Guidelines&gt;&gt;Main.site_guidelines]]
+72: * [[OpenSolaris Trademarks Policy&gt;&gt;Main.trademark]]
+73: * [[Posting Source and Binaries&gt;&gt;Main.posting_instr]]
+74: * [[Website Roles &amp; Collectives&gt;&gt;Main.site-roles-collectives]]
+75: * [[Infrastructure Life Cycle Instructions&gt;&gt;Main.site-infrastructure-lifecycles]]
+76: * [[OpenSolaris Mailing List Policy&gt;&gt;Community Group web.Mail List Overview]]
+77: * [[Help&gt;&gt;Main.help]], [[Contacts&gt;&gt;Main.contact]], [[FAQs&gt;&gt;Main.faq]], [[About&gt;&gt;Main.about]]
+78: 
+79: == Notes ==
+80: 
+81: ^^[1]^^ The Website Engineering Team, which is part of Oracle's OpenSolaris Open Development Engineering Team, builds and supports opensolaris.org on behalf of Oracle Corporation and the OpenSolaris Community. The team also leads the [[Website Community Group&gt;&gt;Community Group web.WebHome]] and updates the Infrastructure Life Cycle Documentation regularly to reflect changes in the OpenSolaris community and/or program.
+82: 
+83: ^^[2]^^ The &quot;title&quot; of any Collective on the site is the text appearing at the top of a group's home page and also in the left drop-down navigation bar. That text can be edited. The &quot;name&quot; of any Collective on the site is the text that appears at the end of the URL. That text __can not__ be edited once chosen and it __must be unique__ to all the Collectives on the site. Also, regarding names for mailing lists, most groups choose to name their lists using the same name as as they use for their Collectives. This is not required but it is highly recommended for consistency.
+84: 
+85: ^^[3]^^ [[OpenSolaris Trademarks Policy&gt;&gt;Main.trademark]]
+86: 
+</textarea>
+</div>
+
+    <div class="clearfloats"></div>
+  </div>    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Main Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Main/AllDocs">Documents on this Wiki</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/Dashboard">Dashboard</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/RssFeeds">RSS Feeds</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/Search">Search</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/Tags">Tags</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/about">About</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/bug_reports">Sponsor Pgm Bug Activity</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/collectives">Website Collectives</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/copyrights">Copyright Policy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/discussions">Discussions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/documentation">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/downloads">Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/get">Get the Source</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/licensing">Licensing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/participate">How to Participate</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/site%2Dinfrastructure%2Dlifecycles">Site Infrastructure</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/site%2Dlocalization">Site Localization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/site%2Dmap">Site Map</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/site%2Droles%2Dcollectives">Site Roles & Collectives</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/site%2Duser%2Dguide">Site User Guide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/site_guidelines">Site Guidelines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/tou">Site Terms of Use</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/trademark">Trademark Information</a></span></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2013, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

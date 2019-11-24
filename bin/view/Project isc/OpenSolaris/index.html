@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Immutable Service Containers</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+isc/OpenSolaris" />
+                                <meta name="document" content="Project isc.OpenSolaris"/>
+    <meta name="space" content="Project isc"/>
+    <meta name="page" content="OpenSolaris"/>
+    <meta name="version" content="26.1"/>
+                    <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="OpenSolaris" />
+<meta name="keywords" content="wiki isc immutable-service-containers security opensolaris zfs zones smf privileges ipfilter nat crossbow anti-spoofing resource control lofi encryption" />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="gbrunett" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                <!-- com.xpn.xwiki.plugin.skinx.LinkExtensionPlugin -->
+    <link href="/bin/skin/skins/colibri/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript" src="/resources/js/xwiki/suggest/ajaxSuggest.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project isc";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes" ];
+window.docviewurl = "/bin/view/Project+isc/OpenSolaris";
+window.docediturl = "/bin/edit/Project+isc/OpenSolaris";
+window.docsaveurl = "/bin/save/Project+isc/OpenSolaris";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js'></script><script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js'></script><script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js'></script><script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js'></script>
+
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/compatibility.js"></script>
+
+  </head>
+        <body id="body" class="xwiki viewbody hideright">
+  <div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+<div id="menuview">
+  <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div class="topmenuentry " id="tmLogin"><a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bisc%2FOpenSolaris"><strong>Log-in</strong></a></div>
+  </div>
+<div class="leftmenu">
+  <div class="topmenuentry hasIcon" id="tmWiki"><a class="tme" href="/bin/view/Main/"><strong>xwiki</strong></a></div>
+  <div class="topmenuentry hasIcon" id="tmSpace"><a class="tme" href="/bin/view/Project+isc/"><strong>Project isc</strong></a></div>
+
+<div class="topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmSubSites">
+<span class="tme-extensible"><a class="tme"><strong>Subsites</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="http://cr.opensolaris.org/" id="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth">Auth</a></span>
+</span></div>
+
+
+</div>
+</div>
+
+</div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+
+  <div id="company">
+  <div id="companylogo">
+    <a href="/bin/view/Main/" title="Home" rel="home">
+    <img src="/skins/colibri/logo.png" alt="Wiki Logo"/>
+    </a>
+  </div>   </div> 
+  <div id="Iconbar">
+    <a id="CollectivesIcon" href="/bin/view/Main/collectives">Collectives</a>
+    <a id="DiscussionsIcon" href="/bin/view/Main/discussions">Discussions</a>
+    <a id="DocumentationIcon" href="/bin/view/Main/documentation">Documentation</a>
+    <a id="DownloadIcon" href="/bin/view/Main/downloads">Download</a>
+    <a id="SourceBrowserIcon" href="http://src.opensolaris.org">Source Browser</a>
+  </div>
+  <div class="clearfloats"></div>
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/WebSearch">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+   <div id="hierarchy">
+          <a href='/bin/view/Project+isc/OpenSolaris'>OpenSolaris</a>
+    </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+isc/OpenSolaris?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+  <div id="contentmenu" class="actionmenu">
+  <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div class="topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmExport">
+<span class="tme-extensible"><a class="tme"><strong>Export</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+isc/OpenSolaris?format=pdf&amp;language=en" id="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+isc/OpenSolaris?format=rtf&amp;language=en" id="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+isc/OpenSolaris?format=html&amp;language=en" id="tmExportHtml">Export as HTML</a></span>
+  </span></div>
+
+<div class="topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmShow">
+<span class="tme-extensible"><a class="tme" href="/bin/view/Project+isc/OpenSolaris?viewer=code&amp;language=en"><strong>View</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+isc/OpenSolaris?viewer=comments&amp;language=en" id="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+isc/OpenSolaris?viewer=attachments&amp;language=en" id="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+isc/OpenSolaris?viewer=history&amp;language=en" id="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+isc/OpenSolaris?viewer=information&amp;language=en" id="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+isc/OpenSolaris?viewer=code&amp;language=en" id="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div class="topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmMoreActions">
+<span class="tme-extensible"><a class="tme"><strong>More actions</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+isc/OpenSolaris?xpage=print&amp;language=en" id="tmPrintPreview">Print preview</a></span>
+    </span></div>
+  </div>
+
+
+  </div>
+  <div id="mainContentArea">
+      
+
+
+  
+<div id="document-title"><h1>OpenSolaris</h1></div>
+                            <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h1 id="HVersions"><span>Versions</span></h1><ul><li>v0.x. &nbsp;There were many versions never made public that supported Solaris 10 and OpenSolaris.</li><li>v1.0. &nbsp;Initial public preview version supporting OpenSolaris 2009.06.</li><li>v1.1. &nbsp;Fixed a number of bugs and unified the setup commands as iscadm.ksh.</li><li>v1.2. &nbsp;Unified hardening code for global zone and non-global zone uses, integrated with OpenSolaris JeOS project.</li><li>v1.3. &nbsp;Added Crossbow anti-spoofing protections (when available), user-defined node network configurations, quotas/reservations and LWP resource controls for nodes. &nbsp;Lots of cleanup and bug fixes. &nbsp;Tested on b127.</li><li>v1.3.1. &nbsp;Added default use of CPU shares (resource control) using the Fair Share Scheduler (FSS).</li></ul><h1 id="HFunctionality"><span>Functionality</span></h1><p>The current build of the Immutable Service Container construction kit creates an environment satisfying the following requirements:</p><ul><li>built upon the <span class="wikiexternallink"><a href="http://www.opensolaris.com/">OpenSolaris</a></span> 2009.06 release (also tested against b127)</li><li>(optional) loose minimization support to help those building and sharing images (OpenSolaris 2009.06 only)</li><li><span class="wikiexternallink"><a href="http://blogs.sun.com/gbrunett/entry/free_security_hardened_virtual_machine">security hardening</a></span> of the operating system<ul><li>based upon the <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/view/Project+isc/OpenSolaris+Security+Hardening">OpenSolaris Security Hardening</a></span> project</li></ul></li><li>non-executable stack functionality enabled (on systems supporting this functionality)</li><li><span class="wikiexternallink"><a href="http://blogs.sun.com/gbrunett/entry/encrypted_swap_in_opensolaris_2009">encrypted swap</a></span> enabled</li><li><span class="wikiexternallink"><a href="http://blogs.sun.com/gbrunett/entry/encrypted_scratch_space_in_opensolaris">encrypted scratch space</a></span> enabled<ul><li>default size is 100 Mbytes (customize as needed)</li></ul></li><li>kernel-level auditing enabled<ul><li>default policy audits login/logouts, administrative events, and all commands executed on the system</li><li>audit syslog plugin configured (<em>/var/log/auditlog</em>)</li></ul></li><li>configurable virtual network architecture<ul><li>non-global zones can be installed into the same or different virtual networks</li></ul></li><li>stateful packet filtering enabled<ul><li>packet filtering syslog plugin configured (<em>/var/log/ipflog</em>)</li><li>in-bound network access denied by default (except SSH)</li><li>out-bound network access permitted by default (customize as needed)</li></ul></li><li>a single non-global zone installed<ul><li>gzip compressed non-global zone root file system</li><li>quota (default: 1G) and reservations (default: 512M) enabled by default on non-global zone root file system</li><li>per-non-global zone maximum lightweight process resource control installed (default: 300 LWPs each)</li><li>global zone and per-non-global zone CPU shares resource control installed (default: 100 shares each)</li><li>building upon default <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Project+isc/WebHome/820%2D7017.pdf">non-global zone security capabilities</a></span></li><li>unique VNIC limiting visibility of unintended network traffic</li><li>encrypted scratch space</li><li>stateful packet filtering and NAT to restrict network-access</li><li>anti-spoofing protection - network access denied if MAC or IP address is changed</li><li>in-bound network access denied by default (customize for your service)</li><li>out-bound network access permitted by default (customize as needed)</li><li>DNS and auditing configurations inherited from the global zone</li></ul></li></ul><p>When built, an ISC configuration is intended to be used as a virtual single system. &nbsp;The global zone (Dock) performs administrative and monitoring functions similar to those of a system controller whereas all end-user services and functions should be installed into the non-global zone (Node). &nbsp;In this way, services such as packet filtering, NAT and auditing can operate without being exposed to services or users operating inside of the non-global zone. &nbsp;This enables greater operational integrity as those services and users are not able to alter the configurations or logs associated with these services. &nbsp;Additional non-global zones can be added as needed. &nbsp;This configuration uses a single exposed network interface and IP address for all of its communication even though internally services are separated to run inside of their own non-global zones.</p><p>Once built, organizations can further customize the configuration based upon their requirements to add things such as additional resource controls, read-only and read-write file systems (to the non-global zone), specific users and services, etc.</p><h1 id="HFunctionalDiagram"><span>Functional Diagram</span></h1><p><img src="/bin/download/Project%2Bisc/WebHome/isc%2Darch%2Dopensolaris%2Dv1.3.png" alt="isc-arch-opensolaris-v1.3.png"/></p><p>Additional network architecture models can be found on this project's <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/view/Project+isc/Networking">networking</a></span> page.</p><h1 id="HWarning"><span>Warning</span></h1><p>This is pre-alpha (preview) software that is still undergoing substantial testing. &nbsp;The goal in making it available is to increase the number of potential reviewers so that further feedback can be collected. &nbsp;It is recommended that this software not be used on production systems at this time. &nbsp;Further, this software does not have an undo or uninstall capability, so only use this software on a system that can be devoted to ISC testing - such as a <span class="wikiexternallink"><a href="http://www.virtualbox.org/">virtual system</a></span>.</p><p>The following OpenSolaris bugs have been encountered during testing of the ISC Construction Kit on OpenSolaris:</p><ul><li><strong>6914378 AUT_SUBJECT64_EX token is incorrectly parsed by audit_syslog(5) and auditreduce</strong>. &nbsp;This bug generates messages in <em>syslog</em> similar to <em>error before token 6 (previous token=124) of record type execve(2)</em>. &nbsp;Until this bug is fixed, some audit records may be incorrectly parsed by audit_syslog and auditreduce.</li><li><strong>6776009 nwam doesn't bring up pseudo data-links or flows at boot time</strong>. &nbsp;To work around this bug, NWAM has been disabled by the OpenSolaris ISC Toolkit which then manually configured DHCP on the primary network interface. &nbsp;This code will be removed when this bug is fixed and the default NWAM configuration will be maintained. &nbsp;Note that this change was integrated into OpenSolaris build 132.</li><li><strong>6725151 zpool destroy core dumped with FAULTED zpool</strong>. &nbsp;This bug is not triggered consistently. &nbsp;It may appear as a core dump at system boot related to the encrypted scratch SMF service. &nbsp;Rebooting the system often clears this issue. &nbsp;It is expected that once this OpenSolaris bug is fixed, this will not be an issue.</li><li><strong>4838381 {task|zone}.max-lwps should include zombie threads in count</strong>. &nbsp;This bug is triggered by certain denial of service attack methods (that create large numbers of zombie threads). &nbsp;The result is that the number of LWPs used by a zone may exceed its limit as defined by <em>zone.max-lwps</em>. &nbsp;Once this OpenSolaris bug is fixed, this will not be an issue.</li></ul><h1 id="HDependencies"><span>Dependencies</span></h1><p>This software currently depends upon the <span class="wikiexternallink"><a href="http://www.opensolaris.com/">OpenSolaris</a></span> 2009.06 release. &nbsp;Features from this release used by this project include <span class="wikiexternallink"><a href="http://opensolaris.org/os/project/crossbow/">Crossbow Virtual Networking</a></span> and <span class="wikiexternallink"><a href="http://opensolaris.org/jive/thread.jspa?threadID=21100&amp;tstart=15">encrypted LOFI</a></span>. &nbsp;This software has been tested on OpenSolaris build 127 and on systems where the functionality is available, <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/view/Community+Group+on/2009100701">Crossbow anti-spoofing functionality</a></span> will be installed by default.</p><h1 id="HMinimization"><span>Minimization</span></h1><p>Organizations wishing to deploy reduced or minimized configurations are encouraged to leverage the work of the <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/view/Project+jeos/WebHome">Just Enough OS</a></span> (JeOS) project. &nbsp;This project is focused on delivering examples of heavily reduced, text-based, headless server-oriented forms of the Sun-managed OpenSolaris distribution such that developers and administrators can more easily realize application-tailored installations of OpenSolaris in virtual appliance, cloud and bare metal environments.</p><p>Using tools available from the JeOS project, one can either build a customized reduced installation profile or more simply use one of the existing <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/view/Project+jeos/200906+Prototype">JeOS images</a></span> made freely available. &nbsp;By using a JeOS installation as the foundation for the construction of the ISC, the OS footprint was able to be significantly reduced (from over 3 GB to just over 650 MB) without any loss of ISC functionality. &nbsp;Additional software packages that are required can be installed as needed.</p><p>Note that some of the changes enabled by the OpenSolaris ISC Construction Kit may already be enabled in some JeOS images. &nbsp;In those cases, system hardening may have been implemented in addition to enabling encrypted swap and auditing. &nbsp;In these situations, organizations may choose to only implement the ISC steps that were not already implemented. &nbsp;Check the documentation associated with the image that you are using to determine if this is the case.</p><p>For the initial testing, the <span class="wikiexternallink"><a href="http://dlc.sun.com/osol/jeos/2009/osol-0906-jeos-proto-vbox-ovf.zip">OpenSolaris 2009.06 VirtualBox JeOS Image</a></span> was used in conjunction with the steps outlined below to create a minimized ISC configuration.</p><h1 id="HDownload"><span>Download</span></h1><p>Currently, this software is accessible from a Mercurial <span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/isc/src/">source code repository</a></span>. &nbsp;To download a copy of the source, you can use a command similar to:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>hg clone <span class="wikiexternallink"><a class="wikimodel-freestanding" href="ssh://anon@hg.opensolaris.org//hg/isc/src"><span class="wikigeneratedlinkcontent">ssh://anon@hg.opensolaris.org//hg/isc/src</span></a></span> isc</strong><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;requesting all changes<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adding changesets<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adding manifests<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adding file changes<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;added 33 changesets with 83 changes to 37 files<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;updating working directory<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;29 files updated, 0 files merged, 0 files removed, 0 files unresolved</p><p>The OpenSolaris ISC Construction Kit distribution will be installed into the directory <em>isc</em>. &nbsp;Note that the Mercurial tool set is not installed by default with OpenSolaris. &nbsp;To install the Mercurial tools, use the following command:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec pkg install SUNWmercurial</strong></p><h1 id="HPreInstallation"><span>Pre-Installation</span></h1><p>Since Immutable Service Container deployments are typically used in headless server environments, the graphical windowing system is disabled as part of the hardening functionality implemented by the OpenSolaris ISC Construction Kit. &nbsp;If a graphical windowing system is used, then it is strongly recommended that the following command be executed from a remote terminal session or from the non-graphical system console. &nbsp;To disable the windowing system, use the following command:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec svcadm disable gdm</strong></p><h1 id="HInstallation"><span>Installation</span></h1><p>The OpenSolaris ISC Construction Kit can be run using the following command:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec isc/bin/iscadm.ksh</strong></p><p>Note that starting in version 1.3 of the OpenSolaris ISC Construction Kit, the default network number used by ISC nodes is <em>192.168.1.0</em>. &nbsp;In some cases, this network number may conflict with existing network addressing being used within an organization. &nbsp;The actual network number can be changed using the <em>-N</em> option. &nbsp;For example, to create an ISC node on network <em>192.168.0.0</em>, use the following command:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec isc/bin/iscadm.ksh -N 0</strong></p><p>Note that the <span class="wikiexternallink"><a href="http://opensolaris.org/os/project/nwam">Network Auto-Magic</a></span> project is not compatible with <span class="wikiexternallink"><a href="http://opensolaris.org/os/project/crossbow/">Crossbow Virtual Networking</a></span> (as noted in Bug ID 6776009 above), so Network Auto-Magic is disabled and DHCP is configured for the primary network interface. &nbsp;If this is not desired, the network configuration can be changed manually using standard OpenSolaris commands after the <em>iscadm.ksh</em> script has completed.</p><p>Once this command has completed, update the boot archive and shutdown the system:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec bootadm update-archive</strong><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec shutdown -g 0 -i 0 -y</strong></p><p>When the system is restarted, it should now be in a fully operational ISC configuration. &nbsp;Note that the non-global zone is installed with a default root password - <em>iscroot</em>. &nbsp;It should be changed post-installation. &nbsp;That said, there is no way to directly contact the non-global zone as it is not exposing any network services by default.</p><p>Also, note that upon first boot, the freshly installed zone will go through its normal initial system configuration process. &nbsp;As a result, it may be a few minutes until the zone is fully ready to use. &nbsp;You can monitor its progress by connecting to the zone console using the command:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>zlogin -C isc1</strong></p><p>It should be noted that additional non-global zones can be added using the following command:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec isc/bin/iscadm.ksh -n # [-N #]</strong></p><p>where <em>-n</em> is used to specify the number assigned to the non-global zone (e.g., <em>2</em>, <em>3</em>, <em>4</em>, etc.) and (as noted above) <em>-N</em> is used to specify the number of the virtual network to which the non-global zone is assigned. &nbsp;The first non-global zone created (by default) is number <em>1</em>.</p><h1 id="HSelectiveInstallation"><span>Selective Installation</span></h1><p>With the OpenSolaris ISC Construction Kit, it is possible to only configure or enable specific elements while not enabling the full suite of functionality. &nbsp;This is achieved using the <em>ISC_SVCS_DOCK</em> and <em>ISC_SVCS_NODE</em> parameters respectively. &nbsp;The <em>ISC_SVCS_DOCK</em> variable determines which security configuration changes will be made to the ISC Dock (i.e, OpenSolaris Global Zone). &nbsp;Similarly, the <em>ISC_SVCS_NODE</em> variable determines which security configuration changes will be made to the ISC Node (i.e., OpenSolaris Non-Global Zone). &nbsp;To use these parameters, simply create the <em>${ISC_HOME}/etc/site.conf</em> file, assigning the variables as necessary.&nbsp;&nbsp;</p><p>For example, to enable just system hardening, auditing and encrypted swap (such as the configuration used in some JeOS images and Security Enhanced OpenSolaris AMIs), edit the <em>${ISC_HOME}/etc/site.conf</em> file and add the following lines:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ISC_SVCS_DOCK="encrypted_swap auditing lockdown"<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ISC_SVCS_NODE=""</p><p>Since an ISC Node is not being created, use the following command to apply these settings only to the ISC Dock:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec isc/bin/iscadm.ksh -d</strong></p><h1 id="HPreConfiguredImages"><span>Pre-Configured Images</span></h1><h2 id="HOpenVirtualizationFormatImages"><span>Open Virtualization Format Images</span></h2><p>Using the steps above, a pre-installed and pre-configured OpenSolaris 2009.06 Immutable Service Container image has been <span class="wikiexternallink"><a href="http://kenai.com/projects/isc/downloads/directory/OVF%20Images">published</a></span> using the Open Virtualization Format (OVF). &nbsp;The images are roughly 1.5 Gbytes and are made freely available (under a <span class="wikiexternallink"><a href="http://opensolaris.org/os/licensing/opensolaris_license">CDDL license</a></span>) to those interested in evaluating the technology without having to go through the steps noted above.</p><p>To use the images, simply download and verify its file fingerprint:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>digest -a md5 isc-demo-v1.0.tar.bz2</strong><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15ca60c0435a012aa15dc04b850fee58</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>digest -a sha256 ./isc-demo-v1.0.tar.bz2</strong><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;77fa29b90a60a6e6bcb84e678a7323ce33adeec77dda3563c9460ea6d03a82f9</p><p>Once verified, import into <span class="wikiexternallink"><a href="http://www.virtualbox.org/">VirtualBox</a></span> or other OVF capable tool and start the virtual machine. &nbsp;To access the system, use the <em>iscadm</em> account (with password <em>iscadm</em>). &nbsp;The root password (available also from the <em>iscadm</em> account) is <em>iscroot</em>.</p><p>Note that these images have been modified using the steps below to add the Apache web server into the (only) non-global zone running on the system (<em>isc1</em>). &nbsp;No other changes have been made outside those implemented by the OpenSolaris ISC Construction Kit. &nbsp;As these images capture a moment in time, the OpenSolaris ISC Construction Kit software installed in these images may be out of date. &nbsp;To update the software, use the following command as the <em>iscadm</em> account:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>cd $HOME/isc; hg pull -u <span class="wikiexternallink"><a class="wikimodel-freestanding" href="ssh://anon@hg.opensolaris.org//hg/isc/src"><span class="wikigeneratedlinkcontent">ssh://anon@hg.opensolaris.org//hg/isc/src</span></a></span>&nbsp;</strong></p><h2 id="HAmazonMachineImageAMIFormat"><span>Amazon Machine Image (AMI) Format</span></h2><p>Using steps similar to those noted above, a pre-installed and pre-configured OpenSolaris 2009.06 Immutable Service Container image has been <span class="wikiexternallink"><a href="http://blogs.sun.com/ec2/entry/immutable_service_container_on_opensolaris">published</a></span> for the Amazon Web Services <span class="wikiexternallink"><a href="http://aws.amazon.com/ec2/">Elastic Compute Cloud</a></span> (EC2) environment. &nbsp;There images are freely available in both the U.S. (AMI ID: ami-48c32021) and European (AMI ID: ami-78567d0c) regions. &nbsp;For more information, there is also an <span class="wikiexternallink"><a href="http://blogs.sun.com/gbrunett/entry/immutable_service_containers_on_amazon">article</a></span> discussing how the OpenSolaris ISC Construction Kit should be configured when using it to create Amazon EC2 instances.</p><h1 id="HAddingServicesandApplications"><span>Adding Services and Applications</span></h1><h2 id="HServiceInstallationandConfiguration"><span>Service Installation and Configuration</span></h2><p>Once a system's configuration has been modified using the OpenSolaris ISC Construction Kit, it is often useful to add services to the non-global zone in order to more fully test the configuration. &nbsp;The following steps can be used to install the Apache server. &nbsp;First, the actual web server software should be installed and enabled in the non-global zone:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec zlogin isc1 pkg install SUNWapch22</strong><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec zlogin isc1 svcadm enable apache22</strong></p><p>Once the service has been installed and is running properly, the network filtering and NAT policy must be changed to allow the Apache server to be accessed. &nbsp;The following commands must be run in the global zone:</p><ul><li>Add a new IP Filter rule to allow access to <em>192.168.1.1:80</em> (TCP). &nbsp;To do this, you will need to edit the <em>/etc/ipf/ipf.conf</em> file, copy the Node-specific entry for SSH (that is commented out), uncomment the new line, and change it to use port <em>80</em> instead of port <em>22</em>. &nbsp;It should look something like this:</li></ul><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass in quick on e1000g0 proto tcp from any to 192.168.1.1 port = 80 keep state</p><ul><li>Next, add a IP NAT rule to the <em>/etc/ipf/ipnat.conf</em> file redirecting traffic from the external IP address to the non-global zone for port <em>80</em>. &nbsp;It should look something like this:</li></ul><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rdr e1000g0 0.0.0.0/0 port 80 -&gt; 192.168.1.1 port 80</p><ul><li>Lastly, enable this new policy by executing the following commands:</li></ul><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec ipf -Fa -f /etc/ipf/ipf.conf</strong><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec ipnat -FC -f /etc/ipf/ipnat.conf</strong></p><p>With this new policy in effect, you should now be able to reach the web server (running on port <em>80</em> in the non-global zone) using the IP address of the global zone (obtained via DHCP). &nbsp;Note that since we can leverage port-level redirection, we no longer need to use reserved network ports for services such as HTTP since we can simply redirect incoming traffic. &nbsp;We could start our web server on port <em>8080</em> or some other non-privileged port while still exposing the traditional port (e.g., TCP/80) to the outside world. &nbsp;Why configure the service in this manner? &nbsp;Simple - it allows us to start a service without ever having to give it administrative privileges (such as <em>net_privaddr</em>). &nbsp;It should be noted that services should be deployed using least privilege where possible and should themselves be security hardened for additional protection.</p><h2 id="HServiceSecurityTuning"><span>Service Security Tuning</span></h2><p>In addition to simply installing a new service into a non-global zone, you may also want to perform the following operations:</p><ul><li>Use unique credentials and least (process) privileges</li><li>Optimize the security configuration of the new service</li><li>Leverage encrypted scratch space for sensitive content</li><li>Consider using a custom file system layout for immutability<ul><li>Read only: binaries, libraries, etc.</li><li>Read write: logs, configuration files and data (if needed)</li></ul></li></ul><p>Additional steps can be taken from the global zone including:</p><ul><li>Implement additional resource controls for the service non-global zone</li></ul><h1 id="HAlternativeNetworkingConfigurations"><span>Alternative Networking Configurations</span></h1><p>In addition to the process of adding additional ISC Nodes to one or more Private Virtual Networks, it is possible to create a variety of network configurations depending upon your requirements. &nbsp;Several representative <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/view/Project+isc/Networking">network architecture</a></span> diagrams are available. &nbsp;The following diagram illustrates the OpenSolaris implementation (networking view) of the <em>Multiple Instance, Mediated Private Virtual Network with Unique Public IPs</em> network model.&nbsp;&nbsp;</p><p><img src="/bin/download/Project%2Bisc/WebHome/isc%2Dosol%2Dnet%2Dmulti%2Dmediated%2Dunique%2Dv1.3.png" alt="isc-osol-net-multi-mediated-unique-v1.3.png"/></p><p>No changes to the OpenSolaris ISC Construction Kit are required to create this model although there are some additional post-installation steps that must be completed in order to (1) adjust the IP Filter and IP NAT configuration and (2) create the new public network interfaces and assign addresses to them. &nbsp;These steps are implemented using the usual OpenSolaris administrative practices:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec cp /etc/ipf/ipnat.conf /etc/ipf/ipnat.conf.ORIG</strong><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec /bin/sh -c 'cat &gt; /etc/ipf/ipnat.conf' &lt;&lt; EOL_IPNAT<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map e1000g0 192.168.1.1 -&gt; 10.10.1.1/32 portmap tcp/udp auto<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map e1000g0 192.168.1.1 -&gt; 10.10.1.1/32<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rdr e1000g0 10.10.1.1/32 port 80 -&gt; 192.168.1.1 port 80<br/> &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map e1000g0 192.168.2.2 -&gt; 10.10.1.2/32 portmap tcp/udp auto<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map e1000g0 192.168.2.2 -&gt; 10.10.1.2/32<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rdr e1000g0 10.10.1.2/32 port 80 -&gt; 192.168.2.2 port 80<br/> &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map e1000g0 192.168.3.3 -&gt; 10.10.1.3/32 portmap tcp/udp auto<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map e1000g0 192.168.3.3 -&gt; 10.10.1.3/32<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rdr e1000g0 10.10.1.3/32 port 80 -&gt; 192.168.3.3 port 80<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EOL_IPNAT</strong><br/> &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec cp /etc/ipf/ipf.conf /etc/ipf/ipf.conf.ORIG</strong><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec /bin/sh -c 'cat &gt; /etc/ipf/ipf.conf' &lt;&lt; EOL_IPF<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Allow SSH and DHCP inbound and anything outbound.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass in quick on e1000g0 proto udp from any port = 67 to any port = 68 keep state<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass out quick on e1000g0 from e1000g0/32 to any keep state<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass in quick on e1000g0 proto tcp from any to e1000g0/32 port = 22 keep state<br/> &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Ensure that ISC Nodes can't talk to one another.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;block in log quick on isc_0_254 from 192.168.1.0/24 to 192.168.2.0/24 keep state<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;block in log quick on isc_0_254 from 192.168.1.0/24 to 192.168.3.0/24 keep state<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;block in log quick on isc_2_254 from 192.168.2.0/24 to 192.168.0.0/24 keep state<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;block in log quick on isc_2_254 from 192.168.2.0/24 to 192.168.3.0/24 keep state<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;block in log quick on isc_3_254 from 192.168.3.0/24 to 192.168.0.0/24 keep state<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;block in log quick on isc_3_254 from 192.168.3.0/24 to 192.168.2.0/24 keep state<br/> &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Configure ISC Nodes to accept connections on TCP/80 inbound, allow all outbound.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass in log quick on isc_1_254 from 192.168.1.1 to any keep state<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass in log quick on e1000g0 from any to 192.168.1.1 port = 80 keep state<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass out log quick on e1000g0 from 192.168.1.1 to any keep state<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass in log quick on isc_2_254 from 192.168.2.2 to any keep state<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass in log quick on e1000g0 from any to 192.168.2.2 port = 80 keep state<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass out log quick on e1000g0 from 192.168.2.2 to any keep state<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass in log quick on isc_3_254 from 192.168.3.3 to any keep state<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass in log quick on e1000g0 from any to 192.168.3.3 port = 80 keep state<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass out log quick on e1000g0 from 192.168.3.3 to any keep state<br/> &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Drop everything else.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;block in log all<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;block in from any to 255.255.255.255/32<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;block in from any to 127.0.0.1/32 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EOL_IPF</strong><br/> &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec chown root:sys /etc/ipf/ipf.conf /etc/ipf/ipnat.conf</strong><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec chmod 644 /etc/ipf/ipf.conf /etc/ipf/ipnat.conf</strong><br/> &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec /bin/sh -c 'echo 10.10.1.1 &gt; /etc/hostname.e1000g0:1</strong><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec /bin/sh -c 'echo 10.10.1.2 &gt; /etc/hostname.e1000g0:2</strong><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec /bin/sh -c 'echo 10.10.1.3 &gt; /etc/hostname.e1000g0:3</strong><br/> &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec chown root:sys /etc/hostname.e1000g0:</strong>*<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec chmod 644 /etc/hostname.e1000g0:</strong>*</p><h1 id="HUpgrading"><span>Upgrading</span></h1><p>Initial tests have shown that it is possible to upgrade an Immutable Service Container using the standard OpenSolaris packaging mechanisms. &nbsp;During these tests, the OpenSolaris 2009.06 operating system was upgraded from OpenSolaris 2009.06 to OpenSolaris build 130 (from the development tree). &nbsp;Post upgrade verification showed that all of the core security configuration changes remained intact. &nbsp;Note that these tests should still be considered preliminary and care should be taken if you choose to upgrade (vs. re-create) your ISC configurations. &nbsp;The process that was tested included the following steps:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec pkg set-authority -P -O <span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://pkg.opensolaris.org/dev/"><span class="wikigeneratedlinkcontent">http://pkg.opensolaris.org/dev/</span></a></span> opensolaris.org</strong><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec pkg install SUNWipkg</strong><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec pkg image-update</strong></p><p>In addition to the global zone, each of the individual non-global zones must also be updated:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec zoneadm -z isc1 halt</strong><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec mount -F zfs rpool/export/isc/isc1/zone/ROOT/zbe-1 /mnt</strong><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec pkg -R /mnt set-authority -P -O <span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://pkg.opensolaris.org/dev/"><span class="wikigeneratedlinkcontent">http://pkg.opensolaris.org/dev/</span></a></span> opensolaris.org</strong><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec pkg -R /mnt install SUNWipkg</strong><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec pkg -R /mnt image-update</strong><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec umount /mnt</strong></p><p>Once completed, update the boot archive and reboot the system:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec bootadm update-archive</strong><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opensolaris$ <strong>pfexec reboot</strong></p><h1 id="HOtherDirections"><span>Other Directions</span></h1><ul><li><span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/view/Project+isc/Networking">New Private Virtual Network Configurations</a></span></li><li><span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/view/Project+isc/Autonomic">Autonomic Security Functions</a></span></li><li>Automation of IP Packet Filtering and NAT Operations</li><li>Automation of Periodic Forensic Snapshots</li><li>Automation of Basic File and Network Monitoring</li><li>Support for Additional ISC Deployment Models (e.g., Solaris 10, Virtual Box, etc.)</li><li>Integration of new OpenSolaris Security Capabilities</li></ul><h1 id="HRelatedProjects"><span>Related Projects</span></h1><ul><li><span class="wikiexternallink"><a href="http://www.opensolaris.org/os/project/crossbow/">Crossbow Virtual Networking</a></span></li><li><span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/view/Project+jeos/WebHome">Just Enough OS</a></span></li><li><span class="wikiexternallink"><a href="http://blogs.sun.com/ec2/entry/hardened_opensolaris_2009_06_on">Security Enhanced OpenSolaris 2009.06 AMIs for Amazon EC2</a></span></li><li><span class="wikiexternallink"><a href="http://blogs.sun.com/ec2/entry/hardened_opensolaris_2008_11_on">Security Hardened OpenSolaris 2008.11 AMIs for Amazon EC2</a></span></li></ul><h1 id="HSelectedReferences"><span>Selected References</span></h1><ul><li><span class="wikiexternallink"><a href="http://www.opensolaris.com/learn/features/networking/networkcrossbow/">OpenSolaris Learn - Project Crossbow</a></span></li><li><span class="wikiexternallink"><a href="http://sunflash.sun.com/articles/138/2/sec/22071">SunFlash Volume 138 Issue 2 - Sun Security - Immutable Service Containers</a></span></li></ul><h1 id="HAdditionalReading"><span>Additional Reading</span></h1><h2 id="HWebPagesBlogs"><span>Web Pages, Blogs</span></h2><ul><li><span class="wikiexternallink"><a href="http://blogs.sun.com/gbrunett/entry/new_opensolaris_immutable_service_containers">OpenSolaris Immutable Service Containers</a></span></li></ul><h2 id="HWhitePapers"><span>White Papers</span></h2><ul><li><span class="wikiexternallink"><a href="http://www.usenix.org/publications/login/">Swaddling Applications in a Security Blanket</a></span> (USENIX ;login 12/2009, Galvin)</li><li><span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Project+isc/WebHome/820%2D7017.pdf">Understanding the Security Capabilities of Solaris Zones Software</a></span></li></ul><h2 id="HPresentations"><span>Presentations</span></h2><h3 id="HImmutableServiceContainers"><span>Immutable Service Containers</span></h3><ul><li><span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Project+isc/WebHome/2010-SCEC-ISC-v0.1.pdf">Immutable Service Containers Technical Overview</a></span> (SCEC 2010, v1.3)</li><li><span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Project+isc/WebHome/ISC%2DGolden%2Dv1.3.pdf">Immutable Service Containers Technical Overview</a></span> (01-DEC-2009, v1.3)</li><li><span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Project+isc/WebHome/ISC%2DGolden%2Dv0.4.pdf">Immutable Service Containers Technical Overview</a></span> (07-AUG-2009, v0.4)</li><li><span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Project+isc/WebHome/2009%2DOSDevCon%2DISC%2Dv0.3.pdf">Immutable Service Containers Technical Overview</a></span> (OSDevCon 2009, v0.3)</li><li><span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Project+isc/WebHome/ISC%2DGolden%2Dv0.3.pdf">Immutable Service Containers Technical Overview</a></span> (26-JUN-2009, v0.3)</li><li><span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Project+isc/WebHome/CEC%2D2008%2DISC%2Dv0.2.pdf">Immutable Service Containers Technical Overview</a></span> (CEC 2008, v0.2)</li></ul><h3 id="HSupportingAreas"><span>Supporting Areas</span></h3><ul><li><span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Project+isc/WebHome/s10%2Dsecurity%2Ddive%2D20091021.pdf">Solaris 10 Security Deep Dive</a></span> (21-OCT-2009)</li><li><span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Project+isc/WebHome/s10%2Dsecurity%2Ddive%2D20090608.pdf">Solaris 10 Security Deep Dive</a></span> (CEC 2008, 12-JUN-2009)</li></ul><h2 id="HOtherMedia"><span>Other Media</span></h2><ul><li><span class="wikiexternallink"><a href="http://blogs.sun.com/innovation/entry/immutable_service_containers">Innovation@Sun</a></span>: Immutable Service Containers - Addressing Security in a World of Changing Deployment (24-AUG-2009, <span class="wikiexternallink"><a href="http://www.blogtalkradio.com/suninnovation/2009/08/21/Immutable-Service-Containers-Addressing-Security-in-a-World-of-Changing-Deployment-1">BlogTalkRadio</a></span>)</li><li><span class="wikiexternallink"><a href="http://www.systemhelden.com/?p=123">HELDENFunk</a></span>: Immutable Service Containers (03-APR-2009, <span class="wikiexternallink"><a href="http://mediacast.sun.com/users/constant/media/HELDENFunk_030_20090403.mp3">.mp3</a></span>)</li></ul><h2 id="HSoftwareandTools"><span>Software and Tools</span></h2><ul><li><span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/view/Project+isc/OpenSolaris+Security+Hardening">OpenSolaris Security Hardening</a></span></li><li><span class="wikiexternallink"><a href="http://blogs.sun.com/gbrunett/entry/encrypted_swap_in_opensolaris_2009">OpenSolaris Encrypted Swap</a></span></li><li><span class="wikiexternallink"><a href="http://blogs.sun.com/gbrunett/entry/encrypted_scratch_space_in_opensolaris">OpenSolaris Encrypted Scratch Space</a></span></li></ul><h2 id="HAdditionalResources"><span>Additional Resources</span></h2><ul><li><span class="wikiexternallink"><a href="http://wikis.sun.com/display/ISC/Product+Bugs+and+RFEs">(Open)Solaris Bugs and RFEs</a></span></li><li><span class="wikiexternallink"><a href="http://wikis.sun.com/display/ISC/Service+Credential+and+Privilege+Map">Service Credential and Privilege Mapping</a></span></li></ul>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+            <span class="tag-wrapper"><span class="tag"><a href="/bin/view/Main/Tags?do=viewTag&amp;tag=isc">isc</a></span></span>
+            <span class="tag-wrapper"><span class="tag"><a href="/bin/view/Main/Tags?do=viewTag&amp;tag=immutable%2Dservice%2Dcontainers">immutable-service-containers</a></span></span>
+            <span class="tag-wrapper"><span class="tag"><a href="/bin/view/Main/Tags?do=viewTag&amp;tag=security">security</a></span></span>
+            <span class="tag-wrapper"><span class="tag"><a href="/bin/view/Main/Tags?do=viewTag&amp;tag=opensolaris">opensolaris</a></span></span>
+            <span class="tag-wrapper"><span class="tag"><a href="/bin/view/Main/Tags?do=viewTag&amp;tag=zfs">zfs</a></span></span>
+            <span class="tag-wrapper"><span class="tag"><a href="/bin/view/Main/Tags?do=viewTag&amp;tag=zones">zones</a></span></span>
+            <span class="tag-wrapper"><span class="tag"><a href="/bin/view/Main/Tags?do=viewTag&amp;tag=smf">smf</a></span></span>
+            <span class="tag-wrapper"><span class="tag"><a href="/bin/view/Main/Tags?do=viewTag&amp;tag=privileges">privileges</a></span></span>
+            <span class="tag-wrapper"><span class="tag"><a href="/bin/view/Main/Tags?do=viewTag&amp;tag=ipfilter">ipfilter</a></span></span>
+            <span class="tag-wrapper"><span class="tag"><a href="/bin/view/Main/Tags?do=viewTag&amp;tag=nat">nat</a></span></span>
+            <span class="tag-wrapper"><span class="tag"><a href="/bin/view/Main/Tags?do=viewTag&amp;tag=crossbow">crossbow</a></span></span>
+            <span class="tag-wrapper"><span class="tag"><a href="/bin/view/Main/Tags?do=viewTag&amp;tag=anti%2Dspoofing">anti-spoofing</a></span></span>
+            <span class="tag-wrapper"><span class="tag"><a href="/bin/view/Main/Tags?do=viewTag&amp;tag=resource">resource</a></span></span>
+            <span class="tag-wrapper"><span class="tag"><a href="/bin/view/Main/Tags?do=viewTag&amp;tag=control">control</a></span></span>
+            <span class="tag-wrapper"><span class="tag"><a href="/bin/view/Main/Tags?do=viewTag&amp;tag=lofi">lofi</a></span></span>
+            <span class="tag-wrapper"><span class="tag"><a href="/bin/view/Main/Tags?do=viewTag&amp;tag=encryption">encryption</a></span></span>
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by gbrunett on 2010/02/03 14:11<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by gbrunett on 2010/02/12 18:14
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+                </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSNav','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSNav'); togglePanelVisibility(this.parentNode);">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavCommunity Group">
+            <div id="xwikinavCommunity GroupHeader" class="accordionTabTitleBar"><h6>Community Group</h6>
+            </div>
+            <div id="xwikinavCommunity GroupContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+edu/">Academic and Research</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+accessibility/">Accessibility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+advocacy/">Advocacy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+appliances/">Appliances</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+approachability/">Approachability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/">Architecture Process and Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+brandz/">BrandZ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+chinese_users/">Chinese Users</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/">Community Advisory Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+dtrace/">DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+databases/">Databases</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+desktop/">Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/">Device Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+distribution/">Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+emerging_platforms/">Emerging Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+fm/">Fault Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+games/">Games on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ha%2Dclusters/">HA Clusters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+hpcdev/">HPC Developer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+int_localization/">Internationalization and Localization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+laptop/">Laptop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ldoms/">Logical Domains</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+mdb/">Modular Debugger (MDB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+nfs/">NFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/">Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/">OS/Net (ON)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+observability/">Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ogb/">OpenSolaris Governing Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+printing/">OpenSolaris Printing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/">Performance</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+pm/">Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+power_pc/">PowerPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/">Security</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+smf/">Service Management Facility (smf(5))</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sw%2Dporters/">Software Porters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+volume_manager/">Solaris Volume Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+storage/">Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sysadmin/">Systems Administration Community Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+testing/">Testing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/">Tools Home</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ufs/">Unix File Systems (UFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+web/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+x_win/">X Window System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+xen/">Xen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/">ZFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/">Zones</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavProject">
+            <div id="xwikinavProjectHeader" class="accordionTabTitleBar"><h6>Project</h6>
+            </div>
+            <div id="xwikinavProjectContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/"></a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+adsl/">ADSL Modem Enhancement</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+arc%2Dprocess/">ARC Process Definition</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osarm/">ARM Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bind/">BIND Update</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bluetooth/">Bluetooth Stack & Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dinitiator/">Brocade FC HBA &#45; Initiator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dtarget/">Brocade FC HBA &#45; Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brussels/">Brussels &#45; unified network link configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cifs%2Dserver/">CIFS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smbfs/">CIFS client for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cmt/">CMT</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/">COMSTAR: Common Multiprotocol SCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpufs/">CPU Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/">Caiman, Solaris Install Revisited</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+celeste/">Celeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/">Chime Visualization Tool for DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+clearview/">Clearview: Network Interface Coherence</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dinformix/">Cluster Agent: Informix Dynamic Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dcontainer/">Cluster Agent: OpenSolaris Container</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dxvm/">Cluster Agent: OpenSolaris xVM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Debs/">Cluster Agent: Oracle E&#45;Business Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dsmb/">Cluster Agent: Samba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dtomcat/">Cluster Agent: Tomcat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dpostgresql/">Cluster agent: PostgreSQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+data%2Dflow/">Coarse Data Flow Parallelism</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+colorado/">Colorado: Open HA Cluster on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+commandassist/">Command Assistant</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cam/">Common Array Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+companion/">Companion &#45; /opt/sfw: Free and Open Source software</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+content/">Content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+contest/">Contest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpg/">Credentials Process Groups</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crossbow/">Crossbow: Network Virtualization and Resource Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmsagenttoolkit/">Crypto KMS Agent Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/">Cryptographic Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Ddoc/">DTrace Guide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dmm/">Data Migration Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+datatethers/">Data Tethers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+de/">Deutsches Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ddtool/">Device Detection Tool</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+driver%2Dutility/">Device Driver Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devicemgr/">Device Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devmapper/">Device Mapper</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dri/">Direct Rendering Infrastructure & 3D drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/">Duckwater: Simplified name services management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+phpEasyTools/">Easy Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emancipation/">Emancipation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex%2Dcna/">Emulex Advanced Ethernet Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex/">Emulex Fibre Channel Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webcams/">Enhance the support of USB webcams</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Dprofiles/">Enhanced SMF Profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+amd/">Enhancements for AMD&#45;based Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+erlang%2Ddtrace/">Erlang DTrace Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ethbridge/">Ethernet bridge module for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+conary%2Deval/">Evaluate Conary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+events%2Dregistry/">Events Registry</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ext3/">Ext3 file system support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+facilitation/">Facilitation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fcoe/">Fibre Channel over Ethernet</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fgap/">Fine Grained Access Policy (FGAP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fingerprint%2Dauthentication/">Fingerprint Authentication</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fmac/">Flexible Mandatory Access Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+forensics/">Forensic Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fox/">Fully Open X Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fuse/">Fuse on Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+generic%2Dmca/">Generic Machine Check Architecture Improvements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+raidcfg/">Generic RAID Configuration Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+summerofcode/">Google SOC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Djboss/">HA&#45;JBoss</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dmysql/">HA&#45;MySQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hpc%2Dstack/">HPC Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livehadoop/">Hadoop Live CD</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hitachi/">Hitachi</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+honeycomb/">HoneyComb Fixed Content Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hotplug/">Hotplug Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ip%2Drefactor/">IP Datapath Refactoring</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ipoib/">IP over Infiniband</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tref/">IPsec Tunnel Reform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/">Image Packaging System</a></span></li>
+<li><em class="underline"><em><span class="wikilink"><a href="/bin/view/Project+isc/">Immutable Service Containers</a></span></em></em></li>
+<li><span class="wikilink"><a href="/bin/view/Project+perfmib/">Improved Performance MIB</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/">Indiana</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+awards/">Innovation Awards</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ikev2/">Internet Key Exchange, version 2 (IKEv2)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+irm/">Interrupt Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jkstat/">JKstat &#45; a java binding for libkstat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jeos/">JeOS &#45; Just enough Operating System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jfs/">Journaled File System (JFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kde/">K Desktop Environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kerberos/">Kerberos</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kssl/">Kernel SSL Enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kernel%2Dsockets/">Kernel Sockets</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmf/">Key Management Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ksh93%2Dintegration/">Korn Shell 93 integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ldoms%2Dmgr/">LDoms Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+txipsec/">Labeled IPsec</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+l2filter/">Layer 2 Filtering</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lending/">Lending</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lld/">Link Layer Discovery</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livemedia/">Live Media: Technologies for distributions running from CD and other media</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+localedata/">Locale Data</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mips/">MIPS Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohac%2Davs/">MRSL.NONsharedDevice</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mega_sas/">Mega_sas</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mx/">Mexico</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+milax/">MilaX minimal Live Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mozilla%2Ddtrace/">Mozilla DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+glossary/">Multi&#45;lingual Glossary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mpxio/">Multi&#45;pathing software (MPxIO)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+multiple%2Ddoi/">Multiple DOI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+muskoka/">Muskoka: An open repository for OpenSolaris technical content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsrdma/">NFS RDMA transport update and performance analysis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dzones/">NFS Server in non&#45;Global Zones</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsv41/">NFS version 4.1 pNFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dnamespace/">NFSv4 namespace extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npiv/">NPort ID Virtualization (NPIV)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+navigator/">Navigator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nemo/">Nemo: A Framework for High&#45;Performance Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/">Network Auto&#45;Magic</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ndmp/">Network Data Management Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+net%2Dmib/">Network MIBs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npp/">Network Performance Projects</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dpm/">Network Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nws/">Network Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nv%2Dg11n/">Nevada Globalization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+4over6/">New Design of 4over6 Mechanism Based on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nightingale/">Nightingale: Port Songbird to OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+onnv/">ON/Nevada (ONNV) Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osd/">Object Storage Device (OSD) support for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opendev/">Open Development Infrastructure</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dutilities/">Open HA Cluster Utilities</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opensound/">Open Sound System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/">OpenGrok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cim%2Dserver/">OpenPegasus CIM Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+openrti/">OpenRTI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+busybox/">OpenSolaris Busybox</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/">OpenSolaris Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+es/">OpenSolaris Hispano</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+audit/">OpenSolaris Security Audit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/">OpenSolaris support for the QEMU processor emulator: host and guest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pef/">PEF: Packet Event Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+performance%2Dwrappers/">Performance Wrappers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkgfactory/">Pkgfactory</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pl/">Polski Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fr/">Portail Francophone</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+br/">Portal Brasileiro de OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+portals/">Portals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmui/">Power Management Usability Interfaces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+presto/">Presto: Automatic Printing Configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmpsm/">Printable Many Page Solaris Manuals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+promise%2Dstorage/">Promise SuperTrak RAID HBA Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qlogic%2Dcna/">QLogic Converged Network Adapter GLDv3 NIC Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+quagga/">Quagga Routing Protocol Suite Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rbridges/">RBridge (IETF TRILL) support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rof/">RDMA Offload Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+releasenotes/">Release Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+reno/">Reno: Login Process Enhancements for Interop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/">Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+samqfs/">SAM/QFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+scm%2Dmigration/">SCM Migration Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+srp/">SCSI RDMA Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sdcard%2Ddrivers/">SDcard Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sfwnv/">SFW</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sm%2Dhba/">SM&#45;HBA Based SAS HBA Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Ddoc/">SMF Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+svr4_packaging/">SVR4 Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sensors/">Sensor Abstraction Layer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dsip/">Session Initiation Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+simplepanels/">Simple Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/">Solaris PowerPC Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iscsitgt/">Solaris iSCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sourcejuicer/">SourceJuicer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/">Sparks: name service switch/nscd enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+squashfs/">Squashfs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+star/">Star integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starfish/">Starfish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starterkit/">Starter Kit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+storagepm/">Storage Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sst/">Sun Security Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+avs/">Sun StorageTek Availability Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ofuv/">Support for OpenFabrics User Verbs / API on OpenSolaris OS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/">Support gcc4/GCCfss in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+suspend%2Dresume/">Suspend/Resume</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+systemz/">Systemz</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tipc/">TIPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+branding/">Trademarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tpm/">Trusted Platform Module support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tnipdb/">Trusted networking interface policy database for Trusted Extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+usecase/">Use Case</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+userland/">Userland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vrrp/">VRRP: Virtual Router Redundancy Protocol Implementation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vscan/">VSCAN service</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+valex/">Validated Execution Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vconsole/">Virtual Console</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vnm/">Virtual Network Machines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/">Visual Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+visualization%2Dhpc/">Visualization for HPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+volo/">Volo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/">Web Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+website/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+winchester/">Winchester: Schema mapping and ID mapping for AD Interoperability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wusb/">Wireless USB Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wwan/">Wireless Wide Area Network</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x%2Dcons/">X Consolidation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xkblayout/">X Keyboard Layout</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xen%2Dgate/">Xen Gate</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xfce/">Xfce: A lightweight desktop environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfsboot/">ZFS Boot and Install</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfs%2Dcrypto/">ZFS on disk encryption support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonemgr/">Zone Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonestat/">Zone Statistics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gcore/">gcore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iser/">iSCSI Extensions for Remote DMA (iSER)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isns/">iSNS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+libmicro/">libMicro &#45; portable microbenchmarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+loficc/">lofi compression and cryptography support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lx64/">lx64 brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+s10brand/">s10brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x86gentopo/">x86 Generic FMA Topology Enumerator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cz/">Český portál</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ru/">Русский портал</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ar/">البوابة العربية</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+in/">भारतीय पोर्टल</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cn/">中国门户</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/">日本ポータル</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kr/">한국 포탈</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavUser Group">
+            <div id="xwikinavUser GroupHeader" class="accordionTabTitleBar"><h6>User Group</h6>
+            </div>
+            <div id="xwikinavUser GroupContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+kr/"></a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+adl%2Dauosug/">Adelaide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+aosug/">Argentina</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+azosug/">Arizona</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+atl%2Dosug/">Atlanta OpenSolaris Users Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bwosug/">Baltimore&#45;Washington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bosug/">Bangalore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bkkosug/">Bangkok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bdosug/">Bangladesh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bjosug/">Beijing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+brosug/">Berlin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bvrm%2Dosug/">Bhimavaram</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+btn%2Dosug/">Bloomington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfosug/">Brasilia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+blmosug/">Bélem</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+crosug/">Capital Region</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cfosug/">Cardiff</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ccosug/">Caribbean OSUG</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ceosug/">Ceara</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cltosug/">Charlotte</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chennai/">Chennai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chmxosug/">Chihuahua</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+closug/">Chile</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cle%2Dosug/">Cleveland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+colosug/">Colombia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cmh%2Dosug/">Columbus</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ctosug/">Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+knp%2Duek/">Cracow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+czosug/">Czech</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfw%2Dosug/">Dallas/Ft. Worth</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dosug/">Danish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+deosug/">Delaware</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+eduosug/">Edinburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+egosug/">Egypt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fiosug/">Finland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+flosug/">Florida</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fraosug/">Frankfurt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+frosug/">Front Range</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+glug/">Great Lakes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+grosug/">Greece</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hzosug/">Hangzhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hi%2Dosug/">Hawaii</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hkosug/">Hong Kong</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hugs/">Houston</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hosug/">Hyderabad</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+idosug/">Indonesia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madridosug/">Inicio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ie%2Dosug/">Irish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+iosug/">Israel</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+istosug/">Istanbul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+itl%2Dosug/">Italian</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jnosug/">Jinan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jogja%2Dosug/">Jogja</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kbosug/">Kabul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kc%2Dosug/">Kansas City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+lavosug/">Latvia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+losug/">London</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madosug/">Madurai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mansug/">Manchester</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mssosug/">Mato Grosso</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+msosug/">Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mgosug/">Minas Gerais</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mnosug/">Minnesota</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mtlosug/">Montreal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mosug/">Moscow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mmosug/">Mumbai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mucosug/">Munich</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+neaosug/">NEA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nlosug/">Netherlands</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ne%2Dosug/">New England</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nycosug/">New York City OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nzosug/">New Zealand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+norosug/">Noroeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nerosug/">Nuremberg&#45;Erlangen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+okcosug/">Oklahoma City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ososug/">Osnabrück</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+peosug/">Peru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+paosug/">Philadelphia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+piaski%2Dosug/">Piaski</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ptosug/">Pittsburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+poaosug/">Porto Alegre</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+psosug/">Puget Sound</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+posug/">Pune</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+qosug/">Queensland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rtp%2Dosug/">Research Triangle Park</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+riosug/">Rio de Janeiro</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ro%2Dosug/">Romania</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ruosug/">Russia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+alamo%2Dosug/">San Antonio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sdosug/">San Diego</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sfosug/">San Francisco</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+scosug/">Scottish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rs%2Dosug/">Serbia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szosug/">Shenzhen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svosug/">Silicon Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sgosug/">Singapore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+skosug/">Slovak</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+saosug/">South African</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+soctosug/">Southern Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+stl%2Dosug/">St. Louis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svgosug/">Stavanger</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+swosug/">Sweden</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chosug/">Switzerland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sosug/">Sydney</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szc%2Dosug/">Szczecin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sampaosug/">São Paulo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+twosug/">Taiwan OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ostug/">Tecum</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tvosug/">Thames Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tsug/">Tokyo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+torosug/">Toronto</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+trosug/">Trondheim</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+toss/">Tulsa</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tosug/">Turkey</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ufaosug/">Ufa OSUG</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+uaosug/">Ukraine OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+unimelb%2Dosug/">University of Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+valeosug/">Vale do Paraíba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vanosug/">Vancouver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vosug/">Venezuela &#45; Pagina de incio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vvoosug/">Vladivostok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wosug/">Welsh &#45; Cymru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wiosug/">Wisconsin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+xaosug/">Xi'an</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+</div><p/>
+<script type="text/javascript">
+var obj = {div:'xwikinav',no:1,height:250};
+var acc = createAccordion(obj);
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSDocs','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSDocs'); togglePanelVisibility(this.parentNode);">Project isc Pages</h1>
+<div class="xwikipanelcontents"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+isc/Architecture">Architecture</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isc/Autonomic">Autonomic</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isc/Networking">Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isc/OpenSolaris">OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isc/OpenSolaris+Security+Hardening">OpenSolaris Security Hardening</a></span></li>
+</ul>
+                            </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div>  <div id="footerglobal" class="layoutsection">
+  <div class="minwidth"></div>
+
+  <script language="JavaScript" src="/resources/js/s_code_remote.js"></script>
+
+
+          <div id="xwikiplatformversion">XWiki Enterprise 2.1.1.25889 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+  <br/>
+
+
+    <hr/>
+    <div><a href="/bin/view/Main/tou">Terms Of Use</a> |
+         <a href="http://www.sun.com/privacy/">Privacy</a> | 
+         <a href="/bin/view/Main/trademark">Trademarks</a> |
+         <a href="/bin/view/Main/copyrights">Copyright Policy</a> |
+         <a href="/bin/view/Main/site_guidelines">Site Guidelines</a> |
+         <a href="/bin/view/Main/site%2Dmap">Site map</a> |
+         <a href="/bin/view/Main/help">Help</a></div>
+    <div>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.</div>
+    <div id="xwikilicence">© 2010, Oracle Corporation and/or its affiliates</div>
+    <img src="http://opensolaris.org/oracle/logo_oracle_footer.gif")" alt="Oracle"/>
+  <hr/>
+  
+  </div>
+
+
+</div></div></body>
+</html>

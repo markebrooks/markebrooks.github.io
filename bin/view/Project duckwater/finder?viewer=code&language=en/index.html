@@ -1,0 +1,1553 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <title>
+                  [NEW] Finder APIs (Project duckwater.finder) - XWiki
+              </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="imagetoolbar" content="no"/>
+                <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+duckwater/finder" />
+                        <meta name="document" content="Project duckwater.finder"/>
+    <meta name="space" content="Project duckwater"/>
+    <meta name="page" content="finder"/>
+        <meta name="revisit-after" content="7 days" />
+<meta name="description" content="[NEW] Finder APIs" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+
+        <!-- com.xpn.xwiki.plugin.skinx.LinkExtensionPlugin -->
+    <link href="/bin/skin/skins/oso/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/oso/os_base1.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/oso/print.css" rel="stylesheet" type="text/css" media="print" />
+        
+
+
+    
+
+    <link href="/resources/js/xwiki/fullscreenedit/fullscreenEdit.css" rel="stylesheet" type="text/css" />
+<link href="/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript">
+var script1 = document.createElement('script')
+script1.src = "/resources/js/prototype/prototype.js"
+var script2 = document.createElement('script')
+script2.src = "/bin/skin/resources/js/xwiki/xwiki.js"
+var script3 = document.createElement('script')
+script3.src = "/resources/js/xwiki/suggest/ajaxSuggest.js"
+document.getElementsByTagName('head')[0].appendChild(script1);
+document.getElementsByTagName('head')[0].appendChild(script2);
+document.getElementsByTagName('head')[0].appendChild(script3);
+</script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.editor = "";
+XWiki.viewer = "";
+// ]]>
+</script>
+
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js'></script><script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js'></script>
+
+  </head>
+    	<body id="body" class="xwiki viewbody hideright">
+  <!-- These elements will be closed in the footer vm file -->
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+
+  <br/>
+  <br/>
+  <div id="Masthead">
+    <h1><a href="/bin/view/Main/">OpenSolaris</a></h1>
+    <a href="/bin/view/Main/" id="MastheadLogo"></a>
+    <a href="/bin/view/Main/" title="Home" rel="home"></a>
+    <div id="Iconbar">
+	<a id="CollectivesIcon" href="/bin/view/Main/collectives">Collectives</a>
+	<a id="DiscussionsIcon" href="/bin/view/Main/discussions">Discussions</a>
+	<a id="DocumentationIcon" href="/bin/view/Main/documentation">Documentation</a>
+	<a id="DownloadIcon" href="/bin/view/Main/downloads">Download</a>
+	<a id="SourceBrowserIcon" href="http://src.opensolaris.org">Source Browser</a>
+	<a id="FreeCD" href="http://www.opensolaris.org/os/TryOpenSolaris/">Free CD</a>
+    </div>
+  </div>
+
+
+ <div class="layoutsection">
+<div class="minwidthb"></div>
+
+    <div style="text-align:right;">
+      <a class="glink" href="http://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bduckwater%2Ffinder%3Fviewer%3Dcode%26%2338%3Blanguage%3Den" id="headerlogin">Log-in</a><span class="separator"> | </span>
+  <span class="glink" id="headerlanguages">
+  <a href="/bin/view/Project+duckwater/finder?language=en">en</a>
+    </span>
+    </div> 
+</div>
+
+ <div id="headerspace" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+  <div id="breadcrumbs">
+    <span class="breadcrumbspace"><a href="/bin/view/Project+duckwater/">Project duckwater</a>: </span>
+<a href='/bin/view/Project+duckwater/Documentation'>Documentation</a> &gt; <a href='/bin/view/Project+duckwater/finder'>[NEW] Finder APIs</a>
+  </div>
+<hr/>
+</div>
+
+
+<div id="menuview"> 
+  <div id="actionmenu" class="layoutsubsection">
+<h3 id="xwikimenutitle" class="hidden">Top Menu</h3>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+<div class="topmenuentry" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmShow">
+<a class="tme"  href="/bin/view/Project+duckwater/finder?viewer=code&amp;language=en" ><strong>Show</strong></a><span class="hidden menucolon">: </span><span class="submenu hidden">
+<span class="submenuitem"><a href="/bin/view/Project+duckwater/finder?viewer=comments&amp;language=en" id="tmShowComments">Comments</a></span>
+<span class="submenuitem"><a href="/bin/view/Project+duckwater/finder?viewer=attachments&amp;language=en" id="tmShowAttachments">Attachments</a></span>
+<span class="submenuitem"><a href="/bin/view/Project+duckwater/finder?viewer=history&amp;language=en" id="tmShowHistory">History</a></span>
+<span class="submenuitem"><a href="/bin/view/Project+duckwater/finder?viewer=information&amp;language=en" id="tmShowInformation">Information</a></span>
+</span></div>
+ <div class="topmenuentry" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmPrint">
+<a class="tme"  href="javascript:window.print()" ><strong>Print</strong></a><span class="hidden menucolon">: </span><span class="submenu hidden">
+<span class="submenuitem"><a href="javascript:window.print()" id="tmPrintAction">Print</a></span>
+<span class="submenuitem"><a href="/bin/view/Project+duckwater/finder?xpage=print&amp;language=en" id="tmPrintPreview">Print preview</a></span>
+<span class="submenuseparator">&nbsp;</span>
+<span class="submenuitem"><a href="/bin/export/Project+duckwater/finder?format=pdf&amp;language=en" id="tmExportPdf">Export as PDF</a></span>
+<span class="submenuitem"><a href="/bin/export/Project+duckwater/finder?format=rtf&amp;language=en" id="tmExportRtf">Export as RTF</a></span>
+<span class="submenuitem"><a href="/bin/export/Project+duckwater/finder?format=html&amp;language=en" id="tmExportHtml">Export as HTML</a></span>
+<span class="submenuitem"><a href="/bin/export/Project+duckwater/finder?format=xar&amp;name=Project+duckwater.finder&amp;pages=Project+duckwater.finder&amp;language=en" id="tmExportXar">Export as XAR</a></span>
+</span></div>
+</div>
+</div>
+
+</div>
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+<div class="main layoutsubsection">
+<h1><span>Wiki code for <em>[NEW] Finder APIs</em></span></h1>
+<a href="/bin/view/Project+duckwater/finder?viewer=code&showlinenumbers=0&language=en">Hide Line numbers</a>
+<br />
+<br />
+<textarea readonly="readonly" style="width: 100%; height: 300px;">
+1: = Duckwater: Name Service Switch Versioning and Finder Design
+2: 
+3: |=Author:|Doug Leavitt &#60;[[doug.leavitt@sun.com&#62;&#62;mailto:doug.leavitt@sun.com]]&#62;
+4: |=Version:|DRAFT 0.5
+5: |=Date:|2008-03-05
+6: 
+7: Contents
+8: 
+9: * [[1   Introduction&#62;&#62;#introduction]]
+10: * [[2   Interface Taxonomy&#62;&#62;#interface-taxonomy]]
+11: ** [[2.1   OPEN ISSUES:&#62;&#62;#open-issues]]
+12: * [[3   Overview&#62;&#62;#overview]]
+13: * [[4   Backend Versioning&#62;&#62;#backend-versioning]]
+14: ** [[4.1   Pre PSARC/2005/133&#62;&#62;#pre-psarc-2005-133]]
+15: ** [[4.2   PSARC/2005/133 - Sparks [phase 1]&#62;&#62;#psarc-2005-133-sparks-phase-1]]
+16: *** [[4.2.1   issues&#62;&#62;#issues]]
+17: ** [[4.3   PSARC/2008/035&#62;&#62;#psarc-2008-035]]
+18: *** [[4.3.1   Details&#62;&#62;#details]]
+19: ** [[4.4   PSARC/2007/694&#62;&#62;#psarc-2007-694]]
+20: *** [[4.4.1   NSS Finder Summary&#62;&#62;#nss-finder-summary]]
+21: ** [[4.5   NSS2 Versioning&#62;&#62;#nss2-versioning]]
+22: *** [[4.5.1   Version Structure&#62;&#62;#version-structure]]
+23: *** [[4.5.2   Version Numbers&#62;&#62;#version-numbers]]
+24: *** [[4.5.3   Backend API Structure&#62;&#62;#backend-api-structure]]
+25: *** [[4.5.4   Backend Option Structure&#62;&#62;#backend-option-structure]]
+26: * [[5   Finder Functions&#62;&#62;#finder-functions]]
+27: ** [[5.1   Purpose&#62;&#62;#purpose]]
+28: ** [[5.2   Finder Function Interfaces&#62;&#62;#finder-function-interfaces]]
+29: ** [[5.3   nss_default_finders&#62;&#62;#nss-default-finders]]
+30: ** [[5.4   Version 1 finder functions&#62;&#62;#version-1-finder-functions]]
+31: ** [[5.5   Version 1 Structures&#62;&#62;#version-1-structures]]
+32: *** [[5.5.1   nss_backend &#38; nss_backend_t&#62;&#62;#nss-backend-nss-backend-t]]
+33: ** [[5.6   Version 2 Structures&#62;&#62;#version-2-structures]]
+34: ** [[5.7   Version 2 finder functions&#62;&#62;#version-2-finder-functions]]
+35: *** [[5.7.1   scan_ext&#62;&#62;#scan-ext]]
+36: *** [[5.7.2   lookup_ext&#62;&#62;#lookup-ext]]
+37: *** [[5.7.3   query_ext&#62;&#62;#query-ext]]
+38: *** [[5.7.4   free_ext&#62;&#62;#free-ext]]
+39: *** [[5.7.5   delete_ext&#62;&#62;#delete-ext]]
+40: ** [[5.8   Naming Semantics&#62;&#62;#naming-semantics]]
+41: *** [[5.8.1   Versioning symbols&#62;&#62;#versioning-symbols]]
+42: *** [[5.8.2   DL Library Names&#62;&#62;#dl-library-names]]
+43: *** [[5.8.3   Version 1 constructor symbols&#62;&#62;#version-1-constructor-symbols]]
+44: *** [[5.8.4   Version 2 get/put/... API symbols&#62;&#62;#version-2-get-put-api-symbols]]
+45: *** [[5.8.5   Version 2 option symbols&#62;&#62;#version-2-option-symbols]]
+46: *** [[5.8.6   Version 2 extension symbols&#62;&#62;#version-2-extension-symbols]]
+47: 
+48: = [[1   Introduction&#62;&#62;#id1]]
+49: 
+50: This document specifies the historical (previously undocumented) finder API interfaces and the NSS2 extensions to those APIs as they as part of the following projects:
+51: 
+52: &#62;PSARC/2008/035 - Sparks foreign backend support
+53: PSARC/2007/694 - Duckwater: Simplified name services management
+54: 
+55: The initial delivery of Sparks: PSARC/2005/133 made no modifications to these APIs.
+56: 
+57: = [[2   Interface Taxonomy&#62;&#62;#id2]]
+58: 
+59: The versioning and finder interfaces are currently classified as:
+60: 
+61: &#62;  Project Private and Committed Private
+62: 
+63: Because the other nss policy engine to backend interfaces are currently classified in this manner. See PSARC/2005/133.
+64: 
+65: However, these interfaces are currently treated as:
+66: 
+67: &#62;  Volatile
+68: 
+69: because the new development is being pursued via OpenSolaris.
+70: 
+71: One of the goals of the Sparks and Duckwater efforts are to document all the name service switch interfaces and eventually expose the interfaces first as volatile, and eventually Committed at some point in the future.
+72: 
+73: == [[2.1   OPEN ISSUES:&#62;&#62;#id3]]
+74: 
+75: 1. By pursuing this work on OpenSolaris, are these Project Private APIs automatically reclassified as Volatile?
+76: 1. Does PSARC want us to reclassify them as part of this case?
+77: 
+78: = [[3   Overview&#62;&#62;#id4]]
+79: 
+80: The name service switch interfaces have been private [and mostly undocumented] since their development. While the private status of the interfaces has been restated multiple times, and explicitly documented as private as far back as 1994, this has not prevented uncontracted API usage outside the ON consolidation and unsupported usage by third parties.
+81: 
+82: This is a well known problem that has been partly responsible for the lack of evolution of these APIs, until the initial delivery of the Sparks project [PSARC/2005/133], in snv_50.
+83: 
+84: This document is one step towards rectifying this problem.
+85: 
+86: Currently, it is unclear how many nsswitch backends making use of the uncontracted/unsupported APIs actually exist. Realistically the number of &#34;foreign&#34; nsswitch backends is probably more than 10.
+87: 
+88: = [[4   Backend Versioning&#62;&#62;#id5]]
+89: 
+90: == [[4.1   Pre PSARC/2005/133&#62;&#62;#id6]]
+91: 
+92: Prior to PSARC/2005/133, the only known documentation for the name service switch is PSARC/1991/018, which briefly discusses the switch at a very high level, and does not document any specific internal interfaces.
+93: 
+94: Followup ARC cases make it clearer, that these interfaces are all considered project private. See PSARC/2005/133 for a more detailed analysis of prior work.
+95: 
+96: == [[4.2   PSARC/2005/133 - Sparks [phase 1]&#62;&#62;#id7]]
+97: 
+98: The sparks effort currently preserves backwards compatibility by keeping the old, backwards compatible, nsswitch interface code in it&#8217;s original libc location. The new redesigned nsswitch is located in nscd. As discussed in PSARC/2005/133, the public APIs send requests to the new nsswitch which in turn can return a request back to the libc nsswitch via the TRYLOCAL protocol, if the new switch determines that the request must be executed by the old nsswitch to preserve backwards compatibility.
+99: 
+100: The PSARC/2005/133 delivery preserves compatibility and stability between the old and new interfaces, through 2 means:
+101: 
+102: 1. all ON backends have been updated to behave consistently in both environments
+103: 1. the new switch/nscd has built-in knowledge of the legal backends that can be used
+104: 
+105: PSARC/2005/133 created 2 classes of backends with this behavior.
+106: 
+107: The first class of backends are pre PSARC/2005/133 backends. These are any backend that has not been updated to behave with the new name service switch engine in nscd, and subsequent versionable changes. These backends are considered &#8217;foreign&#8217; to the new name service switch engine. The new name service switch engine returns requests that need to use a foreign backend to the original (obsolete) libc name service switch for local processing on the client. Databases using an old style backend are generally not cached.
+108: 
+109: The second class of backends are backends that have been updated to support the new interfaces. Nscd has a built in knowledge of a core set of backends that are delivered in unison with nscd and must always adhere to all the current latest nsswitch specifications. In PSARC 2005/133, these backends are the backends delivered with nscd in the ON consolidation.
+110: 
+111: === [[4.2.1   issues&#62;&#62;#id8]]
+112: 
+113: PSARC/2005/133 introduced the notion of new extended APIs, but failed to also introduce a versioning model.
+114: 
+115: PSARC/2005/133 used this new model to introduce at least one project private API, in the nss_dns backend to return DNS lookups with associated timeout values from the resolver. Something impossible in the interfaces prior to PSARC/2005/133.
+116: 
+117: Prior to PSARC 2005/133, changes in backend behavior required physical changes to the project private C structures and #defines in nss header files and accompanying recompilation of all components that depended upon those header files.
+118: 
+119: == [[4.3   PSARC/2008/035&#62;&#62;#id9]]
+120: 
+121: Prior to PSARC/2008/035 the name service switch has no versioning capability and no way to differentiate (except with explicit knowledge) what backend has or has not been updated to at least PSARC/2005/133 specifications.
+122: 
+123: PSARC/2008/035 introduces a method to distinguish unversioned (pre PSARC/2005/133) and versioned (PSARC/2005/133 or later) libraries.
+124: 
+125: The purpose of this change is to allow nscd to distinguish between foreign backends that have been updated to PSARC/2005/133 specifications and foreign backends that have not been updated. Foreign backends that are updated to PSARC/2008/035 can be used by nscd and therefore caching of data from those backends can occur.
+126: 
+127: === [[4.3.1   Details&#62;&#62;#id10]]
+128: 
+129: This project introduces minimal versioning support. That is, the ability to distinguish between pre PSARC/2005/133 and post PSARC/2005/133 backends.
+130: 
+131: This project defines a versioned backend to have, at a minimum, an externally defined version global symbol [dlsym retrievable] whose name is in the form:
+132: 
+133: {{{
+134: 
+135: _nss_[backend-name]_version
+136: 
+137: }}}
+138: 
+139: where backend-name corresponds to the backend name used in nsswitch.conf as in:
+140: 
+141: {{{
+142: 
+143: _nss_nis_version, _nss_files_version
+144: 
+145: }}}
+146: 
+147: The contents of the variable are treated as a castable (void *) pointer in the native pointer size for the compiled library.
+148: 
+149: Existence of the symbol in a nsswitch backend with a value of NULL implies that the backend is in compliance with the specifications of PSARC/2005/133.
+150: 
+151: If this NULL valued symbol exists, nscd will treat the nsswitch backend as eligible for being dlopen&#8217;d and used per PSARC/2005/133 specifications. The results from lookups from a backend will be cached along with other lookup results as applicable.
+152: 
+153: == [[4.4   PSARC/2007/694&#62;&#62;#id11]]
+154: 
+155: PSARC/2007/694 extends PSARC/2008/035 with the introduction of new finder functions and extensible versioning data provided by each updated nss backend.
+156: 
+157: This extensible model enables the name service switch projects to add new backend interfaces including configuration and management interfaces. Prior to this effort, the pre PSARC/2005/133 project private finder APIs only lookup pre NSS2 style interfaces.
+158: 
+159: The extended finder APIs are the interfaces used to detect and extract the new interfaces and options for use by updated applications and nscd.
+160: 
+161: In PSARC/2007/694, the Duckwater project defines new backend APIs, and options that the Duckwater management tools use to manage naming configuration auto detection, setup, verification etc.
+162: 
+163: These finder APIs will also allow future Sparks, Duckwater and other projects the flexible ability to easily add and extend backend APIs moving forward.
+164: 
+165: === [[4.4.1   NSS Finder Summary&#62;&#62;#id12]]
+166: 
+167: the pre Sparks name service switch has no concept of versioning.
+168: 
+169: The finder APIs in NSS are rudimentary APIs that perform simple dlopen/dlsym lookups for function APIs called constructors.
+170: 
+171: These NSS (pre Sparks) constructor functions, when called, return a project private pointer to a fixed size structure of function pointers for a given set of NSS interfaces. These pointers are then used in undocumented project private behaviors to process backend lookups. Prior to PSARC/2005/133 usage was inconsistent and undocumented. the finder APIs were also undocumented.
+172: 
+173: The constructor names, function APIs and values are all considered project private APIs.
+174: 
+175: By it&#8217;s nature, any API change, addition, or other requires multiple header changes and recompilation of libc, all the nsswitch backends, nscd and any other component that depends on these hard coded interfaces.
+176: 
+177: This is made worse, by the fact that the project private headers (nss_common.h, nss_dbdefs.h) were publicly exposed in /usr/include and third parties have chosen to become dependent on them.
+178: 
+179: As a result these interfaces have been left virtually unenhanced for years, resulting in significant lack of functionality enhancements, such as put XbyY.
+180: 
+181: More NSS details to be provided below.
+182: 
+183: The NSS2 finder APIs keep the NSS APIs in their backwards compatible behavior, but extend the finder structure to include new APIs that look for a versioning symbol, and then process that symbol as appropriate.
+184: 
+185: == [[4.5   NSS2 Versioning&#62;&#62;#id13]]
+186: 
+187: A backend that supports NSS2 versioning compiles, at a minimum with PSARC/2005/133 and PSARC/2008/035 with the further addition that the version symbol defined in PSARC/2008/035 is not NULL, but instead points to a nss_version structure as described below.
+188: 
+189: === [[4.5.1   Version Structure&#62;&#62;#id14]]
+190: 
+191: The version structure is the structure pointed to by the versioning symbol in all post PSARC/2008/035 backends. The purpose of the versioning structure is to specify the version number of the library and to specify the APIs supported by the backend plus and backend options that may exist.
+192: 
+193: The structures are intended to be extensible over time. The contents of the structures include variable length lists of APIs and options, both of which can be extended over time.
+194: 
+195: The intent is to provide a easy to manage, extensible C interface to nss2 backends that is upwards compatible with nss.
+196: 
+197: The version structure proposed by the ARC case looks like:
+198: 
+199: {{{
+200: 
+201: /* Currently supported backend version(s) */
+202: #ifndef NSS_VERSION_2_1
+203: #define     NSS_VERSION_2_1 0x00020001
+204: #endif
+205: 
+206: /* Current backend version */
+207: #ifndef NSS_VERSION
+208: #define     NSS_VERSION     NSS_VERSION_2_1
+209: #endif
+210: 
+211: /* internal nss_version signal markers for unversioned or foreign backends */
+212: #define     NSS_NOVERSION   0x00020000      /* Supports PSARC/2008/035 */
+213: #define     NSS_FOREIGN     0xFFFFFFFF      /* Unversioned pre PSARC/2005/133 BE */
+214: 
+215: /*
+216:  * NSS version 2 version structure
+217:  * This is the structure pointed to by the dlsym accessible version variable.
+218:  *  _nss_[backend-name]_version
+219:  *
+220:  *  nss_v_version - version supported by the backend.
+221:  *  nss_v_sz - sizeof nss_version structure
+222:  *  nss_v_api - list [array] of APIs supported by the backend
+223:  *  nss_v_api_cnt - API list count
+224:  *  nss_v_api_flags - NSS_VERSION_SORTED or 0
+225:  *  nss_v_opt - list [array] of version options supported in the backend
+226:  *  nss_v_opt_cnt - option list count
+227:  *  nss_v_opt_flags - NSS_VERSION_SORTED or 0
+228:  */
+229: 
+230: /* set if API/option names are in ascii sorted order [search] */
+231: #define     NSS_VERSION_SORTED      0x1
+232: /* internal flag set if backend api is alloc&#8217;d - for V2 compatibility */
+233: #define     NSS_ITEM_ALLOCED        0x80000000
+234: 
+235: struct nss_version {
+236:     nssuint_t               nss_v_version;          /* backend version */
+237:     nssuint_t               nss_v_sz;               /* sizeof struct */
+238:     nss_backend_api_t       *nss_v_api;             /* API array */
+239:     nssuint_t               nss_v_api_cnt;          /* API count */
+240:     nssuint_t               nss_v_api_flags;
+241:     nss_backend_opt_t       *nss_v_opt;             /* option array */
+242:     nssuint_t               nss_v_opt_cnt;          /* option count */
+243:     nssuint_t               nss_v_opt_flags;
+244: };
+245: 
+246: typedef struct nss_version  nss_version_t;
+247: 
+248: }}}
+249: 
+250: ; struct nss_version &#38; nss_version_t
+251: : Structure pointed to by the versioning symbol. This structure includes a version number of the backend, sizeof this structure, pointer to a list of APIs an associated count and flags, pointer to a list of options an associated count and flags.
+252: ; nss_v_version
+253: : Version number for this backend
+254: ; nss_v_sz
+255: : sizeof(nss_version_t)
+256: ; nss_v_api
+257: : Pointer to list of API structures
+258: ; nss_v_api_cnt
+259: : Count of APIs in list
+260: ; nss_v_api_flags
+261: : Option flags for API list
+262: ; nss_v_opt
+263: : Pointer to list of option structures
+264: ; nss_v_opt_cnt
+265: : Count of options in list
+266: ; nss_v_opt_flags
+267: : Option flags for option list
+268: ; NSS_VERSION_SORTED
+269: : API or option list is (ascii) sorted by name.
+270: 
+271: === [[4.5.2   Version Numbers&#62;&#62;#id15]]
+272: 
+273: The following #define values help determine a backend version
+274: 
+275: ; NSS_VERSION
+276: : This value represents the most current version supported by the nsswitch
+277: ; NSS_NOVERSION
+278: : This value represents a nsswitch backend that supports PSARC 2005/133 but has no specific version number. That is a PSARC 2008/035 foreign backend.
+279: ; NSS_FOREIGN
+280: : This value represents a nsswitch backend whose version cannot be detected. That is a pre PSARC/2005/133 backend.
+281: ; NSS_VERSION_X_Y
+282: : A #define of this form represents a specific version. X is the major version number, Y is the minor version number. Version 2.1 is represented as: NSS_VERSION_2_1
+283: ; NSS_VERSION_2_1
+284: : This value represents a backend that supports PSARC 2007/694
+285: 
+286: === [[4.5.3   Backend API Structure&#62;&#62;#id16]]
+287: 
+288: The API structure is created as a list of APIs supported in a particular backend.
+289: 
+290: {{{
+291: 
+292: /*
+293:  * NSS version 2 backend API array item
+294:  * This structure is used to define support for a single API in a nss2 backend.
+295:  *  be_api_name - nss2 (dlsym equivalent) search name
+296:  *  be_api_flags - API option flags
+297:  *  be_api_func - pointer to API
+298:  *  be_api_constr - pointer to [optional] API constructor/init function
+299:  */
+300: 
+301: struct nss_backend_api {
+302:     char                    *be_api_name;           /* API name */
+303:     nssuint_t               be_api_version;         /* API version */
+304:     nssuint_t               be_api_flags;           /* support flags */
+305:     nss_backend_nop_t       be_api_func;            /* API */
+306:     nss_backend_nop_t       be_api_constr;          /* constructor [opt] */
+307:     nss_backend_nop_t       be_api_destr;           /* destructor [opt] */
+308:     nssuint_t               be_api_reserved;        /* reserved field */
+309: };
+310: 
+311: typedef struct nss_backend_api      nss_backend_api_t;
+312: 
+313: /*
+314:  * nss_backend_api_t helper macros
+315:  * NSS_API_ENTRY_V1 - creates a V1 entry in a api list.
+316:  *  cname = V1 constructor function name
+317:  * NSS_API_ENTRY_V2 - creates a V2 entry in a api list.
+318:  *  func = V2 function name
+319:  *  flag = API flags or 0
+320:  *  cname = address of [optional] constructor name
+321:  *  dname = address of [optional] destructor name
+322:  */
+323: 
+324: #ifndef     NSS_APIENTRY_V1
+325: #define     NSS_APIENTRY_V1(cname) \
+326:     { #cname,   0, 0, (nss_backend_nop_t)NULL, \
+327:         (nss_backend_nop_t)&#38;cname, (nss_backend_nop_t)NULL, 0 }
+328: #endif
+329: #ifndef     NSS_APIENTRY_V2
+330: #define     NSS_APIENTRY_V2(func, flag, cname, dname) \
+331:     { #func, NSS_VERSION, flag, (nss_backend_nop_t)&#38;func, \
+332:         (nss_backend_nop_t)cname, (nss_backend_nop_t)dname, 0 }
+333: #endif
+334: 
+335: }}}
+336: 
+337: ; nss_backend_api &#38; nss_backend_api_t
+338: : API structure as defined by PSARC/2007/694. includes the name of the API a specific API version value, flags, and function pointers
+339: ; be_api_name
+340: : API name as defined by the API naming scheme. The actual API can be locatable via dlsym.
+341: ; be_api_version
+342: : Specific API version value. Unused in PSARC/2007/694. Future backend updates may choose to optionally allow/support different API versions within backends, or across different backend versions.
+343: ; be_api_flags
+344: : specific API flags.
+345: ; NSS_ITEM_ALLOCED
+346: : Internally used API flag, used to support PSARC/2008/035 backends withing the NSS2 finder interfaces.
+347: ; be_api_func
+348: : API function pointer
+349: ; be_api_constr
+350: : Optional API constructor. Called prior to API call.
+351: ; be_api_destr
+352: : Optional API destructor. Called after API call
+353: ; NSS_APIENTRY_V1
+354: : API helper macro to specify a pre Sparks API in an API list
+355: ; NSS_APIENTRY_V2
+356: : API helper macro to specify a NSS2 API in an API list
+357: 
+358: === [[4.5.4   Backend Option Structure&#62;&#62;#id17]]
+359: 
+360: The option structure is created as a list of options supported in a particular backend. Options may be generic across backends, or backend specific.
+361: 
+362: {{{
+363: 
+364: /*
+365:  * NSS version 2 backend option array item
+366:  * This structure is used to define support for a nss2 backend option.
+367:  * This is to allow extensibility within a version by defining optional
+368:  * support in a backend beyond APIs.
+369:  *
+370:  * This structure specifies support for a single API in the nss2 backend
+371:  *  be_opt_name - supported backend option name
+372:  *  be_opt_flags - flags applicable to this option
+373:  *          NSS_FINDER_WRITABLE     this option is writable (not const)
+374:  *  be_opt_string - field for options with string type value(s)
+375:  *  be_opt_int - field for options with int type value(s)
+376:  */
+377: 
+378: struct nss_backend_opt {
+379:     char                    *be_opt_name;           /* option name */
+380:     nssuint_t               be_opt_flags;           /* support flags */
+381:     char                    *be_opt_string;         /* string value(s) */
+382:     nssuint_t               be_opt_int;             /* int/flag value(s) */
+383:     nssuint_t               be_opt_reserved;        /* reserved field */
+384: };
+385: 
+386: typedef struct nss_backend_opt      nss_backend_opt_t;
+387: 
+388: }}}
+389: 
+390: ; nss_backend_opt &#38; nss_backend_opt_t
+391: : Option structure as defined by PSARC/2007/694. includes the name of the option flags, an option string value and/or integer value
+392: ; be_opt_name
+393: : Option name as defined by the option naming scheme. The actual option can be locatable via dlsym.
+394: ; be_opt_flags
+395: : Specific per options flags.
+396: ; NSS_FINDER_WRITABLE
+397: : the values in this option are writable (not const)
+398: ; be_opt_string
+399: : pointer to a [const] char * value. Default is const unless NSS_FINDER_WRITABLE is set.
+400: ; be_opt_int
+401: : nssuint_t value. Assumed const unless NSS_FINDER_WRITABLE is set.
+402: 
+403: = [[5   Finder Functions&#62;&#62;#id18]]
+404: 
+405: == [[5.1   Purpose&#62;&#62;#id19]]
+406: 
+407: The purposes of the finder functions are as follows:
+408: 
+409: 1. detect and optionally load available name service switch backends for use by the name service switch and any associated application, such as the name service switch management tools
+410: 1. inspect name service switch backends for versioning information categorize backends by their versioning information as either
+411: &#62;11. foreign (pre-sparks PSARC/2005/133)
+412: 11. PSARC/2005/133 capable
+413: 11. Post PSARC 2005/133 capable
+414: 1. Determine the supported functionality of a given backend
+415: 1. return the following information to applications and the nsswitch
+416: &#62;11. lists of backends matching certain search criteria This is the scan feature
+417: 11. one or more function(s) based on certain search criteria This is the lookup feature
+418: 11. lists of capabilities based on search criteria this is the query feature
+419: 
+420: == [[5.2   Finder Function Interfaces&#62;&#62;#id20]]
+421: 
+422: {{{
+423: 
+424: /*
+425:  * FINDER flag options
+426:  *
+427:  *  NSS_FINDER_VCHK         version check library (temp opens dyn lib)
+428:  *  NSS_FINDER_OPEN         open (keep open) dyn lib
+429:  *  NSS_FINDER_CLOSE        close dyn lib (OPEN/CLOSE mutually exclusive)
+430:  *  NSS_FINDER_DELETE       TBD
+431:  *  NSS_FINDER_V1API        process (scan/lookup) V1API
+432:  *  NSS_FINDER_EXTENSION    process (scan/lookup) extension API
+433:  *  NSS_FINDER_WRITABLE     dyn lib options are writable (not const)
+434:  */
+435: 
+436: #define     NSS_FINDER_VCHK         0x00000001
+437: #define     NSS_FINDER_OPEN         0x00000002
+438: #define     NSS_FINDER_CLOSE        0x00000004
+439: #define     NSS_FINDER_DELETE       0x00000008
+440: #define     NSS_FINDER_V1API        0x00000010
+441: #define     NSS_FINDER_EXTENSION    0x00000020
+442: #define     NSS_FINDER_WRITABLE     0x00000040
+443: 
+444: struct nss_backend_finder {
+445:     /* NSS version 1 finder operations */
+446: #if defined(__STDC__)
+447:     nss_backend_constr_t    (*lookup)
+448:             (void *lkp_priv, const char *, const char *, void **del_privp);
+449:     void                    (*delete)
+450:             (void *del_priv, nss_backend_constr_t);
+451: #else
+452:     nss_backend_constr_t    (*lookup)();
+453:     void                    (*delete)();
+454: #endif
+455:     struct nss_backend_finder *next;
+456:     void                    *lookup_priv;
+457:     /* NSS version 2 finder operations */
+458: #if defined(__STDC__)
+459:     nss_status_t            (*scan_ext)
+460:             (const char *db_name, const char *src_name,
+461:             nssuint_t flags, nss_backend_src_t ***be_list,
+462:             uint32_t *count, void **finder_priv);
+463:     nss_status_t    (*lookup_ext)
+464:             (const char *db_name, const char *src_name,
+465:             const char *op_name, const char *key_name,
+466:             nssuint_t flags, nss_backend_api_t ***api_list,
+467:             uint32_t *count, void **finder_priv);
+468:     nss_status_t    (*query_ext)
+469:             (const char *db_name, const char *src_name,
+470:             const char *opt_name,
+471:             nssuint_t flags, nss_backend_opt_t ***opt_list,
+472:             uint32_t *count, void **finder_priv);
+473:     void            (*free_ext)
+474:             (nss_backend_src_t ***be_list, uint32_t *be_cnt,
+475:             nss_backend_api_t ***api_list, uint32_t *api_cnt,
+476:             nss_backend_opt_t ***opt_list, uint32_t *opt_cnt,
+477:             void **finder_priv);
+478:     void            (*delete_ext)(void **finder_priv);
+479: #else
+480:     nss_status_t    (*scan_ext)();
+481:     nss_status_t    (*lookup_ext)();
+482:     nss_status_t    (*query_ext)();
+483:     void            (*free_ext)();
+484:     void            (*delete_ext)();
+485: #endif
+486: };
+487: 
+488: typedef struct nss_backend_finder nss_backend_finder_t;
+489: 
+490: extern nss_backend_finder_t *nss_default_finders;
+491: 
+492: }}}
+493: 
+494: == [[5.3   nss_default_finders&#62;&#62;#id21]]
+495: 
+496: nss_default_finders is a symbol exposed by libc. This symbol points to the nss_backend_finder_t structure. This structure is the list of pointers to the nss finder function interfaces.
+497: 
+498: The contents of the structure are currently considered project private. Prior to PSARC 2007/694, The old structure definition is as follows:
+499: 
+500: {{{
+501: 
+502: struct nss_backend_finder {
+503:     /* NSS version 1 finder operations */
+504: #if defined(__STDC__)
+505:     nss_backend_constr_t    (*lookup)
+506:             (void *lkp_priv, const char *, const char *, void **del_privp);
+507:     void                    (*delete)
+508:             (void *del_priv, nss_backend_constr_t);
+509: #else
+510:     nss_backend_constr_t    (*lookup)();
+511:     void                    (*delete)();
+512: #endif
+513:     struct nss_backend_finder *next;
+514:     void                    *lookup_priv;
+515: };
+516: 
+517: }}}
+518: 
+519: == [[5.4   Version 1 finder functions&#62;&#62;#id22]]
+520: 
+521: The original name service switch provided a lookup finder API that searched for a specific API by database and named backend.
+522: 
+523: Additionally there is a cleanup/delete API.
+524: 
+525: The version 1 lookup API returns a pointer to a constructor function for the backend, or NULL if it can not find the backend. The switch engine caches these function pointers; when it needs to perform a backend lookup. The switch calls the constructor function, which returns a pointer to a new instance of the backend, properly initialized or NULL.
+526: 
+527: The nsswitch engine then uses a hardwired function array indexed by defines in nss_dbdefs.h and nss_backend_t to call the appropriate API in version 1 format. See PSARC/2005/133 for further details.
+528: 
+529: This behavior is considered stable but obsolete. The array indexes, databases and version 1 definitions related to these finder definitions array indices and other internal behaviors and the associated backend API behaviors are considered stable/standard and obsolete.
+530: 
+531: The nss version 1 finder interfaces are:
+532: 
+533: {{{
+534: 
+535: lookup(void *dummy, const char *db_name, const char *src_name,
+536:     void **delete_privp)
+537: delete(void *delete_priv, nss_backend_constr_t dummy)
+538: 
+539: }}}
+540: 
+541: Where:
+542: 
+543: ; db_name
+544: : Is a null terminated ascii string that is one of the database names such as &#34;hosts&#34; or &#34;passwd&#34; from the name service switch
+545: ; src_name
+546: : Is a null terminated ascii string that is one of the source names such as &#34;files&#34; or &#34;nis&#34; from the name service switch
+547: ; delete_privp
+548: : This is an internal opaque priv pointer that is initialized by the lookup API. data pointed to by the opaque pointer must be freed by calling the delete function after finder lookups are completed.
+549: 
+550: The following rules apply to these APIs:
+551: 
+552: 1. These interfaces are considered project private and obsolete.
+553: 1. These APIs are not to be modified/extended in order to preserve backwards compatibility. Use the version 2 finder functions and PSARC/2005/133 and beyond for non NSS1 lookups and nsswitch enhancements.
+554: 1. These APIs are not MT safe
+555: 
+556: == [[5.5   Version 1 Structures&#62;&#62;#id23]]
+557: 
+558: === [[5.5.1   nss_backend &#38; nss_backend_t&#62;&#62;#id24]]
+559: 
+560: nss_backend &#38; nss_backend_t are the hardcoded v1 structures of function pointers used to define the function indices for the various get operations on a per DB basis. Offsets are hardcoded index values defined in nss_dbdefs.h
+561: 
+562: These structures are considered stable but obsolete as of PSARC/2005/133. New sizes, indices or behaviors post PSARC/2005/133 are not permitted.
+563: 
+564: The NSS_DBOP_* macros define the indices for the various db behaviors for v1 structure use.
+565: 
+566: For nsswitch version 2 interfaces, nss_backend_t is considered a backend private pointer and is required to be treated as a void pointer by the frontend.
+567: 
+568: == [[5.6   Version 2 Structures&#62;&#62;#id25]]
+569: 
+570: The version2 APIs use and return data structures defined by the versioning specification.
+571: 
+572: Additionally, the version2 finder APIs track scanned and open nss backends using the following nss_backend_src structure.
+573: 
+574: {{{
+575: 
+576: /*
+577:  * NSS version 2
+578:  * nss_backend_src in memory representation of a found backend library
+579:  * This data is returned from the extended scan API.
+580:  *  be_src_dlh - dlhandle [if the source has been dlopened, NULL if not]
+581:  *  be_src_name - backend name used in nsswitch.conf
+582:  *  be_src_lib - backend library name nss_[backend].so.1
+583:  *  be_src_path - backend library directory path (if opened)
+584:  *  be_src_verp - backend&#8217;s version structure ptr/NULL
+585:  *  be_src_version - backend&#8217;s version number/NSS_FOREIGN/NSS_NOVERSION
+586:  *  be_src_mtim - opened libraries mtime timestamp
+587:  */
+588: 
+589: struct nss_backend_src {
+590:     void                    *be_src_dlh;
+591:     char                    *be_src_name;
+592:     char                    *be_src_lib;
+593:     char                    *be_src_path;
+594:     nss_version_t           *be_src_verp;
+595:     nssuint_t               be_src_version;
+596:     timestruc_t             be_src_mtim;
+597: };
+598: 
+599: typedef struct nss_backend_src      nss_backend_src_t;
+600: 
+601: }}}
+602: 
+603: These interfaces are considered project private. The purpose of the structure is to list and manage the internal state of open or closed nss backends.
+604: 
+605: == [[5.7   Version 2 finder functions&#62;&#62;#id26]]
+606: 
+607: Version 2 adds 5 new extended finder functions.
+608: 
+609: ; scan_ext - extended scan, scans the ld library path, matches and
+610: : optionally opens one or more backends.
+611: ; lookup_ext - extended lookup, performs the lookup function accepting
+612: : new API formats, and uses versioning control information. May call scan_ext to find required libraries.
+613: ; query_ext - extended lookup for property/options queries. Uses
+614: : version control information. May call scan_ext to find required libraries.
+615: 
+616: free_ext - frees memory from previously returned scan/lookup/query delete_ext - closes opened backend(s) from previous *_ext requests
+617: 
+618: === [[5.7.1   scan_ext&#62;&#62;#id27]]
+619: 
+620: {{{
+621: 
+622: nss_status_t            (*scan_ext)
+623:         (const char *db_name, const char *src_name,
+624:         nssuint_t flags, nss_backend_src_t ***be_list,
+625:         uint32_t *count, void **finder_priv);
+626: 
+627: }}}
+628: 
+629: scan_ext scans library paths and [optionally] dlopens backends to determine the versioning information of the nsswitch library
+630: 
+631: If libraries are opened, they are opened in RTLD_LAZY mode to reduce dependency loading
+632: 
+633: Arguments:
+634: 
+635: ; db_name
+636: : NULL or a null terminated regular expression regcomp(3c) that is one of the database names such as &#34;hosts&#34; or &#34;passwd&#34; from the name service switch.
+637: ; src_name
+638: : NULL or a null terminated regular expression regcomp(3c) that is one of the source names such as &#34;files&#34; or &#34;nis&#34; from the name service switch.
+639: ; flags
+640: : 0 or one of the following: NSS_FINDER_VCHK, NSS_FINDER_OPEN
+641: ; be_list
+642: : Array of backends found during the scan operation, and the current Status of the backends. This data should be treated as read only. The data must be freed by the free_ext API.
+643: ; count
+644: : Number of found backends.
+645: ; finder_priv
+646: : Opaque internal backend data. this data must be freed by delete_ext
+647: 
+648: The scan API returns the list of found backends. The data is considered read only. The be_list and count may be passed back through repeated scan_ext calls, if the caller wants to add non-duplicate new entries to the current list.
+649: 
+650: A NULL db_name is a wildcard allowing the scan operation to report for any database. A NULL src_name is a wildcard allowing the scan operation to report for any source.
+651: 
+652: If the be_list and count pointers are NULL, then the scanning occurs but no results are returned. This is to allow for opening and version checking side effects only.
+653: 
+654: Flags:
+655: 
+656: ; NSS_FINDER_VCHK
+657: : This flag tells scan to open, version check then close the library The backend source data will contain the appropriate version type.
+658: ; NSS_FINDER_OPEN
+659: : This flag tells scan to open, and version check the library. The library will reamin open for future operations. The backend source data will contain the appropriate version type. The backend source data will point to the actual library and library timestamp data.
+660: ; 0
+661: : If the flag operation is 0, then the library is neither opened or version checked. All found backends are returned.
+662: 
+663: === [[5.7.2   lookup_ext&#62;&#62;#id28]]
+664: 
+665: {{{
+666: 
+667: nss_status_t    (*lookup_ext)
+668:         (const char *db_name, const char *src_name,
+669:         const char *op_name, const char *key_name,
+670:         nssuint_t flags, nss_backend_api_t ***api_list,
+671:         uint32_t *count, void **finder_priv);
+672: 
+673: }}}
+674: 
+675: As needed, the lookup_ext API performs a scan_ext on the library paths, dlopening the required backends (NSS_FINDER_OPEN) , and determining the versioning information of the nsswitch library. If the library has been previously opened by a scan or earlier lookup operation, the existing open will be shared. The function then performs the lookup function using the new API formats, and versioning control information.
+676: 
+677: ; db_name
+678: : NULL or a null terminated regular expression regcomp(3c) that is one of the database names such as &#34;hosts&#34; or &#34;passwd&#34; from the name service switch.
+679: ; src_name
+680: : NULL or a null terminated regular expression regcomp(3c) that is one of the source names such as &#34;files&#34; or &#34;nis&#34; from the name service switch.
+681: ; op_name
+682: : NULL or a null terminated regular expression regcomp(3c) that is one of the operations defined by the naming semantics (PSARC/2005/133 and later).
+683: ; key_name
+684: : NULL or a null terminated regular expression regcomp(3c) that is one of the keys defined by the naming semantics (PSARC/2005/133 and later).
+685: ; flags
+686: : 0 or one of the following: NSS_FINDER_V1API, NSS_FINDER_EXTENSION
+687: ; api_list
+688: : Array of APIs found during the lookup operation. This data should be treated as read only. The data must be freed by the free_ext API.
+689: ; count
+690: : Number of found APIs.
+691: ; finder_priv
+692: : Opaque internal backend data. this data must be freed by delete_ext
+693: 
+694: The lookup API returns the list of found APIs. The data is considered direct read-only pointers into the applicable backend library. The api_list and count may be passed back through repeated lookup_ext calls, if the caller wants to add non-duplicate new entries to the current list.
+695: 
+696: A NULL db_name is a wildcard allowing the lookup operation to report for any database. A NULL src_name is a wildcard allowing the lookup operation to report for any source.
+697: 
+698: If the api_list and count or finder_priv pointers are NULL, then the lookup fails with a EINVAL errno.
+699: 
+700: Flags:
+701: 
+702: ; NSS_FINDER_V1API
+703: : Perform a version 1 API lookup for a verion 1 constructor API.
+704: ; NSS_FINDER_EXTENSION
+705: : Perform a version 2 extension lookup
+706: ; 0
+707: : Perform a version 2 API lookup
+708: 
+709: === [[5.7.3   query_ext&#62;&#62;#id29]]
+710: 
+711: {{{
+712: 
+713: nss_status_t    (*query_ext)
+714:         (const char *db_name, const char *src_name,
+715:         const char *opt_name,
+716:         nssuint_t flags, nss_backend_opt_t ***opt_list,
+717:         uint32_t *count, void **finder_priv);
+718: 
+719: }}}
+720: 
+721: As needed, the query_ext API performs a scan_ext on the library paths, dlopening the required backends (NSS_FINDER_OPEN) , and determining the versioning information of the nsswitch library. If the library has been previously opened by a scan or earlier lookup operation, the existing open will be shared. The function then performs the query function returning and nss2 options information.
+722: 
+723: ; db_name
+724: : NULL or a null terminated regular expression regcomp(3c) that is one of the database names such as &#34;hosts&#34; or &#34;passwd&#34; from the name service switch.
+725: ; src_name
+726: : NULL or a null terminated regular expression regcomp(3c) that is one of the source names such as &#34;files&#34; or &#34;nis&#34; from the name service switch.
+727: ; opt_name
+728: : NULL or a null terminated regular expression regcomp(3c) that is one of the option names defined by the naming semantics (PSARC/2007/694 and later).
+729: ; flags
+730: : 0 or one of the following: NSS_FINDER_V1API, NSS_FINDER_EXTENSION
+731: ; opt_list
+732: : Array of options found during the lookup operation. This data should be treated as read only, unless stated otherwise. The data must be freed by the free_ext API.
+733: ; count
+734: : Number of found options.
+735: ; finder_priv
+736: : Opaque internal backend data. this data must be freed by delete_ext
+737: 
+738: The query API returns the list of found options. The data is considered direct read-only pointers into the applicable backend library. The opt_list and count may be passed back through repeated lookup_ext calls, if the caller wants to add non-duplicate new entries to the current list.
+739: 
+740: A NULL db_name is a wildcard allowing the lookup operation to report for any database. A NULL src_name is a wildcard allowing the lookup operation to report for any source.
+741: 
+742: If the api_list and count or finder_priv pointers are NULL, then the query fails with a EINVAL errno.
+743: 
+744: Only version 2 backends with versioning information are queried. All other backends are ignored.
+745: 
+746: Specific options may be enabled as read/write. See the versioning section on options for details.
+747: 
+748: Flags:
+749: 
+750: ; 0
+751: : Perform a version 2 option query
+752: 
+753: === [[5.7.4   free_ext&#62;&#62;#id30]]
+754: 
+755: {{{
+756: 
+757: void            (*free_ext)
+758:         (nss_backend_src_t ***be_list, uint32_t *be_cnt,
+759:         nss_backend_api_t ***api_list, uint32_t *api_cnt,
+760:         nss_backend_opt_t ***opt_list, uint32_t *opt_cnt,
+761:         void **finder_priv);
+762: 
+763: }}}
+764: 
+765: This API frees one or more lists.
+766: 
+767: If be_list and be_cnt are non NULL, this API will free the be_list. be_cnt is assumed to the appropriate length.
+768: 
+769: If api_list and api_cnt are non NULL, this API will free the api_list. api_cnt is assumed to the appropriate length.
+770: 
+771: If opt_list and opt_cnt are non NULL, this API will free the opt_list. opt_cnt is assumed to the appropriate length.
+772: 
+773: finder_priv is currently ignored.
+774: 
+775: === [[5.7.5   delete_ext&#62;&#62;#id31]]
+776: 
+777: {{{
+778: 
+779: void            (*delete_ext)(void **finder_priv);
+780: 
+781: }}}
+782: 
+783: This API frees the finder_priv data, and closes any unclosed backends. One the delete_ext API is called any copies or references to any internal nss backend details is invalid.
+784: 
+785: == [[5.8   Naming Semantics&#62;&#62;#id32]]
+786: 
+787: This section defines the symbol name formats as defined by PSARC/2007/694 and previous.
+788: 
+789: === [[5.8.1   Versioning symbols&#62;&#62;#id33]]
+790: 
+791: Are of the form:
+792: 
+793: {{{
+794: 
+795: _nss_[src_name]_version
+796: 
+797: }}}
+798: 
+799: * Where src_name is the name of a backend source such as &#34;files&#34;.
+800: 
+801: === [[5.8.2   DL Library Names&#62;&#62;#id34]]
+802: 
+803: Are of the form:
+804: 
+805: {{{
+806: 
+807: nss_[src_name].so.1
+808: 
+809: }}}
+810: 
+811: * Where src_name is the name of a backend source such as &#34;files&#34;.
+812: 
+813: === [[5.8.3   Version 1 constructor symbols&#62;&#62;#id35]]
+814: 
+815: Are of the form:
+816: 
+817: {{{
+818: 
+819: _nss_[src_name]_[db_name]_constr
+820: 
+821: }}}
+822: 
+823: * Where src_name is the name of a backend source such as &#34;files&#34;.
+824: * Where db_name is the name of a database such as &#34;hosts&#34;.
+825: 
+826: === [[5.8.4   Version 2 get/put/... API symbols&#62;&#62;#id36]]
+827: 
+828: Are of the form:
+829: 
+830: {{{
+831: 
+832: _nss_[op_name]_[src_name]_[db_name]_[key]
+833: 
+834: }}}
+835: 
+836: * Where operation is one of : get, put, setent, getent, endent
+837: * Where src_name is the name of a backend source such as &#34;files&#34;.
+838: * Where db_name is the name of a database such as &#34;hosts&#34;.
+839: * Where key is one of the supported key types such as name, uid, gid, etc...
+840: 
+841: === [[5.8.5   Version 2 option symbols&#62;&#62;#id37]]
+842: 
+843: Are of the form:
+844: 
+845: {{{
+846: 
+847: _nss_[src_name]_[db_name]_opt_[opt_name]
+848: 
+849: }}}
+850: 
+851: * Where src_name is the name of a backend source such as &#34;files&#34;.
+852: * Where db_name is the name of a database such as &#34;hosts&#34;.
+853: * Where opt_name is a supported option in the backend
+854: 
+855: === [[5.8.6   Version 2 extension symbols&#62;&#62;#id38]]
+856: 
+857: Are of the form:
+858: 
+859: {{{
+860: 
+861: _nss_[src_name]_[ext_name]_[extop_name]
+862: 
+863: }}}
+864: 
+865: * Where src_name is the name of a backend source such as &#34;files&#34;.
+866: * Where ext_name is the name of an extension such as &#34;config&#34;.
+867: * Where extopt_name is a supported extension API in the backend
+</textarea>
+
+<div class="clearfloats">
+</div>
+</div>    </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded Search">
+<h5 class="xwikipaneltitle hidden" onclick="togglePanelVisibility(this.parentNode);">Search</h5>
+<div class="xwikipanelcontents">
+  <form action="/bin/view/Main/WebSearch">
+    <div id="globalsearch">
+      <input id="globalsearchinput" type="text" name="text" value="search..." size="15" onfocus="if (this.value == 'search...') value=''; this.select();" onblur="if (this.value == '') value='search...'; this.blur()"/>
+&nbsp;
+      <input class="button" value="Go" type="image" src="/skins/oso/go.png"/>
+    </div>
+  </form>
+</div>
+</div>
+                        <div class="panel expanded OSNav">
+<h5 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSNav','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSNav'); togglePanelVisibility(this.parentNode);">Collectives</h5>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavCommunity Group">
+            <div id="xwikinavCommunity GroupHeader" class="accordionTabTitleBar"><h6>Community Group</h6>
+            </div>
+            <div id="xwikinavCommunity GroupContent" class="accordionTabContentBox">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+edu/">Academic and Research</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+accessibility/">Accessibility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+advocacy/">Advocacy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+appliances/">Appliances</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+approachability/">Approachability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/">Architecture Process and Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+brandz/">BrandZ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+chinese_users/">Chinese Users</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/">Community Advisory Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+databases/">Databases</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+desktop/">Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/">Device Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+distribution/">Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+dtrace/">DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+emerging_platforms/">Emerging Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+fm/">Fault Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+games/">Games on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ha%2Dclusters/">HA Clusters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+hpcdev/">HPC Developer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+install/">Installation and Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+int_localization/">Internationalization and Localization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+laptop/">Laptop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ldoms/">Logical Domains</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+mdb/">Modular Debugger (MDB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/">Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+nfs/">NFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+observability/">Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ogb/">OpenSolaris Governing Board (OGB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+printing/">OpenSolaris Printing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/">OS/Net (ON)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/">Performance</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+pm/">Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+power_pc/">PowerPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/">Security</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+smf/">Service Management Facility (smf(5))</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sw%2Dporters/">Software Porters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+volume_manager/">Solaris Volume Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+storage/">Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sysadmin/">Systems Administration Community Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+testing/">Testing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/">Tools Home</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ufs/">Unix File Systems (UFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+web/">Website Community</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+x_win/">X Window System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+xen/">Xen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/">ZFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/">Zones</a></span></li>
+</ul>
+                                        </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavProject">
+            <div id="xwikinavProjectHeader" class="accordionTabTitleBar"><h6>Project</h6>
+            </div>
+            <div id="xwikinavProjectContent" class="accordionTabContentBox">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+adsl/">ADSL Modem Enhancement</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+arc%2Dprocess/">ARC Process Definition</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osarm/">ARM Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+adm/">Automatic Data Migration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bind/">BIND Update</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bluetooth/">Bluetooth Stack & Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dinitiator/">Brocade FC HBA &#45; Initiator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dtarget/">Brocade FC HBA &#45; Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brussels/">Brussels &#45; unified network link configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/">Caiman, Solaris Install Revisited</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+celeste/">Celeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cz/">Český portál</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/">Chime Visualization Tool for DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smbfs/">CIFS client for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cifs%2Dserver/">CIFS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+clearview/">Clearview: Network Interface Coherence</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dinformix/">Cluster Agent: Informix Dynamic Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dcontainer/">Cluster Agent: OpenSolaris Container</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dxvm/">Cluster Agent: OpenSolaris xVM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Debs/">Cluster Agent: Oracle E&#45;Business Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dpostgresql/">Cluster agent: PostgreSQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dsmb/">Cluster Agent: Samba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dtomcat/">Cluster Agent: Tomcat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cmt/">CMT</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+data%2Dflow/">Coarse Data Flow Parallelism</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+colorado/">Colorado: Open HA Cluster on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+commandassist/">Command Assistant</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cam/">Common Array Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+companion/">Companion &#45; /opt/sfw: Free and Open Source software</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/">COMSTAR: Common Multiprotocol SCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+content/">Content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+contest/">Contest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpufs/">CPU Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpg/">Credentials Process Groups</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crossbow/">Crossbow: Network Virtualization and Resource Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmsagenttoolkit/">Crypto KMS Agent Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/">Cryptographic Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dmm/">Data Migration Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+datatethers/">Data Tethers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+de/">Deutsches Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ddtool/">Device Detection Tool</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+driver%2Dutility/">Device Driver Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devicemgr/">Device Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devmapper/">Device Mapper</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dri/">Direct Rendering Infrastructure & 3D drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Ddoc/">DTrace Guide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/">Duckwater: Simplified name services management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+phpEasyTools/">Easy Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emancipation/">Emancipation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex/">Emulex Fibre Channel Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex-cna/">Emulex Advanced Ethernet Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+intel%2Dplatform/">Enable/Enhance Solaris support for Intel Platform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webcams/">Enhance the support of USB webcams</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Dprofiles/">Enhanced SMF Profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+amd/">Enhancements for AMD&#45;based Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+erlang%2Ddtrace/">Erlang DTrace Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ethbridge/">Ethernet bridge module for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+conary%2Deval/">Evaluate Conary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+events%2Dregistry/">Events Registry</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ext3/">Ext3 file system support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkgbase/">F/OSS Package Base</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+facilitation/">Facilitation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fcoe/">Fibre Channel over Ethernet</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fgap/">Fine Grained Access Policy (FGAP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fingerprint%2Dauthentication/">Fingerprint Authentication</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fmac/">Flexible Mandatory Access Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+forensics/">Forensic Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fox/">Fully Open X Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fuse/">Fuse on Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gcore/">gcore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+generic%2Dmca/">Generic Machine Check Architecture Improvements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+summerofcode/">Google SOC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Djboss/">HA&#45;JBoss</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dmysql/">HA&#45;MySQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livehadoop/">Hadoop Live CD</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hitachi/">Hitachi</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+honeycomb/">HoneyComb Fixed Content Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hpc%2Dstack/">HPC Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/">Image Packaging System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+perfmib/">Improved Performance MIB</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/">Indiana</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+awards/">Innovation Awards</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/">Input Method</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+intelgraphics/">Intel Graphics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ikev2/">Internet Key Exchange, version 2</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+irm/">Interrupt Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ip%2Drefactor/">IP Datapath Refactoring</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ipoib/">IP over Infiniband</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tref/">IPsec Tunnel Reform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iser/">iSCSI Extensions for Remote DMA (iSER)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isns/">iSNS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jeos/">JeOS &#45; Just enough Operating System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jkstat/">JKstat &#45; a java binding for libkstat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jfs/">Journaled File System (JFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kde/">K Desktop Environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kerberos/">Kerberos</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kernel%2Dsockets/">Kernel Sockets</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kssl/">Kernel SSL Enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmf/">Key Management Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ksh93%2Dintegration/">Korn Shell 93 integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+txipsec/">Labeled IPsec</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+latencytop/">LatencyTOP</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+l2filter/">Layer 2 Filtering</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ldoms%2Dmgr/">LDoms Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lending/">Lending</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+libmicro/">libMicro &#45; portable microbenchmarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lld/">Link Layer Discovery</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livemedia/">Live Media: Technologies for distributions running from CD and other media</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+localedata/">Locale Data</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+loficc/">lofi compression and cryptography support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lx64/">lx64 brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mms/">Media Management System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mega_sas/">Mega_sas</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mx/">Mexico</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+milax/">MilaX minimal Live Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mips/">MIPS Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mozilla%2Ddtrace/">Mozilla DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohac%2Davs/">MRSL.NONsharedDevice</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+glossary/">Multi&#45;lingual Glossary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mpxio/">Multi&#45;pathing software (MPxIO)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+large%2Dsector/">Multiple disk sector size support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+multiple%2Ddoi/">Multiple DOI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+muskoka/">Muskoka: An open repository for OpenSolaris technical content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+navigator/">Navigator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nemo/">Nemo: A Framework for High&#45;Performance Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/">Network Auto&#45;Magic</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ndmp/">Network Data Management Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+net%2Dmib/">Network MIBs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npp/">Network Performance Projects</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nws/">Network Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ntp/">Network Time Protocol (NTP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nv%2Dg11n/">Nevada Globalization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+4over6/">New Design of 4over6 Mechanism Based on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsrdma/">NFS RDMA transport update and performance analysis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dzones/">NFS Server in non&#45;Global Zones</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsv41/">NFS version 4.1 pNFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dnamespace/">NFSv4 namespace extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nightingale/">Nightingale: Port Songbird to OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npiv/">NPort ID Virtualization (NPIV)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+numa/">NUMA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osd/">Object Storage Device (OSD) support for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohacge%2Dsbp/">OHACGE Script Based Plug&#45;in</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+onnv/">ON/Nevada (ONNV) Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opendev/">Open Development Infrastructure</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dutilities/">Open HA Cluster Utilities</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opensound/">Open Sound System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/">OpenGrok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cim%2Dserver/">OpenPegasus CIM Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+openrti/">OpenRTI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+busybox/">OpenSolaris Busybox</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/">OpenSolaris Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+es/">OpenSolaris Hispano</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+audit/">OpenSolaris Security Audit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/">OpenSolaris support for the QEMU processor emulator: host and guest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pef/">PEF: Packet Event Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+performance%2Dwrappers/">Performance Wrappers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkgfactory/">Pkgfactory</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pl/">Polski Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fr/">Portail Francophone</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+br/">Portal Brasil</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+portals/">Portals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmui/">Power Management Usability Interfaces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+presto/">Presto: Automatic Printing Configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmpsm/">Printable Many Page Solaris Manuals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+promise%2Dstorage/">Promise SuperTrak RAID HBA Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qlogic-cna/">QLogic Converged Network Adapter GLDv3 NIC Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+quagga/">Quagga Routing Protocol Suite Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+raidcfg/">RAID Configuration Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rbridges/">RBridge (IETF TRILL) support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rof/">RDMA Offload Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+reno/">Reno: Login Process Enhancements for Interop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/">Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+s10brand/">s10brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+samqfs/">SAM/QFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+scm%2Dmigration/">SCM Migration Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+srp/">SCSI RDMA Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sdcard%2Ddrivers/">SDcard Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sensors/">Sensor Abstraction Layer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dsip/">Session Initiation Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sfwnv/">SFW</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+shell/">Shell: bourne shell, korn shell, C shell, etc.</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sierra/">Sierra: Intel WiFi Chipsets Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+simplepanels/">Simple Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sm%2Dhba/">SM&#45;HBA Based SAS HBA Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Ddoc/">SMF Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iscsitgt/">Solaris iSCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/">Solaris PowerPC Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sourcejuicer/">SourceJuicer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/">Sparks: name service switch/nscd enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+squashfs/">Squashfs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+star/">Star integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starfish/">Starfish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starterkit/">Starter Kit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+storagepm/">Storage Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sst/">Sun Security Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+avs/">Sun StorageTek Availability Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ofuv/">Support for OpenFabrics User Verbs / API on OpenSolaris OS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/">Support gcc4/GCCfss in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+suspend%2Dresume/">Suspend/Resume</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+svr4_packaging/">SVR4 Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+systemz/">Systemz</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tamarack/">Tamarack: Removable Media Enhancements in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tesla/">Tesla: OpenSolaris Enhanced Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+test%2Ddev/">Test Development</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/">Tickless Kernel Architecture</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tipc/">TIPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+branding/">Trademarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tnipdb/">Trusted networking interface policy database for Trusted Extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tpm/">Trusted Platform Module support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+usecase/">Use Case</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+valex/">Validated Execution Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vconsole/">Virtual Console</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vnm/">Virtual Network Machines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/">Visual Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+visualization%2Dhpc/">Visualization for HPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+volo/">Volo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vrrp/">VRRP: Virtual Router Redundancy Protocol Implementation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vscan/">VSCAN service</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/">Web Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+website/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+winchester/">Winchester: Schema mapping and ID mapping for AD Interoperability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wusb/">Wireless USB Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wwan/">Wireless Wide Area Network</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x%2Dcons/">X Consolidation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x86gentopo/">x86 Generic FMA Topology Enumerator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xen%2Dgate/">Xen Gate</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xfce/">Xfce: A lightweight desktop environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfsboot/">ZFS Boot and Install</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfs%2Dcrypto/">ZFS on disk encryption support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonemgr/">Zone Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonestat/">Zone Statistics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ru/">Русский портал</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ar/">البوابة العربية</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+in/">भारतीय पोर्टल</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cn/">中国门户</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/">日本ポータル</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kr/">한국 포탈</a></span></li>
+</ul>
+                                        </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavUser Group">
+            <div id="xwikinavUser GroupHeader" class="accordionTabTitleBar"><h6>User Group</h6>
+            </div>
+            <div id="xwikinavUser GroupContent" class="accordionTabContentBox">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/User+Group+adl%2Dauosug/">Adelaide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+aosug/">Argentina</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+azosug/">Arizona</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+atl%2Dosug/">Atlanta</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bwosug/">Baltimore&#45;Washington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bosug/">Bangalore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bkkosug/">Bangkok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bdosug/">Bangladesh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bjosug/">Beijing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+blmosug/">Bélem</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+brosug/">Berlin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bvrm%2Dosug/">Bhimavaram</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+btn%2Dosug/">Bloomington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+os_user_groups_amb/">Campus Ambassadors</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+crosug/">Capital Region</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cfosug/">Cardiff</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ceosug/">Ceara</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cltosug/">Charlotte</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cdosug/">Chengdu</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chennai/">Chennai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chmxosug/">Chihuahua</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+closug/">Chile</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cle%2Dosug/">Cleveland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+colosug/">Colombia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cmh%2Dosug/">Columbus</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ctosug/">Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+knp%2Duek/">Cracow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+czosug/">Czech</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfw%2Dosug/">Dallas/Ft. Worth</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dosug/">Danish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+deosug/">Delaware</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+eduosug/">Edinburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+egosug/">Egypt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fiosug/">Finland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+flosug/">Florida</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+frosug/">Front Range</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fzosug/">FuZhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+glug/">Great Lakes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+grosug/">Greece</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hzosug/">Hangzhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hi%2Dosug/">Hawaii</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hfosug/">HeFei</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hugs/">Houston</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hkosug/">Hong Kong</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hosug/">Hyderabad</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+idosug/">Indonesia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ie%2Dosug/">Irish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+iosug/">Israel</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+itl%2Dosug/">Italian</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jnosug/">Jinan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jogja-osug/">Jogja</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kbosug/">Kabul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kc%2Dosug/">Kansas City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+lavosug/">Latvia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+losug/">London</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madosug/">Madurai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mansug/">Manchester</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mssosug/">Mato Grosso</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+msosug/">Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mgosug/">Minas Gerais</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mnosug/">Minnesota</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mtlosug/">Montreal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mosug/">Moscow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mmosug/">Mumbai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mucosug/">Munich</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+neaosug/">NEA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nlosug/">Netherlands</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ne%2Dosug/">New England</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nycosug/">New York City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nzosug/">New Zealand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nit%2Dhamirpur%2Dosug/">NIT Hamirpur</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+norosug/">Noroeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nerosug/">Nuremberg-Erlangen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+okcosug/">Oklahoma City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ososug/">Osnabrück</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+peosug/">Peru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+paosug/">Philadelphia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+piaski%2Dosug/">Piaski</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ptosug/">Pittsburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+poaosug/">Porto Alegre</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+psosug/">Puget Sound</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+posug/">Pune</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+qosug/">Queensland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+riosug/">Rio de Janeiro</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rtp%2Dosug/">Research Triangle Park</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ro%2Dosug/">Romania</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ruosug/">Russia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+alamo%2Dosug/">San Antonio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sdosug/">San Diego</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sfosug/">San Francisco</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sampaosug/">São Paulo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+scosug/">Scottish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rs%2Dosug/">Serbia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+shosug/">Shanghai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szosug/">Shenzhen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svosug/">Silicon Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sgosug/">Singapore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+skosug/">Slovak</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+saosug/">South African</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+soctosug/">Southern Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+stl%2Dosug/">St. Louis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svgosug/">Stavanger</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+swosug/">Sweden</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chosug/">Switzerland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sosug/">Sydney</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szc%2Dosug/">Szczecin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+twosug/">Taiwan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ostug/">Tecum</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tvosug/">Thames Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tsug/">Tokyo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+torosug/">Toronto</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+trosug/">Trondheim</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+toss/">Tulsa</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tosug/">Turkey</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+uaosug/">Ukraine</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+unimelb%2Dosug/">University of Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+valeosug/">Vale do Paraíba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vanosug/">Vancouver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vosug/">Venezuela</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wosug/">Welsh &#45; Cymru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wiosug/">Wisconsin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+xaosug/">Xi'an</a></span></li>
+</ul>
+                                        </div>
+        </div>
+    </div>
+</div><p/><p/>
+<script type="text/javascript">
+var obj = {div:'xwikinav',no:-1,height:250};
+var acc = createAccordion(obj);
+</script>
+</div>
+</div>
+                        <div class="panel expanded Subsites">
+<h5 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.Subsites','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.Subsites'); togglePanelVisibility(this.parentNode);">Subsites</h5>
+<div class="xwikipanelcontents">
+<span class="wikiexternallink"><a href="http://cr.opensolaris.org">Code Reviews</a></span><br/>
+<span class="wikiexternallink"><a href="http://repo.opensolaris.org">Code Repositories</a></span><br/>
+<span class="wikiexternallink"><a href="http://pkg.opensolaris.org">Package Search</a></span><br/>
+<span class="wikiexternallink"><a href="http://bugs.opensolaris.org">Bugster</a></span><br/>
+<span class="wikiexternallink"><a href="http://defect.opensolaris.org">Bugzilla</a></span><br/>
+<span class="wikiexternallink"><a href="http://test.opensolaris.org">Test Machines</a></span><br/>
+<span class="wikiexternallink"><a href="http://planet.opensolaris.org">Planet</a></span><br/>
+<span class="wikiexternallink"><a href="http://mail.opensolaris.org">Mailing Lists</a></span><br/>
+<span class="wikiexternallink"><a href="http://poll.opensolaris.org">Elections & Polls</a></span><br/>
+<span class="wikiexternallink"><a href="http://arc.opensolaris.org">ARC Case Logs</a></span><br/>
+<span class="wikiexternallink"><a href="http://jucr.opensolaris.org">Source Juicer</a></span><br/>
+<span class="wikiexternallink"><a href="http://pkgfactory.opensolaris.org">Package Factory</a></span><br/>
+<span class="wikiexternallink"><a href="http://auth.opensolaris.org">User Authentication</a></span><br/>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h5 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSDocs','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSDocs'); togglePanelVisibility(this.parentNode);">Project duckwater Pages</h5>
+<div class="xwikipanelcontents"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/BuildSCM">Build Status & Gate Information</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/Documentation">Documentation</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/Reconfiguration">Name Service Reconfiguration (SMF)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/TrackedBugs">Tracked Project Bugs/RFEs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/finder">&#91;NEW&#93; Finder APIs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/legacyconffiles">&#91;NEW!&#93; Legacy Configuration Files Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/libnsconf">&#91;NEW!&#93; libnsconf &#45; Name services configuration library</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/ns%2Ddiscovery">Name Services Discovery</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/nsadm_man">nsadm(1m) Draft Man Page</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/nscfg_man">nscfg(1m) Draft Man Page</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/nssconfig">&#91;NEW!&#93; NSS config API draft</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/nssversion">PSARC/2008/035 nss versioning API draft</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/profiles_new">&#91;NEW!&#93; Name Service Profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/requirements">Requirements</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/alpha2">Alpha2 Release Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/demo">Alpha1 Release Notes &#45; Duckwater Demo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/downloads">Duckwater Download Page</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/duckwater_phase0">Duckwater Phase 0</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/codereview">Code&#45;review</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/new_connmgmt">New Connection Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/std_ldapaddent">Standalone ldapaddent(1M)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/std_ldapclient_man">Standalone libldapclient(1M)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/std_ldaplist">Standalone ldaplist(1)</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/hg_cheatsheet">Duckwater/Mercurial Cheat sheet</a></span></li>
+</ul>
+            </div>
+</div>
+                        
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+  <div id="xwikilicence">&copy; Sun Microsystems Inc. 2009</div>
+          <div id="xwikiplatformversion">XWiki Enterprise 1.8.2.19075 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div> 
+    <div><a href="/bin/view/Main/tou">Terms Of Use</a> |
+         <a href="http://www.sun.com/privacy/">Privacy</a> | 
+         <a href="/bin/view/Main/trademark">Trademarks</a> |
+         <a href="/bin/view/Main/copyrights">Copyright Policy</a> |
+         <a href="/bin/view/Main/site_guidelines">Site Guidelines</a> |
+         <a href="/bin/view/Main/site%2Dmap">Site map</a> |
+         <a href="/bin/view/Main/help">Help</a></div>
+    <div>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.</div>
+<hr/>
+</div>
+
+</div></div></body>
+</html>

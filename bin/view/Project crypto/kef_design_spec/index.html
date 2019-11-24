@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>kCF Functional Spec (Project crypto.kef_design_spec) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+crypto/kef_design_spec" />
+                    <link rel="canonical" href="/bin/view/Project+crypto/kef_design_spec" />
+                            <meta name="document" content="Project crypto.kef_design_spec"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Project crypto"/>
+    <meta name="page" content="kef_design_spec"/>
+    <meta name="version" content="3.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Project+crypto/pages/kef_design_spec"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="kCF Functional Spec" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="Administrator" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project crypto";
+XWiki.currentPage = "kef_design_spec";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Project+crypto/kef_design_spec";
+window.docediturl = "/bin/edit/Project+crypto/kef_design_spec";
+window.docsaveurl = "/bin/save/Project+crypto/kef_design_spec";
+window.docgeturl = "/bin/get/Project+crypto/kef_design_spec";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Project_crypto viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bcrypto%2Fkef_design_spec"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+crypto/"><strong>Project crypto</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Project+crypto" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <div id="header_banner">
+	<table style="width: 100%;">
+	    <tr>
+		<td style="width: 1%;">
+		    <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+		</td>
+		<td id="logo-text" style="width: 1%;">
+		    Solaris
+		</td>         
+		<td style="width: 98%;">
+		    <table id="loading-indicator">
+			<tr>
+			    <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+				    alt="Loading" title="Loading"/></td>
+			    <td>Loading...</td>
+			</tr>
+		    </table>
+		</td>
+		<td style="width: 1%;">
+		    <table id="iconbar">
+			<tr>
+			<td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+			    Collectives</a></td>
+			<td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+				Discussions</a></td>
+			<td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+				Documentation</a></td>
+			<td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+				Download</a></td>
+			<td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+				Source Browser</a></td>
+			</tr>
+		    </table>
+		</td>
+	    </tr>
+	</table>
+    </div>
+    <div id="site-notice">
+	<span>
+	    <a href="https://markebrooks.github.io/bin/view/Main/">ATTENTION: This website and all services within the opensolaris.org domain will be unavailable after March 24, 2013.</a>	   
+	</span>
+    </div>
+</div>
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                              <a href='/bin/view/Project+crypto/Documentation'>Documentation</a> <span class='separator'>&#187;</span> <span class='current'>kCF Functional Spec</span>
+                </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+crypto/kef_design_spec?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+crypto/kef_design_spec?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+crypto/kef_design_spec?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+crypto/kef_design_spec?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+crypto/kef_design_spec?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+crypto/kef_design_spec?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+crypto/kef_design_spec?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+crypto/kef_design_spec?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+crypto/kef_design_spec?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+crypto/kef_design_spec?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+crypto/kef_design_spec?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          <span class="submenuitem "><a href="/bin/view/Project+crypto/kef_design_spec?xpage=copy" id="tmActionCopy" class="tmActionCopy">Copy</a></span>
+      </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>kCF Functional Spec</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<p><strong>NOTE: Not all the links work, we are in the process of transitioning this onto this page</strong></p><h1 id="HKernelCryptographicFrameworkFunctionalSpecification"><span>Kernel Cryptographic Framework Functional Specification</span></h1><h2 id="HContents"><span>Contents</span></h2><ol><li>Overview</li><li>High Level Design<ol><li>Requirements and Design Considerations</li><li>Architecture</li><li>Interfaces<ol><li>Kernel Programming interface</li><li>Provider Interface</li><li>Administrative Interface</li><li>Interface to user-level libraries.</li></ol></li></ol></li><li>Detailed Design<ol><li>Common data structures</li><li>Provider tables and mechanism chains</li><li>Scheduling and load balancing</li><li>Sessions and object management</li><li>Memory management</li><li>Observability</li><li>Extensibility</li></ol></li><li>Appendix A: Glossary</li><li>Appendix B: List of attached documents.</li></ol><hr/><h2 id="H1.Overview"><span>1. Overview</span></h2><p>&nbsp;This document contains the functional specifications of the Solaris kernel cryptographic framework project, PSARC case 2001/553.</p><p>&nbsp;The project is part of the Public Key Enabling program for Solaris (PSARC 2001/550). It delivers a framework for the cryptographic services in the Solaris Kernel. It exposes 1) a programming interface for kernel-level  consumers and a system call interface for user libraries enabling both sides to access the cryptographic services in the Solaris kernel,  2) a service provider interface for Sun and third party pluggable kernel cryptographic providers. An administrative interface is also provided as part of this project.</p><p>&nbsp;This project imports  iterfaces from and exports to its twin project the User-land Cryptographic framework (PSARC case 2001/488).</p><p>The intended audience of this document is the Sun engineers, architects, and technical writers community. These specifications have references to more detailed design documents and man pages attached here as part of the project's ARC materials. Third party developers will use the detailed programming and provider interfaces, attached here, and  expected to be included in the Solaris answer book.</p><h2 id="H2.HighLevelDesign"><span>2. High Level Design</span></h2><h3 id="H2.1RequirementsandDesignconsiderations"><span>2.1 Requirements and Design considerations</span></h3><p>&nbsp;The programming and provider interfaces of this framework have to accommodate the following needs:</p><ul><li>The environmental constraints of the calling code (consumer) - Calls come from kernel clients, that can be running in (1) an interrupt context, (2) in the context of a user process (kernel thread that has an LWP) or (3) in the context of a detached kernel thread (e.g. a taskq scheduler).</li><li>The mode of operation of the providers that will handle the operations- The functions exported by a software based provider will typically execute in a synchronous way, without surrendering the CPU. Hardware based providers usually operate in an asynchronous mode where an operation involves a programmed I/O of the hardware and possibly an interrupt upon completion.</li><li>The parallelism constraints- The whole kernel is one protected address space, where several threads running on different CPUs can be attempting to simultaneously operate on the same data.</li><li>The possibility of consumers or providers going away- Pending parts of a multipart crypto operation may need to be canceled before they are completed (an IPsec SA deleted for instance). A software provider may be unloaded, and a hardware provider can be DR'ed out (for dynamic reconfiguration).</li><li>The ability to accommodate either contiguous or scatter-gather data.</li><li>The need for efficiency.</li></ul><p>The framework must enable the administrator to observe and control the behavior of the cryptographic services:</p><ul><li>Determine which crypto mechanisms are present.</li><li>Display usage statistics.</li><li>Change hardware and software providers with minimal disruption.</li><li>Set a policy on the services and providers used by the system</li><li>Mix and match operations from multipurpose providers.</li></ul><p>&nbsp;The system call interface has to provide access to the full capabilities offered by kernel providers to a user level library.<br/>Kernel providers plug-in into the kernel SPI using an adaptation of the PKCS#11 standard interface, which is the interface currently supported by all the hardware cryptographic products vendors.</p><p>All the components will meet the Solaris requirements for security, robustness, and RAS.</p><h3 id="H2.2Architecture"><span>2.2 Architecture</span></h3><p><img src="https://markebrooks.github.io/bin/download/Project+crypto/kef_design_spec/architecture.gif" alt="architecture.gif"/></p><p>The framework has the following major components:</p><ul><li>A kernel level programming interface offering access to various cryptographic operation. Existing Solaris kernel components that use cryptographic operations are the consumers of this interface.</li><li>A pluggable SPI (service provider interface) for Sun and third party cryptographic modules and device drivers.</li><li>A pseudo device driver (/dev/crypto) offering an ioctl interface to the pkcs11_kernel.so delivered by the User Cryptographic Framework (UEF, PSARC case 2001/488), for accessing the cryptographic services offered by the hardware providers.</li><li>A pseudo device driver (/dev/cryptoadm) for the administration of the framework.</li><li>Scheduling/load balancing for cryptographic operations requests from kernel consumers, and from system calls to /dev/crypto.</li><li>A command line administrative interface.</li><li>A daemon resource management and module verification functions.</li></ul><p>An example of the sequence of operation single-part encryption coming from a user-level application is provided in (<span class="wikilink"><a href="/bin/view/Project+crypto/kcf_funcspec_example">examples</a></span>)</p><h3 id="H2.3Interfaces"><span>2.3 Interfaces</span></h3><h4 id="H2.3.1Programminginterface:"><span>2.3.1 Programming interface:</span></h4><h5 id="H2.3.1.1Consumermodel"><span>2.3.1.1 Consumer model</span></h5><p>&nbsp;A generic calling sequence will have three parts:</p><ul><li>Context creation and initialization</li><li>Context use</li><li>Finalizing, result collecting and context destruction.</li></ul><p>The context creation and initialization may re-use a previously pre-computed template of a cryptographic context.<br/>The second part can have also several steps (several updates using the the context for example).<br/>The three parts can be combined in one single function call operation.</p><p>The consumer code is expected to be aware of kernel constraints.<br/>Calls coming from non-blockable contexts are expected to provide call-back routines, and be ready for asynchronous scheduling of their request.</p><p>Consumer code that submits an asynchronous request is given back a handle for that request. The consumer code will use that handle to cancel the request if it needs to (driver closing, ...).<br/>The main arguments passed to an asynchronous cryptographic function are expected to be persistent and valid until either (1) the operation is complete, and the call-back routine returns, or (2) the consumer cancels the request.</p><h5 id="H2.3.1.2Detailedinterface"><span>2.3.1.2 Detailed interface</span></h5><p>&nbsp;The programming interface is specified in details in the following document:<br/><span class="wikiexternallink"><a href="http://sac.eng.sun.com/PSARC/2001/553/commit_2.materials/k-api">Kernel Cryptographic programming interface specification</a></span><br/>and a sample code of invoking the interface is provided under <span class="wikiexternallink"><a href="http://sac.eng.sun.com/PSARC/2001/553/commit_2.materials/md5_example.c">md5_example.c</a></span></p><h4 id="H2.3.2Providerinterface"><span>2.3.2 Provider interface</span></h4><h5 id="H2.3.2.1ProviderModel"><span>2.3.2.1 Provider Model</span></h5><p>&nbsp;Providers can be classified into two types: hardware and software providers. They are different in terms of capabilities offered, limitations, the way they operate internally, and the way they interact with their environment, which is the Solaris kernel.</p><ul><li>Software Provider Model</li></ul><ul><li>Hardware Provider Model</li></ul><h5 id="H2.3.2.2Detailedinterface"><span>2.3.2.2 Detailed interface</span></h5><p>The programming interface is specified in details in the following document:<br/><span class="wikilink"><a href="/bin/view/Project+crypto/cspi">Crypto SPI</a></span></p><h4 id="H2.3.3AdministrativeInterface"><span>2.3.3 Administrative Interface</span></h4><p>&nbsp;A command line interface, cryptoadm(1m)<span class="wikiexternallink"><a href="http://sac.eng.sun.com/PSARC/2001/553/commit_2.materials/cryptoadm">Administrative Interface</a></span>is provided to administer the kernel cryptographic services. The command uses ioctls to the /dev/cryptoadm pseudo driver <span class="wikiexternallink"><a href="http://sac.eng.sun.com/PSARC/2001/553/commit_2.materials/ioctl-admin">&nbsp;/dev/cryptoadm ioctl interface</a></span></p><h4 id="H2.3.4Interfacetouser-levellibraries"><span>2.3.4 Interface to user-level libraries</span></h4><p>&nbsp;A pseudo device driver, /dev/crypto, provides the user level access to the cryptographic services from hardware providers through the kernel SPI. A clone of /dev/crypto is returned in every new open of the /dev/crypto special file. Operational ioctls cover the full PKCSs#11 needs from pkcs11_kernel.so. The ioctl interface is specified in detail in the <span class="wikiexternallink"><a href="http://sac.eng.sun.com/PSARC/2001/553/commit_2.materials/ioctl">&nbsp;/dev/crypto ioctl interface</a></span> document. The pseudo driver approach is leveraged from the design of the Kernel Cryptographic Library produced by the Networking, Security and Cryptographic Products Group, and ships with the SCA 1000.</p><h2 id="H3.Detaileddesign"><span>3. Detailed design</span></h2><h3 id="H3.1Configuration"><span>3.1 Configuration</span></h3><p>&nbsp;Cryptographic providers make thier services available to the kernel framework by calling a registration routine from their _init() routine (for software providers), and their xx_attach() entry point (for hardware providers) , as described in (<span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://sac.eng.sun.com/PSARC/2001/553/commit_2.materials/cspi)"><span class="wikigeneratedlinkcontent">http://sac.eng.sun.com/PSARC/2001/553/commit_2.materials/cspi)</span></a></span> <span class="wikilink"><a href="/bin/view/Project+crypto/cspi">Kernel Cryptographic Provider Interface.</a></span><br/>Hardware providers are expected to have their force-autoattach global property to be set, so that their attach routine gets invoked for all the possible instances at boot time, and triggers their registrations.<br/>The capabilities of software providers, on the other hand, are described in a  private configuration file, /etc/crypto/kcf.conf. The content of kcf.conf is not exposed. Its entries can be altered only by cryptoadm(1m) and via the *kcfconf action scripts. At boot time, a user-level program loads the description of the which software provider is capable of which mechanism to the kernel. Later, when a cryptographic request for a particular mechanism is submitted for the first time, all the software providers capable of that mechanism are loaded on-demand (if not yet done), and have them register, and get verified if necessary (see more details in <span class="wikiexternallink"><a href="http://sac.eng.sun.com/PSARC/2001/553/commit_2.materials/kcfd">&nbsp;kcfd</a></span>  ), and start being used by the framework.</p><h3 id="H3.2Providertablesandmechanismchains"><span>3.2 Provider tables and mechanism chains</span></h3><p>&nbsp;Starting from the mechanism, the code of the kernel programming interface routines  needs to efficiently retrieve the provider(s) capable of handling the operation, and directly dispatch the call to the most appropriate provider, or queue a request for later scheduling. The framework maintains mechanism tables indexed by the internal mechanism number. There is one such table per group of operations: digest, mac, ciphers, ...<br/>Each entry in the mechanisms table points to a chain of descriptors of providers of the corresponding mechanism. Handling a request for an MD5 digest, in the example below, will only involve considering the providers that advertise whether being capable of that mechanism. Information kept in the description of the provider will determine it can handle the specific request (block sizes limitations, data types, ...). The framework also maintains information in the provider descriptor structure to help in choosing the provider most appropriate for handling the request.<br/>Providers will be represented by one provider descriptor for each mechanism they advertise when they register. Several provider descriptor structures may be allocated for a single multipurpose provider. This is a small memory trade-off that favors the efficient scheduling. This separation of the mechanisms offered by a particular provider also allows to selectively disable any mechanism from that provider, should the system policy mandate that.</p><p><img src="https://markebrooks.github.io/bin/download/Project+crypto/kef_design_spec/provtab.gif" alt="provtab.gif"/></p><h3 id="H3.3Scheduling2Floadbalancing"><span>3.3 Scheduling/load balancing</span></h3><p>&nbsp;A cryptographic function can be called either from the ioctl handling code, or from a kernel-level consumer calling the k-api. The call may result in the creation of a corresponding request that is queued for later scheduling. The best provider to handle the call is chosen before queuing, based on the matching of capabilities required to perform the operation, and the load on the eligible providers.<br/>The framework maintains a global queue of asynchronous requests that can be honored only by software providers. The framework also maintains one queue per registered hardware provider for the requests assigned to it.<br/>One kernel thread is associated with the every hardware provider's queue. Its job is to keep that provider constantly "fed", so as to maximize the usage of that provider.<br/>The Global software queue is serviced by a pool of variable number of kernel threads attached to LWPs, which are created by a user daemon that starts at boot time. This allows the system to keep the amount of CPU resources allocated to cryptographic operations in kernel under control. The servicing threads are created as the demand in working threads increases, so that we maximize the utilization of all the CPUs on an multi-processor system.<br/>The scheduler's design is detailed in the <span class="wikiexternallink"><a href="http://sac.eng.sun.com/PSARC/2001/553/commit_2.materials/scheduler">scheduler's design</a></span> document.<br/>The resources management daemon is specified in the <span class="wikiexternallink"><a href="http://sac.eng.sun.com/PSARC/2001/553/commit_2.materials/kcfd">kcfd</a></span> document.</p><h3 id="H3.4Sessionsandobjectmanagement"><span>3.4 Sessions and object management</span></h3><p>&nbsp;Session-oriented providers register a non null crypto_session_ops  with their crypto_ops operation vector. The framework maintains one session open with such providers for calls coming from kernel consumers.<br/>PKCS#11 applications access the object manipulation capabilities (e.g. secure key storage) offered by hardware providers, by opening a session and authenticating to the provider. The session management, authentication, and object manipulation are described in the<br/><span class="wikiexternallink"><a href="http://sac.eng.sun.com/PSARC/2001/553/commit_2.materials/auth_obj_mgmt">Authentication and Object Management</a></span> design document.</p><h3 id="H3.5Memorymanagement"><span>3.5 Memory management</span></h3><p>&nbsp;Some of the structures that Kernel cryptographic framework relies on need to be allocated and freed for each request received from a consumer and submitted to a Provider.<br/>In order to reduce the overhead associated with the allocation and freeing of these structures, the framework introduces the following new kmem caches.<br/>Default behavior for constructors and destructors is assumed unless explicitly described. See the <span class="wikiexternallink"><a href="http://sac.eng.sun.com/PSARC/2001/553/commit_2.materials/scheduler">&nbsp;scheduler design</a></span> document for a<br/>detailed description of these structures.</p><p>/* Structure for synchronous requests */<br/>struct kmem_cache *crypto_sync_req_cache;</p><p>/* Structure for asynchronous requests */<br/>struct kmem_cache *crypto_async_req_cache;</p><p>/* Request node in Provider queue */<br/>struct kmem_cache *crypto_reqnode_cache;</p><p>/* Contexts allocated by KEF */<br/>struct kmem_cache *crypto_ctx_cache;</p><p>In addition, the Providers are required to zeroize any information that they derived from keying material and stored in a context.</p><h3 id="H3.6Observability"><span>3.6 Observability</span></h3><h4 id="H3.6.1Statistics"><span>3.6.1 Statistics</span></h4><p>&nbsp;The framework maintains counters for the number of the successful and the number of failed operations  of each mechanism submitted providers. kstats are used for these statistics.<br/>When invoked by a non-privileged user, the reporting snapshot routine will report zero for the sensitive stats.</p><h4 id="H3.6.2Performancemeasurments"><span>3.6.2 Performance measurments</span></h4><p>&nbsp;The main entry points for the cryptographic operation have macros wrapping TNF probes at the entry and exits of the routines. The probes accurately measure the time spent inside each routine.</p><h3 id="H3.7Extensibility"><span>3.7 Extensibility</span></h3><p>&nbsp;Mechanisms are identified by their name, and not by predefined numbers. This project predefines a set of names of the string constants that corresponds to the subset of the PKCS#11 mechanisms that are being provided. The consumer code is supposed to dynamically retreive  the name assigned to a mechanism by calling crypto_mech2id(&lt;mechanism_name&gt;).<br/>Providers pass the names of the mechanisms to the framework when they register them. They also pass the number they internally assign to the those mechanisms, and expect the framework to use those number in later references to those mechanisms. This efficient extensible mechanism is detailed in crypto_mech_info(9S).</p><hr/><h2 id="HAppendixA:Glossary"><span>Appendix A: Glossary</span></h2><p>&nbsp;Asymetric Encryption</p><p>Authentication</p><p>Authenticator</p><p>Block cipher</p><p>Cipher</p><p>Ciphertext</p><p>&nbsp;Cryptographic context</p><p>Cryptographic operation:</p><p>&nbsp;Initialization Vector</p><p>&nbsp;Mechanism</p><p>Message digest</p><p>MAC (Message Authentication Code)</p><p>PKCS#11</p><p>Plaintext</p><p>Provider</p><p>Session</p><p>Stream cipher</p><p>Symmetric encryption</p><hr/><h2 id="HAppendixB:Attacheddocuments"><span>Appendix B: Attached documents</span></h2><p>&nbsp;Design Documents:<br/>       k-api<br/>        cspi<br/>        kcfd<br/>        scheduler<br/>        ioctl<br/>        ioctl-admin<br/>        auth_obj_mgmt<br/>        cryptoadm<br/>        examples</p><p>Contract templates:<br/>        cspi_contract_template<br/>        k-api_contract_template</p><p>Man pages:<br/>        crypto_bufcall_9f<br/>        crypto_bufcall_alloc_9f<br/>        crypto_bufcall_free_9f<br/>        crypto_call_req_9s<br/>        crypto_cancel_req_9s<br/>        crypto_cancel_ctx_9s<br/>        crypto_cipher_ops_9s<br/>        crypto_control_ops_9s<br/>        crypto_create_ctx_template_9f<br/>        crypto_ctx_9s<br/>        crypto_ctx_ops_9s<br/>        crypto_data_9s<br/>        crypto_digest_9f<br/>        crypto_digest_ops_9s<br/>        crypto_dual_cipher_mac_ops_9s<br/>        crypto_dual_data_9s<br/>        crypto_dual_ops_9s<br/>        crypto_encrypt_9f<br/>        crypto_encrypt_mac_9f<br/>        crypto_get_mech_list_9f<br/>        crypto_key_9s<br/>        crypto_key_ops_9s<br/>        crypto_mac_9f<br/>        crypto_mac_decrypt_9f<br/>        crypto_mac_ops_9s<br/>        crypto_mech_info_9s<br/>        crypto_mech2id_9s<br/>        crypto_mechanism_9s<br/>        crypto_notify_events_9s<br/>        crypto_object_attribute_9s<br/>        crypto_object_ops_9s<br/>        crypto_op_notification_9f<br/>        crypto_ops_9s<br/>        crypto_provider_dev_9s<br/>        crypto_provider_info_9s<br/>        crypto_provider_management_ops_9s<br/>        crypto_provider_notification_9f<br/>        crypto_random_number_ops_9s<br/>        crypto_register_provider_9f<br/>        crypto_session_ops_9s<br/>        crypto_sign_ops_9s<br/>        crypto_unbufcall_9f<br/>        crypto_unregister_provider_9f<br/>        crypto_verify_ops_9s<br/>        cryptoadm_1m<br/>        kcfd_1m<br/>        modlcrypto_9s</p><ul><li>Other  documents  refer to this framework as the kernel Encryption Framework (KEF).  The term "cryptographic" is more accurate, as it covers other areas under this project  such as message digesting, message authentication codes, signatures, etc...   the 'C' in cryptography collided with the 'C' of  Certificate in the parent project ECF (PSARC 2001/550).</li></ul><ul><li><ul><li>Some of the definitions were taken from the "Cryptography and Network Security" textbook by William Stallings (second edition).</li></ul></li></ul>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by Administrator on 2009/10/26 12:13<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by Administrator on 2009/10/26 12:39
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Project crypto Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/Accelerators">Hardware Crypto</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/Documentation">Documentation</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/kcf%2Dman">KCF Man Pages</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/kef_design_spec">kCF Functional Spec</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/signing">Signing crypto modules</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/sunwcry">Strong Crypto and the Encryption Kit</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/completed">Completed Projects</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/Nylon">Modes Library (Nylon)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/fips">FIPS 140</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/freeobjects">Hardware Key Generation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/libmd">libmd &#45; Message Digest Library</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/libsoftcrypto">HL: libsoftcrypto</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/pkcs11_220">PKCS 11 v2.20</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/future">Future Projects</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/dev_crypto">HL: /dev/crypto engine</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/highlander_libmerge">HL: Library Merge</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/inprogress">Active Projects</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/padlock">VIA Padlock</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/news_wolfgang_key_prague2008">OSDevCon 2008 &#45; Prague &#45; Wolfgang Ley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/overview">Overview</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/test_debug">Test & Debug</a></span></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2013, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

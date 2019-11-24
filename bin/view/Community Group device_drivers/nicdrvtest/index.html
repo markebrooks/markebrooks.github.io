@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>NIC Driver Test Suite (Community Group device_drivers.nicdrvtest) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Community+Group+device_drivers/nicdrvtest" />
+                    <link rel="canonical" href="/bin/view/Community+Group+device_drivers/nicdrvtest" />
+                            <meta name="document" content="Community Group device_drivers.nicdrvtest"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Community Group device_drivers"/>
+    <meta name="page" content="nicdrvtest"/>
+    <meta name="version" content="81.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Community+Group+device_drivers/pages/nicdrvtest"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="NIC Driver Test Suite" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="fanyuan" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Community Group device_drivers";
+XWiki.currentPage = "nicdrvtest";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Community+Group+device_drivers/nicdrvtest";
+window.docediturl = "/bin/edit/Community+Group+device_drivers/nicdrvtest";
+window.docsaveurl = "/bin/save/Community+Group+device_drivers/nicdrvtest";
+window.docgeturl = "/bin/get/Community+Group+device_drivers/nicdrvtest";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Community_Group_device_drivers viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FCommunity%2BGroup%2Bdevice_drivers%2Fnicdrvtest"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+device_drivers/"><strong>Community Group device_drivers</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Community+Group+device_drivers" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+            </td>
+            <td id="logo-text" style="width: 1%;">
+                Solaris
+            </td>         
+            <td style="width: 98%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                              <a href='/bin/view/Community+Group+device_drivers/projects'>Projects</a> <span class='separator'>&#187;</span> <span class='current'>NIC Driver Test Suite</span>
+                </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Community+Group+device_drivers/nicdrvtest?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Community+Group+device_drivers/nicdrvtest?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+device_drivers/nicdrvtest?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+device_drivers/nicdrvtest?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+device_drivers/nicdrvtest?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Community+Group+device_drivers/nicdrvtest?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+device_drivers/nicdrvtest?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+device_drivers/nicdrvtest?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+device_drivers/nicdrvtest?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+device_drivers/nicdrvtest?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Community+Group+device_drivers/nicdrvtest?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+                      
+<div id="document-title"><h1>NIC Driver Test Suite</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h2 class='hidden'>NIC Driver Test Suite</h2><h4 id="HAnnouncements"><span>Announcements</span></h4><p>See <span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/drivernews">Driver News</a></span> for announcements about NIC drivers.</p><h3 id="HNICDRVIntroduction"><span>NICDRV Introduction</span></h3><p>This project is for the NIC test suites development. You can download the NIC driver test suite and learn about nic driver testing from this link. Everyone's contribution and feedback is important to this project.</p><p>NICDRV is a testsuite developed by us for NIC drivers testing. It is used to qualify the NIC's functionalities working on Solaris and supports both SPARC and X86 platforms. We analyzed the functionalities of all kinds of NICs and refined the testing criteria.</p><p>NICDRV contains necessary network applications to verify the working of NIC drivers, including network data transmission at IPv4/IPv6, transmission at promiscuous mode, transmission based on all kinds of packet length, data corruption verifying, multicast transmission, ndd-parameters setting, working-mode testing, Statistics, vlan, link aggregation, loading/unloading drivers and etc.NICDRV also include stress testing</p><p>NICDRV is implemented based on our existing Solaris Test Framework (STF), so it can be configured and executed automatically instead of running every test case manually. Test report will also be produced automatically after the test ends.</p><p>NICDRV uses code coverage analysis to evaluate test effectiveness. While the test is running, all functions of the under test NIC driver are called can be recorded by a Dtrace script. At the end of the test, the code coverage rate will be shown. Testers can know which functions of the NIC driver routine are passed and which functions aren't called. This feature of the NICDRV framework is also used in developing new test cases for NIC.</p><p>We designed NICDRV as an open test platform. The test criteria can be adjusted based on the different models of NIC. If it is a high-end NIC, like 10Gb/s NIC, used on transmitting huge network data, testers can select a set of parameters with high level to test. If the NIC is just for low-end usage, a little data being transmitted (like 10Mb/s NIC), testers can adjust the parameters to a lower level. A new set of parameters can be added into NICDRV platform for the new model of NIC as the new test criteria. And also, new test cases can be added into NICDRV easily.</p><h3 id="HWhatIstheMeaningofEachTestCase3F"><span>What Is the Meaning of Each Test Case?</span></h3><table><tr><th scope="col">Case Name</th><th scope="col">Type</th><th scope="col">Runtime (full)</th><th scope="col">Description</th><th scope="col">Possible Causes for Failure</th></tr><tr><td>test00</td><td>functional</td><td>2 hours</td><td>Data transmitting/receiving<br/>Ftp ipv4/ipv6</td><td>A wrong root password in config.vars file<br/>Big size files cannot be transmitted by the tested driver<br/>Disk free space (/var &gt; 2G)<br/>IPv6 doesn't work<br/>Hardware chipset error</td></tr><tr><td>test01</td><td>functional</td><td>3 hours</td><td>Receiving/transmitting under promiscuous mode<br/>Netperf+snoop on/off</td><td>Driver cannot support the promiscuous mode<br/>Driver cannot work stably with repeatedly promiscuous mode on/off<br/>Sessions/connection can not be established<br/>Timeout:performance issue to make the driver cost too much time for transmission.<br/>Timeout: system or interface hang.</td></tr><tr><td>test02</td><td>functional</td><td>1 hour</td><td>Packets lost and zero length data pending<br/>ping all packet size</td><td>Failed to transfer one or several packets with particular length<br/>Driver works unstably<br/>Timeout: too slow to ping every packet</td></tr><tr><td>test03</td><td>functional</td><td>2 hours</td><td>Data corruption<br/>nfs corrupt</td><td>Found data corruption<br/>An NFS environment mistake (e.g. S10 is different from Snv)</td></tr><tr><td>test04</td><td>functional</td><td>1 hour</td><td>Multicast<br/>IPmulticast</td><td>Failed to join multiple multicast groups</td></tr><tr><td>test05</td><td>functional</td><td>5 minutes</td><td>ndd interface<br/>ndd read/write command</td><td>Some parameters of driver cannot be set by ndd<br/>There are some new private parameters that the current NICDRV cannot support in the under test driver</td></tr><tr><td>test06</td><td>functional</td><td>3 hours</td><td>Receiving/transmitting on different duplex/speed mode<br/>netperf on 10/100/1000Mbps duplex/speed mode</td><td>Driver cannot work stably on 10/100/1000Mbps duplex/speed mode<br/>Failed to transfer UDP traffic<br/>Check the failures of MAXQ</td></tr><tr><td>test07</td><td>functional</td><td>20 minutes</td><td>Statistic<br/>kstat and netstat counter check</td><td>Found statistics errors</td></tr><tr><td>test08</td><td>functional</td><td>2 hours</td><td>VLAN<br/>VLAN plumb/FTP/nfs corrupt/MAXQ</td><td>Failed to create VLAN interface<br/>Failed to access by rsh<br/>Check the switch configuration if the under test interfaces are connected by a switch.<br/>The failures of test00 test01 test02 and test03 could cause test08 to fail<br/>Failed to create the maximum number of VLAN interface.</td></tr><tr><td>test09</td><td>functional</td><td>1 hour</td><td>Trunking<br/>nfs corrupt on trunking interface</td><td>Failed to create link aggregation<br/>Failed to cleanup after test00-test08<br/>The driver cannot support link aggregation, The driver based on GLDv3 is supposed to support link aggregation.</td></tr><tr><td>test10</td><td>functional</td><td>1 hour</td><td>load,unload driver<br/>Test driver load unload functionality</td><td>Driver cannot be attach/detach or plumb/unplumb<br/>Driver cost too many memories for one interface</td></tr><tr><td>test11</td><td>functional</td><td>1 hour</td><td>DR (dynamic reconfiguration) test<br/>Test NIC driver dynamic reconfiguration support</td><td>UNSUPPORTED means the under test system cannot support the DR feature, so the test doesn't run. It's not a failure.<br/>The main platforms that support DR: (TBD)</td></tr><tr><td>test12</td><td>functional</td><td>1 hour</td><td>VNIC</td><td>The VNIC works unstably if the failure is only in MAXQ<br/>Failed to create multiple VNIC interfaces</td></tr><tr><td>test13</td><td>functional</td><td>1.5 hours</td><td>dladm (Brussels and Jumbo)</td><td>dladm operations on the tested driver failed<br/>Changing parameters failed<br/>Cannot support jumbo frame feature<br/>Driver works unstably in half-duplex mode.</td></tr><tr><td>test14</td><td>functional</td><td>1.5 hours</td><td>IPMI (Intelligent Platform Management Interface)</td><td>IPMI configuration incorrectly<br/>Test machine not support IPMI</td></tr><tr><td>test15</td><td>functional</td><td>0.5 hour</td><td>IRM (Interrupt Resource Management), change the interrupt vector number of driver&nbsp;</td><td>Failed to change the number of interrupt vectors.<br/>Driver doesn't work after changing interrupt vector&nbsp;&nbsp;</td></tr><tr><td>test16</td><td>functional</td><td>5 minutes</td><td>Suspend/Resume (Power Management)&nbsp;</td><td>1. The tested NIC driver could not support suspend/resume;<br/>2. The NIC hardware chipset could not support suspend/resume at all.<br/>3. UNSUPPORTED for wifi driver, if there is no AP available.</td></tr><tr><td>netstress</td><td>stress</td><td>15 hours</td><td>netperf (TCP/UDP)</td><td>Driver cannot work stably for a long time, like a half day.<br/>The under test system cannot support a certain large number of sessions.<br/>System or interface hang could cause the test case timeout.</td></tr><tr><td>loadunload</td><td>stress</td><td>6 hours</td><td>load/unload with netperf</td><td>Found memory leaks after repeatedly loading/unloading driver<br/>System or interface hang could cause the test case timeout.</td></tr><tr><td>total</td><td>functional</td><td>xx hours</td><td>&nbsp;</td><td>&nbsp;</td></tr></table><h3 id="HQuickStart"><span>Quick Start</span></h3><p><span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Community+Group+device_drivers/nicdrvtest/autonicdrvreadme.txt">auto_nicdrv readme</a></span></p><p>Install wrapper for nicdrv: <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Community+Group+device_drivers/nicdrvtest/autonicdrv1223.tar.bz2">auto_nicdrv_1223.tar.bz2</a></span></p><h3 id="HSourceCode2CBinaryandPackage"><span>Source Code, Binary and Package</span></h3><p>Community Group device_drivers: Projects &gt; NIC Driver Test Suite&nbsp;&nbsp;</p><p>The NICDRV i386 binary is: <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Community+Group+device_drivers/nicdrvtest/SUNWstc-nicdrv-20101223.i386.tar.bz2">SUNWstc-nicdrv-20101223.i386.tar.bz2</a></span></p><p>The NICDRV SPARC binary is: <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Community+Group+device_drivers/nicdrvtest/SUNWstc-nicdrv-20101223.sparc.tar.bz2">SUNWstc-nicdrv-20101223.sparc.tar.bz2</a></span></p><p>The test suite source is: <span class="wikiexternallink"><a href="http://cvs.opensolaris.org/source/xref/test/ontest-stc2/src/suites/net/nicdrv">source/xref/test/ontest-stc2/src/suites/net/nicdrv</a></span></p><p>The test suite source is: <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Community+Group+device_drivers/nicdrvtest/stcnv-nicdrv-src-20090629.tar.bz2">stcnv-nicdrv-src-20090629.tar.bz2</a></span></p><h3 id="HHowtoBuildandUse"><span>How to Build and Use</span></h3><p><span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Community+Group+device_drivers/nicdrvtest/nicdrvreadme.txt">nicdrv readme</a></span></p><h3 id="HNICDRVBaselineReport"><span>NICDRV Baseline Report</span></h3><table><tr><th scope="col">nicdrv Version</th><th scope="col">Solaris Build</th><th scope="col">x86</th><th scope="col">SPARC</th></tr><tr><td>2.0</td><td>Opensolaris 0906</td><td>Function: <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Community+Group+device_drivers/nicdrvtest/journal.soe-x4200m2-13.20090624020656.execute.amd64.txt">e1000g test report</a></span><br/>Stress: <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Community+Group+device_drivers/nicdrvtest/journal.soe-x4200m2-13.20090623200626.execute.amd64.txt">e1000g test report</a></span></td><td>&nbsp;</td></tr><tr><td>2.0</td><td>Solaris nv114</td><td>Function: <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Community+Group+device_drivers/nicdrvtest/journal.sol-x4200-4.20090619145110.execute.amd64.txt">e1000g test report</a></span><br/>Stress: <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Community+Group+device_drivers/nicdrvtest/journal.sol-x4200-4.20090618153104.execute.amd64.txt">e1000g test report</a></span></td><td>&nbsp;</td></tr><tr><td>2.0</td><td>Solaris nv116</td><td>Function: <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Community+Group+device_drivers/nicdrvtest/journal.sol-x4200-4.20090618153104.execute.amd64.html">bge test report</a></span></td><td>Function: <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Community+Group+device_drivers/nicdrvtest/journal.sol-x4200-4.20090619145110.execute.amd64.txt">bge test report</a></span><br/>Stress: <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Community+Group+device_drivers/nicdrvtest/journal.sol-t1000-15.20090623161034.execute.sparcv9.txt">bge test report</a></span></td></tr></table><h3 id="HBugs"><span>Bugs</span></h3><p>View the <span class="wikiexternallink"><a href="http://bugs.opensolaris.org/search.do?process=1&amp;type=&amp;sortBy=relevance&amp;bugStatus=&amp;perPage=10&amp;bugId=&amp;keyword=&amp;textSearch=&amp;category=driver&amp;subcategory=nic-nicdrv&amp;since=">nicdrv bug list</a></span>.</p><p><span class="wikiexternallink"><a href="http://defect.opensolaris.org/bz/">Report a bug</a></span> or request a feature for NICDRV.</p><h3 id="HNewfeaturesinthenextstep"><span>New features in the next step</span></h3><h3 id="HHowtoParticipate"><span>How to Participate</span></h3><p>Join the discussion at NICDRV-interest at sun dot com. Hear from the experts, review archives, and post your questions.</p><h4 id="HRelatedInformation"><span>Related Information</span></h4><ul><li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/maxq">MAXQ NIC test</a></span> is a test suite based on <tt>netperf</tt></li><li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/wifi_test">WIFI test checklist</a></span> is a self-test guide for WiFi driver development</li></ul>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:07<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by fanyuan on 2010/12/24 07:10
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Community Group device_drivers Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/driverfiles">Device Driver Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/drivernews">Driver News</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/projects">Projects</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/AHCI">SATA AHCI project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/IAMT">Intel Active Management Technology</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/cardbus">Cardbus Nexus Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/nicdrvtest">NIC Driver Test Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/serveraid">IBM ServeRAID</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/usb">USB Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/vconsole">Virtual Console</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/wacomtablet">wacomtablet</a></span></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2013, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

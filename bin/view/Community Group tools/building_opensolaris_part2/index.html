@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Build/Install OpenSolaris (Part 2) (Community Group tools.building_opensolaris_part2) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Community+Group+tools/building_opensolaris_part2" />
+                    <link rel="canonical" href="/bin/view/Community+Group+tools/building_opensolaris_part2" />
+                            <meta name="document" content="Community Group tools.building_opensolaris_part2"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Community Group tools"/>
+    <meta name="page" content="building_opensolaris_part2"/>
+    <meta name="version" content="1.2"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Community+Group+tools/pages/building_opensolaris_part2"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Build/Install OpenSolaris (Part 2)" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="kupfer" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Community Group tools";
+XWiki.currentPage = "building_opensolaris_part2";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Community+Group+tools/building_opensolaris_part2";
+window.docediturl = "/bin/edit/Community+Group+tools/building_opensolaris_part2";
+window.docsaveurl = "/bin/save/Community+Group+tools/building_opensolaris_part2";
+window.docgeturl = "/bin/get/Community+Group+tools/building_opensolaris_part2";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Community_Group_tools viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FCommunity%2BGroup%2Btools%2Fbuilding_opensolaris_part2"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+tools/"><strong>Community Group tools</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Community+Group+tools" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+            </td>
+            <td id="logo-text" style="width: 1%;">
+                Solaris
+            </td>         
+            <td style="width: 98%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                  <span class='current'>Build/Install OpenSolaris (Part 2)</span>
+          </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Community+Group+tools/building_opensolaris_part2?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Community+Group+tools/building_opensolaris_part2?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+tools/building_opensolaris_part2?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+tools/building_opensolaris_part2?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+tools/building_opensolaris_part2?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Community+Group+tools/building_opensolaris_part2?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+tools/building_opensolaris_part2?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+tools/building_opensolaris_part2?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+tools/building_opensolaris_part2?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+tools/building_opensolaris_part2?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Community+Group+tools/building_opensolaris_part2?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>Build/Install OpenSolaris (Part 2)</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h2 id="HBuildingandInstallingOpenSolaris28Part229"><span>Building and Installing OpenSolaris (Part 2)</span></h2><p><strong>Author: Rich Teer</strong><br/><strong>Introduction</strong><br/>&nbsp;This is the second of two articles in which we describe how to build and install OpenSolaris. The <span class="wikilink"><a href="/bin/view/Community+Group+tools/building_opensolaris">first article</a></span> provides all the necessary background information (terminology, where to get the tools, and so on) and describes a basic compilation and installation. There are circumstances under which the steps we performed in the first article will be insufficient for our needs; this article describes what we must do to address this shortcoming.<br/>&nbsp;This article assumes that readers are familiar with the contents of the first article--or at the very least know how to acquire the OpenSolaris source code, build it, and Install it. For the sake of consistency, this article will deal with the same version of code the first one did, even though newer versions have been made available between the two publication dates.<br/>&nbsp;Note that while these articles were accurate at the time they were written, OpenSolaris is continually evolving. For the most recent details, please consult <span class="wikilink"><a href="/bin/view/Community+Group+on/devref_toc">the ON Developers Reference</a></span>.<br/><strong>A Brief Recap</strong><br/>&nbsp;In the first article we defined much of the terminology we encounter when dealing with OpenSolaris. We also described how to obtain the source code and other bits necessary to compile it, and finally, we described the steps necessary to perform a simple compilation and installation of OpenSolaris. These steps are:</p><ol><li>Obtain the source code, closed binaries, compilers and build tools from www.opensolaris.org or one of its mirrors.</li><li>Install the ON build tools and Sun Studio compilers into /opt and add their directories to our PATH.</li><li>Unpack the source and closed binaries tar balls.</li><li>Copy and edit the opensolaris.sh script.</li><li>Build the source code using the nightly script.</li><li>Install the resulting new kernel using the Install script.</li><li>Reboot using the new kernel.</li></ol><p>&nbsp;These steps are fine if all we want to do is build and test a new kernel, but there are times when they are insufficient: we either want to install some new userland components, or our newly built kernel is incompatible with the userland libraries and applications that are currently installed. The latter scenario is referred to as a Flag Day. Another example of a Flag Day is when we need to update a library and a command that relies on that library at the same time.<br/><strong>Flag Days</strong><br/>&nbsp;A <em>Flag Day</em> is when newer versions of one or more system packages must be installed before we can use our new version of the ON components. When they occur, Flag Day notices will be posted on the OpenSolaris web site, at www.opensolaris.org/os/community/onnv. These notices will contain instructions for building or installing the newer required software, which may not be compatible with the usual Solaris packaging tools. In particular, the use of the BFU utility, which is the focus of this article, to update components renders those components unupgradable with the standard Solaris packages. If this is cause for concern, then using the latest Solaris Express release is probably the best approach. Indeed, using BFU is recommended only for active developers of the ON code (or those who must live on the very bleeding edge).<br/><strong>A BFU Primer</strong><br/>&nbsp;The process by which we install all the new bits of ON is referred to as <em>BFU</em>, which is an abbreviation of Blindingly Fast Upgrade (or Bonwick-Faulkner Upgrade, after the original developers, Jeff Bonwick and Roger Faulkner). BFU uses a set of cpio archives to directly overwrite the existing components of the system (which is why the usual Solaris packaging tools can no longer be used once we've performed a BFU); these archives are created as part of the nightly build process, which we described in the previous article.<br/>&nbsp;Before we can use BFU to install our newly compiled components, we must define three environment variables. These are:<br/>FASTFS This would usually be /opt/onbld/bin/`uname -p`/fastfs.<br/>BFULD This would usually be /opt/onbld/bin/`uname -p`/bfuld.<br/>GZIPBIN This would usually be /bin/gzip.<br/>&nbsp;Setting these in our shell's start-up dot file (e.g., .profile) is probably the most convenient way to set these environment variables, especially if we plan to BFU frequently. The opensolaris.sh environment file we described in the previous article also sets these variables. Using bldenv opensolaris.sh (having first copied this file from usr/src/tools/env/opensolaris.sh and editing as necessary) before we run bfu is probably best. It is a good idea to get into the habit of updating our copy of opensolaris.sh with each new source delivery, because this will enable us to pick up any new environment variables automatically.<br/><strong>Using BFU to Install ON</strong><br/>&nbsp;Using BFU to install the ON parts of OpenSolaris is a relatively simple task: invoke the bfu command with a single argument, which is the path of the archive to install.<br/>&nbsp;In the previous article we used $HOME/open_solaris/build-17/testws as our workspace directory. Assuming we're still in the same directory, we can run bfu like this:</p><pre>
+# bfu `pwd`/archives/`uname -p`/nightly
+
+</pre><p>&nbsp;Note that because system files are overwritten, bfu must be run as root. Also, ensure that /opt/onbld/bin is in root's PATH.<br/>&nbsp;Here's some of the output from bfu:</p><pre>
+# bfu `pwd`/archives/`uname -p`/nightly
+Copying /opt/onbld/bin/bfu to /tmp/bfu.1100
+Executing /tmp/bfu.1100 /home/rich/open_solaris/build-17/testws/archives/i386/nightly
+
+Loading /home/rich/open_solaris/build-17/testws/archives/i386/nightly on /
+
+Creating bfu execution environment ...
+/tmp/bfu.1100[2261]: /net/onnv.eng/export/gate/public/bin/acr: cannot open
+chmod: WARNING: can't access /tmp/bfubin/acr
+Verifying archives ...
+Performing basic sanity checks ...
+/etc/svc/repository.db: passed integrity check
+Disabling kernel module unloading ... moddebug: 0 = 0x20000
+Quiescing init ...
+Unmounting /lib/libc.so.1 ...
+Disabling sendmail temporarily ...
+Disabling remote logins ...
+Disabling syslog temporarily ...
+Killing httpd ...
+Disabling fmd temporarily ...
+Killing nscd ...
+Turning on delayed i/o ...
+Filesystem Mode
+/ safe
+/usr safe
+2423 blocks
+
+Saving configuration files in /bfu.child ... 4464 blocks
+Removing init.d links ... done.
+Removing obsolete rc.d scripts ... done.
+Preserving user-installed perl modules...
+cp: cannot access /usr/perl5/site_perl/5.8.3/*
+Removing perl 5.8.3 packages
+Removing perl 5.8.3 from /var/sadm/install/contents
+Removing perl 5.8.3 from /usr/perl5
+Extracting ufs modules for boot block ... 410 blocks
+Extracting generic.usr ... 269143 blocks
+Extracting i86pc.usr ... 410 blocks
+Extracting generic.lib ... 34359 blocks
+Extracting generic.sbin ... 1420 blocks
+Extracting generic.kernel ... 108072 blocks
+Extracting generic.root ... 3962 blocks
+Extracting i86pc.root ... 6790 blocks
+Extracting i86pc.boot ... 2430 blocks
+
+Removing duplicate kernel binaries ...
+
+Simulating SUNWcry* installation...
+
+Cleaning up old Kerberos GSS-API mechanisms...
+
+[... Conflict info (see later) omitted for brevity ...]
+
+Create /platform/i86pc/boot_archive
+updating /platform/i86pc/boot_archive...this may take a minute
+
+For each file in conflict, your version has been restored.
+The new versions are under /bfu.conflicts.
+
+MAKE SURE YOU RESOLVE ALL CONFLICTS BEFORE REBOOTING.
+
+To install resolved changes required for reboot in the boot
+archive, invoke 'bootadm update-archive'
+
+Removing obsolete smf services ...
+Disabling unneeded inetd.conf entries ...
+Connecting platform and name service profiles ...
+Marking converted services as enabled ...
+cp: cannot access /net/greenline.eng/meta0/smf/post-5090532/sysidtool.xml
+bfu: could not copy /net/greenline.eng/meta0/smf/post-5090532/sysidtool.xml
+cp: cannot access /net/greenline.eng/meta0/smf/post-5090532/kdmconfig.xml
+bfu: could not copy /net/greenline.eng/meta0/smf/post-5090532/kdmconfig.xml
+Upgrade of orac took 2:09.
+Turning off delayed i/o and syncing filesystems ...
+Filesystem Mode
+/ safe
+/usr safe
+
+Entering post-bfu protected environment (shell: ksh).
+Edit configuration files as necessary, then reboot.
+
+</pre><p>&nbsp;When the BFU procedure (which takes about two minutes on the author's Acer Ferrari 3400 laptop) completes, we are left in a newly-created subshell. This is because it's possible that the new commands and libraries will not be compatible with the old, currently running, kernel. The new subshell has its PATH set to /tmp/bfubin and LD_LIBRARY_PATH set to /tmp/bfulib. These directories contain old versions of commands and libraries that are commonly needed to resolve problems and reboot the system. (The errors about accessing /net/greenline.eng are due to bug 4865419 in bfu.sh, and can be ignored.) Note that neither init nor shutdown should be used to reboot the system after BFUing; use the reboot command instead.<br/>&nbsp;Notice that the bfu output talks about resolving conflicts. These can be identified in the bfu output by looking for lines similar to the following:</p><pre>
+NEW conflict: boot/grub/menu.lst
+NEW conflict: boot/solaris/bootenv.rc
+NEW conflict: boot/solaris/devicedb/master
+update: etc/.login
+update: etc/aggregation.conf
+NEW conflict: etc/auto_home
+update: etc/auto_master
+update: etc/bootrc
+
+</pre><p>&nbsp;These conflicts <em>must</em> be resolved before the system is rebooted if brickification is to be avoided.<br/><strong>Resolving Conflicts</strong><br/>&nbsp;Every machine running Solaris has numerous configuration files, many of which get modified from a default installation. Examples of these configuration files include /etc/auto_home, /etc/nsswitch.conf, and /etc/path_to_inst. The bfu command keeps a list of these files, which is called the <em>conflicts database</em>.<br/>&nbsp;When BFU overwrites a configuration file, a copy of the current file is first saved under /bfu.child. A copy of the new file (from the cpio archive) is also placed under /bfu.parent, having moved the previous bfu's /bfu.parent (if it exists) to /bfu.ancestor (the latter is, essentially, a grand parent). The files under these directories are referred to as the <em>child</em>, <em>parent</em>, and <em>ancestor</em> respectively.<br/>&nbsp;When bfu has finished extracting the cpio archives, it diffs the various versions of these files and follows these rules:</p><ul><li>If the file is unchanged (i.e., the parent and child are the same), nothing is reported as there is nothing to do.</li><li>If the file was accepted from the parent during the previous run of BFU (i.e., the child is the same as the ancestor), then the parent is automatically accepted at this time and the file is marked as "update: ". This is also what happens the first time we run BFU and one of the other rules doesn't apply.</li><li>If the file is the same as the beginning of the previous file, BFU assumes that a user added lines to the end (in other words, the child consists of the parent plus concatenated lines). The child version is restored and the file is marked "restore: ".</li><li>If the parent and child differ, but the parent and ancestor are the same, then the conflict is deemed to be old, and the file is marked "old: ".</li><li>Finally, if the parent and child differ, and the parent and ancestor differ too, then conflict is deemed to be new and the file is marked "NEW: ".</li></ul><p>&nbsp;So, a conflict that is NEW refers to a file that was different from the default, and the default has been updated. To resolve this, whatever changes were introduced in the new build must be ported to the existing file.<br/>&nbsp;Although we could possibly accept the parent without further investigation, doing so will lose all our customizations from the child. A lot of these customizations are performed by class action scripts from non-ON packages, so blindly accepting the parent can lead to many lost hours. Conflicts should therefore be resolved, either manually or automatically. We'll describe how to do this later, but we should say that if not all conflicts can be resolved automatically (or we decide to resolve them manually), it is a very good idea to have a proper baseline conflicts database. And this can be accomplished by installing a BFU archive corresponding to the release currently on our system.<br/>&nbsp;When we BFU to the same build that we have already installed by other means, we can safely ignore all conflicts because we know that our current configuration files work. A reboot must be performed prior to BFUing to a newer build.<br/><strong>Automatic Conflict Resolution</strong><br/>&nbsp;Most, if not all, conflicts can be resolved automatically using a script called acr. This script is usually invoked in the post-BFU protected environment; when called in this manner, no command line options are necessary. (For more specialized applications acr accepts one or two command line parameters. The first specifies the name of an alternate root directory, and the second is the name of the directory containing the BFU archives.)<br/>acr uses a file called conflict_resolution.gz, which is created whenever nightly is run with the -a option, and is stored in the directory containing the BFU archive. The acr script lists the files it is processing on standard out, and places detailed results in a file called allresults, which is stored in a subdirectory of /tmp. The following is an example acr invocation:</p><pre>
+bfu# acr
+Getting conflict resolution information from /home/rich/open_solaris/build-17/testws/archives/i386/nightly/conflict_resolution.gz: 590 blocks
+Building command list for the class action scripts:
+
+Begin processing files
+PROCESSING etc/devlink.tab
+PROCESSING etc/driver_classes
+PROCESSING etc/security/device_policy
+PROCESSING etc/path_to_inst
+PROCESSING etc/shadow
+PROCESSING etc/vold.conf
+PROCESSING etc/rmmount.conf
+PROCESSING etc/inet/hosts
+PROCESSING etc/inet/ipnodes
+PROCESSING var/spool/cron/crontabs/root
+PROCESSING etc/passwd
+PROCESSING etc/inet/inetd.conf
+PROCESSING etc/default/init
+PROCESSING etc/remote
+PROCESSING etc/nsswitch.conf
+PROCESSING etc/inet/services
+PROCESSING etc/security/auth_attr
+PROCESSING etc/security/exec_attr
+PROCESSING etc/security/prof_attr
+PROCESSING etc/user_attr
+PROCESSING etc/vfstab
+PROCESSING etc/auto_home
+PROCESSING etc/datalink.conf
+PROCESSING boot/grub/menu.lst
+PROCESSING etc/krb5/krb5.conf
+PROCESSING etc/openwin/server/etc/OWconfig
+PROCESSING kernel/drv/sd.conf
+PROCESSING boot/solaris/bootenv.rc
+PROCESSING boot/solaris/devicedb/master
+See /tmp/acr.Yda49i/allresults for more information.
+
+</pre><p>&nbsp;And this is the corresponding allresults file:</p><pre>
+bfu# cat /tmp/acr.Yda49i/allresults
+PROCESSING etc/devlink.tab
+RETURN CODE : 0
+PROCESSING etc/driver_classes
+RETURN CODE : 0
+PROCESSING etc/security/device_policy
+RETURN CODE : 0
+PROCESSING etc/path_to_inst
+RETURN CODE : 0
+PROCESSING etc/shadow
+RETURN CODE : 0
+PROCESSING etc/vold.conf
+RETURN CODE : 0
+PROCESSING etc/rmmount.conf
+RETURN CODE : 0
+PROCESSING etc/inet/hosts
+RETURN CODE : 0
+PROCESSING etc/inet/ipnodes
+RETURN CODE : 0
+PROCESSING var/spool/cron/crontabs/root
+RETURN CODE : 0
+PROCESSING etc/passwd
+RETURN CODE : 0
+PROCESSING etc/inet/inetd.conf
+RETURN CODE : 0
+PROCESSING etc/default/init
+RETURN CODE : 0
+PROCESSING etc/remote
+RETURN CODE : 0
+PROCESSING etc/nsswitch.conf
+RETURN CODE : 0
+PROCESSING etc/inet/services
+RETURN CODE : 0
+PROCESSING etc/security/auth_attr
+RETURN CODE : 0
+PROCESSING etc/security/exec_attr
+RETURN CODE : 0
+PROCESSING etc/security/prof_attr
+RETURN CODE : 0
+PROCESSING etc/user_attr
+RETURN CODE : 0
+PROCESSING etc/vfstab
+RETURN CODE : 0
+PROCESSING etc/auto_home
+RETURN CODE : 0
+PROCESSING etc/datalink.conf
+RETURN CODE : 0
+PROCESSING boot/grub/menu.lst
+RETURN CODE : 0
+PROCESSING etc/krb5/krb5.conf
+RETURN CODE : 0
+PROCESSING etc/openwin/server/etc/OWconfig
+Converting old OWconfig file to new format.
+RETURN CODE : 0
+PROCESSING kernel/drv/sd.conf
+RETURN CODE : 0
+PROCESSING boot/solaris/bootenv.rc
+RETURN CODE : 0
+PROCESSING boot/solaris/devicedb/master
+RETURN CODE : 0
+
+</pre><p>&nbsp;The allresults file should be examined to ensure that to errors occurred during the acr process. If any errors do occur, the conflicts must be resolved manually. An acr failure might also be indicative of a bug in one or more upgrade scripts, so a posting to the opensolaris-bugs mailing list might be a good idea.<br/><strong>Manual Conflict Resolution</strong><br/>&nbsp;We manually resolve conflicts by diffing the ancestor and parent versions of the file in question. More generally, we run the following command</p><pre>
+bfu# diff /bfu.ancestor/$file /bfu.parent/$file
+
+</pre><p>&nbsp;and apply the diffs manually (note that if this is the first time we run BFU, /bfu.ancestor will not exist, hence our earlier recommendation about creating a baseline conflicts database). For many files a shortcut can be used. Given that most changes are additions or modifications, and that the BFU process leaves us in a directory called /bfu.conflicts, simply running</p><pre>
+bfu# pw
+/bfu.conflicts
+bfu# diff $file /$file
+
+</pre><p>&nbsp;and ensuring that all the diffs point to the right (i.e., "&gt;" rather than "&lt;") will do the job. Here's an example:</p><pre>
+bfu# diff boot/solaris/bootenv.rc /boot/solaris/bootenv.rc
+5d4
+&amp;#x3c; # CDDL HEADER START
+7,10c6
+&amp;#x3c; # The contents of this file are subject to the terms of the
+&amp;#x3c; # Common Development and Distribution License, Version 1.0 only
+&amp;#x3c; # (the "License"). You may not use this file except in compliance
+&amp;#x3c; # with the License.
+---
+&amp;#x3e; #pragma ident "@(#)bootenv.rc 1.34 05/04/15 SMI"
+12,26d7
+&amp;#x3c; # You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+&amp;#x3c; # or http://www.opensolaris.org/os/licensing.
+&amp;#x3c; # See the License for the specific language governing permissions
+&amp;#x3c; # and limitations under the License.
+&amp;#x3c; #
+&amp;#x3c; # When distributing Covered Code, include this CDDL HEADER in each
+&amp;#x3c; # file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+&amp;#x3c; # If applicable, add the following below this CDDL HEADER, with the
+&amp;#x3c; # fields enclosed by brackets "[]" replaced with your own identifying
+&amp;#x3c; # information: Portions Copyright [yyyy] [name of copyright owner]
+&amp;#x3c; #
+&amp;#x3c; # CDDL HEADER END
+&amp;#x3c; #
+&amp;#x3c; #pragma ident "@(#)bootenv.rc 1.35 05/06/08 SMI"
+&amp;#x3c; #
+38a20,22
+&amp;#x3e; setprop prealloc-chunk-size 0x2000
+&amp;#x3e; setprop bootpath /pci@0,0/pci-ide@11,1/ide@0/cmdk@0,0:a
+&amp;#x3e; setprop console 'text'
+
+</pre><p>&nbsp;In this example, the important diff lines point to the right, so we're OK.<br/>&nbsp;Although this process works most of the time, there are a few exceptions which we detail below. These exceptions are etc/name_to_major, etc/security/*_attr, and /etc/path_to_inst.<br/>&nbsp;The file etc/name_to_major maps device names to their major numbers; each device <em>must</em> have a unique major number. Diffing the ancestor with the parent is a good starting point; the device name is important but the major number may vary. Ideally, devices that are no longer supported should be removed, but leaving them in is usually harmless. When in doubt, leave them in.<br/>&nbsp;New devices should be added with an unused major number—preferably the one from the diffs if it is available.<br/>&nbsp;When we're finished, we can check our changes by running two sort commands:</p><pre>
+bfu# sort -k1,1 /etc/name_to_major | sort -uc -k1,1
+bfu# sort -k2n /etc/name_to_major | sort -uc -k2n
+
+</pre><p>&nbsp;The first command reports the first duplicated device name, and the second command reports the lowest duplicated major number. Both commands should result in no output before rebooting. (The kernel will warn about such conflicts when rebooting, but by then it is likely to be too late...)<br/>&nbsp;The etc/security/*_attr files are modified quite a lot by class-action scripts, so there can be a big difference between the parent and child versions. This means that the diff shortcut we described previously won't be very effective, although the more general diff of the parent and ancestor can still be useful.<br/>&nbsp;The final exception is /etc/path_to_inst. Unless we know exactly what we're doing, this file shoudl not be touched.<br/>&nbsp;Generally, only conflicts that are marked as NEW need to be examined.<br/><strong>BFU and Zones</strong><br/>&nbsp;If the machine we're BFUing hosts zones in addition to the global one, we have some more work to do. Because the contents of the global zone are copied each time we create a zone (unless that zone is "sparse"), we must ensure that the contents of the all the non-global zones are consistent with the global zone. Fortunately, BFU handles this for us, by updating each zone after the global zone has been updated. Because each zone may have configuration files that differ from the global zone's, each zone has its own set of conflict management directories. Note that it is a good idea to shut down all zones before BFUing, because this ensures that any dependancies that might be violated by the new files won't break them (the zones). It is also a good idea to rerun bfu if we add a new zone after BFUing, to ensure that the new zone gets updated.<br/>&nbsp;It is not possible to BFU a single zone. If we want to test userland changes in a zone, we must manually copy the files from our build workspace into that zone.<br/>&nbsp;Conflicts must be resolved in the global zone and then in each non-global zone prior to rebooting. Resolving conflicts in a zone works in the same way as in the global zone, but because many files will be identical to their global-zone counterparts many files won't need to me manually merged: copying the file form the global zone will be sufficient.<br/>&nbsp;When all conflicts in the global and all non-global zones have been resolved, we can reboot the system. Note that the system <em>must</em> be rebooted before any non-global zone is rebooted.<br/><strong>BFUing Without Building</strong><br/>&nbsp;So far this article has assumed that we will be BFUing using archives we built ourselves (as a side effect of building OpenSolaris). What happens if we want to use the latest and greatest bits, without compiling them? Fortunately, pre-built BFU archives are available. To BFU without building from source, we need to download the BFU archive and ON build tools corresponding to the release we want to BFU to. We should also be aware that if there is an appreciable difference between our current build and the one we wish to BFU to, we might need to BFU several times.<br/>&nbsp;Let's look at an example, BFUing our recently BFUed Build 17 system to Build 18. As in Part 1 of this series, we'll assume that we've downloaded the two required files into a directory called $HOME/open_solaris/build-18, and that our current directory is that directory. For convenience, we'll refer to this directory as $OPEN_SOL.<br/>&nbsp;First we'll unpack the BFU archive:</p><pre>
+$ bzip2 -dc opensolaris-bfu-20050720.i386.tar.bz2 | tar xf -
+
+</pre><p>&nbsp;This will create a directory called archives-20050720, which contains the BFU archive (the name of this file and similar ones will change with each release). We must now become root and install the ON build tools.</p><pre>
+# cd /tmp
+# bzip2 -dc $OPEN_SOL/SUNWonbld-20050720.i386.tar.bz2 | tar xf -
+# cd onbld
+# pkgadd -d . SUNWonbld
+
+</pre><p>&nbsp;For brevity, we've omitted the output from pkgadd. Next we BFU, using a command similar to our previous example (having first ensured that FASTFS, BFULD, and GZIPBIN have been defined appropriately, and that /opt/onbld/bin is in our PATH):</p><pre>
+# bfu $OPEN_SOL/archives-20050720/`uname -p`
+
+</pre><p>&nbsp;Next we resolve any conflicts (in this example, there are none), and reboot:</p><pre>
+bfu# acr
+No conflicts to resolve.
+bfu# reboot
+updating /platform/i86pc/boot_archive...this may take a minute
+
+</pre><p>&nbsp;The message about updating /platform/i86pc/boot_archive is x86 specific. Assuming all goes well, our machine will boot the new build (in this case, Build 18). We can check (as always) by logging in and running uname:</p><pre>
+$ uname -a
+SunOS orac 5.11 opensol-20050720 i86pc i386 i86pc
+
+</pre><p><strong>Summary</strong><br/>&nbsp;This article has described how we can use BFU to update our version of OpenSolaris, either from source that we built ourselves or from BFU archives we download from the opensolaris.org web site or elsewhere. To illustrate the former we BFUed to the Build 17 we built in the previous article, and we BFUed from Build 17 to Build 18 as an example of the latter.<br/>&nbsp;The steps we used to BFU from source we built ourselves are:</p><ol><li>Ensure the FASTFS, BFULD, and GZIPBIN environment variables are set appropriately.</li><li>Run the bfu command as root from our workspace directory, passing the name of the archive as the command line option. More often than not, this will be `pwd`/archives/`uname -p`/nightly.</li><li>Resolve any conflicts using the acr script.</li><li>Resolve any remaining conflicts manually.</li><li>Reboot using the reboot command (rather than init or shutdown).</li></ol><p>&nbsp;The steps required to install pre-built BFU archives are similar:</p><ol><li>Download the BFU archive and ON build tools for the build we want to BFU to from the opensolaris.org web site or one of its mirrors.</li><li>Unpack the BFU archive.</li><li>Install the ON build tools.</li><li>Ensure the FASTFS, BFULD, and GZIPBIN environment variables are set appropriately.</li><li>Run the bfu command as root, passing it the name of the BFU archive we unpacked in step 2.</li><li>Resolve any conflicts using the acr script</li><li>Resolve any remaining conflicts manually</li><li>Reboot using the reboot command.</li></ol><p>&nbsp;We also warned that once it has been BFUed, the normal methods for updating the system (e.g., patches or Upgrade installs) cannot subsequently be used: a fresh install or another BFU is required. Finally, we stated that BFU is intended for active OpenSolaris developers only; regular mortals are probably best served using Solaris Express.<br/><strong>Recommended Reading</strong><br/>&nbsp;The opensolaris.org web site contains several documents, including the <em>OpenSolaris Developer's Reference</em>. Also, be sure to check out details regarding the OpenSolaris Tools Community site and specifically the Sun Studio download site at <span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_tools">opensolaris.org/os/community/tools/sun_studio_tools/</a></span>. The author's book, <em>Solaris Systems Programming</em> [Teer 2005], is essential for readers wishing to work with the userland OpenSolaris code, and <em>Solaris Internals&nbsp;</em>[Mauro and McDougall 2001] by Jim Mauro and Richard McDougall should be on every OpenSolaris kernel hacker's bookshelf. The community blogs at <span class="wikicreatelink"><a href="/bin/create/Main/blogs?parent=Community+Group+tools.building_opensolaris_part2">www.opensolaris.org/os/blogs/</a></span> are another great source of information.</p><p>&nbsp;[Mauro and McDougall 2001]: <em>Solaris Internals</em>, ISBN 0-13-022496-0. See <span class="wikiexternallink"><a href="http://www.solarisinternals.com/">www.solarisinternals.com/</a></span> for more details.<br/>&nbsp;[Teer 2005]: <em>Solaris Systems Programming</em>, ISBN 0-201-75039-2. See <span class="wikiexternallink"><a href="http://www.rite-group.com/rich/ssp/">www.rite-group.com/rich/ssp/</a></span> for more details.<br/><strong>Author's Bio</strong><br/><em>Rich Teer is an independent Solaris consultant who has been an active member of the Solaris community for more than ten years. He is the author of the best-selling Sun Microsystems Press book,&nbsp;</em>Solaris Systems Programming<em>, and several Solaris-related articles. He was a member of the OpenSolaris pilot program, and currently serves on the OpenSolaris Community Advisory Board (CAB). Rich lives in Kelowna, British Columbia, with his wife, Jenny, and their canine child, Judge. His web site can be found at&nbsp;</em><span class="wikiexternallink"><a href="http://www.rite-group.com/rich">www.rite-group.com/rich</a></span><em>.<br/></em></p>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:11<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by kupfer on 2009/10/27 20:47
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Community Group tools Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/building_opensolaris">Build/Install OpenSolaris (Part 1)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/building_opensolaris_part2">Build/Install OpenSolaris (Part 2)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/downloads">Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/gcc">GCC</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/bug_fixing_notes">Bug Fixing Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/build_instr">Build Instructions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/flagday">Important Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/on_policy">ONNV Policy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/rationale">Background and Rationale</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/shadow">Shadow Compilation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/status">Current Status</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/hg">Mercurial Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/linker">Dynamic Linking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/scm">OpenSolaris Source Code Management</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/bzr%2Deval">OpenSolaris DSCM Evaluation: Bzr (Interim Report)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/dcm_evaluation_mercurial">OpenSolaris DSCM Evaluation: Mercurial</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/dscmreqdoc">DSCM Requirements Document</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/evalform">Candidate Evaluation Form</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/evalplan">Evaluation Plan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/hg_help">How To Use Mercurial (hg) Repositories</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/hg_teamware_transition">How To Transition from Teamware to Mercurial</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/history">SCM Project History</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/on%2Dscm%2Dtools">ON SCM&#45;Related Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/scm_milestone">Source Code Management for OpenSolaris: MILESTONES</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/scmconsolespec">SCM console specification</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/scmhostspec">SCM hosting implementation specification</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/svn_help">How To Use SVN Repositories</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/scmdownloads">Source Code Management Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_tools">Sun Studio Downloads</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/faqs">Sun Studio FAQs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/getstarted">Sun Studio Getting Started</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sss11ent">Sun Studio 11 License</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sss12ent_license">Sun Studio 12 License</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sssent">Sun Studio 10 License</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_10_tools">Sun Studio 10 Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_11_tools">Sun Studio 11 Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_11_tools_previous">Sun Studio 11&#45;&#45; Previous Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_12_tools">Sun Studio 12 Compilers and Tools for the OpenSolaris Common Build Environment (CBE)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/support">Sun Studio Support</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/testing+nightly">testing nightly</a></span></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2012, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

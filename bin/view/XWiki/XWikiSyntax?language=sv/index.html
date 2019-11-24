@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sv" xml:lang="sv">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>XWiki Syntaxes (XWiki.XWikiSyntax) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/XWiki/XWikiSyntax" />
+                    <link rel="canonical" href="/bin/view/XWiki/XWikiSyntax" />
+                            <meta name="document" content="XWiki.XWikiSyntax"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="XWiki"/>
+    <meta name="page" content="XWikiSyntax"/>
+    <meta name="version" content="2.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/XWiki/pages/XWikiSyntax"/>
+                <meta name="gwt:property" content="locale=sv" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="XWiki Syntaxes" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="Chris Phelan" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="sv" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=sv'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=sv'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=sv'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=sv'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/resources/js/xwiki/table/table.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "XWiki";
+XWiki.currentPage = "XWikiSyntax";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/XWiki/XWikiSyntax";
+window.docediturl = "/bin/edit/XWiki/XWikiSyntax";
+window.docsaveurl = "/bin/save/XWiki/XWikiSyntax";
+window.docgeturl = "/bin/get/XWiki/XWikiSyntax";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/table/tablefilterNsort.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=sv' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=sv' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=sv' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-XWiki viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">Generella operationer:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FXWiki%2FXWikiSyntax%3Flanguage%3Dsv"><strong>Logga in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/XWiki/"><strong>XWiki</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=XWiki" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Dokumentindex</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+            </td>
+            <td id="logo-text" style="width: 1%;">
+                Solaris
+            </td>         
+            <td style="width: 98%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Kollektiv</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Dokumentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Nedladdning</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Sök</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="sök..." size="15"/><input class="button" type="image" value="Gå till" alt="Gå till" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                                          <a href='/bin/view/Main/'>Oracle Solaris 11: Available Now</a> <span class='separator'>&#187;</span> <a href='/bin/view/XWiki/'>XWiki-rum</a> <span class='separator'>&#187;</span> <span class='current'>XWiki Syntaxes</span>
+                      </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/XWiki/XWikiSyntax?language=en" class="language-default">en</a>
+      / <a href="/bin/view/XWiki/XWikiSyntax?language=de" class="language-translation">de</a>
+      / <a href="/bin/view/XWiki/XWikiSyntax?language=it" class="language-translation">it</a>
+      / <a href="/bin/view/XWiki/XWikiSyntax?language=lv" class="language-translation">lv</a>
+      / <a href="/bin/view/XWiki/XWikiSyntax?language=sv" class="language-translation language-current">sv</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Sidoperationer:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Exportera</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/XWiki/XWikiSyntax?format=pdf&amp;language=sv" id="tmExportPdf" class="tmExportPdf">Exportera som PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/XWiki/XWikiSyntax?format=rtf&amp;language=sv" id="tmExportRtf" class="tmExportRtf">Exportera som RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/XWiki/XWikiSyntax?format=html&amp;language=sv" id="tmExportHtml" class="tmExportHtml">Exportera som HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/XWiki/XWikiSyntax?viewer=code&amp;language=sv"><strong>Visa</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/XWiki/XWikiSyntax?viewer=comments&amp;language=sv" id="tmViewComments" class="tmViewComments">Kommentarer</a></span>
+<span class="submenuitem "><a href="/bin/view/XWiki/XWikiSyntax?viewer=attachments&amp;language=sv" id="tmViewAttachments" class="tmViewAttachments">Bilagor</a></span>
+<span class="submenuitem "><a href="/bin/view/XWiki/XWikiSyntax?viewer=history&amp;language=sv" id="tmViewHistory" class="tmViewHistory">Historik</a></span>
+<span class="submenuitem "><a href="/bin/view/XWiki/XWikiSyntax?viewer=information&amp;language=sv" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/XWiki/XWikiSyntax?viewer=code&amp;language=sv" id="tmViewSource" class="tmViewSource">Visa wikikod</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Fler operationer</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/XWiki/XWikiSyntax?xpage=print&amp;language=sv" id="tmPrintPreview" class="tmPrintPreview">Förhandsgranskning av utskrift</a></span>
+          <span class="submenuitem "><a href="/bin/view/XWiki/XWikiSyntax?xpage=copy" id="tmActionCopy" class="tmActionCopy">Kopiera</a></span>
+      </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>XWiki Syntaxes</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<div class="box floatinginfobox"><strong>Contents</strong><ul><li><span class="wikilink"><a href="#HAnmE4rkningar">Anmärkningar</a></span></li><li><span class="wikilink"><a href="#HStycken">Stycken</a></span></li><li><span class="wikilink"><a href="#HRubriker">Rubriker</a></span></li><li><span class="wikilink"><a href="#HTextformatering">Textformatering</a></span></li><li><span class="wikilink"><a href="#HHorisontelllinje">Horisontell linje</a></span></li><li><span class="wikilink"><a href="#HListor">Listor</a></span></li><li><span class="wikilink"><a href="#HDefinitionslistor">Definitionslistor</a></span></li><li><span class="wikilink"><a href="#HRadbrytning">Radbrytning</a></span></li><li><span class="wikilink"><a href="#HLE4nkar">Länkar</a></span></li><li><span class="wikilink"><a href="#HTabeller">Tabeller</a></span></li><li><span class="wikilink"><a href="#HBilder">Bilder</a></span></li><li><span class="wikilink"><a href="#HEjformateradtext">Ej formaterad text</a></span></li><li><span class="wikilink"><a href="#HCitering">Citering</a></span></li><li><span class="wikilink"><a href="#HGruppering">Gruppering</a></span></li><li><span class="wikilink"><a href="#HKontrollsekvenserfF6rwikisymboler">Kontrollsekvenser för wikisymboler</a></span></li><li><span class="wikilink"><a href="#HMakron">Makron</a></span></li><li><span class="wikilink"><a href="#HHTML">HTML</a></span></li><li><span class="wikilink"><a href="#HVelocity2FGroovy-skript">Velocity/Groovy-skript</a></span></li><li><span class="wikilink"><a href="#HParametrar">Parametrar</a></span></li><li><span class="wikilink"><a href="#HAndrasyntaxer">Andra syntaxer</a></span></li></ul></div><p>Med början på XWiki enterprise version 1.7 och senare har en ny wikisyntax, kallad <em>XWiki syntax v2.0</em>, introducerats som efterföljare till <em>XWiki syntax v1.0</em>. &nbsp;De huvudsakliga anledningarna för den nya syntaxen är:</p><ul><li>Fixa begränsningarna och tvetydigheterna som finns i XWiki 1.0 syntaxen (som byggde både på Radeox - den underliggande renderingsmotorn - och TWiki).<ul><li>Symbolvalen var inte bra. &nbsp;Exempelvis användes en asterisk för att ange fetstil. &nbsp;Detta orsakade problem då användare matade in text som innehöll asterisker eftersom texten felaktigt antogs vara fetstil. &nbsp;Således används åtminstone dubbla symbolr överallt i wikisyntaxen.</li><li>Tvetydigheter fanns exempelvis då en rad inleddes med en asterisk. &nbsp;Var det då fetstil eller en punktlista? &nbsp;Detta var nödvändigt att lösa för att möjligjöra en deterministisk WYSIWYG-editor.</li></ul></li><li>För att närma sig <span class="wikiexternallink"><a href="http://www.wikicreole.org/">Creole 1.0 syntaxen</a></span> vilken håller på att bli standard för wikisyntax. &nbsp;Sammanslutningen bakom Creole har dessutom nogrannt analyserat alla existerande wikisyntaxer innan de valt symboler. &nbsp;Symbolvalen är därför väldigt bra.&nbsp;</li></ul><p>Utöver syntaxändringarna har vi också bytt ut den underliggande renderingsmotorn (vilken tidigare var Radeox) till förmån för vår egen motor som bygger på <span class="wikiexternallink"><a href="http://code.google.com/p/wikimodel/">Wikimodel</a></span> och <span class="wikiexternallink"><a href="http://maven.apache.org/doxia/">Doxia</a></span> (och möjligen andra i framtiden). &nbsp;Detta låter oss tillhandahålla andra syntaxer i wikin: <span class="wikilink"><a href="#sytaxes">MediaWiki, Confluence, JSPWiki, Creole, TWiki m.fl.</a></span></p><h1 id="HAnmE4rkningar"><span>Anmärkningar</span></h1><p>XWiki syntax v2.0 rättar bl.a. de fel och tvetydigheter som exemplifieras i tabellen nedan.</p><table><tr><th scope="col">Beskrivning</th><th scope="col">Exempel på ogiltig eller tvetydig syntax</th><th scope="col">Fixad XWiki syntax 2.0</th></tr><tr><td>Ej avslutad stil</td><td><tt class="wikimodel-verbatim">**fetstil</tt></td><td><tt class="wikimodel-verbatim">**fetstil**</tt></td></tr><tr><td>Två fristående element som ej särskiljs av två nyradstecken</td><td><tt class="wikimodel-verbatim">| tabellcell</tt><br/><tt class="wikimodel-verbatim">* listelement</tt></td><td><tt class="wikimodel-verbatim">| tabellcell</tt><br/><br/><tt class="wikimodel-verbatim">* listelement</tt></td></tr><tr><td>Två fristående element ej separerade av två nyradstecken</td><td><tt class="wikimodel-verbatim">stycke</tt><br/><tt class="wikimodel-verbatim">----</tt><br/><tt class="wikimodel-verbatim">stycke</tt></td><td><tt class="wikimodel-verbatim">stycke</tt><br/><br/><tt class="wikimodel-verbatim">----</tt><br/><br/><tt class="wikimodel-verbatim">stycke</tt></td></tr><tr><td>Nyradstecken i början av dokumentet</td><td>&lt;nyradstecken i början av dokumentet&gt;<br/>stycke</td><td>stycke</td></tr><tr><td>Ej avslutad rubriksyntax</td><td><tt class="wikimodel-verbatim">=== rubrik</tt></td><td><tt class="wikimodel-verbatim">=== rubrik ===</tt></td></tr></table><h1 id="HStycken"><span>Stycken</span></h1><p>Stycken är textelement som separeras av två eller flera nyradstecken.</p><div class="box infomessage">I XWiki syntax 2.0 nyradstecken är signifikanta, vilket inte är fallet i XWiki syntax 1.0 och i Creole.</div><table style="width:100%"><tr><th scope="col">Formateringstyp</th><th scope="col">XWiki syntax 1.0</th><th scope="col">XWiki syntax 2.0</th><th scope="col">Resultat XWiki syntax 1.0</th><th scope="col">Resultat XWiki syntax 2.0</th></tr><tr><td>Stycke</td><td>This is a paragraph</td><td>Detta är ett stycke</td><td>Detta är ett stycke</td><td>Detta är ett stycke</td></tr><tr><td>Flerradigt stycke</td><td>Stycke med<tt class="wikimodel-verbatim">\\</tt><br/>flera rader</td><td>Stycke med<br/>flera rader</td><td>Stycke med<br/>flera rader</td><td>Stycke med<br/>flera rader</td></tr><tr><td>Två stycken</td><td>Stycke ett<br/><br/>Stycke två</td><td>Stycke ett<br/><br/>Stycke två</td><td>Stycke ett<br/><br/>Stycke två</td><td>Stycke ett<br/><br/>Stycke två</td></tr><tr><td>Parametriserade stycken</td><td>&lt;p style="text-align:center;color:blue"&gt;Centrerat stycke med blå text&lt;/p&gt;</td><td><tt class="wikimodel-verbatim">(% style="text-align:center;color:blue" %)</tt><br/>Centrerat stycke med blå text</td><td style="text-align:center;color:blue"><br/>Centrerat stycke med blå text</td><td style="text-align:center;color:blue"><br/>Centrerat stycke med blå text</td></tr></table><h1 id="HRubriker"><span>Rubriker</span></h1><table style="width:100%"><tr><th scope="col">Formateringstyp</th><th scope="col">XWiki syntax 1.0</th><th scope="col">XWiki syntax 2.0</th><th scope="col">Resultat</th></tr><tr><td>Standardrubriker</td><td><div><p>1 nivå 1<br/>1.1 nivå 2<br/>1.1.1 nivå 3<br/>1.1.1.1 nivå 4<br/>1.1.1.1.1 nivå 5<br/>1.1.1.1.1.1 nivå 6</p></div></td><td><div><pre>
+= nivå 1 = 
+== nivå 2 ==
+=== nivå 3 ===
+==== nivå 4 ====
+===== nivå 5 =====
+====== nivå 6 ======
+</pre></div></td><td><div><!-- Note: replace this with wiki syntax when http://jira.xwiki.org/jira/browse/XWIKI-4358 is implemented -->
+<h1 id="Hlevel1"><span>nivå 1</span></h1><p>&nbsp;</p><h2 id="Hlevel2"><span>nivå 2</span></h2><h3 id="Hlevel3"><span>nivå 3</span></h3><h4 id="Hlevel4"><span>nivå 4</span></h4><h5 id="Hlevel5"><span>nivå 5</span></h5><h6 id="Hlevel6"><span>nivå 6</span></h6></div></td></tr><tr><td>Parametriserade rubriker</td><td>&lt;h1&gt;&lt;span style="color:blue"&gt;rubrik&lt;/span&gt;&lt;/h1&gt;</td><td><tt class="wikimodel-verbatim">(% style="color:blue" %)</tt><br/>= rubrik =</td><td><div><h1 id="Hheader" style="color:blue"><span>rubrik</span></h1></div></td></tr><tr><td>Rubriker med wikisyntax</td><td>1.1.1 Rubrik med *fetstil*</td><td><tt class="wikimodel-verbatim">=== Rubrik med **fetstil** ===</tt></td><td><div><h3 id="HRubrikmedfetstil"><span>Rubrik med <strong>fetstil</strong></span></h3></div></td></tr></table><h1 id="HTextformatering"><span>Textformatering</span></h1><div class="box infomessage"><p>Nytt i XWiki syntax 2.0 jämfört med XWiki syntax 1.0:</p><ul><li>Blanktecken är tillåtna omedelbart efter syntaxsymbolerna (i XWiki syntax 1.0 var exempelvis * detta inte fetstil *).</li><li>Användning av symboldubblering där det var enkla symboler i XWiki syntax 1.0 för att minska risken att användarna av misstag lägger in textformatering.</li><li>Möjlighet att låta formatering sträcka sig över flera rader.</li></ul></div><table style="width:100%"><tr><th scope="col">Formateringstyp</th><th scope="col">XWiki syntax 1.0</th><th scope="col">XWiki syntax 2.0</th><th scope="col">Resultat</th></tr><tr><td>Fetstil</td><td><tt class="wikimodel-verbatim">*fetstil*</tt></td><td><tt class="wikimodel-verbatim">**fetstil**</tt></td><td><strong>fetstil</strong></td></tr><tr><td>Understruken</td><td><tt class="wikimodel-verbatim">__understruken___</tt></td><td><tt class="wikimodel-verbatim">__understruken__</tt></td><td><ins>understruken</ins></td></tr><tr><td>Kursiv</td><td><tt class="wikimodel-verbatim">~~kursiv~~</tt></td><td><tt class="wikimodel-verbatim">//kursiv//</tt></td><td><em>kursiv</em></td></tr><tr><td>Genomstruken</td><td><tt class="wikimodel-verbatim">--genomstruken--</tt></td><td><tt class="wikimodel-verbatim">--genomstruken--</tt></td><td><del>genomstruken</del></td></tr><tr><td>Fastbredd</td><td>&lt;tt&gt;fastbredd&lt;/tt&gt;</td><td><tt class="wikimodel-verbatim">##fastbredd##</tt></td><td><tt>fastbredd</tt></td></tr><tr><td>Upphöjd</td><td>lite &lt;sup&gt;upphöjd text&lt;/sup&gt;</td><td><tt class="wikimodel-verbatim">lite ^^upphöjd text^^</tt></td><td>lite <sup>upphöjd text</sup></td></tr><tr><td>Nedsänkt</td><td>lite &lt;sub&gt;nedsänkt text&lt;/sub&gt;</td><td><tt class="wikimodel-verbatim">lite ,,nedsänkt text,,</tt></td><td>lite <sub>nedsänkt text</sub></td></tr></table><h1 id="HHorisontelllinje"><span>Horisontell linje</span></h1><div class="box infomessage">En linje består av minst fyra bindestreck.</div><div class="box infomessage">Notera skillnaden mot Creole där exakt fyra bindestreck krävs.</div><table style="width:100%"><tr><th scope="col">Formateringstyp</th><th scope="col">XWiki syntax 1.0</th><th scope="col">XWiki syntax 2.0</th><th scope="col">Resultat</th></tr><tr><td>Horisontell linje&nbsp;</td><td> <tt class="wikimodel-verbatim">----</tt>&nbsp;</td><td> <tt class="wikimodel-verbatim">----</tt>&nbsp;</td><td><div><hr/></div></td></tr><tr><td>Parametriserad horisontell linje&nbsp;</td><td>&nbsp;&lt;hr style="color:blue"/&gt;&nbsp;</td><td><div><pre>
+(% style="color:blue" %)
+----
+</pre></div></td><td><div><hr style="color:blue"/></div></td></tr></table><h1 id="HListor"><span>Listor</span></h1><table style="width:100%"><tr><th scope="col">Formateringstyp</th><th scope="col">XWiki syntax 1.0</th><th scope="col">XWiki syntax 2.0</th><th scope="col">Resultat</th></tr><tr><td>Punktlista</td><td><div><pre>
+* element 1
+** element 2
+*** element 3
+* element 4
+</pre></div></td><td><div><pre>
+* element 1
+** element 2
+*** element 3
+* element 4
+</pre></div></td><td><div><ul><li>element 1<ul><li>element 2<ul><li>element 3</li></ul></li></ul></li><li>element 4</li></ul></div></td></tr><tr><td>Numrerad lista</td><td><div><pre>
+1. element 1
+11. element 2
+111. element 3
+1. element 4
+</pre></div></td><td><div><pre>
+1. element 1
+11. element 2
+111. element 3
+1. element 4
+</pre></div></td><td><div><ol><li>element 1<ol><li>element 2<ol><li>element 3</li></ol></li></ol></li><li>element 4</li></ol></div></td></tr><tr><td>Blandad lista</td><td><div><pre>
+1. element 1
+1*. element 2
+1*. element 3
+1. element 4
+</pre></div></td><td><div><pre>
+1. element 1
+1*. element 2
+1*. element 3
+1. element 4
+</pre></div></td><td><div><ol><li>element 1<ul><li>element 2</li><li>element 3</li></ul></li><li>element 4</li></ol></div></td></tr><tr><td>Kvadratmarkerad lista</td><td><div><pre>
+- element 1
+- element 2
+</pre></div></td><td><div><pre>
+(% style="list-style-type: square" %)
+* element 1
+* element 2
+</pre></div></td><td><div><ul style="list-style-type: square"><li>element 1</li><li>element 2</li></ul></div></td></tr><tr><td>Diskmarkerad lista</td><td><div><p>&lt;ul style="list-style-type: disc"&gt;<br/>&nbsp;&nbsp;&lt;li&gt;element1&lt;/li&gt;<br/>&nbsp;&nbsp;&lt;li&gt;element2&lt;/li&gt;<br/>&lt;/ul&gt;</p></div></td><td><div><pre>
+(% style="list-style-type: disc" %)
+* element 1
+* element 2
+</pre></div></td><td><div><ul style="list-style-type: disc"><li>element 1</li><li>element 2</li></ul></div></td></tr><tr><td>Alfabetisk lista av gemener</td><td><div><pre>
+a. element 1
+a. element 2
+</pre></div></td><td><div><pre>
+(% style="list-style-type: lower-alpha" %)
+* element1
+* element2
+</pre></div></td><td><div><ul style="list-style-type: lower-alpha"><li>element1</li><li>element2</li></ul></div></td></tr><tr><td>Alfabetisk lista av versaler</td><td><div><pre>
+A. element 1
+A. element 2
+</pre></div></td><td><div><pre>
+(% style="list-style-type: upper-alpha" %)
+* element1
+* element2
+</pre></div></td><td><div><ul style="list-style-type: upper-alpha"><li>element1</li><li>element2</li></ul></div></td></tr><tr><td>Romerska siffror av gemener</td><td><div><pre>
+i. element 1
+i. element 2
+</pre></div></td><td><div><pre>
+(% style="list-style-type: lower-roman" %)
+* element1
+* element2
+</pre></div></td><td><div><ul style="list-style-type: lower-roman"><li>element1</li><li>element2</li></ul></div></td></tr><tr><td>Romerska siffror av versaler</td><td><div><pre>
+I. element 1
+I. element 2
+</pre></div></td><td><div><pre>
+(% style="list-style-type: upper-roman" %)
+* element1
+* element2
+</pre></div></td><td><div><ul style="list-style-type: upper-roman"><li>element1</li><li>element2</li></ul></div></td></tr><tr><td>Grekiska gemener</td><td><div><pre>
+g. element 1
+g. element 2
+</pre></div></td><td><div><pre>
+(% style="list-style-type: lower-greek" %)
+* element1
+* element2
+</pre></div></td><td><div><ul style="list-style-type: lower-greek"><li>element1</li><li>element2</li></ul></div></td></tr><tr><td>Grekiska versaler</td><td><div><pre>
+G. element 1
+G. element 2
+</pre></div></td><td><div><pre>
+(% style="list-style-type: upper-greek" %)
+* element1
+* element2
+</pre></div></td><td><div><ul style="list-style-type: upper-greek"><li>element1</li><li>element2</li></ul></div></td></tr><tr><td>Hiragana</td><td><div><pre>
+h. element 1
+h. element 2
+</pre></div></td><td><div><pre>
+(% style="list-style-type: hiragana" %)
+* element1
+* element2
+</pre></div></td><td><div><ul style="list-style-type: hiragana"><li>element1</li><li>element2</li></ul></div></td></tr><tr><td>Hiragana iroha</td><td><div><pre>
+H. element 1
+H. element 2
+</pre></div></td><td><div><pre>
+(% style="list-style-type: hiragana-iroha" %)
+* element1
+* element2
+</pre></div></td><td><div><ul style="list-style-type: hiragana-iroha"><li>element1</li><li>element2</li></ul></div></td></tr><tr><td>Katakana</td><td><div><pre>
+k. element 1
+k. element 2
+</pre></div></td><td><div><pre>
+(% style="list-style-type: katakana" %)
+* element1
+* element2
+</pre></div></td><td><div><ul style="list-style-type: katakana"><li>element1</li><li>element2</li></ul></div></td></tr><tr><td>Katakana iroha</td><td><div><pre>
+K. element 1
+K. element 2
+</pre></div></td><td><div><pre>
+(% style="list-style-type: katakana-iroha" %)
+* element1
+* element2
+</pre></div></td><td><div><ul style="list-style-type: katakana-iroha"><li>element1</li><li>element2</li></ul></div></td></tr><tr><td>Armenisk lista</td><td><div><pre>
+&lt;ul style="list-style-type: armenian"&gt;
+  &lt;li&gt;element1&lt;/li&gt;
+  &lt;li&gt;element2&lt;/li&gt;
+&lt;/ul&gt;
+</pre></div></td><td><div><pre>
+(% style="list-style-type: armenian" %)
+* element1
+* element2
+</pre></div></td><td><div><ul style="list-style-type: armenian"><li>element1</li><li>element2</li></ul></div></td></tr><tr><td>Hebreisk lista</td><td><div><pre>
+j. element1
+j. element2
+</pre></div></td><td><div><pre>
+(% style="list-style-type: hebrew" %)
+* element1
+* element2
+</pre></div></td><td><div><ul style="list-style-type: hebrew"><li>element1</li><li>element2</li></ul></div></td></tr><tr><td>Georgisk lista</td><td><div><pre>
+&lt;ul style="list-style-type: georgian"&gt;
+  &lt;li&gt;element1&lt;/li&gt;
+  &lt;li&gt;element2&lt;/li&gt;
+&lt;/ul&gt;
+</pre></div></td><td><div><pre>
+(% style="list-style-type: georgian" %)
+* element1
+* element2
+</pre></div></td><td><div><ul style="list-style-type: georgian"><li>element1</li><li>element2</li></ul></div></td></tr><tr><td>CJK ideografisk lista</td><td><div><pre>
+&lt;ul style="list-style-type: cjk-ideographic"&gt;
+  &lt;li&gt;element1&lt;/li&gt;
+  &lt;li&gt;element2&lt;/li&gt;
+&lt;/ul&gt;
+</pre></div></td><td><div><pre>
+(% style="list-style-type: cjk-ideographic" %)
+* element1
+* element2
+</pre></div></td><td><div><ul style="list-style-type: cjk-ideographic"><li>element1</li><li>element2</li></ul></div></td></tr></table><h1 id="HDefinitionslistor"><span>Definitionslistor</span></h1><table style="width:100%"><tr><th scope="col">Formateringstyp</th><th scope="col">XWiki syntax 1.0</th><th scope="col">XWiki syntax 2.0</th><th scope="col">Resultat</th></tr><tr><td>Vanlig definition</td><td><div><pre>
+&lt;dl&gt;
+  &lt;dt&gt;term&lt;/dt&gt;
+  &lt;dd&gt;definition&lt;/dd&gt;
+&lt;/dl&gt;
+</pre></div></td><td><div><pre>
+; term
+: definition
+</pre></div></td><td><div><dl><dt>term</dt><dd>definition</dd></dl></div></td></tr><tr><td>Nästlade definitioner</td><td><div><pre>
+&lt;dl&gt;
+  &lt;dt&gt;term1&lt;/dt&gt;
+  &lt;dd&gt;definition1
+    &lt;dl&gt;
+      &lt;dt&gt;term2&lt;/dt&gt;
+      &lt;dd&gt;definition2&lt;/dd&gt;
+    &lt;/dl&gt;
+  &lt;/dd&gt;
+&lt;/dl&gt;
+</pre></div></td><td><div><pre>
+; term1
+: definition1
+:; term2
+:: definition2
+</pre></div></td><td><div><dl><dt>term1</dt><dd>definition1<dl><dt>term2</dt><dd>definition2</dd></dl></dd></dl></div></td></tr><tr><td>Parametriserade definitioner</td><td><div><pre>
+&lt;dl style="color:blue"&gt;
+  &lt;dt&gt;term&lt;/dt&gt;
+  &lt;dd&gt;definition&lt;/dd&gt;
+&lt;/dl&gt;
+</pre></div></td><td><div><pre>
+(% style="color:blue" %)
+; term
+: definition
+</pre></div></td><td><div><dl style="color:blue"><dt>term</dt><dd>definition</dd></dl></div></td></tr></table><h1 id="HRadbrytning"><span>Radbrytning</span></h1><p>En radbrytning tvingar fram ny rad och kan stå var som helst i en text.</p><div class="box infomessage">I XWiki syntax 2.0 nyradstecken är signifikanta, vilket inte är fallet i XWiki syntax 1.0 och i Creole-syntax.</div><table style="width:100%"><tr><th scope="col">Formateringstyp</th><th scope="col">XWiki syntax 1.0</th><th scope="col">XWiki syntax 2.0</th><th scope="col">Resultat med XWiki syntax 1.0</th><th scope="col">Resultat med XWiki syntax 2.0</th></tr><tr><td>Radbrytning</td><td><tt class="wikimodel-verbatim">Rad\\Ny rad</tt></td><td><tt class="wikimodel-verbatim">Rad\\Ny rad</tt></td><td>Rad<br/>Ny rad</td><td>Rad<br/>Ny rad</td></tr><tr><td>Ny rad</td><td>Rad<br/>Ny rad</td><td>Rad<br/>Ny rad</td><td>Rad Ny rad</td><td>Rad<br/>Ny rad</td></tr></table><h1 id="HLE4nkar"><span>Länkar</span></h1><table style="width:100%"><tr><th scope="col">Formateringstyp</th><th scope="col">XWiki syntax 1.0</th><th scope="col">XWiki syntax 2.0</th><th scope="col">Resultat med XWiki syntax 1.0</th><th scope="col">Resultat med XWiki syntax 2.0</th></tr><tr><td>Länk till sida i aktuellt rum</td><td> <tt class="wikimodel-verbatim">[WebHome]</tt>&nbsp;</td><td> <tt class="wikimodel-verbatim">[[WebHome]]</tt>&nbsp;</td><td> <span class="wikilink"><a href="/bin/view/XWiki/">Web Home</a></span>&nbsp;</td><td> <span class="wikilink"><a href="/bin/view/XWiki/"><span class="wikigeneratedlinkcontent">WebHome</span></a></span></td></tr><tr><td>Länk med etikett</td><td> <tt class="wikimodel-verbatim">[etikett&gt;WebHome]</tt>&nbsp;</td><td> <tt class="wikimodel-verbatim">[[etikett&gt;&gt;WebHome]]</tt>&nbsp;</td><td> <span class="wikilink"><a href="/bin/view/XWiki/">etikett</a></span>&nbsp;</td><td> <span class="wikilink"><a href="/bin/view/XWiki/">etikett</a></span></td></tr><tr><td>Länk till en sida i specificerat rum&nbsp;</td><td> <tt class="wikimodel-verbatim">[Main.WebHome]</tt>&nbsp;</td><td> <tt class="wikimodel-verbatim">[[Main.WebHome]]</tt>&nbsp;</td><td> <span class="wikilink"><a href="/bin/view/Main/">Web Home</a></span>&nbsp;</td><td> <span class="wikilink"><a href="/bin/view/Main/"><span class="wikigeneratedlinkcontent">WebHome</span></a></span></td></tr><tr><td>Länk till underwiki&nbsp;</td><td> <tt class="wikimodel-verbatim">[underwiki:Main.WebHome]</tt>&nbsp;</td><td> <tt class="wikimodel-verbatim">[[underwiki:Main.WebHome]]</tt>&nbsp;</td><td> <span class="wikilink"><a href="/bin/view/Main/">Web Home</a></span>&nbsp;</td><td> <span class="wikilink"><a href="/bin/view/Main/"><span class="wikigeneratedlinkcontent">WebHome</span></a></span></td></tr><tr><td>Länk som öppnas i nytt fönster&nbsp;</td><td> <tt class="wikimodel-verbatim">[etikett&gt;WebHome&gt;_blank]</tt>&nbsp;</td><td> <tt class="wikimodel-verbatim">[[etikett&gt;&gt;WebHome||rel="__blank"]]</tt>&nbsp;</td><td> <span class="wikilink"><a rel="__blank" href="/bin/view/XWiki/">etikett</a></span>&nbsp;</td><td> <span class="wikilink"><a rel="__blank" href="/bin/view/XWiki/">etikett</a></span></td></tr><tr><td>Länk till URL direkt i text</td><td> <tt class="wikimodel-verbatim">Detta är en URL: http://xwiki.org</tt>&nbsp;</td><td> <tt class="wikimodel-verbatim">Detta är en URL: http://xwiki.org</tt>&nbsp;</td><td>&nbsp;Detta är en URL: <span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://xwiki.org"><span class="wikigeneratedlinkcontent">http://xwiki.org</span></a></span>&nbsp;</td><td>&nbsp;Detta är en URL: <span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://xwiki.org"><span class="wikigeneratedlinkcontent">http://xwiki.org</span></a></span></td></tr><tr><td>Länk till en url URL&nbsp;</td><td> <tt class="wikimodel-verbatim">[http://xwiki.org]</tt>&nbsp;</td><td> <tt class="wikimodel-verbatim">[[http://xwiki.org]]</tt>&nbsp;</td><td> <span class="wikiexternallink"><a href="http://xwiki.org"><span class="wikigeneratedlinkcontent">http://xwiki.org</span></a></span>&nbsp;</td><td> <span class="wikiexternallink"><a href="http://xwiki.org"><span class="wikigeneratedlinkcontent">http://xwiki.org</span></a></span></td></tr><tr><td>Etiketterad länk till URL</td><td> <tt class="wikimodel-verbatim">[XWiki&gt;http://xwiki.org]</tt>&nbsp;</td><td> <tt class="wikimodel-verbatim">[[XWiki&gt;&gt;http://xwiki.org]]</tt>&nbsp;</td><td> <span class="wikiexternallink"><a href="http://xwiki.org">XWiki</a></span>&nbsp;</td><td> <span class="wikiexternallink"><a href="http://xwiki.org">XWiki</a></span></td></tr><tr><td>Länk till e-postadress</td><td> <tt class="wikimodel-verbatim">[e-post&gt;mailto:john@smith.net]</tt>&nbsp;</td><td> <tt class="wikimodel-verbatim">[[e-post&gt;&gt;mailto:john@smith.net]]</tt>&nbsp;</td><td> <span class="wikiexternallink"><a href="mailto:john@smith.net">e-post</a></span>&nbsp;</td><td> <span class="wikiexternallink"><a href="mailto:john@smith.net">e-post</a></span></td></tr><tr><td>Bildlänk&nbsp;</td><td>&nbsp;&lt;a href="$xwiki.getURL("Rum1.Sida1")"&gt;{<img src="https://markebrooks.github.io/bin/download/XWiki/XWikiSyntax/img.png%7B%7B%7B%7C%7D%7D%7Ddocument%3DRum2.Sida2%7D%3C%2Fa%3E" class="wikimodel-freestanding" alt="img.png{{{|}}}document=Rum2.Sida2}&lt;/a&gt;"/>&nbsp;</td><td><div><p><tt class="wikimodel-verbatim">[[image:Rum2.Sida2@img.png&gt;&gt;Rum1.Sida1]]</tt><br/><span class="box infomessage">Wikisyntax kan användas i länketiketter.</span></p></div></td><td> <span class="wikilink"><a href="/bin/view/Main/"><img src="https://markebrooks.github.io/bin/download/XWiki/XWikiSyntax/img.png" class="wikimodel-freestanding" alt="img.png"/></a></span>&nbsp;</td><td> <span class="wikilink"><a href="/bin/view/Main/"><img src="https://markebrooks.github.io/bin/download/XWiki/XWikiSyntax/img.png" class="wikimodel-freestanding" alt="img.png"/></a></span></td></tr><tr><td>Länk till bilaga&nbsp;</td><td><div><p><span class="box infomessage">Se <span class="wikiexternallink"><a href="http://code.xwiki.org/xwiki/bin/view/Macros/AttachMacro">Bilagemakrot</a></span> för detaljer</span><br/><tt class="wikimodel-verbatim">{attach:text|file=img.png</tt>}</p></div></td><td> <tt class="wikimodel-verbatim">[[text&gt;&gt;attach:img.png]]</tt>&nbsp;</td><td> <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/XWiki/XWikiSyntax/img.png">text</a></span>&nbsp;</td><td> <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/XWiki/XWikiSyntax/img.png">text</a></span></td></tr></table><h2 id="HXWikisyntax1.0LE4nkspecifikation"><span>XWiki syntax 1.0 Länkspecifikation</span></h2><p>Det fullständiga formatet för en länk är <tt>(alias[|&gt;])+(länk)(@interWikiAlias)+([|&gt;]mål)+</tt></p><ul><li><tt>alias</tt>: En sträng som visas som länknamn. &nbsp;Kan utelämnas. &nbsp;Exempel: "Min sida".</li><li><tt>länk</tt>: Den fullständiga länkadressen på följande syntax: <tt>(virtualWikiAlias<img src="/resources/icons/silk/emoticon_smile.gif" class="wikimodel-freestanding" alt="emoticon_smile"/>+(rum.)+(adress)(?queryString)+(#ankare)+</tt></li><li>Notera att antingen <tt>länk</tt> eller <tt>alias</tt> måste be specifiseras.<ul><li><tt>virtualWikiAlias</tt>: En sträng som anger namnet på en virtuell wiki. &nbsp;Länken pekar på en sida inuti motsvarade virtuella wiki. &nbsp;Kan utelämnas. &nbsp;Exempel: "mywiki".</li><li><tt>rum</tt>: Ett rumsnamn. &nbsp;Om inget rum anges används aktuellt rum. &nbsp;Exempel: "Main".</li><li><tt>reference</tt>: Länkreferensen. &nbsp;Detta kan vara antingen en URI på formen <tt><tt class="wikimodel-verbatim">protokoll:sökväg</tt></tt> (exempelvis: <tt class="wikimodel-verbatim">"http://xwiki.org"</tt>, <tt class="wikimodel-verbatim">"mailto:sven@svensson.se"</tt>) eller ett namn på en wikisida (exempel: "WebHome").</li><li><tt>queryString</tt>: En query-sträng, vilken kan utelämnas. &nbsp;Används för att ange parametrar till URLen. &nbsp;Exempel: <tt class="wikimodel-verbatim">"mindata1=5&amp;amp;mindata2=Hej"</tt>.</li><li><tt>ankare</tt>: Ett fakultativt ankarnamn som pekar på en ankardefinition på sidan som refereras av länken. &nbsp;I XWiki skapas ankare automatiskt för varje rubrik bestående av bokstaven H (som i engelskans header) följt av rubriknamnet. &nbsp;De svenska bokstäverna å, ä och ö utelämnas alltid ur ankarnamnet. &nbsp;Detta gäller även för alla tecken som ej är bokstäver eller siffror, exempelvis blanktecken, punk och komma. &nbsp;En länk till sektionen XWiki syntax 1.0 Länkspecifikation kan alltså skapas via ankaret "HXWikisyntax10Lnkspecifikation".</li></ul></li><li><tt>interWikiAlias</tt>: Ett fakultativt <span class="wikiexternallink"><a href="http://en.wikipedia.org/wiki/InterWiki">Inter-wiki</a></span>-alias som är definierat i Interwikikartan. &nbsp;Exempel: "wikipedia"</li><li><tt>mål</tt>: En fakultativ sträng som motstvarar <tt>target</tt>-attributet för ett <tt>A</tt>-element i HTML. &nbsp;Om denna utelämnas öppnas länken i aktuellt fönster eller tabb. &nbsp;Exempel: &nbsp;"_self", "_blank".</li></ul><h2 id="HXWikisyntax2.0LE4nkspecification"><span>XWiki syntax 2.0 Länkspecification</span></h2><p>Det fullständiga formatet för en länk är <tt>(etikett&gt;&gt;)?(länk)(||parametrar)*</tt></p><ul><li><tt>etikett</tt>: länketiketten, vilken får innehålla wikisyntax</li><li><tt>länk</tt>: länkmålet, dvs, dit man kommer då man klickar på länken. &nbsp;Den har liknande format som XWiki syntax 1.0 och den har också två ytterligare URI-typer: <tt>mailto:</tt> och <tt>attach:</tt> vilka kan användas för att länka till e-postadress respektive bilaga.</li><li><tt>parametrar</tt>: Parametrar till länken. &nbsp;Dessa kan utelämnas.</li></ul><h1 id="HTabeller"><span>Tabeller</span></h1><p>I XWiki syntax är det relativt enkelt att skapa tabeller. &nbsp;Det går också att ange parametrar för enskilda celler och rader i XWiki syntax 2.0</p><table style="width:100%"><tr><th scope="col">Formateringstyp</th><th scope="col">XWiki syntax 1.0</th><th scope="col">XWiki syntax 2.0</th><th scope="col">Resultat</th></tr><tr><td>Standardtabell</td><td><tt class="wikimodel-verbatim">(((
+{table}
+Titel 1 | Titel 2
+Ord 1 | Ord 2
+{table}
+)))</tt></td><td><div><pre>
+|=Titel 1|=Titel 2
+|Ord 1|Ord 2
+</pre></div></td><td><div><table><tr><th scope="col">Titel 1</th><th scope="col">Titel 2</th></tr><tr><td>Ord 1</td><td>Ord 2</td></tr></table></div></td></tr><tr><td>Parametriserad tabell</td><td><div><p>&lt;table style="background-color:red;align:center"&gt;<br/>&nbsp;&nbsp;&lt;tbody&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Titel 1&lt;/td&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td style="background-color:yellow"&gt;Titel 2&lt;/td&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Ord 1&lt;/td&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Ord 2&lt;/td&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>&nbsp;&nbsp;&lt;/tbody&gt;<br/>&lt;/table&gt;</p></div></td><td><div><pre>
+(% style="background-color:red;align=center" %)
+|=Titel 1|=(% style="background-color:yellow" %)Titel 2
+|Ord 1|Ord 2
+</pre></div></td><td><div><table style="background-color:red;align=center"><tr><th scope="col">Titel 1</th><th style="background-color:yellow" scope="col">Titel 2</th></tr><tr><td>Ord 1</td><td>Ord 2</td></tr></table></div></td></tr><tr><td>Filtrerbar och sorterbar tabell</td><td><div><pre>
+$xwiki.ssfx.use("js/xwiki/table/table.css")
+$xwiki.jsfx.use("js/xwiki/table/tablefilterNsort.js", true)
+&lt;table id="tableid" class="grid sortable filterable doOddEven"&gt;
+  &lt;tr class="sortHeader"&gt;
+    &lt;th&gt;Titel1&lt;/th&gt;
+    &lt;th&gt;Titel2&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;Cell11&lt;/td&gt;
+   &lt;td&gt;Cell12&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;Cell21&lt;/td&gt;
+   &lt;td&gt;Cell22&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre></div></td><td><div><pre>
+{{velocity}}
+$xwiki.ssfx.use("js/xwiki/table/table.css")
+$xwiki.jsfx.use("js/xwiki/table/tablefilterNsort.js", true)
+{{/velocity}}
+
+{{html}}
+&lt;table id="tableid" class="grid sortable filterable doOddEven"&gt;
+  &lt;tr class="sortHeader"&gt;
+    &lt;th&gt;Titel1&lt;/th&gt;
+    &lt;th&gt;Titel2&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;Cell11&lt;/td&gt;
+   &lt;td&gt;Cell12&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;Cell21&lt;/td&gt;
+   &lt;td&gt;Cell22&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+{{/html}}
+</pre></div></td><td><div>
+  
+    
+    
+  
+  
+   
+   
+  
+  
+   
+   
+  
+<table class="grid sortable filterable doOddEven" id="tableid"><tbody><tr class="sortHeader"><th>Titel1</th><th>Titel2</th></tr><tr><td>Cell11</td><td>Cell12</td></tr><tr><td>Cell21</td><td>Cell22</td></tr></tbody></table></div></td></tr></table><h1 id="HBilder"><span>Bilder</span></h1><table style="width:100%"><tr><th scope="col">Formateringstyp</th><th scope="col">XWiki syntax 1.0</th><th scope="col">XWiki syntax 2.0</th><th scope="col">Resultat</th></tr><tr><td>Bild från bilaga till aktuell sida</td><td><div><p><span class="box infomessage">Se <span class="wikiexternallink"><a href="http://code.xwiki.org/xwiki/bin/view/Macros/ImageMacro">bildmakrot</a></span> för detaljer</span><br/><tt class="wikimodel-verbatim">{image:img.png</tt>}</p></div></td><td><tt class="wikimodel-verbatim">image:img.png</tt></td><td><img src="https://markebrooks.github.io/bin/download/XWiki/XWikiSyntax/img.png" class="wikimodel-freestanding" alt="img.png"/></td></tr><tr><td>Bild från bilaga i annat dokument</td><td><tt class="wikimodel-verbatim">{image:img.png|document=Rum.Sida</tt>}</td><td><tt class="wikimodel-verbatim">image:Rum.Sida@img.png</tt></td><td><img src="https://markebrooks.github.io/bin/download/XWiki/XWikiSyntax/img.png" class="wikimodel-freestanding" alt="img.png"/></td></tr><tr><td>Bild med parametrar</td><td><tt class="wikimodel-verbatim">{image:img.png|width=25|height=25</tt>}</td><td><tt class="wikimodel-verbatim">[[image:img.png||width="25" height="25"]]</tt></td><td><img src="https://markebrooks.github.io/bin/download/XWiki/XWikiSyntax/img.png?width=25&amp;height=25" width="25" height="25" alt="img.png"/></td></tr><tr><td>Bild från URL</td><td><tt class="wikimodel-verbatim">http://some/url/img.png</tt></td><td><tt class="wikimodel-verbatim">image:http://some/url/img.png</tt></td><td><img src="https://markebrooks.github.io/bin/download/XWiki/XWikiSyntax/img.png" class="wikimodel-freestanding" alt="img.png"/></td></tr></table><h1 id="HEjformateradtext"><span>Ej formaterad text</span></h1><p>Det går att ange att text ej skall formateras av wiki syntaxen, dvs, symbolerna för wikisyntax kommer att visas istället för att texten formateras.</p><div class="box infomessage">I XWiki syntax 1.0 <span class="wikiexternallink"><a href="http://code.xwiki.org/xwiki/bin/view/Macros/PreMacro">Pre-makrot</a></span> bevarar endast wiki syntax och Radeox makron. &nbsp;HTML-kod och Groovy- och Velocity-skript exekveras fortfarande.</div><table style="width:100%"><tr><th scope="col">Formateringstyp</th><th scope="col">XWiki syntax 1.0</th><th scope="col">XWiki syntax 2.0</th><th scope="col">Resultat i XWiki syntax 1.0</th><th scope="col">Resultat i XWiki syntax 2.0</th></tr><tr><td>Ej formaterad text inuti formaterad text</td><td><tt class="wikimodel-verbatim">Lite {pre}*[ej renderat]*{/pre} innehåll</tt></td><td><tt class="wikimodel-verbatim">Lite {{{**[[ej renderat]]**}}} innehåll</tt></td><td>Lite <tt class="wikimodel-verbatim">*[ej renderat]*</tt> innehåll</td><td>lite <tt class="wikimodel-verbatim">**[[ej renderat]]**</tt> innehåll</td></tr><tr><td>Block av ej formaterad text</td><td><div><p><tt class="wikimodel-verbatim">
+{pre}
+flerradigt
+*ej renderat*
+innehåll
+{/pre}
+</tt><br/><span class="box infomessage">Man kan även använda <span class="wikiexternallink"><a href="http://code.xwiki.org/xwiki/bin/view/Macros/CodeMacro">kodmakrot</a></span>, men det visar sitt inehåll i en box, om inget annat anges.</span></p></div></td><td><div><pre>
+{{{
+flerradigt
+**ej renderat**
+innehåll
+}}}
+</pre></div></td><td><div><pre>
+flerradigt
+*ej renderat*
+innehåll
+</pre></div></td><td><div><pre>
+flerradigt
+**ej renderat**
+innehåll
+</pre></div></td></tr></table><h1 id="HCitering"><span>Citering</span></h1><table style="width:100%"><tr><th scope="col">Formateringstyp</th><th scope="col">XWiki syntax 1.0</th><th scope="col">XWiki syntax 2.0</th><th scope="col">Resultat</th></tr><tr><td>Citat</td><td><div><p>&lt;blockquote&gt;&lt;p&gt;Anna sade detta&lt;/p&gt;&lt;/blockquote&gt;<br/>Jag sade ok</p></div></td><td><div><pre>
+&gt; Anna sade detta
+Jag sade ok
+</pre></div></td><td><div><blockquote><p>&nbsp;Anna sade detta</p></blockquote><p>Jag sade ok</p></div></td></tr><tr><td>Nestlade citat</td><td><div><p>&lt;blockquote&gt;&lt;p&gt;Anna sade detta&lt;/p&gt;<br/>&nbsp;&nbsp;&lt;blockquote&gt;&lt;p&gt;Lina svarade detta&lt;/p&gt;&lt;/blockquote&gt;<br/>&lt;/blockquote&gt;<br/>Jag sade ok</p></div></td><td><div><pre>
+&gt; Anna sade detta
+&gt;&gt; Lina svarade detta
+Jag sade ok
+</pre></div></td><td><div><blockquote><p>&nbsp;Anna sade detta</p><blockquote><p>&nbsp;Lina svarade detta</p></blockquote><p></p></blockquote><p>Jag sade ok</p></div></td></tr></table><h1 id="HGruppering"><span>Gruppering</span></h1><p>Gruppering kan användas för att infoga kompexa element i löpande text. Exempelvis för att infoga ett dokument i löpande text, eller komplexa element inuti listor eller tabellceller. &nbsp;Gruppering markeras med följande syntaktiska symboler: <tt><tt class="wikimodel-verbatim">(((...)))</tt></tt>. &nbsp;En gruppering kan innehålla en annan gruppering.</p><table style="width:100%"><tr><th scope="col">XWiki syntax 1.0</th><th scope="col">XWiki syntax 2.0</th><th scope="col">Resultat</th></tr><tr><td><span class="box infomessage">XWiki syntax 1.0 saknar grupperingsmöjligheter. &nbsp;Man måste använda sig av HTML för att åstadkomma motsvarande resultat.</span></td><td><div><pre>
+|=Titel 1|=Titel 2|=Titel 3
+|Cell ett|(((
+= Inbäddat dokument
+
+Ett inbäddat stycke
+
+&lt;ul class="star"&gt;
+&lt;li&gt;listelement ett&lt;/li&gt;
+&lt;li&gt;listelement två&lt;ul class="star"&gt;
+&lt;li&gt;underelement 1&lt;/li&gt;
+&lt;li&gt;underelement 2&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+))) | Cell tre
+
+Fortsättningen på toppnivådokumentet
+</pre></div></td><td><div><table><tr><th scope="col">Titel 1</th><th scope="col">Titel 2</th><th scope="col">Titel 3</th></tr><tr><td>Cell ett</td><td><div><h1 id="HEmbeddeddocument"><span>Inbäddat dokument</span></h1><p>Ett inbäddat stycke</p><p>&lt;ul class="star"&gt;<br/>&lt;li&gt;listelement ett&lt;/li&gt;<br/>&lt;li&gt;listelement två&lt;ul class="star"&gt;<br/>&lt;li&gt;underelement 1&lt;/li&gt;<br/>&lt;li&gt;underelement 2&lt;/li&gt;<br/>&lt;/ul&gt;&lt;/li&gt;<br/>&lt;/ul&gt;</p></div></td><td>&nbsp;Cell tre</td></tr></table><p>Fortsättningen på toppnivådokumentet</p></div></td></tr></table><h1 id="HKontrollsekvenserfF6rwikisymboler"><span>Kontrollsekvenser för wikisymboler</span></h1><table style="width:100%"><tr><th scope="col">Formateringstyp</th><th scope="col">XWiki syntax 1.0</th><th scope="col">XWiki syntax 2.0</th><th scope="col">Resultat XWiki syntax 1.0</th><th scope="col">Resultat XWiki syntax 2.0</th></tr><tr><td>Kontrollsekvens för enstaka tecken</td><td><tt class="wikimodel-verbatim">Detta är inte en \[länk\]</tt></td><td><div><pre>Detta är inte en ~[[länk~]]</pre><div class="box infomessage">För att generera ett ~-tecken avnänd två ~-tecken: <tt class="wikimodel-verbatim">~~</tt>&nbsp;</div></div></td><td>Detta är inte en [länk]</td><td>Detta är inte en [[länk]]</td></tr></table><h1 id="HMakron"><span>Makron</span></h1><p>Det finns två typder av makron i XWiki syntax 1.0:</p><ul><li>Velocity-makron, vilka anropas med syntaxen <tt class="wikimodel-verbatim">#makronamn(parameter1 … parameterN)</tt>.</li><li>Radeox-makron, vilka anropas med syntaxen <tt class="wikimodel-verbatim"> {makronamn:parameter1=värde1|...|parameterN=värdeN} </tt>.</li></ul><p>Det finns även två typer av makron i XWiki syntax 2.0:</p><ul><li>Velocity-makron, vilka anropas med syntaxen <tt class="wikimodel-verbatim">#makronamn(parameter1 … parameterN)</tt> inuti XWiki-makrot "velocity".</li><li>XWiki-makron, vilka anropas med syntaxen <tt class="wikimodel-verbatim">{{makronamn parameter1="värde1" … parameterN="värdeN"</tt>}}.</li></ul><div class="box infomessage">Radeox-makron kan ej användas i XWiki syntax 2.0 och har därför skrivits om som XWiki-makron.</div><div class="box infomessage">En fullständig lista över tillgängliga makron finns på <span class="wikiexternallink"><a href="http://code.xwiki.org/xwiki/bin/view/Macros/">makroreferenssidan</a></span>.</div><table style="width:100%"><tr><th scope="col">Formateringstyp</th><th scope="col">XWiki syntax 1.0</th><th scope="col">XWiki syntax 2.0</th></tr><tr><td>Velocity-makro</td><td><div><pre>#info("Lite text")</pre></div></td><td><div><pre>
+{{velocity}}{{html}}
+#info("Lite text")
+{{/html}}{{/velocity}}
+</pre><div class="box infomessage">HTML-makrot måste användas i detta exempel eftersom <tt>#info</tt>-makrot genererar innehåll på HTML-format.</div><div class="box infomessage">Med början i XE 2.0 bör man istället använda &lt;a class="wikicreatelink" href="/xwiki/bin/edit/XE/%5Bmedelandemakrot%26%2362%3B%26?parent=XE.XEXWikiXWikiSyntax_951530617_content_sv"&gt;&lt;span class="wikicreatelinktext"&gt;[medelandemakrot&gt;&amp;&lt;/span&gt;&lt;span class="wikicreatelinkqm"&gt;?&lt;/span&gt;&lt;/a&gt;] för att implementera detta exempel.</div></div></td></tr><tr><td>Radeox-makron/XWiki-makron</td><td><div><pre>
+&lt;div class="code"&gt;&lt;pre&gt;javakod&lt;/pre&gt;&lt;/div&gt;
+</pre></div></td><td><div><pre>
+{{code language="java"}}
+javakod
+{{/code}}
+</pre></div></td></tr></table><h1 id="HHTML"><span>HTML</span></h1><div class="box infomessage">I XWiki syntax 2.0 HTML eller XHTML måste anges inuti HTML-makrot. &nbsp;I XWiki syntax 1.0 är det möjligt att ange HTML direkt i texten.</div><table style="width:100%"><tr><th scope="col">XWiki syntax 1.0</th><th scope="col">XWiki syntax 2.0</th><th scope="col">Resultat</th></tr><tr><td>&lt;b&gt;fetstil&lt;/b&gt;</td><td><tt class="wikimodel-verbatim">{{html}}&lt;b&gt;fetstil&lt;/b&gt;{{/html</tt>}}</td><td><strong>fetstil</strong></td></tr></table><div class="box infomessage">I XWiki syntax 2.0, tolkas wikisyntax även inuti HTML-makrot om inget annat angivits. &nbsp;Ange <tt class="wikimodel-verbatim">{{html wiki="false"</tt>}} för att förhindra detta.</div><h1 id="HVelocity2FGroovy-skript"><span>Velocity/Groovy-skript</span></h1><div class="box infomessage">In XWiki syntax 1.0 är det möjligt att ange Velocity-skript var som helst på en wikisida. &nbsp;Detta medför problem då en användar oavsiktligen matar in Velocity-kod. &nbsp;Dessutom renderas sidor som ej innehåller Velocity-kod långsammare än nödvändigt. &nbsp;Det medför även andra tekniska begränsningar. &nbsp;Således måste Velocity-skript avgränsas med hjälp av <tt>velocity</tt>-makrot i XWiki syntax 2.0. &nbsp;Detsamma gäller för Groovy-skript som måste anges med hjälp av <tt>groovy</tt>-makrot.</div><table style="width:100%"><tr><th scope="col">Formateringstyp</th><th scope="col">XWiki syntax 1.0</th><th scope="col">XWiki syntax 2.0</th></tr><tr><td>Velocity-skript</td><td><div><pre>
+#set ($var = "något värde")
+</pre></div></td><td><div><pre>
+{{velocity}}
+#set ($var = "något värde")
+{{/velocity}}
+</pre></div></td></tr><tr><td>Groovy-skript</td><td><div><pre>
+&lt;%
+def var = "något värde"
+%&gt;
+</pre></div></td><td><div><pre>
+{{groovy}}
+def var = "något värde"
+{{/groovy}}
+</pre></div></td></tr></table><h1 id="HParametrar"><span>Parametrar</span></h1><p>Med xWiki syntax 2.0 är det möjligt att ange parametrar till syntaktiska element och textblock. &nbsp;Detta används exempelvis för att ändra stil på elementen. &nbsp;Det går att ange nyckel/värde-par så att XHTML-renderaren infogar motsvarande attribut i den underliggande XHTML-representationen av syntaxelementen. &nbsp;I XWiki syntax 1.0 finns det ingen syntax för att ange parametrar utan XHTML-koden måste matas in direkt såsom illustreras nedan.</p><table style="width:100%"><tr><th scope="col">XWiki syntax 1.0</th><th scope="col">XWiki syntax 2.0</th><th scope="col">Genererad XHTML</th></tr><tr><td><div><pre>
+&lt;h1 class="myClass" style="myStyle" id="myId"&gt;rubrik&lt;/h1&gt;
+</pre></div></td><td><div><pre>
+(% class="myClass" style="myStyle" id="myId" %)
+= rubrik =
+</pre></div></td><td><div><pre>
+&lt;h1 class="myClass" style="myStyle" id="myId"&gt;rubrik&lt;/h1&gt;
+</pre></div></td></tr></table><div id="syntaxes"></div><h1 id="HAndrasyntaxer"><span>Andra syntaxer</span></h1><p>Följande syntaxer finns implementerade i XWiki enterprise 1.6 och senare:</p><ul><li><span class="wikiexternallink"><a href="http://www.jspwiki.org/wiki/TextFormattingRules">JSPWiki</a></span></li><li><span class="wikiexternallink"><a href="http://en.wikipedia.org/wiki/Help:Editing">MediaWiki</a></span></li><li><span class="wikiexternallink"><a href="http://confluence.atlassian.com/display/CONF20/Confluence+Notation+Guide+Overview">Confluence</a></span></li><li><span class="wikiexternallink"><a href="http://twiki.org/cgi-bin/view/TWiki/WikiSyntax">TWiki</a></span></li><li><span class="wikiexternallink"><a href="http://www.wikicreole.org/wiki/Creole1.0">Creole 1.0</a></span></li><li><span class="wikiexternallink"><a href="http://www.w3.org/TR/xhtml1/">XHTML 1.0</a></span></li></ul><div class="box warningmessage">Implementationen för dessa syntaxer är ej kompletta ännu. &nbsp;Länkar fungerar exempelvis inte alltid som förväntat. &nbsp;Vi måste även bestämma om syntaxerna skall utökas för att stödja XWiki-specifik funktionalitet såsom möjligheten att länka till en annan virtuell wiki.</div>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Taggar:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Skapad av Administrator den 2008/02/20 11:36<br/>
+              Översatt till sv av Administrator den 2008/02/20 11:36<br/>
+          </div>
+    <div class="xdocLastModification">       Senast ändrad av Chris Phelan den 2011/08/10 10:05
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">XWiki Pages</h1>
+<div class="xwikipanelcontents">
+</div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2012, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

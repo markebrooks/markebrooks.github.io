@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <title>
+                  Sun::Solaris::Lgrp - Perl interface to Solaris liblgrp(3LIB) library. (Community Group performance.Lgrp_man) - XWiki
+              </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="imagetoolbar" content="no"/>
+                <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Community+Group+performance/Lgrp_man" />
+                        <meta name="document" content="Community Group performance.Lgrp_man"/>
+    <meta name="space" content="Community Group performance"/>
+    <meta name="page" content="Lgrp_man"/>
+        <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Sun::Solaris::Lgrp - Perl interface to Solaris liblgrp(3LIB) library." />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+
+        <!-- com.xpn.xwiki.plugin.skinx.LinkExtensionPlugin -->
+    <link href="/bin/skin/skins/oso/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/oso/os_base1.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/oso/print.css" rel="stylesheet" type="text/css" media="print" />
+  <link href="/bin/skin/skins/oso/print.css" rel="stylesheet" type="text/css" media="all" />
+        
+
+
+    
+
+    <link href="/resources/js/xwiki/fullscreenedit/fullscreenEdit.css" rel="stylesheet" type="text/css" />
+<link href="/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript">
+var script1 = document.createElement('script')
+script1.src = "/resources/js/prototype/prototype.js"
+var script2 = document.createElement('script')
+script2.src = "/bin/skin/resources/js/xwiki/xwiki.js"
+var script3 = document.createElement('script')
+script3.src = "/resources/js/xwiki/suggest/ajaxSuggest.js"
+document.getElementsByTagName('head')[0].appendChild(script1);
+document.getElementsByTagName('head')[0].appendChild(script2);
+document.getElementsByTagName('head')[0].appendChild(script3);
+</script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.editor = "";
+XWiki.viewer = "";
+// ]]>
+</script>
+
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js'></script><script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js'></script>
+
+  </head>
+    	<body id="body" class="xwiki viewbody hideright">
+  <!-- These elements will be closed in the footer vm file -->
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+
+  <br/>
+  <br/>
+  <div id="Masthead">
+    <h1><a href="/bin/view/Main/">OpenSolaris</a></h1>
+    <a href="/bin/view/Main/" id="MastheadLogo"></a>
+    <a href="/bin/view/Main/" title="Home" rel="home"></a>
+    <div id="Iconbar">
+	<a id="CollectivesIcon" href="/bin/view/Main/collectives">Collectives</a>
+	<a id="DiscussionsIcon" href="/bin/view/Main/discussions">Discussions</a>
+	<a id="DocumentationIcon" href="/bin/view/Main/documentation">Documentation</a>
+	<a id="DownloadIcon" href="/bin/view/Main/downloads">Download</a>
+	<a id="SourceBrowserIcon" href="http://src.opensolaris.org">Source Browser</a>
+	<a id="FreeCD" href="http://www.opensolaris.org/os/TryOpenSolaris/">Free CD</a>
+    </div>
+  </div>
+
+
+ <div class="layoutsection">
+<div class="minwidthb"></div>
+
+    <div style="text-align:right;">
+      <a class="glink" href="http://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FCommunity%2BGroup%2Bperformance%2FLgrp_man%3Fxpage%3Dprint%26%2338%3Blanguage%3Den" id="headerlogin">Log-in</a><span class="separator"> | </span>
+  <span class="glink" id="headerlanguages">
+  <a href="/bin/view/Community+Group+performance/Lgrp_man?language=en">en</a>
+    </span>
+    </div> 
+</div>
+
+ <div id="headerspace" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+  <div id="breadcrumbs">
+    <span class="breadcrumbspace"><a href="/bin/view/Community+Group+performance/">Community Group performance</a>: </span>
+<a href='/bin/view/Community+Group+performance/numa'>OpenSolaris  NUMA project</a> &gt; <a href='/bin/view/Community+Group+performance/observability'>Observability</a> &gt; <a href='/bin/view/Community+Group+performance/tools'>Tools</a> &gt; <a href='/bin/view/Community+Group+performance/perl_lgrp'>Perl lgroup module</a> &gt; <a href='/bin/view/Community+Group+performance/Lgrp_man'>Sun::Solaris::Lgrp - Perl interface to Solaris liblgrp(3LIB) library.</a>
+  </div>
+<hr/>
+</div>
+
+
+<div id="menuview"> 
+  <div id="actionmenu" class="layoutsubsection">
+<h3 id="xwikimenutitle" class="hidden">Top Menu</h3>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+<div class="topmenuentry" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmShow">
+<a class="tme"  href="/bin/view/Community+Group+performance/Lgrp_man?viewer=code&amp;language=en" ><strong>Show</strong></a><span class="hidden menucolon">: </span><span class="submenu hidden">
+<span class="submenuitem"><a href="/bin/view/Community+Group+performance/Lgrp_man?viewer=comments&amp;language=en" id="tmShowComments">Comments</a></span>
+<span class="submenuitem"><a href="/bin/view/Community+Group+performance/Lgrp_man?viewer=attachments&amp;language=en" id="tmShowAttachments">Attachments</a></span>
+<span class="submenuitem"><a href="/bin/view/Community+Group+performance/Lgrp_man?viewer=history&amp;language=en" id="tmShowHistory">History</a></span>
+<span class="submenuitem"><a href="/bin/view/Community+Group+performance/Lgrp_man?viewer=information&amp;language=en" id="tmShowInformation">Information</a></span>
+</span></div>
+ <div class="topmenuentry" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmPrint">
+<a class="tme"  href="javascript:window.print()" ><strong>Print</strong></a><span class="hidden menucolon">: </span><span class="submenu hidden">
+<span class="submenuitem"><a href="javascript:window.print()" id="tmPrintAction">Print</a></span>
+<span class="submenuitem"><a href="/bin/view/Community+Group+performance/Lgrp_man?xpage=print&amp;language=en" id="tmPrintPreview">Print preview</a></span>
+<span class="submenuseparator">&nbsp;</span>
+<span class="submenuitem"><a href="/bin/export/Community+Group+performance/Lgrp_man?format=pdf&amp;language=en" id="tmExportPdf">Export as PDF</a></span>
+<span class="submenuitem"><a href="/bin/export/Community+Group+performance/Lgrp_man?format=rtf&amp;language=en" id="tmExportRtf">Export as RTF</a></span>
+<span class="submenuitem"><a href="/bin/export/Community+Group+performance/Lgrp_man?format=html&amp;language=en" id="tmExportHtml">Export as HTML</a></span>
+<span class="submenuitem"><a href="/bin/export/Community+Group+performance/Lgrp_man?format=xar&amp;name=Community+Group+performance.Lgrp_man&amp;pages=Community+Group+performance.Lgrp_man&amp;language=en" id="tmExportXar">Export as XAR</a></span>
+</span></div>
+</div>
+</div>
+
+</div>
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+<div class="minwidthb"></div>
+<div class="main layoutsubsection">
+<div id="xwikicontent">
+<table><tr><td><strong>&#160;Sun::Solaris::Lgrp - Perl interface to Solaris liblgrp library.</strong></td></tr></table><ul><li><!--startwikilink:#name--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#name">NAME</a></span><!--stopwikilink--></li><li><!--startwikilink:#synopsis--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#synopsis">SYNOPSIS</a></span><!--stopwikilink--></li><li><!--startwikilink:#description--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#description">DESCRIPTION</a></span><!--stopwikilink--><ul><li><!--startwikilink:#exports--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#exports">EXPORTS</a></span><!--stopwikilink--></li><li><!--startwikilink:#methods--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#methods">METHODS</a></span><!--stopwikilink--></li><li><!--startwikilink:#difference_in_the_api_versions--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#difference_in_the_api_versions">Difference in the API versions</a></span><!--stopwikilink--></li><li><!--startwikilink:#exportable_constants--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#exportable_constants">Exportable constants</a></span><!--stopwikilink--></li><li><!--startwikilink:#error_values--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#error_values">Error values</a></span><!--stopwikilink--></li><li><!--startwikilink:#exportable_functions--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#exportable_functions">Exportable functions</a></span><!--stopwikilink--></li><li><!--startwikilink:#object_methods--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#object_methods">Object Methods</a></span><!--stopwikilink--></li></ul></li><li><!--startwikilink:#attributes--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#attributes">ATTRIBUTES</a></span><!--stopwikilink--></li><li><!--startwikilink:#see_also--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#see_also">SEE ALSO</a></span><!--stopwikilink--></li></ul><hr/><h1 id="HNAME"><span>NAME</span></h1><p>Sun::Solaris::Lgrp - Perl interface to Solaris <!--startmacro:code|-||-|liblgrp(3LIB)--><span class="box code"><tt class="wikimodel-verbatim">liblgrp(3LIB)</tt></span><!--stopmacro--> library.</p><hr/><h1 id="HSYNOPSIS"><span>SYNOPSIS</span></h1><p>All functions return <strong>undef</strong> or empty list on failure. The <strong>$!</strong> variable contains the system errno value.</p><pre>
+
+  use Sun::Solaris::Lgrp qw(:ALL);
+</pre><pre>
+
+  # initialize lgroup interface
+  my $cookie = lgrp_init(LGRP_VIEW_OS | LGRP_VIEW_CALLER);
+  my $l = Sun::Solaris::Lgrp-&gt;new(LGRP_VIEW_OS | LGRP_VIEW_CALLER);
+</pre><pre>
+
+  my $version = lgrp_version(LGRP_VER_CURRENT | LGRP_VER_NONE);
+  $version = $l-&gt;version(LGRP_VER_CURRENT | LGRP_VER_NONE);
+</pre><pre>
+
+  $home = lgrp_home(P_PID, P_MYID);
+  $home = l-&gt;home(P_PID, P_MYID);
+</pre><pre>
+
+  lgrp_affinity_set(P_PID, $pid, $lgrp,
+        LGRP_AFF_STRONG | LGRP_AFF_WEAK | LGRP_AFF_NONE);
+  $l-&gt;affinity_set(P_PID, $pid, $lgrp,
+        LGRP_AFF_STRONG | LGRP_AFF_WEAK | LGRP_AFF_NONE);
+</pre><pre>
+
+  my $affinity = lgrp_affinity_get(P_PID, $pid, $lgrp);
+  $affinity = $l-&gt;affinity_get(P_PID, $pid, $lgrp);
+</pre><pre>
+
+  my $nlgrps = lgrp_nlgrps($cookie);
+  $nlgrps = $l-&gt;nlgrps();
+</pre><pre>
+
+  my $root = lgrp_root($cookie);
+  $root = l-&gt;root();
+</pre><pre>
+
+  $latency = lgrp_latency($lgrp1, $lgrp2);
+  $latency = $l-&gt;latency($lgrp1, $lgrp2);
+</pre><pre>
+
+  my @children = lgrp_children($cookie, $lgrp);
+  @children = l-&gt;children($lgrp);
+</pre><pre>
+
+  my @parents = lgrp_parents($cookie, $lgrp);
+  @parents = l-&gt;parents($lgrp);
+</pre><pre>
+
+  my @lgrps = lgrp_lgrps($cookie);
+  @lgrps = l-&gt;lgrps();
+</pre><pre>
+
+  @lgrps = lgrp_lgrps($cookie, $lgrp);
+  @lgrps = l-&gt;lgrps($lgrp);
+</pre><pre>
+
+  my @leaves = lgrp_leaves($cookie);
+  @leaves = l-&gt;leaves();
+</pre><pre>
+
+  my $is_leaf = lgrp_isleaf($cookie, $lgrp);
+  $is_leaf = $l-&gt;is_leaf($lgrp);
+</pre><pre>
+
+  my @cpus = lgrp_cpus($cookie, $lgrp,
+        LGRP_CONTENT_HIERARCHY | LGRP_CONTENT_DIRECT);
+  @cpus = l-&gt;cpus($lgrp, LGRP_CONTENT_HIERARCHY | LGRP_CONTENT_DIRECT);
+</pre><pre>
+
+  my $memsize = lgrp_mem_size($cookie, $lgrp,
+        LGRP_MEM_SZ_INSTALLED | LGRP_MEM_SZ_FREE,
+        LGRP_CONTENT_HIERARCHY | LGRP_CONTENT_DIRECT);
+  $memsize = l-&gt;mem_size($lgrp,
+        LGRP_MEM_SZ_INSTALLED | LGRP_MEM_SZ_FREE,
+        LGRP_CONTENT_HIERARCHY | LGRP_CONTENT_DIRECT);
+</pre><pre>
+
+  my $is_stale = lgrp_cookie_stale($cookie);
+  $stale = l-&gt;stale();
+</pre><pre>
+
+  lgrp_fini($cookie);
+</pre><p>The following is available for API version greater than 1:</p><pre>
+
+  my @lgrps = lgrp_resources($cookie, $lgrp, LGRP_RSRC_CPU);
+</pre><pre>
+
+  # Get latencies from cookie
+  $latency = lgrp_latency_cookie($cookie, $from, $to);
+</pre><hr/><h1 id="HDESCRIPTION"><span>DESCRIPTION</span></h1><p>This module provides access to the <!--startmacro:code|-||-|liblgrp(3LIB)--><span class="box code"><tt class="wikimodel-verbatim">liblgrp(3LIB)</tt></span><!--stopmacro--> library and to various constants and functions defined in <!--startmacro:code|-||-|sys/lgrp_sys.h--><span class="box code"><tt class="wikimodel-verbatim">sys/lgrp_sys.h</tt></span><!--stopmacro--> header file. It provides both the procedural and object interface to the library. The procedural interface requires (in most cases) passing a transparent cookie around. The object interface hides all the cookie manipulations from the user.</p><p>Functions returning scalar value indicate error by returning <strong>undef</strong>. The caller may examine the <strong>$!</strong> variable to get the <!--startmacro:code|-||-|errno--><span class="box code"><tt class="wikimodel-verbatim">errno</tt></span><!--stopmacro--> value.</p><p>Functions returning list value return the number of elements in the list when called in scalar context. In case of error the empty list is return in the array context and <strong>undef</strong> is returned in the scalar context.</p><h2 id="HEXPORTS"><span>EXPORTS</span></h2><p>By default nothing is exported from this module. The following tags can be used to selectively import constants and functions defined in this module:</p><dl><dt><strong>:LGRP_CONSTANTS</strong></dt><dd>&nbsp;LGRP_AFF_NONE, LGRP_AFF_STRONG, LGRP_AFF_WEAK, LGRP_CONTENT_DIRECT, LGRP_CONTENT_HIERARCHY, LGRP_MEM_SZ_FREE, LGRP_MEM_SZ_INSTALLED, LGRP_VER_CURRENT, LGRP_VER_NONE, LGRP_VIEW_CALLER, LGRP_VIEW_OS, LGRP_NONE, LGRP_RSRC_CPU, LGRP_RSRC_MEM, LGRP_CONTENT_ALL, LGRP_LAT_CPU_TO_MEM.</dd><dt><strong>:PROC_CONSTANTS</strong></dt><dd>&nbsp;P_PID, P_LWPID P_MYID</dd><dt><strong>:CONSTANTS</strong></dt><dd>&nbsp;:LGRP_CONSTANTS, :PROC_CONSTANTS</dd><dt><strong>:FUNCTIONS</strong></dt><dd>&nbsp;lgrp_affinity_get(), lgrp_affinity_set(), lgrp_children(), lgrp_cookie_stale(), lgrp_cpus(), lgrp_fini(), lgrp_home(), lgrp_init(), lgrp_latency(), lgrp_latency_cookie(), lgrp_mem_size(), lgrp_nlgrps(), lgrp_parents(), lgrp_root(), lgrp_version(), lgrp_view(), lgrp_resources(), lgrp_lgrps(), lgrp_leaves(), lgrp_isleaf(), lgrp_lgrps(), lgrp_leaves().</dd><dt><strong>:ALL</strong></dt><dd>&nbsp;:CONSTANTS, :FUNCTIONS</dd></dl><h2 id="HMETHODS"><span>METHODS</span></h2><p>new(), cookie(), stale(), view(), root(), children(), parents(), nlgrps(), mem_size(), cpus(), isleaf(), resources(), version(), home(), affinity_get(), affinity_set(), lgrps(), leaves(), latency().</p><h2 id="HDifferenceintheAPIversions"><span>Difference in the API versions</span></h2><p>The <!--startmacro:code|-||-|liblgrp(3LIB)--><span class="box code"><tt class="wikimodel-verbatim">liblgrp(3LIB)</tt></span><!--stopmacro--> is versioned. The exact version which was used to compile a module is available through <strong>lgrp_version</strong> function.</p><p>Version 2 of the lgrpp_user API introduced the following constants and functions, nbot present in version 1:</p><dl><dt><strong><!--startwikilink:#item_lgrp_rsrc_cpu--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_rsrc_cpu"><!--startmacro:code|-||-|LGRP_RSRC_CPU--><span class="box code"><tt class="wikimodel-verbatim">LGRP_RSRC_CPU</tt></span><!--stopmacro--></a></span><!--stopwikilink--> constant</strong></dt><dt><strong><!--startwikilink:#item_lgrp_rsrc_mem--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_rsrc_mem"><!--startmacro:code|-||-|LGRP_RSRC_MEM--><span class="box code"><tt class="wikimodel-verbatim">LGRP_RSRC_MEM</tt></span><!--stopmacro--></a></span><!--stopwikilink--> constant</strong></dt><dt><strong><!--startmacro:code|-||-|LGRP_CONTENT_ALL--><span class="box code"><tt class="wikimodel-verbatim">LGRP_CONTENT_ALL</tt></span><!--stopmacro--> constant</strong></dt><dt><strong><!--startmacro:code|-||-|LGRP_LAT_CPU_TO_MEM--><span class="box code"><tt class="wikimodel-verbatim">LGRP_LAT_CPU_TO_MEM</tt></span><!--stopmacro--> constant</strong></dt><dt><strong><!--startmacro:code|-||-|lgrp_resources()--><span class="box code"><tt class="wikimodel-verbatim">lgrp_resources()</tt></span><!--stopmacro--> function</strong></dt><dt><strong><!--startmacro:code|-||-|lgrp_latency_cookie()--><span class="box code"><tt class="wikimodel-verbatim">lgrp_latency_cookie()</tt></span><!--stopmacro--> function</strong></dt></dl><p>The <!--startwikilink:#item_lgrp_rsrc_cpu--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_rsrc_cpu"><!--startmacro:code|-||-|LGRP_RSRC_CPU--><span class="box code"><tt class="wikimodel-verbatim">LGRP_RSRC_CPU</tt></span><!--stopmacro--></a></span><!--stopwikilink--> and <!--startwikilink:#item_lgrp_rsrc_mem--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_rsrc_mem"><!--startmacro:code|-||-|LGRP_RSRC_MEM--><span class="box code"><tt class="wikimodel-verbatim">LGRP_RSRC_MEM</tt></span><!--stopmacro--></a></span><!--stopwikilink--> are not defined for version 1. The <!--startwikilink:#item_lgrp_resources--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_resources">lgrp_resources()</a></span><!--stopwikilink--> function is defined for version 1 but always returns empty list. The <!--startwikilink:#item_lgrp_latency_cookie--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_latency_cookie">lgrp_latency_cookie()</a></span><!--stopwikilink--> function is an alias for lgrp_latency for version 1.</p><h2 id="HExportableconstants"><span>Exportable constants</span></h2><p>The constants are exported with <strong>:CONSTANTS</strong> or <strong>:ALL</strong> tags:</p><pre>
+
+  use LGRP::User ':ALL';
+or
+  use LGRP::User ':CONSTANTS';
+</pre><p>The following constants are available for use in Perl programs:</p><pre>
+
+  LGRP_NONE
+</pre><pre>
+
+  LGRP_VER_CURRENT
+  LGRP_VER_NONE
+</pre><pre>
+
+  LGRP_VIEW_CALLER
+  LGRP_VIEW_OS
+</pre><pre>
+
+  LGRP_AFF_NONE
+  LGRP_AFF_STRONG
+  LGRP_AFF_WEAK
+</pre><pre>
+
+  LGRP_CONTENT_DIRECT
+  LGRP_CONTENT_HIERARCHY
+</pre><pre>
+
+  LGRP_MEM_SZ_FREE
+  LGRP_MEM_SZ_INSTALLED
+</pre><pre>
+
+  LGRP_RSRC_CPU (1)
+  LGRP_RSRC_MEM (1)
+  LGRP_CONTENT_ALL (1)
+  LGRP_LAT_CPU_TO_MEM(1)
+</pre><pre>
+
+  P_PID
+  P_LWPID
+  P_MYID
+</pre><p>(1) Available for versions API greater than 1.</p><h2 id="HErrorvalues"><span>Error values</span></h2><p>The functions in this module return <strong>undef</strong> or an empty list when an underlying library function fails. The <strong>$!</strong> is set to provide more information values for the error. The following error codes are possible:</p><dl><dt><strong>EINVAL</strong></dt><dd>&nbsp;The value supplied is not valid.</dd><dt><strong>ENOMEM</strong></dt><dd>&nbsp;There was not enough system memory to complete an operation.</dd><dt><strong>ESRCH</strong></dt><dd>&nbsp;The specified process or thread was not found.</dd><dt><strong>EPERM</strong></dt><dd>&nbsp;The effective user of the calling process does not have appropriate privileges, and its real or effective user ID does not match the real or effective user ID of one of the threads.</dd></dl><h2 id="HExportablefunctions"><span>Exportable functions</span></h2><p>The detailed description of each function follows. Since this module is intended to provide a Perl interface to the routines in <em>liblgrp(3LIB)</em>, a very short description is given for the corresponding functions in this module and a reference is given to the complete description in the <em>liblgrp(3LIB)</em> man pages. Any differences or additional functionality in the Perl module are highlighted and fully documented here.</p><dl><dt><strong>lgrp_init([LGRP_VIEW_CALLER | LGRP_VIEW_OS])</strong></dt><dd>&nbsp;The function initializes the lgroup interface and takes a snapshot of the lgroup hierarchy with the given view. Given the view, <!--startwikilink:#item_lgrp_init--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_init">lgrp_init()</a></span><!--stopwikilink--> returns a cookie representing this snapshot of the lgroup hierarchy. This cookie should be used with other routines in the lgroup interface needing the lgroup hierarchy. The <!--startwikilink:#item_lgrp_fini--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_fini">lgrp_fini()</a></span><!--stopwikilink--> function should be called with the cookie when it is no longer needed. Unlike <!--startwikilink:#lgrp_init__3lgrp_--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#lgrp_init__3lgrp_">lgrp_init (3LGRP)</a></span><!--stopwikilink-->, <!--startmacro:code|-||-|LGRP_VIEW_OS--><span class="box code"><tt class="wikimodel-verbatim">LGRP_VIEW_OS</tt></span><!--stopmacro--> is assumed as the default if no view is provided.<br/>:<br/>Upon successful completion, <!--startwikilink:#item_lgrp_init--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_init">lgrp_init()</a></span><!--stopwikilink--> returns a cookie. Otherwise it returns <strong>undef</strong> and sets <strong>$!</strong> to indicate the error.<br/>:<br/>See <!--startwikilink:#item_lgrp_init--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_init">lgrp_init(3LGRP)</a></span><!--stopwikilink--> for more information.</dd><dt><strong><!--startmacro:code|-||-|lgrp_fini($cookie)--><span class="box code"><tt class="wikimodel-verbatim">lgrp_fini($cookie)</tt></span><!--stopmacro--></strong></dt><dd>&nbsp;The function takes a cookie, frees the snapshot of the lgroup hierarchy created by <!--startwikilink:#item_lgrp_init--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_init">lgrp_init()</a></span><!--stopwikilink-->, and cleans up anything else set up by <!--startwikilink:#item_lgrp_init--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_init">lgrp_init()</a></span><!--stopwikilink-->. After this function is called, the cookie returned by the lgroup interface might no longer be valid and should not be used.<br/>:<br/>Upon successful completion, 1 is returned. Otherwise, <strong>undef</strong> is returned and <strong>$!</strong> is set to indicate the error.<br/>:<br/>See <!--startwikilink:#item_lgrp_fini--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_fini">lgrp_fini(3LGRP)</a></span><!--stopwikilink--> for more information.</dd><dt><strong><!--startmacro:code|-||-|lgrp_view($cookie)--><span class="box code"><tt class="wikimodel-verbatim">lgrp_view($cookie)</tt></span><!--stopmacro--></strong></dt><dd>&nbsp;The function takes a cookie representing the snapshot of the lgroup hierarchy and returns the snapshot's view of the lgroup hierarchy.<br/>:<br/>If the given view is <!--startmacro:code|-||-|LGRP_VIEW_CALLER--><span class="box code"><tt class="wikimodel-verbatim">LGRP_VIEW_CALLER</tt></span><!--stopmacro-->, the snapshot contains only the resources that are available to the caller (such as those with respect to processor sets). When the view is <!--startmacro:code|-||-|LGRP_VIEW_OS--><span class="box code"><tt class="wikimodel-verbatim">LGRP_VIEW_OS</tt></span><!--stopmacro-->, the snapshot contains what is available to the operating system.<br/>:<br/>Upon succesful completion, the function returns the view for the snapshot of the lgroup hierarchy represented by the given cookie. Otherwise, <strong>undef</strong> is returned and <!--startmacro:code|-||-|$!--><span class="box code"><tt class="wikimodel-verbatim">$!</tt></span><!--stopmacro--> is set.<br/>:<br/>See <!--startwikilink:#item_lgrp_view--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_view">lgrp_view(3LGRP)</a></span><!--stopwikilink--> for more information.</dd><dt><strong>lgrp_home($idtype, $id)</strong></dt><dd>&nbsp;Returns the home lgroup for the given process or thread. The $idtype argument should be <!--startmacro:code|-||-|P_PID--><span class="box code"><tt class="wikimodel-verbatim">P_PID</tt></span><!--stopmacro--> to specify a process and the <strong>$id</strong> argument should be its process id. Otherwise, the idtype argument should be <!--startmacro:code|-||-|P_LWPID--><span class="box code"><tt class="wikimodel-verbatim">P_LWPID</tt></span><!--stopmacro--> to specify a thread and the <strong>$id</strong> argument should be its LWP id. The value <!--startmacro:code|-||-|P_MYID--><span class="box code"><tt class="wikimodel-verbatim">P_MYID</tt></span><!--stopmacro--> can be used for the id argument to specify the current process or thread.<br/>:<br/>Upon successful completion, <!--startwikilink:#item_lgrp_home--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_home"><!--startmacro:code|-||-|lgrp_home()--><span class="box code"><tt class="wikimodel-verbatim">lgrp_home()</tt></span><!--stopmacro--></a></span><!--stopwikilink--> returns the id of the home lgroup of the specified process or thread. Otherwise, <strong>undef</strong> is returned and <strong>$!</strong> is set to indicate the error.<br/>:<br/>See <!--startwikilink:#item_lgrp_home--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_home">lgrp_home(3LGRP)</a></span><!--stopwikilink--> for more information.</dd><dt><strong><!--startmacro:code|-||-|lgrp_cookie_stale($cookie)--><span class="box code"><tt class="wikimodel-verbatim">lgrp_cookie_stale($cookie)</tt></span><!--stopmacro--></strong></dt><dd>&nbsp;Upon successful completion, the function returns whether the cookie is stale. Otherwise, it returns <strong>undef</strong> and sets <strong>$!</strong> errno to indicate the error.<br/>:<br/>The <!--startwikilink:#item_lgrp_cookie_stale--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_cookie_stale">lgrp_cookie_stale()</a></span><!--stopwikilink--> function will fail with <!--startwikilink:#item_einval--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_einval"><!--startmacro:code|-||-|EINVAL--><span class="box code"><tt class="wikimodel-verbatim">EINVAL</tt></span><!--stopmacro--></a></span><!--stopwikilink--> if the cookie is not valid.<br/>:<br/>See <!--startwikilink:#item_lgrp_cookie_stale--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_cookie_stale">lgrp_cookie_stale(3LGRP)</a></span><!--stopwikilink--> for more information.</dd><dt><strong>lgrp_cpus($cookie, $lgrp, $context)</strong></dt><dd>&nbsp;The function takes a cookie representing a snapshot of the lgroup hierarchy and returns the list of CPUs in the lgroup specified by $lgrp. The context argument should be set to one of the following values to specify whether the direct contents or everything in this lgroup including its children should be returned:</dd><dt><strong>LGRP_CONTENT_HIERARCHY</strong></dt><dd>&nbsp;Everything within this hierarchy.</dd><dt><strong>LGRP_CONTENT_DIRECT</strong></dt><dd>&nbsp;Directly contained in lgroup.<br/>When called in scalar context, <!--startwikilink:#item_lgrp_cpus--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_cpus">lgrp_cpus()</a></span><!--stopwikilink--> function returns the number of CPUs, contained in the specified lgroup.<br/>In case of error <strong>undef</strong> is returned in scalar context and <strong>$!</strong> is set to indicate the error. In list context the empty list is returned and <strong>$!</strong> is set.<br/>See <!--startwikilink:#item_lgrp_cpus--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_cpus">lgrp_cpus(3LGRP)</a></span><!--stopwikilink--> for more information.</dd><dt><strong>lgrp_children($cookie, $lgrp)</strong></dt><dd>&nbsp;The function takes a cookie representing a snapshot of the lgroup hierarchy and returns the list of lgroups that are children of the specified lgroup.<br/>:<br/>When called in scalar context, <!--startwikilink:#item_lgrp_children--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_children">lgrp_children()</a></span><!--stopwikilink--> function returns the number of children lgroups for the specified lgroup.<br/>:<br/>In case of error <strong>undef</strong> or empty list is returned and <strong>$!</strong> is set to indicate the error.<br/>:<br/>See <!--startwikilink:#item_lgrp_children--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_children">lgrp_children(3LGRP)</a></span><!--stopwikilink--> for more information.</dd><dt><strong>lgrp_parents($cookie, $lgrp)</strong></dt><dd>&nbsp;The function takes a cookie representing a snapshot of the lgroup hierarchy and returns the list of parent of the specified lgroup.<br/>:<br/>When called in scalar context, <!--startwikilink:#item_lgrp_parents--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_parents">lgrp_parents()</a></span><!--stopwikilink--> function returns the number of parent lgroups for the specified lgroup.<br/>:<br/>In case of error <strong>undef</strong> or empty list is returned and <strong>$!</strong> is set to indicate the error.<br/>:<br/>See <!--startwikilink:#item_lgrp_parents--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_parents">lgrp_parents(3LGRP)</a></span><!--stopwikilink--> for more information.</dd><dt><strong><!--startmacro:code|-||-|lgrp_nlgrps($cookie)--><span class="box code"><tt class="wikimodel-verbatim">lgrp_nlgrps($cookie)</tt></span><!--stopmacro--></strong></dt><dd>&nbsp;The function takes a cookie representing a snapshot of the lgroup hierarchy. It returns the number of lgroups in the hierarchy where the number is always at least one.<br/>:<br/>In case of error <strong>undef</strong> is returned and <strong>$!</strong> is set to EINVAL indicatng that the cookie is not valid.<br/>:<br/>See <!--startwikilink:#item_lgrp_nlgrps--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_nlgrps">lgrp_nlgrps(3LGRP)</a></span><!--stopwikilink--> for more information.</dd><dt><strong><!--startmacro:code|-||-|lgrp_root($cookie)--><span class="box code"><tt class="wikimodel-verbatim">lgrp_root($cookie)</tt></span><!--stopmacro--></strong></dt><dd>&nbsp;The function returns the root lgroup ID. In case of error <strong>undef</strong> is returned and <strong>$!</strong> is set to EINVAL indicatng that the cookie is not valid.<br/>:<br/>See <!--startwikilink:#item_lgrp_root--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_root">lgrp_root(3LGRP)</a></span><!--stopwikilink--> for more information.</dd><dt><strong>lgrp_mem_size($cookie, $lgrp, $type, $content)</strong></dt><dd>&nbsp;The function takes a cookie representing a snapshot of the lgroup hierarchy. The function returns the memory size of the given lgroup in bytes. The type argument should be set to one of the following values:</dd><dt><strong>LGRP_MEM_SZ_FREE</strong></dt><dd>&nbsp;Free memory.</dd><dt><strong>LGRP_MEM_SZ_INSTALLED</strong></dt><dd>&nbsp;Installed memory.<br/>The content argument should be set to one of the following values to specify whether the direct contents or everything in this lgroup including its children should be returned:</dd><dt><strong>LGRP_CONTENT_HIERARCHY</strong></dt><dd>&nbsp;Everything within this hierarchy.</dd><dt><strong>LGRP_CONTENT_DIRECT</strong></dt><dd>&nbsp;Directly contained in lgroup.<br/>The total sizes include all the memory in the lgroup including its children, while the others reflect only the memory contained directly in the given lgroup.<br/>Upon successful completion, the size in bytes is returned. Otherwise, <strong>undef</strong> is returned and <strong>$!</strong> is set to indicate the error.<br/>See <!--startwikilink:#item_lgrp_mem_size--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_mem_size">lgrp_mem_size(3LGRP)</a></span><!--stopwikilink--> for more information.</dd><dt><strong><!--startmacro:code|-||-|lgrp_version([VERSION])--><span class="box code"><tt class="wikimodel-verbatim">lgrp_version([VERSION])</tt></span><!--stopmacro--></strong></dt><dd>&nbsp;The function takes an interface version number, version, as an argument and returns an lgroup interface version. The version argument should be the value of <!--startmacro:code|-||-|LGRP_VER_CURRENT--><span class="box code"><tt class="wikimodel-verbatim">LGRP_VER_CURRENT</tt></span><!--stopmacro--> or <!--startmacro:code|-||-|LGRP_VER_NONE--><span class="box code"><tt class="wikimodel-verbatim">LGRP_VER_NONE</tt></span><!--stopmacro--> to find out the current lgroup interface version on the running system.<br/>:<br/>If version is still supported by the implementation, then <!--startwikilink:#item_lgrp_version--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_version">lgrp_version()</a></span><!--stopwikilink--> returns the requested version. If <!--startmacro:code|-||-|LGRP_VER_NONE--><span class="box code"><tt class="wikimodel-verbatim">LGRP_VER_NONE</tt></span><!--stopmacro--> is returned, the implementation cannot support the requested version. The application should be recompiled and might require further changes.<br/>:<br/>If version is <!--startmacro:code|-||-|LGRP_VER_NONE--><span class="box code"><tt class="wikimodel-verbatim">LGRP_VER_NONE</tt></span><!--stopmacro-->, <!--startwikilink:#item_lgrp_version--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_version">lgrp_version()</a></span><!--stopwikilink--> returns the current version of the library.<br/>:<br/>The following example tests whether the version of the interface used by the caller is supported:<br/>:</dd></dl><pre>
+    lgrp_version(LGRP_VER_CURRENT) == LGRP_VER_CURRENT or
+        die("Built with unsupported lgroup interface");
+</pre><p>:<br/>See <!--startwikilink:#item_lgrp_version--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_version">lgrp_version(3LGRP)</a></span><!--stopwikilink--> for more information.</p><dl><dt><strong>lgrp_affinity_set($idtype, $id, $lgrp, $affinity)</strong></dt><dd>&nbsp;The function sets of LWPs specified by the $idtype and $id arguments have for the given lgroup.<br/>:<br/>The function sets the affinity that the LWP or set of LWPs specified by $idtype and $id have for the given lgroup. The lgroup affinity can be set to <!--startwikilink:#item_lgrp_aff_strong--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_aff_strong"><!--startmacro:code|-||-|LGRP_AFF_STRONG--><span class="box code"><tt class="wikimodel-verbatim">LGRP_AFF_STRONG</tt></span><!--stopmacro--></a></span><!--stopwikilink-->, <!--startwikilink:#item_lgrp_aff_weak--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_aff_weak"><!--startmacro:code|-||-|LGRP_AFF_WEAK--><span class="box code"><tt class="wikimodel-verbatim">LGRP_AFF_WEAK</tt></span><!--stopmacro--></a></span><!--stopwikilink-->, or <!--startwikilink:#item_lgrp_aff_none--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_aff_none"><!--startmacro:code|-||-|LGRP_AFF_NONE--><span class="box code"><tt class="wikimodel-verbatim">LGRP_AFF_NONE</tt></span><!--stopmacro--></a></span><!--stopwikilink-->.<br/>:<br/>If the $idtype is <!--startmacro:code|-||-|P_PID--><span class="box code"><tt class="wikimodel-verbatim">P_PID</tt></span><!--stopmacro-->, the affinity is retrieved for one of the LWPs in the process or set for all the LWPs of the process with process id (PID) $id. The affinity is retrieved or set for the LWP of the current process with LWP id $id if idtype is <!--startmacro:code|-||-|P_LWPID--><span class="box code"><tt class="wikimodel-verbatim">P_LWPID</tt></span><!--stopmacro-->. If $id is <!--startmacro:code|-||-|P_MYID--><span class="box code"><tt class="wikimodel-verbatim">P_MYID</tt></span><!--stopmacro-->, then the current LWP or process is specified.<br/>:<br/>There are different levels of affinity that can be specified by a thread for a particuliar lgroup. The levels of affinity are the following from strongest to weakest:</dd><dt><strong>LGRP_AFF_STRONG</strong></dt><dd>&nbsp;Strong affinity.</dd><dt><strong>LGRP_AFF_WEAK</strong></dt><dd>&nbsp;Weak affinity.</dd><dt><strong>LGRP_AFF_NONE</strong></dt><dd>&nbsp;No affinity.<br/>Upon successful completion, <!--startwikilink:#item_lgrp_affinity_set--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_affinity_set">lgrp_affinity_set()</a></span><!--stopwikilink--> return 1. Otherwise, it returns <strong>undef</strong> and set <strong>$!</strong> to indicate the error.<br/>See <!--startwikilink:#item_lgrp_affinity_set--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_affinity_set">lgrp_affinity_set(3LGRP)</a></span><!--stopwikilink--> for more information.</dd><dt><strong>lgrp_affinity_get($idtype, $id, $lgrp)</strong></dt><dd>&nbsp;The function returns the affinity that the LWP has to a given lgrp. See <!--startwikilink:#item_lgrp_affinity_get--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_affinity_get">lgrp_affinity_get()</a></span><!--stopwikilink--> for detailed description.<br/>:<br/>See <!--startwikilink:#item_lgrp_affinity_get--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_affinity_get">lgrp_affinity_get(3LGRP)</a></span><!--stopwikilink--> for more information.</dd><dt><strong>lgrp_latency_cookie($cookie, $from, $to, [$between=LGRP_LAT_CPU_TO_MEM])</strong></dt><dd>&nbsp;The function takes a cookie representing a snapshot of the lgroup hierarchy and returns the latency value between a hardware resource in the $from lgroup to a hardware resource in the $to lgroup. If $from is the same lgroup as $to, the latency value within that lgroup is returned.<br/>:<br/>The optional <strong>between</strong> argument should be set to <!--startmacro:code|-||-|LGRP_LAT_CPU_TO_MEM--><span class="box code"><tt class="wikimodel-verbatim">LGRP_LAT_CPU_TO_MEM</tt></span><!--stopmacro--> to specify between which hardware resources the latency should be measured. Currently the only valid value is <!--startmacro:code|-||-|LGRP_LAT_CPU_TO_MEM--><span class="box code"><tt class="wikimodel-verbatim">LGRP_LAT_CPU_TO_MEM</tt></span><!--stopmacro--> which represents latency from CPU to memory.<br/>:<br/>Upon successful completion, <!--startwikilink:#item_lgrp_latency_cookie--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_latency_cookie"><!--startmacro:code|-||-|lgrp_latency_cookie()--><span class="box code"><tt class="wikimodel-verbatim">lgrp_latency_cookie()</tt></span><!--stopmacro--></a></span><!--stopwikilink--> return 1. Otherwise, it returns <strong>undef</strong> and set <strong>$!</strong> to indicate the error. For LGRP API version 1 the <!--startwikilink:#item_lgrp_latency_cookie--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_latency_cookie">lgrp_latency_cookie()</a></span><!--stopwikilink--> is an alias for <!--startwikilink:#item_lgrp_latency--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_latency">lgrp_latency()</a></span><!--stopwikilink-->.<br/>:<br/>See <!--startwikilink:#item_lgrp_latency_cookie--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_latency_cookie">lgrp_latency_cookie(3LGRP)</a></span><!--stopwikilink--> for more information.</dd><dt><strong>lgrp_latency($from, $to)</strong></dt><dd>&nbsp;The function is similiar to the <!--startwikilink:#item_lgrp_latency_cookie--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_latency_cookie">lgrp_latency_cookie()</a></span><!--stopwikilink--> function, but returns the latency between the given lgroups at the given instant in time. Since lgroups may be freed and reallocated, this function may not be able to provide a consistent answer across calls. For that reason, it is recommended that <!--startwikilink:#item_lgrp_latency_cookie--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_latency_cookie">lgrp_latency_cookie()</a></span><!--stopwikilink--> function be used in its place.<br/>:<br/>See <!--startwikilink:#item_lgrp_latency--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_latency">lgrp_latency(3LGRP)</a></span><!--stopwikilink--> for more information.</dd><dt><strong>lgrp_resources($cookie, $lgrp, $type)</strong></dt><dd>&nbsp;Return the list of lgroups directly containing resources of the specified type. The resources are represented by a set of lgroups in which each lgroup directly contains CPU and/or memory resources.<br/>:<br/>The type can be specified as</dd><dt><strong><!--startmacro:code|-||-|LGRP_RSRC_CPU--><span class="box code"><tt class="wikimodel-verbatim">LGRP_RSRC_CPU</tt></span><!--stopmacro--></strong></dt><dd>&nbsp;CPU resources</dd><dt><strong><!--startmacro:code|-||-|LGRP_RSRC_MEM--><span class="box code"><tt class="wikimodel-verbatim">LGRP_RSRC_MEM</tt></span><!--stopmacro--></strong></dt><dd>&nbsp;Memory resources<br/>In case of error <strong>undef</strong> or empty list is returned and <strong>$!</strong> is set to indicate the error.<br/>This function is only available for API version2 and will return <strong>undef</strong> or empty list for API version 1 and set $! to <!--startwikilink:#item_einval--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_einval"><!--startmacro:code|-||-|EINVAL--><span class="box code"><tt class="wikimodel-verbatim">EINVAL</tt></span><!--stopmacro--></a></span><!--stopwikilink-->.<br/>See <!--startwikilink:#item_lgrp_resources--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_resources"><!--startmacro:code|-||-|lgrp_resources(3LGRP)--><span class="box code"><tt class="wikimodel-verbatim">lgrp_resources(3LGRP)</tt></span><!--stopmacro--></a></span><!--stopwikilink--> for more information.</dd><dt><strong>lgrp_lgrps($cookie, [$lgrp])</strong></dt><dd>&nbsp;Returns list of all lgroups in a hierarchy starting from $lgrp. If $lgrp is not specified, uses the value of lgrp_root($cookie). Returns the empty list on failure.<br/>:<br/>When called in scalar context, returns the total number of lgroups in the system.</dd><dt><strong>lgrp_leaves($cookie, [$lgrp])</strong></dt><dd>&nbsp;Returns list of all leaf lgroups in a hierarchy starting from $lgrp. If $lgrp is not specified, uses the value of lgrp_root($cookie). Returns <strong>undef</strong> or empty list on failure.<br/>:<br/>When called in scalar context, returns the total number of leaf lgroups in the system.</dd><dt><strong>lgrp_isleaf($cookie, $lgrp)</strong></dt><dd>&nbsp;Returns <strong>True</strong> if $lgrp is leaf (has no children), <strong>False</strong> otherwise.</dd></dl><h2 id="HObjectMethods"><span>Object Methods</span></h2><dl><dt><strong><!--startmacro:code|-||-|new([$view])--><span class="box code"><tt class="wikimodel-verbatim">new([$view])</tt></span><!--stopmacro--></strong></dt><dd>&nbsp;Creates a new Sun::Solaris::Lgrp object. An optional argument is passed to <!--startwikilink:#item_lgrp_init--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_init">lgrp_init()</a></span><!--stopwikilink--> function. By default uses <!--startmacro:code|-||-|LGRP_VIEW_OS--><span class="box code"><tt class="wikimodel-verbatim">LGRP_VIEW_OS</tt></span><!--stopmacro-->.</dd><dt><strong><!--startmacro:code|-||-|cookie()--><span class="box code"><tt class="wikimodel-verbatim">cookie()</tt></span><!--stopmacro--></strong></dt><dd>&nbsp;Returns a transparent cookie that may be passed to functions accepting cookie.</dd><dt><strong><!--startmacro:code|-||-|version([$version])--><span class="box code"><tt class="wikimodel-verbatim">version([$version])</tt></span><!--stopmacro--></strong></dt><dd>&nbsp;Without the argument returns the current version of the <em>liblgrp(3LIB)</em> library. This is a wrapper for <!--startwikilink:#item_lgrp_version--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_version">lgrp_version()</a></span><!--stopwikilink--> with <!--startmacro:code|-||-|LGRP_VER_NONE--><span class="box code"><tt class="wikimodel-verbatim">LGRP_VER_NONE</tt></span><!--stopmacro--> as the default version argument.</dd><dt><strong><!--startmacro:code|-||-|stale()--><span class="box code"><tt class="wikimodel-verbatim">stale()</tt></span><!--stopmacro--></strong></dt><dd>&nbsp;Returns <strong>T</strong> if the lgroup information in the object is stale, <strong>F</strong> otherwise. It is a wrapper for <!--startwikilink:#item_lgrp_cookie_stale--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_cookie_stale">lgrp_cookie_stale()</a></span><!--stopwikilink-->.</dd><dt><strong><!--startmacro:code|-||-|view()--><span class="box code"><tt class="wikimodel-verbatim">view()</tt></span><!--stopmacro--></strong></dt><dd>&nbsp;Returns the snapshot's view of the lgroup hierarchy. It is a wrapper for <!--startwikilink:#item_lgrp_view--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_view">lgrp_view()</a></span><!--stopwikilink-->.</dd><dt><strong><!--startmacro:code|-||-|root()--><span class="box code"><tt class="wikimodel-verbatim">root()</tt></span><!--stopmacro--></strong></dt><dd>&nbsp;Returns the root lgroup. It is a wrapper for <!--startwikilink:#item_lgrp_root--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_root">lgrp_root()</a></span><!--stopwikilink-->.</dd><dt><strong><!--startmacro:code|-||-|children($lgrp)--><span class="box code"><tt class="wikimodel-verbatim">children($lgrp)</tt></span><!--stopmacro--></strong></dt><dd>&nbsp;Returns the list of lgroups that are children of the specified lgroup. This is a wrapper for <!--startwikilink:#item_lgrp_children--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_children">lgrp_children()</a></span><!--stopwikilink-->.</dd><dt><strong><!--startmacro:code|-||-|parents($lgrp)--><span class="box code"><tt class="wikimodel-verbatim">parents($lgrp)</tt></span><!--stopmacro--></strong></dt><dd>&nbsp;Returns the list of lgroups that are parents of the specified lgroup. This is a wrapper for <!--startwikilink:#item_lgrp_parents--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_parents">lgrp_parents()</a></span><!--stopwikilink-->.</dd><dt><strong><!--startmacro:code|-||-|nlgrps()--><span class="box code"><tt class="wikimodel-verbatim">nlgrps()</tt></span><!--stopmacro--></strong></dt><dd>&nbsp;Returns the number of lgroups in the hierarchy. This is a wrapper for <!--startwikilink:#item_lgrp_nlgrps--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_nlgrps">lgrp_nlgrps()</a></span><!--stopwikilink-->.</dd><dt><strong>mem_size($lgrp, $type, $content)</strong></dt><dd>&nbsp;Returns the memory size of the given lgroup in bytes. This is a wrapper for <!--startwikilink:#item_lgrp_mem_size--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_mem_size">lgrp_mem_size()</a></span><!--stopwikilink-->.</dd><dt><strong>cpus($lgrp, $context)</strong></dt><dd>&nbsp;Returns the list of CPUs in the lgroup specified by $lgrp. This is a wrapper for <!--startwikilink:#item_lgrp_cpus--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_cpus">lgrp_cpus()</a></span><!--stopwikilink-->.</dd><dt><strong>resources($lgrp, $type)</strong></dt><dd>&nbsp;Returns the list of lgroups directly containing resources of the specified type. This is a wrapper for <!--startwikilink:#item_lgrp_resources--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_resources">lgrp_resources()</a></span><!--stopwikilink-->.</dd><dt><strong>home($idtype, $id)</strong></dt><dd>&nbsp;Returns the home lgroup for the given process or thread. This is a wrapper for <!--startwikilink:#item_lgrp_home--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_home">lgrp_home()</a></span><!--stopwikilink-->.</dd><dt><strong>affinity_get($idtype, $id, $lgrp)</strong></dt><dd>&nbsp;Returns the affinity that the LWP has to a given lgrp. This is a wrapper for <!--startwikilink:#item_lgrp_affinity_get--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_affinity_get">lgrp_affinity_get()</a></span><!--stopwikilink-->.</dd><dt><strong>affinity_set($idtype, $id, $lgrp, $affinity)</strong></dt><dd>&nbsp;Sets of LWPs specified by the $idtype and $id arguments have for the given lgroup. This is a wrapper for <!--startwikilink:#item_lgrp_affinity_set--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_affinity_set">lgrp_affinity_set()</a></span><!--stopwikilink-->.</dd><dt><strong><!--startmacro:code|-||-|lgrps([$lgrp])--><span class="box code"><tt class="wikimodel-verbatim">lgrps([$lgrp])</tt></span><!--stopmacro--></strong></dt><dd>&nbsp;Returns list of all lgroups in a hierarchy starting from $lgrp (or the <!--startwikilink:#item_lgrp_root--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_root">lgrp_root()</a></span><!--stopwikilink--> if $lgrp is not specified). This is a wrapper for <!--startwikilink:#item_lgrp_lgrps--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_lgrps">lgrp_lgrps()</a></span><!--stopwikilink-->.</dd><dt><strong><!--startmacro:code|-||-|leaves([$lgrp])--><span class="box code"><tt class="wikimodel-verbatim">leaves([$lgrp])</tt></span><!--stopmacro--></strong></dt><dd>&nbsp;Returns list of all leaf lgroups in a hierarchy starting from $lgrp. If $lgrp is not specified, uses the value of lgrp_root(). This is a wrapper for <!--startwikilink:#item_lgrp_leaves--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_leaves">lgrp_leaves()</a></span><!--stopwikilink-->.</dd><dt><strong><!--startmacro:code|-||-|isleaf($lgrp)--><span class="box code"><tt class="wikimodel-verbatim">isleaf($lgrp)</tt></span><!--stopmacro--></strong></dt><dd>&nbsp;Returns <strong>True</strong> if $lgrp is leaf (has no children), <strong>False</strong> otherwise. This is a wrapper for <!--startwikilink:#item_lgrp_isleaf--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_isleaf">lgrp_isleaf()</a></span><!--stopwikilink-->.</dd><dt><strong>latency($from, $to)</strong></dt><dd>&nbsp;Returns the latency value between a hardware resource in the $from lgroup to a hardware resource in the $to lgroup. It will use <!--startwikilink:#item_lgrp_latency--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_latency">lgrp_latency()</a></span><!--stopwikilink--> for version 1 of <!--startmacro:code|-||-|liblgrp(3LIB)--><span class="box code"><tt class="wikimodel-verbatim">liblgrp(3LIB)</tt></span><!--stopmacro--> and <!--startwikilink:#item_lgrp_latency_cookie--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_latency_cookie">lgrp_latency_cookie()</a></span><!--stopwikilink--> for newer versions.</dd></dl><hr/><h1 id="HATTRIBUTES"><span>ATTRIBUTES</span></h1><p>See <em>attributes(5)</em> for descriptions of the following attributes:</p><pre>
+
+  {{{___________________________________________________________}}}
+
+ |       ATTRIBUTE TYPE        |       ATTRIBUTE VALUE       |
+ |{{{_____________________________}}}|{{{_____________________________}}}|
+ | Availability                | CPAN ([[http://www.cpan.org&gt;&gt;http://www.cpan.org]])  |
+ |{{{_____________________________}}}|{{{_____________________________}}}|
+ | Interface Stability         | Unstable                    |
+ |{{{_____________________________}}}|{{{_____________________________}}}|
+</pre><hr/><h1 id="HSEEALSO"><span>SEE ALSO</span></h1><p><em>liblgrp(3LIB)</em>, <!--startwikilink:#item_lgrp_affinity_get--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_affinity_get">lgrp_affinity_get(3LGRP)</a></span><!--stopwikilink-->, <!--startwikilink:#item_lgrp_affinity_set--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_affinity_set">lgrp_affinity_set(3LGRP)</a></span><!--stopwikilink-->, <!--startwikilink:#item_lgrp_children--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_children">lgrp_children(3LGRP)</a></span><!--stopwikilink-->, <!--startwikilink:#item_lgrp_cookie_stale--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_cookie_stale">lgrp_cookie_stale(3LGRP)</a></span><!--stopwikilink-->, <!--startwikilink:#item_lgrp_cpus--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_cpus">lgrp_cpus(3LGRP)</a></span><!--stopwikilink-->, <!--startwikilink:#item_lgrp_fini--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_fini">lgrp_fini(3LGRP)</a></span><!--stopwikilink-->, <!--startwikilink:#item_lgrp_home--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_home">lgrp_home(3LGRP)</a></span><!--stopwikilink-->, <!--startwikilink:#item_lgrp_init--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_init">lgrp_init(3LGRP)</a></span><!--stopwikilink-->, <!--startwikilink:#item_lgrp_latency--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_latency">lgrp_latency(3LGRP)</a></span><!--stopwikilink-->, <!--startwikilink:#item_lgrp_mem_size--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_mem_size">lgrp_mem_size(3LGRP)</a></span><!--stopwikilink-->, <!--startwikilink:#item_lgrp_nlgrps--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_nlgrps">lgrp_nlgrps(3LGRP)</a></span><!--stopwikilink-->, <!--startwikilink:#item_lgrp_parents--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_parents">lgrp_parents(3LGRP)</a></span><!--stopwikilink-->, <!--startwikilink:#item_lgrp_root--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_root">lgrp_root(3LGRP)</a></span><!--stopwikilink-->, <!--startwikilink:#item_lgrp_version--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_version">lgrp_version(3LGRP)</a></span><!--stopwikilink-->, <!--startwikilink:#item_lgrp_view--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_view">lgrp_view(3LGRP)</a></span><!--stopwikilink-->, <!--startwikilink:#item_lgrp_resources--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_resources">lgrp_resources(3LGRP)</a></span><!--stopwikilink-->, <!--startwikilink:#item_lgrp_latency_cookie--><span class="wikilink"><a href="/bin/view/Community+Group+performance/Lgrp_man#item_lgrp_latency_cookie">lgrp_latency_cookie(3LGRP)</a></span><!--stopwikilink-->, <em>attributes(5)</em></p><table><tr><td><strong>&#160;Sun::Solaris::Lgrp - Perl interface to Solaris liblgrp library.</strong></td></tr></table>
+</div>
+
+<div id="xwikidata" class="layoutsubsection">
+                          <div class="about">
+<span id="aboutauthor">last modified by admin</span>
+<span id="aboutdate">on 2009/10/26 12:10</span>
+</div>
+</div>  
+<div class="clearfloats"></div>
+</div>    </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded Search">
+<h5 class="xwikipaneltitle hidden" onclick="togglePanelVisibility(this.parentNode);">Search</h5>
+<div class="xwikipanelcontents">
+  <form action="/bin/view/Main/WebSearch">
+    <div id="globalsearch">
+      <input id="globalsearchinput" type="text" name="text" value="search..." size="15" onfocus="if (this.value == 'search...') value=''; this.select();" onblur="if (this.value == '') value='search...'; this.blur()"/>
+&nbsp;
+      <input class="button" value="Go" type="image" src="/skins/oso/go.png"/>
+    </div>
+  </form>
+</div>
+</div>
+                        <div class="panel expanded OSNav">
+<h5 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSNav','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSNav'); togglePanelVisibility(this.parentNode);">Collectives</h5>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavCommunity Group">
+            <div id="xwikinavCommunity GroupHeader" class="accordionTabTitleBar"><h6>Community Group</h6>
+            </div>
+            <div id="xwikinavCommunity GroupContent" class="accordionTabContentBox">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+edu/">Academic and Research</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+accessibility/">Accessibility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+advocacy/">Advocacy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+appliances/">Appliances</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+approachability/">Approachability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/">Architecture Process and Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+brandz/">BrandZ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+chinese_users/">Chinese Users</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/">Community Advisory Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+databases/">Databases</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+desktop/">Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/">Device Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+distribution/">Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+dtrace/">DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+emerging_platforms/">Emerging Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+fm/">Fault Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+games/">Games on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ha%2Dclusters/">HA Clusters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+hpcdev/">HPC Developer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+install/">Installation and Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+int_localization/">Internationalization and Localization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+laptop/">Laptop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ldoms/">Logical Domains</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+mdb/">Modular Debugger (MDB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/">Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+nfs/">NFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+observability/">Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ogb/">OpenSolaris Governing Board (OGB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+printing/">OpenSolaris Printing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/">OS/Net (ON)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/">Performance</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+pm/">Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+power_pc/">PowerPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/">Security</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+smf/">Service Management Facility (smf(5))</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sw%2Dporters/">Software Porters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+volume_manager/">Solaris Volume Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+storage/">Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sysadmin/">Systems Administration Community Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+testing/">Testing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/">Tools Home</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ufs/">Unix File Systems (UFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+web/">Website Community</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+x_win/">X Window System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+xen/">Xen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/">ZFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/">Zones</a></span></li>
+</ul>
+                                        </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavProject">
+            <div id="xwikinavProjectHeader" class="accordionTabTitleBar"><h6>Project</h6>
+            </div>
+            <div id="xwikinavProjectContent" class="accordionTabContentBox">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+adsl/">ADSL Modem Enhancement</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+arc%2Dprocess/">ARC Process Definition</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osarm/">ARM Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+adm/">Automatic Data Migration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bind/">BIND Update</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bluetooth/">Bluetooth Stack & Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dinitiator/">Brocade FC HBA &#45; Initiator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dtarget/">Brocade FC HBA &#45; Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brussels/">Brussels &#45; unified network link configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/">Caiman, Solaris Install Revisited</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+celeste/">Celeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cz/">Český portál</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/">Chime Visualization Tool for DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smbfs/">CIFS client for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cifs%2Dserver/">CIFS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+clearview/">Clearview: Network Interface Coherence</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dinformix/">Cluster Agent: Informix Dynamic Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dcontainer/">Cluster Agent: OpenSolaris Container</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dxvm/">Cluster Agent: OpenSolaris xVM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Debs/">Cluster Agent: Oracle E&#45;Business Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dpostgresql/">Cluster agent: PostgreSQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dsmb/">Cluster Agent: Samba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dtomcat/">Cluster Agent: Tomcat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cmt/">CMT</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+data%2Dflow/">Coarse Data Flow Parallelism</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+colorado/">Colorado: Open HA Cluster on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+commandassist/">Command Assistant</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cam/">Common Array Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+companion/">Companion &#45; /opt/sfw: Free and Open Source software</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/">COMSTAR: Common Multiprotocol SCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+content/">Content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+contest/">Contest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpufs/">CPU Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpg/">Credentials Process Groups</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crossbow/">Crossbow: Network Virtualization and Resource Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmsagenttoolkit/">Crypto KMS Agent Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/">Cryptographic Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dmm/">Data Migration Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+datatethers/">Data Tethers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+de/">Deutsches Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ddtool/">Device Detection Tool</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+driver%2Dutility/">Device Driver Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devicemgr/">Device Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devmapper/">Device Mapper</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dri/">Direct Rendering Infrastructure & 3D drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Ddoc/">DTrace Guide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/">Duckwater: Simplified name services management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+phpEasyTools/">Easy Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emancipation/">Emancipation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex/">Emulex Fibre Channel Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex-cna/">Emulex Advanced Ethernet Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+intel%2Dplatform/">Enable/Enhance Solaris support for Intel Platform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webcams/">Enhance the support of USB webcams</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Dprofiles/">Enhanced SMF Profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+amd/">Enhancements for AMD&#45;based Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+erlang%2Ddtrace/">Erlang DTrace Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ethbridge/">Ethernet bridge module for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+conary%2Deval/">Evaluate Conary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+events%2Dregistry/">Events Registry</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ext3/">Ext3 file system support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkgbase/">F/OSS Package Base</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+facilitation/">Facilitation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fcoe/">Fibre Channel over Ethernet</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fgap/">Fine Grained Access Policy (FGAP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fingerprint%2Dauthentication/">Fingerprint Authentication</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fmac/">Flexible Mandatory Access Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+forensics/">Forensic Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fox/">Fully Open X Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fuse/">Fuse on Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gcore/">gcore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+generic%2Dmca/">Generic Machine Check Architecture Improvements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+summerofcode/">Google SOC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Djboss/">HA&#45;JBoss</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dmysql/">HA&#45;MySQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livehadoop/">Hadoop Live CD</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hitachi/">Hitachi</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+honeycomb/">HoneyComb Fixed Content Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hpc%2Dstack/">HPC Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/">Image Packaging System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+perfmib/">Improved Performance MIB</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/">Indiana</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+awards/">Innovation Awards</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/">Input Method</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+intelgraphics/">Intel Graphics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ikev2/">Internet Key Exchange, version 2</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+irm/">Interrupt Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ip%2Drefactor/">IP Datapath Refactoring</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ipoib/">IP over Infiniband</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tref/">IPsec Tunnel Reform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iser/">iSCSI Extensions for Remote DMA (iSER)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isns/">iSNS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jeos/">JeOS &#45; Just enough Operating System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jkstat/">JKstat &#45; a java binding for libkstat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jfs/">Journaled File System (JFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kde/">K Desktop Environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kerberos/">Kerberos</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kernel%2Dsockets/">Kernel Sockets</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kssl/">Kernel SSL Enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmf/">Key Management Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ksh93%2Dintegration/">Korn Shell 93 integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+txipsec/">Labeled IPsec</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+latencytop/">LatencyTOP</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+l2filter/">Layer 2 Filtering</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ldoms%2Dmgr/">LDoms Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lending/">Lending</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+libmicro/">libMicro &#45; portable microbenchmarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lld/">Link Layer Discovery</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livemedia/">Live Media: Technologies for distributions running from CD and other media</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+localedata/">Locale Data</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+loficc/">lofi compression and cryptography support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lx64/">lx64 brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mms/">Media Management System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mega_sas/">Mega_sas</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mx/">Mexico</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+milax/">MilaX minimal Live Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mips/">MIPS Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mozilla%2Ddtrace/">Mozilla DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohac%2Davs/">MRSL.NONsharedDevice</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+glossary/">Multi&#45;lingual Glossary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mpxio/">Multi&#45;pathing software (MPxIO)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+large%2Dsector/">Multiple disk sector size support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+multiple%2Ddoi/">Multiple DOI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+muskoka/">Muskoka: An open repository for OpenSolaris technical content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+navigator/">Navigator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nemo/">Nemo: A Framework for High&#45;Performance Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/">Network Auto&#45;Magic</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ndmp/">Network Data Management Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+net%2Dmib/">Network MIBs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npp/">Network Performance Projects</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nws/">Network Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ntp/">Network Time Protocol (NTP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nv%2Dg11n/">Nevada Globalization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+4over6/">New Design of 4over6 Mechanism Based on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsrdma/">NFS RDMA transport update and performance analysis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dzones/">NFS Server in non&#45;Global Zones</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsv41/">NFS version 4.1 pNFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dnamespace/">NFSv4 namespace extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nightingale/">Nightingale: Port Songbird to OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npiv/">NPort ID Virtualization (NPIV)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+numa/">NUMA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osd/">Object Storage Device (OSD) support for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohacge%2Dsbp/">OHACGE Script Based Plug&#45;in</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+onnv/">ON/Nevada (ONNV) Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opendev/">Open Development Infrastructure</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dutilities/">Open HA Cluster Utilities</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opensound/">Open Sound System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/">OpenGrok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cim%2Dserver/">OpenPegasus CIM Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+openrti/">OpenRTI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+busybox/">OpenSolaris Busybox</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/">OpenSolaris Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+es/">OpenSolaris Hispano</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+audit/">OpenSolaris Security Audit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/">OpenSolaris support for the QEMU processor emulator: host and guest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pef/">PEF: Packet Event Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+performance%2Dwrappers/">Performance Wrappers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkgfactory/">Pkgfactory</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pl/">Polski Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fr/">Portail Francophone</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+br/">Portal Brasil</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+portals/">Portals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmui/">Power Management Usability Interfaces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+presto/">Presto: Automatic Printing Configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmpsm/">Printable Many Page Solaris Manuals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+promise%2Dstorage/">Promise SuperTrak RAID HBA Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qlogic-cna/">QLogic Converged Network Adapter GLDv3 NIC Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+quagga/">Quagga Routing Protocol Suite Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+raidcfg/">RAID Configuration Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rbridges/">RBridge (IETF TRILL) support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rof/">RDMA Offload Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+reno/">Reno: Login Process Enhancements for Interop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/">Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+s10brand/">s10brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+samqfs/">SAM/QFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+scm%2Dmigration/">SCM Migration Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+srp/">SCSI RDMA Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sdcard%2Ddrivers/">SDcard Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sensors/">Sensor Abstraction Layer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dsip/">Session Initiation Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sfwnv/">SFW</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+shell/">Shell: bourne shell, korn shell, C shell, etc.</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sierra/">Sierra: Intel WiFi Chipsets Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+simplepanels/">Simple Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sm%2Dhba/">SM&#45;HBA Based SAS HBA Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Ddoc/">SMF Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iscsitgt/">Solaris iSCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/">Solaris PowerPC Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sourcejuicer/">SourceJuicer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/">Sparks: name service switch/nscd enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+squashfs/">Squashfs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+star/">Star integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starfish/">Starfish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starterkit/">Starter Kit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+storagepm/">Storage Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sst/">Sun Security Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+avs/">Sun StorageTek Availability Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ofuv/">Support for OpenFabrics User Verbs / API on OpenSolaris OS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/">Support gcc4/GCCfss in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+suspend%2Dresume/">Suspend/Resume</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+svr4_packaging/">SVR4 Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+systemz/">Systemz</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tamarack/">Tamarack: Removable Media Enhancements in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tesla/">Tesla: OpenSolaris Enhanced Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+test%2Ddev/">Test Development</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/">Tickless Kernel Architecture</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tipc/">TIPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+branding/">Trademarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tnipdb/">Trusted networking interface policy database for Trusted Extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tpm/">Trusted Platform Module support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+usecase/">Use Case</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+valex/">Validated Execution Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vconsole/">Virtual Console</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vnm/">Virtual Network Machines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/">Visual Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+visualization%2Dhpc/">Visualization for HPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+volo/">Volo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vrrp/">VRRP: Virtual Router Redundancy Protocol Implementation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vscan/">VSCAN service</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/">Web Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+website/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+winchester/">Winchester: Schema mapping and ID mapping for AD Interoperability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wusb/">Wireless USB Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wwan/">Wireless Wide Area Network</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x%2Dcons/">X Consolidation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x86gentopo/">x86 Generic FMA Topology Enumerator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xen%2Dgate/">Xen Gate</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xfce/">Xfce: A lightweight desktop environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfsboot/">ZFS Boot and Install</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfs%2Dcrypto/">ZFS on disk encryption support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonemgr/">Zone Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonestat/">Zone Statistics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ru/">Русский портал</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ar/">البوابة العربية</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+in/">भारतीय पोर्टल</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cn/">中国门户</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/">日本ポータル</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kr/">한국 포탈</a></span></li>
+</ul>
+                                        </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavUser Group">
+            <div id="xwikinavUser GroupHeader" class="accordionTabTitleBar"><h6>User Group</h6>
+            </div>
+            <div id="xwikinavUser GroupContent" class="accordionTabContentBox">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/User+Group+adl%2Dauosug/">Adelaide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+aosug/">Argentina</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+azosug/">Arizona</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+atl%2Dosug/">Atlanta</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bwosug/">Baltimore&#45;Washington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bosug/">Bangalore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bkkosug/">Bangkok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bdosug/">Bangladesh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfosug/">Brasilia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bjosug/">Beijing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+blmosug/">Bélem</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+brosug/">Berlin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bvrm%2Dosug/">Bhimavaram</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+btn%2Dosug/">Bloomington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+os_user_groups_amb/">Campus Ambassadors</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+crosug/">Capital Region</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cfosug/">Cardiff</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ceosug/">Ceara</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cltosug/">Charlotte</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cdosug/">Chengdu</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chennai/">Chennai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chmxosug/">Chihuahua</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+closug/">Chile</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cle%2Dosug/">Cleveland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+colosug/">Colombia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cmh%2Dosug/">Columbus</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ctosug/">Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+knp%2Duek/">Cracow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+czosug/">Czech</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfw%2Dosug/">Dallas/Ft. Worth</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dosug/">Danish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+deosug/">Delaware</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+eduosug/">Edinburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+egosug/">Egypt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fiosug/">Finland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+flosug/">Florida</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+frosug/">Front Range</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fzosug/">FuZhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+glug/">Great Lakes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+grosug/">Greece</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hzosug/">Hangzhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hi%2Dosug/">Hawaii</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hfosug/">HeFei</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hugs/">Houston</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hkosug/">Hong Kong</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hosug/">Hyderabad</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+idosug/">Indonesia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ie%2Dosug/">Irish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+iosug/">Israel</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+itl%2Dosug/">Italian</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jnosug/">Jinan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jogja-osug/">Jogja</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kbosug/">Kabul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kc%2Dosug/">Kansas City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+lavosug/">Latvia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+losug/">London</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madosug/">Madurai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mansug/">Manchester</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mssosug/">Mato Grosso</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+msosug/">Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mgosug/">Minas Gerais</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mnosug/">Minnesota</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mtlosug/">Montreal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mosug/">Moscow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mmosug/">Mumbai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mucosug/">Munich</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+neaosug/">NEA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nlosug/">Netherlands</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ne%2Dosug/">New England</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nycosug/">New York City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nzosug/">New Zealand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nit%2Dhamirpur%2Dosug/">NIT Hamirpur</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+norosug/">Noroeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nerosug/">Nuremberg-Erlangen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+okcosug/">Oklahoma City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ososug/">Osnabrück</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+peosug/">Peru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+paosug/">Philadelphia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+piaski%2Dosug/">Piaski</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ptosug/">Pittsburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+poaosug/">Porto Alegre</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+psosug/">Puget Sound</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+posug/">Pune</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+qosug/">Queensland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+riosug/">Rio de Janeiro</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rtp%2Dosug/">Research Triangle Park</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ro%2Dosug/">Romania</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ruosug/">Russia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+alamo%2Dosug/">San Antonio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sdosug/">San Diego</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sfosug/">San Francisco</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sampaosug/">São Paulo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+scosug/">Scottish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rs%2Dosug/">Serbia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+shosug/">Shanghai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szosug/">Shenzhen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svosug/">Silicon Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sgosug/">Singapore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+skosug/">Slovak</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+saosug/">South African</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+soctosug/">Southern Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+stl%2Dosug/">St. Louis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svgosug/">Stavanger</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+swosug/">Sweden</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chosug/">Switzerland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sosug/">Sydney</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szc%2Dosug/">Szczecin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+twosug/">Taiwan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ostug/">Tecum</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tvosug/">Thames Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tsug/">Tokyo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+torosug/">Toronto</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+trosug/">Trondheim</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+toss/">Tulsa</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tosug/">Turkey</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ufaosug/">Ufa</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+uaosug/">Ukraine</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+unimelb%2Dosug/">University of Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+valeosug/">Vale do Paraíba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vanosug/">Vancouver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vosug/">Venezuela</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wosug/">Welsh &#45; Cymru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wiosug/">Wisconsin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+xaosug/">Xi'an</a></span></li>
+</ul>
+                                        </div>
+        </div>
+    </div>
+</div><p/><p/>
+<script type="text/javascript">
+var obj = {div:'xwikinav',no:-1,height:250};
+var acc = createAccordion(obj);
+</script>
+</div>
+</div>
+                        <div class="panel expanded Subsites">
+<h5 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.Subsites','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.Subsites'); togglePanelVisibility(this.parentNode);">Subsites</h5>
+<div class="xwikipanelcontents">
+<span class="wikiexternallink"><a href="http://cr.opensolaris.org">Code Reviews</a></span><br/>
+<span class="wikiexternallink"><a href="http://repo.opensolaris.org">Code Repositories</a></span><br/>
+<span class="wikiexternallink"><a href="http://pkg.opensolaris.org">Package Search</a></span><br/>
+<span class="wikiexternallink"><a href="http://bugs.opensolaris.org">Bugster</a></span><br/>
+<span class="wikiexternallink"><a href="http://defect.opensolaris.org">Bugzilla</a></span><br/>
+<span class="wikiexternallink"><a href="http://test.opensolaris.org">Test Machines</a></span><br/>
+<span class="wikiexternallink"><a href="http://planet.opensolaris.org">Planet</a></span><br/>
+<span class="wikiexternallink"><a href="http://mail.opensolaris.org">Mailing Lists</a></span><br/>
+<span class="wikiexternallink"><a href="http://poll.opensolaris.org">Elections & Polls</a></span><br/>
+<span class="wikiexternallink"><a href="http://arc.opensolaris.org">ARC Case Logs</a></span><br/>
+<span class="wikiexternallink"><a href="http://jucr.opensolaris.org">Source Juicer</a></span><br/>
+<span class="wikiexternallink"><a href="http://pkgfactory.opensolaris.org">Package Factory</a></span><br/>
+<span class="wikiexternallink"><a href="http://auth.opensolaris.org">User Authentication</a></span><br/>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h5 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSDocs','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSDocs'); togglePanelVisibility(this.parentNode);">Community Group performance Pages</h5>
+<div class="xwikipanelcontents"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/filebench">FileBench</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/filebench_sample">Sample Comparison</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/gotchas">Gotchas</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/quick_start">Quick Start Guide to FileBench</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/libmicro">libMicro</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/libmicro_sample">Sample Comparison</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/numa">OpenSolaris  NUMA project</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/8opteron">8 CPU chip Opteron</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/latency">Improved Latency Discovery</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/load_balancing">Load Balancing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/observability">Observability</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/roles">Roles and Grants</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/technical_docs">Technical Documents</a></span></li>
+</ul>
+            </div>
+</div>
+                        
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+  <div id="xwikilicence">&copy; Sun Microsystems Inc. 2009</div>
+          <div id="xwikiplatformversion">XWiki Enterprise 1.8.2.19075 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div> 
+    <div><a href="/bin/view/Main/tou">Terms Of Use</a> |
+         <a href="http://www.sun.com/privacy/">Privacy</a> | 
+         <a href="/bin/view/Main/trademark">Trademarks</a> |
+         <a href="/bin/view/Main/copyrights">Copyright Policy</a> |
+         <a href="/bin/view/Main/site_guidelines">Site Guidelines</a> |
+         <a href="/bin/view/Main/site%2Dmap">Site map</a> |
+         <a href="/bin/view/Main/help">Help</a></div>
+    <div>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.</div>
+<hr/>
+</div>
+
+</div></div></body>
+</html>

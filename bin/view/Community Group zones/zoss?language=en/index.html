@@ -1,0 +1,1945 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>zones on shared storage proposal (Community Group zones.zoss) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Community+Group+zones/zoss" />
+                                <meta name="document" content="Community Group zones.zoss"/>
+    <meta name="space" content="Community Group zones"/>
+    <meta name="page" content="zoss"/>
+    <meta name="version" content="2.1"/>
+                    <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="zones on shared storage proposal" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="edp" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                <!-- com.xpn.xwiki.plugin.skinx.LinkExtensionPlugin -->
+    <link href="/bin/skin/skins/colibri/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript" src="/resources/js/xwiki/suggest/ajaxSuggest.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Community Group zones";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes" ];
+window.docviewurl = "/bin/view/Community+Group+zones/zoss";
+window.docediturl = "/bin/edit/Community+Group+zones/zoss";
+window.docsaveurl = "/bin/save/Community+Group+zones/zoss";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js'></script><script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js'></script><script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js'></script><script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js'></script>
+
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/compatibility.js"></script>
+
+  </head>
+        <body id="body" class="xwiki viewbody hideright">
+  <div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+<div id="menuview">
+  <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div class="topmenuentry " id="tmLogin"><a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FCommunity%2BGroup%2Bzones%2Fzoss%3Flanguage%3Den"><strong>Log-in</strong></a></div>
+  </div>
+<div class="leftmenu">
+  <div class="topmenuentry hasIcon" id="tmWiki"><a class="tme" href="/bin/view/Main/"><strong>xwiki</strong></a></div>
+  <div class="topmenuentry hasIcon" id="tmSpace"><a class="tme" href="/bin/view/Community+Group+zones/"><strong>Community Group zones</strong></a></div>
+
+<div class="topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmSubSites">
+<span class="tme-extensible"><a class="tme"><strong>Subsites</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="http://cr.opensolaris.org/" id="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth">Auth</a></span>
+</span></div>
+
+
+</div>
+</div>
+
+</div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+
+  <div id="company">
+  <div id="companylogo">
+    <a href="/bin/view/Main/" title="Home" rel="home">
+    <img src="/skins/colibri/logo.png" alt="Wiki Logo"/>
+    </a>
+  </div>   </div> 
+  <div id="Iconbar">
+    <a id="CollectivesIcon" href="/bin/view/Main/collectives">Collectives</a>
+    <a id="DiscussionsIcon" href="/bin/view/Main/discussions">Discussions</a>
+    <a id="DocumentationIcon" href="/bin/view/Main/documentation">Documentation</a>
+    <a id="DownloadIcon" href="/bin/view/Main/downloads">Download</a>
+    <a id="SourceBrowserIcon" href="http://src.opensolaris.org">Source Browser</a>
+  </div>
+  <div class="clearfloats"></div>
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/WebSearch">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+   <div id="hierarchy">
+                <a href='/bin/view/Community+Group+zones/zones_design_docs'>Zones Project Documents</a> <span class='separator'>&raquo;</span> <a href='/bin/view/Community+Group+zones/zoss'>zones on shared storage proposal</a>
+      </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Community+Group+zones/zoss?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+  <div id="contentmenu" class="actionmenu">
+  <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div class="topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmExport">
+<span class="tme-extensible"><a class="tme"><strong>Export</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Community+Group+zones/zoss?format=pdf&amp;language=en" id="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+zones/zoss?format=rtf&amp;language=en" id="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+zones/zoss?format=html&amp;language=en" id="tmExportHtml">Export as HTML</a></span>
+  </span></div>
+
+<div class="topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmShow">
+<span class="tme-extensible"><a class="tme" href="/bin/view/Community+Group+zones/zoss?viewer=code&amp;language=en"><strong>View</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Community+Group+zones/zoss?viewer=comments&amp;language=en" id="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+zones/zoss?viewer=attachments&amp;language=en" id="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+zones/zoss?viewer=history&amp;language=en" id="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+zones/zoss?viewer=information&amp;language=en" id="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+zones/zoss?viewer=code&amp;language=en" id="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div class="topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmMoreActions">
+<span class="tme-extensible"><a class="tme"><strong>More actions</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Community+Group+zones/zoss?xpage=print&amp;language=en" id="tmPrintPreview">Print preview</a></span>
+    </span></div>
+  </div>
+
+
+  </div>
+  <div id="mainContentArea">
+      
+
+
+<div id="document-title"><h1>zones on shared storage proposal</h1></div>
+                            <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<pre>
+
+" please ensure that the vim modeline option is not disabled
+vim:textwidth=72
+
+-------------------------------------------------------------------------------
+Zones on shared storage (v1.3)
+
+
+----------
+A. INTRODUCTION
+
+The most commonly requested zones feature is support for the NFS server
+within a zone (4964859).  The next two most requested zones features are
+support for hosting zones on shared storage, specifically NFS and iSCSI.
+These last two requests are being tracked via the following bugs:
+
+	6688400 Want zonepath on iscsi targets
+	4963321 RFE: hosting root filesystems for Zones on NFS servers
+
+This document proposed a plan to address the latter two issues.  These
+proposed changes will also start to bring the zones storage
+administration closer in line with the experience provided by other
+virtualization technologies (VTs, examples of which are xVM, LDOMs, and
+VirtualBox).
+
+
+----------
+B. BACKGROUND
+
+Currently, it is possible to combine existing supported technologies
+(FC, iSCSI, NFS, lofi, zfs, etc) to host zones on shared storage, and
+there are a few blog entries out there describing how to create such
+configurations[00].  While these configurations are usable and
+technically supportable, they require extensive configuration of
+multiple different technologies, making them complex, potentially
+fragile (since they are not regularly tested), and out of reach for most
+customers.
+
+Creating these configurations today also causes problems with the use of
+other existing zones features, the most obvious of which is zone
+migration.  These configurations complicate zone migration because all
+of the additional global zone configuration that was required to host
+the zone on shared storage must be tracked and then migrated along with
+the zone data itself.  VM Migration is critical component of all
+existing VTs and anything that can be done to improve zone migration
+support would be a great benefit to zones administrators.
+
+All the other virtualization technologies currently available in Solaris
+support the hosting of Virtual Machines (VMs) on shared storage.  They
+all do this in the same fashion, which involves taking a "storage
+object"[01] which is accessible from the "global zone"[02], and making
+it visible within the VM as a local disk.  In this document we're refer
+to this process as "encapsulation", since the "disk" which a VM thinks
+it's accessing is actually contained (ie encapsulated) within some
+storage object in the global zone.
+
+This encapsulation has advantages and disadvantages.  Encapsulation
+makes it easier to manage the storage associated with VMs.  These
+storage objects may be accessible from multiple hosts simultaneously.
+They can be backed up, restored, moved around, and copied as individual
+files instead of filesystems.  One disadvantage of the encapsulation
+used by these other VTs is that currently on Solaris, there is no way to
+open up these encapsulated disks and access their contents from the
+global zone.  Currently, the only way to access these encapsulated disks
+is to import them into a running VM.
+
+Another interesting development with these encapsulated disks used by
+other VTs is the proliferation of storage object formats.  These custom
+storage objects formats allows for features which are transparent to the
+VM using the disks and independent of any features offered by the
+underlying global zone.  While specific feature sets may vary, common
+features that may be supported are things like compression, sparseness,
+dedup, snapshotting, and rollback.  Management of all these storage
+object features is usually done from the global zone.  Examples of some
+of these different formats are:
+
+	VDI - VirtualBox Virtual HDD
+	VHD - Microsoft Virtual Hard Disk
+	VMDK - VMWare Virtual Machine Disk
+
+These formats are also commonly used for moving and sharing VM images,
+and it's not uncommon for users to take VMs encapsulated in one format
+and convert them into another.
+
+
+----------
+C. PROPOSAL / DESCRIPTION
+
+The essence of this proposal is to enhance zonecfg(1m) to allow for the
+specification of shared storage objects which can be used to encapsulate
+zone filesystems, including the zones root filesystem.  Once shared
+storage objects are specified in zonecfg(1m) the management of this
+shared storage will be handled automatically by the zones framework.
+This will allow administrators to host zones on shared storage with no
+additional system configuration being required outside of zonecfg(1m).
+It will also provide zones with a consistent global zone storage usage
+and administration experience compared with other VTs.  All the existing
+zoneadm(1m) operations that administrators can do today should continue
+to work seamlessly with this new support for shared storage objects.
+
+The proposal is broken down into the following subsections:
+	C.0 Out of scope
+	C.1 Zones enhancements
+	C.2 Storage object uid/gid handling
+	C.3 Taskq enhancements
+	C.4 Zfs enhancements
+	C.5 Lofi and lofiadm(1m) enhancements
+	C.6 Performance considerations
+	C.7 Phased delivery
+	C.8 Future work
+
+
+----------
+C.0 Out of scope
+
+Before discussing the details of the changes being proposed, here are
+the things this proposal will not address:
+
+- Hosting zones natively on NFS.  We will not be considering
+  enhancements which would allow zone roots to live natively (ie,
+  unencapsulated) on NFS.  Supporting this functionality is not prevented
+  by anything proposed herein, but initially we are not pursuing this
+  option because:
+
+	- Encapsulation allows us to host zones on a myriad of storage
+	  in addition to NFS.
+	- Encapsulation brings the zones storage feature set closer in
+	  line with other VTs.
+	- Encapsulation will likely be easier to implement than
+	  unencapsulated hosting of a zone root filesystems on NFS.
+
+- Advanced shared storage configuration.  Initially there will be no
+  support for advanced shared storage configuration options.  If
+  advanced configuration options need to be used, they will need to be
+  setup in the global zone outside the zones framework.  That said,
+  nothing in this proposal should prevent us from adding support for
+  more complex configurations in the future, should they become popular.
+  Some examples of what would be considered advanced shared storage
+  configuration options are (and this is by no means a complete list):
+
+	- iSCSI target discovery management
+	- iSCSI target parameter configuration (CHAP, etc)
+	- custom vdisk creation options
+	- encapsulated zpools spanning multiple storage objects
+	- custom zpool/zfs creation options
+
+
+----------
+C.1 Zones enhancements
+
+This is a list of proposed enhancements to specific zones subsystems.
+It is broken down into the following categories:
+	C.1.i    Zonecfg(1m)
+	C.1.ii   Storage object uri (so-uri) format
+	C.1.iii  Zoneadm(1m) install
+	C.1.iv   Zoneadm(1m) attach
+	C.1.v    Zoneadm(1m) boot
+	C.1.vi   Zoneadm(1m) detach
+	C.1.vii  Zoneadm(1m) uninstall
+	C.1.viii Zoneadm(1m) clone
+	C.1.ix   Zoneadm(1m) move
+	C.1.x    Zonecfg(1m) misc changes
+
+
+----------
+C.1.i Zonecfg(1m)
+
+The zonecfg(1m) command will be enhanced with the following two new
+resources and associated properties:
+
+	rootzpool				resource
+		src				resource property
+		install-size			resource property
+		zpool-preserve			resource property
+		dataset				resource property
+		user				resource property
+
+	zpool					resource
+		src				resource property
+		install-size			resource property
+		zpool-preserve			resource property
+		name				resource property
+		user				resource property
+
+The new resource and properties will be defined as follows:
+
+"rootzpool"
+    - Status: Optional.
+    - Description: Identifies a shared storage object (and it's
+	associated parameters) which will be used to contain the root zfs
+	filesystem for a zone.  Only one "rootzpool" may be defined
+	per zone.
+
+"zpool"
+    - Status: Optional.
+    - Description: Identifies a shared storage object (and it's
+	associated parameters) which will be made available to the
+	zone as a delegated zfs dataset.  Multiple "zpool" resources
+	may be defined per zone.
+
+"src"
+    - Status: Required.
+    - Format: Storage object uri (so-uri).  (See definition below.)
+    - Description: Identifies the storage object associated with this
+	resource.
+
+"install-size"
+    - Status: Optional.
+    - Format: Integer.  Defaults to bytes, but can be flagged as
+	gigabytes, kilobytes, or megabytes, with a g, k, or m suffix,
+	respectively.
+    - Description: If the specified storage object doesn't exist at zone
+	install time it will be created with this specific size.  This
+	property has no effect for storage objects which already exist and
+	have a pre-defined size.
+
+"zpool-preserve"
+    - Status: Optional.
+    - Format: Boolean.  Defaults to false.
+    - Description: When doing an install, if this property if this
+	property is set to true and a zpool already exists on the
+	specified storage object it will be used.  When doing a destroy,
+	if this property is set to true, the root zpool will not be
+	destroyed.
+
+"dataset"
+    - Status: Optional
+    - Format: zfs filesystem name component (can't contain a '/')
+    - Description: Name of a dataset within the root zpool to delegate
+	to the zone.
+
+"name"
+    - Status: Required
+    - Format: zfs filesystem name component (can't contain a '/')
+    - Description: Used as part of the name for a zpool which will be
+	delegated to the zone.
+
+"user"
+    - Status: Optional
+    - Format: User name string
+    - Description: User name to use when accessing a path:// or nfs:// based
+	storage object.
+
+Zonecfg(1m) "verify" will verify the syntax of any "rootzpool" resource
+group (and its properties), but it will NOT verify the accessibility of
+any storage specified by by a so-uri.  (This is because accessing the
+storage specified by an so-uri could require configuration changes to
+other subsystems.)
+
+These new resources should provide zone administrators with lots of
+flexibility when it comes to deploying zones on shared storage.  Some of
+the likely zone deployment models that are envisioned and enabled by
+this proposal are:
+
+- A zone with an encapsulated "rootzpool" zpool.  In this scenario the
+  OS will be stored in the "rootzpool", and all non-OS software and data
+  will also be stored in datasets which are descendent from the zone root
+  dataset.  This means that system operations which snapshot and clone the
+  OS will also snapshot and clone non-OS software and data.
+
+- A zone with an encapsulated "rootzpool" zpool and a "dataset" defined
+  within the "rootzpool".  In this scenario, the OS will be stored in in
+  the "rootzpool", and all non-OS software and data will be stored within
+  "dataset", which is also contained within the "rootzpool", but is not a
+  direct descendent of any zone root dataset.  This means that system
+  operations which snapshot and clone the OS will not affect non-OS
+  software and data.
+
+- A zone with an encapsulated "rootzpool" and one or more encapsulated
+  "zpool"s.  In this scenario, the OS will be stored in in the
+  "rootzpool", and all non-OS software and data will be stored within
+  other "zpool"s.  This means that system operations which snapshot and
+  clone the OS will not affect non-OS software and data.
+
+More information about these new resources and how they will be managed
+by the zones framework is available below.
+
+
+----------
+C.1.ii Storage object uri (so-uri) format
+
+The storage object uri (so-uri) syntax[03] will conform to the standard
+uri format defined in RFC 3986 [04].  The nfs URI scheme is defined in
+RFC 2224 [05].  The so-uri syntax can be summarised as follows:
+
+File and vdisk storage objects:
+
+    path:///&lt;file-absolute&gt;
+    nfs://&lt;host&gt;[:port]/&lt;file-absolute&gt;
+
+Device storage objects:
+
+    path:///dev/&lt;file-absolute&gt;
+    fc:///wwn[@&lt;lun&gt;]
+    iscsi:///alias=&lt;alias&gt;[@&lt;lun&gt;]
+    iscsi:///target=&lt;target&gt;[@&lt;lun&gt;]
+    iscsi://host[:port]/[tpgt=&lt;tpgt&gt;/]target=&lt;target&gt;[@&lt;lun&gt;]
+
+File storage objects point to plain files on a local, nfs, or cifs
+filesystems.  These files are used to contain zpools which store zone
+datasets.  These are the simplest types of storage objects.  Once
+created, they have a fixed size, can't be grown, and don't support
+advanced features like snapshotting, etc.  Some example file so-uris
+are:
+
+path:///export/xvm/vm1.disk
+	- a local file
+path:///net/heaped.sfbay/export/xvm/1.disk
+	- a nfs file accessible via autofs
+nfs://heaped.sfbay/export/xvm/1.disk
+	- same file specified directly via a nfs so-uri
+
+Vdisk storage objects are similar to file storage objects in that they
+can live on local, nfs, or cifs filesystems, but they each have their
+own special data format and varying feature sets, with support for things
+like snapshotting, etc..  Some common vdisk formats are: VDI, VMDK and
+VHD.  Some example vdisk so-uris are:
+
+path:///export/xvm/vm1.vmdk
+	- a local vdisk image directory
+path:///net/heaped.sfbay/export/xvm/1.vmdk
+	- a nfs vdisk image directory accessible via autofs
+nfs://heaped.sfbay/export/xvm/1.vmdk
+	- same vdisk image directory specified directly via a nfs so-uri
+
+Device storage objects specify block storage devices in a host
+independent fashion.  Some /dev device names may already be named in a
+host independent fashion.  In this case the admin can simply specify the
+/dev device path for this device as the so-uri.  When configuring FC or
+iscsi storage on different hosts, the storage configuration normally
+lives outside of zonecfg, and the configured storage may have varying
+/dev/dsk/cXtXdX* names.  In these cases, the so-uri syntax provides a
+way to specify storage in a host independent fashion, and during zone
+management operations, the zones framework can map this storage to a
+host specific device path.  Some example device so-uris are:
+
+path:///dev/vx/dsk/zone1/rootvol
+	- a Veritas volume that is accessible from multiple hosts using the
+	  same name
+fc:///20000014c347492a@0
+	- lun 0 of a fc disk with the specified wwn
+iscsi:///alias=oracle zone root@0
+	- lun 0 of an iscsi disk with the specified alias.
+iscsi:///target=iqn.1986-03.com.sun:02:38abfd16-78c5-c58e-e629-ea77a33c6740
+	- lun 0 of an iscsi disk with the specified target id.
+
+
+----------
+C.1.iii Zoneadm(1m) install
+
+When a zone is installed via the zoneadm(1m) "install" subcommand, the
+zones subsystem will first verify that any required so-uris exist and
+are accessible.
+
+If an so-uri points to a plain file (or a file on an nfs server), and
+the file object does not exist, the object will be created with the
+install-size that was specified via zonecfg(1m).  If the so-uri does not
+exist and an install-size was not specified via zonecfg(1m) an error
+will be generated and the install will fail.
+
+If the so-uri points to a vdisk, the vdisk must have been previously
+created using vdiskadm(1m).
+
+If an so-uri points to an explicit nfs server, the zones framework will
+need to mount the nfs filesystem containing storage object.  The nfs
+server share containing the specified object will be mounted at:
+
+	/var/zones/nfsmount/&lt;host&gt;/&lt;nfs-share-name&gt;
+
+If an so-uri points to a fibre channel lun, the zones subsystem will
+verify that the specified wwn corresponds to a global zone accessible
+fibre channel disk device.
+
+If an so-uri points to an iSCSI target or alias, the zones subsystem
+will verify that the iSCSI device is accessible on the local system.  If
+an so-uri points to a static iSCSI target and that target is not
+already accessible on the local host, then the zones subsystem will
+enable static discovery for the local iSCSI initiator and attempt to
+apply the specified static iSCSI configuration.  If the iSCSI target
+device is not accessible then the install will fail.
+
+Once a zones install has verified that any required so-uri exists and is
+accessible, the zones subsystem will need to initialise the so-uri.  In
+the case of a path or nfs path, this will involve creating a zpool
+within the specified file.  In the case of a vdisk, fibre channel lun,
+or iSCSI lun, this will involve creating a EFI/GPT partition on the
+device which uses the entire disk, then a zpool will be created within
+this partition.  For data protection purposes, if a storage object
+contains any pre-existing partitions, zpools, or ufs filesystems, the
+install will fail with an appropriate error message.  To continue the
+installation and overwrite any pre-existing data, the user will be able
+to specify a new '-f' option to zoneadm(1m) install.  (This option
+mimics the '-f' option used by zpool(1m) create.)
+
+If zpool-preserve is set to true, then before initialising any target
+storage objects, the zones subsystem will attempt to import a
+pre-existing zpool from those objects.  This will allow users to
+pre-create a zpool with custom creation time options, for use with
+zones.  To successfully import a pre-created zpool for a zone install,
+that zpool must not be attached.  (Ie, any pre-created zpool must be
+exported from the system where it was created before a zone can be
+installed on it.)  Once the zpool is imported the install process will
+check for the existence of a /ROOT filesystem within the zpool.  If this
+filesystem exists the install will fail with an appropriate error
+message.  To continue the installation the user will need to specify the
+'-f' option to zoneadm(1m) install, which will cause the zones framework
+to delete the pre-existing /ROOT filesystem within the zpool.  (This is
+done because during install the zones root filesystem will be created
+under /ROOT.  See [07] of more details.)
+
+The newly created or imported root zpool will be named after the zone to
+which it is associated, with the assigned name being "&lt;zonename&gt;_rpool".
+This zpool will then be mounted on the zones zonepath and then the
+install process will continue normally[07].
+
+XXX: use altroot at zpool creation or just manually mount zpool?
+
+If the user has specified a "zpool" resource, then the zones framework
+will configure, initialize, and/or import it in a similar manner to a
+zpool specified by the "rootzpool" resource.  The key differences are
+that the name of the newly created or imported zpool will be
+"&lt;zonename&gt;_&lt;name&gt;".  The specified zpool will also have the zfs "zoned"
+property set to "on", hence it will not be mounted anywhere in the
+global zone.
+
+XXX: do we need "zpool import -O file-system-property=" to set the
+     zoned property upon import.
+
+Once a zone configured with a so-uri is in the installed state, the
+zones framework needs a mechanism to mark that storage as in use to
+prevent it from being accessed by multiple hosts simultaneously.  The
+most likely situation where this could happen is via a zoneadm(1m)
+attach on a remote host.  The easiest way to achieve this is to keep the
+zpools associated with the storage imported at all times, and leverage
+the existing zpool support for detecting and preventing multi-host
+access.
+
+So whenever a global zone boots and the zones smf service runs, it will
+attempt to configure and import any shared storage objects associated
+with installed zones.  It will then continue to behave as it does today
+and boot any installed zones that have the autoboot property set.  If
+any shared storage objects fail to configure or import, then:
+
+- the zones associated with the failed storage will be transitioned
+  to the "configured" state.
+- an error message will be emitted to the zones smf log file.
+- after booting any remaining installed zones that have autoboot set
+  to true, the zones smf service will enter the "maintenance" state,
+  there by prompting the administrator to look at the zones smf log
+  file.
+
+After fixing any problems with shared storage accessibility, the
+admin should be able to simply re-attach the zone to the system.
+
+Currently the zones smf service is dependent upon multi-user-server, so
+all networking services required for access to shared storage should be
+properly configured well before we try to import any shared storage
+associated with zones.
+
+On system shutdown, the zones system will NOT export zpools contained
+within storage object used by the zone.  Zpools contained within storage
+objects assigned to installed zones will only be exported during zone
+detach.  More details about the behaviour of zone detach is provided
+below.
+
+
+----------
+C.1.iv Zoneadm(1m) attach
+
+The zoneadm(1m) attach operation moves a zone from the configured to the
+installed state.  This operation will behave similarly to to a
+zoneadm(1m) install wrt so-uri management.  One key difference between
+attach and install is that during an attach, any missing storage objects
+will not be automatically created and instead the attach will fail.
+Once all the storage objects associated with an attaching zone are
+configured and accessible, the attach operation will attempt to import
+and mount the zpools contained within those storage objects.  If zfs
+detects that any zpools are in use by another host the attach will fail.
+A new '-f' option will be added to zoneadm(1m) which will allow the user
+to force import and mount any zpools which appear to still be in use.
+(once again, this option mimics the '-f' option used by zpool(1m)
+import.)
+
+Currently, when a zone is attached to a system a software inventory
+check is done to verify that the contents of the zone are in sync with
+the global zone.  If they are then the zone is successfully attached.
+If the contents are older than what is present in the global zone, then
+the attach fails unless the user specifies the "-u" update option.  If
+the contents of the zone are newer than what is in the global zone then
+the attach will fail.  Encapsulated zones within zpools changes the
+behaviour of attach slightly because if the zone was created on a host
+with newer global zone bits, it's possible that the zpool/zfs filesystem
+versions associated with that zpool may be newer than what the host
+supports.  If this is the case we will be unable to import the zone to
+check it's software contents.  In practice this is not a problem because
+we know that if the zpool/zfs versions used by an encapsulated zone are
+later than that supported by the global zone, the software contents of
+that zone are also guaranteed to be later than what we have in our
+global zone, so the attach would fail regardless.  In the case of older
+zpool/zfs encapsulated zpool versions, these can be imported without a
+problem and the version numbers will remain unchanged by the attach
+operation.
+
+
+----------
+C.1.v Zoneadm(1m) boot
+
+The "dataset" property within a "rootzpool" is designed to provide a
+convenient mechanism for zones to store data within the root zpool, but
+outside of the /ROOT filesystem (which is subject to snapshotting and
+cloning during boot environment management operations).  To keep things
+simple, the dataset property can only specify a single path component.
+(ie, it can not contain any '/' characters.)  If the user has specified
+the "dataset" property for a "rootzpool" resource, then when the zone is
+booted the framework will check for the presence of a zfs filesystem
+named /dataset/&lt;dataset&gt; within the root zpool.  If no such filesystem
+exists it will be created.  If this zfs filesystem is created by the
+zones framework, it will have the zfs mountpoint property set to none.
+This filesystem will then be be delegated to the zone as if a
+zonecfg(1m) "dataset" resource with a name property value set to
+"&lt;zonename&gt;_rpool/dataset/&lt;dataset&gt;" existed.
+
+For example, if an admin wanted to configure a zone contained within a
+single storage object, but still have a separate dataset where they can
+manage snapshots and clones of their data independently of their root
+filesystem and software, then they could create a configuration as
+follows:
+
+---8&lt;---
+zonecfg -z ibis
+...
+add rootzpool
+set src=iscsi:///alias=ibis zone@0
+set dataset=oracle_data
+end
+---8&lt;---
+
+once this zone was booted, the zone would have access to the following
+zfs dataset: ibis_rpool/dataset/oracle_data, and it could mount,
+snapshot, and clone this dataset.  All independently of any zone ROOT
+dataset snapshots and clones created by system management tools,
+image-updates, etc.
+
+If a zone has any "zpool" resources specified, when the zone is booted
+those zpools will be delegated to the zone.
+
+
+----------
+C.1.vi Zoneadm(1m) detach
+
+The zoneadm(1m) detach operation will be enhanced so that when detaching
+a zone from a system, any zpools residing in storage objects associated
+with the detaching zone will be exported.  This will allow the
+administrator to attach the zone on another host without having to
+specify the force flag ('-f') to zoneadm(1m) attach.  Also, if any
+static iSCSI storage objects are associated with the zone, the iSCSI
+initiator configuration for those targets will be removed.  (Although
+iSCSI initiator static discovery will remain enabled.)
+
+
+----------
+C.1.vii Zoneadm(1m) uninstall
+
+If a user initiates a zoneadm(1m) uninstall operation, then for each
+zpool specified via a "rootzpool" or "zpool" resource, if the
+"zpool-preserve" property is set to false, the zpool contained within
+the specified storage object will be destroyed.  If the "zpool-preserve"
+property is set to true, then for a "rootzpool" resource only the /ROOT
+filesystem (and any of it's descendents) within the root zpool will be
+destroyed, and then all the zones zpools will be exported.
+
+After destroying or exporting the zpool, any associated storage object
+will be unconfigured as described in the zoneadm(1m) detach section
+above.
+
+
+----------
+C.1.viii Zoneadm(1m) clone
+
+Normally when cloning a zone which lives on a zfs filesystem the zones
+framework will take a zfs(1m) snapshot of the source zone and then do a
+zfs(1m) clone operation to create a filesystem for the new zone which is
+being instantiated.  This works well when all the zones on a given
+system live on local storage in a single zfs filesystem, but this model
+doesn't work well for zones with encapsulated roots.  First, with
+encapsulated roots each zone has it's own zpool, and zfs(1m) does not
+support cloning across zpools.  Second, zfs(1m) snapshotting/cloning
+within the source zpool and then mounting the resultant filesystem onto
+the target zones zoneroot would introduce dependencies between zones,
+complicating things like zone migration.
+
+Hence, for cloning operations, if the source zone has an encapsulated
+root, zoneadm(1m) will not use zfs(1m) snapshot/clone.  Currently
+zoneadm(1m) will fall back to the use of find+cpio to clone zones if it
+is unable to use zfs(1m) snapshot/clone.  We could just fall back to
+this default behaviour for encapsulated root zones, but find+cpio are
+not error free and can have problem with large files.  So we propose to
+update zoneadm(1m) clone to detect when both the source and target zones
+are using separate zfs filesystems, and in that case attempt to use zfs
+send/recv before falling back to find+cpio.
+
+Today, the zoneadm(1m) clone operations ignores any additional storage
+(specified via the "fs", "device", or "dataset" resources) that may be
+associated with the zone.  Similarly, the clone operation will ignore
+additional storage associated with any "zpool" resources.
+
+Since zoneadm(1m) clone will be enhanced to support cloning between
+encapsulated root zones and un-encapsulated root zones, zoneadm(1m)
+clone will be documented as the recommended migration mechanism for
+users who which to migrate existing zones from one format to another.
+
+
+----------
+C.1.ix Zoneadm(1m) move
+
+Since an installed zone with a "rootzpool" resource will have zfs
+datasets mounted on it's zonepath, the zoneadm(1m) move subcommand will
+have to handle unmounting and remounting the "rootzpool" in the process
+of doing the move operation.
+
+
+----------
+C.1.x Zonecfg(1m) misc changes
+
+Currently renaming of a zone is done via zonecfg(1m) by setting the
+zonename property to the new desired zone name.  This operation can be
+done while the zone is in the "configured" or "installed" state.  This
+presents a problem for installed zones which have a "rootzpool" or
+"zpool" resource, since these zones zones have associated zpools and the
+names of these zpools are dependent upon the zone's name.  Hence,
+zonecfg(1m) will need to be modified to prevent the renaming of
+installed installed zones which have a "rootzpool" or "zpool" resource.
+zonecfg(1m).  To rename these zones, the administrator will need to
+detach the zone via zoneadm(1m), rename it via zonecfg(1m), and
+subsequently re-attach the zone via zoneadm(1m).
+
+Another non-obvious impact upon zonecfg(1m) operation is that since
+"rootzpool" or "zpool" resource are only configured during zone install
+and attach, it will not be possible to add, remove, or modify
+"rootzpool" or "zpool" resource for an installed zone.  Once again, to
+change these resources the admin will need to detach and re-attach the
+zone.
+
+
+----------
+C.2 Storage object uid/gid handling
+
+One issue faced by all VTs that support shared storage is dealing with
+file access permissions of storage objects accessible via NFS.  This
+issue doesn't affect device based shared storage, or local files and
+vdisks, since these types of storage are always accessible, regardless
+of the uid of the access process (as long as the accessing process has
+the necessary privileges).  But when accessing files and vdisk via NFS,
+the accessing process can not use privileges to circumvent restrictive
+file access permissions.  This issue is also complicated by the fact
+that by default most NFS server will map all accesses by remote root
+user to a different uid, usually "nobody".  (a process known as "root
+squashing".)
+
+We propose multiple mechanisms for avoiding problems caused by root
+squashing.
+
+If the optional storage object "user" parameter has been specified, then
+the zones framework will assume the uid of the specified user when
+attempting to create or access the storage object via nfs.  The "user"
+parameter overrides all the other uid handling mechanism described
+below.
+
+If a file or vdisk storage object exists on an nfs server, the framework
+will temporarily switch its uid and gid to match the owner and group of
+the file/vdisk and ensure that the object is readable and writable by
+it's owner (updating the permissions if necessary)
+
+If a file storage object doesn't exist on an nfs server, the framework
+will temporarily switch it's uid and gid to match the owner and group of
+the last path element in the storage object that does exist.  It will
+then ensure that the last path component is writable by it's owner
+(updating the permissions if necessary) and create the subsequent path
+elements (with permissions 0600 for files and 0700 for directories).
+
+Finally, if a storage object doesn't exist and the framework attempts to
+create that object (as described above), only to discover that the
+subsequently created objects uid doesn't match the current uid, then the
+framework will destroy the object and generate an error indicating that
+root-squashing has been detected.  The user can resolve this error
+multiple ways: by disabling root-squashing, by specifying a "user"
+parameter, or by changing the ownership of the directory which will
+contain the storage objects.
+
+
+----------
+C.3 Taskq enhancements
+
+The integration of Duckhorn[08] greatly simplifies the management of cpu
+resources assigned to zone.  This management is partially implemented
+through the use of dynamic resource pools, where zones and their
+associated cpu resources can both be bound to a pool.
+
+Internally, zfs has worker threads associated with each zpool.  These
+are kernel taskq threads which can run on any cpu which has not been
+explicitly allocated to a cpu set/partition/pool.
+
+So today, for any zones living on zfs filesystems, and running in a
+dedicated cpu pool, any zfs disk processing associated with that zone is
+not done by the cpus bound to that zones pool.  Essentially all the
+zones zfs processing is done for "free" by the global zone.
+
+With the introduction of zpools encapsulated within storage objects,
+which are themselves associated with specific zones, it would be
+desirable to have the zpool worker threads bound to the cpus currently
+allocated to the zone.  Currently, zfs uses taskq threads for each
+zpool, so one way of doing this would be to introduce a mechanism that
+allows for the binding of taskqs to pools.
+
+Hence we propose the following new interfaces:
+	zfs_poolbind(char *, poolid_t);
+	taskq_poolbind(taskq_t, poolid_t);
+
+When a zone, which is bound to a pool, is booted, the zones framework
+will call zfs_poolbind() for each zpool associated with an encapsulated
+storage object bound to the zone being booted.
+
+Zfs will in turn use the new taskq pool binding interfaces to bind all
+it's taskqs to the specified pools.  This mapping is transient and zfs
+will not record or persist this binding in any way.
+
+The taskq implementation will be enhanced to allow for binding worker
+threads to a specific pool.  If taskqs threads are created for a taskq
+which is bound to a specific pool, those new thread will also inherit
+the same pool bindings.  The taskq to pool binding will remain in effect
+until the taskq is explicitly rebound or the pool to which it is bound
+is destroyed.
+
+
+----------
+C.4 Zfs enhancements
+
+In addition to the zfs_poolbind() interface proposed above.  The
+zpool(1m) "import" command will need to be enhanced.  Currently the
+zpool(1m) import by default scans all storage devices on the system
+looking for pools to import.  The caller can also use the '-d' option to
+specify a directory within which the zpool(1m) command will scan for
+zpools that may be imported.  This scanning involves sampling many
+objects.  When dealing with zpools encapsulated in storage objects, this
+scanning is unnecessary since we already know the path to the objects
+which contains the zpool.  Hence, the '-d' option will be enhanced to
+allow for the specification of a file or device.  The user will also be
+able to specify this option multiple times, in case the zpool spans
+multiple objects.
+
+
+----------
+C.5 Lofi and lofiadm(1m) enhancements
+
+Currently, there is no way for a global zone to access the contents of a
+vdisk.  Vdisk support was first introduced in VirtualBox.  xVM then
+adopted the VirtualBox code for vdisk support.  With both technologies,
+the only way to access the contents of a vdisk is to export it to a VM.
+
+To allow zones to use vdisk devices we propose to leverage the code
+introduced by by xVM by incorporating it into lofi.  This will allow any
+solaris system to access the contents of vdisk devices.  The interface
+changes to lofi to allow for this are fairly straightforward.
+
+A new '-l' option will be added to the lofiadm(1m) "-a" device creation
+mode.  The '-l' option will indicate to lofi that the new device should
+have a label associated with it.  Normally lofi device are named
+/dev/lofi/&lt;I&gt; and /dev/rlofi/&lt;I&gt;, where &lt;I&gt; is the lofi device number.
+When a disk device has a label associated with it, it exports many
+device nodes with different names.  Therefore lofi will need to be
+enhanced to support these new device names, which multiple nodes
+per device.  These new names will be:
+
+	/dev/lofi/dsk&lt;I&gt;/p&lt;j&gt;		- block device partitions
+	/dev/lofi/dsk&lt;I&gt;/s&lt;j&gt;		- block device slices
+	/dev/rlofi/dsk&lt;I&gt;/p&lt;j&gt;		- char device partitions
+	/dev/rlofi/dsk&lt;I&gt;/s&lt;j&gt;		- char device slices
+
+Lofi will also be enhanced to support accessing vdisks in addition to
+normal files.  Accessing a vdisk via lofi will be no different from
+accessing a disk encapsulated within a file as described above with the
+-l option.  The lofi '-a' option will be enhanced to allow for the
+automatic detection of vdisk targets on the lofi command line.  Since
+all vdisks represent actual disks they all contain a partition/label
+data, hence when if a vdisk is detected on the command line, the '-l'
+flag is automatically implied.  The vdisk formats that will be supported
+by lofi are whatever vdisk formats happen to be supported by xVM at the
+time of integration.  Since the implementation between lofi and xVM will
+be shared, as new vdisk format support is added to xVM, it should be
+immediately supportable via lofi as well.  In many cases, vdisk formats
+may provide their own management features such as snapshotting,
+compression, encryption, etc.  As such, the lofi vdisk support exists
+purely to access the contents of vdisks.  Hence, vdisk based lofi
+devices will not support other lofi options such as encryption ('-c')
+and compression ('-C' / '-U').
+
+The current xVM implementation for accessing vdisks involves two drivers
+and a userland utility.  A "frontend" driver runs inside a VM and it
+exports normal solaris disk interface.  It takes IO requests to these
+disks and transmits them, via a ring buffer, to the "backend" driver
+running in the global zone.  The backend driver then maps these ring
+requests into a dedicated vdisk process (there is one such process for
+every vdisk), and this process translates these ring requests into
+access to a vdisk of the requested format.  Given all this existing xVM
+functionality, the most straightforward way to support vdisk from within
+lofi would be to leverage the xVM implementation.  This will involve
+re-factoring the existing xVM code, thereby allowing lofi to utilise
+the "frontend" code which translates strategy io requests into ring
+buffer requests, and also the "backend" code which exports the ring
+buffer to userland.  The unchanged xVM userland vdisk utility can then
+be used to map ring buffer requests to the actual vdisk storage.
+Currently this utility is only available on x86, but since lofi is a
+cross-platform utility, this proposal will require the delivery of this
+utility on both sparc and x86.  This utility is currently delivered in
+an xVM private directory, /usr/lib/xen/bin/vdisk.  Given that lofi is a
+more general and cross platform utility as compared to xVM, and also
+given that that we don't expect users to access the vdisk management
+utilities directly, we propose to move the vdisk application to
+/usr/lib/lofi/bin/vdisk.
+
+For RAS purposes, we will need to ensure that this vdisk utility is
+always running.  Hence we will introduce a new lofi smf service
+svc:/system/lofi:default, which will start a new /usr/lib/lofi/lofid
+daemon, which will manage the starting, stopping, monitoring, and
+possible re-start of the vdisk utility.  Re-starts of vdisk utility
+should be transparent (aside from a short performance hiccup) to any
+zones accessing those vdisks.  By default this service will be disabled.
+If a lofi vdisk device is created, this service will be temporarily
+enabled.  When the last vdisk based lofi device is destroyed, this
+service will disable itself.
+
+XXX: what to do about disk geometry assignment?  sigh.
+
+Here's some examples of how this lofi functionality could be used
+(outside of the zone framework).
+
+If an admin wanted to access a disk embedded within a plain file then
+they could run the following command:
+	lofiadm -a -l /export/xvm/vm1.disk
+
+If an admin wanted to access a vdisk (which always implicitly has a disk
+embedded within it) they could run the following command:
+	lofiadm -a /export/xvm/vm1.vmdk
+
+In both the examples above, if there were no previously configured
+lofi devices on the system, the following new lofi devices would
+be created:
+	/dev/lofi/dsk0/p#		- for # == 0 - 4
+	/dev/lofi/dsk0/s#		- for # == 0 - 15
+	/dev/rlofi/dsk0/p#		- for # == 0 - 4
+	/dev/rlofi/dsk0/s#		- for # == 0 - 15
+
+By default, format(1m) will not list these devices in it's output.  But
+users will be able to treat these devices like regular disks and pass
+their names to utilities like fdisk(1m), format(1m), prtvtoc(1m),
+fmthard(1m), zpool(1m), etc.
+
+----------
+C.6 Performance considerations
+
+As previously mentioned, this proposal primarily simplifies the process
+of configuring zones on shared storage.  In most cases these proposed
+configurations can be created today, but no one has actually verified
+that these configurations perform acceptably.  Hence, in conjunction
+with providing functionality to simplify the setup of these configs,
+we also need to be quantifying their performance to make sure that
+none of the configurations suffer from gross performance problems.
+
+The most straightforward configurations, with the least possibilities
+for poor performance, are ones using local devices, fibre channel luns,
+and iSCSI luns.  These configuration should perform identically to the
+configurations where the global zone uses these objects to host zfs
+filesystems without zones.  Additionally, the performance of these
+configurations will mostly be dependent upon the hardware associated
+with the storage devices.  Hence the performance of these configuration
+is for the most part uninteresting and performance analysis of these
+configuration can by skipped.
+
+Looking at the performance of storage objects which are local files or
+nfs files is more interesting.  In these cases the zpool that hosts the
+zone will be accessing it's storage via the zpool vdev_file vdev_ops_t
+interface.  Currently, this interface doesn't receive as much use and
+performance testing as some of the other zpool vdev_ops_t interfaces.
+Hence it will worthwhile to measure the performance of a zpool backed by
+a file within another zfs filesystem.  Likewise we will want to measure
+the performance of a zpool backed by a file on an NFS filesystem.
+Finally, we should compare these two performance points to a zone which
+is not encapsulated within a zpool, but is instead installed directly on
+a local zfs filesystem.  (These comparisons are not really that
+interesting when dealing with block device based storage objects.)  We
+will also want to determine if there are any specific NFS mount options
+that should be used which could affect performance, for example, should
+"forcedirectio" be enabled?
+
+Currently, while it is very common to deploy large numbers of zfs
+filesystems, systems with large numbers of zpools are not very common.
+The solution proposed in this project will likely result in an increase
+of zpools on systems hosting zones.  Hence, we should evaluate the
+impact of an increasing number of zpools on performance scalability.
+This could be done by comparing the io performance drop-off of an
+increasing number of zones hosted multiple zfs filesystems in a single
+zpool vs zones hosted in separate zpools.
+
+Finally, it will be important to do performance measurements for vdisk
+configurations.  These configurations are similar to the local file or
+nfs configurations, but they will be utilising the vdev_disk backend and
+they will have an additional layer of indirection through lofi.
+
+XXX: impact of multiple zpools on arc and l2 arc?  talk to mark maybee.
+
+
+----------
+C.7 Phased delivery
+
+Customers have been asking for a simple mechanisms to allow hosting of
+zones on NFS since the introduction of zones.  Hence we'd like to get
+this functionality into the hands of customers as quickly as possible.
+Also, the approach taken by this proposal to supporting zones on shared
+storage is different from what was originally anticipated, hence we'd
+like to get practical experience with this approach at customer sites
+asap to determine if there are situations where this approach may not
+meet their requires.  To accelerate the delivery of the previously
+proposed features, we plan to deliver them in three phases:
+
+
+I - Basic Zone encapsulation support
+
+This will involve the introduction of the new "rootzpool" and "zpool"
+resources and support the "file" and "nfs" type storage objects.  It
+will require implementation of all the proposed zone, zfs, and taskq
+changes.  This phase will not require any lofi changes.
+
+
+II - Zone encapsulation on fc and iSCSI storage.
+
+This will provide enhanced so-uri support for fibre channel and iSCSI
+type storage objects.
+
+
+III - Zone encapsulation on vdisk storage.
+
+This will involve implementation of the proposed lofi enhancements and
+enhancement support for vdisk type storage objects.
+
+
+----------
+C.8 Future work
+
+In addition to the proposed work above, there are future enhancements
+that could be made which would extend the functionality proposed above.
+These are included here because the features proposed above have been
+designed with this extensibility in mind.
+
+One simple enhancement would be the addition a new "rootzpool/zpool"
+resource property called "zpool-auto-upgrade".  If set to true, whenever
+a zpool is imported by the zones framework (at install, attach, or boot)
+the zpool and zfs filesystems would be upgraded to the latest version
+supported by the global zone.  Aside from helping to ensure that zones
+are using the latest and greatest zpool/zfs features, this feature would
+help ensure that all the encapsulated zones on a system are running on
+the same zpool/zfs versions.  This is important because zfs send and
+receive are not guaranteed to be compatible across zpool/zfs versions.
+So by ensure that all zones are running the latest zpool/zfs versions,
+we increase the chances of being able to use zfs send/recv for zone
+cloning.
+
+Another possible enhancement to the "rootzpool/zpool" resources would be
+to allow the specification of multiple so-uris to support more complex
+root zpool configurations.
+
+With the introduction of vdisk support, we will have the ability to
+access VMs created by other VTs.  Using this functionality it would be
+straightforward to enhance the existing zoneadm(1m) attach p2v
+functionality to be able to do v2v, where the source system image for
+installing a zone could be a vdisk created by another VT.
+
+Finally, a new "storage" zonecfg(1m) resource could be added to allow
+for the addition of arbitrary storage objects to zones.  This "storage"
+resource would have the similar properties as a "zpool" resource, along
+with a few additional properties:
+
+	storage					resource
+		src				resource property
+		install-size			resource property
+		name				resource property
+		locking-required		resource property
+
+The zones framework would ensure that the specified storage objects were
+accessible from the global zone, and then it would grant the zone access
+to the raw disk devices.  But global zone disk device names can be
+different on different host, so if global zone device names were used
+within the non-global zone, this would negatively impact zone migration
+since the software within the zone would have to be updated to deal with
+potentially new device names.  To avoid this problems and facilitate
+zone migration, the disk devices would be mapped into the non-global
+zone with different names which would be global zone independent.
+Regardless of the global zone disk device name, from within the
+non-global zone, the devices would be named:
+
+	/dev/storage/&lt;name&gt;/p&lt;j&gt;
+	/dev/storage/&lt;name&gt;/s&lt;j&gt;
+
+By basing the names of the device as seen from within the zone on the
+"name" specified in the zonecfg(1m) (instead of the raw device names
+from the global zone), we can guarantee that these device names will not
+change when migrating the zones between hosts.
+
+One difficulty with allowing the specification of storage objects which
+don't by default contain a zpools is that we can no longer use zfs to
+ensure that multiple entities are not accessing these objects at the
+same time.  Hence other mechanisms will need to be used.  In the case of
+fibre channel and iSCSI, we should be able to use SCSI reservations.  In
+the case of file paths we should be able to use standard file locking.
+In the case of vdisks, some vdisks support meta-data which can be
+utilised to prevent concurrent access, and if a vdisk format does not
+allow for this then we will need to fall back to file locking.  If for
+some reason we are unable to do in use detection for a specific storage
+object, then we could alert the user and refuse to use that storage
+object unless the user set the optional "locking-required" property to
+false.
+
+
+----------
+D. INTERFACES
+
+Zonecfg(1m):
+	rootzpool				committed, resource
+		src				committed, resource property
+		install-size			committed, resource property
+		zpool-preserve			committed, resource property
+		dataset				committed, resource property
+
+	zpool					resource
+		src				resource property
+		install-size			resource property
+		zpool-preserve			resource property
+		name				resource property
+
+Zoneadm(1m):
+	install -f				committed, optional flag
+	attach -f				committed, optional flag
+
+Zones misc:
+	/var/zones/nfsmount/&lt;host&gt;/&lt;nfs-share-name&gt;
+						project private, nfs mount point
+
+Taskq pool binding:
+	taskq_poolbind(taskq_t, poolid_t)	consolidation private
+
+Zfs pool binding:
+	zfs_poolbind(char *, poolid_t)		consolidation private
+
+Lofiadm(1m):
+	-a -l					committed, optional flag
+	-a -v &lt;vdisk-format&gt;			committed, optional flag
+
+Lofi misc:
+	svc:/system/lofi:default		project private
+	/lib/lofi/lofid				project private
+	/lib/lofi/vdisk				consolidation private /w
+							contract for xVM
+
+
+----------
+E. ABBREVIATIONS
+
+VDI  - VirtualBox Virtual HDD
+VHD  - Microsoft Virtual Hard Disk
+VM   - Virtual Machine
+VMDK - VMWare Virtual Machine Disk
+VT   - Virtualization Technology
+
+
+----------
+F. FOOTNOTES / REFERENCES
+
+--
+00 - Blogs and emails describing custom configurations used to host
+    zones on shared storage:
+
+    June 2005
+    Containers on NFS?
+	http://blogs.sun.com/jph/entry/containers_on_nfs
+
+    February 2008
+    The quick &amp; dirty guide to zones on iSCSI LUNs
+	http://opensolaris.org/jive/thread.jspa?messageID=226951
+
+    April 2008
+    ZoiT: Solaris Zones on iSCSI Targets (aka NAC: Network-Attached Containers)
+	http://blogs.sun.com/JeffV/entry/zoit_solaris_zones_on_iscsi
+
+--
+01 - For the purposes of this document, the term storage object refers
+    to any device or file which can be used to store data.  These "objects"
+    can take the form of files on a local filesystem, files on a remote
+    filesystem accessible via NFS, CIFS, etc, local disk devices, FC disk
+    devices, iSCSI target devices,
+
+--
+02 - Each VT has a different name for the zones concept of the "global
+    zone".  With LDOMs we have the "control domain", with xVM we have
+    "dom0", with VirtualBox we have the "host domain".  For the purposes of
+    this document the "global zone" refers to the OS entity which allocates
+    resources to and has control over the state of VMs.  For simplicity,
+    this document will always just refer to the "global zone" in place of
+    all these other terms.
+
+--
+03 - Complete so-uri ABNF syntax definition:
+
+    so-uri		= path-uri
+			/ nfs-uri
+			/ vpath-uri
+			/ vnfs-uri
+			/ fc-uri
+			/ iscsi-uri
+
+    path-uri		= "path://" file-absolute
+    file-absolute	= "/" *( segment "/" ) segment-nz
+			; Since file-absolute is always the last component
+			; in a uri reserved characters do not need to be
+			; percent encoding.  To simplify path management
+			; we will also not permit '/./' or '/../' segments.
+
+    nfs-uri		= "nfs://" hostport "/" file-absolute
+			; Defined in RFC 2224 [05]
+
+    hostport		= host [ ":" port ]
+
+    vpath-uri		= "vpath://" file-absolute
+    vnfs-uri		= "vnfs://" host [ ":" port ] "/" file-absolute
+			; same syntax as nfs-uri
+
+    fc-uri		= "fc:/// wwn [ "@" lun ]
+    wwn			= 1000 12HEXDIG
+			/ 2 15HEXDIG
+			/ 50 14HEXDIG
+			/ 60 14HEXDIG
+			; see http://en.wikipedia.org/wiki/World_Wide_Name
+
+    iscsi-uri		= "iscsi:///" iscsi-alias
+			/ "iscsi:///" iscsi-target
+			/ "iscsi://" iscsi-static
+
+    iscsi-alias		= "alias=" iscsi-alias-name [ "@" lun ]
+    iscsi-alias-name	= 1*255pchar
+			; Defined in RFC 3720 [06]
+			; any "@" chars must be percent encoded
+
+    iscsi-target	= "target=" iscsi-target-iqn [ "@" lun ]
+			/ "target=" iscsi-target-eui [ "@" lun ]
+    iscsi-target-iqn	= "iqn." iqn-date "." reg-name [ ":" 1*pchar ]
+			; Defined in RFC 3720 [06]
+			; any "@" chars must be percent encoded
+    iqn-date		= 4DIGIT "-" "0" %x31-39	; "XXXX-01" - "XXXX-09"
+			/ 4DIGIT "-" "1" %x30-32	; "XXXX-10" - "XXXX-12"
+    iscsi-target-eui	= XXX
+			; Defined in RFC 3720 [06]
+			; any "@" chars must be percent encoded
+
+    iscsi-static	= hostport "/" [ "tpgt=" iscsi-tpgt "/" ] iscsi-target
+
+    iscsi-tpgt		= DIGIT				; 0-9
+			/ %x31-39 1*3DIGIT		; 10-9999
+			/ %x31-35 4DIGIT		; 10000-59999
+			/ "6"    %x30-34 3DIGIT		; 60000-64999
+			/ "65"   %x30-34 2DIGIT		; 65000-65499
+			/ "655"  %x30-32 1DIGIT		; 65500-65529
+			/ "6553" %x30-35		; 65530-65535
+
+    lun			= DIGIT				; 0-9
+			/ %x31-39 1*3DIGIT		; 10-9999
+			/ "1"    %x30-35 3DIGIT		; 10000-15999
+			/ "16"   %x30-32 2DIGIT		; 16000-16299
+			/ "163"  %x30-37 1DIGIT		; 16300-16379
+			/ "1638" %x30-33		; 16380-16383
+
+    DIGIT		= Defined in RFC 3986 [04]
+    HEXDIG		= Defined in RFC 3986 [04]
+    segment-nz		= Defined in RFC 3986 [04]
+    segment		= Defined in RFC 3986 [04]
+    host		= Defined in RFC 3986 [04]
+    port		= Defined in RFC 3986 [04]
+
+--
+04 - RFC 3986: Uniform Resource Identifier (URI): Generic Syntax
+    http://www.ietf.org/rfc/rfc3986.txt
+    http://www.websitedev.de/temp/rfc3986-check.html.gz
+
+--
+05 - RFC 2224 NFS URL Scheme
+    http://www.ietf.org/rfc/rfc2224.txt
+
+--
+06 - RFC 3720: Internet Small Computer Systems Interface (iSCSI)
+
+--
+07 - Zones/SNAP Design - 8/25/2008
+    http://www.opensolaris.org/jive/thread.jspa?messageID=272726&amp;#272726
+
+--
+08 - PSARC/2006/496 Improved Zones/RM Integration
+    http://arc.opensolaris.org/caselog/PSARC/2006/496
+
+
+-------------------------------------------------------------------------------
+</pre>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:11<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by edp on 2010/01/13 21:27
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+                </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSNav','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSNav'); togglePanelVisibility(this.parentNode);">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavCommunity Group">
+            <div id="xwikinavCommunity GroupHeader" class="accordionTabTitleBar"><h6>Community Group</h6>
+            </div>
+            <div id="xwikinavCommunity GroupContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+edu/">Academic and Research</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+accessibility/">Accessibility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+advocacy/">Advocacy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+appliances/">Appliances</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+approachability/">Approachability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/">Architecture Process and Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+brandz/">BrandZ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+chinese_users/">Chinese Users</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/">Community Advisory Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+dtrace/">DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+databases/">Databases</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+desktop/">Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/">Device Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+distribution/">Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+emerging_platforms/">Emerging Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+fm/">Fault Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+games/">Games on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ha%2Dclusters/">HA Clusters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+hpcdev/">HPC Developer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+install/">Installation and Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+int_localization/">Internationalization and Localization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+laptop/">Laptop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ldoms/">Logical Domains</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+mdb/">Modular Debugger (MDB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+nfs/">NFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/">Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/">OS/Net (ON)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+observability/">Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ogb/">OpenSolaris Governing Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+printing/">OpenSolaris Printing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/">Performance</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+pm/">Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+power_pc/">PowerPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/">Security</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+smf/">Service Management Facility (smf(5))</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sw%2Dporters/">Software Porters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+volume_manager/">Solaris Volume Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+storage/">Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sysadmin/">Systems Administration Community Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+testing/">Testing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/">Tools Home</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ufs/">Unix File Systems (UFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+web/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+x_win/">X Window System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+xen/">Xen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/">ZFS</a></span></li>
+<li><em class="underline"><em><span class="wikilink"><a href="/bin/view/Community+Group+zones/">Zones</a></span></em></em></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavProject">
+            <div id="xwikinavProjectHeader" class="accordionTabTitleBar"><h6>Project</h6>
+            </div>
+            <div id="xwikinavProjectContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><em class="underline"><em><span class="wikilink"><a href="/bin/view/Community+Group+zones/"></a></span></em></em></li>
+<li><span class="wikilink"><a href="/bin/view/Project+adsl/">ADSL Modem Enhancement</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+arc%2Dprocess/">ARC Process Definition</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osarm/">ARM Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bind/">BIND Update</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bluetooth/">Bluetooth Stack & Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dinitiator/">Brocade FC HBA &#45; Initiator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dtarget/">Brocade FC HBA &#45; Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brussels/">Brussels &#45; unified network link configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cifs%2Dserver/">CIFS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smbfs/">CIFS client for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cmt/">CMT</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/">COMSTAR: Common Multiprotocol SCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpufs/">CPU Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/">Caiman, Solaris Install Revisited</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+celeste/">Celeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/">Chime Visualization Tool for DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+clearview/">Clearview: Network Interface Coherence</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dinformix/">Cluster Agent: Informix Dynamic Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dcontainer/">Cluster Agent: OpenSolaris Container</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dxvm/">Cluster Agent: OpenSolaris xVM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Debs/">Cluster Agent: Oracle E&#45;Business Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dsmb/">Cluster Agent: Samba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dtomcat/">Cluster Agent: Tomcat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dpostgresql/">Cluster agent: PostgreSQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+data%2Dflow/">Coarse Data Flow Parallelism</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+colorado/">Colorado: Open HA Cluster on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+commandassist/">Command Assistant</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cam/">Common Array Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+companion/">Companion &#45; /opt/sfw: Free and Open Source software</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+content/">Content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+contest/">Contest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpg/">Credentials Process Groups</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crossbow/">Crossbow: Network Virtualization and Resource Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmsagenttoolkit/">Crypto KMS Agent Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/">Cryptographic Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Ddoc/">DTrace Guide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dmm/">Data Migration Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+datatethers/">Data Tethers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+de/">Deutsches Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ddtool/">Device Detection Tool</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+driver%2Dutility/">Device Driver Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devicemgr/">Device Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devmapper/">Device Mapper</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dri/">Direct Rendering Infrastructure & 3D drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/">Duckwater: Simplified name services management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+phpEasyTools/">Easy Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emancipation/">Emancipation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex%2Dcna/">Emulex Advanced Ethernet Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex/">Emulex Fibre Channel Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+intel%2Dplatform/">Enable/Enhance Solaris support for Intel Platform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webcams/">Enhance the support of USB webcams</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Dprofiles/">Enhanced SMF Profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+amd/">Enhancements for AMD&#45;based Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+erlang%2Ddtrace/">Erlang DTrace Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ethbridge/">Ethernet bridge module for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+conary%2Deval/">Evaluate Conary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+events%2Dregistry/">Events Registry</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ext3/">Ext3 file system support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+facilitation/">Facilitation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fcoe/">Fibre Channel over Ethernet</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fgap/">Fine Grained Access Policy (FGAP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fingerprint%2Dauthentication/">Fingerprint Authentication</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fmac/">Flexible Mandatory Access Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+forensics/">Forensic Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fox/">Fully Open X Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fuse/">Fuse on Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+generic%2Dmca/">Generic Machine Check Architecture Improvements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+raidcfg/">Generic RAID Configuration Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+summerofcode/">Google SOC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Djboss/">HA&#45;JBoss</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dmysql/">HA&#45;MySQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hpc%2Dstack/">HPC Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livehadoop/">Hadoop Live CD</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hitachi/">Hitachi</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+honeycomb/">HoneyComb Fixed Content Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hotplug/">Hotplug Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ip%2Drefactor/">IP Datapath Refactoring</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ipoib/">IP over Infiniband</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tref/">IPsec Tunnel Reform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/">Image Packaging System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isc/">Immutable Service Containers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+perfmib/">Improved Performance MIB</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/">Indiana</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+awards/">Innovation Awards</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/">Input Method</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+intelgraphics/">Intel Graphics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ikev2/">Internet Key Exchange, version 2 (IKEv2)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+irm/">Interrupt Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jkstat/">JKstat &#45; a java binding for libkstat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jeos/">JeOS &#45; Just enough Operating System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jfs/">Journaled File System (JFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kde/">K Desktop Environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kerberos/">Kerberos</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kssl/">Kernel SSL Enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kernel%2Dsockets/">Kernel Sockets</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmf/">Key Management Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ksh93%2Dintegration/">Korn Shell 93 integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ldoms%2Dmgr/">LDoms Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+txipsec/">Labeled IPsec</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+latencytop/">LatencyTOP</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+l2filter/">Layer 2 Filtering</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lending/">Lending</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lld/">Link Layer Discovery</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livemedia/">Live Media: Technologies for distributions running from CD and other media</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+localedata/">Locale Data</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mips/">MIPS Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohac%2Davs/">MRSL.NONsharedDevice</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mega_sas/">Mega_sas</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mx/">Mexico</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+milax/">MilaX minimal Live Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mozilla%2Ddtrace/">Mozilla DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+glossary/">Multi&#45;lingual Glossary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mpxio/">Multi&#45;pathing software (MPxIO)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+multiple%2Ddoi/">Multiple DOI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+large%2Dsector/">Multiple disk sector size support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+muskoka/">Muskoka: An open repository for OpenSolaris technical content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsrdma/">NFS RDMA transport update and performance analysis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dzones/">NFS Server in non&#45;Global Zones</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsv41/">NFS version 4.1 pNFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dnamespace/">NFSv4 namespace extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npiv/">NPort ID Virtualization (NPIV)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+numa/">NUMA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+navigator/">Navigator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nemo/">Nemo: A Framework for High&#45;Performance Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/">Network Auto&#45;Magic</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ndmp/">Network Data Management Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+net%2Dmib/">Network MIBs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npp/">Network Performance Projects</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dpm/">Network Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nws/">Network Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ntp/">Network Time Protocol (NTP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nv%2Dg11n/">Nevada Globalization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+4over6/">New Design of 4over6 Mechanism Based on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nightingale/">Nightingale: Port Songbird to OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohacge%2Dsbp/">OHACGE Script Based Plug&#45;in</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+onnv/">ON/Nevada (ONNV) Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osd/">Object Storage Device (OSD) support for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opendev/">Open Development Infrastructure</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dutilities/">Open HA Cluster Utilities</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opensound/">Open Sound System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/">OpenGrok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cim%2Dserver/">OpenPegasus CIM Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+openrti/">OpenRTI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+busybox/">OpenSolaris Busybox</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/">OpenSolaris Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+es/">OpenSolaris Hispano</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+audit/">OpenSolaris Security Audit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/">OpenSolaris support for the QEMU processor emulator: host and guest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pef/">PEF: Packet Event Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+performance%2Dwrappers/">Performance Wrappers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkgfactory/">Pkgfactory</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pl/">Polski Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fr/">Portail Francophone</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+br/">Portal Brasileiro de OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+portals/">Portals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmui/">Power Management Usability Interfaces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+presto/">Presto: Automatic Printing Configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmpsm/">Printable Many Page Solaris Manuals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+promise%2Dstorage/">Promise SuperTrak RAID HBA Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qlogic%2Dcna/">QLogic Converged Network Adapter GLDv3 NIC Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+quagga/">Quagga Routing Protocol Suite Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rbridges/">RBridge (IETF TRILL) support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rof/">RDMA Offload Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+releasenotes/">Release Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+reno/">Reno: Login Process Enhancements for Interop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/">Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+samqfs/">SAM/QFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+scm%2Dmigration/">SCM Migration Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+srp/">SCSI RDMA Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sdcard%2Ddrivers/">SDcard Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sfwnv/">SFW</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sm%2Dhba/">SM&#45;HBA Based SAS HBA Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Ddoc/">SMF Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+svr4_packaging/">SVR4 Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sensors/">Sensor Abstraction Layer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dsip/">Session Initiation Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+shell/">Shell: bourne shell, korn shell, C shell, etc.</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sierra/">Sierra: Intel WiFi Chipsets Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+simplepanels/">Simple Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/">Solaris PowerPC Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iscsitgt/">Solaris iSCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sourcejuicer/">SourceJuicer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/">Sparks: name service switch/nscd enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+squashfs/">Squashfs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+star/">Star integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starfish/">Starfish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starterkit/">Starter Kit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+storagepm/">Storage Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sst/">Sun Security Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+avs/">Sun StorageTek Availability Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ofuv/">Support for OpenFabrics User Verbs / API on OpenSolaris OS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/">Support gcc4/GCCfss in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+suspend%2Dresume/">Suspend/Resume</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+systemz/">Systemz</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tipc/">TIPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tamarack/">Tamarack: Removable Media Enhancements in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+test%2Ddev/">Test Development</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/">Tickless Kernel Architecture</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+branding/">Trademarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tpm/">Trusted Platform Module support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tnipdb/">Trusted networking interface policy database for Trusted Extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+usecase/">Use Case</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+userland/">Userland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vrrp/">VRRP: Virtual Router Redundancy Protocol Implementation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vscan/">VSCAN service</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+valex/">Validated Execution Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vconsole/">Virtual Console</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vnm/">Virtual Network Machines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/">Visual Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+visualization%2Dhpc/">Visualization for HPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+volo/">Volo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/">Web Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+website/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+winchester/">Winchester: Schema mapping and ID mapping for AD Interoperability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wusb/">Wireless USB Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wwan/">Wireless Wide Area Network</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x%2Dcons/">X Consolidation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xkblayout/">X Keyboard Layout</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xen%2Dgate/">Xen Gate</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xfce/">Xfce: A lightweight desktop environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfsboot/">ZFS Boot and Install</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfs%2Dcrypto/">ZFS on disk encryption support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonemgr/">Zone Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonestat/">Zone Statistics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gcore/">gcore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iser/">iSCSI Extensions for Remote DMA (iSER)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isns/">iSNS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+libmicro/">libMicro &#45; portable microbenchmarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+loficc/">lofi compression and cryptography support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lx64/">lx64 brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+s10brand/">s10brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x86gentopo/">x86 Generic FMA Topology Enumerator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cz/">Český portál</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ru/">Русский портал</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ar/">البوابة العربية</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+in/">भारतीय पोर्टल</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cn/">中国门户</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/">日本ポータル</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kr/">한국 포탈</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavUser Group">
+            <div id="xwikinavUser GroupHeader" class="accordionTabTitleBar"><h6>User Group</h6>
+            </div>
+            <div id="xwikinavUser GroupContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+kr/"></a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+adl%2Dauosug/">Adelaide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+aosug/">Argentina</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+azosug/">Arizona</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+atl%2Dosug/">Atlanta OpenSolaris Users Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bwosug/">Baltimore&#45;Washington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bosug/">Bangalore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bkkosug/">Bangkok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bdosug/">Bangladesh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bjosug/">Beijing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+brosug/">Berlin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bvrm%2Dosug/">Bhimavaram</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+btn%2Dosug/">Bloomington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfosug/">Brasilia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+blmosug/">Bélem</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+crosug/">Capital Region</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cfosug/">Cardiff</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ccosug/">Caribbean OSUG</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ceosug/">Ceara</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cltosug/">Charlotte</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chennai/">Chennai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chmxosug/">Chihuahua</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+closug/">Chile</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cle%2Dosug/">Cleveland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+colosug/">Colombia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cmh%2Dosug/">Columbus</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ctosug/">Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+knp%2Duek/">Cracow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+czosug/">Czech</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfw%2Dosug/">Dallas/Ft. Worth</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dosug/">Danish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+deosug/">Delaware</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+eduosug/">Edinburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+egosug/">Egypt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fiosug/">Finland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+flosug/">Florida</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fraosug/">Frankfurt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+frosug/">Front Range</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+glug/">Great Lakes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+grosug/">Greece</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hzosug/">Hangzhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hi%2Dosug/">Hawaii</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hkosug/">Hong Kong</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hugs/">Houston</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hosug/">Hyderabad</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+idosug/">Indonesia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madridosug/">Inicio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ie%2Dosug/">Irish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+iosug/">Israel</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+istosug/">Istanbul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+itl%2Dosug/">Italian</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jnosug/">Jinan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jogja%2Dosug/">Jogja</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kbosug/">Kabul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kc%2Dosug/">Kansas City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+lavosug/">Latvia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+losug/">London</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madosug/">Madurai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mansug/">Manchester</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mssosug/">Mato Grosso</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+msosug/">Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mgosug/">Minas Gerais</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mnosug/">Minnesota</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mtlosug/">Montreal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mosug/">Moscow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mmosug/">Mumbai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mucosug/">Munich</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+neaosug/">NEA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nlosug/">Netherlands</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ne%2Dosug/">New England</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nycosug/">New York City OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nzosug/">New Zealand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+norosug/">Noroeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nerosug/">Nuremberg&#45;Erlangen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+okcosug/">Oklahoma City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ososug/">Osnabrück</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+peosug/">Peru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+paosug/">Philadelphia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+piaski%2Dosug/">Piaski</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ptosug/">Pittsburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+poaosug/">Porto Alegre</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+psosug/">Puget Sound</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+posug/">Pune</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+qosug/">Queensland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rtp%2Dosug/">Research Triangle Park</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+riosug/">Rio de Janeiro</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ro%2Dosug/">Romania</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ruosug/">Russia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+alamo%2Dosug/">San Antonio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sdosug/">San Diego</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sfosug/">San Francisco</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+scosug/">Scottish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rs%2Dosug/">Serbia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szosug/">Shenzhen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svosug/">Silicon Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sgosug/">Singapore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+skosug/">Slovak</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+saosug/">South African</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+soctosug/">Southern Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+stl%2Dosug/">St. Louis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svgosug/">Stavanger</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+swosug/">Sweden</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chosug/">Switzerland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sosug/">Sydney</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szc%2Dosug/">Szczecin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sampaosug/">São Paulo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+twosug/">Taiwan OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ostug/">Tecum</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tvosug/">Thames Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tsug/">Tokyo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+torosug/">Toronto</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+trosug/">Trondheim</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+toss/">Tulsa</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tosug/">Turkey</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ufaosug/">Ufa OSUG</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+uaosug/">Ukraine OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+unimelb%2Dosug/">University of Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+valeosug/">Vale do Paraíba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vanosug/">Vancouver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vosug/">Venezuela &#45; Pagina de incio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vvoosug/">Vladivostok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wosug/">Welsh &#45; Cymru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wiosug/">Wisconsin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+xaosug/">Xi'an</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+</div><p/>
+<script type="text/javascript">
+var obj = {div:'xwikinav',no:0,height:250};
+var acc = createAccordion(obj);
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSDocs','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSDocs'); togglePanelVisibility(this.parentNode);">Community Group zones Pages</h1>
+<div class="xwikipanelcontents"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/brandz">BrandZ</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/brandz_bugfixes">BrandZ Bugfixes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/brandz_contribute">Contribute Code to BrandZ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/brandz_design_doc">BrandZ Design Doc</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/brandz_downloads">BrandZ Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/brandz_install">BrandZ Installation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/brandz_on_dev">BrandZ Impact on ON Development</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/brandz_project_list">BrandZ Project List</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/brandz_scla_faq">BrandZ/SCLA FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/linux_applications">Linux Applications</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/faq">Zones and Containers FAQ</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/flar_zones">Flash Archives & Zones</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/roadmap">Zones Roadmap</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/s10brand_dev_guide">Solaris10&#45;Branded Zone Developer Guide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/zones_design_docs">Zones Project Documents</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/rm_enhancements">Enhanced Resource Management Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/zoss">zones on shared storage proposal</a></span></li>
+</ul></li>
+</ul>
+                        </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div>  <div id="footerglobal" class="layoutsection">
+  <div class="minwidth"></div>
+
+  <script language="JavaScript" src="/resources/js/s_code_remote.js"></script>
+
+
+          <div id="xwikiplatformversion">XWiki Enterprise 2.1.1.25889 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+  <br/>
+
+
+    <hr/>
+    <div><a href="/bin/view/Main/tou">Terms Of Use</a> |
+         <a href="http://www.sun.com/privacy/">Privacy</a> | 
+         <a href="/bin/view/Main/trademark">Trademarks</a> |
+         <a href="/bin/view/Main/copyrights">Copyright Policy</a> |
+         <a href="/bin/view/Main/site_guidelines">Site Guidelines</a> |
+         <a href="/bin/view/Main/site%2Dmap">Site map</a> |
+         <a href="/bin/view/Main/help">Help</a></div>
+    <div>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.</div>
+    <div id="xwikilicence">© 2010, Oracle Corporation and/or its affiliates</div>
+    <img src="http://opensolaris.org/oracle/logo_oracle_footer.gif")" alt="Oracle"/>
+  <hr/>
+  
+  </div>
+
+
+</div></div></body>
+</html>

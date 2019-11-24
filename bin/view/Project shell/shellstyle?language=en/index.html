@@ -1,0 +1,1200 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Shell coding style guidelines (Project shell.shellstyle) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+shell/shellstyle" />
+                                <meta name="document" content="Project shell.shellstyle"/>
+    <meta name="space" content="Project shell"/>
+    <meta name="page" content="shellstyle"/>
+    <meta name="version" content="2.1"/>
+                    <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Shell coding style guidelines" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="fleyta" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                <!-- com.xpn.xwiki.plugin.skinx.LinkExtensionPlugin -->
+    <link href="/bin/skin/skins/colibri/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript" src="/resources/js/xwiki/suggest/ajaxSuggest.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project shell";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes" ];
+window.docviewurl = "/bin/view/Project+shell/shellstyle";
+window.docediturl = "/bin/edit/Project+shell/shellstyle";
+window.docsaveurl = "/bin/save/Project+shell/shellstyle";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js'></script><script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js'></script><script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js'></script><script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js'></script>
+
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/compatibility.js"></script>
+
+  </head>
+        <body id="body" class="xwiki viewbody hideright">
+  <div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+<div id="menuview">
+  <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div class="topmenuentry " id="tmLogin"><a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bshell%2Fshellstyle%3Flanguage%3Den"><strong>Log-in</strong></a></div>
+  </div>
+<div class="leftmenu">
+  <div class="topmenuentry hasIcon" id="tmWiki"><a class="tme" href="/bin/view/Main/"><strong>xwiki</strong></a></div>
+  <div class="topmenuentry hasIcon" id="tmSpace"><a class="tme" href="/bin/view/Project+shell/"><strong>Project shell</strong></a></div>
+
+<div class="topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmSubSites">
+<span class="tme-extensible"><a class="tme"><strong>Subsites</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="http://cr.opensolaris.org/" id="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth">Auth</a></span>
+</span></div>
+
+
+</div>
+</div>
+
+</div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+
+  <div id="company">
+  <div id="companylogo">
+    <a href="/bin/view/Main/" title="Home" rel="home">
+    <img src="/skins/colibri/logo.png" alt="Wiki Logo"/>
+    </a>
+  </div>   </div> 
+  <div id="Iconbar">
+    <a id="CollectivesIcon" href="/bin/view/Main/collectives">Collectives</a>
+    <a id="DiscussionsIcon" href="/bin/view/Main/discussions">Discussions</a>
+    <a id="DocumentationIcon" href="/bin/view/Main/documentation">Documentation</a>
+    <a id="DownloadIcon" href="/bin/view/Main/downloads">Download</a>
+    <a id="SourceBrowserIcon" href="http://src.opensolaris.org">Source Browser</a>
+  </div>
+  <div class="clearfloats"></div>
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/WebSearch">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+   <div id="hierarchy">
+          <a href='/bin/view/Project+shell/shellstyle'>Shell coding style guidelines</a>
+    </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+shell/shellstyle?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+  <div id="contentmenu" class="actionmenu">
+  <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div class="topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmExport">
+<span class="tme-extensible"><a class="tme"><strong>Export</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+shell/shellstyle?format=pdf&amp;language=en" id="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+shell/shellstyle?format=rtf&amp;language=en" id="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+shell/shellstyle?format=html&amp;language=en" id="tmExportHtml">Export as HTML</a></span>
+  </span></div>
+
+<div class="topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmShow">
+<span class="tme-extensible"><a class="tme" href="/bin/view/Project+shell/shellstyle?viewer=code&amp;language=en"><strong>View</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+shell/shellstyle?viewer=comments&amp;language=en" id="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+shell/shellstyle?viewer=attachments&amp;language=en" id="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+shell/shellstyle?viewer=history&amp;language=en" id="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+shell/shellstyle?viewer=information&amp;language=en" id="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+shell/shellstyle?viewer=code&amp;language=en" id="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div class="topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmMoreActions">
+<span class="tme-extensible"><a class="tme"><strong>More actions</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+shell/shellstyle?xpage=print&amp;language=en" id="tmPrintPreview">Print preview</a></span>
+    </span></div>
+  </div>
+
+
+  </div>
+  <div id="mainContentArea">
+      
+
+
+  
+<div id="document-title"><h1>Shell coding style guidelines</h1></div>
+                            <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h1 id="HDRAFTBourneKornShellCodingConventions"><span><em>[DRAFT]</em> Bourne/Korn Shell Coding Conventions</span></h1><h3 id="HThispageiscurrentlyworkinprogressuntilitisapprovedbytheOSNetcommunityPleasesendanycommentsto"><span><em>&nbsp;This page is currently work-in-progress until it is approved by the OS/Net community. Please send any comments to <span class="box code"><tt class="wikimodel-verbatim">&lt;[[shell-discuss@opensolaris.org&gt;&gt;mailto:shell-discuss@opensolaris.org]]&gt;</tt></span>.&nbsp;</em></span></h3><h3 id="H"><span></span></h3><hr/><p><strong>Table of Contents</strong></p><dl><dt><span class="wikilink"><a href="#intro">Intro</a></span></dt><dt><span class="wikilink"><a href="#rules">Rules</a></span><br/>:</dt><dt><span class="wikilink"><a href="#general">General</a></span><br/>:</dt><dt><span class="wikilink"><a href="#basic_format">Basic Format</a></span></dt><dt><span class="wikilink"><a href="#commenting">Commenting</a></span></dt><dt><span class="wikilink"><a href="#interpreter_magic">Interpreter magic</a></span></dt><dt><span class="wikilink"><a href="#harden_your_script_against_unexpected_input">Harden the script against unexpected (user) input</a></span></dt><dt><span class="wikilink"><a href="#use_builtin_commands"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use builtin commands if the shell provides them</a></span></dt><dt><span class="wikilink"><a href="#use_blocks_not_subshells"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use blocks and not subshells if possible</a></span></dt><dt><span class="wikilink"><a href="#use_long_options_for_set_builtin"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/>&nbsp;use long options for "<span class="box code"><tt class="wikimodel-verbatim">set</tt></span>"</a></span></dt><dt><span class="wikilink"><a href="#use_posix_command_substitutions_syntax"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/>&nbsp;Use <span class="box code"><tt class="wikimodel-verbatim">$(...)</tt></span> instead of <span class="box code"><tt class="wikimodel-verbatim">`...`</tt></span> command substitutions</a></span></dt><dt><span class="wikilink"><a href="#put_command_substitution_result_in_quotes"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/>&nbsp;Always put the result of a <span class="box code"><tt class="wikimodel-verbatim">$(...)</tt></span> or <span class="box code"><tt class="wikimodel-verbatim">$( ...;)</tt></span> command substitution in quotes</a></span></dt><dt><span class="wikilink"><a href="#always_set_path">Scripts should always set their <span class="box code"><tt class="wikimodel-verbatim">PATH</tt></span></a></span></dt><dt><span class="wikilink"><a href="#make_sure_commands_are_available">Make sure that commands from other packages/applications are really installed on the machine</a></span></dt><dt><span class="wikilink"><a href="#check_usage_of_boolean_variables">Check how boolean values are used/implemented in your application</a></span></dt><dt><span class="wikilink"><a href="#shell_uses_characters_not_bytes"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_i18n.png" alt="[i18n]" height=""/>&nbsp;The shell always operates on <em>characters</em> not bytes</a></span></dt><dt><span class="wikilink"><a href="#multibyte_locale_input"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_i18n.png" alt="[i18n]" height=""/>&nbsp;Multibyte locales and input</a></span></dt><dt><span class="wikilink"><a href="#use_external_filters_only_for_large_datasets"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Only use external filters like <span class="box code"><tt class="wikimodel-verbatim">grep</tt></span>/<span class="box code"><tt class="wikimodel-verbatim">sed</tt></span>/<span class="box code"><tt class="wikimodel-verbatim">awk</tt></span>/etc. if you want to process lots of data with them</a></span></dt><dt><span class="wikilink"><a href="#use_dashdash_if_first_arg_is_variable">If the first operand of a command is a variable, use <span class="box code"><tt class="wikimodel-verbatim">--</tt></span></a></span></dt><dt><span class="wikilink"><a href="#use_export"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use <span class="box code"><tt class="wikimodel-verbatim">$ export FOOBAR=val #</tt></span> instead of <span class="box code"><tt class="wikimodel-verbatim">$ FOOBAR=val ; export FOOBAR #</tt></span></a></span></dt><dt><span class="wikilink"><a href="#use_subshell_around_set_dashdash_usage">Use a subshell (e.g. <span class="box code"><tt class="wikimodel-verbatim">$ ( mycmd ) #</tt></span>) around places which use <span class="box code"><tt class="wikimodel-verbatim">set -- $(mycmd)</tt></span> and/or <span class="box code"><tt class="wikimodel-verbatim">shift</tt></span></a></span></dt><dt><span class="wikilink"><a href="#be_careful_with_tabs_in_script_code">Be careful with using TABS in script code, they are not portable between editors or platforms</a></span></dt><dt><span class="wikilink"><a href="#centralise_error_exit">If you have multiple points where your application exits with an error message create a central function for this purpose</a></span></dt><dt><span class="wikilink"><a href="#use_set_o_nounset"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/>&nbsp;Think about using <span class="box code"><tt class="wikimodel-verbatim">$ set -o nounset #</tt></span> by default</a></span></dt><dt><span class="wikilink"><a href="#avoid_eval_builtin">Avoid using <span class="box code"><tt class="wikimodel-verbatim">eval</tt></span> unless absolutely necessary</a></span></dt><dt><span class="wikilink"><a href="#use_concatenation_operator"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use the string/array concatenation operator <span class="box code"><tt class="wikimodel-verbatim">+=</tt></span></a></span></dt><dt><span class="wikilink"><a href="#use_source_not_dot"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use <span class="box code"><tt class="wikimodel-verbatim">source</tt></span> instead of '<span class="box code"><tt class="wikimodel-verbatim">.</tt></span> '(dot) to include other shell script fragments</a></span></dt><dt><span class="wikilink"><a href="#use_builtin_localisation_support"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/> <img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/> <img src="/bin/download/Project+shell/shellstyle/images%2Ftag_l10n.png" alt="[l10n]" height=""/>&nbsp;Use <span class="box code"><tt class="wikimodel-verbatim">$"..."</tt></span> instead of <span class="box code"><tt class="wikimodel-verbatim">gettext ... "..."</tt></span> for strings that need to be localized for different locales</a></span></dt><dt><span class="wikilink"><a href="#use_set_o_noglob"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use <span class="box code"><tt class="wikimodel-verbatim">set -o noglob</tt></span> if you do not need to expand files</a></span></dt><dt><span class="wikilink"><a href="#use_empty_ifs_to_handle_spaces"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use <span class="box code"><tt class="wikimodel-verbatim">IFS=</tt></span> to avoid problems with spaces in filenames</a></span></dt><dt><span class="wikilink"><a href="#set_locale_when_comparing_against_localised_output">Set the message locale if you process output of tools which may be localised</a></span></dt><dt><span class="wikilink"><a href="#cleanup_after_yourself">Cleanup after yourself.</a></span></dt><dt><span class="wikilink"><a href="#use_proper_exit_code">Use a proper <span class="box code"><tt class="wikimodel-verbatim">exit</tt></span> code</a></span></dt><dt><span class="wikilink"><a href="#shell_lint"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use <span class="box code"><tt class="wikimodel-verbatim">shcomp -n scriptname.sh /dev/null</tt></span> to check for common errors</a></span></dt><dt><span class="wikilink"><a href="#functions">Functions</a></span><br/>:</dt><dt><span class="wikilink"><a href="#use_functions">Use functions to break up your code</a></span></dt><dt><span class="wikilink"><a href="#do_not_reserved_keywords_for_function_names">Do not use function names which are reserved keywords in C/C++/JAVA or the POSIX shell standard</a></span></dt><dt><span class="wikilink"><a href="#use_ksh_style_function_syntax"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use ksh-style <span class="box code"><tt class="wikimodel-verbatim">function</tt></span></a></span></dt><dt><span class="wikilink"><a href="#use_proper_return_code">Use a proper <span class="box code"><tt class="wikimodel-verbatim">return</tt></span> code</a></span></dt><dt><span class="wikilink"><a href="#use_fpath_to_load_common_code"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/>&nbsp;Use <span class="box code"><tt class="wikimodel-verbatim">FPATH</tt></span> to load common functions, not <span class="box code"><tt class="wikimodel-verbatim">source</tt></span></a></span></dt><dt><span class="wikilink"><a href="#if_for_while"><span class="box code"><tt class="wikimodel-verbatim">if</tt></span>, <span class="box code"><tt class="wikimodel-verbatim">for</tt></span> and <span class="box code"><tt class="wikimodel-verbatim">while</tt></span></a></span><br/>:</dt><dt><span class="wikilink"><a href="#if_for_while_format">Format</a></span></dt><dt><span class="wikilink"><a href="#test_builtin"><span class="box code"><tt class="wikimodel-verbatim">test</tt></span> Builtin</a></span></dt><dt><span class="wikicreatelink"><a href="/bin/edit/images%2Ftag_perf/png%7C%7Calt%3D%22%5Bperf%5D%22height%3D%22%22%5D%5D+Use+%22%7B%7Bcode%7D%7D%5B%5B+expr+?parent=xwiki%3AProject+shell.shellstyle"><span class="wikigeneratedlinkcontent">png||alt="[perf]"height=""]] Use "{{code}}[[ expr </span></a></span>{{/code}}" instead of "<span class="box code"><tt class="wikimodel-verbatim">[ expr ]</tt></span>"&gt;&gt;#use_ksh_test_syntax]]</dt><dt><span class="wikilink"><a href="#use_posix_arithmetic_expressions"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/>&nbsp;Use "<span class="box code"><tt class="wikimodel-verbatim">(( ... ))</tt></span>" for arithmetic expressions</a></span></dt><dt><span class="wikilink"><a href="#compare_exit_code_using_math"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Compare exit code using arithmetic expressions expressions</a></span></dt><dt><span class="wikilink"><a href="#use_builtin_commands_in_loops"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_bourne.png" alt="[Bourne]" height=""/>&nbsp;Use builtin commands in conditions for <span class="box code"><tt class="wikimodel-verbatim">while</tt></span> endless loops</a></span></dt><dt><span class="wikilink"><a href="#single_line_if_statements">Single-line if-statements</a></span></dt><dt><span class="wikilink"><a href="#exit_status_and_if_for_while">Exit Status and <span class="box code"><tt class="wikimodel-verbatim">if</tt></span>/<span class="box code"><tt class="wikimodel-verbatim">while</tt></span> statements</a></span></dt><dt><span class="wikilink"><a href="#variables">Variable types, naming and usage</a></span><br/>:</dt><dt><span class="wikilink"><a href="#names_should_be_lowercase">Names of local, non-environment, non-constant variables should be lowercase</a></span></dt><dt><span class="wikilink"><a href="#do_not_reserved_keywords_for_variable_names">Do not use variable names which are reserved keywords/variable names in C/C++/JAVA or the POSIX shell standard</a></span></dt><dt><span class="wikilink"><a href="#use_brackets_around_long_names">Always use <span class="box code"><tt class="wikimodel-verbatim">'{'</tt></span>+<span class="box code"><tt class="wikimodel-verbatim">'}'</tt></span> when using variable names longer than one character</a></span></dt><dt><span class="wikilink"><a href="#quote_variables_containing_filenames_or_userinput"><em>Always</em> put variables into quotes when handling filenames or user input</a></span></dt><dt><span class="wikilink"><a href="#use_typed_variables"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use typed variables if possible.</a></span></dt><dt><span class="wikilink"><a href="#store_lists_in_arrays"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Store lists in arrays or associative arrays</a></span></dt><dt><span class="wikilink"><a href="#use_compound_variables_or_lists_for_grouping"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use compound variables or associative arrays to group similar variables together</a></span></dt><dt><span class="wikilink"><a href="#io">I/O</a></span><br/>:</dt><dt><span class="wikilink"><a href="#avoid_echo">Avoid using the "<span class="box code"><tt class="wikimodel-verbatim">echo</tt></span>" command for output</a></span></dt><dt><span class="wikilink"><a href="#use_redirect_not_exec_to_open_files"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use <span class="box code"><tt class="wikimodel-verbatim">redirect</tt></span> and not <span class="box code"><tt class="wikimodel-verbatim">exec</tt></span> to open files</a></span></dt><dt><span class="wikicreatelink"><a href="/bin/edit/Project+shell/xxx+%3B+echo+%22baz%22+%3E%3Exxx+%23%7B%7B%2Fcode%7D%7D%3E%3E?parent=xwiki%3AProject+shell.shellstyle#group_identical_redirections_together"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Avoid redirections per command when the output goes into the same file, e.g. <span class="box code"><tt class="wikimodel-verbatim">$ echo "foo" &gt;xxx ; echo "bar" </tt></span></a></span></dt><dt><span class="wikilink"><a href="#avoid_using_temporary_files"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Avoid the creation of temporary files and store the values in variables instead</a></span></dt><dt><span class="wikilink"><a href="#create_subdirs_for_multiple_temporary_files">If you create more than one temporary file create an unique subdir</a></span></dt><dt><span class="wikilink"><a href="#use_dynamic_file_descriptors"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use {n}&lt;file instead of fixed file descriptor numbers</a></span></dt><dt><span class="wikilink"><a href="#use_inline_here_documents"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/> <img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use inline here documents instead of <span class="box code"><tt class="wikimodel-verbatim">echo "$x" | command</tt></span></a></span></dt><dt><span class="wikilink"><a href="#use_read_r"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use the <span class="box code"><tt class="wikimodel-verbatim">-r</tt></span> option of <span class="box code"><tt class="wikimodel-verbatim">read</tt></span> to read a line</a></span></dt><dt><span class="wikilink"><a href="#print_compound_variables_using_print_C"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Print compound variables using <span class="box code"><tt class="wikimodel-verbatim">print -C varname</tt></span> or <span class="box code"><tt class="wikimodel-verbatim">print -v varname</tt></span></a></span></dt><dt><span class="wikilink"><a href="#command_name_before_redirections">Put the command name and arguments before redirections</a></span></dt><dt><span class="wikilink"><a href="#enable_gmacs_editor_mode_for_user_prompts"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Enable the <span class="box code"><tt class="wikimodel-verbatim">gmacs</tt></span> editor mode when reading user input using the <span class="box code"><tt class="wikimodel-verbatim">read</tt></span> builtin</a></span></dt><dt><span class="wikilink"><a href="#math">Math</a></span><br/>:</dt><dt><span class="wikilink"><a href="#use_builtin_arithmetic_expressions"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use builtin arithmetic expressions instead of external applications</a></span></dt><dt><span class="wikilink"><a href="#use_floating_point_arithmetic_expressions"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use floating-point arithmetic expressions if calculations may trigger a division by zero or other exceptions</a></span></dt><dt><span class="wikilink"><a href="#use_printf_a_for_passing_float_values"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use <span class="box code"><tt class="wikimodel-verbatim">printf "%a"</tt></span> when passing floating-point values</a></span></dt><dt><span class="wikilink"><a href="#put_constants_into_readonly_variables"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Put constant values into readonly variables</a></span></dt><dt><span class="wikilink"><a href="#avoid_unnecessary_string_number_conversions"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Avoid string to number (and/or number to string) conversions in arithmetic expressions expressions</a></span></dt><dt><span class="wikilink"><a href="#set_lc_numeric_when_using_floating_point"><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Set <span class="box code"><tt class="wikimodel-verbatim">LC_NUMERIC</tt></span> when using floating-point constants</a></span></dt><dt><span class="wikilink"><a href="#misc">Misc</a></span><br/>:</dt><dt><span class="wikilink"><a href="#debug_use_lineno_in_ps4">Put <span class="box code">[<span style="color: #BC7A00; ">${</span>LINENO<span style="color: #BC7A00; ">}</span>]<br/></span> in your <span class="box code"><tt class="wikimodel-verbatim">PS4</tt></span></a></span></dt></dl><h2 id="HIntro"><span>Intro</span></h2><p>This document describes the shell coding style used for all the SMF script changes integrated into (Open)Solaris.</p><p>All new SMF shell code should conform to this coding standard, which is intended to match our existing C coding standard.</p><p>When in doubt, think "what would be the C-Style equivalent ?" and "What does the POSIX (shell) standard say ?"</p><h2 id="HRules"><span>Rules</span></h2><h3 id="HGeneral"><span>General</span></h3><h4 id="HBasicFormat"><span>Basic Format</span></h4><p>Similar to <span class="box code"><tt class="wikimodel-verbatim">cstyle</tt></span>, the basic format is that all lines are indented by TABs or eight spaces, and continuation lines (which in the shell end with "\") are indented by an equivalent number of TABs and then an additional four spaces, e.g.</p><pre>
+
+cp foo bar
+cp some_realllllllllllllllly_realllllllllllllly_long_path \
+   to_another_really_long_path
+
+</pre><p>The encoding used for the shell scripts is either <span class="box code"><tt class="wikimodel-verbatim">ASCII</tt></span> or <span class="box code"><tt class="wikimodel-verbatim">UTF-8</tt></span>, alternative encodings are only allowed when the application requires this.</p><h4 id="HCommenting"><span>Commenting</span></h4><p>Shell comments are preceded by the '<span class="box code"><span style="font-weight: italic; color: #408080; ">#</span><br/></span>' character. Place single-line comments in the right-hand margin. Use an extra '<span class="box code"><span style="font-weight: italic; color: #408080; ">#</span><br/></span>' above and below the comment in the case of multi-line comments:</p><pre>
+
+cp foo bar		# Copy foo to bar
+
+#
+# Modify the permissions on bar.  We need to set them to root/sys
+# in order to match the package prototype.
+#
+chown root bar
+chgrp sys bar
+
+</pre><h4 id="HInterpretermagic"><span>Interpreter magic</span></h4><p>The proper interpreter magic for your shell script should be one of these:</p><pre>
+
+#!/bin/sh        Standard Bourne shell script
+#!/bin/ksh -p    Standard Korn shell 88 script.  You should always write ksh
+                 scripts with -p so that ${ENV} (if set by the user) is not
+                 sourced into your script by the shell.
+#!/bin/ksh93     Standard Korn shell 93 script (-p is not needed since ${ENV} is
+                 only used for interactive shell sessions).
+
+</pre><h4 id="HHardenthescriptagainstunexpecteduserinput"><span>Harden the script against unexpected (user) input</span></h4><p>Harden your script against unexpected (user) input, including command line options, filenames with blanks (or other special characters) in the name, or file input</p><h4 id="HUsebuiltincommandsiftheshellprovidesthem"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use builtin commands if the shell provides them</span></h4><p>&nbsp;Use builtin commands if the shell provides them. For example ksh93s+ (ksh93, version 's+') delivered with Solaris (as defined by PSARC 2006/550) supports the following builtins: basename, cat, chgrp, chmod, chown, cmp, comm, cp, cut, date, dirname, expr, fds, fmt, fold, getconf, head, id, join, ln, logname, mkdir, mkfifo, mv, paste, pathchk, rev, rm, rmdir, stty, tail, tee, tty, uname, uniq, wc, sync Those builtins can be enabled via <span class="box code"><tt class="wikimodel-verbatim">$ builtin name_of_builtin #</tt></span> in shell scripts (note that ksh93 builtins implement exact POSIX behaviour - some commands in Solaris <span class="box code"><tt class="wikimodel-verbatim">/usr/bin/</tt></span> directory implement pre-POSIX behaviour. Add <span class="box code"><tt class="wikimodel-verbatim">/usr/xpg6/bin/:/usr/xpg4/bin</tt></span> before <span class="box code"><tt class="wikimodel-verbatim">/usr/bin/</tt></span> in <span class="box code"><span style="color: #BC7A00; ">${</span>PATH<span style="color: #BC7A00; ">}</span><br/></span> to test whether your script works with the XPG6/POSIX versions)</p><h4 id="HUseblocksandnotsubshellsifpossible"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use blocks and not subshells if possible</span></h4><p>Use blocks and not subshells if possible, e.g. use <span class="box code"><tt class="wikimodel-verbatim">$ { print "foo" ; print "bar" ; }</tt></span> instead of <span class="box code"><tt class="wikimodel-verbatim">$ (print "foo" ; print "bar") #</tt></span> - blocks are faster since they do not require to save the subshell context (ksh93) or trigger a shell child process (Bourne shell, bash, ksh88 etc.)</p><h4 id="Huselongoptionsfor"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/>&nbsp;use long options for "<span class="box code"><tt class="wikimodel-verbatim">set</tt></span>"</span></h4><p>use long options for "<span class="box code"><tt class="wikimodel-verbatim">set</tt></span>", for example instead of <span class="box code"><tt class="wikimodel-verbatim">$ set -x #</tt></span> use <span class="box code"><tt class="wikimodel-verbatim">$ set -o xtrace #</tt></span> to make the code more readable.</p><h4 id="HUseinsteadofcommandsubstitutions"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/>&nbsp;Use <span class="box code"><tt class="wikimodel-verbatim">$(...)</tt></span> instead of <span class="box code"><tt class="wikimodel-verbatim">`...`</tt></span> command substitutions</span></h4><p>Use <span class="box code"><tt class="wikimodel-verbatim">$(...)</tt></span> instead of <span class="box code"><tt class="wikimodel-verbatim">`...`</tt></span> - <span class="box code"><tt class="wikimodel-verbatim">`...`</tt></span> is an obsolete construct in ksh+POSIX sh scripts and <span class="box code"><tt class="wikimodel-verbatim">$(...)</tt></span>.is a cleaner design, requires no escaping rules, allows easy nesting etc.</p><h3 id="Hstylecommandsubstitutions"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/> <span class="box code"><span style="color: #BC7A00; ">${</span> <span style="color: #666666; ">...</span>;<span style="color: #BC7A00; ">}</span><br/></span>-style command substitutions</span></h3><p>ksh93 has support for an alternative version of command substitutions with the syntax <span class="box code"><span style="color: #BC7A00; ">${</span> <span style="color: #666666; ">...</span>;<span style="color: #BC7A00; ">}</span><br/></span> which do not run in a subshell.</p><h4 id="HAlwaysputtheresultofaorcommandsubstitutioninquotes"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/>&nbsp;Always put the result of a <span class="box code"><tt class="wikimodel-verbatim">$(...)</tt></span> or <span class="box code"><tt class="wikimodel-verbatim">$( ...;)</tt></span> command substitution in quotes</span></h4><p>Always put the result of <span class="box code"><tt class="wikimodel-verbatim">$( ... )</tt></span> or <span class="box code"><tt class="wikimodel-verbatim">$( ...;)</tt></span> in quotes (e.g. <span class="box code"><tt class="wikimodel-verbatim">foo="$( ... )"</tt></span> or <span class="box code"><tt class="wikimodel-verbatim">foo="$( ...;)"</tt></span>) unless there is a very good reason for not doing it</p><h4 id="HScriptsshouldalwayssettheir"><span>Scripts should always set their <span class="box code"><tt class="wikimodel-verbatim">PATH</tt></span></span></h4><p>Scripts should always set their <span class="box code"><tt class="wikimodel-verbatim">PATH</tt></span> to make sure they do not use alternative commands by accident (unless the value of <span class="box code"><tt class="wikimodel-verbatim">PATH</tt></span> is well-known and guaranteed to be set by the caller)</p><h4 id="HMakesurethatcommandsfromotherpackagesapplicationsarereallyinstalledonthemachine"><span>Make sure that commands from other packages/applications are really installed on the machine</span></h4><p>Scripts should make sure that commands in optional packages are really there, e.g. add a "precheck" block in scipts to avoid later failure when doing the main job</p><h4 id="HCheckhowbooleanvaluesareusedimplementedinyourapplication"><span>Check how boolean values are used/implemented in your application</span></h4><p>Check how boolean values are used in your application.</p><p>For example:</p><pre>
+
+mybool=0
+# do something
+if [ $mybool -eq 1 ] ; then do_something_1 ; fi
+
+</pre><p>&nbsp;could be rewritten like this:</p><pre>
+
+mybool=false # (valid values are "true" or "false", pointing
+# to the builtin equivalents of /bin/true or /bin/false)
+# do something
+if ${mybool} ; then do_something_1 ; fi
+
+</pre><p>&nbsp;or</p><pre>
+
+integer mybool=0 # values are 0 or 1
+# do something
+if (( mybool==1 )) ; then do_something_1 ; fi
+
+</pre><h4 id="HTheshellalwaysoperatesoncharactersnotbytes"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_i18n.png" alt="[i18n]" height=""/>&nbsp;The shell always operates on <em>characters</em> not bytes</span></h4><p>Shell scripts operate on characters and <em>not</em> bytes. Some locales use multiple bytes (called "multibyte locales") to represent one character</p><h3 id="HNote"><span>Note</span></h3><p>ksh93 has support for binary variables which explicitly operate on bytes, not characters. This is the <em>only</em> allowed exception.</p><h4 id="HMultibytelocalesandinput"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_i18n.png" alt="[i18n]" height=""/>&nbsp;Multibyte locales and input</span></h4><p>Think about whether your application has to handle file names or variables in multibyte locales and make sure all commands used in your script can handle such characters (e.g. lots of commands in Solaris's <span class="box code"><tt class="wikimodel-verbatim">/usr/bin/</tt></span> are <em>not</em> able to handle such values - either use ksh93 builtin constructs (which are guaranteed to be multibyte-aware) or commands from <span class="box code"><tt class="wikimodel-verbatim">/usr/xpg4/bin/</tt></span> and/or <span class="box code"><tt class="wikimodel-verbatim">/usr/xpg6/bin</tt></span>)</p><h4 id="HOnlyuseexternalfilterslikeetcifyouwanttoprocesslotsofdatawiththem"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Only use external filters like <span class="box code"><tt class="wikimodel-verbatim">grep</tt></span>/<span class="box code"><tt class="wikimodel-verbatim">sed</tt></span>/<span class="box code"><tt class="wikimodel-verbatim">awk</tt></span>/etc. if you want to process lots of data with them</span></h4><p>Only use external filters like <span class="box code"><tt class="wikimodel-verbatim">grep</tt></span>/<span class="box code"><tt class="wikimodel-verbatim">sed</tt></span>/<span class="box code"><tt class="wikimodel-verbatim">awk</tt></span>/etc. if a significant amount of data is processed by the filter or if benchmarking shows that the use of builtin commands is significantly slower (otherwise the time and resources needed to start the filter are far greater then the amount of data being processed, creating a performance problem).</p><p>For example:</p><pre>
+
+if [ "$(echo "$x" | egrep '.*foo.*')" != "" ] ; then
+    do_something ;
+done
+
+</pre><p>&nbsp;can be re-written using ksh93 builtin constructs, saving several <span class="box code"><tt class="wikimodel-verbatim">|fork()|+|exec()|</tt></span>'s:</p><pre>
+
+if [[ "${x}" == ~(E).*foo.* ]] ; then
+    do_something ;
+done
+
+</pre><h4 id="HIfthefirstoperandofacommandisavariableuse"><span>If the first operand of a command is a variable, use <span class="box code"><tt class="wikimodel-verbatim">~--</tt></span></span></h4><p>If the first operand of a command is a variable, use <span class="box code"><tt class="wikimodel-verbatim">~--</tt></span> for any command that accepts this as end of argument to avoid problems if the variable expands to a value starting with <span class="box code"><tt class="wikimodel-verbatim">-</tt></span>.</p><h3 id="HNote-1"><span>Note</span></h3><p>&nbsp;At least print, /usr/bin/fgrep, /usr/xpg4/bin/fgrep, /usr/bin/grep, /usr/xpg4/bin/grep, /usr/bin/egrep, /usr/xpg4/bin/egrep support <span class="box code"><tt class="wikimodel-verbatim">~--</tt></span> as "end of arguments"-terminator.</p><h4 id="HUseinsteadof"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use <span class="box code"><tt class="wikimodel-verbatim">$ export FOOBAR=val #</tt></span> instead of <span class="box code"><tt class="wikimodel-verbatim">$ FOOBAR=val ; export FOOBAR #</tt></span></span></h4><p>Use <span class="box code"><tt class="wikimodel-verbatim">$ export FOOBAR=val # instead of $ FOOBAR=val ; export FOOBAR #</tt></span> - this is much faster.</p><h4 id="HUseasubshellegaroundplaceswhichuseandor"><span>Use a subshell (e.g. <span class="box code"><tt class="wikimodel-verbatim">$ ( mycmd ) #</tt></span>) around places which use <span class="box code"><tt class="wikimodel-verbatim">set ~-- $(mycmd)</tt></span> and/or <span class="box code"><tt class="wikimodel-verbatim">shift</tt></span></span></h4><p>Use a subshell (e.g. <span class="box code"><tt class="wikimodel-verbatim">$ ( mycmd ) #</tt></span>) around places which use <span class="box code"><tt class="wikimodel-verbatim">set ~-- $(mycmd)</tt></span> and/or <span class="box code"><tt class="wikimodel-verbatim">shift</tt></span> unless the variable affected is either a local one or if it's guaranteed that this variable will no longer be used (be careful for loadable functions, e.g. ksh/ksh93's <span class="box code"><tt class="wikimodel-verbatim">autoload</tt></span> !!!!)</p><h4 id="HBecarefulwithusingTABSinscriptcodetheyarenotportablebetweeneditorsorplatforms"><span>Be careful with using TABS in script code, they are not portable between editors or platforms</span></h4><p>Be careful with using TABS in script code, they are not portable between editors or platforms.</p><p>If you use ksh93 use <span class="box code"><tt class="wikimodel-verbatim">$'\t'</tt></span> to include TABs in sources, not the TAB character itself.</p><h4 id="HIfyouhavemultiplepointswhereyourapplicationexitswithanerrormessagecreateacentralfunctionforthispurpose"><span>If you have multiple points where your application exits with an error message create a central function for this purpose</span></h4><p>If you have multiple points where your application exits with an error message create a central function for this, e.g.</p><pre>
+
+if [ -z "$tmpdir" ] ; then
+        print -u2 "mktemp failed to produce output; aborting."
+        exit 1
+fi
+if [ ! -d $tmpdir ] ; then
+        print -u2 "mktemp failed to create a directory; aborting."
+        exit 1
+fi
+
+</pre><p>&nbsp;should be replaced with</p><pre>
+
+function fatal_error
+{
+    print -u2 "${progname}: $*"
+    exit 1
+}
+# do something (and save ARGV[0] to variable "progname")
+if [ -z "$tmpdir" ] ; then
+        fatal_error "mktemp failed to produce output; aborting."
+fi
+if [ ! -d "$tmpdir" ] ; then
+        fatal_error "mktemp failed to create a directory; aborting."
+fi
+
+</pre><h4 id="HThinkaboutusingbydefault"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/>&nbsp;Think about using <span class="box code"><tt class="wikimodel-verbatim">$ set -o nounset #</tt></span> by default</span></h4><p>Think about using <span class="box code"><tt class="wikimodel-verbatim">$ set -o nounset #</tt></span> by default (or at least during the script's development phase) to catch errors where variables are used when they are not set (yet), e.g.</p><pre>
+
+$ **{{code}}(set -o nounset ; print ${foonotset}){{/code}}**
+/bin/ksh93: foonotset: parameter not set
+
+</pre><h4 id="HAvoidusingunlessabsolutelynecessary"><span>Avoid using <span class="box code"><tt class="wikimodel-verbatim">eval</tt></span> unless absolutely necessary</span></h4><p>Avoid using <span class="box code"><tt class="wikimodel-verbatim">eval</tt></span> unless absolutely necessary. Subtle things can happen when a string is passed back through the shell parser. You can use name references to avoid uses such as <span class="box code"><tt class="wikimodel-verbatim">eval $name="$value"</tt></span>.</p><h4 id="HUsethestringarrayconcatenationoperator"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use the string/array concatenation operator <span class="box code"><tt class="wikimodel-verbatim">+=</tt></span></span></h4><p>Use <span class="box code"><tt class="wikimodel-verbatim">+=</tt></span> instead of manually adding strings/array elements, e.g.</p><pre>
+
+foo=""
+foo="${foo}a"
+foo="${foo}b"
+foo="${foo}c"
+
+</pre><p>&nbsp;should be replaced with</p><pre>
+
+foo=""
+foo+="a"
+foo+="b"
+foo+="c"
+
+</pre><h4 id="HUseinsteadofdottoincludeothershellscriptfragments"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use <span class="box code"><tt class="wikimodel-verbatim">source</tt></span> instead of '<span class="box code"><tt class="wikimodel-verbatim">.</tt></span> '(dot) to include other shell script fragments</span></h4><p>Use <span class="box code"><tt class="wikimodel-verbatim">source</tt></span> instead of '<span class="box code"><tt class="wikimodel-verbatim">.</tt></span>' (dot) to include other shell script fragments - the new form is much more readable than the tiny dot and a failure can be caught within the script.</p><h4 id="HUseinsteadofforstringsthatneedtobelocalizedfordifferentlocales"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/> <img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/> <img src="/bin/download/Project+shell/shellstyle/images%2Ftag_l10n.png" alt="[l10n]" height=""/>&nbsp;Use <span class="box code"><tt class="wikimodel-verbatim">$"..."</tt></span> instead of <span class="box code"><tt class="wikimodel-verbatim">gettext ... "..."</tt></span> for strings that need to be localized for different locales</span></h4><p>Use $"..." instead of <span class="box code"><tt class="wikimodel-verbatim">gettext ... "..."</tt></span> for strings that need to be localized for different locales. <span class="box code"><tt class="wikimodel-verbatim">gettext</tt></span> will require a <span class="box code"><tt class="wikimodel-verbatim">fork()+exec()</tt></span> and reads the whole catalog each time it's called, creating a huge overhead for localisation (and the <span class="box code"><tt class="wikimodel-verbatim">$"..."</tt></span> is easier to use, e.g. you only have to put a <span class="box code"><tt class="wikimodel-verbatim">$</tt></span> in front of the catalog and the string will be localised).</p><h4 id="HUseifyoudonotneedtoexpandfiles"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use <span class="box code"><tt class="wikimodel-verbatim">set -o noglob</tt></span> if you do not need to expand files</span></h4><p>If you don't expect to expand files, you can do set <span class="box code"><tt class="wikimodel-verbatim">-f</tt></span> (<span class="box code"><tt class="wikimodel-verbatim">set -o noglob</tt></span>) as well. This way the need to use <span class="box code"><tt class="wikimodel-verbatim">""</tt></span> is greatly reduced.</p><h4 id="HUsetoavoidproblemswithspacesinfilenames"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use <span class="box code"><tt class="wikimodel-verbatim">IFS=</tt></span> to avoid problems with spaces in filenames</span></h4><p>Unless you want to do word splitting, put <span class="box code"><tt class="wikimodel-verbatim">IFS=</tt></span> at the beginning of a command. This way spaces in file names won't be a problem. You can do <span class="box code"><tt class="wikimodel-verbatim">IFS='delims' read -r</tt></span> line to override <span class="box code"><tt class="wikimodel-verbatim">IFS</tt></span> just for the <span class="box code"><tt class="wikimodel-verbatim">read</tt></span> command. However, you can't do this for the <span class="box code"><tt class="wikimodel-verbatim">set</tt></span> builtin.</p><h4 id="HSetthemessagelocaleifyouprocessoutputoftoolswhichmaybelocalised"><span>Set the message locale if you process output of tools which may be localised</span></h4><p>Set the message locale (<span class="box code"><tt class="wikimodel-verbatim">LC_MESSAGES</tt></span>) if you process output of tools which may be localised</p><p><strong>Example&#65533;1.&#65533;Set <span class="box code"><tt class="wikimodel-verbatim">LC_MESSAGES</tt></span> when testing for specific outout of the <span class="box code"><tt class="wikimodel-verbatim">/usr/bin/file</tt></span> utility:</strong></p><pre>
+
+# set french as default message locale
+export LC_MESSAGES=fr_FR.UTF-8
+
+...
+
+# test whether the file "/tmp" has the filetype "directory" or not
+# we set LC_MESSAGES to "C" to ensure the returned message is in english
+if [[ "$(LC_MESSAGES=C file /tmp)" = *directory ]] ; then
+    print "is a directory"
+fi
+
+</pre><h3 id="HNote-2"><span>Note</span></h3><p>The environment variable <span class="box code"><tt class="wikimodel-verbatim">LC_ALL</tt></span> always overrides any other <span class="box code"><tt class="wikimodel-verbatim">LC_*</tt></span> environment variables (and <span class="box code"><tt class="wikimodel-verbatim">LANG</tt></span>, too), including <span class="box code"><tt class="wikimodel-verbatim">LC_MESSAGES</tt></span>. if there is the chance that <span class="box code"><tt class="wikimodel-verbatim">LC_ALL</tt></span> may be set replace <span class="box code"><tt class="wikimodel-verbatim">LC_MESSAGES</tt></span> with <span class="box code"><tt class="wikimodel-verbatim">LC_ALL</tt></span> in the example above.</p><h4 id="HCleanupafteryourself"><span>Cleanup after yourself.</span></h4><p>Cleanup after yourself. For example ksh/ksh93 have an <span class="box code"><tt class="wikimodel-verbatim">EXIT</tt></span> trap which is very useful for this.</p><h3 id="HNote-3"><span>Note</span></h3><p>&nbsp;Note that the <span class="box code"><tt class="wikimodel-verbatim">EXIT</tt></span> trap is executed for a subshell and each subshell level can run it's own <span class="box code"><tt class="wikimodel-verbatim">EXIT</tt></span> trap, for example</p><pre>
+
+$ **{{code}}(trap "print bam" EXIT ; (trap "print snap" EXIT ; print "foo")){{/code}}**
+foo
+snap
+bam
+
+</pre><h4 id="HUseapropercode"><span>Use a proper <span class="box code"><tt class="wikimodel-verbatim">exit</tt></span> code</span></h4><p>Explicitly set the exit code of a script, otherwise the exit code from the last command executed will be used which may trigger problems if the value is unexpected.</p><h4 id="HUsetocheckforcommonerrors"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use <span class="box code"><tt class="wikimodel-verbatim">shcomp -n scriptname.sh /dev/null</tt></span> to check for common errors</span></h4><p>Use <span class="box code"><tt class="wikimodel-verbatim">shcomp -n scriptname.sh /dev/null</tt></span> to check for common problems (such as insecure, depreciated or ambiguous constructs) in shell scripts.</p><h3 id="HFunctions"><span>Functions</span></h3><h4 id="HUsefunctionstobreakupyourcode"><span>Use functions to break up your code</span></h4><p>Use functions to break up your code into smaller, logical blocks.</p><h4 id="HDonotusefunctionnameswhicharereservedkeywordsinCCJAVAorthePOSIXshellstandard"><span>Do not use function names which are reserved keywords in C/C++/JAVA or the POSIX shell standard</span></h4><p>Do not use function names which are reserved keywords (or function names) in C/C++/JAVA or the POSIX shell standard (to avoid confusion and/or future changes/updates to the shell language).</p><h4 id="HUsekshstyle"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use ksh-style <span class="box code"><tt class="wikimodel-verbatim">function</tt></span></span></h4><p>It is <em>highly</em> recommended to use ksh style functions (<span class="box code"><tt class="wikimodel-verbatim">function foo { ... }</tt></span>) instead of Bourne-style functions (<span class="box code"><tt class="wikimodel-verbatim">foo() { ... }</tt></span>) if possible (and local variables instead of spamming the global namespace).</p><h3 id="HWarning"><span>Warning</span></h3><p>&nbsp;The difference between old-style Bourne functions and ksh functions is one of the major differences between ksh88 and ksh93 - ksh88 allowed variables to be local for Bourne-style functions while ksh93 conforms to the POSIX standard and will use a function-local scope for variables declared in Bourne-style functions.</p><p>Example (note that "<span class="box code"><tt class="wikimodel-verbatim">integer</tt></span>" is an alias for "<span class="box code"><tt class="wikimodel-verbatim">typeset -li</tt></span>"):</p><pre>
+
+# new style function with local variable
+$ ksh93 -c 'integer x=2 ; function foo { integer x=5 ; } ; print "x=$x"
+; foo ; print "x=$x" ;'
+x=2
+x=2
+# old style function with an attempt to create a local variable
+$ ksh93 -c 'integer x=2 ; foo() { integer x=5 ; } ; print "x=$x" ; foo ;
+print "x=$x" ;'
+x=2
+x=5
+
+</pre><p><span class="box code"><tt class="wikimodel-verbatim">[[usr/src/lib/libshell/common/COMPATIBILITY&gt;&gt;Project ksh93-integration.compatibility]]</tt></span> says about this issue:</p><blockquote><p>&nbsp;Functions, defined with name() with ksh-93 are compatible with the POSIX standard, not with ksh-88. No local variables are permitted, and there is no separate scope. Functions defined with the function name syntax, maintain compatibility. This also affects function traces.</p></blockquote><p>&nbsp;(this issue also affects <span class="box code"><tt class="wikimodel-verbatim">/usr/xpg4/bin/sh</tt></span> in Solaris 10 because it is based on ksh88. This is a bug.).</p><h4 id="HUseapropercode-1"><span>Use a proper <span class="box code"><tt class="wikimodel-verbatim">return</tt></span> code</span></h4><p>Explicitly set the return code of a function - otherwise the exit code from the last command executed will be used which may trigger problems if the value is unexpected.</p><p>The only allowed exception is if a function uses the shell's <span class="box code"><tt class="wikimodel-verbatim">errexit</tt></span> mode to leave a function, subshell or the script if a command returns a non-zero exit code.</p><h4 id="HUsetoloadcommonfunctionsnot"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/>&nbsp;Use <span class="box code"><tt class="wikimodel-verbatim">FPATH</tt></span> to load common functions, not <span class="box code"><tt class="wikimodel-verbatim">source</tt></span></span></h4><p>&nbsp;Use the ksh <span class="box code"><tt class="wikimodel-verbatim">FPATH</tt></span> (function path) feature to load functions which are shared between scripts and not <span class="box code"><tt class="wikimodel-verbatim">source</tt></span> - this allows to load such a function on demand and not all at once.</p><h3 id="Hand"><span><span class="box code"><tt class="wikimodel-verbatim">if</tt></span>, <span class="box code"><tt class="wikimodel-verbatim">for</tt></span> and <span class="box code"><tt class="wikimodel-verbatim">while</tt></span></span></h3><h4 id="HFormat"><span>Format</span></h4><p>To match <span class="box code"><tt class="wikimodel-verbatim">cstyle</tt></span>, the shell token equivalent to the <span class="box code"><tt class="wikimodel-verbatim">C</tt></span> "<span class="box code"><tt class="wikimodel-verbatim">{</tt></span>" should appear on the same line, separated by a "<span class="box code"><tt class="wikimodel-verbatim">;</tt></span>", as in:</p><pre>
+
+if [ "$x" = "hello" ] ; then
+    echo $x
+fi
+
+if [[ "$x" = "hello" ]] ; then
+    print $x
+fi
+
+for i in 1 2 3; do
+    echo $i
+done
+
+for ((i=0 ; i &lt; 3 ; i++)); do
+    print $i
+done
+
+while [ $# -gt 0 ]; do
+    echo $1
+    shift
+done
+
+while (( $# &gt; 0 )); do
+  print $1
+  shift
+done
+
+</pre><h4 id="HBuiltin"><span><span class="box code"><tt class="wikimodel-verbatim">test</tt></span> Builtin</span></h4><p>DO NOT use the test builtin. Sorry, executive decision.</p><p>In our Bourne shell, the <span class="box code"><tt class="wikimodel-verbatim">test</tt></span> built-in is the same as the "[" builtin (if you don't believe me, try "type test" or refer to <span class="box code"><tt class="wikimodel-verbatim">usr/src/cmd/sh/msg.c</tt></span>).</p><p>&nbsp;So please do not write:</p><pre>
+
+if test $# -gt 0 ; then
+
+</pre><p>&nbsp;instead use:</p><pre>
+
+if [ $# -gt 0 ] ; then
+
+</pre><h4 id="HUseinsteadof-1"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use "<span class="box code"><tt class="wikimodel-verbatim">[[ expr ]]</tt></span>" instead of "<span class="box code"><tt class="wikimodel-verbatim">[ expr ]</tt></span>"</span></h4><p>Use "<span class="box code"><tt class="wikimodel-verbatim">[[ expr ]]</tt></span>" instead of "<span class="box code"><tt class="wikimodel-verbatim">[ expr ]</tt></span>" if possible since it avoids going through the whole pattern expansion/etc. machinery and adds additional operators not available in the Bourne shell, such as short-circuit <span class="box code"><tt class="wikimodel-verbatim">&amp;&amp;</tt></span> and <span class="box code"><tt class="wikimodel-verbatim">||</tt></span>.</p><h4 id="HUseforarithmeticexpressions"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/>&nbsp;Use "<span class="box code"><tt class="wikimodel-verbatim">(( ... ))</tt></span>" for arithmetic expressions</span></h4><p>Use "<span class="box code"><tt class="wikimodel-verbatim">(( ... ))</tt></span>" instead of "<span class="box code"><tt class="wikimodel-verbatim">[ expr ]</tt></span>" or "<span class="box code"><tt class="wikimodel-verbatim">[[ expr ]]</tt></span>" expressions.</p><p>&nbsp;Example: Replace</p><pre>
+
+i=5
+# do something
+if [ $i -gt 5 ] ; then
+
+</pre><p>&nbsp;with</p><pre>
+
+i=5
+# do something
+if (( i &gt; 5 )) ; then
+
+</pre><h4 id="HCompareexitcodeusingarithmeticexpressionsexpressions"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Compare exit code using arithmetic expressions expressions</span></h4><p>Use POSIX arithmetic expressions to test for exit/return codes of commands and functions. For example turn</p><pre>
+
+if [ $? -gt 0 ] ; then
+
+</pre><p>&nbsp;into</p><pre>
+
+if (( $? &gt; 0 )) ; then
+
+</pre><h4 id="HUsebuiltincommandsinconditionsforendlessloops"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_bourne.png" alt="[Bourne]" height=""/>&nbsp;Use builtin commands in conditions for <span class="box code"><tt class="wikimodel-verbatim">while</tt></span> endless loops</span></h4><p>Make sure that your shell has a "<span class="box code"><tt class="wikimodel-verbatim">true</tt></span>" builtin (like ksh93) when executing endless loops like <span class="box code"><tt class="wikimodel-verbatim">$ while true ; do do_something ; done #</tt></span> - otherwise each loop cycle runs a <span class="box code"><tt class="wikimodel-verbatim">|fork()|+|exec()|</tt></span>-cycle to run <span class="box code"><tt class="wikimodel-verbatim">/bin/true</tt></span></p><h4 id="HSinglelineifstatements"><span>Single-line if-statements</span></h4><p>It is permissible to use <span class="box code"><tt class="wikimodel-verbatim">&amp;&amp;</tt></span> and <span class="box code"><tt class="wikimodel-verbatim">||</tt></span> to construct shorthand for an "<span class="box code"><tt class="wikimodel-verbatim">if</tt></span>" statement in the case where the if statement has a single consequent line:</p><pre>
+
+[ $# -eq 0 ] &amp;&amp; exit 0
+
+</pre><p>&nbsp;instead of the longer:</p><pre>
+
+if [ $# -eq 0 ]; then
+  exit 0
+fi
+
+</pre><h4 id="HExitStatusandstatements"><span>Exit Status and <span class="box code"><tt class="wikimodel-verbatim">if</tt></span>/<span class="box code"><tt class="wikimodel-verbatim">while</tt></span> statements</span></h4><p>Recall that "<span class="box code"><tt class="wikimodel-verbatim">if</tt></span>" and "<span class="box code"><tt class="wikimodel-verbatim">while</tt></span>" operate on the exit status of the statement to be executed. In the shell, zero (0) means true and non-zero means false. The exit status of the last command which was executed is available in the $? variable. When using "<span class="box code"><tt class="wikimodel-verbatim">if</tt></span>" and "<span class="box code"><tt class="wikimodel-verbatim">while</tt></span>", it is typically not necessary to use <span class="box code"><tt class="wikimodel-verbatim">$?</tt></span> explicitly, as in:</p><pre>
+
+grep foo /etc/passwd &gt;/dev/null 2&gt;&amp;1
+if [ $? -eq 0 ]; then
+  echo "found"
+fi
+
+</pre><p>&nbsp;Instead, you can more concisely write:</p><pre>
+
+if grep foo /etc/passwd &gt;/dev/null 2&gt;&amp;1; then
+  echo "found"
+fi
+
+</pre><p>&nbsp;Or, when appropriate:</p><pre>
+
+grep foo /etc/passwd &gt;/dev/null 2&gt;&amp;1 &amp;&amp; echo "found"
+
+</pre><h3 id="HVariabletypesnamingandusage"><span>Variable types, naming and usage</span></h3><h4 id="HNamesoflocalnonenvironmentnonconstantvariablesshouldbelowercase"><span>Names of local, non-environment, non-constant variables should be lowercase</span></h4><p>Names of variables local to the current script which are not exported to the environment should be lowercase while variable names which are exported to the environment should be uppercase.</p><p>The only exception are global constants (=global readonly variables, e.g. <span class="box code"><tt class="wikimodel-verbatim">$ float -r M_PI=3.14159265358979323846 #</tt></span> (taken from &lt;math.h&gt;)) which may be allowed to use uppercase names, too.</p><h3 id="HWarning-1"><span>Warning</span></h3><p>&nbsp;Uppercase variable names should be avoided because there is a good chance of naming collisions with either special variable names used by the shell (e.g. <span class="box code"><tt class="wikimodel-verbatim">PWD</tt></span>, <span class="box code"><tt class="wikimodel-verbatim">SECONDS</tt></span> etc.).</p><h4 id="HDonotusevariablenameswhicharereservedkeywordsvariablenamesinCCJAVAorthePOSIXshellstandard"><span>Do not use variable names which are reserved keywords/variable names in C/C++/JAVA or the POSIX shell standard</span></h4><p>Do not use variable names which are reserved keywords in C/C++/JAVA or the POSIX shell standard (to avoid confusion and/or future changes/updates to the shell language).</p><h3 id="HNote-4"><span>Note</span></h3><p>The Korn Shell and the POSIX shell standard have many more reserved variable names than the original Bourne shell. All these reserved variable names are spelled uppercase.</p><h4 id="HAlwaysusewhenusingvariablenameslongerthanonecharacter"><span>Always use <span class="box code"><tt class="wikimodel-verbatim">'{'</tt></span>+<span class="box code"><tt class="wikimodel-verbatim">'}'</tt></span> when using variable names longer than one character</span></h4><p>Always use <span class="box code"><tt class="wikimodel-verbatim">'{'</tt></span>+<span class="box code"><tt class="wikimodel-verbatim">'}'</tt></span> when using variable names longer than one character unless a simple variable name is followed by a blank, <span class="box code"><tt class="wikimodel-verbatim">/</tt></span>, <span class="box code"><tt class="wikimodel-verbatim">;</tt></span>, or <span class="box code"><tt class="wikimodel-verbatim">$</tt></span> character (to avoid problems with array, compound variables or accidental misinterpretation by users/shell)</p><pre>
+
+print "$foo=info"
+
+</pre><p>&nbsp;should be rewritten to</p><pre>
+
+print "${foo}=info"
+
+</pre><h4 id="HAlwaysputvariablesintoquoteswhenhandlingfilenamesoruserinput"><span><em>Always</em> put variables into quotes when handling filenames or user input</span></h4><p><em>Always</em> put variables into quotes when handling filenames or user input, even if the values are hardcoded or the values appear to be fixed. Otherwise at least two things may go wrong:</p><ul><li>a malicious user may be able to exploit a script's inner working to infect his/her own code</li><li>a script may (fatally) misbehave for unexpected input (e.g. file names with blanks and/or special symbols which are interpreted by the shell)</li></ul><h3 id="HNote-5"><span>Note</span></h3><p>&nbsp;As alternative a script may set <span class="box code"><tt class="wikimodel-verbatim">IFS='' ; set -o noglob</tt></span> to turn off the interpretation of any field seperators and the pattern globbing.</p><h4 id="HUsetypedvariablesifpossible"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use typed variables if possible.</span></h4><p>For example the following is very inefficient since it transforms the integer values to strings and back several times:</p><pre>
+
+a=0
+b=1
+c=2
+# more code
+if [ $a -lt 5 -o $b -gt c ] ; then do_something ; fi
+
+</pre><p>&nbsp;This could be rewritten using ksh constructs:</p><pre>
+
+integer a=0
+integer b=1
+integer c=2
+# more code
+if (( a &lt; 5 || b &gt; c )) ; then do_something ; fi
+
+</pre><h4 id="HStorelistsinarraysorassociativearrays"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Store lists in arrays or associative arrays</span></h4><p>Store lists in arrays or associative arrays - this is usually easier to manage.</p><p>&nbsp;For example:</p><pre>
+
+x="
+/etc/foo
+/etc/bar
+/etc/baz
+"
+echo $x
+
+</pre><p>&nbsp;can be replaced with</p><pre>
+
+typeset -a mylist
+mylist[0]="/etc/foo"
+mylist[1]="/etc/bar"
+mylist[2]="/etc/baz"
+print "${mylist[@]}"
+
+</pre><p>&nbsp;or (ksh93-style append entries to a normal (non-associative) array)</p><pre>
+
+typeset -a mylist
+mylist+=( "/etc/foo" )
+mylist+=( "/etc/bar" )
+mylist+=( "/etc/baz" )
+print "${mylist[@]}"
+
+</pre><h3 id="HDifferencebetweenexpandingarrayswithmylistandmylistsubscriptoperators"><span>Difference between expanding arrays with mylist[@] and mylist[*] subscript operators</span></h3><p>&nbsp;Arrays may be expanded using two similar subscript operators, @ and *. These subscripts differ only when the variable expansion appears within double quotes. If the variable expansion is between double-quotes, "${mylist[*]}" expands to a single string with the value of each array member separated by the first character of the <span class="box code"><tt class="wikimodel-verbatim">IFS</tt></span> variable, and "${mylist[@]}" expands each element of name to a separate string.</p><p><strong>Example&#65533;2.&#65533;Difference between [@] and [*] when expanding arrays</strong></p><pre>
+
+typeset -a mylist
+mylist+=( "/etc/foo" )
+mylist+=( "/etc/bar" )
+mylist+=( "/etc/baz" )
+IFS=","
+printf "mylist[*]={ 0=|%s| 1=|%s| 2=|%s| 3=|%s| }\n" "${mylist[*]}"
+printf "mylist[@]={ 0=|%s| 1=|%s| 2=|%s| 3=|%s| }\n" "${mylist[@]}"
+
+</pre><p>will print:</p><pre>
+
+mylist[*]={ 0=|/etc/foo,/etc/bar,/etc/baz| 1=|| 2=|| 3=|| }
+mylist[@]={ 0=|/etc/foo| 1=|/etc/bar| 2=|/etc/baz| 3=|| }
+
+</pre><h4 id="HUsecompoundvariablesorassociativearraystogroupsimilarvariablestogether"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use compound variables or associative arrays to group similar variables together</span></h4><p>Use compound variables or associative arrays to group similar variables together.</p><p>&nbsp;For example:</p><pre>
+
+box_width=56
+box_height=10
+box_depth=19
+echo "${box_width} ${box_height} ${box_depth}"
+
+</pre><p>&nbsp;could be rewritten to ("associative array"-style)</p><pre>
+
+typeset -A -E box=( [width]=56 [height]=10 [depth]=19 )
+print ~-- "${box[width]} ${box[height]} ${box[depth]}"
+
+</pre><p>&nbsp;or ("compound variable"-style</p><pre>
+
+box=(
+    float width=56
+    float height=10
+    float depth=19
+    )
+print ~-- "${box.width} ${box.height} ${box.depth}"
+
+</pre><h3 id="HIO"><span>I/O</span></h3><h4 id="HAvoidusingthecommandforoutput"><span>Avoid using the "<span class="box code"><tt class="wikimodel-verbatim">echo</tt></span>" command for output</span></h4><p>The behaviour of "<span class="box code"><tt class="wikimodel-verbatim">echo</tt></span>" is not portable (e.g. System V, BSD, UCB and ksh93/bash shell builtin versions all slightly differ in functionality) and should be avoided if possible. POSIX defines the "<span class="box code"><tt class="wikimodel-verbatim">printf</tt></span>" command as replacement which provides more flexible and portable behaviour.</p><h3 id="HUseandnotinKornShellscripts"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/>&nbsp;Use "<span class="box code"><tt class="wikimodel-verbatim">print</tt></span>" and not "<span class="box code"><tt class="wikimodel-verbatim">echo</tt></span>" in Korn Shell scripts</span></h3><p>Korn shell scripts should prefer the "<span class="box code"><tt class="wikimodel-verbatim">print</tt></span>" builtin which was introduced as replacement for "<span class="box code"><tt class="wikimodel-verbatim">echo</tt></span>".</p><h3 id="HCaution"><span>Caution</span></h3><p>Use <span class="box code">$ print ~-- <span style="color: #BC7A00; ">${</span>varname<span style="color: #BC7A00; ">}</span>" #<br/></span> when there is the slightest chance that the variable "<span class="box code"><tt class="wikimodel-verbatim">varname</tt></span>" may contain symbols like "-". Or better use "<span class="box code"><tt class="wikimodel-verbatim">printf</tt></span>" instead, for example</p><pre>
+
+integer fx
+# do something
+print $fx
+
+</pre><p>&nbsp;may fail if "f" contains a negative value. A better way may be to use</p><pre>
+
+integer fx
+# do something
+printf "%d\n" fx
+
+</pre><h4 id="HUseandnottoopenfiles"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use <span class="box code"><tt class="wikimodel-verbatim">redirect</tt></span> and not <span class="box code"><tt class="wikimodel-verbatim">exec</tt></span> to open files</span></h4><p>Use <span class="box code"><tt class="wikimodel-verbatim">redirect</tt></span> and not <span class="box code"><tt class="wikimodel-verbatim">exec</tt></span> to open files - <span class="box code"><tt class="wikimodel-verbatim">exec</tt></span> will terminate the current function or script if an error occurs while <span class="box code"><tt class="wikimodel-verbatim">redirect</tt></span> just returns a non-zero exit code which can be caught.</p><p>Example:</p><pre>
+
+if redirect 5&lt;/etc/profile ; then
+    print "file open ok"
+    head &lt;&amp;5
+else
+    print "could not open file"
+fi
+
+</pre><h4 id="HAvoidredirectionspercommandwhentheoutputgoesintothesamefileeg"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Avoid redirections per command when the output goes into the same file, e.g. <span class="box code"><tt class="wikimodel-verbatim">$ echo "foo" &gt;xxx ; echo "bar" &gt;&gt;xxx ; echo "baz" &gt;&gt;xxx #</tt></span></span></h4><p>Each of the redirections above trigger an <span class="box code"><tt class="wikimodel-verbatim">|open()|,|write()|,|close()|</tt></span>-sequence. It is much more efficient (and faster) to group the rediction into a block, e.g. <span class="box code"><tt class="wikimodel-verbatim">{ echo "foo" ; echo "bar" ; echo "baz" } &gt;xxx #</tt></span></p><h4 id="HAvoidthecreationoftemporaryfilesandstorethevaluesinvariablesinstead"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Avoid the creation of temporary files and store the values in variables instead</span></h4><p>Avoid the creation of temporary files and store the values in variables instead if possible</p><p>&nbsp;Example:</p><pre>
+
+ls -1 &gt;xxx
+for i in $(cat xxx) ; do
+    do_something ;
+done
+
+</pre><p>&nbsp;can be replaced with</p><pre>
+
+x="$(ls -1)"
+for i in ${x} ; do
+    do_something ;
+done
+
+</pre><h3 id="HNote-6"><span>Note</span></h3><p>ksh93 supports binary variables (e.g. <span class="box code"><tt class="wikimodel-verbatim">typeset -b varname</tt></span>) which can hold any value.</p><h4 id="HIfyoucreatemorethanonetemporaryfilecreateanuniquesubdir"><span>If you create more than one temporary file create an unique subdir</span></h4><p>If you create more than one temporary file create an unique subdir for these files and make sure the dir is writable. Make sure you cleanup after yourself (unless you are debugging).</p><h4 id="HUsenfileinsteadoffixedfiledescriptornumbers"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use {n}&lt;file instead of fixed file descriptor numbers</span></h4><p>When opening a file use {n}&lt;file, where <span class="box code"><tt class="wikimodel-verbatim">n</tt></span> is an integer variable rather than specifying a fixed descriptor number.</p><p>This is highly recommended in functions to avoid that fixed file descriptor numbers interfere with the calling script.</p><p><strong>Example&#65533;3.&#65533;Open a network connection and store the file descriptor number in a variable</strong></p><pre>
+
+function cat_http
+{
+    integer netfd
+
+...
+
+    # open TCP channel
+    redirect {netfd}&lt;&gt;"/dev/tcp/${host}/${port}"
+
+    # send HTTP request
+    request="GET /${path} HTTP/1.1\n"
+    request+="Host: ${host}\n"
+    request+="User-Agent: demo code/ksh93 (2007-08-30; $(uname -s -r -p))\n"
+    request+="Connection: close\n"
+    print "${request}\n" &gt;&amp;${netfd}
+
+    # collect response and send it to stdout
+    cat &lt;&amp;${netfd}
+
+    # close connection
+    exec {netfd}&lt;&amp;-
+
+...
+
+}
+
+</pre><h4 id="HUseinlineheredocumentsinsteadof"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/> <img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use inline here documents instead of <span class="box code"><tt class="wikimodel-verbatim">echo "$x" | command</tt></span></span></h4><p>Use inline here documents, for example</p><pre>
+
+command &lt;&lt;&lt; $x
+
+</pre><p>&nbsp;rather than</p><pre>
+
+print -r ~-- "$x" | command
+
+</pre><h4 id="HUsetheoptionoftoreadaline"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use the <span class="box code"><tt class="wikimodel-verbatim">-r</tt></span> option of <span class="box code"><tt class="wikimodel-verbatim">read</tt></span> to read a line</span></h4><p>Use the <span class="box code"><tt class="wikimodel-verbatim">-r</tt></span> option of <span class="box code"><tt class="wikimodel-verbatim">read</tt></span> to read a line. You never know when a line will end in <span class="box code"><tt class="wikimodel-verbatim">\</tt></span> and without a <span class="box code"><tt class="wikimodel-verbatim">-r</tt></span> multiple lines can be read.</p><h4 id="HPrintcompoundvariablesusingor"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Print compound variables using <span class="box code"><tt class="wikimodel-verbatim">print -C varname</tt></span> or <span class="box code"><tt class="wikimodel-verbatim">print -v varname</tt></span></span></h4><p>Print compound variables using <span class="box code"><tt class="wikimodel-verbatim">print -C varname</tt></span> or <span class="box code"><tt class="wikimodel-verbatim">print -v varname</tt></span> to make sure that non-printable characters are correctly encoded.</p><p><strong>Example&#65533;4.&#65533;Print compound variable with non-printable characters</strong></p><pre>
+
+compound x=(
+    a=5
+    b="hello"
+    c=(
+        d=9
+        e="$(printf "1\v3")" [[image:images/callouts/1.png||alt="1"height=""]]
+    )
+)
+print -v x
+
+</pre><p>will print:</p><pre>
+
+(
+        a=5
+        b=hello
+        c=(
+                d=9
+                e=$'1\0133' [[image:images/callouts/1.png||alt="1"height=""]]
+        )
+)
+
+</pre><table><tr><td><span class="wikilink"><a href="#co.vertical_tab1"><img src="/bin/download/Project+shell/shellstyle/images%2Fcallouts%2F1.png" alt="1" height=""/></a></span> <span class="wikilink"><a href="#co.vertical_tab2"><img src="/bin/download/Project+shell/shellstyle/images%2Fcallouts%2F1.png" alt="1" height=""/></a></span></td><td><br/>vertical tab, <span class="box code"><tt class="wikimodel-verbatim">\v</tt></span>, octal=<span class="box code"><tt class="wikimodel-verbatim">\013</tt></span>.</td></tr></table><h4 id="HPutthecommandnameandargumentsbeforeredirections"><span>Put the command name and arguments before redirections</span></h4><p>Put the command name and arguments before redirections. You can legally do <span class="box code"><tt class="wikimodel-verbatim">$ &gt; file date</tt></span> instead of <span class="box code"><tt class="wikimodel-verbatim">date &gt; file</tt></span> but don't do it.</p><h4 id="HEnabletheeditormodewhenreadinguserinputusingthebuiltin"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Enable the <span class="box code"><tt class="wikimodel-verbatim">gmacs</tt></span> editor mode when reading user input using the <span class="box code"><tt class="wikimodel-verbatim">read</tt></span> builtin</span></h4><p>Enable the <span class="box code"><tt class="wikimodel-verbatim">gmacs</tt></span>editor mode before reading user input using the <span class="box code"><tt class="wikimodel-verbatim">read</tt></span> builtin to enable the use of cursor+backspace+delete keys in the edit line</p><p><strong>Example&#65533;5.&#65533;Prompt user for a string with gmacs editor mode enabled</strong></p><pre>
+
+set -o gmacs [[image:images/callouts/1.png||alt="1"height=""]]
+typeset inputstring="default value"
+...
+read -v[[image:images/callouts/2.png||alt="2"height=""]] inputstring[[image:images/callouts/3.png||alt="3"height=""]]?"Please enter a string: "[[image:images/callouts/4.png||alt="4"height=""]]
+...
+printf "The user entered the following string: '%s'\n" "${inputstring}"
+
+...
+
+</pre><table><tr><td><span class="wikilink"><a href="#co.enable_gmacs"><img src="/bin/download/Project+shell/shellstyle/images%2Fcallouts%2F1.png" alt="1" height=""/></a></span></td><td><br/>Enable gmacs editor mode.</td></tr><tr><td><span class="wikilink"><a href="#co.read_v"><img src="/bin/download/Project+shell/shellstyle/images%2Fcallouts%2F2.png" alt="2" height=""/></a></span></td><td><br/>The value of the variable is displayed and used as a default value.</td></tr><tr><td><span class="wikilink"><a href="#co.readvar"><img src="/bin/download/Project+shell/shellstyle/images%2Fcallouts%2F3.png" alt="3" height=""/></a></span></td><td><br/>Variable used to store the result.</td></tr><tr><td><span class="wikilink"><a href="#co.prompt"><img src="/bin/download/Project+shell/shellstyle/images%2Fcallouts%2F4.png" alt="4" height=""/></a></span></td><td><br/>Prompt string which is displayed in stderr.</td></tr></table><h3 id="HMath"><span>Math</span></h3><h4 id="HUsebuiltinarithmeticexpressionsinsteadofexternalapplications"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use builtin arithmetic expressions instead of external applications</span></h4><p>Use builtin (POSIX shell) arithmetic expressions instead of <span class="box code"><tt class="wikimodel-verbatim">expr</tt></span>, <span class="box code"><tt class="wikimodel-verbatim">bc</tt></span>, <span class="box code"><tt class="wikimodel-verbatim">dc</tt></span>, <span class="box code"><tt class="wikimodel-verbatim">awk</tt></span>, <span class="box code"><tt class="wikimodel-verbatim">nawk</tt></span> or <span class="box code"><tt class="wikimodel-verbatim">perl</tt></span>.</p><h3 id="HNote-7"><span>Note</span></h3><p>ksh93 supports C99-like floating-point arithmetic including special values such as +Inf, -Inf, +NaN, -NaN.</p><h4 id="HUsefloatingpointarithmeticexpressionsifcalculationsmaytriggeradivisionbyzeroorotherexceptions"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use floating-point arithmetic expressions if calculations may trigger a division by zero or other exceptions</span></h4><p>Use floating-point arithmetic expressions if calculations may trigger a division by zero or other exceptions - floating point arithmetic expressions in ksh93 support special values such as <span class="box code"><tt class="wikimodel-verbatim">+Inf</tt></span>/<span class="box code"><tt class="wikimodel-verbatim">-Inf</tt></span> and <span class="box code"><tt class="wikimodel-verbatim">+NaN</tt></span>/<span class="box code"><tt class="wikimodel-verbatim">-NaN</tt></span> which can greatly simplify testing for error conditions, e.g. instead of a <span class="box code"><tt class="wikimodel-verbatim">trap</tt></span> or explicit <span class="box code"><tt class="wikimodel-verbatim">if ... then... else</tt></span> checks for every sub-expression you can check the results for such special values.</p><p>Example:</p><pre>
+
+$ **{{code}}ksh93 -c 'integer i=0 j=5 ; print ~-- "x=$((j/i)) "'{{/code}}**
+ksh93: line 1: j/i: divide by zero
+$ **{{code}}ksh93 -c 'float i=0 j=-5 ; print ~-- "x=$((j/i)) "'{{/code}}**
+x=-Inf
+
+</pre><h4 id="HUsewhenpassingfloatingpointvalues"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use <span class="box code"><tt class="wikimodel-verbatim">printf "%a"</tt></span> when passing floating-point values</span></h4><p>Use <span class="box code"><tt class="wikimodel-verbatim">printf "%a"</tt></span> when passing floating-point values between scripts or as output of a function to avoid rounding errors when converting between bases.</p><p>&nbsp;Example:</p><pre>
+
+function xxx
+{
+    float val
+
+    (( val=sin(5.) ))
+    printf "%a\n" val
+}
+float out
+(( out=$(xxx) ))
+xxx
+print ~-- $out
+
+</pre><p>&nbsp;This will print:</p><pre>
+
+-0.9589242747
+-0x1.eaf81f5e09933226af13e5563bc6p-01
+
+</pre><h4 id="HPutconstantvaluesintoreadonlyvariables"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Put constant values into readonly variables</span></h4><p>Put constant values into readonly variables</p><p>For example:</p><pre>
+
+float -r M_PI=3.14159265358979323846
+
+</pre><p>&nbsp;or</p><pre>
+
+float M_PI=3.14159265358979323846
+readonly M_PI
+
+</pre><h4 id="HAvoidstringtonumberandornumbertostringconversionsinarithmeticexpressionsexpressions"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Avoid string to number (and/or number to string) conversions in arithmetic expressions expressions</span></h4><p>Avoid string to number and/or number to string conversions in arithmetic expressions expressions to avoid performance degradation and rounding errors.</p><p><strong>Example&#65533;6.&#65533;(( x=$x*2 )) vs. (( x=x*2 ))</strong></p><pre>
+
+float x
+...
+(( x=$x*2 ))
+
+</pre><p>&nbsp;will convert the variable "x" (stored in the machine's native <span class="box code"><tt class="wikimodel-verbatim">|long double|</tt></span> datatype) to a string value in base10 format, apply pattern expansion (globbing), then insert this string into the arithmetic expressions and parse the value which converts it into the internal |long double| datatype format again. This is both slow and generates rounding errors when converting the floating-point value between the internal base2 and the base10 representation of the string.</p><p>&nbsp;The correct usage would be:</p><pre>
+
+float x
+...
+(( x=x*2 ))
+
+</pre><p>&nbsp;e.g. omit the '$' because it's (at least) redundant within arithmetic expressions.</p><p><strong>Example&#65533;7.&#65533;x=$(( y+5.5 )) vs. (( x=y+5.5 ))</strong></p><pre>
+
+float x
+float y=7.1
+...
+x=$(( y+5.5 ))
+
+</pre><p>&nbsp;will calculate the value of <span class="box code"><tt class="wikimodel-verbatim">y+5.5</tt></span>, convert it to a base-10 string value amd assign the value to the floating-point variable <span class="box code"><tt class="wikimodel-verbatim">x</tt></span> again which will convert the string value back to the internal |long double| datatype format again.</p><p>&nbsp;The correct usage would be:</p><pre>
+
+float x
+float y=7.1
+...
+(( x=y+5.5 ))
+
+</pre><p>&nbsp;i.e. this will save the string conversions and avoid any base2--&gt;base10--&gt;base2-conversions.</p><h4 id="HSetwhenusingfloatingpointconstants"><span><img src="/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Set <span class="box code"><tt class="wikimodel-verbatim">LC_NUMERIC</tt></span> when using floating-point constants</span></h4><p>Set <span class="box code"><tt class="wikimodel-verbatim">LC_NUMERIC</tt></span> when using floating-point constants to avoid problems with radix-point representations which differ from the representation used in the script, for example the <span class="box code"><tt class="wikimodel-verbatim">de_DE.*</tt></span> locale use ',' instead of '.' as default radix point symbol.</p><p>For example:</p><pre>
+
+# Make sure all math stuff runs in the "C" locale to avoid problems with alternative
+# radix point representations (e.g. ',' instead of '.' in de_DE.*-locales). This
+# needs to be set _before_ any floating-point constants are defined in this script)
+if [[ "${LC_ALL}" != "" ]] ; then
+    export \
+        LC_MONETARY="${LC_ALL}" \
+        LC_MESSAGES="${LC_ALL}" \
+        LC_COLLATE="${LC_ALL}" \
+        LC_CTYPE="${LC_ALL}"
+        unset LC_ALL
+fi
+export LC_NUMERIC=C
+...
+float -r M_PI=3.14159265358979323846
+
+</pre><h3 id="HNote-8"><span>Note</span></h3><p>The environment variable <span class="box code"><tt class="wikimodel-verbatim">LC_ALL</tt></span> always overrides all other <span class="box code"><tt class="wikimodel-verbatim">LC_*</tt></span> variables, including <span class="box code"><tt class="wikimodel-verbatim">LC_NUMERIC</tt></span>. The script should always protect itself against custom <span class="box code"><tt class="wikimodel-verbatim">LC_NUMERIC</tt></span> and <span class="box code"><tt class="wikimodel-verbatim">LC_ALL</tt></span> values as shown in the example above.</p><h3 id="HMisc"><span>Misc</span></h3><h4 id="HPutinyour"><span>Put <span class="box code">[<span style="color: #BC7A00; ">${</span>LINENO<span style="color: #BC7A00; ">}</span>]<br/></span> in your <span class="box code"><tt class="wikimodel-verbatim">PS4</tt></span></span></h4><p>Put <span class="box code">[<span style="color: #BC7A00; ">${</span>LINENO<span style="color: #BC7A00; ">}</span>]<br/></span> in your <span class="box code"><tt class="wikimodel-verbatim">PS4</tt></span> prompt so that you will get line numbers with you run with <span class="box code"><tt class="wikimodel-verbatim">-x</tt></span>. If you are looking at performance issues put <span class="box code"><tt class="wikimodel-verbatim">$SECONDS</tt></span> in the <span class="box code"><tt class="wikimodel-verbatim">PS4</tt></span> prompt as well.</p>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:17<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by fleyta on 2009/11/02 19:27
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+                </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSNav','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSNav'); togglePanelVisibility(this.parentNode);">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavCommunity Group">
+            <div id="xwikinavCommunity GroupHeader" class="accordionTabTitleBar"><h6>Community Group</h6>
+            </div>
+            <div id="xwikinavCommunity GroupContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+edu/">Academic and Research</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+accessibility/">Accessibility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+advocacy/">Advocacy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+appliances/">Appliances</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+approachability/">Approachability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/">Architecture Process and Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+brandz/">BrandZ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+chinese_users/">Chinese Users</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/">Community Advisory Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+dtrace/">DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+databases/">Databases</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+desktop/">Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/">Device Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+distribution/">Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+emerging_platforms/">Emerging Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+fm/">Fault Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+games/">Games on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ha%2Dclusters/">HA Clusters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+hpcdev/">HPC Developer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+int_localization/">Internationalization and Localization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+laptop/">Laptop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ldoms/">Logical Domains</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+mdb/">Modular Debugger (MDB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+nfs/">NFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/">Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/">OS/Net (ON)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+observability/">Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ogb/">OpenSolaris Governing Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+printing/">OpenSolaris Printing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/">Performance</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+pm/">Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+power_pc/">PowerPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/">Security</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+smf/">Service Management Facility (smf(5))</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sw%2Dporters/">Software Porters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+volume_manager/">Solaris Volume Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+storage/">Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sysadmin/">Systems Administration Community Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+testing/">Testing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/">Tools Home</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ufs/">Unix File Systems (UFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+web/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+x_win/">X Window System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+xen/">Xen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/">ZFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/">Zones</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavProject">
+            <div id="xwikinavProjectHeader" class="accordionTabTitleBar"><h6>Project</h6>
+            </div>
+            <div id="xwikinavProjectContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/"></a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+adsl/">ADSL Modem Enhancement</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+arc%2Dprocess/">ARC Process Definition</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osarm/">ARM Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bluetooth/">Bluetooth Stack & Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dinitiator/">Brocade FC HBA &#45; Initiator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dtarget/">Brocade FC HBA &#45; Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brussels/">Brussels &#45; unified network link configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cifs%2Dserver/">CIFS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smbfs/">CIFS client for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cmt/">CMT</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/">COMSTAR: Common Multiprotocol SCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpufs/">CPU Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/">Caiman, Solaris Install Revisited</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+celeste/">Celeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/">Chime Visualization Tool for DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+clearview/">Clearview: Network Interface Coherence</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dinformix/">Cluster Agent: Informix Dynamic Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dcontainer/">Cluster Agent: OpenSolaris Container</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dxvm/">Cluster Agent: OpenSolaris xVM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Debs/">Cluster Agent: Oracle E&#45;Business Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dsmb/">Cluster Agent: Samba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dtomcat/">Cluster Agent: Tomcat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dpostgresql/">Cluster agent: PostgreSQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+data%2Dflow/">Coarse Data Flow Parallelism</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+colorado/">Colorado: Open HA Cluster on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+commandassist/">Command Assistant</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cam/">Common Array Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+companion/">Companion &#45; /opt/sfw: Free and Open Source software</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+content/">Content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+contest/">Contest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpg/">Credentials Process Groups</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crossbow/">Crossbow: Network Virtualization and Resource Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmsagenttoolkit/">Crypto KMS Agent Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/">Cryptographic Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Ddoc/">DTrace Guide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dmm/">Data Migration Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+datatethers/">Data Tethers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+de/">Deutsches Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ddtool/">Device Detection Tool</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+driver%2Dutility/">Device Driver Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devicemgr/">Device Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devmapper/">Device Mapper</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dri/">Direct Rendering Infrastructure & 3D drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/">Duckwater: Simplified name services management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+phpEasyTools/">Easy Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emancipation/">Emancipation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex%2Dcna/">Emulex Advanced Ethernet Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex/">Emulex Fibre Channel Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webcams/">Enhance the support of USB webcams</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Dprofiles/">Enhanced SMF Profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+amd/">Enhancements for AMD&#45;based Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+erlang%2Ddtrace/">Erlang DTrace Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ethbridge/">Ethernet bridge module for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+conary%2Deval/">Evaluate Conary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+events%2Dregistry/">Events Registry</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ext3/">Ext3 file system support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+facilitation/">Facilitation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fcoe/">Fibre Channel over Ethernet</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fgap/">Fine Grained Access Policy (FGAP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fingerprint%2Dauthentication/">Fingerprint Authentication</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fmac/">Flexible Mandatory Access Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+forensics/">Forensic Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fox/">Fully Open X Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fuse/">Fuse on Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+generic%2Dmca/">Generic Machine Check Architecture Improvements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+raidcfg/">Generic RAID Configuration Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+summerofcode/">Google SOC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Djboss/">HA&#45;JBoss</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dmysql/">HA&#45;MySQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hpc%2Dstack/">HPC Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livehadoop/">Hadoop Live CD</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hitachi/">Hitachi</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+honeycomb/">HoneyComb Fixed Content Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hotplug/">Hotplug Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ip%2Drefactor/">IP Datapath Refactoring</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ipoib/">IP over Infiniband</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tref/">IPsec Tunnel Reform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/">Image Packaging System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isc/">Immutable Service Containers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+perfmib/">Improved Performance MIB</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/">Indiana</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ikev2/">Internet Key Exchange, version 2 (IKEv2)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+irm/">Interrupt Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jkstat/">JKstat &#45; a java binding for libkstat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jeos/">JeOS &#45; Just enough Operating System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jfs/">Journaled File System (JFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kde/">K Desktop Environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kerberos/">Kerberos</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kssl/">Kernel SSL Enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kernel%2Dsockets/">Kernel Sockets</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmf/">Key Management Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ksh93%2Dintegration/">Korn Shell 93 integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ldoms%2Dmgr/">LDoms Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+txipsec/">Labeled IPsec</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+l2filter/">Layer 2 Filtering</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lending/">Lending</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lld/">Link Layer Discovery</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livemedia/">Live Media: Technologies for distributions running from CD and other media</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+localedata/">Locale Data</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mips/">MIPS Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohac%2Davs/">MRSL.NONsharedDevice</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mega_sas/">Mega_sas</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mx/">Mexico</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+milax/">MilaX minimal Live Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mozilla%2Ddtrace/">Mozilla DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+glossary/">Multi&#45;lingual Glossary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mpxio/">Multi&#45;pathing software (MPxIO)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+multiple%2Ddoi/">Multiple DOI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+large%2Dsector/">Multiple disk sector size support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+muskoka/">Muskoka: An open repository for OpenSolaris technical content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsrdma/">NFS RDMA transport update and performance analysis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dzones/">NFS Server in non&#45;Global Zones</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsv41/">NFS version 4.1 pNFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dnamespace/">NFSv4 namespace extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npiv/">NPort ID Virtualization (NPIV)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+navigator/">Navigator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nemo/">Nemo: A Framework for High&#45;Performance Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/">Network Auto&#45;Magic</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ndmp/">Network Data Management Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+net%2Dmib/">Network MIBs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npp/">Network Performance Projects</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dpm/">Network Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nws/">Network Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ntp/">Network Time Protocol (NTP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nv%2Dg11n/">Nevada Globalization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+4over6/">New Design of 4over6 Mechanism Based on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nightingale/">Nightingale: Port Songbird to OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+onnv/">ON/Nevada (ONNV) Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osd/">Object Storage Device (OSD) support for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opendev/">Open Development Infrastructure</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dutilities/">Open HA Cluster Utilities</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opensound/">Open Sound System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/">OpenGrok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cim%2Dserver/">OpenPegasus CIM Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+openrti/">OpenRTI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+busybox/">OpenSolaris Busybox</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/">OpenSolaris Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+es/">OpenSolaris Hispano</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+audit/">OpenSolaris Security Audit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/">OpenSolaris support for the QEMU processor emulator: host and guest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pef/">PEF: Packet Event Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+performance%2Dwrappers/">Performance Wrappers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkgfactory/">Pkgfactory</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pl/">Polski Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fr/">Portail Francophone</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+br/">Portal Brasileiro de OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+portals/">Portals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmui/">Power Management Usability Interfaces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+presto/">Presto: Automatic Printing Configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmpsm/">Printable Many Page Solaris Manuals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+promise%2Dstorage/">Promise SuperTrak RAID HBA Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qlogic%2Dcna/">QLogic Converged Network Adapter GLDv3 NIC Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+quagga/">Quagga Routing Protocol Suite Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rbridges/">RBridge (IETF TRILL) support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rof/">RDMA Offload Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+releasenotes/">Release Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+reno/">Reno: Login Process Enhancements for Interop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/">Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+samqfs/">SAM/QFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+scm%2Dmigration/">SCM Migration Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+srp/">SCSI RDMA Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sdcard%2Ddrivers/">SDcard Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sfwnv/">SFW</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sm%2Dhba/">SM&#45;HBA Based SAS HBA Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Ddoc/">SMF Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+svr4_packaging/">SVR4 Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sensors/">Sensor Abstraction Layer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dsip/">Session Initiation Protocol</a></span></li>
+<li><em class="underline"><em><span class="wikilink"><a href="/bin/view/Project+shell/">Shell: bourne shell, korn shell, C shell, etc.</a></span></em></em></li>
+<li><span class="wikilink"><a href="/bin/view/Project+simplepanels/">Simple Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/">Solaris PowerPC Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iscsitgt/">Solaris iSCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sourcejuicer/">SourceJuicer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/">Sparks: name service switch/nscd enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+squashfs/">Squashfs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+star/">Star integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starfish/">Starfish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starterkit/">Starter Kit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+storagepm/">Storage Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sst/">Sun Security Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+avs/">Sun StorageTek Availability Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ofuv/">Support for OpenFabrics User Verbs / API on OpenSolaris OS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/">Support gcc4/GCCfss in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+suspend%2Dresume/">Suspend/Resume</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+systemz/">Systemz</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tipc/">TIPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+branding/">Trademarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tpm/">Trusted Platform Module support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tnipdb/">Trusted networking interface policy database for Trusted Extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+usecase/">Use Case</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+userland/">Userland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vrrp/">VRRP: Virtual Router Redundancy Protocol Implementation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vscan/">VSCAN service</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+valex/">Validated Execution Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vconsole/">Virtual Console</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vnm/">Virtual Network Machines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/">Visual Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+visualization%2Dhpc/">Visualization for HPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+volo/">Volo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/">Web Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+website/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+winchester/">Winchester: Schema mapping and ID mapping for AD Interoperability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wusb/">Wireless USB Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wwan/">Wireless Wide Area Network</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x%2Dcons/">X Consolidation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xkblayout/">X Keyboard Layout</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xen%2Dgate/">Xen Gate</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xfce/">Xfce: A lightweight desktop environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfsboot/">ZFS Boot and Install</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfs%2Dcrypto/">ZFS on disk encryption support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonemgr/">Zone Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonestat/">Zone Statistics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gcore/">gcore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iser/">iSCSI Extensions for Remote DMA (iSER)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isns/">iSNS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+libmicro/">libMicro &#45; portable microbenchmarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+loficc/">lofi compression and cryptography support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lx64/">lx64 brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+s10brand/">s10brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x86gentopo/">x86 Generic FMA Topology Enumerator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ztest/">ztest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cz/">Český portál</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ru/">Русский портал</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ar/">البوابة العربية</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+in/">भारतीय पोर्टल</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cn/">中国门户</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/">日本ポータル</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kr/">한국 포탈</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavUser Group">
+            <div id="xwikinavUser GroupHeader" class="accordionTabTitleBar"><h6>User Group</h6>
+            </div>
+            <div id="xwikinavUser GroupContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+kr/"></a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+adl%2Dauosug/">Adelaide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+aosug/">Argentina</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+azosug/">Arizona</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+atl%2Dosug/">Atlanta OpenSolaris Users Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bwosug/">Baltimore&#45;Washington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bosug/">Bangalore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bkkosug/">Bangkok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bdosug/">Bangladesh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bjosug/">Beijing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+brosug/">Berlin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bvrm%2Dosug/">Bhimavaram</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+btn%2Dosug/">Bloomington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfosug/">Brasilia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+blmosug/">Bélem</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+crosug/">Capital Region</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cfosug/">Cardiff</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ccosug/">Caribbean OSUG</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ceosug/">Ceara</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cltosug/">Charlotte</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chennai/">Chennai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chmxosug/">Chihuahua</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+closug/">Chile</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cle%2Dosug/">Cleveland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+colosug/">Colombia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cmh%2Dosug/">Columbus</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ctosug/">Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+knp%2Duek/">Cracow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+czosug/">Czech</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfw%2Dosug/">Dallas/Ft. Worth</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dosug/">Danish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+deosug/">Delaware</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+eduosug/">Edinburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+egosug/">Egypt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fiosug/">Finland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+flosug/">Florida</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fraosug/">Frankfurt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+frosug/">Front Range</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+glug/">Great Lakes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+grosug/">Greece</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hzosug/">Hangzhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hi%2Dosug/">Hawaii</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hkosug/">Hong Kong</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hugs/">Houston</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hosug/">Hyderabad</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+idosug/">Indonesia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madridosug/">Inicio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ie%2Dosug/">Irish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+iosug/">Israel</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+istosug/">Istanbul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+itl%2Dosug/">Italian</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jnosug/">Jinan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jogja%2Dosug/">Jogja</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kbosug/">Kabul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kc%2Dosug/">Kansas City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+lavosug/">Latvia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+losug/">London</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madosug/">Madurai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mansug/">Manchester</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mssosug/">Mato Grosso</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+msosug/">Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mgosug/">Minas Gerais</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mnosug/">Minnesota</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mtlosug/">Montreal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mosug/">Moscow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mmosug/">Mumbai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mucosug/">Munich</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+neaosug/">NEA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nlosug/">Netherlands</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ne%2Dosug/">New England</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nycosug/">New York City OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nzosug/">New Zealand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+norosug/">Noroeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nerosug/">Nuremberg&#45;Erlangen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+okcosug/">Oklahoma City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ososug/">Osnabrück</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+peosug/">Peru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+paosug/">Philadelphia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+piaski%2Dosug/">Piaski</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ptosug/">Pittsburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+poaosug/">Porto Alegre</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+psosug/">Puget Sound</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+posug/">Pune</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+qosug/">Queensland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rtp%2Dosug/">Research Triangle Park</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+riosug/">Rio de Janeiro</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ro%2Dosug/">Romania</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ruosug/">Russia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+alamo%2Dosug/">San Antonio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sdosug/">San Diego</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sfosug/">San Francisco</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+scosug/">Scottish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rs%2Dosug/">Serbia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szosug/">Shenzhen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svosug/">Silicon Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sgosug/">Singapore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+skosug/">Slovak</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+saosug/">South African</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+soctosug/">Southern Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+stl%2Dosug/">St. Louis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svgosug/">Stavanger</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+swosug/">Sweden</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chosug/">Switzerland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sosug/">Sydney</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szc%2Dosug/">Szczecin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sampaosug/">São Paulo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+twosug/">Taiwan OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ostug/">Tecum</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tvosug/">Thames Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tsug/">Tokyo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+torosug/">Toronto</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+trosug/">Trondheim</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+toss/">Tulsa</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tosug/">Turkey</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ufaosug/">Ufa OSUG</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+uaosug/">Ukraine OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+unimelb%2Dosug/">University of Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+valeosug/">Vale do Paraíba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vanosug/">Vancouver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vosug/">Venezuela &#45; Pagina de incio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vvoosug/">Vladivostok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wosug/">Welsh &#45; Cymru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wiosug/">Wisconsin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+xaosug/">Xi'an</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+</div><p/>
+<script type="text/javascript">
+var obj = {div:'xwikinav',no:1,height:250};
+var acc = createAccordion(obj);
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSDocs','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSDocs'); togglePanelVisibility(this.parentNode);">Project shell Pages</h1>
+<div class="xwikipanelcontents"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+shell/shellstyle">Shell coding style guidelines</a></span></li>
+</ul>
+                        </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div>  <div id="footerglobal" class="layoutsection">
+  <div class="minwidth"></div>
+
+  <script language="JavaScript" src="/resources/js/s_code_remote.js"></script>
+
+
+          <div id="xwikiplatformversion">XWiki Enterprise 2.1.1.25889 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+  <br/>
+
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2011, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+  </div>
+
+
+</div></div></body>
+</html>

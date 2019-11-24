@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>UI Spec - Phase 2 (Project nwam.ConfigUI) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+nwam/ConfigUI" />
+                    <link rel="canonical" href="/bin/view/Project+nwam/ConfigUI" />
+                            <meta name="document" content="Project nwam.ConfigUI"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Project nwam"/>
+    <meta name="page" content="ConfigUI"/>
+    <meta name="version" content="50.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Project+nwam/pages/ConfigUI"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="UI Spec - Phase 2" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="Administrator" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="all" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project nwam";
+XWiki.currentPage = "ConfigUI";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Project+nwam/ConfigUI";
+window.docediturl = "/bin/edit/Project+nwam/ConfigUI";
+window.docsaveurl = "/bin/save/Project+nwam/ConfigUI";
+window.docgeturl = "/bin/get/Project+nwam/ConfigUI";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Project_nwam viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bnwam%2FConfigUI%3Fxpage%3Dprint%26%2338%3Blanguage%3Den"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+nwam/"><strong>Project nwam</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Project+nwam" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <div id="header_banner">
+	<table style="width: 100%;">
+	    <tr>
+		<td style="width: 1%;">
+		    <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+		</td>
+		<td id="logo-text" style="width: 1%;">
+		    Solaris
+		</td>         
+		<td style="width: 98%;">
+		    <table id="loading-indicator">
+			<tr>
+			    <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+				    alt="Loading" title="Loading"/></td>
+			    <td>Loading...</td>
+			</tr>
+		    </table>
+		</td>
+		<td style="width: 1%;">
+		    <table id="iconbar">
+			<tr>
+			<td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+			    Collectives</a></td>
+			<td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+				Discussions</a></td>
+			<td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+				Documentation</a></td>
+			<td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+				Download</a></td>
+			<td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+				Source Browser</a></td>
+			</tr>
+		    </table>
+		</td>
+	    </tr>
+	</table>
+    </div>
+    <div id="site-notice">
+	<span>
+	    <a href="https://markebrooks.github.io/bin/view/Main/">ATTENTION: This website and all services within the opensolaris.org domain will be unavailable after March 24, 2013.</a>	   
+	</span>
+    </div>
+</div>
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                              <a href='/bin/view/Project+nwam/UIResearch'>GUI Research &#38; Futures</a> <span class='separator'>&#187;</span> <span class='current'>UI Spec - Phase 2</span>
+                </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+nwam/ConfigUI?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+nwam/ConfigUI?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+nwam/ConfigUI?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+nwam/ConfigUI?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+nwam/ConfigUI?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+nwam/ConfigUI?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+nwam/ConfigUI?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+nwam/ConfigUI?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+nwam/ConfigUI?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+nwam/ConfigUI?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+nwam/ConfigUI?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          <span class="submenuitem "><a href="/bin/view/Project+nwam/ConfigUI?xpage=copy" id="tmActionCopy" class="tmActionCopy">Copy</a></span>
+      </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>UI Spec - Phase 2</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<p>This specification covers the Network AutoMagic configuration GUI for Enterprise situations (i.e. more than one wired ethernet NIC, possibly no wireless interfaces) and Small/Medium Business (SMB) situations (e.g. conventional desktop or laptop)</p><p><strong>Caveats:&nbsp;</strong>The following mockups are drafts meant to generate feedback. It only has placeholder graphics and does not represent a polished comprehensive UI specification. Validation and Error messaging not covered yet.</p><h2 id="HTableofContents"><span>Table of Contents</span></h2><p><span class="wikilink"><a href="#1.0">1.0 Overall Framework</a></span><br/><span class="wikilink"><a href="#2.0">2.0 Network Status Tabbed Pane</a></span><br/><span class="wikilink"><a href="#2.1">2.1 Network Status - Enterprise Normal&nbsp;</a></span><br/><span class="wikilink"><a href="#2.2">2.2 Summary - SMB Normal&nbsp;</a></span><br/><span class="wikilink"><a href="#3.0">3.0 Environment Configuration Tabbed Pane</a></span><br/><span class="wikilink"><a href="#3.1">3.1 Environment Configuration - Enterprise</a></span><br/><span class="wikilink"><a href="#3.2">3.2 Environment&nbsp;</a></span><span class="wikilink"><a href="#3.1">Configuration</a></span> <span class="wikilink"><a href="#3.2">- SMB</a></span><br/><span class="wikilink"><a href="#3.4">3.4 Environment - Configuration Dialog&nbsp;</a></span><span class="wikilink"><a href="#4.0"><br/>&nbsp;4.0 Network Configuration Tabbed Pane</a></span><span class="wikilink"><a href="#4.1">4.1 Network Configuration - Graph View</a></span><br/><span class="wikilink"><a href="#4.1.1">4.1.1 Enterprise</a></span><br/><span class="wikilink"><a href="#4.1.2">4.1.2 Small/Medium Business</a></span><br/><span class="wikilink"><a href="#4.2">4.2 Network Configuration - List View</a></span><br/><span class="wikilink"><a href="#4.2.1">4.2.1 Enterprise</a></span><br/><span class="wikilink"><a href="#4.2.2">4.2.2 Small/Medium Business</a></span><br/><span class="wikilink"><a href="#4.3">4.3 Creating New IP Interfaces/Links</a></span><br/><span class="wikilink"><a href="#4.3.1">4.3.1 Adding a New Link/IP Interface Button Menu&nbsp;</a></span><br/><span class="wikilink"><a href="#4.3.5">4.3.5 New Tunnel</a></span><br/><span class="wikilink"><a href="#4.4">4.4 Editing Existing IP Interfaces/Links&nbsp;</a></span><br/><span class="wikilink"><a href="#4.4.1">4.4.1 Editing Ethernet</a></span><br/><span class="wikilink"><a href="#4.4.2">4.4.2 Editing Wireless</a></span><br/><span class="wikilink"><a href="#4.4.2.1">4.4.2.1 Wireless - General Tab</a></span><span class="wikilink"><a href="#4.4.2.1.1">4.4.2.1.1 Adding Wireless Network</a></span><br/><span class="wikilink"><a href="#4.4.2.1.2">4.4.2.1.2 Editing Wireless Network</a></span><span class="wikilink"><a href="#4.4.2.1.3">4.4.2.1.3 View Available Wireless Network&nbsp;</a></span><br/><span class="wikilink"><a href="#4.4.2.2">4.4.2.2 Wireless - IP Tab</a></span><br/><span class="wikilink"><a href="#4.4.6">4.4.6 Editing Tunnel</a></span><br/><span class="wikilink"><a href="#4.5">4.5 Removing Interfaces</a></span><br/><span class="wikilink"><a href="#4.6">4.6 IP Tab&nbsp;</a></span><br/><span class="wikilink"><a href="#4.6.1">4.6.1 IPv4</a></span><br/><span class="wikilink"><a href="#4.6.2">4.6.2 IPv6</a></span><br/><span class="wikilink"><a href="#5.0">5.0 VPN Tabbed Pane&nbsp;</a></span></p><h3 id="H1.0OverallFramework"><span>1.0 Overall Framework</span></h3><h4 id="HA0"><span> </span></h4><h4 id="H1.1Standalone"><span>1.1 Standalone</span></h4><p>Since there won't be a services configuration UI framework ready for NWAM integration, the Configuration dialog can be launched through the "Launch" menu on the Desktop. NWAM is providing configuration options that partially overlap with options already available through Gnome. According to the <span class="wikiexternallink"><a href="http://www.gnome.org/%7Ecalum/nevada/ui-spec/index.htm">Gnome UI Spec&nbsp;</a></span>, NWAM Configuration should probably live under Launch -&gt; Administration menu (<strong>note:</strong> <span class="wikilink"><a href="/bin/view/Project+nwam/SolarisExpress">Network Configuration is already an item on this menu</a></span>), though could possibly be placed under Launch -&gt; Preferences menu (<strong>note</strong>: <span class="wikilink"><a href="/bin/view/Project+nwam/SolarisExpress">Network Proxy is already an item on this menu</a></span>).</p><p>In this case, the window that appears will look like:</p><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/netstatent1.png" alt="netstatent1.png"/></p><p><strong>Elements</strong></p><p><strong>Help Button</strong> - brings up help for the particular tab that is showing</p><p><strong>Cancel&nbsp;</strong> button- closes the configuration window. does not save changes</p><p><strong>OK button</strong> - applies the changes and closes the window</p><p><strong>Window decoration - close button</strong> - will close the window. If changes need to be applied, a dialog will ask if they want them applied or cancelled</p><h3 id="H2.0NetworkStatusTabbedPane"><span>2.0 Network Status Tabbed Pane</span></h3><h4 id="H2.1NetworkStatus-Enterprise"><span>2.1 Network Status - Enterprise</span></h4><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/netstatent1.png" alt="netstatent1.png"/></p><h5 id="HA0-1"><span> </span></h5><p><strong>Elements</strong></p><p><strong>Active Environment combobox -&nbsp;</strong>allow user to switch the active environment</p><p><strong>Edit... button -&nbsp;</strong>Launches the<span class="wikilink"><a href="#3.4">&nbsp;Section 3.4</a></span> dialog of the active environment selected</p><p><strong>Network Status listbox -</strong> shows the status of each enabled link/IP-interface, shows the Wi-Fi signal strength if applicable</p><p><strong>Edit... button -</strong> enabled when user selects an item in the list. Launches the appropriate "Edit..." dialog (see <span class="wikilink"><a href="#4.4">section 4.4</a></span>)</p><p><strong>Connect button</strong> - enabled when user selects an item in the list that is not currently connected. Attempts to connect the network. Progress (with ability to cancel) and error dialogs appear as appropriate</p><p><strong>Disconnect button -&nbsp;</strong>enabled when user selects an item in the list that is connected. Disconnects the network.</p><h5 id="HA0-2"><span> </span></h5><p>2.2 Network Status - SMB</p><p>Screenshot similar to Section 2.1</p><p><strong>Elements</strong></p><p><strong>same as above, though expect the list to only have 2-3 entries in the Network Status listbox (e.g. net0, wnet0)&nbsp;</strong></p><h5 id="H"><span></span></h5><h3 id="H3.0EnvironmentConfigurationTabbedPane"><span>3.0 Environment Configuration Tabbed Pane</span></h3><p>3.1 Environment Configuration- Enterprise</p><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/envconfent.png" alt="envconfent.png"/></p><p><strong>Elements</strong></p><p><strong>Environment Configuration Tabbed Pane</strong> - Environment equate to a group of settings for a particular environment and is meant to facilitate switching of environments without the hassle of manually editing settings to account for the new environment. "Default" and "No Network" will be default environments provided by the system, and the user will specify other environments</p><p><strong>List of Environments &amp; Activity Status</strong> - this list shows all environments. The user will be able to make an environment active by clicking a radio button in the "Active" column</p><p><strong>Add... button&nbsp;</strong>- brings up a dialog (spec TBD) to create a new environment.</p><p><strong>Remove button&nbsp;</strong> - removes the selected environment; only enabled if there is a selection</p><p><strong>Edit... button&nbsp;</strong> - launches environment configuration dialog, as in <span class="wikilink"><a href="#3.1">3.1 Environment Configuration&nbsp;</a></span></p><p><strong>Duplicate button -&nbsp;</strong>only enabled if a row is selected. Will duplicate the contents of that Environment, and insert it into the table with the name "Copy of XXX" where XXX is the name of the environment duplicated</p><h4 id="H3.2EnvironmentConfiguration-SMB"><span>3.2 Environment Configuration - SMB</span></h4><p>Screenshot similar to Section 3.1, though with possibly of more Environments, such as "Peetbucks", "Friends House", etc</p><p><strong>Elements&nbsp;</strong></p><p>same as above</p><h4 id="H3.4EnvironmentConfiguration"><span>3.4 Environment Configuration</span></h4><p>When the user selects an environment to edit, the following modal dialog will come up. The categories include</p><ul><li>Proxies</li><li>Name Services</li><li>Routing</li><li>Security</li><li>Services</li><li>Environment Activation</li></ul><h5 id="H3.4.1Proxies"><span>3.4.1 Proxies</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/envconfproxy.gif" alt="envconfproxy.gif"/></p><p><strong>Elements</strong></p><p><strong>Direct connection to the internet -&nbsp;</strong>no proxies</p><p><strong>Use the following proxies</strong> - Uses the proxies specified by user</p><blockquote><p><strong>* Proxy &amp; Port&nbsp;</strong>- accepts domain names and port #s</p></blockquote><p><strong>Use this proxy for all protocols</strong> - always enabled, by default not selected. If selected, then the proxy &amp; port textfields are disabled</p><p><strong>Automatic proxy configuration -&nbsp;</strong>point to a PAC file URL</p><h5 id="H3.4.2NameServices"><span>3.4.2 Name Services</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/envconfns.gif" alt="envconfns.gif"/></p><p><strong>Elements</strong></p><p><strong>Name Service Profile combobox -&nbsp;</strong>contains the values "Automatic" and "New Name Service Profile..." by default. "Automatic" is the default value.</p><h5 id="H3.4.3Routing"><span>3.4.3 Routing</span></h5><h5 id="H3.4.3.1Routing-Routes"><span>3.4.3.1 Routing - Routes</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/envconfroutingroutes.gif" alt="envconfroutingroutes.gif"/></p><p><strong>Elements</strong></p><p><em>awaiting feedback</em></p><h5 id="H3.4.3.2Routing-RoutingServices"><span>3.4.3.2 Routing - Routing Services</span></h5><p><em>Awaiting routing services feedback</em></p><p><strong>Elements</strong></p><h5 id="H3.4.4Security"><span>3.4.4 Security</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/envconfsecurity.gif" alt="envconfsecurity.gif"/></p><p><strong>Elements</strong></p><p><strong>File textfield -&nbsp;</strong>path to the IPFilter configuration file</p><p><strong>Browse... button -&nbsp;</strong>brings up a filechooser which has the appropriate extension (e.g. ".conf") as the file type</p><p><strong>IPSec</strong>- <em>Awaiting feedback</em></p><h5 id="H3.4.5Services"><span>3.4.5 Services</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/envconfservices2.gif" alt="envconfservices2.gif"/></p><p><strong>Elements</strong></p><p><strong>Default Network Services table</strong> - shows the services and a short service description. The services are listed in the Architectural Design Document <span class="wikilink"><a href="/bin/view/Project+nwam/#network_service">Section 5.4.4 Dependency Rearrangement&nbsp;</a></span>; users select which services are on when the environment is active.</p><p>Default Enabled Services:<br/>&nbsp;network/inetd:default<br/>&nbsp;network/smtp:sendmail<br/>&nbsp;network/iscsi_initiator:default<br/>&nbsp;Default Disabled Services:<br/>&nbsp;network/ipfilter:default<br/>&nbsp;network/ssh:default<br/>&nbsp;network/rarp:default<br/>&nbsp;network/slp:default<br/>&nbsp;network/shell:kshell<br/>&nbsp;network/shell:default<br/>&nbsp;network/ntp:default<br/>&nbsp;network/dns/server:default<br/>&nbsp;network/dns/client:default<br/>&nbsp;network/ldap/client:default</p><p><strong>Additional Network Services table</strong> - List of custom services that are hand picked by the user</p><p><strong>Add... button</strong> - allow user to add their own services to the custom services table</p><p><strong>Remove button</strong> - remove the selected custom service</p><p>3.4.6 Environment Activation</p><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/envconfenvact.gif" alt="envconfenvact.gif"/></p><p>Note: Default first rule should show "IP address" and "is". "Wireless Network Name" and "doesn't contain" showing in the mockup to give a sense of how big the comboboxes must be to contain these longest strings.</p><p><strong>Elements</strong></p><p><strong>Match all /Match any radiobuttons -&nbsp;</strong>determines if there should be AND or OR treatment of the rules</p><p><strong>Rules area -&nbsp;</strong>scrollbars are added to the rules as necesary. One rule shows up empty as default. When there are multiple rules, only one rule can be selected at a time (vs multi-selection)<br/><strong>Contents of Rules comboboxes</strong> - constraints marked with "*" means that it is the default combobox item that appears</p><p>IP Address - 2 constraints; <strong>is</strong>* - a fully IPv4 or IPv6 address; <strong>in range -&nbsp;</strong>an IPv4 or IPv6 address with CIDR notation</p><p>Domain Name - constraints are all string based; <strong>is*, contains, begins with, ends with, is not, doesn't contain</strong></p><p>Wireless Network Name - constraints are <strong>is*, contains, begins with, ends with, is not, doesn't contain</strong></p><p>Wireless BSSID - constraint is <strong>is*&nbsp;</strong></p><p><strong>Add... button -&nbsp;</strong>Adds another line of rule to the rules area</p><p><strong>Remove button&nbsp;</strong> - enabled when a rule in the rules area is selected. Removes the rule from the list</p><h3 id="H4.0NetworkConfigurationTabbedPane"><span>4.0 Network Configuration Tabbed Pane</span></h3><h4 id="H4.1NetworkConfiguration-GraphView"><span>4.1 Network Configuration - Graph View</span></h4><h5 id="H4.1.1Enterprise"><span>4.1.1 Enterprise</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/configgraphe.png" alt="configgraphe.png"/></p><p><strong>Elements</strong></p><p><strong>Graph -&nbsp;</strong>Shows a graph view of the network configuration, including how links are related to each other. Badges will appear on links that have an error condition or are offline by the user's choice. More information about the link or IP interface would appear in a tooltip on mouse hover(ALL GRAPHICS ARE PLACEHOLDERS)</p><p><strong>Add..., Remove, Edit... buttons -&nbsp;</strong> see <span class="wikilink"><a href="#4.2.1">4.2.1</a></span></p><h5 id="H4.1.2Small2FMediumBusiness"><span>4.1.2 Small/Medium Business</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/configgraphsmb.png" alt="configgraphsmb.png"/></p><p><strong>Elements</strong></p><p><strong>Graph -</strong>Same as enterprise view, though some more information such as wireless network connected to and strength of the connection will also appear</p><h4 id="H4.2NetworkConfiguration-ListView"><span>4.2 Network Configuration - List View</span></h4><h5 id="H4.2.1Enterprise"><span>4.2.1 Enterprise</span></h5><p>Fig 4.2.1-1</p><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/configliste.png" alt="configliste.png"/></p><p><strong>Elements&nbsp;</strong></p><p><strong>List view -</strong>(not editable inline, excepting the Enabled column) Shows all the IP Interfaces that can be edited</p><p><strong>Name -&nbsp;</strong>shows the vanity name of the link or IP interface</p><p><strong>IP Address -&nbsp;</strong>IP address (or addresses) associated with the IP Interface; if an IP address is not applicable or available, the value will be "n/a"</p><p><strong>Type -&nbsp;</strong>one of the following types (Link Aggregate, IPMP, VLAN, Tunnel, Ethernet, Wireless)</p><p><strong>Enabled State -&nbsp;</strong> 4 states - Enabled, Disabled, Enabled (Conditionally), Disabled (Conditionally).; See <span class="wikilink"><a href="#4.7">Section 4.7</a></span> for the "Edit Conditions" tab on each of the IP-interfaces/link's New or Edit dialog. All Wi-Fi connections will be by default "Enabled (Conditionally) ", that is the conditions would be to only enable when all non-wireless connections are not connected.</p><p><strong>Add... button -&nbsp;</strong>will launch a button menu. See <span class="wikilink"><a href="#4.3.1">section 4.3.1&nbsp;</a></span>. Not context sensitve.</p><p><strong>Remove button -</strong> when an item in the list is selected this button is enabled, will remove that interface (if removal is allowed)</p><p><strong>Edit... button -&nbsp;</strong> when an item in the list is selected this button is enabled, will launch a dialog of the appropriate type described in <span class="wikilink"><a href="#4.4">section 4.4&nbsp;</a></span></p><h5 id="H4.2.2Small2FMediumBusiness"><span>4.2.2 Small/Medium Business</span></h5><p>Screenshot similar to Section 4.2.1, though with probably with only 2-3 items in the list, e.g. net0 and wnet0</p><p><strong>Elements</strong></p><p>Same elements as Network Configuration Enterprise above</p><h4 id="HA0-3"><span> </span></h4><h4 id="H4.3CreatingNewIPInterfaces2FLinks"><span>4.3 Creating New IP Interfaces/Links</span></h4><p>Clicking the "Add" button will bring up a dialog that will allow users to create a new IP interface/Link. The IP interfaces/Link types are currently limited to Tunnel, Ethernet and Wi-Fi with plans to add Link Aggregation, VLAN, and IPMP Group in a later phase.</p><p>Creating New IP Interfaces/Links will be a task that most likely will be used by enterprise system users.</p><h5 id="H4.3.1AddingaNewLink2FIPInterfaceButtonMenu"><span>4.3.1 Adding a New Link/IP Interface Button Menu</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/configaddmenu-callout.png" alt="configaddmenu-callout.png"/></p><p><strong>Elements</strong></p><p><strong>Add Button Menu -&nbsp;</strong>This menu will appear when clicking anywhere on the "Add" button. User chooses which type of Link/IP interface they want to create - Tunnel, Ethernet, or Wi-Fi</p><p><em><strong>Note</strong></em>: In future releases when VLAN, IPMP Groups, and Link Aggregations are introduced, it might be more useful to the user to see more information on what exactly these are. Consider introducing a mini-wizard (2 panels) with a list of the available items to create, that are accompanied by a description. The second panel of the wizard would be the following dialogs with appropriate wizard buttons (<span class="wikilink"><a href="#4.3.2">Section 4.3.2</a></span> - <span class="wikilink"><a href="#4.3.7">Section 4.3.7</a></span>)</p><h5 id="H4.3.5NewTunnel"><span>4.3.5 New Tunnel</span></h5><p>Three types of tunnels can be created - IPv4, IPv6 and 6to4.</p><h5 id="H4.3.5.1IPv4Tunnels"><span>4.3.5.1 IPv4 Tunnels</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/addipv4tunnel.gif" alt="addipv4tunnel.gif"/></p><p><strong>Elements</strong></p><p><strong>Name -&nbsp;</strong>vanity name for tunnel. Default name "tunN", where N is the next integer that is not currently used, starting at 0</p><p><strong>Tunnel Source Address textfield -</strong> value validated to be IPv4 format; no default value</p><p><strong>Tunnel Destination Address textfield -&nbsp;</strong>value validated to be IPv4 format; no default value</p><p><strong>Encryption checkbox -</strong> turns on encryption (ESP)</p><p><strong>Encryption combobox -</strong> list of encryption algorithms available on the system; "&lt;Select algorithm&gt;" is the default value</p><p><strong>Encryption with Authentication checkbox -&nbsp;</strong>turns on encryption with authentication (ESP + authentication); will disable the Encryption combobox</p><p><strong>Encryption with Authentication combobox -</strong> list of encryption algorithms available on the system;"&lt;Select algorithm&gt;" is the default value</p><p><strong>Authentication checkbox -</strong>turns on encryption with authentication (AH)</p><p><strong>Authentication combobox -&nbsp;</strong>list of authentication algorithms available on the system; "&lt;Select algorithm&gt;" is the default value</p><p><strong>Maximum Packet Size (MTU) radio buttons -&nbsp;</strong>Standard is checked by default; Custom has the default value 1419</p><h5 id="H4.3.5.2IPv6Tunnels"><span>4.3.5.2 IPv6 Tunnels</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/addipv6tunnel.gif" alt="addipv6tunnel.gif"/></p><p><strong>Elements</strong></p><p><strong>Same as IPv4 Tunnel except for IPv6 addresses&nbsp;</strong></p><h5 id="H4.3.5.36to4Tunnels"><span>4.3.5.3 6to4 Tunnels</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/add6to4tunnel.gif" alt="add6to4tunnel.gif"/></p><p><strong>Elements</strong></p><p><strong>Same as IPv4 tunnel, though there is only one tunnel source address that can must be an IPv4 address.&nbsp;</strong></p><h5 id="H4.3.5.4NewTunnel-IPtab"><span><strong>4.3.5.4 New Tunnel -</strong> IP tab</span></h5><h5 id="H4.3.5.4.1IPtabforIPv4andIPv6Tunnels"><span>4.3.5.4.1 IP tab for IPv4 and IPv6 Tunnels</span></h5><p>See <span class="wikilink"><a href="#4.6">Section 4.6 IP Tab&nbsp;</a></span>, with <strong>exception</strong> that "Using DHCP" is not an option</p><h5 id="H4.3.5.4.2IPtabfor6to4Tunnels"><span>4.3.5.4.2 IP tab for 6to4 Tunnels</span></h5><p>Since 6to4 tunnel IP address must be IPv6, and the only options available are Automatic and Manual, there are a few changes</p><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/add6to4tunneliptab.gif" alt="add6to4tunneliptab.gif"/></p><p><strong>Elements</strong></p><p><strong>Configure IPv6 combobox -&nbsp;</strong>default is Automatically, only other choice is Manually. (See <span class="wikilink"><a href="#4.6.2.2">Section 4.6.2.2</a></span> for Manually contents)</p><p><strong>IPv6 Address&nbsp;</strong>- shows address once assigned</p><p><strong>Prefix&nbsp;</strong>- shows prefix once assigned</p><h5 id="H4.3.5.5EnabledStatetab"><span>4.3.5.5 Enabled State tab</span></h5><p>See <span class="wikilink"><a href="#4.7">Section 4.7</a></span></p><h5 id="H4.3.6NewEthernet"><span>4.3.6 New Ethernet</span></h5><h5 id="H4.3.6.1Propertiestab"><span>4.3.6.1 Properties tab</span></h5><p>User can add a definition for an Ethernet NIC that is not detected (e.g. not yet installed on the system)</p><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/addethdialog.gif" alt="addethdialog.gif"/></p><p><strong>Elements</strong></p><p><strong>Name textfield -&nbsp;</strong>Default name "netN", where N is the next integer that is not currently used, starting at 0</p><p><strong>Device textfield</strong> -default is empty</p><p><strong>Maximum Packet Size</strong> - Standard is selected byu default. Custom textfield has the default ?? populated</p><h5 id="H4.3.6.2IPtab"><span>4.3.6.2 IP tab</span></h5><p>See <span class="wikilink"><a href="#4.6">Section 4.6</a></span></p><h5 id="H4.3.6.3EnabledStatetab"><span>4.3.6.3 Enabled State tab</span></h5><p>See <span class="wikilink"><a href="#4.7">Section 4.7</a></span></p><h5 id="H4.3.7NewWi-Fi"><span>4.3.7 New Wi-Fi</span></h5><h5 id="H4.3.7.1Propertiestab"><span>4.3.7.1 Properties tab</span></h5><p>User can add a definition for a Wi-Fi NIC that is not detected (e.g. not yet installed on the system)</p><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/addwifidialog.gif" alt="addwifidialog.gif"/></p><p><strong>Elements</strong></p><p><strong>Name textfield -&nbsp;</strong>Default name "wnetN", where N is the next integer that is not currently used, starting at 0</p><p><strong>Device textfield</strong> -default is empty</p><p><strong>Speed -&nbsp;</strong>Automatic is default choice</p><h5 id="H4.3.7.2IPtab"><span>4.3.7.2 IP tab</span></h5><p>See <span class="wikilink"><a href="#4.6">Section 4.6</a></span></p><h5 id="H4.3.7.3EnabledStatetab"><span>4.3.7.3 Enabled State tab</span></h5><p>See <span class="wikilink"><a href="#4.7">Section 4.7</a></span></p><h4 id="H4.4EditingExistingIPInterfaces2FLinks"><span>4.4 Editing Existing IP Interfaces/Links</span></h4><p>By selecting an ip interface/link in the list presented on the <span class="wikilink"><a href="#4.0">4.0 Configuration Tabbed Pane</a></span> and pushing the "Edit" button will bring up the following modal dialogs.</p><h5 id="H4.4.1EditingEthernet"><span>4.4.1 Editing Ethernet</span></h5><h5 id="H4.4.1.1EditingEthernet-Properties"><span>4.4.1.1 Editing Ethernet - Properties</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/editethdialog.gif" alt="editethdialog.gif"/></p><p><strong>Elements</strong></p><p><strong>Device -&nbsp;</strong>uneditable; name of the NIC</p><p><strong>Maximum Packet Size radiobuttons -&nbsp;</strong>choice between Standard and Custom. Default value for Custom is ?? <em>Awaiting feedback</em></p><h5 id="H4.4.1.2EditEthernet-IPtab"><span>4.4.1.2 Edit Ethernet - IP tab</span></h5><p>See <span class="wikilink"><a href="#4.6">Section 4.6 IP Tab&nbsp;</a></span></p><h5 id="H4.4.1.3EnabledStatetab"><span>4.4.1.3 Enabled State tab</span></h5><p>See <span class="wikilink"><a href="#4.7">Section 4.7</a></span></p><h5 id="H4.4.2EditingWireless"><span>4.4.2 Editing Wireless</span></h5><h5 id="H4.4.2.1Wireless-WirelessNetworksTab"><span>4.4.2.1 Wireless - Wireless Networks Tab</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/editwifinetworksdialog.gif" alt="editwifinetworksdialog.gif"/></p><p><strong>Elements</strong></p><p><strong>Network list -&nbsp;</strong>lists the networks that the user has approved to add to the preference list; list shows the order of preference of wireless network to connect to; this list will be global to all wireless nics on a system</p><p><strong>Add... button -&nbsp;</strong>launches dialog to add a network, which includes Network Name, Security Type, and User/Password as necessary; See <span class="wikilink"><a href="#4.4.2.1.1">Section 4.4.2.1.1&nbsp;</a></span></p><p><strong>Remove button -&nbsp;</strong>enabled if a network name is selected. Will remove from this list</p><p><strong>Edit... button -&nbsp;</strong>Will launch a dialog to edit the details of the network</p><p><strong>Move up button -&nbsp;</strong>enabled if a network is selected and can be moved up in the list (i.e. not at the top of the list)</p><p><strong>Move down button -&nbsp;</strong>enabled if a network is selected and can be moved down the list (i.e. not at the bottom of the list)</p><p><strong>View Available Wireless Networks button -&nbsp;</strong>opens a modal dialog that shows (See <span class="wikilink"><a href="#4.4.2.1.3">Section 4.4.2..1.3</a></span>)</p><h5 id="H4.4.2.1.1AddingWirelessNetwork"><span>4.4.2.1.1 Adding Wireless Network</span></h5><h5 id="H4.4.2.1.1.1AddingWirelessNetwork-NoSecurity"><span>4.4.2.1.1.1 Adding Wireless Network - No Security</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/newwapnoseclessdialog.gif" alt="newwapnoseclessdialog.gif"/></p><p><strong>Elements</strong></p><p><strong>Network Name textfield -</strong>user can enter name of network</p><p><strong>Security combobox -&nbsp;</strong>Choice between [ None | WEP ]</p><p><strong>More Options expander widget -&nbsp;</strong>expands the dialog to show the BSSID field</p><h5 id="H4.4.2.1.1.2AddingWirelessNetwork-NoSecuritywithBSSID"><span>4.4.2.1.1.2 Adding Wireless Network - No Security with BSSID</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/newwapnosecmoredialog.gif" alt="newwapnosecmoredialog.gif"/></p><p><strong>Elements</strong></p><p>same as above, except:</p><p><strong>More Options expander widget -&nbsp;</strong>contracts dialog to hide the BSSID field</p><h5 id="H4.4.2.1.1.3AddingWirelessNetwork-WEP"><span>4.4.2.1.1.3 Adding Wireless Network - WEP</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/newwapweplessdialog.gif" alt="newwapweplessdialog.gif"/></p><p><strong>Elements</strong></p><p>Same as 4.4.2.1.1.1 Adding Wireless Network - No Security, except security Set to WEP and the following:</p><p><strong>Password textfield -</strong> user can enter password here. If not specified, the user will be prompted for a password when they try to connect to the network.</p><p><strong>Confirm Password textfield -</strong> user enters the password again for a simple check if the password is the same. If the passwords aren't the same, an error dialog will appear after "OK" is pushed.</p><p><strong>More Options expander widget-&nbsp;</strong>expands the dialog to show the BSSID field</p><h5 id="H4.4.2.1.1.4AddingWirelessNetwork-WEPwithBSSID"><span>4.4.2.1.1.4 Adding Wireless Network - WEP with BSSID</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/newwapwepmoredialog.gif" alt="newwapwepmoredialog.gif"/></p><p><strong>Elements</strong></p><p>All elements covered in combination of 4.4.2.1.1.2 Adding Wireless Network - No Security with BSSID and 4.4.2.1.1.3 Adding Wireless Network - WEP</p><h5 id="H4.4.2.1.2EditingWirelessNetwork"><span>4.4.2.1.2 Editing Wireless Network</span></h5><h5 id="H4.4.2.1.2.1EditingWirelessNetwork-NoSecurity"><span>4.4.2.1.2.1 Editing Wireless Network - No Security</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/editwapnoseclessdialog.gif" alt="editwapnoseclessdialog.gif"/></p><h5 id="H4.4.2.1.2.2EditingWirelessNetwork-NoSecuritywithBSSID"><span>4.4.2.1.2.2 Editing Wireless Network - No Security with BSSID</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/editwapnosecmoredialog.gif" alt="editwapnosecmoredialog.gif"/></p><h5 id="H4.4.2.1.2.3EditingWirelessNetwork-WEP"><span>4.4.2.1.2.3 Editing Wireless Network - WEP</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/editwapweplessdialog.gif" alt="editwapweplessdialog.gif"/></p><h5 id="H4.4.2.1.2.4EditingWirelessNetwork-WEPwithBSSID"><span>4.4.2.1.2.4 Editing Wireless Network - WEP with BSSID</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/editwapwepmoredialog.gif" alt="editwapwepmoredialog.gif"/></p><h5 id="H4.4.2.1.3ViewAvailableWirelessNetworks"><span>4.4.2.1.3 View Available Wireless Networks</span></h5><p>This dialog appears when clicking the View Available Wireless Networks button in Section 4.4.2.1</p><p>Fig: Showing "linksys" wireless network selected</p><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/mainviewwireless.png" alt="mainviewwireless.png"/></p><p><strong>Elements</strong></p><p><strong>Wireless Networks list -&nbsp;</strong>lists the network name, security type, strength, icon if it is connected (only one can be connected at a time), and list if already in the preferred networks list.</p><p><strong>Connect button -&nbsp;</strong>enabled when a network is selected and it is not already connected to. Will attempt to connect to the network, and security dialogs, e.g. WEP password, will appear as necessary. Upon successful connection, the wireless network will be automatically appended to the list of preferred networks.</p><p><strong>Disconnect button&nbsp;</strong>- enabled when a network is selected and is connected.</p><p><strong>Network Description area -&nbsp;</strong>Shows the description of the selected network. If nothing is selected, it will show "&lt;Select a network to see the description&gt;" in a dark gray color.</p><h5 id="H4.4.2.2Wireless-IPTab-IPtab"><span>4.4.2.2 Wireless - IP Tab - IP tab</span></h5><p>See <span class="wikilink"><a href="#4.6">Section 4.6 IP Tab&nbsp;</a></span></p><h5 id="H4.4.2.3EditingWireless-Properties"><span>4.4.2.3 Editing Wireless - Properties</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/editwifipropdialog.gif" alt="editwifipropdialog.gif"/></p><p><strong>Elements</strong></p><p><strong>Device -&nbsp;</strong>uneditable; name of the NIC</p><p><strong>Speed&nbsp;</strong> <strong>combobox</strong> - values are Automatic, ??; default is Automatic</p><h5 id="H4.4.2.4IPTab"><span>4.4.2.4 IP Tab</span></h5><p>See <span class="wikilink"><a href="#4.6">Section 4.6</a></span></p><h5 id="H4.4.2.5EnabledStatetab"><span>4.4.2.5 Enabled State tab</span></h5><p>See <span class="wikilink"><a href="#4.7">Section 4.7</a></span></p><h5 id="H4.4.6EditingTunnel"><span>4.4.6 Editing Tunnel</span></h5><h5 id="H4.4.6.1EditIPv4Tunnel"><span>4.4.6.1 Edit IPv4 Tunnel</span></h5><p>Same as <span class="wikilink"><a href="#4.3.4.1">Section 4.3.4.1 New IPv4 Tunnel</a></span>, with "Edit" in place of "New" in dialog title</p><h5 id="H4.4.6.2EditIPv6Tunnel"><span>4.4.6.2 Edit IPv6 Tunnel</span></h5><p>Same as <span class="wikilink"><a href="#4.3.4.2">Section 4.3.4.2 New IPv6 Tunnel&nbsp;</a></span>with "Edit" in place of "New" in dialog title</p><h5 id="H4.4.6.3Edit6to4Tunnel"><span>4.4.6.3 Edit 6to4 Tunnel</span></h5><p>Same as <span class="wikilink"><a href="#4.3.4.3">Section 4.3.4.3 New 6to4 Tunnel&nbsp;</a></span>with "Edit" in place of "New" in dialog title</p><h4 id="HA0-4"><span> </span></h4><h5 id="HA0-5"><span> </span></h5><h4 id="H4.5RemovingInterfaces"><span>4.5 Removing Interfaces</span></h4><p>Selecting an interface that can be removed from the 4.0 Connection Tabbed Pane will enable the remove button ("-").</p><p>Interfaces that CANNOT be removed include interfaces that represent physical interfaces, such as those mapping to links to device instances like bge0, ce0, ath0.</p><h4 id="H4.6IPTab"><span>4.6 IP Tab</span></h4><p>Launched by "Edit" button from Configuration panels and Creating New IP Interfaces/Links</p><h5 id="H4.6.1IPv4"><span>4.6.1 IPv4</span></h5><p>The IP tab shows in the New and Edit link dialogs (e.g. New Link Aggregation, Edit VLAN, New Tunnel)</p><p>There are 4 options for IPv4 assignment:</p><ul><li>Using DHCP (default)</li><li>Manually</li><li>Multiple addresses</li><li>Do not assign IP address (only shows for certain links - Link Aggregation and Ethernet)</li></ul><h5 id="H4.6.1.1IPv4-UsingDHCP"><span>4.6.1.1 IPv4 - Using DHCP</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/ipv4dhcptab.gif" alt="ipv4dhcptab.gif"/></p><p><strong>Elements</strong></p><p><strong>Options... button&nbsp;</strong>- launches <span class="wikilink"><a href="#4.6.1.1.1">Sec 4.6.1.1.1 DHCP Options dialog&nbsp;</a></span></p><p><strong>IPv4 Address:&nbsp;</strong>- shows currently assigned IPv4 address; not editable, but is selectable</p><p><strong>Subnet:</strong>- shows currently assigned subnet; not editable, but is selectable</p><p><strong>Configure IPv6 button&nbsp;</strong>- launches the Configure IPv6 dialog</p><h5 id="H4.6.1.1.1DHCPOptionsDialog"><span>4.6.1.1.1 DHCP Options Dialog</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/maindhcpoptionsdialog.png" alt="maindhcpoptionsdialog.png"/></p><p><strong>Elements</strong></p><p><strong>DHCP Timeout (seconds) -&nbsp;</strong>timeout value; default is 60</p><p><strong>Use link-local address radiobutton-&nbsp;</strong>default; assigns to a link-local address</p><p><strong>Use static address radiobutton -</strong> user must assign a valid IP address value if this option is selected</p><h5 id="H4.6.1.2IPv4-Manually"><span>4.6.1.2 IPv4 - Manually</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/ipv4singletab.gif" alt="ipv4singletab.gif"/></p><p><strong>Elements</strong></p><p><strong>Options... button&nbsp;</strong>- disabled <span class="wikilink"><a href="#4.6.1.1.1"><span class="wikigeneratedlinkcontent">ConfigUI</span></a></span></p><p><strong>IPv4 Address:&nbsp;</strong>- validation of IPv4 format address occurs on "OK"</p><p><strong>Subnet:</strong>-validation of subnet format address occurs on "OK"</p><p><strong>Configure IPv6 button&nbsp;</strong>- launches the Configure IPv6 dialog</p><h5 id="H4.6.1.3IPv4-MultipleIPAddresses"><span>4.6.1.3 IPv4 - Multiple IP Addresses</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/ipv4multipletab.gif" alt="ipv4multipletab.gif"/></p><p><strong>Elements</strong></p><p><strong>Options button-&nbsp;</strong>disabled</p><p><strong>IP address table -&nbsp;</strong>lists all IP addresses, name and subnet</p><p><strong>Add... button -&nbsp;</strong>launches <span class="wikilink"><a href="#4.6.1.3.1">Section 4.6.1.3.1 New IPv4 Address</a></span></p><p><strong>Remove button -&nbsp;</strong>only enabled when a row in the table is selected; removes the item from the table</p><p><strong>Configure IPv6 button&nbsp;</strong>- launches the Configure IPv6 dialog</p><h5 id="H4.6.1.3.1NewIPv4Address"><span>4.6.1.3.1 New IPv4 Address</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/newipv4dialog.gif" alt="newipv4dialog.gif"/></p><p><strong>Elements</strong></p><p><strong>Host Name textfield -&nbsp;</strong>host name; if host name can be resolved to an IP address and subnet, fill in the remaining fields. If there are already values in the other fields, do not alter them.<br/>&nbsp;Rules for host name:</p><p>[a-zA-Z0-9][-a-zA-Z0-9]{0,62}<br/>&nbsp;Or, in English :-)</p><ul><li>first character must be alpha-numeric</li><li>following characters can be alpha-numeric or "-"</li><li>length must be between 1 and 63 inclusive<br/>&nbsp;Then for host names, you start with the node name rules:</li><li>one or more host labels</li><li>if more than one, each is separated by "."</li><li>total length must be between 1 and 255 inclusive<br/>&nbsp;An example is "opal.eng.sun.com", where "opal" is the first label. Note that<br/>&nbsp;node names are often the first label of host names, but they follow the same<br/>&nbsp;rules as host names; there is a common (but false) perception that node names<br/>&nbsp;are not allowed to have a ".".</li></ul><p><strong>IPv4 Address:&nbsp;</strong>- validation of IPv4 format address occurs on "OK"; if IP address can be resolved a host name, fill in the host name fields. If there is already a value for Host Name, do not alter it</p><p><strong>Subnet:</strong>-validation of subnet format address occurs on "OK"</p><h5 id="H4.6.1.4IPv4-DoNotAssignIPAddress"><span>4.6.1.4 IPv4 - Do Not Assign IP Address</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/ipv4nonetab.gif" alt="ipv4nonetab.gif"/></p><p><strong>Elements</strong></p><p><strong>Options button-&nbsp;</strong>disabled</p><p><strong>Configure IPv6 button&nbsp;</strong>- launches the Configure IPv6 dialog</p><h5 id="H4.6.2IPv6Dialog"><span>4.6.2 IPv6 Dialog</span></h5><p>There are 4 choices to assign IPv6</p><ul><li>Automatically (default)</li><li>Manually</li><li>Advanced</li><li>Do not assign IP address</li></ul><h5 id="H4.6.2.1IPv6-Automatically"><span>4.6.2.1 IPv6 - Automatically</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/ipv6autodialog.gif" alt="ipv6autodialog.gif"/></p><p><strong>Elements</strong></p><p><strong>IPv6 Address -&nbsp;</strong>label (textfield only shows for Manually)</p><p><strong>Prefix -</strong> label (textfield only shows for Manually)</p><h5 id="H4.6.2.2IPv6-Manual"><span>4.6.2.2 IPv6 - Manual</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/ipv6manualdialog.gif" alt="ipv6manualdialog.gif"/></p><p><strong>Elements</strong></p><p><strong>IPv6 Address -&nbsp;</strong> validation of IPv6 format address occurs on "OK"</p><p><strong>Prefix -</strong>validation of IPv6 format address occurs on "OK"</p><h5 id="H4.6.2.3IPv6-Advanced"><span>4.6.2.3 IPv6 - Advanced</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/ipv6advanceddialog.gif" alt="ipv6advanceddialog.gif"/></p><p><strong>Elements</strong></p><p><strong>Accept IP address offered by DHCP -&nbsp;</strong>selected by default</p><p><strong>Accept prefix offered by the router -&nbsp;</strong>selected by default</p><p><strong>IP address table -&nbsp;</strong>lists all IP addresses, name and subnet</p><p><strong>Add... button -&nbsp;</strong>launches <span class="wikilink"><a href="#4.6.1">Section 4.6.2.3.1 New IPv4 Address</a></span></p><p><strong>Remove button -&nbsp;</strong>only enabled when a row in the table is selected; removes the item from the table</p><h5 id="H4.6.2.3.1NewIPv6Addressdialog"><span>4.6.2.3.1 New IPv6 Address dialog</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/newipv6dialog.gif" alt="newipv6dialog.gif"/></p><p><strong>Elements</strong></p><p><strong>Host Name textfield -&nbsp;</strong>host name; if host name can be resolved to an IP address and subnet, fill in the remaining fields. If there are already values in the other fields, do not alter them. See rules for host name in <span class="wikilink"><a href="#4.6.1.3.1">Section 4.6.1.3.1</a></span> New IPv4 Address</p><p><strong>IPv6 Address:&nbsp;</strong>- validation of IPv6 format address occurs on "OK"; if IP address can be resolved a host name, fill in the host name fields. If there is already a value for Host Name, do not alter it</p><p><strong>Prefix :</strong>-validation of prefix occurs on "OK"</p><h5 id="HIPv6-None"><span>IPv6 - None</span></h5><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/ipv6nonedialog.gif" alt="ipv6nonedialog.gif"/></p><h5 id="H4.7EnabledStatetab"><span>4.7 Enabled State tab</span></h5><p>This tab appears on all the New or Edit dialogs (Ethernet, Tunnel, Wi-Fi). The contents are the same, but the default state differs.</p><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/enabledstatetab.gif" alt="enabledstatetab.gif"/></p><p><strong>Elements</strong></p><p><strong>Status text-&nbsp;</strong>shows the current status of the IP-interface/link. "&lt;name&gt; is currently XXX", where XXX could be one of four messages - enabled, disabled, enabled based on conditions, disabled based on conditions.</p><p><strong>Enable radiobutton</strong> -default for all IP-interface/links except Wi-Fi; if selected, will enable after OK</p><p><strong>Disable radiobutton</strong> - if selected, will disable after OK</p><p><strong>Specify Conditions radiobutton -&nbsp;</strong>if selected, will conditionally enable/disable upon OK</p><p><strong>Disable/Enable XXX combobox</strong> - two choices - Disable YYY or Enable YYY, where YYY is the name of the IP-interface/link</p><p><strong>List of IP-interfaces/Links -&nbsp;</strong>lists all others besides the current IP-interface/link. For Wi-Fi, all wired links will be selected and the combobox set to Disable.</p><h3 id="H5.0VPNTabbedPane"><span>5.0 VPN Tabbed Pane</span></h3><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/vpn.png" alt="vpn.png"/></p><p><strong>Elements</strong></p><p><strong>Network Aware Application table -&nbsp;</strong>name??; contains list of applications with status icons.</p><p><strong>Add</strong> - button that brings up the dialog in Section 5.1</p><p><strong>Remove</strong> - button, enabled when an item is selected. Removes the application from the list</p><h4 id="H5.1AddVPNdialog"><span>5.1 Add VPN dialog</span></h4><p>Fig 5.1-1</p><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/addvpndialogfewer.png" alt="addvpndialogfewer.png"/></p><p><strong>Elements</strong></p><p><strong>Name textfield -&nbsp;</strong>user provides their name for the app; has an example name that clears out once it gets focus.</p><p><strong>Start Command textfield -&nbsp;</strong>user provides the CLI for launching the app including options; has an example name that clears out once it gets focus. This command used when user tries to connect from the Status tab.</p><p><strong>Stop Command textfield -&nbsp;</strong>user provides the CLI for killing the app including options; has an example name that clears out once it gets focus. This command used when user tries to disconnect from the Status tab.</p><p><strong>More Options&nbsp;</strong>turner - by default closed; if open will show Fig 5.1-2 with a <strong>Process&nbsp;</strong>textfield. NWAM will monitor this process to tell if the application is running or not <span class="wikicreatelink"><a href="/bin/create/Project+nwam/Note%3A+Exact+presentation+of+turner+vs+More%2FFewer+Options+button+dependent+on+if+the+turner+is+standard?parent=Project+nwam.ConfigUI"><span class="wikigeneratedlinkcontent">Note: Exact presentation of turner vs More/Fewer Options button dependent on if the turner is standard</span></a></span></p><p>Fig 5.1-2</p><p><img src="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/addvpndialogmore.png" alt="addvpndialogmore.png"/></p><h3 id="HA0-6"><span> </span></h3><table><tr><th scope="col">Revision</th><th scope="col">Description</th><th scope="col">Author</th><th scope="col">Date</th></tr><tr><td>0.6</td><td>Various button clean up (adding ellipses, using correct buttons), Clean up New/Add link/IP interface dialogs; Add View Available Wireless Network dialog, New design for New/Edit Tunnel's IP tab for 6to4 tunnels, VPN tab loses buttons to start/stop (this functionality available through the Network Status tab); Change "Network Configuration" tab's "Enabled" state, and added corresponding "Enabled State" tabs to the Add/Edit IP-interface/link dialogs; Remove all non-simple ip-interfaces (i.e. IPMP, VLAN, Link Aggregation)&nbsp;</td><td>Ann Sunhachawee&nbsp;</td><td>2007 Mar 16</td></tr><tr><td><span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/configuispecv5.pdf">0.5</a></span></td><td>New tab names: Network Status, Network Configuration, Environment Configuration; Introduce Conditionally Enabled state to "Enabled" column; Introduce VPN tab&nbsp;</td><td>Ann Sunhachawee&nbsp;</td><td>2007 Feb 14</td></tr><tr><td><span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/configuispecv4.pdf">0.4</a></span></td><td>Integrate feedback; Add standalone section; Add environment configuration dialogs; Changed "Connection Options" dialogs; Add New Tunnel dialogs; Move IP dialog to be part of the New/Edit &lt;Link&gt; Dialogs&nbsp;</td><td>Ann Sunhachawee</td><td>2007 Jan 5</td></tr><tr><td><span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/configuispecv3.pdf">0.3</a></span></td><td>Integrate feedback; Add IPv6 dialogs; Add Environment "Auto Activation" dialog&nbsp;</td><td>Ann Sunhachawee&nbsp;</td><td>2006 Oct 20</td></tr><tr><td><span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Project+nwam/ConfigUI/configuispecv2.pdf">0.2&nbsp;</a></span></td><td>Integrated feedback &amp; introduced Small Medium Business mockups&nbsp;</td><td>Ann Sunhachawee&nbsp;</td><td>2006 Oct 3</td></tr><tr><td>0.1</td><td>Screen mockups&nbsp;</td><td>Ann Sunhachawee</td><td>2006 Sep 14</td></tr></table>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by Administrator on 2009/10/26 12:16<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by Administrator on 2009/10/26 13:01
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Project nwam Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/Foundation">Foundation</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/1%2DStoryBoards">Story Boards</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/2%2DRequirements">Requirements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/3%2DArchitecture">Architecture</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/4%2DDesign">Design</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/Phase0">Phase 0</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/llp">Interface Configuration Policy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/prototype">Prototype</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/Phase0%2D5">Phase 0.5</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/Phase1EA">Phase 1 Early Access</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/Phase1Repo">Phase 1 Repository</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/Phase1Spec">Phase 1 Spec</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/Contents">TOC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/DraftManPages">Draft Man Pages</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/Glossary">Glossary</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/UIDesign">Phase 1 GUI Design</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/Phase1">GUI Spec</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/usertasks_config">User Tasks for NWAM Configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/usertasks_status">User Tasks for NWAM Status Notification</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/UIResearch">GUI Research & Futures</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/ConfigUI">UI Spec &#45; Phase 2</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/Sketches">UI Sketches/Prototypes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/stateoftheart">State of the Art</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/terminology">Terminology Study: Location vs. Environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/userexperience">User Scenarios</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/service%2Ddiscovery">Service Discovery</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/Applications">Applications</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/mdnsd_man">mdnsd(1M)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/nsswitch_dns">nsswitch.dns</a></span></li>
+</ul></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2013, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

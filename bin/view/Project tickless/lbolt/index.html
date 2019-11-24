@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>clock() and lbolt (Project tickless.lbolt) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+tickless/lbolt" />
+                                <meta name="document" content="Project tickless.lbolt"/>
+    <meta name="space" content="Project tickless"/>
+    <meta name="page" content="lbolt"/>
+    <meta name="version" content="11.1"/>
+                    <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="clock() and lbolt" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="rafaelv" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+
+                <!-- com.xpn.xwiki.plugin.skinx.LinkExtensionPlugin -->
+    <link href="/bin/skin/skins/oso/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/oso/os_base1.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/oso/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/albatross/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/albatross/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/albatross/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript" src="/resources/js/xwiki/suggest/ajaxSuggest.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project tickless";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes" ];
+window.docviewurl = "/bin/view/Project+tickless/lbolt";
+window.docediturl = "/bin/edit/Project+tickless/lbolt";
+window.docsaveurl = "/bin/save/Project+tickless/lbolt";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js'></script><script type='text/javascript' src='/bin/skin/skins/albatross/resources/uicomponents/viewers/tags.js'></script>
+
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/compatibility.js"></script>
+
+  </head>
+        <body id="body" class="xwiki viewbody hideright">
+  <div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+
+  <br/>
+  <br/>
+  <div id="Masthead">
+    <h1><a href="/bin/view/Main/">OpenSolaris</a></h1>
+    <a href="/bin/view/Main/" id="MastheadLogo"></a>
+    <a href="/bin/view/Main/" title="Home" rel="home"></a>
+    <div id="Iconbar">
+	<a id="CollectivesIcon" href="/bin/view/Main/collectives">Collectives</a>
+	<a id="DiscussionsIcon" href="/bin/view/Main/discussions">Discussions</a>
+	<a id="DocumentationIcon" href="/bin/view/Main/documentation">Documentation</a>
+	<a id="DownloadIcon" href="/bin/view/Main/downloads">Download</a>
+	<a id="SourceBrowserIcon" href="http://src.opensolaris.org">Source Browser</a>
+    </div>
+  </div>
+
+ <div class="layoutsection">
+<div class="minwidthb"></div>
+
+    <div style="text-align:right;">
+        <a class="glink" href="http://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Btickless%2Flbolt" id="headerlogin">Log-in</a><span class="separator"> | </span>
+    <span class="glink" id="headerlanguages">
+  <a href="/bin/view/Project+tickless/lbolt?language=en">en</a>
+    </span>
+    </div> 
+  </div>
+
+ <div id="headerspace" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+  <div id="breadcrumbs">
+    <span class="breadcrumbspace"><a href="/bin/view/Project+tickless/">Project tickless</a>: </span>
+<a href='/bin/view/Project+tickless/tasks'>Tasks</a> &gt; <a href='/bin/view/Project+tickless/lbolt'>clock() and lbolt</a>
+  </div>
+<hr/>
+</div>
+
+
+<div id="menuview">
+  <div id="actionmenu" class="layoutsubsection">
+<strong id="xwikimenutitle" class="hidden">Top Menu</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+<div class="topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmShow">
+<span class="tme-extensible"><a class="tme" href="/bin/view/Project+tickless/lbolt?viewer=code&amp;language=en"><strong>View</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+tickless/lbolt?viewer=comments&amp;language=en" id="tmShowComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+tickless/lbolt?viewer=attachments&amp;language=en" id="tmShowAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+tickless/lbolt?viewer=history&amp;language=en" id="tmShowHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+tickless/lbolt?viewer=information&amp;language=en" id="tmShowInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+tickless/lbolt?viewer=code&amp;language=en" id="tmShowCode">View Source</a></span>
+</span></div>
+ <div class="topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmPrint">
+<span class="tme-extensible"><a class="tme" href="javascript:window.print()"><strong>Print</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+tickless/lbolt?xpage=print&amp;language=en" id="tmPrintPreview">Print preview</a></span>
+<span class="submenuseparator">&nbsp;</span>
+<span class="submenuitem "><a href="/bin/export/Project+tickless/lbolt?format=pdf&amp;language=en" id="tmExportPdf">Export as PDF</a></span>
+<span class="submenuitem "><a href="/bin/export/Project+tickless/lbolt?format=rtf&amp;language=en" id="tmExportRtf">Export as RTF</a></span>
+<span class="submenuitem "><a href="/bin/export/Project+tickless/lbolt?format=html&amp;language=en" id="tmExportHtml">Export as HTML</a></span>
+<span class="submenuitem "><a href="/bin/export/Project+tickless/lbolt?format=xar&amp;name=Project+tickless.lbolt&amp;pages=Project+tickless.lbolt&amp;language=en" id="tmExportXar">Export as XAR</a></span>
+</span></div>
+</div>
+</div>
+
+</div>
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+              <div class="minwidthb"></div>
+    <div class="main layoutsubsection">
+    <div id="xwikicontent">
+  
+<h2 id="HClockdrivenlboltmigration"><span>Clock driven lbolt migration</span></h2><h3 id="HProblem"><span>Problem</span></h3><p>Perhaps one of clock()'s most well known responsibilities is to bump the system wide tick counter, "lbolt", and it's 64 bit counterpart "lbolt64". lbolt is referenced extensively throughout the kernel serving as of the the kernel's primary (albeit low resolution) time base for consumers dealing in "ticks". Usually, lbolt increases at the rate of 100 times per second (but may tick faster, in some cases).</p><p>One benefit of this architecture, is that lbolt respresents a very low latency (to read) time source (on the order of a memory reference), but the obvious drawback, is that on an otherwise idle system, the system must wake up to service the clock interrupt to bump lbolt, which is inefficient from a power efficiency perspective.</p><h3 id="HApproach"><span>Approach</span></h3><p>Rather than having the OS maintain lbolt explicitly, we can instead leverage a running counter facility provided by the hardware. On SPARC, this can be "stick" (system tick) driven, where on x86 a number of choices exist (TSC, HPET, 8254, ...). This would mean lbolt (the variable) would become a light-weight function who's implementation involves reading reading the counter.</p><p>The challenges of this approach are (at least) two fold... First, there is a risk that existing consumers of lbolt rely on the low latency read performance, that might not be achievable in a hardware counter backed function call implementation. Extensive performance characterization will be needed, along with study of the (many) existing lbolt consumers.</p><p>Second, there is a risk that non-DDI compliant drivers exist that reference lbolt explicitly, rather than through ddi_get_lbolt(), and other suitable interfaces. This approach would break those drivers, as they would attempt to reference an external "lbolt" symbol in the kernel that is no longer present. The failure mode in this case would be that the driver would fail to load.</p><p>The up-shot of this approach is obviously that lbolt will cease to be clock() driven. Aside from the performance issues, this change should be fairly easy to implement, as lbolt would continue to provide a 100 Hz time source...although making ticks be of arbitrary resolution at this point would be trivial.</p><h3 id="HProjectgateandwebrevofcurrentchanges"><span>Project gate and webrev of current changes</span></h3><p>The Mercurial source code repository is hosted at</p><pre>
+ssh://anon@hg.opensolaris.org/hg/tickless/tickless-gate
+</pre><p>&nbsp;This repository is synced against snv_121.</p><p><span class="wikiexternallink"><a href="http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6860030">6860030</a></span> tickless clock requires a clock() decoupled lbolt / lbolt64</p><p>Our current webrev can be found at</p><pre>
+[[http://cr.opensolaris.org/~rafaelv/webrev-10272/&gt;&gt;http://cr.opensolaris.org/~rafaelv/webrev-10272/]]
+</pre><p>An updated version of the condvar(9F) man page can be found <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Project+tickless/files/condvar.9f">here</a></span>.</p>
+
+</div>
+
+    <div class="clearfloats"></div>
+    <div id="xdocFooter">
+  
+
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:17<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by rafaelv on 2009/11/13 09:11
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+                        </div>  
+    <div class="clearfloats"></div>
+    </div>        </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded Search">
+<h1 class="xwikipaneltitle hidden" onclick="togglePanelVisibility(this.parentNode);">Search</h1>
+<div class="xwikipanelcontents">
+  <form action="/bin/view/Main/WebSearch">
+    <div class="globalsearch">
+      <input class="globalsearchinput" type="text" name="text" value="search..." size="15" onfocus="if (this.value == 'search...') value=''; this.select();" onblur="if (this.value == '') value='search...'; this.blur()"/>
+&nbsp;
+      <input class="button" value="Go" type="image" src="/skins/oso/go.png" alt="Go"/>
+    </div>
+  </form>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSDocs','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSDocs'); togglePanelVisibility(this.parentNode);">Project tickless Pages</h1>
+<div class="xwikipanelcontents"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/Testing">Testing</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/clock_and_lbolt">clock() and lbolt</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/tasks">Tasks</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/ev_load_avg">Event based load avg</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/lbolt">clock() and lbolt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/tick_accting">Tick Accounting</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/time_adj">Time Adjustment</a></span></li>
+</ul></li>
+</ul>
+            </div>
+</div>
+                        
+                        <div class="panel expanded Subsites">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.Subsites','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.Subsites'); togglePanelVisibility(this.parentNode);">Subsites</h1>
+<div class="xwikipanelcontents">
+<span class="wikiexternallink"><a href="http://cr.opensolaris.org">Code Reviews</a></span><br/>
+<span class="wikiexternallink"><a href="http://repo.opensolaris.org">SCM Management</a></span><br/>
+<span class="wikiexternallink"><a href="http://pkg.opensolaris.org">Package Search</a></span><br/>
+<span class="wikiexternallink"><a href="http://bugs.opensolaris.org">Bugster</a></span><br/>
+<span class="wikiexternallink"><a href="http://defect.opensolaris.org">Bugzilla</a></span><br/>
+<span class="wikiexternallink"><a href="http://test.opensolaris.org">Test Machines</a></span><br/>
+<span class="wikiexternallink"><a href="http://planet.opensolaris.org">Planet</a></span><br/>
+<span class="wikiexternallink"><a href="http://mail.opensolaris.org">Mailing Lists</a></span><br/>
+<span class="wikiexternallink"><a href="http://poll.opensolaris.org">Elections & Polls</a></span><br/>
+<span class="wikiexternallink"><a href="http://arc.opensolaris.org">ARC Case Logs</a></span><br/>
+<span class="wikiexternallink"><a href="http://jucr.opensolaris.org">Source Juicer</a></span><br/>
+<span class="wikiexternallink"><a href="http://pkgfactory.opensolaris.org">Package Factory</a></span><br/>
+<span class="wikiexternallink"><a href="http://auth.opensolaris.org">User Authentication</a></span><br/>
+</div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div>
+<script language="JavaScript" src="/resources/js/s_code_remote.js"></script>
+
+<div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+  <div id="xwikilicence">© 2010, Oracle Corporation and/or its affiliates</div>
+          <div id="xwikiplatformversion">XWiki Enterprise 2.1.1.25889 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+  <div><a href="/bin/view/Main/tou">Terms Of Use</a> |
+       <a href="http://www.sun.com/privacy/">Privacy</a> | 
+       <a href="/bin/view/Main/trademark">Trademarks</a> |
+       <a href="/bin/view/Main/copyrights">Copyright Policy</a> |
+       <a href="/bin/view/Main/site_guidelines">Site Guidelines</a> |
+       <a href="/bin/view/Main/site%2Dmap">Site map</a> |
+       <a href="/bin/view/Main/help">Help</a></div>
+  <div>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.</div>
+<img src="http://opensolaris.org/oracle/logo_oracle_footer.gif" alt="Oracle"/>
+<hr/>
+</div>
+
+</div></div></body>
+</html>

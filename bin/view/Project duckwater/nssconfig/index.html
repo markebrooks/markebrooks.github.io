@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>NSS config API draft (Project duckwater.nssconfig) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+duckwater/nssconfig" />
+                    <link rel="canonical" href="/bin/view/Project+duckwater/nssconfig" />
+                            <meta name="document" content="Project duckwater.nssconfig"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Project duckwater"/>
+    <meta name="page" content="nssconfig"/>
+    <meta name="version" content="2.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Project+duckwater/pages/nssconfig"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="NSS config API draft" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="Doug Leavitt" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project duckwater";
+XWiki.currentPage = "nssconfig";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Project+duckwater/nssconfig";
+window.docediturl = "/bin/edit/Project+duckwater/nssconfig";
+window.docsaveurl = "/bin/save/Project+duckwater/nssconfig";
+window.docgeturl = "/bin/get/Project+duckwater/nssconfig";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Project_duckwater viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bduckwater%2Fnssconfig"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+duckwater/"><strong>Project duckwater</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Project+duckwater" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>
+            </td>
+            <td style="width: 99%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                              <a href='/bin/view/Project+duckwater/Documentation'>Documentation</a> <span class='separator'>&#187;</span> <span class='current'>NSS config API draft</span>
+                </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+duckwater/nssconfig?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+duckwater/nssconfig?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+duckwater/nssconfig?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+duckwater/nssconfig?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+duckwater/nssconfig?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+duckwater/nssconfig?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+duckwater/nssconfig?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+duckwater/nssconfig?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+duckwater/nssconfig?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+duckwater/nssconfig?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+duckwater/nssconfig?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>NSS config API draft</h1></div>
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h1 id="HDuckwater:ConfigurationAPIsfornameserviceswitchmodules"><span>Duckwater: Configuration APIs for name service switch modules</span></h1><table><tr><th scope="col">Authors:</th><td>Tomas Heran &lt;tomas.heran@sun.com&gt;</td></tr><tr><th scope="row">Version:</th><td>draft 1.0</td></tr><tr><th scope="row">Date:</th><td>2008-03-11</td></tr></table><p>Contents</p><ul><li><span class="wikilink"><a href="#introduction">1   Introduction</a></span></li><li><span class="wikilink"><a href="#interface-taxonomy">2   Interface Taxonomy</a></span></li><li><span class="wikilink"><a href="#configuration-management-functions">3   Configuration management functions</a></span><ul><li><span class="wikilink"><a href="#prototypes">3.1   Prototypes</a></span></li><li><span class="wikilink"><a href="#initialization-and-de-initialization">3.2   Initialization and de-initialization</a></span></li><li><span class="wikilink"><a href="#accessing-repository">3.3   Accessing repository</a></span></li><li><span class="wikilink"><a href="#cleaning-up-memory">3.4   Cleaning up memory</a></span></li><li><span class="wikilink"><a href="#administration">3.5   Administration</a></span></li><li><span class="wikilink"><a href="#legacy-configuration-files-support">3.6   Legacy configuration files support</a></span></li><li><span class="wikilink"><a href="#verification-and-status">3.7   Verification and status</a></span></li><li><span class="wikilink"><a href="#discover-name-service">3.8   Discover name service</a></span></li></ul></li></ul><h1 id="H1A0A0A0Introduction"><span><span class="wikilink"><a href="#id1">1   Introduction</a></span></span></h1><p>This is a description of new configuration management APIs in nss modules to enable us to deliver back-end agnostic nscfg(1m), nsadm(1m) etc. It will also allow 3rd parties to deliver configuration support for their nss modules (e.g. cluster) without the need to modify our tools (e.g. nscfg(1m)).</p><p>These functions will be accessed through <strong>Finder API</strong> introduced as part of project duckwater and extension to versioning API introduced by <strong>PSARC/2008/035</strong>.</p><h1 id="H2A0A0A0InterfaceTaxonomy"><span><span class="wikilink"><a href="#id2">2   Interface Taxonomy</a></span></span></h1><p><strong>Volatile</strong> because the new development is being pursued via OpenSolaris.</p><p>One of the goals of the sparks and duckwater efforts are to document all the name service switch interfaces and eventually expose the interfaces first as volatile, and eventually committed at some point in the future.</p><h1 id="H3A0A0A0Configurationmanagementfunctions"><span><span class="wikilink"><a href="#id3">3   Configuration management functions</a></span></span></h1><h2 id="H3.1A0A0A0Prototypes"><span><span class="wikilink"><a href="#id4">3.1   Prototypes</a></span></span></h2><p>Init/fini:</p><pre>
+
+nss_status_t _nss_&lt;be&gt;_config_init(void **priv);
+
+nss_status_t _nss_&lt;be&gt;_config_fini(void **priv);
+
+</pre><p>Accessing repository:</p><pre>
+
+/*
+ * Create in-memory structure with configuration data and
+ * optionally load the data from repository.
+ */
+nss_status_t _nss_&lt;be&gt;_config_create(void **priv,
+        nsconf_config_t **cfg,
+        char *name,
+        int load);
+
+/* Store in-memory configuration structure to repository. */
+nss_status_t _nss_&lt;be&gt;_config_save(void **priv,
+        nsconf_config_t *cfg);
+
+/* Remove configuration from repository. */
+nss_status_t _nss_&lt;be&gt;_config_delete(void **priv,
+        char *name);
+
+/* Get list of available stored configurations. */
+nss_status_t _nss_&lt;be&gt;_config_list(void **priv,
+        char **cfg_names);
+
+</pre><p>Accessing properties and property values:</p><pre>
+
+/* Iterate through properties. */
+nss_status_t _nss_&lt;be&gt;_config_next_prop(void **priv,
+        nsconf_config_t *cfg,
+        nsconf_property_t *ref_prop,
+        nsconf_property_t **out_prop);
+
+/* Iterate through property values. */
+nss_status_t _nss_&lt;be&gt;_config_prop_next_val(void **priv,
+        nsconf_property_t *prop
+        nsconf_value_t *ref_val,
+        nsconf_value_t **out_val);
+
+/* Get specific property. */
+nss_status_t _nss_&lt;be&gt;_config_get_prop(void **priv,
+        nsconf_config_t *cfg,
+        const char *name,
+        nsconf_property_t **prop);
+
+/* Set single value. */
+nss_status_t _nss_&lt;be&gt;_config_prop_set_val(void **priv,
+        nsconf_config_t *cfg,
+        const char *name,
+        const char *val);
+
+/* Get single value. */
+nss_status_t _nss_&lt;be&gt;_config_prop_get_val(void **priv,
+        nsconf_config_t *cfg,
+        const char *name,
+        const char **val);
+
+/* Add value to property. No ordering guaranteed. */
+nss_status_t _nss_&lt;be&gt;_config_prop_add_val(void **priv,
+        nsconf_config_t *cfg,
+        const char *name,
+        const char *value);
+
+/* Unset (all) property's value(s). */
+nss_status_t _nss_&lt;be&gt;_config_prop_unset_val(void **priv,
+        nsconf_config_t *cfg,
+        const char *name);
+
+</pre><p>Cleanup:</p><pre>
+
+/* Destroy in-memory configuration structure. */
+nss_status_t _nss_&lt;be&gt;_config_destroy(void **priv,
+        nsconf_config_t *cfg);
+
+</pre><p>Administration:</p><pre>
+
+/* Enable stored configuration. */
+nss_status_t _nss_&lt;be&gt;_config_enable(void **priv,
+        const char *config_name,
+        int dryrun);
+
+/* Disable any configuration. */
+nss_status_t _nss_&lt;be&gt;_config_disable(void **priv,
+        int dryrun);
+
+</pre><p>Legacy configuration files support:</p><pre>
+
+/* Generate legacy configuration file(s). */
+nss_status_t _nss_&lt;be&gt;_config_export(void **priv,
+        nsconf_config_t *cfg,
+        char *alt_root,
+        char *alt_full_path);
+
+/* Import from legacy configuration file(s). */
+nss_status_t _nss_&lt;be&gt;_config_import(void **priv,
+        nsconf_config_t *cfg,
+        char *alt_root,
+        char *alt_full_path);
+
+</pre><p>Verification and status:</p><pre>
+
+/* Verify in-memory configuration structure. */
+nss_status_t _nss_&lt;be&gt;_config_verify(void **priv,
+        nsconf_config_t *cfg);
+
+/* Get back-end status information. */
+nss_status_t _nss_&lt;be&gt;_config_get_status(void **priv,
+        nsconf_config_t *cfg,
+        void *status);
+
+</pre><p>Discovery:</p><pre>
+
+/* Discover configuration. could be called repeatedly. */
+nss_status_t _nss_&lt;be&gt;_config_discover(void **priv,
+        nsconf_config_t **cfg);
+
+</pre><h2 id="H3.2A0A0A0Initializationandde-initialization"><span><span class="wikilink"><a href="#id5">3.2   Initialization and de-initialization</a></span></span></h2><pre>
+
+nss_status_t _nss_&lt;be&gt;_config_init(void **priv);
+
+nss_status_t _nss_&lt;be&gt;_config_fini(void **priv);
+
+</pre><p>Users are supposed to call config_init before calling any other of the APIs. after an user is done using the APIs, it is advisable, that config_fini is called.</p><h2 id="H3.3A0A0A0Accessingrepository"><span><span class="wikilink"><a href="#id6">3.3   Accessing repository</a></span></span></h2><p>Creating in-memory structure and possibly loading it from the repository:</p><pre>
+
+nss_status_t _nss_&lt;be&gt;_config_create(void **priv,
+        nsconf_config_t **cfg,
+        char *name,
+        int load)
+
+</pre><p>Creates configuration structure, add all appropriate back-end specific properties with preloaded defaults, property descriptions, possible values etc. If load is 1, _config_create tries to also load the configuration from repository.</p><p>nsconf_config_t and nsconf_property_t structures looks like this:</p><pre>
+
+typedef struct nsconf_property {
+        char            *name;
+        char            *visible_name;
+        uu_list_node_t  node;
+        uu_list_t       *values;
+        char            *default_value;
+        char            *description;
+        char            *help;
+        char            **choices;
+} nsconf_property_t;
+
+typedef struct nsconf_config {
+        nsconf_type_t   type;
+        char            *name;
+        uu_list_t       *props;
+        uu_list_pool_t  *prop_pool;
+        uu_list_pool_t  *val_pool;
+} nsconf_config_t;
+
+</pre><p>Saving in-memory structure to repository:</p><pre>
+
+nss_status_t _nss_&lt;be&gt;_config_save(void **priv,
+        nsconf_config_t *cfg)
+
+</pre><p>Removing configuration from repository:</p><pre>
+
+nss_status_t _nss_&lt;be&gt;_config_delete(void **priv,
+        char *name);
+
+</pre><p>Getting names of all available configurations in repository:</p><pre>
+
+nss_status_t _nss_&lt;be&gt;_config_list(void **priv,
+        char **cfg_names);
+
+</pre><p>Iterating through all properties of given configuration:</p><pre>
+
+nss_status_t _nss_&lt;be&gt;_config_next_prop(void **priv,
+        nsconf_config_t *cfg,
+        nsconf_property_t *ref_prop,
+        nsconf_property_t **out_prop);
+
+</pre><p>If ref_prop is NULL, first property is returned (through out_prop) otherwise property "next to" ref_prop is returned. Order is not guaranteed to be the same when the same configuration is retrieved from repository again.</p><p>Iterating through all values of given property:</p><pre>
+
+nss_status_t _nss_&lt;be&gt;_config_prop_next_val(void **priv,
+        nsconf_property_t *prop
+        nsconf_value_t *ref_val,
+        nsconf_value_t **out_val);
+
+</pre><p>This function is similar to the one above iterating though properties and same limitation w.r.t. ordering apply here too.</p><p>Find particular named property in in-memory configuration structure:</p><pre>
+
+nss_status_t _nss_&lt;be&gt;_config_get_prop(void **priv,
+        nsconf_config_t *cfg,
+        const char *name, nsconf_property_t **prop);
+
+</pre><p>Set (or replace) single value of property:</p><pre>
+
+nss_status_t _nss_&lt;be&gt;_config_prop_set_val(void **priv,
+        nsconf_config_t *cfg,
+        const char *name,
+        const char *val);
+
+</pre><p>This is a simple function to support setting single value properties very easily. It also does ensure to replace any value(s) should they exist.</p><p>Get a single value from property:</p><pre>
+
+nss_status_t _nss_&lt;be&gt;_config_prop_get_val(void **priv,
+        nsconf_config_t *cfg,
+        const char *name,
+        const char **val);
+
+</pre><p>The purpose of this function is similar to config_prop_set_val - simple access to single value properties. Should this function fail if it detects more values in property?</p><p>Add another value to list of property values:</p><pre>
+
+nss_status_t _nss_&lt;be&gt;_config_prop_add_val(void **priv,
+        nsconf_config_t *cfg,
+        const char *name,
+        const char *value);
+
+</pre><p>Again - no ordering of values is guaranteed after saving to and retrieving from the repository.</p><p>Unset (all) property's value(s):</p><pre>
+
+nss_status_t _nss_&lt;be&gt;_config_prop_unset_val(void **priv,
+        nsconf_config_t *cfg,
+        const char *name);
+
+</pre><h2 id="H3.4A0A0A0Cleaningupmemory"><span><span class="wikilink"><a href="#id7">3.4   Cleaning up memory</a></span></span></h2><pre>
+
+nss_status_t _nss_&lt;be&gt;_config_destroy(void **priv,
+        nsconf_config_t *cfg)
+
+</pre><p>Destroy the in-memory structure.</p><h2 id="H3.5A0A0A0Administration"><span><span class="wikilink"><a href="#id8">3.5   Administration</a></span></span></h2><p>To enable given configuration:</p><pre>
+
+nss_status_t _nss_&lt;be&gt;_config_enable(void **priv,
+        const char *config_name,
+        int dryrun);
+
+</pre><p>Function to enable given configuration. Can be run in <em>dry-run</em> report what would happen next - i.e. back-end would be started or back-end would be just refreshed. In both real and dry modes, configuration is verified using config_verify() before any other action takes place to ensure, the configuration is valid.</p><p>To disable any configuration of a given back-end:</p><pre>
+
+nss_status_t _nss_&lt;be&gt;_config_disable(void **priv,
+        int dryrun);
+
+</pre><p>Function to disable back-end's active configuration and possibly to clean up legacy configuration files. Should this function also notify nscd(1M) that certain back-end has been disabled?</p><p>Once we have Enhanced SMF Profiles, this will be pretty much handled by SMF itself.</p><h2 id="H3.6A0A0A0Legacyconfigurationfilessupport"><span><span class="wikilink"><a href="#id9">3.6   Legacy configuration files support</a></span></span></h2><p>Export configuration to legacy configuration file(s):</p><pre>
+
+nss_status_t _nss_&lt;be&gt;_config_export(void **priv,
+        nsconf_config_t *cfg,
+        char *alt_root,
+        char *alt_full_path)
+
+</pre><p>Function to generate legacy configuration file(s). If alt_root and alt_full_path are both NULL, the legacy configuration file(s) is (are) generated to usual location and the filename(s) are as usual. E.g. calling (void) _nss_ldap_config_export(cfg, NULL, NULL); results in ldap_client_file and ldap_client_cred files being generated in /var/ldap directory.</p><p>If alt_full_path is not NULL then regardless of value in alt_root the name of the legacy configuration file generated matches exactly the value of alt_full_path.</p><p>In case of <strong>LDAP</strong>, where legacy configuration consists of two files, the rule is, that "main" configuration file name is &lt;alt_full_path&gt;_file and credential configuration file is &lt;alt_full_path&gt;_cred. E.g. calling (void) _nss_ldap_config_export(cfg, NULL, "/temp/my_test_ldap"); results in my_test_ldap_file and my_test_ldap_cred files being generated in /temp directory.</p><p>If alt_root is not NULL and alt_full_path is NULL, the legacy configuration file(s) is (are) generated in usual directories but under the alt_root directory. E.g. calling (void) _nss_ldap_config_export(cfg, "/temp", NULL); results in my_test_ldap_file and my_test_ldap_cred files being generated in /temp/var/ldap directory.</p><p>Import from legacy configuration file(s):</p><pre>
+
+nss_status_t _nss_&lt;be&gt;_config_import(void **priv,
+        nsconf_config_t *cfg,
+        char *alt_root,
+        char *alt_full_path)
+
+</pre><p>This function imports configuration data from legacy configuration file and stores it in cfg structure.</p><p>Handling of alt_root and alt_full_path is analogous to export function.</p><h2 id="H3.7A0A0A0Verificationandstatus"><span><span class="wikilink"><a href="#id10">3.7   Verification and status</a></span></span></h2><p>Verify configuration:</p><pre>
+
+nss_status_t _nss_&lt;be&gt;_config_verify(void **priv,
+        nsconf_config_t *cfg)
+
+</pre><p>Verifies configuration and in case of error, <em>annotates</em> cfg structure with messages. Every run replaces all messages (frees memory also). More details TBD as we prototype.</p><p>Get status of back-end:</p><pre>
+
+nss_status_t _nss_&lt;be&gt;_config_status(void **priv,
+        nsconf_config_t *cfg,
+        void *status)
+
+</pre><p>We still need to define what exactly this means for the main back-ends (LDAP, NIS, NIS+ etc.), but the main idea is to check, whether the back-end daemon (e.g. ldap_cachemgr(1M), ypbind(1M)) is alive, well, and able to communicate with the networked repository (e.g. directory server(s), NIS server(s) etc.)</p><h2 id="H3.8A0A0A0Discovernameservice"><span><span class="wikilink"><a href="#id11">3.8   Discover name service</a></span></span></h2><pre>
+
+nss_status_t _nss_&lt;be&gt;_config_discover(void **priv,
+        nsconf_config_t **cfg)
+
+</pre><p>Automatic discovery. <strong>TBD</strong></p><table><tr><td>[duckwater]</td><td><span class="wikilink"><a href="/bin/view/Project+duckwater/"><span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://opensolaris.org/os/project/duckwater"><span class="wikigeneratedlinkcontent">http://opensolaris.org/os/project/duckwater</span></a></span></a></span></td></tr><tr><td>[version_api]</td><td><span class="wikilink"><a href="/bin/view/Project+duckwater/nssversion"><span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://opensolaris.org/os/project/duckwater/Documentation/nssversion/"><span class="wikigeneratedlinkcontent">http://opensolaris.org/os/project/duckwater/Documentation/nssversion/</span></a></span></a></span></td></tr><tr><td>[finder_api]</td><td><span class="wikilink"><a href="/bin/view/Project+duckwater/finder"><span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://opensolaris.org/os/project/duckwater/Documentation/finder/"><span class="wikigeneratedlinkcontent">http://opensolaris.org/os/project/duckwater/Documentation/finder/</span></a></span></a></span></td></tr></table>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:13<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by Doug Leavitt on 2010/04/06 18:24
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Project duckwater Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/BuildSCM">Build Status & Gate Information</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/Documentation">Documentation</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/Reconfiguration">Name Service Reconfiguration (SMF)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/TrackedBugs">Tracked Project Bugs/RFEs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/finder">Finder APIs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/legacyconffiles">Legacy Configuration Files Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/libnsconf">libnsconf &#45; Name services configuration library</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/ns%2Ddiscovery">Name Services Discovery</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/nsadm_man">nsadm(1m) Draft Man Page</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/nscfg_man">nscfg(1m) Draft Man Page</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/nssconfig">NSS config API draft</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/nssversion">PSARC/2008/035 nss versioning API draft</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/profiles_new">Name Service Profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/requirements">Requirements</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/alpha2">Alpha2 Release Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/demo">Alpha1 Release Notes &#45; Duckwater Demo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/downloads">Duckwater Download Page</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/duckwater_phase0">Duckwater Phase 0</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/codereview">Code&#45;review</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/new_connmgmt">New Connection Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/std_ldapaddent">Standalone ldapaddent(1M)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/std_ldapclient_man">Standalone libldapclient(1M)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/std_ldaplist">Standalone ldaplist(1)</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/hg_cheatsheet">Duckwater/Mercurial Cheat sheet</a></span></li>
+</ul>
+                    </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2011, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

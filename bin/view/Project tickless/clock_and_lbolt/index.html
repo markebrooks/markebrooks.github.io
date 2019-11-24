@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>clock() and lbolt (Project tickless.clock_and_lbolt) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+tickless/clock_and_lbolt" />
+                                <meta name="document" content="Project tickless.clock_and_lbolt"/>
+    <meta name="space" content="Project tickless"/>
+    <meta name="page" content="clock_and_lbolt"/>
+    <meta name="version" content="1.1"/>
+                    <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="clock() and lbolt" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                <!-- com.xpn.xwiki.plugin.skinx.LinkExtensionPlugin -->
+    <link href="/bin/skin/skins/colibri/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript" src="/resources/js/xwiki/suggest/ajaxSuggest.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project tickless";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes" ];
+window.docviewurl = "/bin/view/Project+tickless/clock_and_lbolt";
+window.docediturl = "/bin/edit/Project+tickless/clock_and_lbolt";
+window.docsaveurl = "/bin/save/Project+tickless/clock_and_lbolt";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js'></script><script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js'></script>
+
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/compatibility.js"></script>
+
+  </head>
+        <body id="body" class="xwiki viewbody hideright">
+  <div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+<div id="menuview">
+  <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div class="topmenuentry " id="tmLogin"><a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Btickless%2Fclock_and_lbolt"><strong>Log-in</strong></a></div>
+  </div>
+<div class="leftmenu">
+  <div class="topmenuentry hasIcon" id="tmWiki"><a class="tme" href="/bin/view/Main/"><strong>xwiki</strong></a></div>
+  <div class="topmenuentry hasIcon" id="tmSpace"><a class="tme" href="/bin/view/Project+tickless/"><strong>Project tickless</strong></a></div>
+
+<div class="topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmSubSites">
+<span class="tme-extensible"><a class="tme"><strong>Subsites</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="http://cr.opensolaris.org/" id="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth">Auth</a></span>
+</span></div>
+
+
+</div>
+</div>
+
+</div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+
+  <div id="company">
+  <div id="companylogo">
+    <a href="/bin/view/Main/" title="Home" rel="home">
+    <img src="/skins/colibri/logo.png" alt="Wiki Logo"/>
+    </a>
+  </div>   </div> 
+  <div id="Iconbar">
+    <a id="CollectivesIcon" href="/bin/view/Main/collectives">Collectives</a>
+    <a id="DiscussionsIcon" href="/bin/view/Main/discussions">Discussions</a>
+    <a id="DocumentationIcon" href="/bin/view/Main/documentation">Documentation</a>
+    <a id="DownloadIcon" href="/bin/view/Main/downloads">Download</a>
+    <a id="SourceBrowserIcon" href="http://src.opensolaris.org">Source Browser</a>
+  </div>
+  <div class="clearfloats"></div>
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/WebSearch">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+   <div id="hierarchy">
+                <a href='/bin/view/Project+tickless/Testing'>Testing</a> <span class='separator'>&raquo;</span> <a href='/bin/view/Project+tickless/clock_and_lbolt'>clock() and lbolt</a>
+      </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+tickless/clock_and_lbolt?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+  <div id="contentmenu" class="actionmenu">
+  <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div class="topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmExport">
+<span class="tme-extensible"><a class="tme"><strong>Export</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+tickless/clock_and_lbolt?format=pdf&amp;language=en" id="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+tickless/clock_and_lbolt?format=rtf&amp;language=en" id="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+tickless/clock_and_lbolt?format=html&amp;language=en" id="tmExportHtml">Export as HTML</a></span>
+  </span></div>
+
+<div class="topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmShow">
+<span class="tme-extensible"><a class="tme" href="/bin/view/Project+tickless/clock_and_lbolt?viewer=code&amp;language=en"><strong>View</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+tickless/clock_and_lbolt?viewer=comments&amp;language=en" id="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+tickless/clock_and_lbolt?viewer=attachments&amp;language=en" id="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+tickless/clock_and_lbolt?viewer=history&amp;language=en" id="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+tickless/clock_and_lbolt?viewer=information&amp;language=en" id="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+tickless/clock_and_lbolt?viewer=code&amp;language=en" id="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div class="topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmMoreActions">
+<span class="tme-extensible"><a class="tme"><strong>More actions</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+tickless/clock_and_lbolt?xpage=print&amp;language=en" id="tmPrintPreview">Print preview</a></span>
+    </span></div>
+  </div>
+
+
+  </div>
+  <div id="mainContentArea">
+      
+
+  
+<div id="document-title"><h1>clock() and lbolt</h1></div>
+                            <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h1 id="HWelcometoclockandlboltTesting"><span>Welcome to clock() and lbolt Testing</span></h1><p>&nbsp;This page provides documentation for the various components to testing the decoupling of lbolt from clock(). This includes the <span class="wikilink"><a href="/bin/view/Project+tickless/clock_and_lbolt#Test_Plan">&nbsp;Test Plan</a></span> and a list of <span class="wikilink"><a href="/bin/view/Project+tickless/clock_and_lbolt#Issues">noteworthy issues</a></span> identified during testing.</p><h2 id="H1clockandlboltTestPlan"><span>1 clock() and lbolt Test Plan</span></h2><h3 id="H"><span></span></h3><h2 id="H2Introduction"><span>2 Introduction</span></h2><h3 id="H21Authors"><span>2.1 Author(s):</span></h3><p>&nbsp;Patrick Bredenberg, Rafael Vanoni</p><h3 id="H22TestSponsor"><span>2.2 Test Sponsor:</span></h3><p>&nbsp;Jim Walker</p><h3 id="H23TestPlanApprovals"><span>2.3 Test Plan Approvals</span></h3><table><tr><th>Title</th><th>Name</th><th>Version</th><th>Date</th></tr><tr><td>Test Sponsor</td><td>Jim Walker</td><td>0.4</td><td>2009-07-23</td></tr><tr><td>Development Lead</td><td>Rafael Vanoni</td><td>0.4</td><td>2009-07-23</td></tr><tr><td>Development Manager</td><td>Darrin Johnson</td><td>0.4</td><td>2009-07-23</td></tr></table><h3 id="H24ExternalOpenSourceTestSoftware"><span>2.4 External Open Source Test Software</span></h3><ul><li>Does this project use any external open source test software? No.</li></ul><h3 id="H25RevisionHistory"><span>2.5 Revision History</span></h3><table><tr><th>Date (yyyy-mm-dd)</th><th>Revision</th><th>Comments</th><th>Status</th></tr><tr><td>2009-06-23</td><td>0.1</td><td>Initial draft</td><td>Complete</td></tr><tr><td>2009-07-13</td><td>0.2</td><td>Adding glossary and filling out various test sections.</td><td>Complete</td></tr><tr><td>2009-07-20</td><td>0.3</td><td>Adding test areas and device information.</td><td>Complete</td></tr><tr><td>2009-07-23</td><td>0.4</td><td>Adjust Test Plan format.</td><td>Complete</td></tr></table><h3 id="H26References"><span>2.6 References</span></h3><p><span class="wikilink"><a href="/bin/view/Project+tickless/lbolt">&nbsp;lbolt&nbsp;</a></span></p><h3 id="H27Staffing"><span>2.7 Staffing</span></h3><h3 id="H28Glossary"><span>2.8 Glossary</span></h3><ul><li>clock() - a function executed a hundred times/second by the kernel to perform various tasks. The tickless project overall goal is to only execute these when needed, as opposed to a fixed number of times over a period.</li><li>cyclic - a kernel timeout, the mechanism by which tasks can be executed after a given period of time.</li><li>lbolt - a kernel variable used to track 'clock ticks', incremented every time the clock() cyclic fires.</li></ul><h2 id="H3TestProgramSummary"><span>3 Test Program Summary</span></h2><p>&nbsp;The decoupling of lbolt from clock() involves the transition of lbolt/lbolt64 to function calls to a platform's hardware timing mechanisms. No new test development is required, but heavy regression testing and performance benchmarks are necessary to ensure no problems are introduced.</p><h2 id="H4OperationalFactors"><span>4 Operational Factors</span></h2><h3 id="H41ProjectDependencies"><span>4.1 Project Dependencies</span></h3><p>&nbsp;Access to a variety of SPARC and x86-based systems. This project also requires access to devices whose driver is being touched. Current list of devices:</p><ul><li>1394</li><li>e1000g0</li><li>iwk</li><li>ipw</li><li>iwi</li><li>nxge</li><li>llc</li><li>pcmcia</li><li>sbp2</li><li>scsi (including ifp)</li><li>SD cards</li><li>tpm</li></ul><h3 id="H42Risks"><span>4.2 Risks</span></h3><p>&nbsp;The project being testing impacts both platform independent and platform dependent. Thus, comprehensive testing will require access to a wide range of systems and hardware.</p><h3 id="H43Assumptions"><span>4.3 Assumptions</span></h3><p>&nbsp;This project is basically changing references to the lbolt and lbolt64 variables in favor of the get_lbolt() and get_lbolt64() routines. Since the two variables are referenced in many different places, testing should verify all of the affected code paths.</p><h2 id="H5TestDevelopmentInformation"><span>5 Test Development Information</span></h2><h3 id="H51TestDevelopment"><span>5.1 Test Development</span></h3><p>&nbsp;No test development is necessary.</p><h2 id="H6AreasofTesting"><span>6 Areas of Testing</span></h2><h3 id="H61FunctionalTesting"><span>6.1 Functional Testing</span></h3><p>&nbsp;No new functionality is introduced, so no functional test will be developed or executed.</p><h3 id="H62RegressionTesting"><span>6.2 Regression Testing</span></h3><p>&nbsp;Validation that any code currently using direct or indirect calls to lbolt still function as expected.</p><ul><li>ZFS</li><li>BrandZ</li><li>Dispatcher (CPUcaps, classes)</li><li>NFS</li><li>Samba</li><li>Sockets</li><li>UFS</li><li>IP</li><li>SSL</li><li>sctp</li><li>SCSI and fiber-channel</li><li>vscan</li><li>rpc</li><li>VM</li><li>avs</li><li>crypto</li><li>comstar</li><li>OPL (VM)</li><li>IB</li></ul><h3 id="H63ConformanceTesting"><span>6.3 Conformance Testing</span></h3><p>&nbsp;None.</p><h3 id="H64StressTesting"><span>6.4 Stress Testing</span></h3><p>&nbsp;Stress testing, along with regression testing, will be performed to guarantee that the changes do not affect the systems ability to perform under heavy utilization.</p><ul><li>vmstress</li><li>zfs</li><li>ufs</li><li>NFS</li><li>tcp</li><li>DRstress</li><li>psrset stress</li><li>togproc (online/offline) stress</li></ul><h3 id="H65PerformanceTesting"><span>6.5 Performance Testing</span></h3><p>&nbsp;Performance benchmark testing will include:</p><ul><li>A standard PerfPIT run.</li><li>boottime</li><li>specjvm</li><li>specjbb</li><li>x11bench</li><li>specweb</li><li>netbench</li><li>OLTP</li><li>SPECcpu2006 (speed and rate)</li><li>SPECpower (run in isolation and also concurrent with other benchmarks)</li><li>filebench</li><li>uperf</li></ul><h3 id="H66MemoryLeakTesting"><span>6.6 Memory Leak Testing</span></h3><p>&nbsp;The use of the ::findleaks utility within mdb(1) will be used.</p><h3 id="H67RequiredSolarisFeatureTesting"><span>6.7 Required Solaris Feature Testing</span></h3><ul><li>==== Zones Testing</li><li>==== ZFS Testing</li><li>==== Trusted Extensions Testing</li><li>==== xVM and LDOM Guest OS Testing</li></ul><h3 id="H68InteroperabilityTestingNone"><span>6.8 Interoperability Testing None.</span></h3><h3 id="H69DocumentationTestingNone"><span>6.9 Documentation Testing None.</span></h3><h3 id="H610InternationalizationTesting"><span>6.10 Internationalization Testing</span></h3><p>&nbsp;None.</p><h3 id="H611AdditionalTesting"><span>6.11 Additional Testing</span></h3><p>&nbsp;The following devices will need to be tested:</p><ul><li>1394</li><li>e1000g0</li><li>iwk</li><li>ipw</li><li>iwi</li><li>nxge</li><li>llc</li><li>pcmcia</li><li>sbp2</li><li>scsi (including ifp)</li><li>sd card</li><li>tpm</li></ul><h3 id="H612TestingNotCovered"><span>6.12 Testing Not Covered</span></h3><p>&nbsp;None.</p><h2 id="H7TestExecution"><span>7 Test Execution</span></h2><h3 id="H71HardwareTestConfigurations"><span>7.1 Hardware Test Configurations</span></h3><p>&nbsp;Both SPARC and x86/x64 will be tested.</p><h3 id="H72SoftwareTestConfigurations"><span>7.2 Software Test Configurations</span></h3><p>&nbsp;snv_121 or later in 32/64 modes will be tested.</p><h3 id="H73ExtrapolationStrategy"><span>7.3 Extrapolation Strategy</span></h3><p>&nbsp;None.</p><h3 id="H74PreIntegrationPITRun"><span>7.4 Pre-Integration (PIT) Run</span></h3><p>&nbsp;A Project PIT run will be performed.</p><h3 id="H75TestExecutionMatrices"><span>7.5 Test Execution Matrices</span></h3><table><tr><th>#</th><th>Type</th><th>Name</th><th>Arch</th><th>CPU/Memory</th><th>IPV</th><th>Kernel/Library</th></tr><tr><td>1</td><td>M3000</td><td>m3k-brm-01.central</td><td>SPARC</td><td>SPARC64-VII/16 GB</td><td>IPV</td><td>64/64</td></tr><tr><td>2</td><td>T5120</td><td>t5120-bdr-02.central</td><td>SPARC</td><td>UltraSPARC-T2/16 GB</td><td>IPV</td><td>64/64</td></tr><tr><td>3</td><td>4200</td><td>x4200m2-sfb-09</td><td>amd64</td><td>AMD Opteron(tm) Processor 2220/7.7 GB</td><td>IPV</td><td>64/64, 32/64</td></tr><tr><td>4</td><td>v60x</td><td>netrep2x</td><td>i86pc</td><td>Intel(r) Xeon(tm)/2 GB</td><td>IPV</td><td>32/32</td></tr><tr><th>Test</th><th>SPARC</th><th>x86({32,64}-bit)</th><th>Non-global Zones</th><th>xVM dom0</th><th>xVM domU</th></tr><tr><td>Regression Testing</td><td>Project PIT</td><td>Project PIT</td><td>Project PIT</td><td>Project PIT</td><td>Project PIT</td></tr><tr><td>togproc</td><td>m3k-brm-01</td><td>x4200m2-sfb-09</td><td>N/A</td><td>x4200m2-sfb-09</td><td>zone-brm-10-10-46-24</td></tr><tr><td>psrset stress</td><td>m3k-brm-01</td><td>x4200m2-sfb-09</td><td>N/A</td><td>x4200m2-sfb-09</td><td>zone-brm-10-10-46-24</td></tr><tr><td>vmstress</td><td>m3k-brm-01</td><td>x4200m2-sfb-09</td><td>x4200m2-sfb-09 (local zone)</td><td>x4200m2-sfb-09</td><td>zone-brm-10-10-46-242</td></tr></table><h2 id="H8SchedulesandMilestones"><span>8 Schedules and Milestones</span></h2><h2 id="H9PostIntegrationTestingInformation"><span>9 Post-Integration Testing Information</span></h2><p>&nbsp;The existing test suites already running in automation will suffice.</p><h2 id="H10Solaris10UpdateReleaseifapplicable"><span>10 Solaris 10 Update Release (if applicable)</span></h2><p>&nbsp;None.</p><p><span class="wikilink"><a href="/bin/view/Project+tickless/clock_and_lbolt#Welcome">&nbsp;Back to Top</a></span></p><h2 id="HIssues"><span>Issues</span></h2><p><span class="wikilink"><a href="/bin/view/Project+tickless/clock_and_lbolt#Welcome">&nbsp;Back to Top</a></span></p>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:17<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by admin on 2009/10/26 12:17
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+                </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded Search">
+<h1 class="xwikipaneltitle hidden" onclick="togglePanelVisibility(this.parentNode);">Search</h1>
+<div class="xwikipanelcontents">
+  <form action="/bin/view/Main/WebSearch">
+    <div class="globalsearch">
+      <input class="globalsearchinput" type="text" name="text" value="search..." size="15" onfocus="if (this.value == 'search...') value=''; this.select();" onblur="if (this.value == '') value='search...'; this.blur()"/>
+&nbsp;
+      <input class="button" value="Go" type="image" src="/skins/colibri/go.png" alt="Go"/>
+    </div>
+  </form>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSDocs','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSDocs'); togglePanelVisibility(this.parentNode);">Project tickless Pages</h1>
+<div class="xwikipanelcontents"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/Testing">Testing</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/clock_and_lbolt">clock() and lbolt</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/tasks">Tasks</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/ev_load_avg">Event based load avg</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/lbolt">clock() and lbolt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/tick_accting">Tick Accounting</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/time_adj">Time Adjustment</a></span></li>
+</ul></li>
+</ul>
+                        </div>
+</div>
+                        
+                        <div class="panel expanded Subsites">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.Subsites','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.Subsites'); togglePanelVisibility(this.parentNode);">Subsites</h1>
+<div class="xwikipanelcontents">
+<span class="wikiexternallink"><a href="http://cr.opensolaris.org">Code Reviews</a></span><br/>
+<span class="wikiexternallink"><a href="http://repo.opensolaris.org">SCM Management</a></span><br/>
+<span class="wikiexternallink"><a href="http://pkg.opensolaris.org">Package Search</a></span><br/>
+<span class="wikiexternallink"><a href="http://bugs.opensolaris.org">Bugster</a></span><br/>
+<span class="wikiexternallink"><a href="http://defect.opensolaris.org">Bugzilla</a></span><br/>
+<span class="wikiexternallink"><a href="http://test.opensolaris.org">Test Machines</a></span><br/>
+<span class="wikiexternallink"><a href="http://planet.opensolaris.org">Planet</a></span><br/>
+<span class="wikiexternallink"><a href="http://mail.opensolaris.org">Mailing Lists</a></span><br/>
+<span class="wikiexternallink"><a href="http://poll.opensolaris.org">Elections & Polls</a></span><br/>
+<span class="wikiexternallink"><a href="http://arc.opensolaris.org">ARC Case Logs</a></span><br/>
+<span class="wikiexternallink"><a href="http://jucr.opensolaris.org">Source Juicer</a></span><br/>
+<span class="wikiexternallink"><a href="http://pkgfactory.opensolaris.org">Package Factory</a></span><br/>
+<span class="wikiexternallink"><a href="http://auth.opensolaris.org">User Authentication</a></span><br/>
+</div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div>  <div id="footerglobal" class="layoutsection">
+  <div class="minwidth"></div>
+
+  <script language="JavaScript" src="/resources/js/s_code_remote.js"></script>
+
+
+          <div id="xwikiplatformversion">XWiki Enterprise 2.1.1.25889 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+  <br/>
+
+
+    <hr/>
+    <div><a href="/bin/view/Main/tou">Terms Of Use</a> |
+         <a href="http://www.sun.com/privacy/">Privacy</a> | 
+         <a href="/bin/view/Main/trademark">Trademarks</a> |
+         <a href="/bin/view/Main/copyrights">Copyright Policy</a> |
+         <a href="/bin/view/Main/site_guidelines">Site Guidelines</a> |
+         <a href="/bin/view/Main/site%2Dmap">Site map</a> |
+         <a href="/bin/view/Main/help">Help</a></div>
+    <div>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.</div>
+    <div id="xwikilicence">© 2010, Oracle Corporation and/or its affiliates</div>
+    <img src="http://opensolaris.org/oracle/logo_oracle_footer.gif")" alt="Oracle"/>
+  <hr/>
+  
+  </div>
+
+
+</div></div></body>
+</html>

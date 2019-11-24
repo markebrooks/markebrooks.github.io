@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>ZFS Boot  Project FAQ (Community Group zfs.zfsbootFAQ) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Community+Group+zfs/zfsbootFAQ" />
+                    <link rel="canonical" href="/bin/view/Community+Group+zfs/zfsbootFAQ" />
+                            <meta name="document" content="Community Group zfs.zfsbootFAQ"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Community Group zfs"/>
+    <meta name="page" content="zfsbootFAQ"/>
+    <meta name="version" content="9.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Community+Group+zfs/pages/zfsbootFAQ"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="ZFS Boot  Project FAQ" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="Cindy Swearingen" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/fullScreen.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Community Group zfs";
+XWiki.currentPage = "zfsbootFAQ";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Community+Group+zfs/zfsbootFAQ";
+window.docediturl = "/bin/edit/Community+Group+zfs/zfsbootFAQ";
+window.docsaveurl = "/bin/save/Community+Group+zfs/zfsbootFAQ";
+window.docgeturl = "/bin/get/Community+Group+zfs/zfsbootFAQ";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/viewers/code.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/fullScreen.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Community_Group_zfs viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FCommunity%2BGroup%2Bzfs%2FzfsbootFAQ%3Fviewer%3Dcode%26%2338%3Blanguage%3Den"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+zfs/"><strong>Community Group zfs</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Community+Group+zfs" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+            </td>
+            <td id="logo-text" style="width: 1%;">
+                Solaris
+            </td>         
+            <td style="width: 98%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                              <a href='/bin/view/Community+Group+zfs/boot'>ZFS Boot</a> <span class='separator'>&#187;</span> <span class='current'>ZFS Boot Project FAQ</span>
+                </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Community+Group+zfs/zfsbootFAQ?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+        <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Community+Group+zfs/zfsbootFAQ?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+zfs/zfsbootFAQ?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+zfs/zfsbootFAQ?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+zfs/zfsbootFAQ?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Community+Group+zfs/zfsbootFAQ?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+zfs/zfsbootFAQ?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+zfs/zfsbootFAQ?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+zfs/zfsbootFAQ?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+zfs/zfsbootFAQ?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Community+Group+zfs/zfsbootFAQ?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+<div id="document-title"><h1>Wiki source code of <a href="/bin/view/Community+Group+zfs/zfsbootFAQ">ZFS Boot Project FAQ</a></h1></div>
+                <div id="document-info">
+    <div>
+                      <span id="contentshortcut"><a href="/bin/view/Community+Group+zfs/zfsbootFAQ?viewer=content">Content</a></span>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+
+
+
+
+
+
+<div>
+  <a href="/bin/view/Community+Group+zfs/zfsbootFAQ?viewer=code&amp;showlinenumbers=0&amp;language=en" id="toggleLineNumbers">Hide line numbers</a>
+                                  <textarea readonly="readonly" class="wiki-code" rows="25" cols="80">
+  1: == ZFS Boot Project FAQ ==
+  2: 
+  3: {{toc start=&quot;3&quot; depth=&quot;3&quot; numbered=&quot;true&quot; scope=&quot;local&quot;/}}
+  4: 
+  5: === ZFS Boot and Installation Release Questions ===
+  6: 
+  7: {{toc start=&quot;4&quot; depth=&quot;4&quot; numbered=&quot;true&quot; scope=&quot;local&quot;/}}
+  8: 
+  9: ==== **What is the status of ZFS boot and install features?** ====
+ 10: The plans are to integrate the ZFS boot and installation features in a phased putback:
+ 11: * ZFS swap support (CR 6528296) integrated into Nevada, build 88
+ 12: * ZFS boot support (CR 6521468) integrated into Nevada, build 88
+ 13: * ZFS install support (CR 6521472) integrated into Nevada, build 90
+ 14: ==== **When will full ZFS boot and installation features be available?** ====
+ 15: Because of the phased putback in both Nevada build 88 and 90, it is best to wait for the SXCE, build 90 release before using these features.
+ 16: We recommend waiting for the full boot and install support rather than attempting to use any of these features individually.
+ 17: ZFS boot and install support is available starting in the Solaris 10 release 10 10/08 release. Before you install or migrate to a ZFS root file system, review the following information:
+ 18: * [[ Installing and Booting a ZFS Root File System&gt;&gt;http://docs.sun.com/app/docs/doc/819-5461/zfsboot-1?a=view]]
+ 19: * [[Solaris 10 10/09 Release Notes&gt;&gt;http://docs.sun.com/app/docs/doc/821-0381]]
+ 20: * [[ZFS Troubleshooting Guide&gt;&gt;http://www.solarisinternals.com/wiki/index.php/ZFS_Troubleshooting_Guide]]
+ 21: ==== **What are the ZFS boot and install known issues?** ====
+ 22: Before you begin, check out the list of known issues at the [[ZFS boot project page&gt;&gt;Community Group zfs.boot]].
+ 23: ==== **Can I use the Nevada build 62 ZFS boot/root support with the new ZFS boot and installation features?** ====
+ 24: Systems that already have ZFS root file systems can be bfu'd to build 90, but bfu does not convert the legacy mounts (of /, /var, and so on) to ZFS mounts. Backwards bfu to releases that don't support ZFS boot is prohibited. We recommend that you reinstall your systems at some future time to achieve the standard ZFS boot configuration provided in this release, which uses ZFS mounts, not legacy mounts. However, the system continues to boot with legacy mounts, at least for now.
+ 25: ==== **Can I upgrade from the OpenSolaris 2008.05 release to the SXCE, build 90 release?** ====
+ 26: No, you can't upgrade or bfu from the OpenSolaris 2008.05 release to the SXCE, build 90 release.
+ 27: ==== **What else should I know about using ZFS installation and boot features?** ====
+ 28: You should know that the final installation phase of creating the dump device takes a long time and it might appear that the system is hung. Be patient.
+ 29: 
+ 30: === ZFS Boot Questions ===
+ 31: 
+ 32: {{toc start=&quot;4&quot; depth=&quot;4&quot; numbered=&quot;true&quot; scope=&quot;local&quot;/}}
+ 33: 
+ 34: ==== **What ZFS boot features are included?** ====
+ 35: * Both x86 and SPARC systems use the new style of booting with a boot archive, which is a file system image that contains the files required for booting.
+ 36: * While the system is booted for installation, a ramdisk is used for the root file system during the entire installation process, which eliminates the need to be booted from removable media.
+ 37: * If you do an initial install of the SXCE, build 90 release or Live Upgrade from the SXCE, build 90 release, you will be able to boot from a ZFS root file system on both SPARC and x86 systems.
+ 38: * Entries are added to the menu.lst file during the installation or Live Upgrade process to boot ZFS automatically. For example, on an x86 system:
+ 39: 
+ 40: {{{
+ 41: title Solaris Express Community Edition szboot_0508 X86
+ 42: findroot (pool_rpool,0,a)
+ 43: bootfs rpool/ROOT/szboot_0508
+ 44: kernel$ /platform/i86pc/kernel/$ISADIR/unix -B $ZFS-BOOTFS
+ 45: module$ /platform/i86pc/$ISADIR/boot_archive
+ 46: }}}
+ 47: 
+ 48: For example, on a SPARC system:
+ 49: 
+ 50: {{{
+ 51: title snv_90
+ 52: bootfs rpool/ROOT/snv_90
+ 53: title snv_90b
+ 54: bootfs rpool/ROOT/snv_90b
+ 55: }}}
+ 56: 
+ 57: * On a system with both bootable ZFS and UFS root file systems, you will be able to boot from either one by using the luactivate command. Or, if the active BE is ZFS, the system is booted from ZFS. If the active BE is UFS, the system is booted from UFS. On SPARC systems, you can use the boot -L command to display a list of available ZFS BEs that have been activated and then boot a ZFS BE with the boot -Z command when when the boot device contains a ZFS storage pool with bootable ZFS datasets. On x86 systems, you can boot from the bootable environments that are listed in the GRUB menu.
+ 58: * During the install and Live Upgrade process, the ZFS root file system is automatically designated with the bootfs property.
+ 59: ==== **How should I create my ZFS storage pool? Can I boot from a mirrored ZFS root configuration?** ====
+ 60: Due to an existing boot limitation, you must create your ZFS storage pool with disk slices rather than whole disks if you are going to boot from ZFS file systesm in this pool. For example:
+ 61: 
+ 62: {{{
+ 63: # zpool create rpool mirror c1t0d0s0 c1t1d0s0
+ 64: }}}
+ 65: 
+ 66: Yes, you can boot from a mirrored ZFS configuration. A mirrored ZFS configuration for the root pool is recommended.
+ 67: ==== **How do I boot from an alternate mirror in a mirrored ZFS configuration?** ====
+ 68: If you created a mirrored ZFS root pool during an initial installation, you can boot from an alternate disk automatically. Identify an alternate disk in your mirrored ZFS root pool. For example, disk c1t1d0s0 in the output below.
+ 69: 
+ 70: {{{
+ 71: # zpool status
+ 72:   pool: rpool
+ 73:  state: ONLINE
+ 74:  scrub: none requested
+ 75: config:
+ 76:         NAME          STATE     READ WRITE CKSUM
+ 77:         rpool         ONLINE       0     0     0
+ 78:           mirror      ONLINE       0     0     0
+ 79:             c1t0d0s0  ONLINE       0     0     0
+ 80:             c1t1d0s0  ONLINE       0     0     0
+ 81: }}}
+ 82: 
+ 83: {{{
+ 84: ok boot /pci@7c0/pci@0/pci@1/pci@0,2/LSILogic,sas@2/disk@1
+ 85: }}}
+ 86: 
+ 87: If you used the zpool attach command to create a mirrored ZFS root pool after the installation, then you must run the installboot or installgrub command on the alternate disks before they are bootable. For example:
+ 88: 
+ 89: {{{
+ 90: sparc# installboot -F zfs /usr/platform/`uname -i`/lib/fs/zfs/bootblk /dev/rdsk/c0t1d0s0
+ 91: }}}
+ 92: 
+ 93: {{{
+ 94: x86# installgrub /boot/grub/stage1 /boot/grub/stage2 /dev/rdsk/c0t1d0s0
+ 95: }}}
+ 96: 
+ 97: ==== **Will I still be able to boot from a UFS file system?** ====
+ 98: If you do an initial install of the SXCE, build 90 release, you will not be able to boot from a previous UFS file system unless you saved your UFS config on an alternate disk.
+ 99: If you use Live Upgrade to upgrade your UFS root file system to a ZFS root file system with Nevada, build 90 release, you will be able to boot from your previous UFS file system as a boot environment (BE) or from your ZFS root file system. You can choose to boot either one by using the luactivate command. Or, if the active BE is ZFS, the system is booted from ZFS. If the active BE is UFS, the system is booted from UFS. On SPARC systems, you can use the boot -L command to display a list of bootable datasets that have been activated when the boot device contains a ZFS storage pool with bootable ZFS datasets. Then, use the boot -Z command to boot from the selected ZFS dataset. On x86 systems, you can boot from the bootable environments that are listed in the GRUB menu.
+100: 
+101: === ZFS Installation and Upgrade Questions ===
+102: 
+103: {{toc start=&quot;4&quot; depth=&quot;4&quot; numbered=&quot;true&quot; scope=&quot;local&quot;/}}
+104: 
+105: ==== Installation Questions ====
+106: 
+107: Caution: As with any installation process, please be sure to back up any data that you want to keep.
+108: 
+109: ===== **What ZFS install features are included?** =====
+110: * The ability to install and boot from a ZFS root file system by using the initial install feature or the Live Upgrade feature.
+111: You must select the text mode install option to install a ZFS root file system.
+112: ** On SPARC based system, use the following syntax from the Solaris installation DVD:
+113: 
+114: {{{
+115: ok boot cdrom - text
+116: }}}
+117: 
+118: ** On SPARC based system, use the following syntax when booting from the network:
+119: 
+120: {{{
+121: ok boot net - text
+122: }}}
+123: 
+124: ** On an x86 based system, select the text-mode install option when presented.
+125: * The ability to create a ZFS storage pool and designate a bootable ZFS file system from a Jumpstart profile.
+126: * You can set up a mirrored ZFS root pool by selecting two disks during the installation. Or, you can attach disks after the installation to create a mirrored ZFS root pool.
+127: * Swap and dump devices are automatically created on ZFS volumes in the ZFS root pool.
+128: ===== **What install features are not included?** =====
+129: * You cannot use the standard upgrade program to upgrade your UFS root file system to a ZFS root file system. However, if you want to use Live Upgrade to migrate your UFS root file system to a ZFS root file system, you will first need to use the standard upgrade program to upgrade from a previous SXCE release to the SXCE, build 90 release. Then, you can use Live Upgrade to migrate to a ZFS root file system.
+130: * Although you can use Live Upgrade to upgrade your UFS root file system to a ZFS file system, you can't use Live Upgrade to upgrade non-root file systems.
+131: * The Flash install feature is not currently available to install ZFS file systems. However, work is in progress to provide ZFS/flash installation support in the Solaris 10 release. This work is being tracked by CR 6690473. More information will be available Fall 2009.
+132: * You cannot install OS services for a diskless client on a ZFS file system.
+133: ===== **What are the memory and disk space requirements for a ZFS root installation?** =====
+134: The minimum amount of available pool space that is required for a bootable ZFS root file system is larger than for a bootable UFS root file system because swap and dump devices are not shared in a ZFS root environment. Separate swap and dump devices are created during the installation process.
+135: The minimum amount of available pool space for a bootable ZFS root file system depends upon the amount of physical memory, the disk space available, and the number of BEs to be created. Approximately 1 Gbyte of memory and at least 16 Gbytes of disk space are recommended.
+136: For information about how the disk space is consumed and how to reduce the size of swap and dump devices before or after the installation of a bootable ZFS root file system, see the [[ZFS Admin Guide&gt;&gt;Community Group zfs.docs]].
+137: ===== **Can I create a ZFS root pool as a RAID-Z configuration?** =====
+138: No, a ZFS root pool cannot currently be configured with RAID-Z.
+139: ===== **How does the initial installation provide ZFS root pool support?** =====
+140: * During an initial installation of build 90, you have a choice of selecting a UFS or ZFS file system for the Solaris install.
+141: * If you select ZFS, you can select the disk or disks to be used for your ZFS root pool. If you select two disks, a mirrored two-disk configuration is setup for your root pool. Either a two- or three-disk mirrored pool is optimal. If you have 8 disks and you select all 8 disks, those 8 disks are used for the root pool as one big mirror. This is not an optimal configuration.
+142: * A swap device and a dump device are automatically created on ZFS volumes in the root pool.
+143: * The ZFS root pool is a special kind of pool that requires no administration. The sample zfs list output below identifies the root pool components, such as the mpool/ROOT entries, which are not accessible by default.
+144: 
+145: {{{
+146: # zfs list
+147: NAME                     USED  AVAIL  REFER  MOUNTPOINT
+148: mpool             6.81G  1.24G    19K  /mpool
+149: mpool/ROOT        5.81G  1.24G    18K  /mpool/ROOT
+150: mpool/ROOT/ZFSbe  5.81G  1.24G  5.81G  
+151: mpool/dump         516M  1.24G   516M  -
+152: mpool/swap         514M  1.67G  82.5M  -
+153: }}}
+154: 
+155: ===== **What Solaris JumpStart features are provided?** =====
+156: * A profile can be used to set up a ZFS root file system or a UFS root file system. The ability to boot and create UFS file systems is the same as previous Solaris releases.
+157: * A profile that contains the following keywords: pool, bootenv and the installbe and bename subcommands, creates a bootable ZFS storage pool. Some ufs-specific keywords are not allowed, such as those that specify the creation of UFS mount points.
+158: * You cannot use an existing ZFS storage pool for a JumpStart installation to create a bootable ZFS root file system.
+159: * ZFS-specific profile examples are as follows:
+160: 
+161: {{{
+162: install_type initial_install
+163: pool newpool auto auto auto mirror c0t0d0s0 c0t1d0s0
+164: bootenv installbe bename sxce_xx
+165: }}}
+166: 
+167: The above profile performs an initial install specified with install_type initial_install in a new pool, identified with pool newpool, whose size is automatically sized with the auto keyword to the size of the specified disks. The swap area and dump device are automatically sized with auto keyword based on 1/2 the size of physical memory, in a mirrored configuration of disks (with the mirror keyword and disks specified as c0t0d0 and c0t1d0). Boot environment characteristics are set with the bootenv keyword to install a new BE with the keyword installbe and a bename called sxce_xx is created.
+168: 
+169: {{{
+170: install_type initial_install
+171: pool newpool auto auto auto mirror c0t0d0s0 c0t1d0s0
+172: bootenv installbe bename zfsroot dataset /var
+173: }}}
+174: 
+175: The above profile is identical to the previous profile except that the /var file system is created as a separate dataset. At this time, you can only specify /var as a separate dataset.
+176: 
+177: {{{
+178: install_type initial_install
+179: cluster SUNWCall
+180: pool newpool 80g 2g 2g mirror any any
+181: bootenv installbe bename sxce_xx
+182: }}}
+183: 
+184: The above profile performs an initial install with keyword install_type initial_install of the SUNWCall metacluster in a new pool called newpool, that is 80 Gbytes in size with a 2-Gbyte swap volume and a 2-Gbyte dump volume, in a mirrored configuration of any two available devices that are large enough to create a 80-Gbyte pool. If two such devices aren't available, the install fails. Boot environment characteristics are set with the bootenv keyword to install a new BE with the keyword installbe and a bename called sxce_xx is created.
+185: ==== Live Upgrade Questions ====
+186: ===== **What Live Upgrade features are included? What Live Upgrade limitations exist?** =====
+187: * Previous Live Upgrade features are available and if related to UFS components, work as in previous Solaris releases.
+188: * An lucreate option is provided to identify your ZFS root pool (-p).
+189: * In addition, when creating an alternatve BE that is a clone of the primary BE, you cannot use the '-f', '-x', '-y', '-Y', and '-z' options to include or exclude files from the primary BE. You can still use the inclusion and exclusion option set in the following cases:
+190: 
+191: {{{
+192: UFS -&gt; UFS
+193: UFS -&gt; ZFS
+194: ZFS -&gt; ZFS (different pool)
+195: }}}
+196: 
+197: * The standard upgrade option is not available to migrate to a ZFS root file system.
+198: * The flash archive feature is not available yet for ZFS support.
+199: * Due to current boot limitations, the ZFS root pool must be created with slices instead of whole disks. For example:
+200: 
+201: {{{
+202: # zpool create rpool mirror c1t0d0s0 c1t1d0s0
+203: }}}
+204: 
+205: * Do not rename your ZFS BEs with the zfs rename command because the Live Upgrade feature is unaware of the name change and subsequent commands, such as ludelete, will fail. In fact, do not rename your ZFS pools or file systems if you have existing BEs that you want to continue to use.
+206: ===== **What does Live Upgrade do to migrate my UFS root file system to a ZFS root file system?** =====
+207: * Your existing UFS root file system remains as an alternate BE.
+208: * Existing swap areas remain as is and as entries in the /etc/vfstab file.
+209: * Existing dump device remains as is.
+210: ===== **What happens to my legacy UFS components?** =====
+211: All the UFS components including swap and dump areas are preserved during the Live Upgrade process.
+212: ===== **How do I use Live Upgrade to convert my UFS file systems to ZFS file systems?** =====
+213: The basic process includes the following steps:
+214: *You must upgrade your system running a previous Nevada release to build 90. Or, you can use the initial installation to set up a UFS root file system. Then, you can use Live Upgrade to migrate to a ZFS root file system.
+215: *You must create a ZFS storage pool for your ZFS root pool. Live Upgrade knows nothing about formatting or repartitioning disks.
+216: *The Live Upgrade phase includes the following steps:
+217: **Run lucreate to copy the primary BE to create an alternate BE. For example, use syntax similar to the following to migrate a UFS BE to a ZFS root pool:
+218: 
+219: {{{
+220: # zpool create mpool mirror c1t0d0s0 c1t1d0s0
+221: # lucreate -c c1t2d0s0 -n zfsBE -p mpool
+222: }}}
+223: 
+224: The default file systems are created in the specified pool and the non-shared file systems are then copied into the root pool.
+225: If you create another BE in the same pool, the syntax to create an alternate BE is similar to the following:
+226: 
+227: {{{
+228: # lucreate -n ZFS2be
+229: }}}
+230: 
+231: **Run luupgrade to upgrade the alternate BE (optional).
+232: **Run luactivate on the newly upgraded alternatve BE so that when the system is rebooted, it will be the new primary BE. In the Solaris 10 5/09 release, you must set the following environment variables before the luactivate operation or the luactivate operation will fail. For example:
+233: 
+234: {{{
+235: # BOOT_MENU_FILE=&quot;menu.lst&quot;
+236: # export BOOT_MENU_FILE
+237: # luactivate zfsBE
+238: }}}
+239: 
+240: ===== **Can I use Live Upgrade to upgrade my zones in the Solaris 10 releases?** =====
+241: Yes, but supported zone configurations are limited. For more information, see the [[ZFS Admin Guide&gt;&gt;http://docs.sun.com/app/docs/doc/819-5461]]
+242: === ZFS Swap and Dump Questions ===
+243: 
+244: {{toc start=&quot;4&quot; depth=&quot;4&quot; numbered=&quot;true&quot; scope=&quot;local&quot;/}}
+245: 
+246: ==== **What ZFS swap and dump features are included?** ====
+247: * During an initial installation or a live upgrade from a UFS root file system, a swap device is created on a ZFS volume in the ZFS root pool. For example:
+248: 
+249: {{{
+250: zfs list
+251: NAME                     USED  AVAIL  REFER  MOUNTPOINT
+252: mpool             6.81G  1.24G    19K  /mpool
+253: mpool/ROOT        5.81G  1.24G    18K  /mpool/ROOT
+254: mpool/ROOT/ZFSbe  5.81G  1.24G  5.81G  
+255: mpool/dump         516M  1.24G   516M  -
+256: mpool/swap         514M  1.67G  82.5M  -
+257: }}}
+258: 
+259: The swap volume size that is created during an initial installation is based on 1/2 the size of physical memory, but is generally in the 512 Mbyte to 2 Gbyte range. Swap volume size is adjustable during an initial install and after any installation. For example:
+260: 
+261: {{{
+262: # swap -l
+263: swapfile                  dev    swaplo   blocks     free
+264: /dev/zvol/dsk/rpool/swap 253,3        16  8257520  8257520
+265: }}}
+266: 
+267: * During an initial installation or a live upgrade from a UFS root file system, a dump device is created on a ZFS volume in the ZFS root pool. The dump device size is calculated by the kernel based on dumpadm information and the size of physical memory. Dump device size is adjustable during an initial install and after any installation. The dump device requires no administration after it is setup. For example:
+268: 
+269: {{{
+270: # dumpadm
+271:       Dump content: kernel pages
+272:        Dump device: /dev/zvol/dsk/rpool/dump (dedicated)
+273: Savecore directory: /var/crash/t2000-bdr-02
+274:   Savecore enabled: yes
+275: }}}
+276: 
+277: * Currently, the swap area and dump devices must reside on separate ZFS volumes.
+278: ==== **How do I make changes to my swap and dump devices?** ====
+279: If you need to change the size of your swap volume or dump volume, see [[ZFS Swap and Dump Devices&gt;&gt;http://www.solarisinternals.com/wiki/index.php/ZFS_Troubleshooting_Guide#ZFS_Swap_and_Dump_Devices]].
+280: You can resize the swap and dump devices before, during, or after installation. Keep in mind that the process of resizing or changing a large dump device is slow.
+281: If you need to change your swap device or dump device after the system is installed or upgraded, use the swap and dumpadm commands as in previous Solaris releases.
+282: ==== **Can I mix a UFS root file system with a ZFS swap volume?** ====
+283: Do not create a ZFS swap volume to be used in a UFS root environment in the Solaris releases prior to the Solaris 10 10/08 release due to [[CR 6528296&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6528296]].
+284: Running a mixed UFS root/ZFS swap environment in the Solaris 10 10/08 release or Solaris 10 5/09 release is not recommended because it is untested.
+</textarea>
+</div>
+
+    <div class="clearfloats"></div>
+  </div>    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Community Group zfs Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/boot">ZFS Boot</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/flash">ZFS Flash Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/zfsbootFAQ">ZFS Boot  Project FAQ</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/demos">Demos</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/basics">ZFS Basics Screencast</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/selfheal">ZFS Self Healing</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/docs">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/faq">ZFS FAQ</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/dedup">ZFS Dedup FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/encrypt">ZFS Encryption FAQ</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/intro">Getting Started</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/links">Links</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/porting">Porting ZFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/source">Source Tour</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/structures">Data Structures</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/translations">Translations</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/french">French</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/japanese">Japanese</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/ptBR">Brazilian Portuguese</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/russian">Russian</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/simplifiedchinese">Simplified Chinese</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/spanish">Spanish</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/version">version</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/1">ZFS Pool Version 1</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/1%2D1">ZFS File System Version 1</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/10">ZFS Pool Version 10</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/11">ZFS Pool Version 11</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/12">ZFS Pool Version 12</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/13">ZFS Pool Version 13</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/14">ZFS Pool Version 14</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/15">ZFS Pool Version 15</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/16">ZFS Pool Version 16</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/17">ZFS Pool Version 17</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/18">ZFS Pool Version 18</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/19">ZFS Pool Version 19</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/2">ZFS Pool Version 2</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/2%2D1">ZFS File System Version 2</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/20">ZFS Pool Version 20</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/21">ZFS Pool Version 21</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/22">ZFS Pool Version 22</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/23">ZFS Pool Version 23</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/24">ZFS Pool Version 24</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/25">ZFS Pool Version 25</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/26">ZFS Pool Version 26</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/27">ZFS Pool Version 27</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/28">ZFS Pool Version 28</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/29">ZFS Pool Version 29</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/3">ZFS Pool Version 3</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/3%2D1">ZFS File System Version 3</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/30">ZFS Pool Version 30</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/31">ZFS Pool Version 31</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/4">ZFS Pool Version 4</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/4%2D1">ZFS File System Version 4</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/5">ZFS Pool Version 5</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/5%2D1">ZFS File System Version 5</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/6">ZFS Pool Version 6</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/7">ZFS Pool Version 7</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/8">ZFS Pool Version 8</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/9">ZFS Pool Version 9</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/N">versionN</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/N%2D1">zplN</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/whatis">What is ZFS?</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/zfstestsuite">ZFS Test Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/ztest">ZTEST</a></span></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2012, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

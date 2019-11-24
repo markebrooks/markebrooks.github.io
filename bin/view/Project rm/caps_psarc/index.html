@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>CPU Caps PSARC case draft (Project rm.caps_psarc) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+rm/caps_psarc" />
+                                <meta name="document" content="Project rm.caps_psarc"/>
+    <meta name="space" content="Project rm"/>
+    <meta name="page" content="caps_psarc"/>
+    <meta name="version" content="1.1"/>
+                    <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="CPU Caps PSARC case draft" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                <!-- com.xpn.xwiki.plugin.skinx.LinkExtensionPlugin -->
+    <link href="/bin/skin/skins/colibri/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript" src="/resources/js/xwiki/suggest/ajaxSuggest.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project rm";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes" ];
+window.docviewurl = "/bin/view/Project+rm/caps_psarc";
+window.docediturl = "/bin/edit/Project+rm/caps_psarc";
+window.docsaveurl = "/bin/save/Project+rm/caps_psarc";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js'></script><script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js'></script><script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js'></script><script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js'></script>
+
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/compatibility.js"></script>
+
+  </head>
+        <body id="body" class="xwiki viewbody hideright">
+  <div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+<div id="menuview">
+  <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div class="topmenuentry " id="tmLogin"><a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Brm%2Fcaps_psarc"><strong>Log-in</strong></a></div>
+  </div>
+<div class="leftmenu">
+  <div class="topmenuentry hasIcon" id="tmWiki"><a class="tme" href="/bin/view/Main/"><strong>xwiki</strong></a></div>
+  <div class="topmenuentry hasIcon" id="tmSpace"><a class="tme" href="/bin/view/Project+rm/"><strong>Project rm</strong></a></div>
+
+<div class="topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmSubSites">
+<span class="tme-extensible"><a class="tme"><strong>Subsites</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth">Auth</a></span>
+<span class="submenuitem hasIcon"><a href="https://static.opensolaris.org/" id="tmStatic">Static Docs</a></span>
+</span></div>
+
+
+</div>
+</div>
+
+</div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+
+  <div id="company">
+  <div id="companylogo">
+    <a href="/bin/view/Main/" title="Home" rel="home">
+    <img src="/skins/colibri/logo.png" alt="Wiki Logo"/>
+    </a>
+  </div>   </div> 
+  <div id="Iconbar">
+    <a id="CollectivesIcon" href="/bin/view/Main/collectives">Collectives</a>
+    <a id="DiscussionsIcon" href="/bin/view/Main/discussions">Discussions</a>
+    <a id="DocumentationIcon" href="/bin/view/Main/documentation">Documentation</a>
+    <a id="DownloadIcon" href="/bin/view/Main/downloads">Download</a>
+    <a id="SourceBrowserIcon" href="http://src.opensolaris.org">Source Browser</a>
+  </div>
+  <div class="clearfloats"></div>
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/WebSearch">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+   <div id="hierarchy">
+                      <a href='/bin/view/Project+rm/rctls'>Resource Controls</a> <span class='separator'>&raquo;</span> <a href='/bin/view/Project+rm/cpu%2Dcaps'>CPU caps</a> <span class='separator'>&raquo;</span> <a href='/bin/view/Project+rm/caps_psarc'>CPU Caps PSARC case draft</a>
+        </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+rm/caps_psarc?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+  <div id="contentmenu" class="actionmenu">
+  <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div class="topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmExport">
+<span class="tme-extensible"><a class="tme"><strong>Export</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+rm/caps_psarc?format=pdf&amp;language=en" id="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+rm/caps_psarc?format=rtf&amp;language=en" id="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+rm/caps_psarc?format=html&amp;language=en" id="tmExportHtml">Export as HTML</a></span>
+  </span></div>
+
+<div class="topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmShow">
+<span class="tme-extensible"><a class="tme" href="/bin/view/Project+rm/caps_psarc?viewer=code&amp;language=en"><strong>View</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+rm/caps_psarc?viewer=comments&amp;language=en" id="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+rm/caps_psarc?viewer=attachments&amp;language=en" id="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+rm/caps_psarc?viewer=history&amp;language=en" id="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+rm/caps_psarc?viewer=information&amp;language=en" id="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+rm/caps_psarc?viewer=code&amp;language=en" id="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div class="topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmMoreActions">
+<span class="tme-extensible"><a class="tme"><strong>More actions</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+rm/caps_psarc?xpage=print&amp;language=en" id="tmPrintPreview">Print preview</a></span>
+    </span></div>
+  </div>
+
+
+  </div>
+  <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+
+  
+<div id="document-title"><h1>CPU Caps PSARC case draft</h1></div>
+                            <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h1 id="HCPUCaps"><span>CPU Caps</span></h1><p><strong>Alexander Kolbasov (alexander.kolbasov@sun.com)&nbsp;</strong></p><p><span class="wikicreatelink"><a href="/bin/edit/Project+rm.caps_psarc/pdf?parent=xwiki%3AProject+rm.caps_psarc">PDF Version</a></span></p><h1 id="H1Summary"><span>1 Summary</span></h1><p>&nbsp;CPU caps provide absolute fine-grained limits on the amount of CPU resources that can be consumed by a project or a zone. It is provided as an extension to <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5175/6mbba7f37?a=view">resource_controls(5)</a></span> . This document provides a short description specifically for PSARC. A full description is available in the design document <span class="wikilink"><a href="#bib:caps:design">[1</a></span>] and the implementation is discussed in the implementation guide <span class="wikilink"><a href="#bib:caps:impl">[2</a></span>]. The on-line version of this document is available in <span class="wikilink"><a href="#caps_psarc">[5</a></span>].</p><p>&nbsp;CPU caps extend existing facilities that control CPU usage on the system - processor binding, processor sets and the Fair Share Scheduler. Unlike processor binding and processor sets, CPU caps allow applications to run on any CPUs while limiting their CPU usage and provide fine-grained (specified in fractions of a CPU) limit. In contrast to the <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5177/6mbbc4g5u?a=view">FSS(7)</a></span> , CPU caps provide absolute usage limit that does not depend on other applications running in the system. CPU caps can be used together with CPU binding, processor sets and FSS. When used in conjunction with processor sets, CPU caps limit CPU usage within a set. When used with <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5177/6mbbc4g5u?a=view">FSS(7)</a></span> , CPU resources defined by caps are further subdivided using <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5177/6mbbc4g5u?a=view">FSS(7)</a></span> shares.</p><p>&nbsp;CPU caps provide several advantages over the mechanisms described above:</p><ul><li>Allow customers more flexibility in managing CPU resources than processor sets.</li><li>Easier to manage and use than shares.</li><li>Provide simpler semantics compared to CPU shares.</li></ul><p>&nbsp;The CPU caps are administered using the <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5175/6mbba7f37?a=view">resource_controls(5)</a></span> framework or the <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5166/6mbb1kqm2?a=view">zonecfg(1M)</a></span> command (see section <span class="wikilink"><a href="#sec:usage">3</a></span>). Two new resource controls are introduced to set per-project and per-zone CPU caps (see section <span class="wikilink"><a href="#rctl:extensions">6.1</a></span>).</p><p>&nbsp;System administrators can use kstats to observe impact of CPU caps at the zone or project level (see <span class="wikilink"><a href="#observability:kstat">5.1</a></span>). The DTrace sched provider is extended with new probes which can be used for per-process or per-thread analysis (see <span class="wikilink"><a href="#dtrace">5.3</a></span>).</p><p>&nbsp;All extensions described here are <em>Committed</em> except for the kstats which are <em>Uncommitted</em>. Patch binding is requested for all.</p><h1 id="H2Motivation"><span>2 Motivation</span></h1><p>&nbsp;Customers provided the following major reasons for wanting CPU caps:</p><ul><li>Selling CPU resources.<br/>&nbsp;Customers selling their CPU resources want to provide usage limits based on the amount of CPU resources purchased.</li><li>Managing expectations.<br/>&nbsp;Customers want the clients buying CPU resources to have the same experience in terms of their application performance independent of the machine load. In particular, they do not want clients running on an idle system experience better performance than when running in parallel with other clients applications. Note that such behavior can not be achieved with the FSS since it does not limit CPU resources when idle CPUs are present.</li><li>Over-subscription<br/>&nbsp;Some customers want to use hard limits as a mechanism to over-subscribe users. They may sell more CPU resource than what is available and they will be able to provide the level of service unless they run out of CPU cycles in which case there will be some decline in performance.</li></ul><p>&nbsp;In some form, such mechanism for limiting CPU resources is provided by other operating systems. It became one of many check-box items which customers look at when comparing resource management solutions from Sun and other vendors.</p><h2 id="H21RelatedCPUresourcemanagementtools"><span>2.1 Related CPU resource management tools</span></h2><p>&nbsp;Solaris provides different mechanisms which can be used to control CPU usage of applications to some extent:</p><ul><li>Processor binding (see <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5166/6mbb1kqbg?a=view">pbind(1M)</a></span> ) provides a way to limit process or a set of processes to a single CPU. It allows other unbound threads to run on the same CPU and compete for CPU cycles with bound threads.</li><li>Processor sets (see <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5166/6mbb1kqd0?a=view">psrset(1M)</a></span> ) provide a way to limit process execution to a set of CPUs. It also prohibits threads not belonging to the set from running within the set.</li><li>Resource pools (see <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5166/6mbb1kqbv?a=view">pooladm(1M)</a></span> ) integrate processor sets with Zones and Projects.</li><li>Fair Share Scheduler (see <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5177/6mbbc4g5u?a=view">FSS(7)</a></span> ) provides a mechanism to share available CPUs within given proportions (shares). The <em>Fair Share Scheduler</em> only controls CPU usage relative to CPU usage of other applications. CPU shares do not limit CPU usage when there are idle CPU resources.</li></ul><p>&nbsp;CPU binding and processor sets provide <em>hard</em> limits for applications since they only run on a bound CPU or within a set, but the minimum granularity for both is a single CPU. The <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5177/6mbbc4g5u?a=view">FSS(7)</a></span> provides <em>soft</em> limits which are enforced only when there is enough competition for CPU resources and is specified in units expressing relationships of processes to each other.</p><h1 id="H3AdministrativeInterface"><span>3 Administrative Interface</span></h1><p>&nbsp;CPU caps are represented by two new resource controls. The cap value is specified in units of one per cent of a CPU regardless of how many CPUs are available or their characteristics. The value should be greater than zero.</p><h2 id="H31ProjectCPUcaps"><span>3.1 Project CPU caps</span></h2><p>&nbsp;A project CPU cap is represented by the project.cpu-cap resource control. It is associated with the <em>privileged level</em> and can be modified only by privileged (superuser) callers (see <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5175/6mbba7f37?a=view">resource_controls(5)</a></span> and <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5165/6mbb0m9p6?a=view">prctl(1)</a></span> for the description of <em>privileged level</em>).</p><p>&nbsp;The project.cpu-cap resource limit can be set statically for projects in <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5174/6mbb98uiu?a=view">project(4)</a></span> file. For example, the following line in <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5174/6mbb98uiu?a=view">project(4)</a></span> file sets persistent CPU cap of 6 CPUs for user akolb:</p><pre>
+
+user.akolb:1234::::project.cpu-cap=(privileged,600,deny)
+
+</pre><p>&nbsp;Project CPU cap can be also dynamically modified or removed on a running system using <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5165/6mbb0m9p6?a=view">prctl(1)</a></span> utility. For example, the following command modifies the CPU cap to limit user akolb to 3 CPUs:</p><pre>
+
+$ prctl -r -t privileged -n project.cpu-cap -v 300 -i project user.akolb
+
+</pre><h2 id="H32ZoneCPUcaps"><span>3.2 Zone CPU caps</span></h2><p>&nbsp;A zone CPU caps is represented by the zone.cpu-cap resource control. Similar to the project cap it is associated with the <em>privileged level</em> and can be modified only by privileged (superuser) callers.</p><p>&nbsp;The zone.cpu-cap resource can be set for a zone using <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5166/6mbb1kqm2?a=view">zonecfg(1M)</a></span> command. The following example configures CPU cap for a zone to 3 CPUs:</p><pre>
+
+zonecfg:myzone&gt; add rctl
+zonecfg:myzone:rctl&gt; set name=zone.cpu-cap
+zonecfg:myzone:rctl&gt; add value (priv=privileged,limit=300,action=deny)
+zonecfg:myzone:rctl&gt; end
+
+</pre><h3 id="Hzonecfg1MextensionsforCPUcaps"><span><span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5166/6mbb1kqm2?a=view">zonecfg(1M)</a></span> extensions for CPU caps</span></h3><p>&nbsp;The <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5166/6mbb1kqm2?a=view">zonecfg(1M)</a></span> is extended with a new resource called capped-cpu, as described in PSARC/2006/496 <span class="wikilink"><a href="#PSARC2006496">[3</a></span>]. The resource value, called ncpus, maps to the zone.cpu-cap rctl.</p><p>&nbsp;The following example sets zone CPU cap using the capped-cpu resource:</p><pre>
+
+  zonecfg:myzone&gt; add capped-cpu
+  zonecfg:myzone&gt;capped-cpu&gt; set ncpus=3
+  zonecfg:myzone&gt;capped-cpu&gt;capped-cpu&gt; end
+
+</pre><p>&nbsp;The PSARC/2006/496 <span class="wikilink"><a href="#PSARC2006496">[3</a></span>] describes the capped-cpu resource in the following way:</p><blockquote><p>&nbsp;&nbsp;The capped-cpu resource has a single ncpus property which is a positive decimal with two digits to the right of the decimal. This property is implemented as a special case of the zonecfg cpu-cap alias. The special case handling of this property normalizes the value so that it corresponds to units of cpus and is similar to the ncpus property under the dedicated-cpu resource group. Unlike dedicated-cpu it will not accept a range and it will accept a decimal number. For example, when using ncpus in the dedicated-cpu resource group, a value of 1 means one dedicated cpu. When using ncpus in the capped-cpu resource group, a value of 1 means 100% of a cpu as the zone.cpu-cap setting. A value of 1.25 means 125%, since 100% corresponds to one full cpu on the system when using cpu caps. The intention here is to align the ncpus units as closely as possible in these two cases (dedicated-cpu vs. capped-cpu), given the limitations and capabilities of the two underlying mechanisms (pset vs. rctl).</p></blockquote><p>&nbsp;See PSARC/2006/496 <span class="wikilink"><a href="#PSARC2006496">[3</a></span>] for a description of the dedicated-cpu resource and ncpu property.</p><p>&nbsp;Here we commit to the capped-cpu resource.</p><h1 id="H4ImplementationOverview"><span>4 Implementation Overview</span></h1><p>&nbsp;For all threads running in capped projects or zones, the system keeps track of their CPU usage over short periods of time. When CPU usage of projects or zones reaches specified caps, threads in them do not get scheduled and instead are placed on the special <em>wait queues</em> in the kernel. These threads will become runnable again only when CPU usage drops below the cap level.</p><p>&nbsp;The time spent by threads on <em>wait queues</em> is combined with the time spent on <em>run queues</em> and is reported as part of the <em>``wait-cpu''</em> (latency) time by procfs. The <em>``wait-cpu''</em> time is also used to report time spent waiting on <em>run queues</em> (see pr_wtime field of struct prusage in <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5174/6mbb98uiq?a=view">proc(4)</a></span> ). Wait times can be seen in the LAT column when <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5166/6mbb1kqcm?a=view">prstat(1M)</a></span> is invoked with the -m option. CPU time spent by threads on wait queues is also accumulated at the LMS_WAIT_CPU micro-state accounting state which is also used to account for time spent waiting on <em>run queues</em>.</p><p>&nbsp;We decided to combine the wait times that threads spent waiting on <em>run queues</em> and <em>wait queues</em> into a single bucket because currently there is a fixed set of micro-state accounting types. Any extension of this set will cause offsets of fields in data structures, embedding micro-state data, to change. This, in turn, implies that all <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5174/6mbb98uiq?a=view">proc(4)</a></span> consumers should be recompiled. We feel that CPU wait time is general enough to include time spent waiting on both <em>run queues&nbsp;</em> and <em>wait queues</em> and it is reasonable to combine them together until micro-state accounting framework is extended.</p><p>&nbsp;CPU caps are enforced only for threads running in <em>TS</em>, <em>IA</em>, <em>FX</em>, and <em>FSS</em> scheduling classes and have no effect on threads running in <em>RT</em> (Real-Time) scheduling class.</p><p>&nbsp;All CPU usage accounting data is collected using micro-state accounting facility, so the accuracy of CPU caps depends on the accuracy of the micro-state data.</p><p>&nbsp;A more detailed description of the implementation is available in the implementation guide <span class="wikilink"><a href="#bib:caps:impl">[2</a></span>].</p><h1 id="H5CPUCapsObservability"><span>5 CPU Caps Observability</span></h1><p>&nbsp;There are several ways to observe the impact of CPU caps at a zone or project level and at a process or thread level. Each project or zone CPU cap exports information via kstats (see <span class="wikilink"><a href="#observability:kstat">5.1</a></span>).</p><p>&nbsp;The DTrace sched provider is extended with two new probes which can be used for gathering detailed data for times spent on wait queues (see <span class="wikilink"><a href="#dtrace">5.3</a></span>). These probes provide thread and process level observability for CPU caps.</p><h2 id="H51ZonesandProjectobservability"><span>5.1 Zones and Project observability</span></h2><p>&nbsp;Zone and project CPU cap kstats contain the following information:</p><dl><dt><strong>value</strong></dt><dd>- the cap value in percentages of a single CPU</dd><dt><strong>usage</strong></dt><dd>- current aggregated CPU usage for all threads belonging to a capped project or zone in percentages of a single CPU</dd><dt><strong>maxusage</strong></dt><dd>- maximum observed CPU usage</dd><dt><strong>above_sec</strong></dt><dd>- total time in seconds spent above the cap</dd><dt><strong>below_sec</strong></dt><dd>- total time in seconds spent below the cap</dd><dt><strong>nwait</strong></dt><dd>- number of threads on cap wait queue</dd></dl><p>&nbsp;For example, when a project CPU cap is set to 50% for project 1234, the following command will show cap information:</p><pre>
+
+$ kstat -m caps
+module: caps instance: 0
+name:   cpucaps_project_1234 class: project_caps
+        above_sec    787
+        below_sec    260551
+        nwait        0
+        usage        1
+        maxusage     51
+        value        50
+
+</pre><p>&nbsp;The following example is for zone kstats:</p><pre>
+
+module: caps instance: 14
+name:   cpucaps_zone_14 class: zone_caps
+        above_sec  0
+        below_sec  3
+        maxusage   255
+        nwait      0
+        usage      19
+        value      300
+
+</pre><p>&nbsp;For both zone and project kstats, the kstat instance is the same as zone ID. The PSARC 2006/598 <em>Swap resource control</em> case<span class="wikilink"><a href="#PSARC2006598">[4</a></span>] provides a precedents for such kstats and establishes the naming conventions.</p><p>&nbsp;The maximum usage statistics provides a good way for users to estimate how to set up their CPU caps. They can set the cap to a very high value and observe the maximum usage while their application is running for a while. This gives an estimate of maximum CPU requirements for the workload.</p><h2 id="H52Threadlevelobservability"><span>5.2 Thread level observability</span></h2><p>&nbsp;The <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5165/6mbb0m9pk?a=view">ps(1)</a></span> command shows threads on the wait queue by displaying ``W'' for their state. For example:</p><pre>
+
+$ ps -o pid,s,comm -p 101262
+   PID S COMMAND
+101262 W /usr/perl5/bin/perl
+
+</pre><p>&nbsp;The <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5166/6mbb1kqcm?a=view">prstat(1M)</a></span> command shows <em>``wait''</em> state for threads, sitting on wait queues. For example:</p><pre>
+
+   PID USERNAME SIZE  RSS  STATE  PRI NICE      TIME  CPU PROCESS/NLWP
+100686 akolb   4272K 1516K wait     0    0   0:51:20  25% perl/1
+
+</pre><h2 id="H53DTracechangesforCPUcaps"><span>5.3 DTrace changes for CPU caps</span></h2><p>&nbsp;CPU caps provide two new DTrace sched provider probes for observing scheduling impact for threads and processes:</p><dl><dt><strong>cpucaps-sleep</strong></dt><dd>Probe that fires immediately before the current thread is placed on a wait queue. The lwpsinfo_t of the waiting thread is pointed to by args[0]. The psinfo_t of the process containing the waiting thread is pointed to by args[1].</dd><dt><strong>cpucaps-wakeup</strong></dt><dd>Probe that fires immediately after a thread is removed from a wait queue. The lwpsinfo_t of the waiting thread is pointed to by args[0]. The psinfo_t of the process containing the waiting thread is pointed to by args[1].</dd></dl><h1 id="H6PublicDocumentationChanges"><span>6 Public Documentation Changes</span></h1><h2 id="H61resourcecontrols5"><span>6.1 <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5175/6mbba7f37?a=view">resource_controls(5)</a></span></span></h2><p>&nbsp;The following description should be added to <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5175/6mbba7f37?a=view">resource_controls(5)</a></span> man page:</p><dl><dt><strong>project.cpu-cap</strong><br/>:<br/>&nbsp;Maximum amount of CPU resources that a project can use. The unit used is the percentage of a single CPU (an integer). The cap does not apply to threads running in real-time scheduling class.</dt><dt><strong>zone.cpu-cap</strong><br/>:<br/>&nbsp;Sets a limit on amount of CPU time that can be used by a zone. The cap does not apply to threads running in real-time scheduling class. Projects within the zone can have their own CPU caps. The minimum cap value takes precedence. Expressed as an integer, denoting the percentage of a single CPU that can be used by all user threads in a zone.</dt></dl><h2 id="H62SolarisDynamicTracingGuide"><span>6.2 Solaris Dynamic Tracing Guide</span></h2><p>&nbsp;The Solaris Dynamic Tracing Guide should be updated to include information about new process states and two new sched provider probes.</p><h3 id="H621procProvider"><span>6.2.1 proc Provider</span></h3><p>&nbsp;The proc <em>Provider</em> section of the guide should be updated to reflect the addition of the new SWAIT processor state (<span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/817-6223/6mlkidll3?a=view#tbl-sched-state">table 25-5</a></span> ):</p><dl><dt><strong>SWAIT(W)</strong></dt><dd>The thread is waiting on wait queue. The sched:::cpucaps-sleep probe will fire immediately before a thread state is transitioned to SWAIT.</dd></dl><h3 id="H622Probes"><span>6.2.2 Probes</span></h3><p>&nbsp;The <em>Probes</em> section of the guide (<span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/817-6223/6mlkidll8?a=view#tbl-sched">table 26-1</a></span> ) should be updated with information about two new probes:</p><dl><dt><strong>cpucaps-sleep</strong></dt><dd>Probe that fires immediately before the current thread is placed on a wait queue. The lwpsinfo_t of the waiting thread is pointed to by args[0]. The psinfo_t of the process containing the waiting thread is pointed to by args[1].</dd><dt><strong>cpucaps-wakeup</strong></dt><dd>Probe that fires immediately after a thread is removed from a wait queue. The lwpsinfo_t of the waiting thread is pointed to by args[0]. The psinfo_t of the process containing the waiting thread is pointed to by args[1].</dd></dl><h3 id="H623Arguments"><span>6.2.3 Arguments</span></h3><p>&nbsp;The <em>Arguments</em> section of the guide (<span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/817-6223/6mlkidll9?a=view#tbl-sched-args">table 26-2</a></span> ) should be updated with information in following table, describing arguments for CPU Caps probe arguments:</p><table><tr><td><strong>Probe</strong></td><td>args[0]</td><td>args[1]</td></tr><tr><td>cpucaps-sleep</td><td>lwpsinfo_t *</td><td>psinfo_t *</td></tr><tr><td>cpucaps-wakeup</td><td>lwpsinfo_t *</td><td>psinfo_t *</td></tr></table><h3 id="H624cpucapssleepandcpucapswakeupExamples"><span>6.2.4 cpucaps-sleep and cpucaps-wakeup Examples</span></h3><p>&nbsp;The <em>Examples</em> section should be updated with examples for CPU Caps probe arguments.</p><h1 id="HASummaryofexportedinterfaces"><span>A Summary of exported interfaces</span></h1><p>&nbsp;Here is a summary of proposed interface changes. All of them, except kstats are <em>Committed</em>.</p><ul><li>New resource controls:<ul><li>project.cpu-cap</li><li>zone.cpu-cap</li></ul></li><li><span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5166/6mbb1kqm2?a=view">zonecfg(1M)</a></span> extensions:<ul><li>capped-cpu resource</li><li>ncpus property</li></ul></li><li>zone and project kstats for CPU caps</li><li><span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5174/6mbb98uiq?a=view">proc(4)</a></span> consumers:<ul><li>``W'' state shown by <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5165/6mbb0m9pk?a=view">ps(1)</a></span> for threads on wait queues</li><li>``sleep'' state shown by <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5166/6mbb1kqcm?a=view">prstat(1M)</a></span> for threads on wait queues</li></ul></li><li>DTrace extensions:<ul><li>cpucaps-sleep sched provider probe</li><li>cpucaps-wakeup sched provider probe</li><li>SWAIT processor state for threads on wait queues</li></ul></li></ul><h2 id="HReferences"><span>References</span></h2><p>:</p><dl><dt>1</dt><dd>&nbsp;CPU caps web page on OpenSolaris.org<br/><span class="wikilink"><a href="/bin/view/Project+rm/cpu%2Dcaps"><span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://www.opensolaris.org/os/project/rm/rctls/cpu-caps/"><span class="wikigeneratedlinkcontent">http://www.opensolaris.org/os/project/rm/rctls/cpu-caps/</span></a></span></a></span></dd><dt>2</dt><dd>&nbsp;Implementation description<br/><span class="wikilink"><a href="/bin/view/Project+rm/caps_implementation"><span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://www.opensolaris.org/os/project/rm/rctls/cpu-caps/caps_implementation/"><span class="wikigeneratedlinkcontent">http://www.opensolaris.org/os/project/rm/rctls/cpu-caps/caps_implementation/</span></a></span></a></span>.</dd><dt>3</dt><dd>&nbsp;PSARC/2006/496 Improved Zones/RM Integration<br/><span class="wikiexternallink"><a href="http://sac.sfbay.sun.com/PSARC/2006/496"><span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://sac.sfbay.sun.com/PSARC/2006/496"><span class="wikigeneratedlinkcontent">http://sac.sfbay.sun.com/PSARC/2006/496</span></a></span></a></span><br/><span class="wikicreatelink"><a href="/bin/edit/Community+Group+arc/496?parent=xwiki%3AProject+rm.caps_psarc"><span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://www.opensolaris.org/os/community/arc/caselog/2006/496"><span class="wikigeneratedlinkcontent">http://www.opensolaris.org/os/community/arc/caselog/2006/496</span></a></span></a></span></dd><dt>4</dt><dd>PSARC 2006/598 Swap resource control; locked memory RM improvements.<br/><span class="wikiexternallink"><a href="http://sac.sfbay.sun.com/PSARC/2006/598"><span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://sac.sfbay.sun.com/PSARC/2006/598"><span class="wikigeneratedlinkcontent">http://sac.sfbay.sun.com/PSARC/2006/598</span></a></span></a></span><br/><span class="wikicreatelink"><a href="/bin/edit/Community+Group+arc/598?parent=xwiki%3AProject+rm.caps_psarc"><span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://www.opensolaris.org/os/community/arc/caselog/2006/598"><span class="wikigeneratedlinkcontent">http://www.opensolaris.org/os/community/arc/caselog/2006/598</span></a></span></a></span></dd><dt>5</dt><dd>&nbsp;On-line version of CPU Caps PSARC case<br/><span class="wikilink"><a href="/bin/view/Project+rm/caps_psarc"><span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://www.opensolaris.org/os/project/rm/rctls/cpu-caps/caps_psarc/"><span class="wikigeneratedlinkcontent">http://www.opensolaris.org/os/project/rm/rctls/cpu-caps/caps_psarc/</span></a></span></a></span></dd></dl><hr/><p>&nbsp;Alexander Kolbasov 2007-01-10</p>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:17<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by admin on 2009/10/26 12:17
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+                </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSNav','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSNav'); togglePanelVisibility(this.parentNode);">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavCommunity Group">
+            <div id="xwikinavCommunity GroupHeader" class="accordionTabTitleBar"><h6>Community Group</h6>
+            </div>
+            <div id="xwikinavCommunity GroupContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+edu/">Academic and Research</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+accessibility/">Accessibility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+advocacy/">Advocacy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+appliances/">Appliances</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+approachability/">Approachability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/">Architecture Process and Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+brandz/">BrandZ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+chinese_users/">Chinese Users</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/">Community Advisory Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+dtrace/">DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+databases/">Databases</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+desktop/">Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/">Device Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+distribution/">Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+emerging_platforms/">Emerging Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+fm/">Fault Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+games/">Games on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ha%2Dclusters/">HA Clusters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+hpcdev/">HPC Developer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+int_localization/">Internationalization and Localization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+laptop/">Laptop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ldoms/">Logical Domains</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+mdb/">Modular Debugger (MDB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+nfs/">NFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/">Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/">OS/Net (ON)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+observability/">Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ogb/">OpenSolaris Governing Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+printing/">OpenSolaris Printing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/">Performance</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+pm/">Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+power_pc/">PowerPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/">Security</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+smf/">Service Management Facility (smf(5))</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sw%2Dporters/">Software Porters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+volume_manager/">Solaris Volume Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+storage/">Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sysadmin/">Systems Administration Community Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+testing/">Testing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/">Tools Home</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ufs/">Unix File Systems (UFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+web/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+x_win/">X Window System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+xen/">Xen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/">ZFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/">Zones</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavProject">
+            <div id="xwikinavProjectHeader" class="accordionTabTitleBar"><h6>Project</h6>
+            </div>
+            <div id="xwikinavProjectContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/"></a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+adsl/">ADSL Modem Enhancement</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+arc%2Dprocess/">ARC Process Definition</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osarm/">ARM Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bluetooth/">Bluetooth Stack & Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dinitiator/">Brocade FC HBA &#45; Initiator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dtarget/">Brocade FC HBA &#45; Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brussels/">Brussels &#45; unified network link configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cifs%2Dserver/">CIFS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smbfs/">CIFS client for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cmt/">CMT</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/">COMSTAR: Common Multiprotocol SCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpufs/">CPU Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/">Caiman, Solaris Install Revisited</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+celeste/">Celeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/">Chime Visualization Tool for DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+clearview/">Clearview: Network Interface Coherence</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dinformix/">Cluster Agent: Informix Dynamic Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dcontainer/">Cluster Agent: OpenSolaris Container</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dxvm/">Cluster Agent: OpenSolaris xVM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Debs/">Cluster Agent: Oracle E&#45;Business Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dsmb/">Cluster Agent: Samba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dtomcat/">Cluster Agent: Tomcat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dpostgresql/">Cluster agent: PostgreSQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+data%2Dflow/">Coarse Data Flow Parallelism</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+colorado/">Colorado: Open HA Cluster on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+commandassist/">Command Assistant</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cam/">Common Array Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+companion/">Companion &#45; /opt/sfw: Free and Open Source software</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+content/">Content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+contest/">Contest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpg/">Credentials Process Groups</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crossbow/">Crossbow: Network Virtualization and Resource Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmsagenttoolkit/">Crypto KMS Agent Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/">Cryptographic Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Ddoc/">DTrace Guide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dmm/">Data Migration Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+datatethers/">Data Tethers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+de/">Deutsches Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ddtool/">Device Detection Tool</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+driver%2Dutility/">Device Driver Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devicemgr/">Device Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devmapper/">Device Mapper</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dri/">Direct Rendering Infrastructure & 3D drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/">Duckwater: Simplified name services management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+phpEasyTools/">Easy Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emancipation/">Emancipation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex%2Dcna/">Emulex Advanced Ethernet Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex/">Emulex Fibre Channel Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webcams/">Enhance the support of USB webcams</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Dprofiles/">Enhanced SMF Profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+amd/">Enhancements for AMD&#45;based Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+erlang%2Ddtrace/">Erlang DTrace Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ethbridge/">Ethernet bridge module for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+conary%2Deval/">Evaluate Conary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+events%2Dregistry/">Events Registry</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ext3/">Ext3 file system support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+facilitation/">Facilitation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fcoe/">Fibre Channel over Ethernet</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fgap/">Fine Grained Access Policy (FGAP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fingerprint%2Dauthentication/">Fingerprint Authentication</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fmac/">Flexible Mandatory Access Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+forensics/">Forensic Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fox/">Fully Open X Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fuse/">Fuse on Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+generic%2Dmca/">Generic Machine Check Architecture Improvements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+raidcfg/">Generic RAID Configuration Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+summerofcode/">Google SOC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Djboss/">HA&#45;JBoss</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dmysql/">HA&#45;MySQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hpc%2Dstack/">HPC Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livehadoop/">Hadoop Live CD</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hitachi/">Hitachi</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+honeycomb/">HoneyComb Fixed Content Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hotplug/">Hotplug Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ip%2Drefactor/">IP Datapath Refactoring</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ipoib/">IP over Infiniband</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tref/">IPsec Tunnel Reform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/">Image Packaging System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isc/">Immutable Service Containers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+perfmib/">Improved Performance MIB</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/">Indiana</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ikev2/">Internet Key Exchange, version 2 (IKEv2)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+irm/">Interrupt Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jkstat/">JKstat &#45; a java binding for libkstat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jeos/">JeOS &#45; Just enough Operating System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jfs/">Journaled File System (JFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kde/">K Desktop Environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kerberos/">Kerberos</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kssl/">Kernel SSL Enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kernel%2Dsockets/">Kernel Sockets</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmf/">Key Management Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ksh93%2Dintegration/">Korn Shell 93 integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ldoms%2Dmgr/">LDoms Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+txipsec/">Labeled IPsec</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+l2filter/">Layer 2 Filtering</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lending/">Lending</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lld/">Link Layer Discovery</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livemedia/">Live Media: Technologies for distributions running from CD and other media</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+localedata/">Locale Data</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mips/">MIPS Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohac%2Davs/">MRSL.NONsharedDevice</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mega_sas/">Mega_sas</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mx/">Mexico</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+milax/">MilaX minimal Live Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mozilla%2Ddtrace/">Mozilla DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+glossary/">Multi&#45;lingual Glossary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mpxio/">Multi&#45;pathing software (MPxIO)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+multiple%2Ddoi/">Multiple DOI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+large%2Dsector/">Multiple disk sector size support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+muskoka/">Muskoka: An open repository for OpenSolaris technical content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsrdma/">NFS RDMA transport update and performance analysis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dzones/">NFS Server in non&#45;Global Zones</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsv41/">NFS version 4.1 pNFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dnamespace/">NFSv4 namespace extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npiv/">NPort ID Virtualization (NPIV)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+navigator/">Navigator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nemo/">Nemo: A Framework for High&#45;Performance Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/">Network Auto&#45;Magic</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ndmp/">Network Data Management Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+net%2Dmib/">Network MIBs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npp/">Network Performance Projects</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dpm/">Network Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nws/">Network Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ntp/">Network Time Protocol (NTP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nv%2Dg11n/">Nevada Globalization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+4over6/">New Design of 4over6 Mechanism Based on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nightingale/">Nightingale: Port Songbird to OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+onnv/">ON/Nevada (ONNV) Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osd/">Object Storage Device (OSD) support for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opendev/">Open Development Infrastructure</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dutilities/">Open HA Cluster Utilities</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opensound/">Open Sound System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/">OpenGrok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cim%2Dserver/">OpenPegasus CIM Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+openrti/">OpenRTI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+busybox/">OpenSolaris Busybox</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/">OpenSolaris Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+es/">OpenSolaris Hispano</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+audit/">OpenSolaris Security Audit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/">OpenSolaris support for the QEMU processor emulator: host and guest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pef/">PEF: Packet Event Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+performance%2Dwrappers/">Performance Wrappers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkgfactory/">Pkgfactory</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pl/">Polski Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fr/">Portail Francophone</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+br/">Portal Brasileiro de OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+portals/">Portals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmui/">Power Management Usability Interfaces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+presto/">Presto: Automatic Printing Configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmpsm/">Printable Many Page Solaris Manuals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+promise%2Dstorage/">Promise SuperTrak RAID HBA Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qlogic%2Dcna/">QLogic Converged Network Adapter GLDv3 NIC Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+quagga/">Quagga Routing Protocol Suite Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rbridges/">RBridge (IETF TRILL) support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rof/">RDMA Offload Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+releasenotes/">Release Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+reno/">Reno: Login Process Enhancements for Interop</a></span></li>
+<li><em class="underline"><em><span class="wikilink"><a href="/bin/view/Project+rm/">Resource Management</a></span></em></em></li>
+<li><span class="wikilink"><a href="/bin/view/Project+samqfs/">SAM/QFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+scm%2Dmigration/">SCM Migration Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+srp/">SCSI RDMA Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sdcard%2Ddrivers/">SDcard Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sfwnv/">SFW</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sm%2Dhba/">SM&#45;HBA Based SAS HBA Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Ddoc/">SMF Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sst/">SST Security Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+svr4_packaging/">SVR4 Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sensors/">Sensor Abstraction Layer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dsip/">Session Initiation Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+shell/">Shell: bourne shell, korn shell, C shell, etc.</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+simplepanels/">Simple Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/">Solaris PowerPC Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iscsitgt/">Solaris iSCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sourcejuicer/">SourceJuicer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/">Sparks: name service switch/nscd enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+squashfs/">Squashfs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+star/">Star integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starfish/">Starfish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starterkit/">Starter Kit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+storagepm/">Storage Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+avs/">Sun StorageTek Availability Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ofuv/">Support for OpenFabrics User Verbs / API on OpenSolaris OS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/">Support gcc4/GCCfss in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+suspend%2Dresume/">Suspend/Resume</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+systemz/">Systemz</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tipc/">TIPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+branding/">Trademarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tpm/">Trusted Platform Module support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tnipdb/">Trusted networking interface policy database for Trusted Extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+usecase/">Use Case</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+userland/">Userland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vrrp/">VRRP: Virtual Router Redundancy Protocol Implementation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vscan/">VSCAN service</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+valex/">Validated Execution Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vconsole/">Virtual Console</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vnm/">Virtual Network Machines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/">Visual Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+visualization%2Dhpc/">Visualization for HPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+volo/">Volo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/">Web Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+website/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+winchester/">Winchester: Schema mapping and ID mapping for AD Interoperability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wusb/">Wireless USB Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wwan/">Wireless Wide Area Network</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x%2Dcons/">X Consolidation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xkblayout/">X Keyboard Layout</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xen%2Dgate/">Xen Gate</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xfce/">Xfce: A lightweight desktop environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfsboot/">ZFS Boot and Install</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfs%2Dcrypto/">ZFS on disk encryption support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonemgr/">Zone Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonestat/">Zone Statistics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gcore/">gcore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iser/">iSCSI Extensions for Remote DMA (iSER)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isns/">iSNS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+libmicro/">libMicro &#45; portable microbenchmarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+loficc/">lofi compression and cryptography support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lx64/">lx64 brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+s10brand/">s10brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x86gentopo/">x86 Generic FMA Topology Enumerator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ztest/">ztest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cz/">Český portál</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ru/">Русский портал</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ar/">البوابة العربية</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+in/">भारतीय पोर्टल</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cn/">中国门户</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/">日本ポータル</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kr/">한국 포탈</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavUser Group">
+            <div id="xwikinavUser GroupHeader" class="accordionTabTitleBar"><h6>User Group</h6>
+            </div>
+            <div id="xwikinavUser GroupContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+kr/"></a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+adl%2Dauosug/">Adelaide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+aosug/">Argentina</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+azosug/">Arizona</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+atl%2Dosug/">Atlanta OpenSolaris Users Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bwosug/">Baltimore&#45;Washington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bosug/">Bangalore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bkkosug/">Bangkok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bdosug/">Bangladesh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bjosug/">Beijing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+brosug/">Berlin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bvrm%2Dosug/">Bhimavaram</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+btn%2Dosug/">Bloomington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfosug/">Brasilia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+blmosug/">Bélem</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+crosug/">Capital Region</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cfosug/">Cardiff</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ccosug/">Caribbean OSUG</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ceosug/">Ceara</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cltosug/">Charlotte</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chennai/">Chennai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chmxosug/">Chihuahua</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+closug/">Chile</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cle%2Dosug/">Cleveland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+colosug/">Colombia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cmh%2Dosug/">Columbus</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ctosug/">Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+knp%2Duek/">Cracow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+czosug/">Czech</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfw%2Dosug/">Dallas/Ft. Worth</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dosug/">Danish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+deosug/">Delaware</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+eduosug/">Edinburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+egosug/">Egypt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fiosug/">Finland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+flosug/">Florida</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fraosug/">Frankfurt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+frosug/">Front Range</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+glug/">Great Lakes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+grosug/">Greece</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hzosug/">Hangzhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hi%2Dosug/">Hawaii</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hkosug/">Hong Kong</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hugs/">Houston</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hosug/">Hyderabad</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+idosug/">Indonesia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madridosug/">Inicio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ie%2Dosug/">Irish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+iosug/">Israel</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+istosug/">Istanbul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+itl%2Dosug/">Italian</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jnosug/">Jinan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jogja%2Dosug/">Jogja</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kbosug/">Kabul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kc%2Dosug/">Kansas City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+lavosug/">Latvia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+losug/">London</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madosug/">Madurai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mansug/">Manchester</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mssosug/">Mato Grosso</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+msosug/">Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mgosug/">Minas Gerais</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mnosug/">Minnesota</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mtlosug/">Montreal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mosug/">Moscow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mmosug/">Mumbai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mucosug/">Munich</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+neaosug/">NEA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nlosug/">Netherlands</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ne%2Dosug/">New England</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nycosug/">New York City OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nzosug/">New Zealand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+norosug/">Noroeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nerosug/">Nuremberg&#45;Erlangen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+okcosug/">Oklahoma City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ososug/">Osnabrück</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+peosug/">Peru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+paosug/">Philadelphia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+piaski%2Dosug/">Piaski</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ptosug/">Pittsburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+poaosug/">Porto Alegre</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+psosug/">Puget Sound</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+posug/">Pune</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+qosug/">Queensland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rtp%2Dosug/">Research Triangle Park</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+riosug/">Rio de Janeiro</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ro%2Dosug/">Romania</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ruosug/">Russia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+alamo%2Dosug/">San Antonio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sdosug/">San Diego</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sfosug/">San Francisco OpenSolaris user group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+scosug/">Scottish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rs%2Dosug/">Serbia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szosug/">Shenzhen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svosug/">Silicon Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sgosug/">Singapore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+skosug/">Slovak</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+saosug/">South African</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+soctosug/">Southern Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+stl%2Dosug/">St. Louis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svgosug/">Stavanger</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+swosug/">Sweden</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chosug/">Switzerland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sosug/">Sydney</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szc%2Dosug/">Szczecin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sampaosug/">São Paulo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+twosug/">Taiwan OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ostug/">Tecum</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tvosug/">Thames Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tsug/">Tokyo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+torosug/">Toronto</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+trosug/">Trondheim</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+toss/">Tulsa</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tosug/">Turkey</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ufaosug/">Ufa OSUG</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+uaosug/">Ukraine OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+unimelb%2Dosug/">University of Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+valeosug/">Vale do Paraíba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vanosug/">Vancouver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vosug/">Venezuela &#45; Pagina de incio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vvoosug/">Vladivostok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wosug/">Welsh &#45; Cymru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wiosug/">Wisconsin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+xaosug/">Xi'an</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+</div><p/>
+<script type="text/javascript">
+var obj = {div:'xwikinav',no:1,height:250};
+var acc = createAccordion(obj);
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSDocs','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSDocs'); togglePanelVisibility(this.parentNode);">Project rm Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+rm/docs">Documentation and Examples</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/pools">Resource Pools</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+rm/msets">Memory Sets</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/poolsui">Usability Enhancements</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/rctls">Resource Controls</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+rm/cpu%2Dcaps">CPU caps</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/sysv">System V IPC</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/zones">RM for Zones</a></span></li>
+</ul>
+                    </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div>  <div id="footerglobal" class="layoutsection">
+  <div class="minwidth"></div>
+
+  <script language="JavaScript" src="/resources/js/s_code_remote.js"></script>
+
+
+          <div id="xwikiplatformversion">XWiki Enterprise 2.1.1.25889 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+  <br/>
+
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2011, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+  </div>
+
+
+</div></div></body>
+</html>

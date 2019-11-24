@@ -1,0 +1,2103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>x86 : OpenSolaris 2009.06 Release Notes (Project indiana.x86-2) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+indiana/x86%2D2" />
+                                <meta name="document" content="Project indiana.x86-2"/>
+    <meta name="space" content="Project indiana"/>
+    <meta name="page" content="x86-2"/>
+    <meta name="version" content="7.1"/>
+                    <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="x86 : OpenSolaris 2009.06 Release Notes" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="jh118764" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                <!-- com.xpn.xwiki.plugin.skinx.LinkExtensionPlugin -->
+    <link href="/bin/skin/skins/colibri/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/>
+
+    
+    <link href="/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript" src="/resources/js/xwiki/suggest/ajaxSuggest.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project indiana";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/1.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes" ];
+window.docviewurl = "/bin/view/Project+indiana/x86%2D2";
+window.docediturl = "/bin/edit/Project+indiana/x86%2D2";
+window.docsaveurl = "/bin/save/Project+indiana/x86%2D2";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js'></script><script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js'></script><script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js'></script>
+
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/compatibility.js"></script>
+
+  </head>
+        <body id="body" class="xwiki viewbody hideright">
+  <div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+<div id="menuview">
+  <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div class="topmenuentry " id="tmLogin"><a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bindiana%2Fx86%252D2%3Fviewer%3Dcode%26%2338%3Blanguage%3Den"><strong>Log-in</strong></a></div>
+  </div>
+<div class="leftmenu">
+  <div class="topmenuentry hasIcon" id="tmWiki"><a class="tme" href="/bin/view/Main/"><strong>xwiki</strong></a></div>
+  <div class="topmenuentry hasIcon" id="tmSpace"><a class="tme" href="/bin/view/Project+indiana/"><strong>Project indiana</strong></a></div>
+
+<div class="topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmSubSites">
+<span class="tme-extensible"><a class="tme"><strong>Subsites</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth">Auth</a></span>
+<span class="submenuitem hasIcon"><a href="https://static.opensolaris.org/" id="tmStatic">Static Docs</a></span>
+</span></div>
+
+
+</div>
+</div>
+
+</div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+
+  <div id="company">
+  <div id="companylogo">
+    <a href="/bin/view/Main/" title="Home" rel="home">
+    <img src="/skins/colibri/logo.png" alt="Wiki Logo"/>
+    </a>
+  </div>   </div> 
+  <div id="Iconbar">
+    <a id="CollectivesIcon" href="/bin/view/Main/collectives">Collectives</a>
+    <a id="DiscussionsIcon" href="/bin/view/Main/discussions">Discussions</a>
+    <a id="DocumentationIcon" href="/bin/view/Main/documentation">Documentation</a>
+    <a id="DownloadIcon" href="/bin/view/Main/downloads">Download</a>
+    <a id="SourceBrowserIcon" href="http://src.opensolaris.org">Source Browser</a>
+  </div>
+  <div class="clearfloats"></div>
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/WebSearch">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+   <div id="hierarchy">
+                            <a href='/bin/view/Project+indiana/resources'>Resources</a> <span class='separator'>&raquo;</span> <a href='/bin/view/Project+indiana/relnotes'>Release Notes</a> <span class='separator'>&raquo;</span> <a href='/bin/view/Project+indiana/200906'>2009.06</a> <span class='separator'>&raquo;</span> <a href='/bin/view/Project+indiana/x86%2D2'>x86 : OpenSolaris 2009.06 Release Notes</a>
+          </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+indiana/x86%2D2?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+        <div class="main layoutsubsection">
+  <div id="contentmenu" class="actionmenu">
+  <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div class="topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmExport">
+<span class="tme-extensible"><a class="tme"><strong>Export</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+indiana/x86%2D2?format=pdf&amp;language=en" id="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+indiana/x86%2D2?format=rtf&amp;language=en" id="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+indiana/x86%2D2?format=html&amp;language=en" id="tmExportHtml">Export as HTML</a></span>
+  </span></div>
+
+<div class="topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmShow">
+<span class="tme-extensible"><a class="tme" href="/bin/view/Project+indiana/x86%2D2?viewer=code&amp;language=en"><strong>View</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+indiana/x86%2D2?viewer=comments&amp;language=en" id="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+indiana/x86%2D2?viewer=attachments&amp;language=en" id="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+indiana/x86%2D2?viewer=history&amp;language=en" id="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+indiana/x86%2D2?viewer=information&amp;language=en" id="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+indiana/x86%2D2?viewer=code&amp;language=en" id="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div class="topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmMoreActions">
+<span class="tme-extensible"><a class="tme"><strong>More actions</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+indiana/x86%2D2?xpage=print&amp;language=en" id="tmPrintPreview">Print preview</a></span>
+    </span></div>
+  </div>
+
+
+  </div>
+  <div id="mainContentArea">
+      
+
+
+<h1><span>Wiki source code of <a href="/bin/view/Project+indiana/x86%2D2">x86 : OpenSolaris 2009.06 Release Notes</a></span></h1>
+
+
+
+
+  <a href="/bin/view/Project+indiana/x86%2D2?viewer=code&showlinenumbers=0&language=en">Hide line numbers</a>
+    <textarea readonly="readonly" style="width: 100%; height: 300px;">
+1: &#60;h2&#62;Release Notes for the x86: OpenSolaris 2009.06 Release&#60;/h2&#62;
+2: 
+3:  This page lists the Release Notes for the **x86: OpenSolaris 2009.06** release. For additional information on the following issues, look up the bug number in &#60;a href=&#34;http://defect.opensolaris.org/bz/&#34;&#62;Bugzilla&#60;/a&#62;.
+4: 
+5: Click &#60;a href=&#34;https://markebrooks.github.io/bin/view/Project+indiana/sparc&#34;&#62;SPARC&#60;/a&#62; for Release Notes for the SPARC: OpenSolaris 2009.06 release. For information about the new features in the OpenSolaris 2009.06 release, see &#60;a href=&#34;http://www.opensolaris.com/learn/features/whats-new/200906&#34;&#62;What&#8217;s New in OpenSolaris 2009.06&#60;/a&#62;.
+6: 
+7: For &#60;b&#62;translations&#60;/b&#62; of this document, refer to &#60;a href=&#34;https://markebrooks.github.io/bin/view/Project+indiana/relnotes&#34;&#62;Release Notes translated into non-English Languages&#60;/a&#62;
+8: 
+9: &#60;table border=&#34;1&#34;&#62;
+10: &#60;tr&#62;
+11: &#60;td&#62;
+12: &#60;h3&#62;CONTENTS&#60;/h3&#62;
+13: &#60;br&#62;
+14: &#60;ol&#62;
+15: 
+16: &#60;li&#62;&#60;a href=&#34;#general&#34;&#62;
+17: &#60;h4&#62;General Information&#60;/h4&#62;
+18: &#60;/a&#62; &#60;/li&#62;
+19: 
+20: &#60;ul&#62;
+21: 
+22: &#60;li&#62;
+23: &#60;p&#62;&#60;a href=&#34;#upgradeUM&#34;&#62;Upgrading OpenSolaris 2008.11 to OpenSolaris 2009.06 Using Update Manager.
+24: &#60;/a&#62;&#60;/p&#62;
+25: &#60;/li&#62;
+26: 
+27: &#60;li&#62;
+28: &#60;p&#62;&#60;a href=&#34;#upgrade&#34;&#62;Upgrading OpenSolaris 2008.05 to Later Versions of OpenSolaris.
+29: &#60;/a&#62;&#60;/p&#62;
+30: &#60;/li&#62;
+31: 
+32: &#60;li&#62;
+33: &#60;p&#62;
+34: &#60;a href=&#34;#Low_Mem&#34;&#62;Installing OpenSolaris on Systems With Low Memory.&#60;/a&#62;
+35: &#60;/p&#62;
+36: &#60;/li&#62;
+37: 
+38: &#60;/ul&#62;
+39: 
+40: 
+41: &#60;li&#62;&#60;a href=&#34;#docissue&#34;&#62;
+42: &#60;h4&#62;Documentation Issues&#60;/h4&#62;
+43: &#60;/a&#62; &#60;/li&#62;
+44: 
+45: &#60;ul&#62;
+46: &#60;li&#62;
+47: &#60;p&#62;&#60;a href=&#34;#getstart&#34;&#62;Getting Started With OpenSolaris 2009.06 Guide.&#60;/a&#62; &#60;/p&#62;
+48: &#60;/li&#62;
+49: 
+50: &#60;/ul&#62;
+51: 
+52: 
+53: &#60;li&#62;&#60;a href=&#34;#install&#34;&#62;
+54: &#60;h4&#62;Installation Bugs&#60;/h4&#62;
+55: &#60;/a&#62; &#60;/li&#62;
+56: 
+57: &#60;ul&#62;
+58: &#60;li&#62;
+59: &#60;p&#62;&#60;a href=&#34;#64&#34;&#62;64 - Installer, but not Desktop, Allows Empty
+60: Passwords.&#60;/a&#62;&#60;/p&#62;
+61: &#60;/li&#62;
+62: 
+63: &#60;li&#62;
+64: &#60;p&#62;&#60;a href=&#34;#1161&#34;&#62;1161 - GUI Installer Shrinks the Solaris
+65: Partition to be Created Even if Enough Available Space is Reported on
+66: the Disk Screen.&#60;/a&#62;&#60;/p&#62;
+67: &#60;/li&#62;
+68: 
+69: &#60;li&#62;
+70: &#60;p&#62;&#60;a href=&#34;#1685&#34;&#62;1685 - Renaming a Busy BE Might Fail.&#60;/a&#62;&#60;/p&#62;
+71: &#60;/li&#62;
+72: 
+73: &#60;li&#62;
+74: &#60;p&#62;&#60;a href=&#34;#3691&#34;&#62;3691 - Using Fast Reboot When Specifying the
+75: Name of a BE Fails.&#60;/a&#62;&#60;/p&#62;
+76: &#60;/li&#62;
+77: 
+78: &#60;li&#62;
+79: &#60;p&#62;&#60;a href=&#34;#3783&#34;&#62;3783 - Installer Fails if the User Creates or
+80: Imports the ZFS Pool &#60;tt&#62;rpool&#60;/tt&#62;.&#60;/a&#62;&#60;/p&#62;
+81: &#60;/li&#62;
+82: 
+83: &#60;li&#62;&#60;a href=&#34;#3947&#34;&#62;3947 - Distribution Constructor Does Not
+84: Recognize ZFS File System Mountpoints for Build Areas.&#60;/a&#62;&#60;/li&#62;
+85: 
+86: &#60;li&#62;
+87: &#60;p&#62;&#60;a href=&#34;#4061&#34;&#62;4061 - Only the First GRUB &#60;tt&#62;menu.lst&#60;/tt&#62;
+88: Entry of the Source BE Is Created When Creating a New BE.&#60;/a&#62;&#60;/p&#62;
+89: &#60;/li&#62;
+90: 
+91: &#60;li&#62;&#60;a href=&#34;#4589&#34;&#62;4589 - Exception Message Generated by
+92: Distribution Constructor Upon Successful Termination.&#60;/a&#62;&#60;/li&#62;
+93: 
+94: &#60;li&#62;
+95: &#60;p&#62;&#60;a href=&#34;#5003&#34;&#62;5003 - Default dumpadm Configuration Is Not Set to Capture Crash Dumps.&#60;/a&#62; &#60;/p&#62;
+96: &#60;/li&#62;
+97: 
+98: 
+99: &#60;li&#62;&#60;p&#62;&#60;a href=&#34;#7218&#34;&#62;7218 - Convert Existing &#60;tt&#62;installadm&#60;/tt&#62; Services.&#60;/a&#62; &#60;/p&#62;&#60;/li&#62;
+100: 
+101: &#60;li&#62;&#60;p&#62;&#60;a href=&#34;#8575&#34;&#62;8575 - Automated Installation Fails if Slice 0 is Configured on the Client With Less Than 8 GB Disk Space.&#60;/a&#62; &#60;/p&#62;&#60;/li&#62;
+102: 
+103: &#60;li&#62;
+104: &#60;p&#62;&#60;a href=&#34;#8661&#34;&#62;8661 - Automated Installer Fails to Continue With Installation if Slices from the Previous Configuration Exist.&#60;/a&#62; &#60;/p&#62;
+105: &#60;/li&#62;
+106: 
+107: &#60;li&#62;
+108: &#60;p&#62;&#60;a href=&#34;#8773&#34;&#62;8773 - &#60;tt&#62;installadm create-service&#60;/tt&#62;
+109: Followed Quickly by &#60;tt&#62;installadm delete-service&#60;/tt&#62; Causes &#60;tt&#62;installadm&#60;/tt&#62; to Hang.&#60;/a&#62; &#60;/p&#62;
+110: &#60;/li&#62;
+111: 
+112: &#60;li&#62;&#60;p&#62;&#60;a href=&#34;#8879&#34;&#62;8879 - xVM hvm Guests Fail to PXE Boot While Installing From Build 111a Automated Installation Image.&#60;/a&#62; &#60;/p&#62;&#60;/li&#62;
+113: 
+114: &#60;li&#62;&#60;p&#62;&#60;a href=&#34;#8961&#34;&#62;8961 - Specifying pkg Version Strings in the Automated Installation Manifest List of Packages causes Automated Installation to Fail.&#60;/a&#62; &#60;/p&#62;&#60;/li&#62;
+115: 
+116: &#60;li&#62;&#60;p&#62;&#60;a href=&#34;#9026&#34;&#62;9026 - VTOC Partition Size Is Not Aligned to the Cylinder Boundary on Disks Larger Than 1.96 TB.&#60;/a&#62; &#60;/p&#62;&#60;/li&#62;
+117: 
+118: &#60;!--&#60;li&#62;&#60;p&#62;&#60;a href=&#34;#9214&#34;&#62;9214 - &#60;tt&#62;installadm create-service&#60;/tt&#62; Does Not Automatically Create &#60;tt&#62;/var/ai/image-server/logs&#60;/tt&#62; Directory.&#60;/a&#62; &#60;/p&#62;&#60;/li&#62;
+119: --&#62;
+120: 
+121: 
+122: &#60;li&#62;
+123: &#60;p&#62;&#60;a href=&#34;#6670311&#34;&#62;6670311 - Installer Might Fail if the Linux
+124: Swap Primary Partition Precedes the Solaris Partition.&#60;/a&#62; &#60;/p&#62;
+125: &#60;/li&#62;
+126: 
+127: &#60;li&#62;
+128: &#60;p&#62;&#60;a href=&#34;#6795293&#34;&#62;6795293 - &#60;tt&#62;libdiskmgt&#60;/tt&#62; Dumps Core on Systems With Fiber Channel Disks Attached.&#60;/a&#62;&#60;/p&#62;
+129: &#60;/li&#62;
+130: 
+131: &#60;li&#62;&#60;p&#62;&#60;a href=&#34;#6838658&#34;&#62;6838658 - ZFS Hangs During Install if a Primary Linux Swap Partition Exists.&#60;/a&#62; &#60;/p&#62;&#60;/li&#62;
+132: 
+133: &#60;li&#62;&#60;p&#62;&#60;a href=&#34;#6843138&#34;&#62;6843138 - Cannot Boot a 2.2 TB Disk with a zfs Root.&#60;/a&#62; &#60;/p&#62;&#60;/li&#62;
+134: 
+135: &#60;li&#62;&#60;p&#62;&#60;a href=&#34;#6845928&#34;&#62;6845928 - Out-of-sync Boot Archive Message Displays an Incorrect Fix.&#60;/a&#62; &#60;/p&#62;&#60;/li&#62;
+136: 
+137: &#60;/ul&#62;
+138: &#60;li&#62;&#60;a href=&#34;#packaging&#34;&#62;
+139: &#60;h4&#62;Packaging Bugs&#60;/h4&#62;
+140: &#60;/a&#62; &#60;/li&#62;
+141: 
+142: &#60;ul&#62;&#60;li&#62;&#60;p&#62;&#60;a href=&#34;#7836&#34;&#62;7836 - Warnings Are Displayed While Using &#60;tt&#62;pkg image-update&#60;/tt&#62;.&#60;/a&#62; &#60;/p&#62;&#60;/li&#62;
+143: 
+144: &#60;li&#62;&#60;p&#62;&#60;a href=&#34;#8246&#34;&#62;8246 - Packagemanager Does Not Change Locale for Category Names.&#60;/a&#62; &#60;/p&#62;&#60;/li&#62;
+145: 
+146: &#60;/ul&#62;
+147: 
+148: 
+149: &#60;li&#62;&#60;a href=&#34;#desktop&#34;&#62;
+150: &#60;h4&#62;Desktop Bugs&#60;/h4&#62;
+151: &#60;/a&#62; &#60;/li&#62;
+152: 
+153: &#60;ul&#62;
+154: &#60;li&#62;&#60;p&#62;&#60;a href=&#34;#2656&#34;&#62;2656 &#38; 6366 - Enabling the printers:snmp Service Causes System to Revert to Maintenance State.&#60;/a&#62;&#60;/p&#62;&#60;/li&#62;
+155: 
+156: &#60;li&#62;
+157: &#60;p&#62;&#60;a href=&#34;#2900&#34;&#62;2900 - Firefox Crashes in Build 95.&#60;/a&#62;&#60;/p&#62;
+158: &#60;/li&#62;
+159: 
+160: &#60;li&#62;
+161: &#60;p&#62;&#60;a href=&#34;#5543&#34;&#62;5543 - Tracker Does Not Index the Home
+162: Directory by Default.&#60;/a&#62; &#60;/p&#62;
+163: &#60;/li&#62;
+164: 
+165: &#60;li&#62;
+166: &#60;p&#62;&#60;a href=&#34;#5544&#34;&#62;5544 - Tracker Cannot Search Evolution Emails.&#60;/a&#62;
+167: &#60;/p&#62;
+168: &#60;/li&#62;
+169: 
+170: 
+171: &#60;li&#62;&#60;p&#62;&#60;a href=&#34;#8748&#34;&#62;8748 - Windows Are Maximized on All Screens in the Twinview or Xinerama Mode.&#60;/a&#62; &#60;/p&#62;&#60;/li&#62;
+172: 
+173: &#60;li&#62;
+174: &#60;p&#62;&#60;a href=&#34;#6742850&#34;&#62;6742850 - CJK Characters Do Not Display
+175: Correctly in the Java Application Environment.&#60;/a&#62; &#60;/p&#62;
+176: &#60;/li&#62;
+177: 
+178: &#60;/ul&#62;
+179: 
+180: 
+181: &#60;li&#62;&#60;a href=&#34;#hardware&#34;&#62;
+182: &#60;h4&#62;Hardware-Related Bugs&#60;/h4&#62;
+183: &#60;/a&#62; &#60;/li&#62;
+184: 
+185: &#60;ul&#62;&#60;li&#62;&#60;p&#62;&#60;a href=&#34;#6658667&#34;&#62;6658667 - MAC Address Is Reversed in Some mcp61-based Machines.&#60;/a&#62; &#60;/p&#62;&#60;/li&#62;&#60;/ul&#62;
+186: 
+187: 
+188: &#60;li&#62;&#60;a href=&#34;#locale&#34;&#62;
+189: &#60;h4&#62;Localization Bugs&#60;br&#62;
+190: &#60;/h4&#62;
+191: &#60;/a&#62; &#60;/li&#62;
+192: 
+193: &#60;ul&#62;
+194: &#60;li&#62;
+195: &#60;p&#62;&#60;a href=&#34;#5473&#34;&#62;5473 - en_US/es_ES/fr_FR/de_DE UTF-8 Locales
+196: Might Not be Installed by &#60;tt&#62;pkg image-update&#60;/tt&#62;.&#60;/a&#62; &#60;/p&#62;
+197: &#60;/li&#62;
+198: 
+199: &#60;li&#62;
+200: &#60;p&#62;&#60;a href=&#34;#8880&#34;&#62;8880 - Input Method Preference Editor Help
+201: Fails to Load.&#60;/a&#62;&#60;/p&#62;
+202: &#60;/li&#62;
+203: 
+204: &#60;/ul&#62;
+205: 
+206: 
+207: &#60;li&#62;&#60;a href=&#34;#eos&#34;&#62;
+208: &#60;h4&#62;End-of-Software
+209: Support
+210: Statements&#60;/h4&#62;
+211: &#60;/a&#62; &#60;/li&#62;
+212: 
+213: &#60;ul&#62;
+214: &#60;li&#62;
+215: &#60;p&#62;&#60;a href=&#34;#xorg&#34;&#62;&#60;tt&#62;xorgcfg&#60;/tt&#62; and &#60;tt&#62;xorgconfig&#60;/tt&#62;
+216: Utilities.&#60;/a&#62; &#60;/p&#62;
+217: &#60;/li&#62;
+218: 
+219: &#60;/ul&#62;
+220: 
+221: 
+222: &#60;li&#62;&#60;a href=&#34;#troubleinfo&#34;&#62;
+223: &#60;h4&#62;Additional Installation Troubleshooting Information&#60;/h4&#62;
+224: &#60;/a&#62; &#60;/li&#62;&#60;br&#62;
+225: &#60;/ol&#62;
+226: 
+227: &#60;/tr&#62;
+228: &#60;/table&#62;
+229: &#60;br&#62;
+230: &#60;br&#62;
+231: 
+232: 
+233: &#60;a name=&#34;gentextid-1093&#34;&#62;&#60;/a&#62;
+234: &#60;h2&#62;&#60;a name=&#34;general&#34;&#62;&#60;/a&#62;General Information&#60;/h2&#62;
+235: &#60;p&#62;This section provides general information such as upgrade issues and behavior changes in the OpenSolaris 2009.06 OS.&#60;/p&#62;
+236: 
+237: 
+238: &#60;ul&#62;
+239: 
+240: &#60;li&#62;
+241: &#60;a name=&#34;gentextid-1093&#34;&#62;&#60;/a&#62;
+242: &#60;h4&#62;&#60;a name=&#34;upgradeUM&#34;&#62;&#60;/a&#62;Upgrading OpenSolaris 2008.11 to OpenSolaris 2009.06 Using Update Manager&#60;/h4&#62;
+243: &#60;a name=&#34;gentextid-1095&#34;&#62;&#60;/a&#62;
+244: 
+245: &#60;p&#62;
+246: The OpenSolaris Update Manager automatically detects when new packages are available for your system, including when the Update Manager itself needs to be updated. In this case, Update Manager will prompt you to open a terminal window and execute the following command:
+247: &#60;pre&#62;$ pfexec pkg install SUNWipkg&#60;/pre&#62;
+248: &#60;p&#62;
+249: After executing this command, you must close the Update Manager and then restart it via the System-&#62; Administration menu to complete the update. 
+250: &#60;/li&#62;
+251: 
+252: 
+253: &#60;li&#62;
+254: &#60;a name=&#34;gentextid-1093&#34;&#62;&#60;/a&#62;
+255: &#60;h4&#62;&#60;a name=&#34;upgrade&#34;&#62;&#60;/a&#62;Upgrading OpenSolaris 2008.05 to Later Versions of OpenSolaris&#60;/h4&#62;
+256: &#60;p&#62;General instructions for updating from the OpenSolaris 2008.05 release to later versions of OpenSolaris are as follows:&#60;/p&#62;
+257: 
+258: &#60;ol&#62;
+259: &#60;li&#62;Before using the &#60;i&#62;image-update&#60;/i&#62; subcommand, it is required that the latest available version of the IPS software and install libraries be installed for your current boot environment (BE) 
+260: 
+261: &#60;pre&#62;
+262:     $ BUILD=`uname -v | sed -e &#34;s/snv_//&#34; -e &#34;s/\[a-z\]//&#34;`
+263:     $ pfexec pkg refresh
+264:     $ pfexec pkg install entire@0.5.11-0.${BUILD}
+265:     $ pfexec pkg install SUNWipkg@0.5.11-0.${BUILD}
+266:     $ pfexec pkg install SUNWinstall-libs 
+267: &#60;/pre&#62; &#60;/li&#62;
+268: 
+269: &#60;li&#62;Use &#60;i&#62;image-update&#60;/i&#62; directly as follows
+270: 
+271: &#60;pre&#62;
+272:     $ pfexec pkg image-update
+273: &#60;/pre&#62;
+274: 
+275: &#60;p&#62;At this point, you can boot into the updated BE using &#60;tt&#62;reboot(1M)&#60;/tt&#62;
+276: or &#60;tt&#62;init(1M)&#60;/tt&#62; as usual.&#60;/li&#62;
+277: 
+278: &#60;/ol&#62;
+279: &#60;/li&#62;
+280: 
+281: 
+282: &#60;li&#62;
+283: 
+284: &#60;h4&#62;&#60;a name=&#34;Low_Mem&#34;&#62;Installing OpenSolaris on Systems With Low Memory&#60;/a&#62;&#60;/h4&#62;
+285: 
+286: &#60;p&#62;OpenSolaris supports installation through its Live CD on systems or virtual machines that contain 
+287: 
+288: at least 512 MB of RAM. The following limitations exist on systems with low memory.&#60;/p&#62;
+289: 
+290: &#60;p&#62;While basic desktop functions and installation functions work well, attempting to use the Live CD 
+291: 
+292: as a full-blown user environment might cause issues. However, an installed system functions normally 
+293: 
+294: with 512 MB of RAM.&#60;/p&#62;
+295: 
+296: &#60;p&#62;The Live CD supports booting the OpenSolaris kernel in either 32-bit mode or 64-bit mode depending 
+297: 
+298: on the capabilities of the underlying hardware. The OS will boot in the 64-bit mode only if the 
+299: 
+300: system has at least 1000 MB of RAM.  Systems
+301: with less than this amount will boot in the 32-bit mode. This limitation does not apply to the 
+302: 
+303: installed system.&#60;/p&#62;
+304: 
+305: &#60;p&#62;It is not possible to start the &#60;b&#62;&#8217;Read the Release Notes&#8217;&#60;/b&#62; link from within the GUI Installer 
+306: 
+307: on systems with 512 MB of RAM.  Attempting to open this link causes the system to freeze while 
+308: 
+309: loading Firefox. Therefore users are recommended to read the Release Notes prior to launching the GUI 
+310: 
+311: Installer.&#60;/p&#62;
+312: 
+313: &#60;p&#62;On systems with less than 700 MB of RAM the installer will create a dedicated swap slice instead 
+314: 
+315: of a ZFS volume to use for system swap.&#60;/p&#62;
+316: 
+317: &#60;p&#62;For more information about the enhancements that were made to the OS from the OpenSolaris 2008.11 release onwards to 
+318: 
+319: support installation on systems with low memory, see &#60;a 
+320: 
+321: href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=3597&#34;&#62;# 3597&#60;/a&#62;&#60;a name=&#34;3597&#34;&#62; Unable to 
+322: 
+323: install OpenSolaris with 512 MB Base Memory&#60;/a&#62;.&#60;/p&#62;
+324: 
+325: 
+326: 
+327: &#60;/li&#62;
+328: &#60;/ul&#62;
+329: 
+330: 
+331: &#60;br&#62;
+332: &#60;br&#62;
+333: &#60;h2&#62;&#60;a name=&#34;docissue&#34;&#62;&#60;/a&#62;Documentation Issues&#60;br&#62;
+334: &#60;/h2&#62;
+335: &#60;p&#62;This section describes known issues that are related to the
+336: OpenSolaris 2009.06 documentation.&#60;/p&#62;
+337: &#60;ul&#62;
+338: &#60;li&#62;
+339: &#60;h4&#62;&#60;a name=&#34;getstart&#34;&#62;&#60;/a&#62;&#60;a
+340: href=&#34;http://dlc.sun.com/osol/docs/content/2009.06/getstart/gentextid-41.html&#34;&#62;Getting
+341: Started With OpenSolaris 2009.06 Guide&#60;/a&#62;&#60;/h4&#62;
+342: &#60;p&#62;Some links are incorrect in the
+343: Getting Started With OpenSolaris
+344: 2009.06 Guide.&#60;/p&#62;
+345: &#60;ol&#62;
+346: &#60;li&#62;The following links are incorrect in the&#60;a
+347: href=&#34;http://dlc.sun.com/osol/docs/content/2009.06/getstart/links2.html&#34;&#62;
+348: Related Information&#60;/a&#62; section of Chapter 2, Preparing to Install
+349: OpenSolaris 2009.06:
+350: &#60;ul&#62;
+351: &#60;li&#62;http://frsun.downloads.edgesuite.net/sun/07C00892/media/demos/OpenSolarisDualBoot-Step1-Backup.html&#60;/li&#62;
+352: &#60;li&#62;http://frsun.downloads.edgesuite.net/sun/07C00892/media/demos/OpenSolarisDualBoot-Step2-Partition.html&#60;/li&#62;
+353: &#60;/ul&#62;
+354: &#60;p&#62;The following are the correct and updated links:&#60;/p&#62;
+355: &#60;ul&#62;
+356: &#60;li&#62;&#60;a
+357: href=&#34;http://webcast-west.sun.com/interactive/07C00892/media/demos/OpenSolarisDualBoot-Step1-Backup.html&#34;&#62;http://webcast-west.sun.com/interactive/07C00892/media/demos/OpenSolarisDualBoot-Step1-Backup.html&#60;/a&#62;&#60;/li&#62;
+358: &#60;li&#62;&#60;a
+359: href=&#34;http://webcast-west.sun.com/interactive/07C00892/media/demos/OpenSolarisDualBoot-Step2-Partition.html&#34;&#62;http://webcast-west.sun.com/interactive/07C00892/media/demos/OpenSolarisDualBoot-Step2-Partition.html&#60;/a&#62;&#60;/li&#62;
+360: &#60;/ul&#62;
+361: &#60;/li&#62;&#60;br&#62;
+362: &#60;li&#62;The following link is incorrect in the &#60;a
+363: href=&#34;http://dlc.sun.com/osol/docs/content/2009.06/getstart/links3.html&#34;&#62;
+364: Related Information&#60;/a&#62; section of Chapter 3,  Installing the OpenSolaris 2009.06 Operating System:
+365: &#60;ul&#62;
+366: &#60;li&#62;http://www.opensolaris.org/os/project/indiana/resources/relnotes/200811/image-update/&#60;/li&#62;
+367: &#60;/ul&#62;
+368: &#60;p&#62;The following is the correct and updated link:&#60;/p&#62;
+369: &#60;ul&#62;
+370: &#60;li&#62;&#60;a href=&#34;http://www.opensolaris.org/os/project/indiana/resources/relnotes/200805/image-update/&#34;&#62;http://www.opensolaris.org/os/project/indiana/resources/relnotes/200805/image-update/&#60;/a&#62;
+371: &#60;/li&#62;
+372: &#60;/ul&#62;
+373: &#60;/ul&#62;
+374: 
+375: &#60;br&#62;
+376: &#60;br&#62;
+377: 
+378: &#60;a name=&#34;gentextid-1093&#34;&#62;&#60;/a&#62;
+379: &#60;h2&#62;&#60;a name=&#34;install&#34;&#62;&#60;/a&#62;Installation Bugs&#60;/h2&#62;
+380: &#60;p&#62;This section describes installation issues that apply to the
+381: OpenSolaris 2009.06 OS.&#60;/p&#62;
+382: 
+383: 
+384: &#60;ul&#62;
+385: 
+386: &#60;li&#62;
+387: &#60;a name=&#34;gentextid-1093&#34;&#62;&#60;/a&#62;
+388: &#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=64&#34;&#62;# 64&#60;/a&#62;&#60;a
+389: name=&#34;64&#34;&#62; Installer, but not Desktop, Allows Empty Passwords&#60;/a&#62;&#60;/h4&#62;
+390: &#60;a name=&#34;gentextid-1095&#34;&#62;&#60;/a&#62;
+391: &#60;h5&#62;Description&#60;/h5&#62;
+392: &#60;p&#62;If, during installation, no root password is entered and no user
+393: account is
+394: created, you will not be able to log in to the installed
+395: system.&#60;/p&#62;
+396: &#60;a name=&#34;gentextid-1098&#34;&#62;&#60;/a&#62;
+397: &#60;h5&#62;Workaround&#60;/h5&#62;
+398: &#60;p&#62;Choose one of the following workarounds:&#60;/p&#62;
+399: &#60;ul&#62;
+400: &#60;li&#62;
+401: &#60;p&#62;Enter a root password as follows:&#60;/p&#62;
+402: &#60;ol&#62;
+403: &#60;li&#62;
+404: &#60;p&#62;During boot, type “&#60;tt&#62;e&#60;/tt&#62;” in the grub menu twice, in
+405: order to edit the boot entry.&#60;/p&#62;
+406: &#60;/li&#62;
+407: &#60;li&#62;
+408: &#60;p&#62;Add &#60;tt&#62;-s&#60;/tt&#62; to the end of the boot entry, and boot with
+409: this line.&#60;/p&#62;
+410: &#60;/li&#62;
+411: &#60;li&#62;
+412: &#60;p&#62;Log in as root and use the &#60;tt&#62;passwd&#60;/tt&#62; command to enter
+413: a password.&#60;/p&#62;
+414: &#60;/li&#62;
+415: &#60;li&#62;
+416: &#60;p&#62;Restart the system. Boot normally, and log in with the new
+417: password.&#60;/p&#62;
+418: &#60;/li&#62;
+419: &#60;/ol&#62;
+420: &#60;/li&#62;
+421: &#60;li&#62;
+422: &#60;p&#62;Set root so that it does not require a password as follows:&#60;/p&#62;
+423: &#60;ol&#62;
+424: &#60;li&#62;
+425: &#60;p&#62;During boot, type “&#60;tt&#62;e&#60;/tt&#62;” in the grub menu twice, in
+426: order to edit the boot entry.&#60;/p&#62;
+427: &#60;/li&#62;
+428: &#60;li&#62;
+429: &#60;p&#62;Add &#60;tt&#62;-s&#60;/tt&#62; to the end of the boot entry, and boot with
+430: this line.&#60;/p&#62;
+431: &#60;/li&#62;
+432: &#60;li&#62;
+433: &#60;p&#62;Log in to the system as root.&#60;/p&#62;
+434: &#60;/li&#62;
+435: &#60;li&#62;
+436: &#60;p&#62;Edit the &#60;tt&#62;/etc/X11/gdm/custom.conf&#60;/tt&#62; file so that the
+437: value of PasswordRequired is false.&#60;/p&#62;
+438: &#60;/li&#62;
+439: &#60;/ol&#62;
+440: &#60;/li&#62;
+441: &#60;/ul&#62;
+442: &#60;/li&#62;
+443: 
+444: 
+445: 
+446: &#60;li&#62;
+447: &#60;a name=&#34;gentextid-1235&#34;&#62;&#60;/a&#62;
+448: &#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=1161&#34;&#62;#
+449: 1161&#60;/a&#62;&#60;a name=&#34;1161&#34;&#62; GUI Installer Shrinks the Solaris Partition to
+450: be Created Even if Enough Available Space is Reported on the Disk Screen&#60;/a&#62;&#60;/h4&#62;
+451: &#60;a name=&#34;gentextid-1237&#34;&#62;&#60;/a&#62;
+452: &#60;h5&#62;Description&#60;/h5&#62;
+453: &#60;p&#62;When creating a Solaris partition, the GUI installer only utilizes
+454: the free space at the end of the disk after the last primary partition.
+455: However, the sum of the total space available including gaps between
+456: partitions is reported on the disk screen. If the user tries to create
+457: a Solaris partition which is larger than the amount of free space
+458: available at the end of the disk, the size of Solaris partition is
+459: adjusted.&#60;/p&#62;
+460: &#60;p&#62;A warning message is displayed when the Next button is pressed on
+461: the disk screen and the Solaris partition is shrunk. The title of the
+462: warning message is as follows:&#60;/p&#62;
+463: &#60;pre&#62;Adjustments were made to the new partitions&#60;/pre&#62;
+464: &#60;a name=&#34;gentextid-1242&#34;&#62;&#60;/a&#62;
+465: &#60;h5&#62;Workaround&#60;/h5&#62;
+466: &#60;p&#62;Use the Solaris &#60;tt&#62;fdisk(1M)&#60;/tt&#62; tool or the GParted tool to
+467: create a Solaris2 partition. These tools enable the utilization of
+468: unallocated space between already defined partitions. Select the newly
+469: created Solaris2 partition as the target for the installation on the
+470: installer disk screen.&#60;/p&#62;
+471: &#60;/li&#62;
+472: 
+473: 
+474: 
+475: &#60;li&#62;
+476: &#60;a name=&#34;gentextid-1284&#34;&#62;&#60;/a&#62;
+477: &#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=1685&#34;&#62;#
+478: 1685&#60;/a&#62;&#60;a name=&#34;1685&#34;&#62; Renaming a Busy BE Might Fail&#60;/a&#62;&#60;/h4&#62;
+479: &#60;a name=&#34;gentextid-1286&#34;&#62;&#60;/a&#62;
+480: &#60;h5&#62;Description&#60;/h5&#62;
+481: &#60;p&#62;Renaming a boot environment (BE) might fail if the BE has a
+482: dependent clone that is currently mounted or otherwise busy.&#60;/p&#62;
+483: &#60;p&#62;A typical example of this situation is when the live BE has
+484: been successfully upgraded. If you then try to rename the
+485: auto-generated and upgraded
+486: BE, the renaming fails. The renaming fails because the upgraded BE has
+487: been
+488: activated and the live BE is now its clone.&#60;/p&#62;
+489: &#60;a name=&#34;gentextid-1290&#34;&#62;&#60;/a&#62;
+490: &#60;h5&#62;Workaround&#60;/h5&#62;
+491: &#60;p&#62;Use the following procedure:&#60;/p&#62;
+492: &#60;ol&#62;
+493: &#60;li&#62;
+494: &#60;p&#62;Activate the live BE.&#60;/p&#62;
+495: &#60;/li&#62;
+496: &#60;li&#62;
+497: &#60;p&#62;Rename the upgraded BE.&#60;/p&#62;
+498: &#60;/li&#62;
+499: &#60;li&#62;
+500: &#60;p&#62;Activate the upgraded BE.&#60;/p&#62;
+501: &#60;/li&#62;
+502: &#60;/ol&#62;
+503: &#60;p&#62;For example, if the live BE name is “opensolaris”, and the
+504: auto-generated
+505: BE name of the upgraded BE is “opensolaris-1,” use the following
+506: commands:&#60;/p&#62;
+507: &#60;pre&#62;# &#60;tt&#62;beadm activate &#60;i&#62;opensolaris&#60;/i&#62;&#60;/tt&#62;&#60;br&#62;# &#60;tt&#62;beadm rename &#60;i&#62;opensolaris-1 new_name&#60;/i&#62;&#60;/tt&#62;&#60;br&#62;# &#60;tt&#62;beadm activate &#60;i&#62;new_name&#60;/i&#62;&#60;/tt&#62;&#60;/pre&#62;
+508: &#60;/li&#62;
+509: 
+510: 
+511: 
+512: &#60;li&#62;
+513: &#60;a name=&#34;gentextid-1235&#34;&#62;&#60;/a&#62;
+514: &#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=3691&#34;&#62;#
+515: 3691&#60;/a&#62;&#60;a name=&#34;3691&#34;&#62; Using Fast Reboot When Specifying the Name of a
+516: BE Fails&#60;/a&#62;&#60;/h4&#62;
+517: &#60;a name=&#34;gentextid-1237&#34;&#62;&#60;/a&#62;
+518: &#60;h5&#62;Description&#60;/h5&#62;
+519: &#60;p&#62;The new fast reboot feature enables you to provide a &#60;tt&#62;&#8217;-e&#8217;&#60;/tt&#62;
+520: option to specify the name of the boot environment (BE) to which you
+521: need to fast reboot. Attempting to do a fast reboot and specifying the
+522: name of a BE fails in the OpenSolaris 2009.06 release. The following
+523: error message is displayed:
+524: &#60;/p&#62;
+525: &#60;pre&#62;# reboot -f -e opensolaris-7&#60;br&#62;reboot: cannot mount BE opensolaris-7&#60;br&#62;&#60;/pre&#62;
+526: &#60;a name=&#34;gentextid-1242&#34;&#62;&#60;/a&#62;
+527: &#60;h5&#62;Workaround&#60;/h5&#62;
+528: &#60;p&#62;Specify the full root dataset path to the BE to which you need to
+529: fast reboot. For example: &#60;/p&#62;
+530: &#60;pre&#62;# reboot -f rpool/ROOT/opensolaris-7 &#60;/pre&#62;
+531: &#60;/li&#62;
+532: 
+533: 
+534: 
+535: &#60;li&#62;
+536: &#60;a name=&#34;gentextid-1235&#34;&#62;&#60;/a&#62;
+537: &#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=3783&#34;&#62;#
+538: 3783&#60;/a&#62;&#60;a name=&#34;3783&#34;&#62; Installer Fails if the User Creates or Imports
+539: the ZFS Pool &#60;tt&#62;rpool&#60;/tt&#62;&#60;/a&#62;&#60;/h4&#62;
+540: &#60;a name=&#34;gentextid-1237&#34;&#62;&#60;/a&#62;
+541: &#60;h5&#62;Description&#60;/h5&#62;
+542: &#60;p&#62;If a ZFS pool named &#60;tt&#62;rpool&#60;/tt&#62; is already present on the system
+543: because it was manually imported or created by the user during the
+544: current boot of the live CD, the install process fails. The last
+545: message in the installation log file is as follows:&#60;/p&#62;
+546: &#60;pre&#62;Root pool rpool exists, we can&#8217;t proceed with the installation.&#60;/pre&#62;
+547: &#60;p&#62;This behavior is intentional and ensures that the installer does not
+548: inadvertently corrupt the user&#8217;s data.&#60;/p&#62;
+549: &#60;p&#62;The installer recognises cases when &#60;tt&#62;rpool&#60;/tt&#62; is created
+550: by the installer but the installation process has failed or was
+551: interrupted. In such cases, the installer destroys &#60;tt&#62;rpool&#60;/tt&#62;
+552: automatically after it is restarted.&#60;/p&#62;
+553: &#60;a name=&#34;gentextid-1242&#34;&#62;&#60;/a&#62;
+554: &#60;h5&#62;Workaround&#60;/h5&#62;
+555: &#60;p&#62;Choose one of the following workarounds:&#60;/p&#62;
+556: &#60;ul&#62;
+557: &#60;li&#62;
+558: &#60;p&#62;To preserve data in &#60;tt&#62;rpool&#60;/tt&#62;, reboot the system and
+559: do not import the pool. The pool remains invisible to the installer.
+560: However, if the pool was created on the target disk then the pool
+561: cannot be preserved. &#60;/p&#62;
+562: &#60;/li&#62;
+563: &#60;li&#62;
+564: &#60;p&#62;If you do not want to preserve data in &#60;tt&#62;rpool&#60;/tt&#62;,
+565: destroy the pool before you start the installer by using the following
+566: command:&#60;/p&#62;
+567: &#60;pre&#62;$ pfexec zpool destroy -f rpool &#60;/pre&#62;
+568: &#60;/li&#62;
+569: &#60;/ul&#62;
+570: &#60;/li&#62;
+571: 
+572: 
+573: 
+574: &#60;li&#62;
+575: &#60;a name=&#34;gentextid-1235&#34;&#62;&#60;/a&#62;
+576: &#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=3947&#34;&#62;#
+577: 3947&#60;/a&#62;&#60;a name=&#34;3947&#34;&#62; Distribution Constructor Does Not Recognize ZFS
+578: File System Mountpoints for Build Areas&#60;/a&#62;&#60;/h4&#62;
+579: &#60;a name=&#34;gentextid-1237&#34;&#62;&#60;/a&#62;
+580: &#60;h5&#62;Description&#60;/h5&#62;
+581: &#60;p&#62;If a system has a ZFS file system, the Distribution Constructor does
+582: not recognise or treat a build area as a ZFS file system in the
+583: following cases:&#60;/p&#62;
+584: &#60;ul&#62;
+585: &#60;li&#62;
+586: &#60;p&#62;A new sub-directory of the ZFS file system is specified as a
+587: build area, but the mountpoint is specified instead of the &#60;tt&#62;zpool&#60;/tt&#62;.&#60;/p&#62;
+588: &#60;/li&#62;
+589: &#60;li&#62;
+590: &#60;p&#62;The build area already exists as a ZFS file system but the
+591: mountpoint is specified instead of the &#60;tt&#62;zpool&#60;/tt&#62;&#60;/p&#62;
+592: &#60;/li&#62;
+593: &#60;/ul&#62;
+594: &#60;p&#62;For example, in the following &#60;tt&#62;zpool&#60;/tt&#62;:&#60;/p&#62;
+595: &#60;pre&#62;$ zfs list | grep &#34;disk2_pool/ib/pia&#34;&#60;br&#62;disk2_pool/ib/pia 1.90G 355G 18K /export/home/ib/pia&#60;/pre&#62;
+596: &#60;p&#62;When you run the following command:&#60;/p&#62;
+597: &#60;pre&#62;# distro_const build -p 1 slim_cd.xml&#60;/pre&#62;
+598: &#60;p&#62;Where the build area in &#60;tt&#62;slim_cd.xml&#60;/tt&#62; is specified as &#60;tt&#62;&#60;i&#62;build_area&#60;/i&#62;/export/home/ib/pia&#60;i&#62;/build_area&#60;/i&#62;&#60;/tt&#62;,
+599: the following message error message is displayed:&#60;/p&#62;
+600: &#60;pre&#62;Checkpointing is not available&#60;br&#62;Rerun the build without -p&#60;br&#62;&#60;/pre&#62;
+601: &#60;a name=&#34;gentextid-1242&#34;&#62;&#60;/a&#62;
+602: &#60;h5&#62;Workaround&#60;/h5&#62;
+603: &#60;p&#62;Specify the &#60;tt&#62;zpool&#60;/tt&#62; in the manifest. For example, &#60;tt&#62;&#60;i&#62;build_area&#60;/i&#62;/disk2_pool/ib/pia&#60;i&#62;/build_area&#60;/i&#62;&#60;/tt&#62;.&#60;/p&#62;
+604: &#60;/li&#62;
+605: 
+606: 
+607: 
+608: &#60;li&#62;
+609: &#60;a name=&#34;gentextid-1235&#34;&#62;&#60;/a&#62;
+610: &#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=4061&#34;&#62;#
+611: 4061&#60;/a&#62;&#60;a name=&#34;4061&#34;&#62; Only the First GRUB &#60;tt&#62;menu.lst&#60;/tt&#62; Entry of
+612: the Source BE Is Created When Creating a New BE&#60;/a&#62;&#60;/h4&#62;
+613: &#60;a name=&#34;gentextid-1237&#34;&#62;&#60;/a&#62;
+614: &#60;h5&#62;Description&#60;/h5&#62;
+615: &#60;p&#62;When a new boot environment (BE) is created, the new BE will only
+616: have one entry in the GRUB &#60;tt&#62;menu.lst&#60;/tt&#62; file regardless of how
+617: many entries the source BE has. The source BE&#8217;s first &#60;tt&#62;menu.lst&#60;/tt&#62;
+618: entry is used to create the entry for the new BE. All other entries are
+619: ignored. This issue occurs when you create the new BE either through &#60;tt&#62;beadm&#60;/tt&#62;
+620: or &#60;tt&#62;pkg image-
+621: update&#60;/tt&#62;.&#60;/p&#62;
+622: &#60;p&#62;If the user needs the other entries for the new BE they are not
+623: available.&#60;/p&#62;
+624: &#60;a name=&#34;gentextid-1242&#34;&#62;&#60;/a&#62;
+625: &#60;h5&#62;Workaround&#60;/h5&#62;
+626: &#60;p&#62;Edit the &#60;tt&#62;/rpool/boot/grub/menu.lst&#60;/tt&#62; file and copy the
+627: desired entries from the original BE. Replace the BE name in the source
+628: entries with the BE name of the target.&#60;/p&#62;
+629: &#60;/li&#62;
+630: 
+631: 
+632: 
+633: &#60;li&#62;
+634: &#60;a name=&#34;gentextid-1235&#34;&#62;&#60;/a&#62;
+635: &#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=4589&#34;&#62;#
+636: 4589&#60;/a&#62;&#60;a name=&#34;4589&#34;&#62; Exception Message Generated by Distribution
+637: Constructor Upon Successful Termination&#60;/a&#62;&#60;/h4&#62;
+638: &#60;a name=&#34;gentextid-1237&#34;&#62;&#60;/a&#62;
+639: &#60;h5&#62;Description&#60;/h5&#62;
+640: &#60;p&#62;The Distribution Constructor might display the following error
+641: message after successfully performing its function:&#60;/p&#62;
+642: &#60;pre&#62;Unhandled exception in thread started by&#60;br&#62;Error in sys.excepthook:&#60;br&#62;&#60;br&#62;Original exception was:&#60;/pre&#62;
+643: &#60;a name=&#34;gentextid-1242&#34;&#62;&#60;/a&#62;
+644: &#60;h5&#62;Workaround&#60;/h5&#62;
+645: &#60;p&#62;This error message is displayed just before termination and can be
+646: safely be ignored.&#60;/p&#62;
+647: &#60;/li&#62;
+648: 
+649: 
+650: 
+651: &#60;li&#62;
+652: &#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=5003&#34;&#62;#
+653: 5003&#60;/a&#62;&#60;a name=&#34;5003&#34;&#62; Crash Dumps Are Not Saved to the File System at
+654: Boot Time By Default&#60;/a&#62;&#60;/h4&#62;
+655: &#60;a name=&#34;gentextid-1237&#34;&#62;&#60;/a&#62;
+656: &#60;h5To reduce reboot time, crash dumps are not saved to the file system at boot time by default.&#60;/p&#62;
+657: &#60;a name=&#34;gentextid-1242&#34;&#62;&#60;/a&#62;
+658: &#60;h5&#62;Workaround&#60;/h5&#62;
+659: &#60;p&#62;Use the &#60;tt&#62;dumpadm&#60;/tt&#62;(1M) command to enable crash dumps at boot
+660: time:&#60;/p&#62;
+661: &#60;pre&#62;# dumpadm -y &#60;/pre&#62;
+662: &#60;p&#62;Alternatively, create a cron job that enables saving crash
+663: dumps at any given later time.&#60;/p&#62;
+664: &#60;/li&#62;
+665: 
+666: 
+667: 
+668: &#60;li&#62;
+669: &#60;a name=&#34;gentextid-1235&#34;&#62;&#60;/a&#62;&#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=7218&#34;&#62;#7218&#60;/a&#62;&#60;a name=&#34;7218&#34;&#62; Convert Existing &#60;tt&#62;installadm&#60;/tt&#62; Services&#60;/a&#62;&#60;/h4&#62;
+670: 
+671: &#60;a name=&#34;gentextid-1237&#34;&#62;&#60;/a&#62;&#60;h5&#62;Description&#60;/h5&#62;
+672: 
+673: &#60;p&#62;The latest version of SUNWinstalladm-tools from &#60;a href=&#34;http:pkg.opensolaris.org/release&#34;&#62;http:pkg.opensolaris.org/release&#60;/a&#62; contains fixes for the following bug:&#60;/p&#62;
+674: &#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=7218&#34;&#62;#7218 - &#60;tt&#62;installadm&#60;/tt&#62; needs to move service data into SMF&#60;/a&#62;
+675: &#60;p&#62;If you update your automated install server with the versions of SUNWinstalladm-tools and SUNWinstall-libs packages that fix &#60;/a&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=7218&#34;&#62;#7218&#60;/a&#62;, then you will need to convert any services previously created with &#60;tt&#62;installadm create-service&#60;/tt&#62;.&#60;/p&#62;
+676: 
+677: &#60;a name=&#34;gentextid-1242&#34;&#62;&#60;/a&#62;&#60;h5&#62;Workaround&#60;/h5&#62;
+678: 
+679: &#60;p&#62;Use the following procedure to convert the services created with &#60;tt&#62;installadm create-service&#60;/tt&#62;.
+680: &#60;ol&#62;
+681: &#60;li&#62;Install the new SUNWinstalladm-tools and SUNWinstall-libs packages.&#60;/li&#62;
+682: &#60;li&#62;Reboot the automated install server.&#60;/li&#62;
+683: &#60;li&#62;Download and run the &#60;tt&#62;convert.sh&#60;/tt&#62; script found at &#60;a href=&#34;http://opensolaris.org/os/project/caiman/auto_install/convert.sh&#34;&#62;http://opensolaris.org/os/project/caiman/auto_install/convert.sh&#60;/a&#62;.&#60;/li&#62;
+684: &#60;li&#62;Enable the service:
+685: &#60;pre&#62;svcadm enable svc:/system/install/server:default&#60;/pre&#62;&#60;/li&#62;
+686: &#60;/ol&#62;
+687: &#60;p&#62;For more information, see the &#60;a href=&#34;http://dlc.sun.com/osol/docs/content/2009.06/AIinstall/&#34;&#62;OpenSolaris Automated Installer Guide&#60;/a&#62;.
+688: &#60;/p&#62;
+689: &#60;/li&#62;
+690: 
+691: 
+692: 
+693: &#60;li&#62;
+694: &#60;a name=&#34;gentextid-1235&#34;&#62;&#60;/a&#62;&#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=8575&#34;&#62;#8575&#60;/a&#62;&#60;a name=&#34;8575&#34;&#62; Automated Installation Fails if Slice 0 is Configured on the Client With Less Than 8 GB Disk Space&#60;/a&#62;&#60;/h4&#62;
+695: 
+696: &#60;a name=&#34;gentextid-1237&#34;&#62;&#60;/a&#62;&#60;h5&#62;Description&#60;/h5&#62;
+697: 
+698: &#60;p&#62;Automated Installation fails when the Automated Installation manifest points to a target device and the slice 0 on target device is configured with less than 8 GB of disk space. The following error message is displayed:&#60;/p&#62; 
+699: &#60;pre&#62;Auto install failed&#60;/pre&#62;
+700: &#60;p&#62;The Automated Installation fails because it runs out of space in slice 0 of the target device.&#60;/p&#62;
+701: 
+702: &#60;a name=&#34;gentextid-1242&#34;&#62;&#60;/a&#62;&#60;h5&#62;Workaround&#60;/h5&#62;
+703: &#60;p&#62;Choose one of the following workarounds:&#60;/p&#62;
+704: &#60;ul&#62;
+705: &#60;li&#62;Create slice 0 of the target device with more than 8 GB space.&#60;/li&#62;
+706: &#60;li&#62;If there is another slice with more than 8 GB space, change the Automated Installation manifest to use that slice. For example, if you want to use Slice 4 of your target device c0t0d0, add the following lines to your Automated Installation manifest:
+707: &#60;pre&#62;&#38;lt;ai_target_device&#38;gt;
+708:    &#38;lt;target_device_name&#38;gt;c0t0d0&#38;lt;/target_device_name&#38;gt;
+709:    &#38;lt;target_device_install_slice_number&#38;gt;4&#38;lt;/target_device_install_slice_number&#38;gt;
+710: &#38;lt;/ai_target_device&#38;gt;
+711: &#60;/pre&#62;&#60;/li&#62;
+712: &#60;/ul&#62;
+713: &#60;/li&#62;
+714: 
+715: 
+716: 
+717: &#60;li&#62;
+718: &#60;a name=&#34;gentextid-1235&#34;&#62;&#60;/a&#62;&#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=8661&#34;&#62;#8661&#60;/a&#62;&#60;a name=&#34;8661&#34;&#62; Automated Installer Fails to Continue With Installation if Slices from the Previous Configuration Exist&#60;/a&#62;&#60;/h4&#62;
+719: 
+720: &#60;a name=&#34;gentextid-1237&#34;&#62;&#60;/a&#62;&#60;h5&#62;Description&#60;/h5&#62;
+721: 
+722: 
+723: 
+724: &#60;p&#62;When a custom Automated Installation manifest is used to install a system and there are customizations in the manifest to create slices other than the root slice if those slices already exist on the disk in your system, then the automated
+725: installation fails. The following error message is seen in the install_log file:&#60;/p&#62;
+726: &#60;pre&#62;root@opensolaris:/tmp# tail -20 /tmp/install_log
+727: 
+728: &#60;AI May  5 14:35:40&#62; /tmp/ai_combined_manifest.xml is a valid manifest
+729: &#60;AI May  5 14:35:40&#62; Auto reboot disabled
+730: &#60;AI May  5 14:53:32&#62; Disk = c8t0d0 found on the system
+731: &#60;AI May  5 14:53:32&#62; Disk name selected for installation is c8t0d0
+732: &#60;AI May  5 14:53:32&#62; no manifest partition information found
+733: &#60;OM May  5 14:53:32&#62; disk partition info not changed
+734: &#60;OM May  5 14:53:32&#62; System reports enough physical memory for installation,
+735: swap is optional
+736: &#60;OM_E May  5 14:53:32&#62; creating slice which already exists
+737: &#60;AI May  5 14:53:32&#62; failed to modify slice(s) specified in the manifest
+738: &#60;AI May  5 14:53:32&#62; Auto install failed
+739: &#60;/pre&#62;
+740: 
+741: &#60;a name=&#34;gentextid-1242&#34;&#62;&#60;/a&#62;&#60;h5&#62;Workaround&#60;/h5&#62;
+742: 
+743: &#60;p&#62;Use the &#60;tt&#62;format&#60;/tt&#62;(1M) command to remove the existing slices from your disk. Rerun the automated installation by rebooting your system back into the automated install.&#60;/p&#62;
+744: &#60;/li&#62;
+745: 
+746: 
+747: 
+748: &#60;li&#62;
+749: &#60;a name=&#34;gentextid-1235&#34;&#62;&#60;/a&#62;
+750: &#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=8773&#34;&#62;#8773&#60;/a&#62;&#60;a
+751: name=&#34;8773&#34;&#62; &#60;tt&#62;installadm create-service&#60;/tt&#62; Followed Quickly by &#60;tt&#62;installadm
+752: delete-service&#60;/tt&#62; Causes &#60;tt&#62;installadm&#60;/tt&#62; to Hang&#60;/a&#62;&#60;/h4&#62;
+753: &#60;a name=&#34;gentextid-1237&#34;&#62;&#60;/a&#62;
+754: &#60;h5&#62;Description&#60;/h5&#62;
+755: &#60;p&#62;If you type &#60;tt&#62;installadm create-service&#60;/tt&#62; followed immediately
+756: by &#60;tt&#62;installadm delete-service,&#60;/tt&#62; the &#60;tt&#62;installadm&#60;/tt&#62;
+757: command might hang. This command hangs because the &#60;tt&#62;installadm&#60;/tt&#62; smf
+758: service, &#60;tt&#62;svc:/system/install/server:default&#60;/tt&#62;, is not online
+759: when the &#60;tt&#62;installadm delete-service&#60;/tt&#62; command is executed.&#60;/p&#62;
+760: &#60;a name=&#34;gentextid-1242&#34;&#62;&#60;/a&#62;
+761: &#60;h5&#62;Workaround&#60;/h5&#62;
+762: &#60;p&#62;Wait for the &#60;tt&#62;svc:/system/install/server:default&#60;/tt&#62; service to
+763: be online. To determine whether this service is online, type &#60;tt&#62;svcs
+764: svc:/system/install/server:default&#60;/tt&#62; and
+765: check whether the STATE is listed as online.&#60;/p&#62;
+766: &#60;/li&#62;
+767: 
+768: 
+769: &#60;li&#62;
+770: &#60;a name=&#34;gentextid-1235&#34;&#62;&#60;/a&#62;&#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=8879&#34;&#62;#8879&#60;/a&#62;
+771: &#60;a name=&#34;8879&#34;&#62; xVM hvm Guests Fail to PXE Boot While Installing From Build 111a Automated Installation Image&#60;/a&#62;&#60;/h4&#62;
+772: 
+773: &#60;a name=&#34;gentextid-1237&#34;&#62;&#60;/a&#62;&#60;h5&#62;Description&#60;/h5&#62;
+774: 
+775: 
+776: &#60;p&#62;PXE boot installation using Automated Installation fails for xVM hvm guests. On the guest console, after displaying the grub entry to boot, the system proceeds to download the kernel and boot archive from the automated install server.  The OS
+777: banner appears. However, shortly afterwards, the guest cannot connect to the network to download the required installation files and proceed.
+778: The installing guest drops to maintenance mode, and prompts for a
+779: username and password.&#60;/p&#62;
+780: 
+781: &#60;a name=&#34;gentextid-1242&#34;&#62;&#60;/a&#62;&#60;h5&#62;Workaround&#60;/h5&#62;
+782: &#60;p&#62;The guest client to be installed by using Automated Installation should be booted with additional
+783: kernel options in the &#60;tt&#62;menu.lst&#60;/tt&#62; file which is retrieved from the boot server.
+784: 
+785: Use any one of the following methods to set the correct &#60;tt&#62;menu.lst&#60;/tt&#62; entries for the client on the
+786: automated install server:&#60;/p&#62;
+787: &#60;ul&#62;
+788: &#60;li&#62;&#60;p&#62;For individual clients, type the &#60;tt&#62;installadm create-client&#60;/tt&#62; command to specify
+789:    the extra boot options needed for each installing client. The command syntax is as follows:&#60;/p&#62;
+790: &#60;tt&#62;installadm create-client -b network-interface=xnf0,xpv-hcp=dhcp
+791:       -e &#60;i&#62;MAC address of the client&#60;/i&#62; -t &#60;i&#62;target image&#60;/i&#62; -n &#60;i&#62;install service name&#60;/i&#62;
+792: &#60;/tt&#62;
+793: &#60;p&#62;For example:&#60;/p&#62;
+794: &#60;tt&#62;# installadm create-client -b network-interface=xnf0,xpv-hcp=dhcp
+795:       -e 00:16:3e:7f:a9:6f -t /space/images/2009.06_111b -n osol_111b
+796: &#60;/tt&#62;&#60;/li&#62;
+797: &#60;li&#62;&#60;p&#62;For all clients of a given automated install service, manually edit the appropriate 
+798:    &#60;tt&#62;menu.lst&#60;/tt&#62; file in &#60;tt&#62;/tftpboot&#60;/tt&#62; to add the &#60;tt&#62;network-interface&#60;/tt&#62; and &#60;tt&#62;xpv-hcp&#60;/tt&#62;
+799:    boot options in the previous example.&#60;/p&#62;
+800: &#60;p&#62;The &#60;tt&#62;menu.lst&#60;/tt&#62; file is named according to the following pattern:&#60;/p&#62;
+801: &#60;tt&#62;menu.lst.&#38;lt;AI service name&#38;gt;&#60;/tt&#62;
+802: &#60;p&#62;For example, for the automated install service &#60;tt&#62;osol&#60;/tt&#62;, the &#60;tt&#62;menu.lst&#60;/tt&#62; file is &#60;tt&#62;/tftpboot/menu.lst.osol&#60;/tt&#62; and has the following structure:&#60;/p&#62;
+803: &#60;tt&#62;default=0&#60;br&#62;
+804:    timeout=30&#60;br&#62;
+805:    min_mem64=1536&#60;br&#62;
+806:    title OpenSolaris 2009.06 snv_111b X86 &#60;br&#62;
+807:            kernel$ /I86PC.OpenSolaris-10/platform/i86pc/kernel/$ISADIR/unix -B install_media=http://10.0.0.1:5555/space/images/osol,install_service=osol
+808: ,install_svc_address=10.0.0.1:46502,livemode=text&#60;br&#62;
+809:            module /I86PC.OpenSolaris-10/x86.microroot&#60;/tt&#62;
+810: 
+811: &#60;p&#62;After adding the required boot options, the &#60;tt&#62;menu.lst&#60;/tt&#62; file has the following structure:&#60;/p&#62;
+812: 
+813:    &#60;tt&#62;default=0&#60;br&#62;
+814:    timeout=30&#60;br&#62;
+815:    min_mem64=1536&#60;br&#62;
+816:    title OpenSolaris 2009.06 snv_111b X86 &#60;br&#62;
+817:            kernel$ /I86PC.OpenSolaris-10/platform/i86pc/kernel/$ISADIR/unix -B install_media=http://10.0.0.1:5555/space/images/osol,install_service=osol
+818: ,install_svc_address=10.0.0.1:46502,network-interface=xnf0,xpv-hcp=dhcp,livemode=text&#60;br&#62;
+819:            module /I86PC.OpenSolaris-10/x86.microroot 
+820: &#60;/tt&#62;
+821: &#60;p&#62;For more information, see the &#60;a href=&#34;http://dlc.sun.com/osol/docs/content/dev/AIinstall/&#34;&#62;OpenSolaris Automated Installer Guide&#60;/a&#62;.&#60;/p&#62;
+822: &#60;/li&#62;
+823: &#60;/ul&#62;
+824: &#60;/li&#62;
+825: 
+826: 
+827: &#60;li&#62;
+828: &#60;a name=&#34;gentextid-1235&#34;&#62;&#60;/a&#62;&#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=8961&#34;&#62;#8961&#60;/a&#62;
+829: &#60;a name=&#34;8961&#34;&#62; Specifying pkg Version Strings in the Automated Installation Manifest List of Packages causes Automated Installation to Fail.&#60;/a&#62;&#60;/h4&#62;
+830: 
+831: &#60;a name=&#34;gentextid-1237&#34;&#62;&#60;/a&#62;&#60;h5&#62;Description&#60;/h5&#62;
+832: 
+833: &#60;p&#62;Automated Installation might fail if version strings for packages are specified in the Automated Installation manifest. 
+834: The following error message might be found in the Automated Installation SMF log at &#60;tt&#62;/var/svc/log/application-auto-installer\:default.log&#60;/tt&#62;.&#60;/p&#62;
+835: &#60;pre&#62;Unable to install SUNW in /a
+836: om_perform_install failed with error 114
+837: Auto install failed&#60;/pre&#62;
+838: 
+839: 
+840: &#60;a name=&#34;gentextid-1242&#34;&#62;&#60;/a&#62;&#60;h5&#62;Workaround&#60;/h5&#62;
+841: &#60;p&#62;List the entire package first and specify version strings for the entire package only. For example:&#60;/p&#62;
+842: &#60;pre&#62;&#38;lt;ai_install_packages&#38;gt;
+843:     &#38;lt;pkg name=&#34;entire@0.5.11,5.11-0.111&#34;/&#38;gt;
+844:     &#38;lt;pkg name=&#34;SUNWcsd&#34;/&#38;gt;
+845:     &#38;lt;pkg name=&#34;SUNWcs&#34;/&#38;gt;
+846:     &#38;lt;pkg name=&#34;SUNWj6rtx&#34;/&#38;gt;
+847:     &#38;lt;pkg name=&#34;SUNWgroff&#34;/&#38;gt;
+848:     &#38;lt;pkg name=&#34;SUNWgcc&#34;/&#38;gt;
+849:     &#38;lt;pkg name=&#34;babel_install&#34;/&#38;gt;
+850:     &#38;lt;pkg name=&#34;xvm&#34;/&#38;gt;
+851: &#38;lt;/ai_install_packages&#62;&#60;/pre&#38;gt;
+852: &#60;/li&#62;
+853: 
+854: 
+855: &#60;li&#62;
+856: &#60;a name=&#34;gentextid-1235&#34;&#62;&#60;/a&#62;&#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=9026&#34;&#62;#9026&#60;/a&#62;
+857: &#60;a name=&#34;9026&#34;&#62; VTOC Partition Size Is Not Aligned to the Cylinder Boundary on Disks Larger Than 1.96 TB&#60;/a&#62;&#60;/h4&#62;
+858: 
+859: &#60;a name=&#34;gentextid-1237&#34;&#62;&#60;/a&#62;&#60;h5&#62;Description&#60;/h5&#62;
+860: 
+861: &#60;p&#62;On disks larger than 1.96 TB, the installer creates VTOC slices which are not aligned on the cylinder boundary. 
+862: The installed OpenSolaris instance will boot successfully but the &#60;tt&#62;format&#60;/tt&#62;(1M) tool cannot process the VTOC configuration.
+863: The tool will report that the disk does not contain a valid label.&#60;/p&#62;
+864: 
+865: 
+866: &#60;a name=&#34;gentextid-1242&#34;&#62;&#60;/a&#62;&#60;h5&#62;Workaround&#60;/h5&#62;
+867: &#60;p&#62;Use the Solaris &#60;tt&#62;fdisk&#60;/tt&#62;(1M) and &#60;tt&#62;format&#60;/tt&#62;(1M) tools to create the required VTOC configuration outside the installer.
+868: Then install into the existing slice using the Automated Installer.&#60;/p&#62;
+869: &#60;p&#62;For more information on how to configure and use the Automated Installer, see the &#60;a href=&#34;http://dlc.sun.com/osol/docs/content/dev/AIinstall/index.html&#34;&#62;OpenSolaris Automated Installer Guide&#60;/a&#62;.&#60;/p&#62;
+870: 
+871: &#60;/li&#62;
+872: 
+873: 
+874: &#60;!--&#60;li&#62;
+875: &#60;a name=&#34;gentextid-1001&#34;&#62;&#60;/a&#62;&#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=9214&#34;&#62;#9214&#60;/a&#62;
+876: &#60;a name=&#34;9214&#34;&#62;&#60;tt&#62;installadm create-service&#60;/tt&#62; Does Not Automatically Create &#60;tt&#62;/var/ai/image-server/logs&#60;/tt&#62; Directory&#60;/a&#62;&#60;/h4&#62;
+877: 
+878: &#60;a name=&#34;gentextid-1002&#34;&#62;&#60;/a&#62;&#60;h5&#62;Description&#60;/h5&#62;
+879: 
+880: &#60;p&#62;As part of using the automated installer to install the OpenSolaris 2009.06 OS to multiple client systems, you run the &#60;tt&#62;installadm create-service&#60;/tt&#62; command to create an install service.  This &#60;tt&#62;installadm create-service&#60;/tt&#62; command does not automatically create the needed directory, &#60;tt&#62;/var/ai/image-server/logs&#60;/tt&#62;, for the log files.&#60;/p&#62;
+881: 
+882: 
+883: &#60;a name=&#34;gentextid-1003&#34;&#62;&#60;/a&#62;&#60;h5&#62;Workaround&#60;/h5&#62;
+884: &#60;p&#62;You can manually create the &#60;tt&#62;/var/ai/image-server/logs&#60;/tt&#62; directory by running the following command:&#60;/p&#62;
+885: 
+886: &#60;p&#62;&#60;tt&#62;pfexec mkdir -p /var/ai/image-server/logs&#60;/tt&#62;&#60;/p&#62;
+887: 
+888: &#60;p&#62;For more information about installing to multiple client systems, see the &#60;a href=&#34;http://dlc.sun.com/osol/docs/content/dev/AIinstall/index.html&#34;&#62;OpenSolaris Automated Installer Guide&#60;/a&#62;.&#60;/p&#62;
+889: 
+890: &#60;/li&#62;--&#62;
+891: 
+892: 
+893: &#60;li&#62;
+894: &#60;a name=&#34;gentextid-1385&#34;&#62;&#60;/a&#62;
+895: &#60;h4&#62;&#60;a href=&#34;http://bugs.opensolaris.org/view_bug.do?bug_id=6670311&#34;&#62;#
+896: 6670311&#60;/a&#62;&#60;a name=&#34;6670311&#34;&#62; Installer Might Fail if the Linux Swap
+897: Primary Partition Precedes the Solaris Partition&#60;/a&#62;&#60;/h4&#62;
+898: &#60;a name=&#34;gentextid-1387&#34;&#62;&#60;/a&#62;
+899: &#60;h5&#62;Description&#60;/h5&#62;
+900: &#60;p&#62;The new Solaris installer installs the Solaris operating system into
+901: the Solaris2 partition &#60;tt&#62;
+902: (0xbf)&#60;/tt&#62;. The installer does not support multiple Solaris partitions
+903: on one disk. However, the installer recognizes the Linux swap partition
+904: &#60;tt&#62;(0x82)&#60;/tt&#62; correctly and installs successfully if the primary
+905: partition is used as the Linux swap partition.&#60;/p&#62;
+906: &#60;p&#62;Solaris installation fails when the partition configuration is as
+907: following:&#60;/p&#62;
+908: &#60;ul&#62;
+909: &#60;li&#62;
+910: &#60;p&#62;The Linux swap primary partition precedes the Solaris2 partition
+911: &#60;/p&#62;
+912: &#60;/li&#62;
+913: &#60;li&#62;
+914: &#60;p&#62;The Solaris2 partition is not active&#60;/p&#62;
+915: &#60;/li&#62;
+916: &#60;/ul&#62;
+917: &#60;a name=&#34;gentextid-1098&#34;&#62;&#60;/a&#62;
+918: &#60;h5&#62;Workaround&#60;/h5&#62;
+919: &#60;p&#62;Choose one of the following workarounds:&#60;/p&#62;
+920: &#60;ul&#62;
+921: &#60;li&#62;
+922: &#60;p&#62;Avoid defining a Linux swap partition as a primary partition on
+923: the same disk where the Solaris2 primary partition will be created. For
+924: example, create the Linux swap partition as logical volume within
+925: extended partition.&#60;/p&#62;
+926: &#60;/li&#62;
+927: &#60;li&#62;
+928: &#60;p&#62;Ensure that the Solaris2 partition precedes the Linux swap
+929: partition.&#60;/p&#62;
+930: &#60;/li&#62;
+931: &#60;li&#62;
+932: &#60;p&#62;Create the Solaris2 partition outside the installer and mark it
+933: as active. Then install into that preexisting partition.&#60;/p&#62;
+934: &#60;/li&#62;
+935: &#60;li&#62;
+936: &#60;p&#62;Before installation, change the Linux swap partition type to
+937: another type, excluding &#60;tt&#62;
+938: (0xbf)&#60;/tt&#62; or &#60;tt&#62;(0x82)&#60;/tt&#62;. After the installation is complete,
+939: change the Linux swap partition type back to &#60;tt&#62;(0x82)&#60;/tt&#62;.&#60;/p&#62;
+940: &#60;/li&#62;
+941: &#60;/ul&#62;
+942: 
+943: &#60;li&#62;&#60;a name=&#34;gentextid-1000&#34;&#62;&#60;/a&#62;&#60;h4&#62;&#60;a href=&#34;http://bugs.opensolaris.org/view_bug.do?bug_id=6795293&#34;&#62;#
+944: 6795293&#60;/a&#62;&#60;a name=&#34;6795293&#34;&#62; &#60;tt&#62;libdiskmgt&#60;/tt&#62; Dumps Core on Systems With Fiber Channel Disks Attached&#60;/h4&#62;
+945: 
+946: &#60;h5&#62;Description&#60;/h5&#62;
+947: &#60;p&#62;If you try to install the OpenSolaris 2009.06 OS on a system that has Fiber Channel disks attached, &#60;tt&#62;/usr/bin/gui-install&#60;/tt&#62; dumps the core.&#60;/p&#62;
+948: 
+949: &#60;h5&#62;Workaround&#60;/h5&#62;
+950: &#60;p&#62;Disconnect the Fiber Channel disks and restart the installation.&#60;/p&#62;
+951: 
+952: 
+953: &#60;li&#62;
+954: &#60;a name=&#34;gentextid-1235&#34;&#62;&#60;/a&#62;&#60;h4&#62;&#60;a href=&#34;http://bugs.opensolaris.org/view_bug.do?bug_id=6838658&#34;&#62;#6838658&#60;/a&#62;&#60;a name=&#34;6838658&#34;&#62; ZFS Hangs During Install if a Primary Linux Swap Partition Exists&#60;/a&#62;&#60;/h4&#62;
+955: 
+956: &#60;a name=&#34;gentextid-1237&#34;&#62;&#60;/a&#62;&#60;h5&#62;Description&#60;/h5&#62;
+957: 
+958: &#60;p&#62;bootadm causes ZFS to hang while installing OpenSolaris 2009.06. No error message is displayed. Install hangs at 99% completion.&#60;/p&#62;
+959: 
+960: &#60;a name=&#34;gentextid-1242&#34;&#62;&#60;/a&#62;&#60;h5&#62;Workaround&#60;/h5&#62;
+961: &#60;p&#62;Ensure that the Linux swap partition is not a primary partition. Check if the Linux swap partition is a logical partition. To check if it&#8217;s a logical partition, delete the Linux swap and recreate it as a logical partition. Once this is done the installation is successful.&#60;/p&#62;
+962: &#60;p&#62;See also, &#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=8693&#34;&#62;#8693.
+963: &#60;/li&#62;
+964: 
+965: 
+966: 
+967: &#60;li&#62;
+968: &#60;a name=&#34;gentextid-1235&#34;&#62;&#60;/a&#62;&#60;h4&#62;&#60;a href=&#34;http://bugs.opensolaris.org/view_bug.do?bug_id=6843138&#34;&#62;#6843138&#60;/a&#62;
+969: &#60;a name=&#34;6843138&#34;&#62; Cannot Boot a 2.2 TB Disk with a zfs Root&#60;/a&#62;&#60;/h4&#62;
+970: 
+971: &#60;a name=&#34;gentextid-1237&#34;&#62;&#60;/a&#62;&#60;h5&#62;Description&#60;/h5&#62;
+972: 
+973: 
+974: &#60;p&#62;The OpenSolaris 2009.06 OS should not be booted from a disk whose capacity exceeds 2&#60;sup&#62;32&#60;/sup&#62; sectors or 2 TB when the sector size is 512 bytes.
+975: This is because of a limitation in the current implementation of GRUB which OpenSolaris uses as the boot loader.&#60;/p&#62;
+976: 
+977: 
+978: &#60;a name=&#34;gentextid-1242&#34;&#62;&#60;/a&#62;&#60;h5&#62;Workaround&#60;/h5&#62;
+979: &#60;p&#62;None.&#60;/p&#62;
+980: 
+981: &#60;/li&#62;
+982: 
+983: 
+984: &#60;li&#62;
+985: &#60;a name=&#34;gentextid-1235&#34;&#62;&#60;/a&#62;&#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=9187&#34;&#62;#6845928&#60;/a&#62;
+986: &#60;a name=&#34;6845928&#34;&#62; Out-of-sync Boot Archive Message Displays an Incorrect Fix&#60;/a&#62;&#60;/h4&#62;
+987: 
+988: &#60;a name=&#34;gentextid-1237&#34;&#62;&#60;/a&#62;&#60;h5&#62;Description&#60;/h5&#62;
+989: 
+990: 
+991: &#60;p&#62;The message displayed when you boot an out-of-sync boot archive advises the user to boot from the GRUB menu &#34;Solaris Failsafe&#34; option . No such option is available on OpenSolaris.&#60;/p&#62;
+992: 
+993: 
+994: &#60;a name=&#34;gentextid-1242&#34;&#62;&#60;/a&#62;&#60;h5&#62;Workaround&#60;/h5&#62;
+995: &#60;p&#62;None.&#60;/p&#62;
+996: 
+997: &#60;/li&#62;
+998: 
+999: 
+1000: &#60;/ul&#62;
+1001: &#60;/li&#62;
+1002: 
+1003: 
+1004: 
+1005: 
+1006: &#60;br&#62;
+1007: &#60;br&#62;
+1008: &#60;a name=&#34;gentextid-1093&#34;&#62;&#60;/a&#62;
+1009: &#60;h2&#62;&#60;a name=&#34;packaging&#34;&#62;&#60;/a&#62;Packaging Bugs&#60;/h2&#62;
+1010: &#60;p&#62;This section describes IPS-related issues that apply to the
+1011: OpenSolaris 2009.06 OS.&#60;/p&#62;&#60;ul&#62;
+1012: 
+1013: &#60;li&#62;
+1014: &#60;a name=&#34;gentextid-1235&#34;&#62;&#60;/a&#62;&#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=7836&#34;&#62;#7836&#60;/a&#62;&#60;a name=&#34;7836&#34;&#62; Warnings Are Displayed  While Using &#60;tt&#62;pkg image-update&#60;/tt&#62;&#60;/a&#62;&#60;/h4&#62;
+1015: 
+1016: &#60;a name=&#34;gentextid-1237&#34;&#62;&#60;/a&#62;&#60;h5&#62;Description&#60;/h5&#62;
+1017: 
+1018: &#60;p&#62;While updating an image to build 111 or beyond, a warning message similar to the following might be displayed:&#60;/p&#62;
+1019: &#60;pre&#62;driver (emlxs) upgrade (removal of minor perm &#8217;* 0600 root sys&#8217;&#8217;) failed with
+1020: return code 252
+1021: command run was: /usr/sbin/update_drv -b /mnt -d -m * 0600 root sys&#8217; emlxs
+1022: command output was:
+1023: ------------------------------------------------------------
+1024: No entry found for driver (emlxs) in file (/mnt/etc/minor_perm).
+1025: ------------------------------------------------------------
+1026: &#60;/pre&#62;
+1027: &#60;p&#62;This bug occurs only when the SUNWemlxs package is manually added to the OpenSolaris 2008.11 OS and the system is updated to the OpenSolaris 2009.06 release. This warning message is displayed for many drivers including emlxs, afe, audio810, audiohd, audioixp, bnx, isa, ixgbe, nge, nv_sata, and qlc.&#60;/p&#62;
+1028: 
+1029: &#60;a name=&#34;gentextid-1242&#34;&#62;&#60;/a&#62;&#60;h5&#62;Workaround&#60;/h5&#62;
+1030: &#60;p&#62;The warning can be ignored.&#60;/p&#62;
+1031: 
+1032: &#60;/li&#62;
+1033: 
+1034: &#60;li&#62;
+1035: &#60;a name=&#34;gentextid-1235&#34;&#62;&#60;/a&#62;&#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=8246&#34;&#62;#8246&#60;/a&#62;
+1036: &#60;a name=&#34;8246&#34;&#62; Packagemanager Does Not Change Locale for Category Names&#60;/a&#62;&#60;/h4&#62;
+1037: 
+1038: &#60;a name=&#34;gentextid-1237&#34;&#62;&#60;/a&#62;&#60;h5&#62;Description&#60;/h5&#62;
+1039: 
+1040: &#60;p&#62;The left pane in Packagemanager is used to display category names. These names are localized in different locales. 
+1041: However, the localization of the names is not changed if you switch the locale, even after restarting Packagemanager.&#60;/p&#62;
+1042: 
+1043: &#60;a name=&#34;gentextid-1242&#34;&#62;&#60;/a&#62;&#60;h5&#62;Workaround&#60;/h5&#62;
+1044: &#60;p&#62;Click the reload button, which will reload the category names in the new locale.&#60;/p&#62;
+1045: &#60;/li&#62;
+1046: &#60;/ul&#62;
+1047: 
+1048: 
+1049: 
+1050: &#60;br&#62;
+1051: &#60;br&#62;
+1052: &#60;a name=&#34;gentextid-1093&#34;&#62;&#60;/a&#62;
+1053: &#60;h2&#62;&#60;a name=&#34;desktop&#34;&#62;&#60;/a&#62;Desktop Bugs&#60;/h2&#62;
+1054: &#60;p&#62;This section describes desktop related issues that apply to the
+1055: OpenSolaris 2009.06 OS.&#60;/p&#62;
+1056: &#60;ul&#62;
+1057: 
+1058: 
+1059: &#60;li&#62;
+1060: &#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=2656&#34;&#62; #2656&#60;/a&#62; and &#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=6366&#34;&#62;#6366&#60;/a&#62; &#60;a name=&#34;2656&#34;&#62;Enabling the &#60;tt&#62;printers:snmp&#60;/tt&#62; Service Causes System to Revert to Maintenance State&#60;/a&#62;&#60;/h4&#62;
+1061: 
+1062: &#60;h5&#62;Description&#60;/h5&#62;
+1063: 
+1064: &#60;p&#62;After installing the OpenSolaris 2009.06 release, the &#60;tt&#62;hald-addon-network-discovery&#60;/tt&#62; agent cannot be enabled. This failure occurs regardless of which method you use to enable the service.&#60;/p&#62;
+1065: 
+1066: 
+1067: &#60;p&#62;An error message similar to the following is displayed in the service log:&#60;/p&#62;
+1068: &#60;pre&#62;\[ Jul 24 21:09:32 Executing start method&#60;br&#62;(&#34;/lib/svc/method/svc-network-discovery start snmp&#34;). \]&#60;br&#62;/usr/bin/dbus-send \--\system \--\print-reply \--\dest=org.freedesktop.Hal&#60;br&#62;\--\type=method_call /org/freedesktop/Hal/devices/network_attached&#60;br&#62;org.freedesktop.Hal.Device.NetworkDiscovery.EnablePrinterScanningViaSNMP&#60;br&#62;int32:60 string:public string:0.0.0.0&#60;br&#62;Error org.freedesktop.DBus.Error.NoReply: Did not receive a reply. Possible&#60;br&#62;causes include: the remote application did not send a reply, the message bus&#60;br&#62;security policy blocked the reply, the reply timeout expired, or the network&#60;br&#62;connection was broken.&#60;br&#62;\[ Jul 24 21:09:40 Method &#34;start&#34; exited with status 1. \]&#60;/pre&#62;
+1069: 
+1070: &#60;h5&#62;Workaround&#60;/h5&#62;
+1071: &#60;p&#62;Use the following procedure:&#60;/p&#62;
+1072: &#60;ol&#62;
+1073: &#60;li&#62;
+1074: &#60;p&#62; Add the SUNWSmmgr package. &#60;/p&#62;
+1075: &#60;pre&#62;&#60;tt&#62;# pkg install SUNWSmmgr&#60;/tt&#62;&#60;/pre&#62;
+1076: &#60;/li&#62;
+1077: &#60;li&#62;Edit the &#60;tt&#62;/etc/dbus-1/system.d/hal.conf&#60;/tt&#62; file. Add the following line to the &#60;tt&#62;&#38;lt;policy context=&#34;default&#34;&#38;gt;&#60;/tt&#62; section:
+1078: &#60;pre&#62;&#60;tt&#62;# allow send_interface=&#34;org.freedesktop.Hal.Device.NetworkDiscovery&#34; send_destination=&#34;org.freedesktop.Hal&#34;/&#38;gt;&#60;/tt&#62;&#60;/pre&#62;
+1079: &#60;/li&#62;
+1080: &#60;li&#62;
+1081: &#60;p&#62; Restart the HAL add-on module.&#60;/p&#62;
+1082: &#60;p&#62;- To restart the add-on module from the desktop, perform these steps:&#60;/p&#62;
+1083: &#60;ol type=&#34;a&#34;&#62;
+1084: &#60;li&#62;
+1085: &#60;p&#62;Open the Services settings application from the main menu.&#60;/p&#62;
+1086: &#60;p&#62;System-&#38;gt; Administration-&#38;gt; Services&#60;/p&#62;
+1087: &#60;p&#62;The Services settings window is displayed.&#60;/p&#62;
+1088: &#60;/li&#62;
+1089: &#60;li&#62;Select the Hardware Abstraction Layer network attached device discovery option &#60;tt&#62;(network/device-discovery/printers:snmp)&#60;/tt&#62;.&#60;/li&#62;
+1090: &#60;li&#62;Click OK to save the changes.&#60;/li&#62;
+1091: &#60;/ol&#62;
+1092: &#60;p&#62;- To restart the add-on module from the command line, type:&#60;/p&#62;
+1093: &#60;pre&#62;&#60;tt&#62;# svcadm restart hal&#60;/tt&#62;&#60;/pre&#62;
+1094: &#60;/li&#62;
+1095: &#60;li&#62;Disable the snmp service.&#60;pre&#62;# svcadm disable snmp&#60;/pre&#62;&#60;/li&#62;
+1096: &#60;li&#62;Re-enable the snmp service.&#60;pre&#62;# svcadm enable snmp&#60;/pre&#62;&#60;/li&#62;
+1097: &#60;/ol&#62;
+1098: &#60;/li&#62;
+1099: 
+1100: 
+1101: &#60;li&#62;
+1102: &#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=2900&#34;&#62; #
+1103: 2900&#60;/a&#62; &#60;a name=&#34;2900&#34;&#62;Firefox Crashes in Build 95&#60;/a&#62;&#60;/h4&#62;
+1104: &#60;h5&#62;Description&#60;/h5&#62;
+1105: &#60;p&#62;Firefox dumps core in NV build 95 due to Flash Player bug. Flash
+1106: plug-in v9.0 r124 has a bug that causes Firefox to crash. &#60;u&#62;This issue
+1107: has been fixed in the flash plug-in v 9.0 r125.&#60;/u&#62;&#60;/p&#62;
+1108: &#60;p&#62;Note - This affects &#60;u&#62;only&#60;/u&#62; users of Flash Player v9.0 r124 and
+1109: below. &#60;/p&#62;
+1110: &#60;h5&#62;Workaround&#60;/h5&#62;
+1111: &#60;ol&#62;
+1112: &#60;li&#62;
+1113: &#60;p&#62; Start Firefox. &#60;/p&#62;
+1114: &#60;/li&#62;
+1115: &#60;li&#62;
+1116: &#60;p&#62; From the Menu bar, click on Tools -&#38;gt; Add-ons -&#38;gt; Plugins. &#60;/p&#62;
+1117: &#60;/li&#62;
+1118: &#60;li&#62;
+1119: &#60;p&#62; Right click on Shockwave Flash and choose the Disable option to
+1120: disable the plug-in.&#60;/p&#62;
+1121: &#60;/li&#62;
+1122: &#60;li&#62;
+1123: &#60;p&#62;Manually install the updated version from the following URL: &#60;a
+1124: href=&#34;http://www.adobe.com/products/flashplayer/productinfo/instructions/#section-%0A%0A4&#34;&#62;http://www.adobe.com/products/flashplayer/productinfo/instructions/#section-4&#60;/a&#62;
+1125: &#60;/p&#62;
+1126: &#60;/li&#62;
+1127: &#60;/ol&#62;
+1128: &#60;/li&#62;
+1129: 
+1130: 
+1131: &#60;li&#62;
+1132: &#60;a name=&#34;gentextid-1235&#34;&#62;&#60;/a&#62;
+1133: &#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=5543&#34;&#62;#
+1134: 5543&#60;/a&#62;&#60;a name=&#34;5543&#34;&#62; Tracker Does Not Index the Home Directory by
+1135: Default &#60;/a&#62;&#60;/h4&#62;
+1136: &#60;a name=&#34;gentextid-1237&#34;&#62;&#60;/a&#62;
+1137: &#60;h5&#62;Description&#60;/h5&#62;
+1138: &#60;p&#62;When you start Tracker, the home directory is not indexed by
+1139: default. &#60;/p&#62;
+1140: &#60;a name=&#34;gentextid-1242&#34;&#62;&#60;/a&#62;
+1141: &#60;h5&#62;Workaround&#60;/h5&#62;
+1142: &#60;p&#62;Use the following procedure:&#60;/p&#62;
+1143: &#60;ol&#62;
+1144: &#60;li&#62;
+1145: &#60;p&#62;Go to System-&#38;gt;Preferences.&#60;/p&#62;
+1146: &#60;/li&#62;
+1147: &#60;li&#62;Choose File Indexing to start tracker-preferences.&#60;/li&#62;
+1148: &#60;li&#62;
+1149: &#60;p&#62;Check the Index and watch my home directory checkbox in the
+1150: &#8217;Files&#8217; tab.&#60;/p&#62;
+1151: &#60;/li&#62;
+1152: &#60;li&#62;
+1153: &#60;p&#62;Click OK.&#60;/p&#62;
+1154: &#60;/li&#62;
+1155: &#60;li&#62;
+1156: &#60;p&#62;A dialog box appears prompting that data must be reindexed.&#60;/p&#62;
+1157: &#60;/li&#62;
+1158: &#60;li&#62;&#60;p&#62;Click the Reindex button to reindex data.&#60;/p&#62;
+1159: &#60;/li&#62;
+1160: &#60;/ol&#62;
+1161: For more information, see the FAQs at the &#60;a
+1162: href=&#34;http://opensolaris.org/os/project/jds/tasks/MetaTracker/&#34;&#62;Tracker
+1163: community page&#60;/a&#62;.
+1164: &#60;/li&#62;
+1165: 
+1166: 
+1167: &#60;li&#62;
+1168: &#60;a name=&#34;gentextid-1235&#34;&#62;&#60;/a&#62;
+1169: &#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=5544&#34;&#62;#
+1170: 5544&#60;/a&#62;&#60;a name=&#34;5544&#34;&#62; Tracker Cannot Search Evolution Emails&#60;/a&#62;&#60;/h4&#62;
+1171: &#60;a name=&#34;gentextid-1237&#34;&#62;&#60;/a&#62;
+1172: &#60;h5&#62;Description&#60;/h5&#62;
+1173: &#60;p&#62;When you start Tracker, you cannot search for Evolution emails.&#60;/p&#62;
+1174: &#60;a name=&#34;gentextid-1242&#34;&#62;&#60;/a&#62;
+1175: &#60;h5&#62;Workaround&#60;/h5&#62;
+1176: &#60;p&#62;None.&#60;/p&#62;
+1177: &#60;a name=&#34;gentextid-1385&#34;&#62;&#60;/a&#62;
+1178: &#60;/li&#62;
+1179: 
+1180: 
+1181: &#60;li&#62;
+1182: &#60;a name=&#34;gentextid-1235&#34;&#62;&#60;/a&#62;&#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=8748&#34;&#62;#8748&#60;/a&#62;
+1183: &#60;a name=&#34;8748&#34;&#62; Windows Are Maximized on All Screens in the Twinview or Xinerama Mode&#60;/a&#62;&#60;/h4&#62;
+1184: 
+1185: &#60;a name=&#34;gentextid-1237&#34;&#62;&#60;/a&#62;&#60;h5&#62;Description&#60;/h5&#62;
+1186: 
+1187: 
+1188: &#60;p&#62;When you maximize a window in the twinview or xinerama mode, the window fills all the screens instead of being maximized on the current screen only.&#60;/p&#62;
+1189: 
+1190: 
+1191: &#60;a name=&#34;gentextid-1242&#34;&#62;&#60;/a&#62;&#60;h5&#62;Workaround&#60;/h5&#62;
+1192: &#60;p&#62;None.&#60;/p&#62;
+1193: 
+1194: &#60;/li&#62;
+1195: 
+1196: 
+1197: 
+1198: &#60;li&#62;
+1199: &#60;h4&#62;&#60;a
+1200: href=&#34;http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6742850&#34;&#62;#
+1201: 6742850&#60;/a&#62;&#60;a name=&#34;6742850&#34;&#62; CJK Characters Do Not Display Correctly
+1202: in the Java Application Environment&#60;/a&#62;&#60;/h4&#62;
+1203: &#60;a name=&#34;gentextid-1387&#34;&#62;&#60;/a&#62;
+1204: &#60;h5&#62;Description&#60;/h5&#62;
+1205: &#60;p&#62;Chinese, Japanese, and Korean characters do not display correctly on
+1206: Java technology-based applications.&#60;/p&#62;
+1207: &#60;a name=&#34;gentextid-1391&#34;&#62;&#60;/a&#62;
+1208: &#60;h5&#62;Workaround&#60;/h5&#62;
+1209: &#60;p&#62;Enable the antialiasing settings manually. Use one of the following
+1210: commands:&#60;/p&#62;
+1211: &#60;ul&#62;
+1212: &#60;li&#62;
+1213: &#60;pre&#62;&#60;tt&#62;java -Dawt.useSystemAAFontSettings=on&#60;/tt&#62;&#60;/pre&#62;
+1214: &#60;/li&#62;
+1215: &#60;li&#62;
+1216: &#60;pre&#62;&#60;tt&#62;env _JAVA_OPTIONS=-Dawt.useSystemAAFontSettings=on java&#60;/tt&#62;&#60;/pre&#62;
+1217: &#60;/li&#62;
+1218: &#60;/ul&#62;
+1219: &#60;p&#62;For more information about turning on the antialiasing settings,
+1220: refer to &#60;a
+1221: href=&#34;http://java.sun.com/products/java-media/2D/reference/faqs/index.html#Q_How_can_I_specify_the_text_ant&#34;&#62;
+1222: Java 2D API FAQs.&#60;/a&#62;&#60;/p&#62;
+1223: &#60;/ul&#62;
+1224: 
+1225: 
+1226: 
+1227: 
+1228: &#60;br&#62;
+1229: &#60;br&#62;
+1230: &#60;a name=&#34;gentextid-1093&#34;&#62;&#60;/a&#62;
+1231: &#60;h2&#62;&#60;a name=&#34;hardware&#34;&#62;&#60;/a&#62;Hardware-Related Bugs&#60;/h2&#62;
+1232: &#60;p&#62;This section describes hardware-related issues that apply to the
+1233: OpenSolaris 2009.06 OS.&#60;/p&#62;
+1234: &#60;ul&#62;
+1235: 
+1236: &#60;li&#62;
+1237: &#60;a name=&#34;gentextid-1235&#34;&#62;&#60;/a&#62;&#60;h4&#62;&#60;a href=&#34;http://bugs.opensolaris.org/view_bug.do?bug_id=6658667&#34;&#62;#6658667&#60;/a&#62;&#60;a name=&#34;6658667&#34;&#62; MAC Address Is Reversed in Some mcp61-based Machines&#60;/a&#62;&#60;/h4&#62;
+1238: 
+1239: &#60;a name=&#34;gentextid-1237&#34;&#62;&#60;/a&#62;&#60;h5&#62;Description&#60;/h5&#62;
+1240: 
+1241: &#60;p&#62;The nge driver is obtaining the ethernet address with the bytes in the reverse order from the hardware.&#60;/p&#62;
+1242: 
+1243: &#60;a name=&#34;gentextid-1242&#34;&#62;&#60;/a&#62;&#60;h5&#62;Workaround&#60;/h5&#62;
+1244: &#60;p&#62;Uncomment the last line of the nge.conf configuration file which is located in &#60;tt&#62;/kernel/drv/&#60;/tt&#62;. Reboot the machine.&#60;/p&#62;
+1245: &#60;/li&#62;
+1246: 
+1247: &#60;/ul&#62;
+1248: 
+1249: &#60;br&#62;
+1250: &#60;br&#62;
+1251: &#60;a name=&#34;gentextid-1093&#34;&#62;&#60;/a&#62;
+1252: &#60;h2&#62;&#60;a name=&#34;locale&#34;&#62;&#60;/a&#62;Localization Bugs&#60;/h2&#62;
+1253: &#60;p&#62;This section describes localization issues that apply to the
+1254: OpenSolaris 2009.06 OS.&#60;/p&#62;
+1255: &#60;/li&#62;
+1256: 
+1257: &#60;ul&#62;
+1258: 
+1259: &#60;li&#62;
+1260: &#60;a name=&#34;gentextid-1235&#34;&#62;&#60;/a&#62;
+1261: &#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=5473&#34;&#62;#
+1262: 5473&#60;/a&#62;&#60;a name=&#34;5473&#34;&#62; en_US/es_ES/fr_FR/de_DE UTF-8 Locales Might Not
+1263: be Installed by &#60;tt&#62;pkg image-update&#60;/tt&#62;&#60;/a&#62;&#60;/h4&#62;
+1264: &#60;a name=&#34;gentextid-1237&#34;&#62;&#60;/a&#62;
+1265: &#60;h5&#62;Description&#60;/h5&#62;
+1266: &#60;p&#62;The following locales will not be installed if your system is
+1267: earlier than the OpenSolaris 2008.11 release and if the &#60;tt&#62;slim_install&#60;/tt&#62;
+1268: cluster is uninstalled before you upgrade your system to the
+1269: OpenSolaris 2009.06 release using the &#60;tt&#62;pkg image-update&#60;/tt&#62;
+1270: command:
+1271: &#60;/p&#62;
+1272: &#60;ul&#62;
+1273: &#60;li&#62;
+1274: &#60;p&#62;en_US.UTF-8&#60;/p&#62;
+1275: &#60;/li&#62;
+1276: &#60;li&#62;
+1277: &#60;p&#62;es_ES.UTF-8&#60;/p&#62;
+1278: &#60;/li&#62;
+1279: &#60;li&#62;
+1280: &#60;p&#62;fr_FR.UTF-8&#60;/p&#62;
+1281: &#60;/li&#62;
+1282: &#60;li&#62;
+1283: &#60;p&#62;de_DE.UTF-8&#60;/p&#62;
+1284: &#60;/li&#62;
+1285: &#60;/ul&#62;
+1286: &#60;a name=&#34;gentextid-1242&#34;&#62;&#60;/a&#62;
+1287: &#60;h5&#62;Workaround&#60;/h5&#62;
+1288: &#60;p&#62;Install the missing locale packages. Execute the following commands:&#60;/p&#62;
+1289: &#60;ol&#62;
+1290: &#60;li&#62;
+1291: &#60;p&#62;If your current &#60;i&#62;LANG&#60;/i&#62; variable is any one of the locales
+1292: listed above:&#60;/p&#62;
+1293: &#60;pre&#62;$ export LANG=C&#60;/pre&#62;
+1294: &#60;/li&#62;
+1295: &#60;li&#62;
+1296: &#60;pre&#62;$ pfexec pkg install SUNWlang-enUS SUNWlang-frFR SUNWlang-esES SUNWlang-deDE &#60;/pre&#62;
+1297: &#60;/li&#62;
+1298: &#60;/ol&#62;
+1299: &#60;/li&#62;
+1300: 
+1301: 
+1302: &#60;li&#62;
+1303: &#60;a name=&#34;gentextid-1235&#34;&#62;&#60;/a&#62;
+1304: &#60;h4&#62;&#60;a href=&#34;http://defect.opensolaris.org/bz/show_bug.cgi?id=8880&#34;&#62;#
+1305: 8880&#60;/a&#62;&#60;a name=&#34;8880&#34;&#62; Input Method Preference Editor Help Fails to
+1306: Load&#60;/a&#62;&#60;/h4&#62;
+1307: &#60;a name=&#34;gentextid-1237&#34;&#62;&#60;/a&#62;
+1308: &#60;h5&#62;Description&#60;/h5&#62;
+1309: &#60;p&#62;&#60;tt&#62;iiim-properties&#60;/tt&#62;(1) help fails to load with the XML parser error in some locales.&#60;/p&#62;
+1310: &#60;a name=&#34;gentextid-1242&#34;&#62;&#60;/a&#62;
+1311: &#60;h5&#62;Workaround&#60;/h5&#62;
+1312: &#60;ol&#62;
+1313: &#60;li&#62;
+1314: &#60;p&#62;Install &#60;tt&#62;SUNWgnome-xml&#60;/tt&#62; from &#60;tt&#62;pkg.opensolaris.org&#60;/tt&#62;.&#60;/p&#62;
+1315: &#60;pre&#62;$ pfexec pkg install SUNWgnome-xml&#60;/pre&#62;
+1316: &#60;/li&#62;
+1317: &#60;li&#62;
+1318: &#60;p&#62;Manually execute the following script. &#60;/p&#62;
+1319: &#60;pre&#62;$ pfexec /usr/share/sgml/docbook/docbook-catalog-install.sh&#60;/pre&#62;
+1320: &#60;/li&#62;
+1321: &#60;/ol&#62;
+1322: &#60;/li&#62;
+1323: 
+1324: &#60;/ul&#62;
+1325: 
+1326: 
+1327: &#60;br&#62;
+1328: &#60;br&#62;
+1329: &#60;h2&#62;&#60;a name=&#34;eos&#34;&#62;&#60;/a&#62;End-of-Software Support Statements&#60;br&#62;
+1330: &#60;/h2&#62;
+1331: &#60;p&#62;The following features might not be supported in a future release of
+1332: the OpenSolaris software.
+1333: &#60;/p&#62;
+1334: 
+1335: &#60;ul&#62;&#60;li&#62;
+1336: 
+1337: &#60;h4&#62;&#60;a name=&#34;xorg&#34;&#62;&#60;/a&#62;&#60;tt&#62;xorgcfg&#60;/tt&#62; and &#60;tt&#62;xorgconfig&#60;/tt&#62;
+1338: Utilities&#60;/h4&#62;
+1339: The &#60;tt&#62;xorg&#60;/tt&#62;(1) server does not require an &#60;tt&#62;xorg.conf&#60;/tt&#62;(4) file in many cases,
+1340: and will autoconfigure itself if one is not present. If the default
+1341: configuration does not meet your needs, you may use one of these
+1342: alternative methods to generate an &#60;tt&#62;xorg.conf&#60;/tt&#62; file for customization:
+1343: &#60;ul&#62;
+1344: &#60;li&#62;&#60;tt&#62;/usr/X11/bin/Xorg -configure&#60;/tt&#62;, when the server is not already
+1345: running will provide a sample configuration file for the currently
+1346: detected hardware in the system. &#60;/li&#62;
+1347: &#60;li&#62;When Xorg is started without a configuration file, the &#60;tt&#62;xorg.conf&#60;/tt&#62;
+1348: data it generates automatically is logged in &#60;tt&#62;/var/log/Xorg.0.log&#60;/tt&#62; and
+1349: may be copied to an &#60;tt&#62;xorg.conf&#60;/tt&#62; file for customization. &#60;/li&#62;
+1350: &#60;li&#62;Users of NVidia graphics devices may use the provided
+1351: &#60;tt&#62;nvidia-settings&#60;/tt&#62;(1) and &#60;tt&#62;nvidia-xconfig&#60;/tt&#62;(1) utilities to generate or
+1352: update device-specific configurations. &#60;/li&#62;
+1353: &#60;li&#62;Users of Sun graphics devices for the SPARC platform may use the
+1354: &#60;tt&#62;fbconfig&#60;/tt&#62;(1) utility to generate or update device-specific
+1355: configurations.&#60;/li&#62;&#60;/li&#62;
+1356: &#60;/ul&#62;
+1357: 
+1358: &#60;/ul&#62;
+1359: 
+1360: 
+1361: &#60;br&#62;
+1362: &#60;br&#62;
+1363: &#60;h2&#62;&#60;a name=&#34;troubleinfo&#34;&#62;&#60;/a&#62;Additional Installation Troubleshooting
+1364: Information&#60;/h2&#62;
+1365: &#60;p&#62;This section provides troubleshooting resources for the OpenSolaris 2009.06 OS.
+1366: &#60;/p&#62;
+1367: 
+1368: 
+1369: &#60;ul&#62;
+1370: &#60;li&#62;For general troubleshooting information, see the &#60;a
+1371: href=&#34;http://dlc.sun.com/osol/docs/content/2009.06/getstart/troubleshooting.html&#34;&#62;Getting
+1372: Started Guide.&#60;/a&#62;&#60;/li&#62;
+1373: &#60;li&#62;For troubleshooting while installing the OpenSolaris release on
+1374: your system, see &#60;a
+1375: href=&#34;http://dlc.sun.com/osol/docs/content/2009.06/getstart/tsboot.html&#34;&#62;Tips
+1376: on
+1377: Troubleshooting an OpenSolaris Startup&#60;/a&#62; and &#60;a
+1378: href=&#34;http://dlc.sun.com/osol/docs/content/2009.06/getstart/login.html&#34;&#62;Troubleshooting
+1379: Login and User Account
+1380: Issues&#60;/a&#62;.&#60;/li&#62;
+1381: &#60;li&#62;For troubleshooting while installing the OpenSolaris release on
+1382: multiple client systems, see &#60;a
+1383: href=&#34;http://dlc.sun.com/osol/docs/content/2009.06/AIinstall/trouble.html&#34;&#62;Troubleshooting
+1384: and FAQs for the Automated Installer.&#60;/a&#62;&#60;/li&#62;
+1385: &#60;li&#62;For troubleshooting while creating custom OpenSolaris images, see
+1386: &#60;a
+1387: href=&#34;http://dlc.sun.com/osol/docs/content/2009.06/DistroConst/trouble.html&#34;&#62;Troubleshooting
+1388: for the Distribution
+1389: Constructor.&#60;/a&#62;&#60;/li&#62;
+1390: &#60;/ul&#62;
+  </textarea>
+
+    <div class="clearfloats"></div>
+  </div>    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSNav','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSNav'); togglePanelVisibility(this.parentNode);">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavCommunity Group">
+            <div id="xwikinavCommunity GroupHeader" class="accordionTabTitleBar"><h6>Community Group</h6>
+            </div>
+            <div id="xwikinavCommunity GroupContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+edu/">Academic and Research</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+accessibility/">Accessibility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+advocacy/">Advocacy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+appliances/">Appliances</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+approachability/">Approachability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/">Architecture Process and Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+brandz/">BrandZ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+chinese_users/">Chinese Users</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/">Community Advisory Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+dtrace/">DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+databases/">Databases</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+desktop/">Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/">Device Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+distribution/">Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+emerging_platforms/">Emerging Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+fm/">Fault Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+games/">Games on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ha%2Dclusters/">HA Clusters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+hpcdev/">HPC Developer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+int_localization/">Internationalization and Localization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+laptop/">Laptop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ldoms/">Logical Domains</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+mdb/">Modular Debugger (MDB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+nfs/">NFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/">Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/">OS/Net (ON)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+observability/">Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ogb/">OpenSolaris Governing Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+printing/">OpenSolaris Printing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/">Performance</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+pm/">Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+power_pc/">PowerPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/">Security</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+smf/">Service Management Facility (smf(5))</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sw%2Dporters/">Software Porters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+volume_manager/">Solaris Volume Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+storage/">Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sysadmin/">Systems Administration Community Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+testing/">Testing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/">Tools Home</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ufs/">Unix File Systems (UFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+web/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+x_win/">X Window System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+xen/">Xen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/">ZFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/">Zones</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavProject">
+            <div id="xwikinavProjectHeader" class="accordionTabTitleBar"><h6>Project</h6>
+            </div>
+            <div id="xwikinavProjectContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/"></a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+adsl/">ADSL Modem Enhancement</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+arc%2Dprocess/">ARC Process Definition</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osarm/">ARM Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bluetooth/">Bluetooth Stack & Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dinitiator/">Brocade FC HBA &#45; Initiator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dtarget/">Brocade FC HBA &#45; Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brussels/">Brussels &#45; unified network link configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cifs%2Dserver/">CIFS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smbfs/">CIFS client for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cmt/">CMT</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/">COMSTAR: Common Multiprotocol SCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpufs/">CPU Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/">Caiman, Solaris Install Revisited</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+celeste/">Celeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/">Chime Visualization Tool for DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+clearview/">Clearview: Network Interface Coherence</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dinformix/">Cluster Agent: Informix Dynamic Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dcontainer/">Cluster Agent: OpenSolaris Container</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dxvm/">Cluster Agent: OpenSolaris xVM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Debs/">Cluster Agent: Oracle E&#45;Business Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dsmb/">Cluster Agent: Samba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dtomcat/">Cluster Agent: Tomcat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dpostgresql/">Cluster agent: PostgreSQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+data%2Dflow/">Coarse Data Flow Parallelism</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+colorado/">Colorado: Open HA Cluster on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+commandassist/">Command Assistant</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cam/">Common Array Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+companion/">Companion &#45; /opt/sfw: Free and Open Source software</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+content/">Content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+contest/">Contest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpg/">Credentials Process Groups</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crossbow/">Crossbow: Network Virtualization and Resource Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmsagenttoolkit/">Crypto KMS Agent Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/">Cryptographic Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Ddoc/">DTrace Guide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dmm/">Data Migration Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+datatethers/">Data Tethers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+de/">Deutsches Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ddtool/">Device Detection Tool</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+driver%2Dutility/">Device Driver Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devicemgr/">Device Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devmapper/">Device Mapper</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dri/">Direct Rendering Infrastructure & 3D drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/">Duckwater: Simplified name services management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+phpEasyTools/">Easy Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emancipation/">Emancipation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex%2Dcna/">Emulex Advanced Ethernet Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex/">Emulex Fibre Channel Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webcams/">Enhance the support of USB webcams</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Dprofiles/">Enhanced SMF Profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+amd/">Enhancements for AMD&#45;based Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+erlang%2Ddtrace/">Erlang DTrace Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ethbridge/">Ethernet bridge module for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+conary%2Deval/">Evaluate Conary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+events%2Dregistry/">Events Registry</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ext3/">Ext3 file system support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+facilitation/">Facilitation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fcoe/">Fibre Channel over Ethernet</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fgap/">Fine Grained Access Policy (FGAP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fingerprint%2Dauthentication/">Fingerprint Authentication</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fmac/">Flexible Mandatory Access Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+forensics/">Forensic Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fox/">Fully Open X Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fuse/">Fuse on Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+generic%2Dmca/">Generic Machine Check Architecture Improvements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+raidcfg/">Generic RAID Configuration Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+summerofcode/">Google SOC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Djboss/">HA&#45;JBoss</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dmysql/">HA&#45;MySQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hpc%2Dstack/">HPC Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livehadoop/">Hadoop Live CD</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hitachi/">Hitachi</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+honeycomb/">HoneyComb Fixed Content Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hotplug/">Hotplug Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ip%2Drefactor/">IP Datapath Refactoring</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ipoib/">IP over Infiniband</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tref/">IPsec Tunnel Reform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/">Image Packaging System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isc/">Immutable Service Containers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+perfmib/">Improved Performance MIB</a></span></li>
+<li><em class="underline"><em><span class="wikilink"><a href="/bin/view/Project+indiana/">Indiana</a></span></em></em></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ikev2/">Internet Key Exchange, version 2 (IKEv2)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+irm/">Interrupt Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jkstat/">JKstat &#45; a java binding for libkstat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jeos/">JeOS &#45; Just enough Operating System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jfs/">Journaled File System (JFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kde/">K Desktop Environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kerberos/">Kerberos</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kssl/">Kernel SSL Enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kernel%2Dsockets/">Kernel Sockets</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmf/">Key Management Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ksh93%2Dintegration/">Korn Shell 93 integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ldoms%2Dmgr/">LDoms Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+txipsec/">Labeled IPsec</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+l2filter/">Layer 2 Filtering</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lending/">Lending</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lld/">Link Layer Discovery</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livemedia/">Live Media: Technologies for distributions running from CD and other media</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+localedata/">Locale Data</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mips/">MIPS Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohac%2Davs/">MRSL.NONsharedDevice</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mega_sas/">Mega_sas</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mx/">Mexico</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+milax/">MilaX minimal Live Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mozilla%2Ddtrace/">Mozilla DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+glossary/">Multi&#45;lingual Glossary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mpxio/">Multi&#45;pathing software (MPxIO)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+multiple%2Ddoi/">Multiple DOI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+large%2Dsector/">Multiple disk sector size support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+muskoka/">Muskoka: An open repository for OpenSolaris technical content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsrdma/">NFS RDMA transport update and performance analysis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dzones/">NFS Server in non&#45;Global Zones</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsv41/">NFS version 4.1 pNFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dnamespace/">NFSv4 namespace extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npiv/">NPort ID Virtualization (NPIV)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+navigator/">Navigator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nemo/">Nemo: A Framework for High&#45;Performance Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/">Network Auto&#45;Magic</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ndmp/">Network Data Management Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+net%2Dmib/">Network MIBs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npp/">Network Performance Projects</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dpm/">Network Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nws/">Network Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ntp/">Network Time Protocol (NTP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nv%2Dg11n/">Nevada Globalization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+4over6/">New Design of 4over6 Mechanism Based on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nightingale/">Nightingale: Port Songbird to OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+onnv/">ON/Nevada (ONNV) Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osd/">Object Storage Device (OSD) support for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opendev/">Open Development Infrastructure</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dutilities/">Open HA Cluster Utilities</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opensound/">Open Sound System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/">OpenGrok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cim%2Dserver/">OpenPegasus CIM Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+openrti/">OpenRTI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+busybox/">OpenSolaris Busybox</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/">OpenSolaris Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+es/">OpenSolaris Hispano</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+audit/">OpenSolaris Security Audit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/">OpenSolaris support for the QEMU processor emulator: host and guest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pef/">PEF: Packet Event Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+performance%2Dwrappers/">Performance Wrappers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkgfactory/">Pkgfactory</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pl/">Polski Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fr/">Portail Francophone</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+br/">Portal Brasileiro de OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+portals/">Portals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmui/">Power Management Usability Interfaces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+presto/">Presto: Automatic Printing Configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmpsm/">Printable Many Page Solaris Manuals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+promise%2Dstorage/">Promise SuperTrak RAID HBA Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qlogic%2Dcna/">QLogic Converged Network Adapter GLDv3 NIC Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+quagga/">Quagga Routing Protocol Suite Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rbridges/">RBridge (IETF TRILL) support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rof/">RDMA Offload Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+releasenotes/">Release Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+reno/">Reno: Login Process Enhancements for Interop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/">Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+samqfs/">SAM/QFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+scm%2Dmigration/">SCM Migration Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+srp/">SCSI RDMA Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sdcard%2Ddrivers/">SDcard Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sfwnv/">SFW</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sm%2Dhba/">SM&#45;HBA Based SAS HBA Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Ddoc/">SMF Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sst/">SST Security Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+svr4_packaging/">SVR4 Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sensors/">Sensor Abstraction Layer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dsip/">Session Initiation Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+shell/">Shell: bourne shell, korn shell, C shell, etc.</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+simplepanels/">Simple Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/">Solaris PowerPC Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iscsitgt/">Solaris iSCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sourcejuicer/">SourceJuicer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/">Sparks: name service switch/nscd enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+squashfs/">Squashfs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+star/">Star integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starfish/">Starfish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starterkit/">Starter Kit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+storagepm/">Storage Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+avs/">Sun StorageTek Availability Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ofuv/">Support for OpenFabrics User Verbs / API on OpenSolaris OS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/">Support gcc4/GCCfss in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+suspend%2Dresume/">Suspend/Resume</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+systemz/">Systemz</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tipc/">TIPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+branding/">Trademarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tpm/">Trusted Platform Module support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tnipdb/">Trusted networking interface policy database for Trusted Extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+usecase/">Use Case</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+userland/">Userland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vrrp/">VRRP: Virtual Router Redundancy Protocol Implementation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vscan/">VSCAN service</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+valex/">Validated Execution Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vconsole/">Virtual Console</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vnm/">Virtual Network Machines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/">Visual Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+visualization%2Dhpc/">Visualization for HPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+volo/">Volo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/">Web Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+website/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+winchester/">Winchester: Schema mapping and ID mapping for AD Interoperability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wusb/">Wireless USB Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wwan/">Wireless Wide Area Network</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x%2Dcons/">X Consolidation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xkblayout/">X Keyboard Layout</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xen%2Dgate/">Xen Gate</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xfce/">Xfce: A lightweight desktop environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfsboot/">ZFS Boot and Install</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfs%2Dcrypto/">ZFS on disk encryption support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonemgr/">Zone Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonestat/">Zone Statistics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gcore/">gcore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iser/">iSCSI Extensions for Remote DMA (iSER)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isns/">iSNS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+libmicro/">libMicro &#45; portable microbenchmarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+loficc/">lofi compression and cryptography support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lx64/">lx64 brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+s10brand/">s10brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x86gentopo/">x86 Generic FMA Topology Enumerator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ztest/">ztest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cz/">Český portál</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ru/">Русский портал</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ar/">البوابة العربية</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+in/">भारतीय पोर्टल</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cn/">中国门户</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/">日本ポータル</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kr/">한국 포탈</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavUser Group">
+            <div id="xwikinavUser GroupHeader" class="accordionTabTitleBar"><h6>User Group</h6>
+            </div>
+            <div id="xwikinavUser GroupContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+kr/"></a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+adl%2Dauosug/">Adelaide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+aosug/">Argentina</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+azosug/">Arizona</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+atl%2Dosug/">Atlanta OpenSolaris Users Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bwosug/">Baltimore&#45;Washington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bosug/">Bangalore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bkkosug/">Bangkok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bdosug/">Bangladesh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bjosug/">Beijing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+brosug/">Berlin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bvrm%2Dosug/">Bhimavaram</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+btn%2Dosug/">Bloomington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfosug/">Brasilia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+blmosug/">Bélem</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+crosug/">Capital Region</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cfosug/">Cardiff</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ccosug/">Caribbean OSUG</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ceosug/">Ceara</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cltosug/">Charlotte</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chennai/">Chennai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chmxosug/">Chihuahua</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+closug/">Chile</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cle%2Dosug/">Cleveland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+colosug/">Colombia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cmh%2Dosug/">Columbus</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ctosug/">Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+knp%2Duek/">Cracow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+czosug/">Czech</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfw%2Dosug/">Dallas/Ft. Worth</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dosug/">Danish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+deosug/">Delaware</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+eduosug/">Edinburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+egosug/">Egypt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fiosug/">Finland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+flosug/">Florida</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fraosug/">Frankfurt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+frosug/">Front Range</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+glug/">Great Lakes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+grosug/">Greece</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hzosug/">Hangzhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hi%2Dosug/">Hawaii</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hkosug/">Hong Kong</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hugs/">Houston</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hosug/">Hyderabad</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+idosug/">Indonesia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madridosug/">Inicio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ie%2Dosug/">Irish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+iosug/">Israel</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+istosug/">Istanbul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+itl%2Dosug/">Italian</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jnosug/">Jinan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jogja%2Dosug/">Jogja</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kbosug/">Kabul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kc%2Dosug/">Kansas City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+lavosug/">Latvia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+losug/">London</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madosug/">Madurai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mansug/">Manchester</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mssosug/">Mato Grosso</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+msosug/">Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mgosug/">Minas Gerais</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mnosug/">Minnesota</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mtlosug/">Montreal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mosug/">Moscow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mmosug/">Mumbai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mucosug/">Munich</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+neaosug/">NEA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nlosug/">Netherlands</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ne%2Dosug/">New England</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nycosug/">New York City OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nzosug/">New Zealand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+norosug/">Noroeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nerosug/">Nuremberg&#45;Erlangen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+okcosug/">Oklahoma City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ososug/">Osnabrück</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+peosug/">Peru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+paosug/">Philadelphia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+piaski%2Dosug/">Piaski</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ptosug/">Pittsburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+poaosug/">Porto Alegre</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+psosug/">Puget Sound</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+posug/">Pune</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+qosug/">Queensland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rtp%2Dosug/">Research Triangle Park</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+riosug/">Rio de Janeiro</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ro%2Dosug/">Romania</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ruosug/">Russia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+alamo%2Dosug/">San Antonio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sdosug/">San Diego</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sfosug/">San Francisco OpenSolaris user group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+scosug/">Scottish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rs%2Dosug/">Serbia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szosug/">Shenzhen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svosug/">Silicon Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sgosug/">Singapore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+skosug/">Slovak</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+saosug/">South African</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+soctosug/">Southern Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+stl%2Dosug/">St. Louis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svgosug/">Stavanger</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+swosug/">Sweden</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chosug/">Switzerland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sosug/">Sydney</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szc%2Dosug/">Szczecin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sampaosug/">São Paulo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+twosug/">Taiwan OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ostug/">Tecum</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tvosug/">Thames Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tsug/">Tokyo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+torosug/">Toronto</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+trosug/">Trondheim</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+toss/">Tulsa</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tosug/">Turkey</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ufaosug/">Ufa OSUG</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+uaosug/">Ukraine OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+unimelb%2Dosug/">University of Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+valeosug/">Vale do Paraíba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vanosug/">Vancouver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vosug/">Venezuela &#45; Pagina de incio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vvoosug/">Vladivostok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wosug/">Welsh &#45; Cymru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wiosug/">Wisconsin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+xaosug/">Xi'an</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+</div><p/>
+<script type="text/javascript">
+var obj = {div:'xwikinav',no:1,height:250};
+var acc = createAccordion(obj);
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSDocs','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSDocs'); togglePanelVisibility(this.parentNode);">Project indiana Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/Renamed+Packages+in+Build+133">Renamed Packages in Builds 133, 134 and 134a</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/building_on">Building and testing ON</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/documents">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/getit">Get OpenSolaris 2008.05</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/image%2Dupdate%2D1">Upgrading OpenSolaris 2008.05 to Later Versions of OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/resources">Resources</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/documentation_deliverables">Documentation Deliverables</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/glossary">Glossary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/problem_statement">Problem Statement</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/relnotes">Release Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/reporting_bugs">Reporting Bugs</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/restore%2Dsystem">Restoring system to original installation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/startpagebase">Start Page</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/status">Status</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/accessibility">Accessibility</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/x86">ReleaseNotes2008.11</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/x86%2D1">x86</a></span></li>
+</ul>
+                    </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div>  <div id="footerglobal" class="layoutsection">
+  <div class="minwidth"></div>
+
+  <script language="JavaScript" src="/resources/js/s_code_remote.js"></script>
+
+
+          <div id="xwikiplatformversion">XWiki Enterprise 2.1.1.25889 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+  <br/>
+
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2011, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+  </div>
+
+
+</div></div></body>
+</html>

@@ -1,0 +1,1054 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>JavaScript Tracing (Project mozilla-dtrace.JavaScript) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+mozilla%2Ddtrace/JavaScript" />
+                    <link rel="canonical" href="/bin/view/Project+mozilla%2Ddtrace/JavaScript" />
+                            <meta name="document" content="Project mozilla-dtrace.JavaScript"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Project mozilla-dtrace"/>
+    <meta name="page" content="JavaScript"/>
+    <meta name="version" content="1.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Project+mozilla-dtrace/pages/JavaScript"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="JavaScript Tracing" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project mozilla-dtrace";
+XWiki.currentPage = "JavaScript";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Project+mozilla%2Ddtrace/JavaScript";
+window.docediturl = "/bin/edit/Project+mozilla%2Ddtrace/JavaScript";
+window.docsaveurl = "/bin/save/Project+mozilla%2Ddtrace/JavaScript";
+window.docgeturl = "/bin/get/Project+mozilla%2Ddtrace/JavaScript";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Project_mozilla-dtrace viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bmozilla-dtrace%2FJavaScript"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+mozilla%2Ddtrace/"><strong>Project mozilla-dtrace</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Project+mozilla%2Ddtrace" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+            </td>
+            <td id="logo-text" style="width: 1%;">
+                Solaris
+            </td>         
+            <td style="width: 98%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                  <span class='current'>JavaScript Tracing</span>
+          </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+mozilla%2Ddtrace/JavaScript?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+mozilla%2Ddtrace/JavaScript?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+mozilla%2Ddtrace/JavaScript?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+mozilla%2Ddtrace/JavaScript?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+mozilla%2Ddtrace/JavaScript?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+mozilla%2Ddtrace/JavaScript?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+mozilla%2Ddtrace/JavaScript?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+mozilla%2Ddtrace/JavaScript?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+mozilla%2Ddtrace/JavaScript?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+mozilla%2Ddtrace/JavaScript?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+mozilla%2Ddtrace/JavaScript?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          <span class="submenuitem "><a href="/bin/view/Project+mozilla%2Ddtrace/JavaScript?xpage=copy" id="tmActionCopy" class="tmActionCopy">Copy</a></span>
+      </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+                      
+<div id="document-title"><h1>JavaScript Tracing</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h1 class='hidden'>JavaScript Tracing</h1><p>&nbsp;The following are example scripts for tracing JavaScript using the <span class="wikilink"><a href="/bin/view/Project+mozilla%2Ddtrace/">Mozilla DTrace</a></span> provider.</p><h2 id="HExampleScripts"><span>Example Scripts</span></h2><p>These scripts have been writen to trace activity from all browsers on the system that support the Mozilla DTrace provider; to trace single browser instances, modify the scripts to match the provider "javascript$target" and run the scripts with "-p PID" as the argument.</p><p>A feature of DTrace is that the browser does not need to be restarted for DTrace to work. The JavaScript probes cause zero overhead until they are enabled by a DTrace script, and tracing begins.</p><h3 id="HExampleTarget:clock.html"><span>Example Target: clock.html</span></h3><p>&nbsp;This simple JavaScript clock will be run as the target for the tracing demonstrations that follow,</p><pre>
+
+&lt;HTML&gt;
+&lt;HEAD&gt;
+&lt;TITLE&gt;Clock, JavaScript&lt;/TITLE&gt;
+&lt;SCRIPT type="text/javascript"&gt;
+function padZero(i)
+{
+        if (i &lt; 10) return "0" + i;
+        return i;
+}
+
+function startTime()
+{
+        var now = new Date;
+        var time = padZero(now.getHours()) + ":" +
+            padZero(now.getMinutes()) + ":" +
+            padZero(now.getSeconds());
+        document.getElementById('clock').innerHTML = "time: " + time + "&lt;br&gt;";
+        var timeout = setTimeout('startTime()', 1000);
+}
+&lt;/SCRIPT&gt;
+&lt;/HEAD&gt;
+&lt;BODY onload="startTime()"&gt;
+&lt;DIV id="clock"&gt;&lt;/DIV&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+
+</pre><h3 id="Hjs_funccalls.d"><span>js_funccalls.d</span></h3><p>&nbsp;This is a simple script to count the number of JavaScript function calls while the script was running.</p><pre>
+
+#!/usr/sbin/dtrace -Zs
+/*
+ * js_funccalls.d - measure JavaScript function calls using DTrace.
+ *                  Written for the Solaris Mozilla DTrace provider.
+ *
+ * This traces JavaScript activity from all running browers on the system
+ * which support the mozilla DTrace provider.
+ *
+ * USAGE: js_calls.d            # hit Ctrl-C to end
+ *
+ * FIELDS:
+ *              FILE            Filename that contained the function
+ *              FUNC            JavaScript function name
+ *              CALLS           Function calls during this sample
+ *
+ * Filename and function names are printed if available, else "&lt;null&gt;".
+ */
+#pragma ident   "@(#)js_funccalls.d     1.3     07/03/26 SMI"
+
+#pragma D option quiet
+
+dtrace:::BEGIN
+{
+        printf("Tracing... Hit Ctrl-C to end.\n");
+}
+
+javascript*:::function-entry
+{
+        @funcs[basename(copyinstr(arg0)), copyinstr(arg2)] = count();
+}
+
+dtrace:::END
+{
+        printf(" %-32s %-36s %8s\n", "FILE", "FUNC", "CALLS");
+        printa(" %-32s %-36s %@8d\n", @funcs);
+}
+
+</pre><p>&nbsp;Example output,</p><pre>
+
+# ./js_funccalls.d 
+Tracing... Hit Ctrl-C to end.
+^C
+ FILE                             FUNC                                    CALLS
+ nsMicrosummaryService.js         GetSources                                  1
+ nsMicrosummaryService.js         MSS__getBookmarks                           1
+ nsMicrosummaryService.js         MSS__updateMicrosummaries                   1
+ nsMicrosummaryService.js         getPref                                     1
+ nsMicrosummaryService.js         getPrefType                                 1
+ nsMicrosummaryService.js         getService                                  1
+ nsMicrosummaryService.js         hasMoreElements                             1
+ nsMicrosummaryService.js         max                                         1
+ nsMicrosummaryService.js         now                                         1
+ nsMicrosummaryService.js         GetResource                                 2
+ nsMicrosummaryService.js         MSS__resource                               2
+ clock.html                       getElementById                              3
+ clock.html                       getHours                                    3
+ clock.html                       getMinutes                                  3
+ clock.html                       getSeconds                                  3
+ clock.html                       setTimeout                                  3
+ clock.html                       startTime                                   3
+ clock.html                       padZero                                     9
+
+</pre><p>Apart from events from clock.html, the script also traced some events from the browser.</p><h3 id="Hjs_funcinfo.d"><span>js_funcinfo.d</span></h3><p>&nbsp;This script is similar to js_funccalls.d, however prints additional call information which is especially useful for tracing anonymous functions,</p><pre>
+
+# ./js_funcinfo.d
+Tracing... Hit Ctrl-C to end.
+^C
+ BASE[FILE:LINE]         FUNCNAME             RUN[FILE:LINE]             CALLS
+ clock2.html:7           getElementById       clock2.html:12                 1
+ clock2.html:7           getHours             clock2.html:9                  1
+ clock2.html:7           getMinutes           clock2.html:10                 1
+ clock2.html:7           getSeconds           clock2.html:11                 1
+ clock2.html:7           setTimeout           clock2.html:13                 1
+ clock2.html:7           startTime            clock2.html:13                 1
+ clocklib.js:2           padLibZero           clock2.html:10                 1
+ clocklib.js:2           padLibZero           clock2.html:11                 1
+ clocklib.js:2           padLibZero           clock2.html:9                  1
+
+</pre><p>The "BASE" details show where the function was declared or first used; the "RUN" info shows where the function was executed.</p><h3 id="Hjs_funcflow.d"><span>js_funcflow.d</span></h3><p>&nbsp;This script traces the flow of JavaScript functions, by indenting as a function is entered and un-indenting as the function completes.</p><pre>
+
+#!/usr/sbin/dtrace -Zs
+/*
+ * js_funcflow.d - snoop JavaScript function execution using DTrace.
+ *                 Written for the Solaris Mozilla DTrace provider.
+ *
+ * This traces JavaScript activity from all running browers on the system
+ * which support the mozilla DTrace provider.
+ *
+ * USAGE: js_funcflow.d                 # hit Ctrl-C to end
+ *
+ * This watches JavaScript function entries and returns, and indents child
+ * function calls. For busy JavaScript, the output will be very verbose.
+ *
+ * FIELDS:
+ *              C               CPU-id
+ *              TIME            Time of function call
+ *              FILE            Filename that this function belongs to
+ *              FUNC            JavaScript function name
+ *
+ * Filename and function names are printed if available, else "&lt;null&gt;".
+ *
+ * WARNING: Watch the first column carefully, it prints the CPU-id. If it
+ * changes, then it is very likely that the output has been shuffled.
+ */
+#pragma ident   "@(#)js_funcflow.d      1.3     07/03/26 SMI"
+
+#pragma D option quiet
+#pragma D option switchrate=10
+
+dtrace:::BEGIN
+{
+        depth = 0;
+        printf("%s %-20s  %-22s   ~-- %s\n", "C", "TIME", "FILE", "FUNC");
+}
+
+javascript*:::function-entry
+{
+        depth++;
+        printf("%d %-20Y  %-22s %*s-&gt; %s\n", cpu, walltimestamp, 
+            basename(copyinstr(arg0)), depth*2, "", copyinstr(arg2));
+}
+
+javascript*:::function-return
+{
+        printf("%d %-20Y  %-22s %*s&lt;- %s\n", cpu, walltimestamp,
+            basename(copyinstr(arg0)), depth*2, "", copyinstr(arg2));
+        depth~--;
+}
+
+</pre><p>Running this script while clock.html runs produces,</p><pre>
+
+# ./js_funcflow.d 
+C TIME                  FILE                     ~-- FUNC
+0 2007 Mar 26 16:42:09  clock.html               -&gt; startTime
+0 2007 Mar 26 16:42:09  clock.html                 -&gt; getHours
+0 2007 Mar 26 16:42:09  clock.html                 &lt;- getHours
+0 2007 Mar 26 16:42:09  clock.html                 -&gt; padZero
+0 2007 Mar 26 16:42:09  clock.html                 &lt;- padZero
+0 2007 Mar 26 16:42:09  clock.html                 -&gt; getMinutes
+0 2007 Mar 26 16:42:09  clock.html                 &lt;- getMinutes
+0 2007 Mar 26 16:42:09  clock.html                 -&gt; padZero
+0 2007 Mar 26 16:42:09  clock.html                 &lt;- padZero
+0 2007 Mar 26 16:42:09  clock.html                 -&gt; getSeconds
+0 2007 Mar 26 16:42:09  clock.html                 &lt;- getSeconds
+0 2007 Mar 26 16:42:09  clock.html                 -&gt; padZero
+0 2007 Mar 26 16:42:09  clock.html                 &lt;- padZero
+0 2007 Mar 26 16:42:09  clock.html                 -&gt; getElementById
+0 2007 Mar 26 16:42:09  clock.html                 &lt;- getElementById
+0 2007 Mar 26 16:42:09  clock.html                 -&gt; setTimeout
+0 2007 Mar 26 16:42:09  clock.html                 &lt;- setTimeout
+0 2007 Mar 26 16:42:09  clock.html               &lt;- startTime
+0 2007 Mar 26 16:42:10  clock.html               -&gt; startTime
+0 2007 Mar 26 16:42:10  clock.html                 -&gt; getHours
+0 2007 Mar 26 16:42:10  clock.html                 &lt;- getHours
+0 2007 Mar 26 16:42:10  clock.html                 -&gt; padZero
+0 2007 Mar 26 16:42:10  clock.html                 &lt;- padZero
+0 2007 Mar 26 16:42:10  clock.html                 -&gt; getMinutes
+0 2007 Mar 26 16:42:10  clock.html                 &lt;- getMinutes
+0 2007 Mar 26 16:42:10  clock.html                 -&gt; padZero
+0 2007 Mar 26 16:42:10  clock.html                 &lt;- padZero
+0 2007 Mar 26 16:42:10  clock.html                 -&gt; getSeconds
+0 2007 Mar 26 16:42:10  clock.html                 &lt;- getSeconds
+0 2007 Mar 26 16:42:10  clock.html                 -&gt; padZero
+0 2007 Mar 26 16:42:10  clock.html                 &lt;- padZero
+0 2007 Mar 26 16:42:10  clock.html                 -&gt; getElementById
+0 2007 Mar 26 16:42:10  clock.html                 &lt;- getElementById
+0 2007 Mar 26 16:42:10  clock.html                 -&gt; setTimeout
+0 2007 Mar 26 16:42:10  clock.html                 &lt;- setTimeout
+0 2007 Mar 26 16:42:10  clock.html               &lt;- startTime
+^C
+
+</pre><p>The execution of the clock.html script can be seen. This tool isn't as useful as it may appear - serious JavaScript applications will produce hundreds of pages of output per second. Perhaps this is more useful as a demonstration of DTrace capabilities.</p><h3 id="Hjs_functime.d"><span>js_functime.d</span></h3><p>&nbsp;The following script traces elapsed times for JavaScript functions. Elapsed is the time from the function entry to the return, and may include other JavaScript functions and time the JavaScript spent off the CPU. If you'd prefer other ways to calculate time spent in functions, hack away...</p><pre>
+
+#!/usr/sbin/dtrace -Zs
+/*
+ * js_functime.d - measure JavaScript function times using DTrace.
+ *                 Written for the Solaris Mozilla DTrace provider.
+ *
+ * This traces JavaScript activity from all running browers on the system
+ * which support the mozilla DTrace provider.
+ *
+ * USAGE: js_functime.d         # hit Ctrl-C to end
+ *
+ * FIELDS:
+ *              FILE            Filename that contained the function
+ *              FUNCTION        JavaScript function name
+ *              COUNT           Number of calls during this sample
+ *              AVG(us)         Average function elapsed time, us
+ *              SUM(us)         Total function elapsed time, us
+ *
+ * This measures the elapsed times for function entries to returns, and
+ * provides some aggregated statistics. Be aware that the elapsed time for
+ * a function is overlapping; it includes the elapsed times for child
+ * functions that it called.
+ *
+ * Filename and function names are printed if available, else "&lt;null&gt;".
+ */
+#pragma ident   "@(#)js_functime.d      1.3     07/03/26 SMI"
+
+#pragma D option quiet
+
+this string str;
+
+dtrace:::BEGIN
+{
+        printf("Tracing... Hit Ctrl-C to end.\n");
+        depth = 0;
+}
+
+javascript*:::function-entry
+{
+        self-&gt;depth++;
+        self-&gt;start[copyinstr(arg2), self-&gt;depth] = timestamp;
+}
+
+javascript*:::function-return
+/(this-&gt;str = copyinstr(arg2)) != NULL &amp;&amp; self-&gt;start[this-&gt;str, self-&gt;depth]/
+{
+        this-&gt;file = basename(copyinstr(arg0));
+        this-&gt;elapsed = timestamp - self-&gt;start[this-&gt;str, self-&gt;depth];
+        @num[this-&gt;file, this-&gt;str] = count();
+        @eavg[this-&gt;file, this-&gt;str] = avg(this-&gt;elapsed);
+        @esum[this-&gt;file, this-&gt;str] = sum(this-&gt;elapsed);
+        @edist[this-&gt;str] = quantize(this-&gt;elapsed);
+        self-&gt;start[this-&gt;file, self-&gt;depth] = 0;
+        self-&gt;depth~--;
+}
+
+dtrace:::END
+{
+        normalize(@eavg, 1000);
+        normalize(@esum, 1000);
+        printf("ELAPSED TIME DISTRIBUTION,\n");
+        printa(@edist);
+        setopt("aggsortpos", "2");
+        printf("%-33s %45s\n", "{{{___}}} OVERLAP TIMES: {{{___}}}",
+            "{{{______}}} ELAPSED {{{_____}}}");
+        printf("%-24s %-23s %6s %10s %12s\n", "FILE", "FUNCTION",
+            "COUNT", "AVG(us)", "SUM(us)");
+        printa("%-24.24s %-23.23s %@6d %@10d %@12d\n", @num, @eavg, @esum);
+}
+
+</pre><p>&nbsp;Example output,</p><pre>
+
+# ./js_functime.d 
+Tracing... Hit Ctrl-C to end.
+^C
+ELAPSED TIME DISTRIBUTION,
+
+  getMinutes                                        
+           value  ~------------- Distribution ~------------- count    
+            2048 |                                         0        
+            4096 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 3        
+            8192 |                                         0        
+
+  getSeconds                                        
+           value  ~------------- Distribution ~------------- count    
+            2048 |                                         0        
+            4096 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 3        
+            8192 |                                         0        
+
+  getHours                                          
+           value  ~------------- Distribution ~------------- count    
+            8192 |                                         0        
+           16384 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 3        
+           32768 |                                         0        
+
+  padZero                                           
+           value  ~------------- Distribution ~------------- count    
+            2048 |                                         0        
+            4096 |@@@@@@@@@@@@@@@@@@@@@@@@@@@              6        
+            8192 |@@@@@@@@@@@@@                            3        
+           16384 |                                         0        
+
+  getElementById                                    
+           value  ~------------- Distribution ~------------- count    
+           16384 |                                         0        
+           32768 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 3        
+           65536 |                                         0        
+
+  setTimeout                                        
+           value  ~------------- Distribution ~------------- count    
+           16384 |                                         0        
+           32768 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 3        
+           65536 |                                         0        
+
+  startTime                                         
+           value  ~------------- Distribution ~------------- count    
+          262144 |                                         0        
+          524288 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 3        
+         1048576 |                                         0        
+
+{{{___}}} OVERLAP TIMES: {{{___}}}                                     {{{______}}} ELAPSED {{{_____}}}
+FILE                     FUNCTION                 COUNT    AVG(us)      SUM(us)
+clock.html               getSeconds                   3          6           20
+clock.html               getMinutes                   3          7           22
+clock.html               padZero                      9          7           64
+clock.html               getHours                     3         26           78
+clock.html               getElementById               3         44          132
+clock.html               setTimeout                   3         51          155
+clock.html               startTime                    3        975         2925
+
+</pre><p>The example output shows that the slowest function was startTime, which isn't suprising as startTime contains all the other function calls. The slowest individual function was setTimeout with 3 calls at an average elapsed time of 51 microseconds per call; and the fastest function was getSeconds, which was called 3 times at an average of 6 microseconds per call.</p><p>Care must be taken when using a tool like this to fully understand how the time measurements are taken, and what conclusions can and can't be made based on the output.</p><h3 id="Hjs_objs.d"><span>js_objs.d</span></h3><p>&nbsp;This script snoops (traces) JavaScript object creation,</p><pre>
+
+#!/usr/sbin/dtrace -Zs
+/*
+ * js_objs.d - snoop JavaScript Object creation using DTrace.
+ *             Written for the Solaris Mozilla DTrace provider.
+ *
+ * This traces JavaScript activity from all running browers on the system
+ * which support the mozilla DTrace provider.
+ *
+ * USAGE: js_objs.d             # hit Ctrl-C to end
+ *
+ * FIELDS:
+ *              TIME            Time string
+ *              FILE            Filename that contained the function
+ *              LINENO          File line number where object was created
+ *              CLASS           Class to which this new object belongs
+ *
+ * Filename and class names are printed if available, else "&lt;null&gt;".
+ */
+#pragma ident   "@(#)js_objs.d  1.3     07/03/26 SMI"
+
+#pragma D option quiet
+
+dtrace:::BEGIN
+{
+        printf("%-20s %24s:%-7s %s\n", "TIME", "FILE", "LINENO", "CLASS");
+}
+
+javascript*:::object-create
+/arg2/
+{
+        printf("%-20Y %24.24s:%-7d %s\n", walltimestamp, 
+            basename(copyinstr(arg0)), (int)arg3, copyinstr(arg1));
+}
+
+</pre><p>&nbsp;Example output,</p><pre>
+
+# ./js_objs.d
+TIME                                     FILE:LINENO  CLASS
+2007 Mar 26 18:31:31               clock.html:13      Date
+2007 Mar 26 18:31:32               clock.html:13      Date
+2007 Mar 26 18:31:33               clock.html:13      Date
+2007 Mar 26 18:31:34               clock.html:13      Date
+2007 Mar 26 18:31:35               clock.html:13      Date
+2007 Mar 26 18:31:36               clock.html:13      Date
+^C
+
+</pre><p>In the above output, several Date objects were created by line 13 of clock.html.</p><p>The following example output traces JavaScript activity by the browser interface (triggered by clicking on plugins and menus),</p><pre>
+
+# ./js_objs.d
+TIME                                     FILE:LINENO  CLASS
+2007 Mar 26 18:36:22               clock.html:13      Date
+2007 Mar 26 18:36:22                   &lt;null&gt;:-1      Event
+2007 Mar 26 18:36:22                   &lt;null&gt;:-1      Function
+2007 Mar 26 18:36:22                   &lt;null&gt;:-1      Function
+2007 Mar 26 18:36:22                   &lt;null&gt;:-1      MouseEvent
+2007 Mar 26 18:36:22              browser.xul:1       Call
+2007 Mar 26 18:36:22        utilityOverlay.js:380     Function
+2007 Mar 26 18:36:22             sb-loader.js:161     XULElement
+2007 Mar 26 18:36:22             sb-loader.js:167     XPCWrappedNative_NoHelper
+2007 Mar 26 18:36:22                   &lt;null&gt;:-1      Function
+2007 Mar 26 18:36:22             sb-loader.js:168     Function
+2007 Mar 26 18:36:22        utilityOverlay.js:387     nsJSCID
+2007 Mar 26 18:36:22        utilityOverlay.js:388     nsJSIID
+2007 Mar 26 18:36:22        utilityOverlay.js:388     XPCWrappedNative_NoHelper
+2007 Mar 26 18:36:22       nsUpdateService.js:1593    Function
+2007 Mar 26 18:36:22       nsUpdateService.js:1593    XPC_WN_NoMods_Proto_JSClass
+2007 Mar 26 18:36:22       nsUpdateService.js:1593    nsXPCComponents_Interfaces
+2007 Mar 26 18:36:22       nsUpdateService.js:1593    nsJSIID
+2007 Mar 26 18:36:22        utilityOverlay.js:388     XPCWrappedNative_NoHelper
+2007 Mar 26 18:36:22       nsUpdateService.js:1593    Function
+2007 Mar 26 18:36:22       nsUpdateService.js:1594    nsJSIID
+2007 Mar 26 18:36:22       nsUpdateService.js:1595    nsJSIID
+2007 Mar 26 18:36:22       nsUpdateService.js:1596    nsJSIID
+2007 Mar 26 18:36:22        utilityOverlay.js:388     XPCWrappedNative_NoHelper
+[...]
+
+</pre><p>&nbsp;Sometimes the filename and line number are not available, and so "&lt;null&gt;" and -1 are printed to indicate this.</p><h3 id="Hjs_objnew.d"><span>js_objnew.d</span></h3><p>&nbsp;This is a simple script to summarize the number of new objects created,</p><pre>
+
+#!/usr/sbin/dtrace -Zs
+/*
+ * js_objnew.d - measure JavaScript new objects using DTrace.
+ *               Written for the Solaris Mozilla DTrace provider.
+ *
+ * This traces JavaScript activity from all running browers on the system
+ * which support the mozilla DTrace provider.
+ *
+ * USAGE: js_objnew.d           # hit Ctrl-C to end
+ *
+ * FIELDS:
+ *              FILE            Filename that contained the function
+ *              CLASS           Class to which this new object belongs
+ *              COUNT           Number of objects created
+ *
+ * Filename and class names are printed if available, else "&lt;null&gt;".
+ */
+#pragma ident   "@(#)js_objnew.d        1.3     07/03/26 SMI"
+
+#pragma D option quiet
+
+dtrace:::BEGIN
+{
+        printf("Tracing... Hit Ctrl-C to end.\n");
+}
+
+javascript*:::object-create
+{
+        @objs[basename(copyinstr(arg0)), copyinstr(arg1)] = count();
+}
+
+dtrace:::END
+{
+        printf(" %-24s %-36s %8s\n", "FILE", "CLASS", "COUNT");
+        printa(" %-24.24s %-36s %@8d\n", @objs);
+}
+
+</pre><p>&nbsp;Example output,</p><pre>
+
+# ./js_objnew.d 
+Tracing... Hit Ctrl-C to end.
+^C
+ FILE                     CLASS                                   COUNT
+ clock.html               Date                                        6
+
+</pre><p>&nbsp;Example "noisy" output,</p><pre>
+
+# ./js_objnew.d 
+Tracing... Hit Ctrl-C to end.
+^C
+ FILE                     CLASS                                   COUNT
+ browser.xul              Call                                        2
+ menu.xml                 Array                                       2
+ sb-loader.js             Function                                    2
+ sb-loader.js             XPCWrappedNative_NoHelper                   2
+ utilityOverlay.js        Function                                    2
+ nsUpdateService.js       Array                                       4
+ bookmarks.js             Error                                       6
+ clock.html               Date                                        6
+ nsUpdateService.js       XPCWrappedNative_NoHelper                   6
+ popup.xml                Array                                       9
+ browser.js               Function                                   18
+ menu.xml                 XPCWrappedNative_NoHelper                  20
+ nsUpdateService.js       Function                                   22
+ &lt;null&gt;                   MouseEvent                                 28
+ &lt;null&gt;                   Event                                      84
+ menu.xml                 XULElement                                120
+ &lt;null&gt;                   Function                                  231
+
+</pre><h3 id="Hjs_objcpu.d"><span>js_objcpu.d</span></h3><p>&nbsp;Sometimes the CPU time consumed to create new objects can be a performance issue. This simple script measures that time,</p><pre>
+
+#!/usr/sbin/dtrace -Zs
+/*
+ * js_objcpu.d - measure JavaScript Object create on-CPU time using DTrace.
+ *               Written for the Solaris Mozilla DTrace provider.
+ *
+ * This traces JavaScript activity from all running browers on the system
+ * which support the mozilla DTrace provider.
+ *
+ * USAGE: js_objcpu.d           # hit Ctrl-C to end
+ *
+ * This measures the on-CPU time consumed due to JavaScript Object creation.
+ */
+#pragma ident   "@(#)js_objcpu.d        1.3     07/03/26 SMI"
+
+#pragma D option quiet
+
+dtrace:::BEGIN
+{
+        printf("Tracing... Hit Ctrl-C to end.\n");
+}
+
+javascritp*:::object-create-start
+{
+        self-&gt;vstart = vtimestamp;
+}
+
+javascript*:::object-create-done
+/self-&gt;vstart/
+{
+        this-&gt;oncpu = vtimestamp - self-&gt;vstart;
+        @dist["Object Creation on-CPU time (ns):"] = quantize(this-&gt;oncpu);
+        @total["Total on-CPU time (us):"] = sum(this-&gt;oncpu);
+        self-&gt;vstart = 0;
+}
+
+dtrace:::END
+{
+        normalize(@total, 1000);
+}
+
+</pre><p>&nbsp;Example output,</p><pre>
+
+# ./js_objcpu.d 
+Tracing... Hit Ctrl-C to end.
+^C
+
+  Object Creation on-CPU time (ns):                 
+           value  ~------------- Distribution ~------------- count    
+             256 |                                         0        
+             512 |@@@@@@@@@                                92       
+            1024 |@@@@@@@@@@@@@@@@@@@@@@@@                 235      
+            2048 |@@@@                                     36       
+            4096 |@                                        13       
+            8192 |@@                                       19       
+           16384 |                                         0        
+           32768 |                                         1        
+           65536 |                                         0        
+
+  Total on-CPU time (us):                                         824
+
+</pre><h3 id="Hjs_objgc.d"><span>js_objgc.d</span></h3><p>&nbsp;The following script is useful to check the behaviour of garbage collect. It tallys the number of objects and prints a summary every second. By watching the output for a while (several minutes or more), steadily increasing object counts into the thousands may be evidence of an object leak.</p><pre>
+
+#!/usr/sbin/dtrace -Zs
+/*
+ * js_objgc.d - measure JavaScript Object GC using DTrace.
+ *              Written for the Solaris Mozilla DTrace provider.
+ *
+ * This traces JavaScript activity from all running browers on the system
+ * which support the mozilla DTrace provider.
+ *
+ * USAGE: js_objgc.d            # hit Ctrl-C to end
+ *
+ * FIELDS:
+ *              FILE            Filename that contained the function
+ *              CLASS           Class to which this new object belongs
+ *              TOTAL           Object entropy (positive == uncollected)
+ *
+ * This script provides information on which objects are not being garbage
+ * collected, an issue which causes the browser to steadily leak memory.
+ * We trace object creation (+1) and destruction (-1), and provide a
+ * summary each second of the running tally of the object class and
+ * originating filename. If over the period of several minutes an object
+ * type is still steadily increasing, then that would be of interest.
+ * Be patient, depending on the rate of object creation, it can take over
+ * ten minutes for garbage collect to kick in.
+ *
+ * Filename and class names are printed if available, else "&lt;null&gt;".
+ *
+ * NOTE: there are other Things that GC handles, other than Objects; extra
+ * probes can be added to trace them, should the need arise.
+ */
+#pragma ident   "@(#)js_objgc.d 1.3     07/03/26 SMI"
+
+#pragma D option quiet
+#pragma D option dynvarsize=32m
+
+dtrace:::BEGIN
+{
+        printf("Tracing... Hit Ctrl-C to end.\n");
+}
+
+javascript*:::object-create
+/arg2/
+{
+        this-&gt;file = basename(copyinstr(arg0));
+        @objs[this-&gt;file, copyinstr(arg1)] = sum(1);
+        filename[arg2] = this-&gt;file;
+}
+
+javascript*:::object-finalize
+/filename[arg2] == NULL/
+{
+        /* these are caused by dynvardrops. increase dynvarsize */
+        @objs["&lt;missed&gt;", copyinstr(arg1)] = sum(-1);
+}
+
+javascript*:::object-finalize
+/filename[arg2] != NULL/
+{
+        @objs[filename[arg2], copyinstr(arg1)] = sum(-1);
+        filename[arg2] = 0;
+}
+
+profile:::tick-1sec,
+dtrace:::END
+{
+        printf("\n %-24s %-36s %8s\n", "FILE", "CLASS", "TOTAL");
+        printa(" %-24.24s %-36s %@8d\n", @objs);
+}
+
+</pre><p>&nbsp;Example output,</p><pre>
+
+# ./js_objgc.d 
+Tracing... Hit Ctrl-C to end.
+
+ FILE                     CLASS                                   TOTAL
+ fastclock.html           Date                                       88
+
+ FILE                     CLASS                                   TOTAL
+ fastclock.html           Date                                      173
+
+ FILE                     CLASS                                   TOTAL
+ fastclock.html           Date                                      259
+
+ FILE                     CLASS                                   TOTAL
+ fastclock.html           Date                                      345
+
+ FILE                     CLASS                                   TOTAL
+ nsMicrosummaryService.js Array                                       1
+ nsMicrosummaryService.js Function                                    3
+ nsMicrosummaryService.js XPCWrappedNative_NoHelper                   4
+ fastclock.html           Date                                      431
+
+[...time passes...]
+
+ FILE                     CLASS                                   TOTAL
+ &lt;null&gt;                   MouseEvent                                  1
+ browser.js               Array                                       1
+ browser.js               CSSStyleDeclaration                         1
+ browser.js               ComputedCSSStyleDeclaration                 1
+ browser.js               XPCNativeWrapper                            1
+ browser.xul              XPCNativeWrapper                            1
+ popup.xml                Array                                       1
+ browser.js               Constructor                                 2
+ browser.js               XPC_WN_ModsAllowed_Proto_JSClass            2
+ nsMicrosummaryService.js Array                                       4
+ nsMicrosummaryService.js Function                                    6
+ nsMicrosummaryService.js XPCWrappedNative_NoHelper                   7
+ &lt;null&gt;                   Function                                   14
+ browser.js               Function                                   17
+ fastclock.html           Date                                     5321
+
+ FILE                     CLASS                                   TOTAL
+ &lt;missed&gt;                 Function                                 -172
+ &lt;missed&gt;                 Date                                     -152
+ &lt;missed&gt;                 XPCWrappedNative_NoHelper                 -33
+ &lt;missed&gt;                 Object                                    -19
+ &lt;missed&gt;                 Attr                                      -15
+ &lt;missed&gt;                 Array                                     -14
+ &lt;missed&gt;                 Call                                       -8
+ &lt;missed&gt;                 XPC_WN_NoMods_Proto_JSClass                -7
+ &lt;missed&gt;                 BarProp                                    -6
+ &lt;missed&gt;                 BoxObject                                  -1
+ &lt;missed&gt;                 HTMLDivElement                             -1
+ &lt;missed&gt;                 Iterator                                   -1
+ &lt;missed&gt;                 NamedNodeMap                               -1
+ &lt;missed&gt;                 XULElement                                 -1
+ &lt;null&gt;                   MouseEvent                                  0
+ browser.js               Array                                       0
+ browser.js               CSSStyleDeclaration                         0
+ browser.js               ComputedCSSStyleDeclaration                 0
+ browser.js               XPCNativeWrapper                            0
+ nsMicrosummaryService.js Array                                       0
+ nsMicrosummaryService.js Function                                    0
+ nsMicrosummaryService.js XPCWrappedNative_NoHelper                   0
+ popup.xml                Array                                       0
+ browser.xul              XPCNativeWrapper                            1
+ fastclock.html           HTMLDivElement                              1
+ browser.js               Constructor                                 2
+ browser.js               XPC_WN_ModsAllowed_Proto_JSClass            2
+ &lt;null&gt;                   Function                                    3
+ browser.js               Function                                    6
+ fastclock.html           Date                                        7
+
+</pre><p>In the above output, the Date object from fastclock.html steadily increased until there were 5321 of them, then the following output shows that the Date object count has dropped to 7 - this shows garbage collect working. Also in the final output are many negative count objects with a "&lt;missed&gt;" filename - these are objects that were already in memory when tracing began (so their count was zero), and we traced their destruction (so they count became negative).</p>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:15<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by admin on 2009/10/26 12:15
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Project mozilla-dtrace Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+mozilla%2Ddtrace/JavaScript">JavaScript Tracing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mozilla%2Ddtrace/files">Files</a></span></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2012, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

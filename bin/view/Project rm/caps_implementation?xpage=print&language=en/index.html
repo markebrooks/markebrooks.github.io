@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>CPU Caps implementation notes (Project rm.caps_implementation) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+rm/caps_implementation" />
+                    <link rel="canonical" href="/bin/view/Project+rm/caps_implementation" />
+                            <meta name="document" content="Project rm.caps_implementation"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Project rm"/>
+    <meta name="page" content="caps_implementation"/>
+    <meta name="version" content="1.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Project+rm/pages/caps_implementation"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="CPU Caps implementation notes" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="all" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project rm";
+XWiki.currentPage = "caps_implementation";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Project+rm/caps_implementation";
+window.docediturl = "/bin/edit/Project+rm/caps_implementation";
+window.docsaveurl = "/bin/save/Project+rm/caps_implementation";
+window.docgeturl = "/bin/get/Project+rm/caps_implementation";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Project_rm viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Brm%2Fcaps_implementation%3Fxpage%3Dprint%26%2338%3Blanguage%3Den"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+rm/"><strong>Project rm</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Project+rm" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+            </td>
+            <td id="logo-text" style="width: 1%;">
+                Solaris
+            </td>         
+            <td style="width: 98%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                                          <a href='/bin/view/Project+rm/rctls'>Resource Controls</a> <span class='separator'>&#187;</span> <a href='/bin/view/Project+rm/cpu%2Dcaps'>CPU caps</a> <span class='separator'>&#187;</span> <span class='current'>CPU Caps implementation notes</span>
+                      </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+rm/caps_implementation?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+rm/caps_implementation?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+rm/caps_implementation?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+rm/caps_implementation?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+rm/caps_implementation?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+rm/caps_implementation?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+rm/caps_implementation?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+rm/caps_implementation?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+rm/caps_implementation?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+rm/caps_implementation?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+rm/caps_implementation?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          <span class="submenuitem "><a href="/bin/view/Project+rm/caps_implementation?xpage=copy" id="tmActionCopy" class="tmActionCopy">Copy</a></span>
+      </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>CPU Caps implementation notes</h1></div>
+
+
+
+    <strong>NOTE: The
+ rm project
+ is no longer active on this website so information here may be out of date. Current Oracle Solaris 11 product documentation can be found </strong>
+  <strong><a href="http://www.oracle.com/technetwork/server-storage/solaris11/documentation/index.html">here</a>.</strong>
+  <strong>Information about downloading Oracle Solaris 11 can be found <a href="http://www.oracle.com/technetwork/server-storage/solaris11/downloads/index.html">here</a>.</strong>
+<hr>
+  
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h1 id="HCPUCapsImplementation"><span>CPU Caps Implementation</span></h1><p><strong>Andrei Dorofeev</strong></p><p><strong>Alexander Kolbasov</strong></p><p><strong>Jonathan Chew&nbsp;</strong></p><h3 id="HAbstract:"><span>Abstract:</span></h3><p>&nbsp;This document describes implementation of the CPU Caps projects. It provides the general implementation overview, discusses the major data structures and interaction with scheduling classes. The CPU Caps design is discussed in <span class="wikilink"><a href="#opensolaris:cpucaps">[1</a></span>]. It also outlines the general implementation strategy. The on-line version of this paper is available at <span class="wikilink"><a href="#opensolaris:implementation">[2</a></span>].</p><h1 id="HIntroduction"><span>Introduction</span></h1><p>&nbsp;Solaris provides different mechanisms which can be used to control CPU usage of applications - mainly <em>Processor Binding</em>, <em>Processor Sets</em>, <em>Dynamic Resource Pools</em> and <em>Fair Share Scheduler</em>.</p><p>&nbsp;There are disadvantages associated with using processor and processor set bindings to control CPU usage. They are too coarse (have CPU granularity), require users to choose specific processors to be used for binding, and can prevent certain Dynamic reconfiguration (<em>DR</em>) operations.</p><p>&nbsp;The Fair Share Scheduler provides a way to limit CPU usage of zones or projects in situations when workloads compete with each other for the same CPU resources. However, in situations when not all CPU resources are being actively used, CPU shares do not limit CPU usage in any way.</p><p>&nbsp;Various customers requested a hard and fine-grained limit on the CPU usage by a zone or a project. The primary motivation for such request is providing consistent user experience independent of the actual machine load.</p><p><em>CPU caps</em> provide a hard CPU usage cap which is enforced even if some CPUs are idle. This is a stronger performance guarantee than the one, provided by FSS shares, where the end result greatly depends on other workloads that run on the system at the same time.</p><p>&nbsp;The rest of this document describes the implementation of CPU caps.</p><h1 id="HImplementationOverview"><span>Implementation Overview</span></h1><p>&nbsp;A CPU cap can be set on any project or any zone. Zone CPU cap limits the CPU usage for all projects running inside the zone. For any project or zone with a cap set to C the combined usage of all LWPs running in that project or zone should not exceed C% of a single CPU. It is possible to set project caps for projects belonging to capped zones. CPU caps are enforced only for threads running in <em>TS</em>, <em>IA</em>, <em>FX</em>, and <em>FSS</em> scheduling classes.</p><p>&nbsp;When CPU usage of projects or zones reaches specified caps, LWPs in them do not get scheduled and, instead, are placed on special <em>wait queues</em>, associated with the project or zone reaching the cap. These LWPs will start running again only when CPU usage drops below the cap level. Each cap has its own <em>wait queue</em>. The time, spent by threads on <em>wait queues</em> is reported as ``<em>wait-cpu</em>'' (latency) time by procfs<span class="wikilink"><a href="#foot290">1</a></span>. Wait times can be seen in the LAT column when <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5166/6mbb1kqcm?a=view">prstat(1M)</a></span> is invoked with -m (report microstate process accounting information) option. CPU time spent by threads on <em>wait queues</em> is also accumulated at the LMS_WAIT_CPU micro-state accounting state<span class="wikilink"><a href="#foot50">2</a></span>. This time, however, is not accounted for, when calculating CPU load averages, unlike the time spent by threads in runnable (sitting on run queues) state. There is no separate accounting for time spent on the wait queue.</p><p>&nbsp;When a CPU cap is set for a project or zone, the kernel continously keeps track of the CPU time used by all user threads within capped zones and projects over a short time interval and calculates their current CPU usage as a percentage. When the accumulated usage reaches the cap, LWPs running in the user-land (when they are not holding any critical kernel locks) are placed on special <em>wait queues</em> until their project's or zone's CPU usage drops below the cap.</p><p>&nbsp;The system maintains a list of all capped projects and all capped zones. On every clock tick every active thread belonging to a capped project adds total accumulated CPU usage for this thread since it was last checked to its project. The threads on-CPU time is also added to its project when a thread is leaving CPU or is exiting. On every clock tick the current project usage value is decayed by one per cent of its value. Usage from all projects belonging to a capped zone is aggregated to get the zone usage. All accounting uses thread micro-state accounting data.</p><p>&nbsp;When the current CPU usage is above the cap, a project or zone is considered over-capped. Every user thread caught running in an over-capped project or zone is marked by setting TS_PROJWAITQ flag in thread's t_schedflag field and is requested to surrender its CPU. This causes scheduling class specific CL_TRAP() callback to be invoked. The callback function places threads marked as TS_PROJWAIT on a <em>wait queue</em> and calls switch().</p><p>&nbsp;An important design decision is to only put threads on wait queues after being trapped in the user-land (they could be holding some user locks, but no kernel locks) and while returning from the trap back to the user-land when no kernel locks are held either. Putting threads on wait queues in random places while running in the kernel might lead to all kinds of locking problems.</p><h1 id="HDatastructures"><span>Data structures</span></h1><p>&nbsp;Previous section described the overall CPU caps implementation. Here we describe the major data structures used in the implementation. The two major data structures are the cpucap structure (<span class="wikilink"><a href="#sec:cpucap">3.1</a></span>) and the <em>wait queue</em> structure (<span class="wikilink"><a href="#sec:waitq">3.2</a></span>). We also introduce the caps_sc data structure (<span class="wikilink"><a href="#sec:caps:sc">3.3</a></span>) used to hold per-thread caps-specific data for its scheduling class.</p><h2 id="Hcpucap"><span>cpucap</span></h2><p>&nbsp;Most of the per-project or per-zone state related to CPU caps is kept in the following cpucap structure:</p><pre>
+
+typedef struct cpucap {
+    kproject_t  *cap_project;
+    zone_t      *cap_zone;
+    list_node_t cap_link;
+    int64_  t   cap_value;
+    int64_t     cap_usage;
+    disp_lock_t cap_usagelock;
+    uint_t      cap_flags;
+    waitq_t     cap_waitq;
+    uint64_t    cap_below;
+    uint64_t    cap_above;
+    kstat_t     *cap_kstat;
+} cpucap_t;
+
+</pre><p>&nbsp;The fields of this structure have the following meaning:</p><dl><dt><strong>cap_project</strong></dt><dd>points to the project for which the cap is set;</dd><dt><strong>cap_zone</strong></dt><dd>points to the zone for which the cap is set;</dd><dt><strong>cap_link</strong></dt><dd>links caps in a list;</dd><dt><strong>cap_value</strong></dt><dd>the actual cap value, expressed in nanoseconds per tick;</dd><dt><strong>cap_usage</strong></dt><dd>current CPU usage, associated with the cap, expressed in nanoseconds per tick;</dd><dt><strong>cap_usagelock</strong></dt><dd>dispatcher lock protecting the cap_usage field;</dd><dt><strong>cap_flags</strong></dt><dd>describes the state of the cap. It can have the following bits set:</dd><dt><strong>CAP_ACTIVE</strong></dt><dd>- this cap is enabled</dd><dt><strong>CAP_ZONE</strong></dt><dd>- this is the zone cap</dd><dt><strong>CAP_PROJECT</strong></dt><dd>- this is the project cap</dd><dt><strong>CAP_REACHED</strong></dt><dd>- the cap usage have reached the cap value</dd><dt><strong>cap_waitq</strong></dt><dd><em>wait queue</em>, associated with the cap (see <span class="wikilink"><a href="#sec:waitq">3.2</a></span>);</dd><dt><strong>cap_below</strong></dt><dd>number of ticks spent below the cap;</dd><dt><strong>cap_above</strong></dt><dd>number of ticks spent above the cap;</dd><dt><strong>cap_kstat</strong></dt><dd>per-cap kstat pointer.</dd></dl><p>&nbsp;The cpucap structure is associated with the project or zone the first time a cap is set for that project or zone. The cap_flags field tells whether this is a project or zone cap. For project caps the cap_project field points to the associated project and for zone caps the cap_zone field points to the associated zone.</p><p>&nbsp;All enabled project caps are linked together in a single list called capped_projects and all enabled zone caps are linked together in a single list called capped_zones. Both lists are protected with the caps_lock mutex. The lists are traversed by the clock thread and are modified when the cap is modified or removed, so there is usually no lock contention for the mutex.</p><p>&nbsp;When a zone cap is enabled, all projects belonging to that zone are also automatically enabled, but they have a special cap_value of zero. If a project already has its own cap, its cap value is unchanged when its zone gets a cap as well. Projects with a cap value of zero participate in CPU usage accounting for the zone, but are never used to enforce a cap.</p><p>&nbsp;Whenever an LWP looses its CPU, its on-CPU time, obtained from micro-state accounting data, is added to its project usage. Also, for any thread found on CPU during clock() thread scan, its new CPU usage is added to its project usage.</p><p>&nbsp;During each clock tick, the clock() calls the cpucaps_clock_callout() function which scans all capped project and decays each cap usage by one per cent of its value. For caps belonging to capped zones, it also aggregates the cap usage into their zone cap. The cpucaps_clock_callout() function also sets or clears the CAP_REACHED flag if the cap usage is above or below the cap, respectively. If the cap is not reached and there are threads waiting on its <em>wait queue</em>, a single thread is removed from the wait queue and is made runnable. Note that only one threads is relased from the wait queue per clock tick. This slows down the potential load increase and prevents system thrashing when threads are constantly put on and off wait queues.</p><p>&nbsp;Each cap keeps some statistics that it exports through <em>kstats</em>. Currently it exports the time spent below and above the cap. The time is calculated in ticks, but is exported in seconds. Kstats are only present for enabled caps and allow users and administrators to check what caps are enabled, what their value and CPU usage is and how much time LWPs they spend above and below the cap. They also show the maximum CPU usage reached.</p><p>&nbsp;Most of the fields in the cpucap structure are protected by the caps_lock mutex. The cap_usage field is protected by cap_usagelock dispatcher lock.</p><h2 id="HWaitQueues"><span>Wait Queues</span></h2><p>&nbsp;CPU Caps introcude the notion of the <em>wait queue</em>. This queue hosts threads sorted in priority order while they can't run because their project or zone CPU usage exceeded its cap limits. <em>Wait queues</em> are always associated with a cpucap structure (see <span class="wikilink"><a href="#sec:cpucap">3.1</a></span>). The wait queue has the following definition:</p><pre>
+
+typedef struct waitq {
+    disp_lock_t wq_lock;
+    kthread_t   *wq_first;
+    int         wq_count;
+    boolean_t   wq_blocked;
+} waitq_t;
+
+</pre><p>&nbsp;Here is the description of the various fields of the wait queue structure:</p><dl><dt><strong>wq_lock</strong></dt><dd>protects all operations on the wait queue. When a thread is placed on the wait queue, its thread lock is replaced by the wq_lock of the queue it is enqueued to.</dd><dt><strong>wq_first</strong></dt><dd>is the pointer to the first thread on the queue.</dd><dt><strong>wq_count</strong></dt><dd>is the counter of threads in the queue. The caps code polls this value every clock tick without holding any locks, trying to make one thread from a wait queue runnable if the load drops below the cap.</dd><dt><strong>wq_blocked</strong></dt><dd>A flag, indicating whether any new threads can be placed on the wait queue. When the CPU cap of a project or zone is disabled, its wait queue is blocked. Any attempts by scheduling class code to enqueue threads on the wait queue will fail. This ensures that no threads are placed on any wait queue of a project or zone which does not have a cap set.</dd></dl><p>&nbsp;The <em>wait queue</em> is very similar to the <em>sleep queue</em> and uses the same mechanism to provide list of threads sorted by priority order.</p><p>&nbsp;A wait queue is a singly linked NULL-terminated list with doubly linked circular sublists. The singly linked list is in descending priority order and FIFO for threads of the same priority. It links through the t_link field of the thread structure. The doubly linked sublists link threads of the same priority. They use the t_priforw and t_priback fields of the thread structure.</p><h3 id="HWaitQueueManipulation"><span>Wait Queue Manipulation</span></h3><p>&nbsp;There are three interesting operations on a waitq list: inserting a thread into the proper position according to priority; removing a thread given a pointer to it; and walking the list, possibly removing threads along the way. This design allows all three operations to be performed efficiently and easily.</p><p>&nbsp;To insert a thread, traverse the list looking for the sublist of the same priority as the thread (or one of a lower priority, meaning there are no other threads in the list of the same priority). This can be done without touching all threads in the list by following the links between the first threads in each sublist. Given a thread t that is the head of a sublist (the first thread of that priority found when following the t_link pointers), t-&gt;t_priback-&gt;t_link points to the head of the next sublist. It's important to do this since a waitq may contain lots of threads.</p><p>&nbsp;Removing a thread from the list is also efficient. First, the t_waitq field contains a pointer to the waitq on which a thread is waiting (or NULL if it's not on a waitq). This is used to determine if the given thread is on the given waitq without searching the list. Assuming it is, if it's not the head of a sublist, just remove it from the sublist and use the t_priback pointer to find the thread that points to it with t_link. If it is the head of a sublist, search for it by walking the sublist heads, similar to searching for a given priority level when inserting a thread.</p><p>&nbsp;To walk the list, simply follow the t_link pointers. Removing threads along the way can be done easily if the code maintains a pointer to the t_link field that pointed to the thread being removed.</p><h3 id="HWaitQueueInterface"><span>Wait Queue Interface</span></h3><p>&nbsp;Each project and zone cap has its own wait queue. The project wait queue is preferred over the zone wait queue so when both the project and zone caps are reached the thread is placed on the project wait queue since project usage is usually more accurate. Threads on the wait queue are considered to be in the TS_WAIT state. The wait queue abstraction provides the following interface:</p><ul><li>waitq_enqueue(waitq_t *, kthread_t *)<br/>&nbsp;Place the thread on the wait queue. An attempt to enqueue a thread onto a <em>blocked</em> queue fails and returns zero. Successful enqueue returns non-zero value.</li><li>waitq_setrun(kthread_t *t)<br/>&nbsp;Take thread off its wait queue and make it runnable.</li><li>waitq_runone(waitq_t *)<br/>&nbsp;Take the first thread off the wait queue and make it runnable.</li><li>waitq_block(waitq_t *)<br/>&nbsp;Block the wait queue, than take all threads off the waitq and make them runnable.</li><li>waitq_unblock(waitq_t *)<br/>&nbsp;Unblock the wait queue.</li><li>waitq_isempty(waitq_t *)<br/>&nbsp;Return <em>True</em> if the wait queue has no threads on it, <em>False</em> otherwise. The check is performed without holding any locks.</li></ul><p>&nbsp;Threads on wait queues are marked as non-swappable to avoid having situations where a thread is on the wait queue but it can't be made runnable quickly. The same thing happens for threads on the run queues, and wait queues are viewed as another place where threads are not supposed to spend a lot time on. Threads can be swapped out when they become runnable again.</p><h2 id="HThecaps_scstructure"><span>The caps_sc structure</span></h2><p>&nbsp;There is a small amount of accounting data that should be kept by each scheduling class for each thread which is only used by CPU caps code. This data is kept in the caps_sc structure which is transparent for all scheduling classes:</p><pre>
+
+typedef struct caps_sc {
+    clock_t    csc_timestamp;
+    hrtime_t   csc_cputime;
+} caps_sc_t;
+
+</pre><p>&nbsp;The structure has the following fields:</p><dl><dt><strong>csc_timestamp</strong></dt><dd>time stamp taken the last time the structure was updated.</dd><dt><strong>csc_cputime</strong></dt><dd>Total time spent on CPU during thread lifetime, obtained as the sum of <em>user</em>, <em>system</em> and <em>trap</em> time, reported by microstate accounting.</dd></dl><p>&nbsp;The caps_sc structure is used to keep track of the CPU usage by using micro-state accounting data.</p><p>&nbsp;Whenever LWPs is switched off its CPU (by going through TS_PREEMPT() or TS_SLEEP or TS_EXIT) scheduling classes call the cpucaps_charge_adjust() function which does the following:</p><pre>
+
+void
+cpucaps_charge_adjust(kthread_t *t,
+  caps_sc_t *csc)
+{
+  clock_t     timestamp = lbolt;
+  uint64_t    usage = mstate_thread_onproc_time(t);
+  clock_t     delta = timestamp -
+                csc-&gt;csc_timestamp;
+
+  /*
+   * Check what time is it now and when
+   * was the last  time we charged this
+   * thread. If the delta is within two
+   * seconds, trust the data, otherwise
+   * discard it as stale.
+   */
+  if (delta &gt;= 0 &amp;&amp;
+      delta &lt;= two_seconds_tck) {
+    int64_t usage_delta = usage -
+           csc-&gt;csc_cputime;
+    if (usage_delta &gt; 0) {
+      kproject_t *kpj = ttoproj(t);
+      cap_project_charge(kpj-&gt;kpj_cpucap,
+                         usage_delta);
+    }
+  }
+  csc-&gt;csc_timestamp = timestamp;
+  csc-&gt;csc_cputime = usage;
+}
+
+</pre><p>&nbsp;This function is also called once per tick for all running threads.</p><h2 id="HLocking"><span>Locking</span></h2><ul><li>The caps_status flag is protected by caps_lock.</li><li>Lists of projects and zone caps are protected by caps_lock</li><li>Wait queues are protected by per wait queue disp lock.</li><li>Wait queue count is protected by wait queue lock.</li><li>Wait queue lock can be grabbed while holding caps_lock.</li></ul><h1 id="HInterfaces"><span>Interfaces</span></h1><p>&nbsp;The CPU Caps facility provides the following interfaces to the rest of the system:</p><ul><li>cpucaps_project_add()<br/>&nbsp;Set project cap of the specified project to the specified value. Setting the value to MAXCAP is equivalent to removing the cap.</li><li>cpucaps_project_remove()<br/>&nbsp;Remove the association between the specified project and its cap.</li><li>cpucaps_zone_set()<br/>&nbsp;Set zone cap of the specified zone to the specified value. Setting the value to MAXCAP is equivalent to removing the cap.</li><li>cpucaps_zone_remove()<br/>&nbsp;Remove the association between the specified zone and its cap.</li><li>cpucaps_charge_tick()<br/>&nbsp;Charges specified thread's project for the time it spent on CPU since last checked and return <em>True</em> if project or zone should be penalized because its project or zone is exceeding its cap. Also sets TS_PROJWAITQ or TS_ZONEWAITQ bits in t_schedflag in this case. This function is called by the CL_TICK() scheduling class callback.</li><li>cpucaps_charge_adjust()<br/>&nbsp;Adjusts specified thread's project CPU usage with micro-state accounting data for thread's on-CPU time. See <span class="wikilink"><a href="#sec:caps:sc">3.3</a></span>.</li><li>cpucaps_enforce()<br/>&nbsp;Enforces CPU caps for a specified thread. Places LWPs running in LWP_USER state on project or zone wait queues, as requested by TS_PROJWAITQ or TS_ZONEWAITQ bits in t_schedflag. Returns <em>True</em> if the thread was placed on a wait queue or <em>False</em> otherwise.</li><li>cpucaps_sc_init()<br/>&nbsp;Initializes the scheduling-class specific CPU Caps data for a thread.</li></ul><p>&nbsp;In addition, the following two macros are provided to quickly check whether the any caps are set or not:</p><dl><dt><strong>CPUCAPS_ON()</strong></dt><dd><em>True</em> if there are any enabled caps;</dd><dt><strong>CPUCAPS_OFF</strong></dt><dd><em>True</em> if there are no enabled caps.</dd></dl><h1 id="HImplementationdetails"><span>Implementation details</span></h1><h2 id="HSchedulingClassSupport"><span>Scheduling Class Support</span></h2><p>&nbsp;CPU caps are supported by TS/IA, FSS, and FX scheduling classes only. Real-time (RT) scheduling class threads cannot be capped (or more accurately, caps defined for RT threads will have no effect). Each scheduling class, supporting CPU caps should provide the following:</p><ul><li>CL_TICK() processing: on every clock tick each participating scheduling class should do the following:<ul><li>Provide per-tick accounting for thread CPU usage by calling cpucaps_charge_tick().</li><li>Make threads belonging to over-charged projects or zones surrender their CPU.</li></ul></li><li>CL_SLEEP(): Account for thread's CPU usage by calling cpucaps_charge_adjust().</li><li>CL_PREEMPT(): Account for thread's CPU usage by calling cpucaps_charge_adjust(). For threads belonging to zones/projects exceeding their cap and preempted in user mode should be placed on the project or zone wait queue.</li><li>CL_EXIT() Account for thread's CPU usage for time thread spent on CPU before exiting. This is important to improve accuracy in charging project/zones with many short-running threads.</li></ul><p>&nbsp;The CPU caps code provides common functions for scheduling classes to perform these tasks.</p><p>&nbsp;Once per tick the CL_TICK() callback should call the cpucaps_charge() function and pass it a pointer to a thread and a pointer to the caps_sc structure. The function returns <em>True</em> if the thread should be surrender its CPU because of cap violation and also sets TS_PROJWAITQ and TS_ZONEWAITQ bits in the t_schedflag field for the thread if it project and/or zone caps are violated.</p><p>&nbsp;The cpucaps_enforce() function, called by CL_PREEMPT() class methods, is responsible for actually placing threads on wait queues. It returns True if the thread passed as an argument was placed on wait queue and False otherwise.</p><h2 id="HCapsandFSS"><span>Caps and FSS</span></h2><p>&nbsp;Threads running in FSS class whose time quantums have not yet expired but which should be put on wait queues because their project/zone caps is reached need to have their priority recalculated because their priority, in part, depends on the overall CPU usage of the project they belong to. The FSS code is trying to simulate the same behavior as if thread's time quantum have just expired.</p><h2 id="HAccounting"><span>Accounting</span></h2><p>&nbsp;All CPU caps accounting is done by adding LMS_USER, LMS_SYSTEM and LMS_TRAP micro-state accounting buckets. Any inaccuracy in the micro-state accounting data will influence the accuracy of the CPU caps mechanism<span class="wikilink"><a href="#foot292">3</a></span>.</p><p>&nbsp;It is extremely important to avoid over-accounting. Since project usage is an aggregate of threads usage and number of running threads may be huge, a small per-thread over-accounting adds up in the project and zone usage. As a result, the usage may become very high and this will cause all running threads to be placed on the wait queue. When the usage decays below the cap value, threads will be released from the wait queue and the cycle may repeat, creating load thrashing. Doing accounting updates in small increments whenever thread lives CPU and, in addition to that, once per tick, avoids this problem.</p><h2 id="HAccuracy"><span>Accuracy</span></h2><p>&nbsp;The accounting accuracy depends on the micro-state data and reflects whatever inaccuracies are present there. Since usage for a project is aggregated over all threads, any accounting error is a sum of per-thread error and may become significant when the number of threads is high.</p><h2 id="HDecay"><span>Decay</span></h2><p>&nbsp;CPU usage is decayed by the caps_update() routine which is called once per every clock tick. It walks lists of project caps and decays their usages. If CPU usage drops below cap levels, threads on wait queues are made runnable again, one thread per clock tick. When caps are removed, all threads on wait queue are made runnable immediately.</p><h2 id="HObservability"><span>Observability</span></h2><p>&nbsp;The CPU caps implementation provides two facilities for the observability. One is the per cap kstat which shows aggregated project and zone information. Another is the extension of the DTrace sched provider for wait queues:</p><dl><dt><strong>cpucaps-sleep</strong></dt><dd>Probe that fires immediately before the current thread is placed on a wait queue. The lwpsinfo_t of the waiting thread is pointed to by args[0]. The psinfo_t of the process containing the waiting thread is pointed to by args[1].</dd><dt><strong>cpucaps-wakeup</strong></dt><dd>Probe that fires immediately after a thread is removed from a wait queue. The lwpsinfo_t of the waiting thread is pointed to by args[0]. The psinfo_t of the process containing the waiting thread is pointed to by args[1].</dd></dl><p>&nbsp;Internally, the probe contains a single pointer to a thread as an argument and this pointer can be used to find the cap structure, controlling the thread.</p><h2 id="HThreadStates"><span>Thread States</span></h2><p>&nbsp;A new TS_WAIT thread state is introduced for threads placed on the wait queue. This state can only be entered from the TS_ONPROC state. Threads in the TS_WAIT state can only transition to the TS_RUN and (less frequently) TS_ONPROC states. The state can be checked while holding thread lock. From the userland, /proc's lwpsinfo structure will report pr_sname set to ``W'' for threads sitting on the wait queues.</p><h2 id="HAvoidingCPUpreferences"><span>Avoiding CPU preferences</span></h2><p>&nbsp;The clock() function should walk the list of CPUs starting from different places. If clock() always walk the list of CPUs starting from the same CPU with CPU caps present in a steady case when the usage is waving around the cap level, threads running on CPUs that are closer to the head of the list are more likely to be placed on wait queues. This problem is avoided by making clock() walk the list of CPUs in more random order.</p><h1 id="HIssues"><span>Issues</span></h1><ul><li>Dedicated micro-state for wait queues.<br/>&nbsp;One of the design issues is around whether a new micro-state should be added or not. Right now, LMS_WAIT_CPU micro-state is used to keep track of both on-waitq and on-runq CPU times. Adding a new micro-state in an update release may be impossible due to compatibility reasons.<br/>&nbsp;Given the difficulty of extending the micro-state accounting facility and other observability hooks provided by the project we feel that is not very important, at least at the moment, to provide a separate accounting for time spent on wait queues.</li><li>Clock rate<br/>&nbsp;Increasing clock() rate might improve accuracy, but it requires careful analysis as it might impact performance on large SMP systems where clock has to do many more things; it might also have negative impact on power consumption on laptops. As one data point, Linux have gone from 100 to 1000 clock rate, and then fell back to 500 times/second.</li><li>Interrupts and pinned threads<br/>&nbsp;Threads which get pinned by interrupt threads don't change their micro-states. Clock tick processing won't happen for pinned threads, but it might look like they've used more CPU time than they actually did just by looking at their micro-state counters. This is a generic micro-state accounting problem though.</li><li>Scalability<br/>&nbsp;Traversing a global list of projects and zones may present a scalability problem when the number of zones or projects in the system is high. We may need more careful algorithms to provide scalable solution in this case.</li></ul><h1 id="HRelatedBugs"><span>Related Bugs</span></h1><dl><dt><strong><span class="wikiexternallink"><a href="http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6464123">6464123</a></span>&nbsp;</strong></dt><dd>nice(2) mechanism may starve threads of CPUs</dd><dt><strong><span class="wikiexternallink"><a href="http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6464127">6464127</a></span>&nbsp;</strong></dt><dd>Time obtained from microstate accounting may go backwards</dd><dt><strong><span class="wikiexternallink"><a href="http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6464161">6464161</a></span>&nbsp;</strong></dt><dd>Dead KSLICE code should be removed</dd><dt><strong><span class="wikiexternallink"><a href="http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6466380">6466380</a></span>&nbsp;</strong></dt><dd>Project resource set callbacks are needlessly called on every fork()</dd><dt><strong><span class="wikiexternallink"><a href="http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6468003">6468003</a></span>&nbsp;</strong></dt><dd>prctl should support the notion of default and infinity</dd><dt><strong><span class="wikiexternallink"><a href="http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6468451">6468451</a></span>&nbsp;</strong></dt><dd>Errors from setting resource controls should propagate to the caller</dd><dt><strong><span class="wikiexternallink"><a href="http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6194864">6194864</a></span>&nbsp;</strong></dt><dd>simultaneous setproject()'s on the same project can fail to set rctl</dd><dt><strong><span class="wikiexternallink"><a href="http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6498304">6498304</a></span>&nbsp;</strong></dt><dd>too much CPU time winding up in LMS_WAIT_CPU</dd></dl><h2 id="HBibliography"><span>Bibliography</span></h2><p>:</p><dl><dt>1</dt><dd>&nbsp;CPU caps web page on OpenSolaris.org<br/><span class="wikilink"><a href="/bin/view/Project+rm/cpu%2Dcaps"><span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://www.opensolaris.org/os/project/rm/rctls/cpu-caps/"><span class="wikigeneratedlinkcontent">http://www.opensolaris.org/os/project/rm/rctls/cpu-caps/</span></a></span></a></span></dd><dt>2</dt><dd>&nbsp;Implementation description<br/><span class="wikilink"><a href="/bin/view/Project+rm/caps_implementation"><span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://www.opensolaris.org/os/project/rm/rctls/cpu-caps/caps_implementation/"><span class="wikigeneratedlinkcontent">http://www.opensolaris.org/os/project/rm/rctls/cpu-caps/caps_implementation/</span></a></span></a></span>.</dd><dt>3</dt><dd>&nbsp;PSARC/2006/496 Improved Zones/RM Integration<br/><span class="wikiexternallink"><a href="http://sac.sfbay.sun.com/PSARC/2006/496"><span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://sac.sfbay.sun.com/PSARC/2006/496"><span class="wikigeneratedlinkcontent">http://sac.sfbay.sun.com/PSARC/2006/496</span></a></span></a></span><br/><span class="wikicreatelink"><a href="/bin/create/Community+Group+arc/496?parent=Project+rm.caps_implementation"><span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://www.opensolaris.org/os/community/arc/caselog/2006/496"><span class="wikigeneratedlinkcontent">http://www.opensolaris.org/os/community/arc/caselog/2006/496</span></a></span></a></span></dd><dt>4</dt><dd>PSARC 2006/598 Swap resource control; locked memory RM improvements.<br/><span class="wikiexternallink"><a href="http://sac.sfbay.sun.com/PSARC/2006/598"><span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://sac.sfbay.sun.com/PSARC/2006/598"><span class="wikigeneratedlinkcontent">http://sac.sfbay.sun.com/PSARC/2006/598</span></a></span></a></span><br/><span class="wikicreatelink"><a href="/bin/create/Community+Group+arc/598?parent=Project+rm.caps_implementation"><span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://www.opensolaris.org/os/community/arc/caselog/2006/598"><span class="wikigeneratedlinkcontent">http://www.opensolaris.org/os/community/arc/caselog/2006/598</span></a></span></a></span></dd></dl><hr/><h4 id="HFootnotes"><span>Footnotes</span></h4><dl><dt>... procfs<span class="wikilink"><a href="#tex2html1">1</a></span></dt><dd>See pr_wtime field of struct prusage in <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/816-5174/6mbb98uiq?a=view">proc(4)</a></span> .</dd><dt>... state<span class="wikilink"><a href="#tex2html3">2</a></span></dt><dd>Currently there is a fixed set of micro-state accounting types. Any extension of this set will cause offsets of fields in data structures, embedding micro-state data, to change.</dd><dt>... mechanism<span class="wikilink"><a href="#tex2html5">3</a></span></dt><dd>An interesting discrepancy in CPU accounting data for threads with very high dispatcher activity was discovered during CPU caps development. See bug <span class="wikiexternallink"><a href="http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6498304">6498304</a></span> for interesting details.</dd></dl><hr/><p>&nbsp;Alexander Kolbasov 2006-12-15</p>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:17<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by admin on 2009/10/26 12:17
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Project rm Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+rm/docs">Documentation and Examples</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/pools">Resource Pools</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+rm/msets">Memory Sets</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/poolsui">Usability Enhancements</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/rctls">Resource Controls</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+rm/cpu%2Dcaps">CPU caps</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/sysv">System V IPC</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/zones">RM for Zones</a></span></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2012, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

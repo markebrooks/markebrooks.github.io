@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <title>
+                  Tickless Kernel Architecture (Project tickless.WebHome) - XWiki
+              </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="imagetoolbar" content="no"/>
+                <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+tickless/WebHome" />
+                        <meta name="document" content="Project tickless.WebHome"/>
+    <meta name="space" content="Project tickless"/>
+    <meta name="page" content="WebHome"/>
+        <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Tickless Kernel Architecture" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="esaxe" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+
+        <!-- com.xpn.xwiki.plugin.skinx.LinkExtensionPlugin -->
+    <link href="/bin/skin/skins/oso/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/oso/os_base1.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/oso/print.css" rel="stylesheet" type="text/css" media="print" />
+        
+
+
+    
+
+    <link href="/resources/js/xwiki/fullscreenedit/fullscreenEdit.css" rel="stylesheet" type="text/css" />
+<link href="/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript">
+var script1 = document.createElement('script')
+script1.src = "/resources/js/prototype/prototype.js"
+var script2 = document.createElement('script')
+script2.src = "/bin/skin/resources/js/xwiki/xwiki.js"
+var script3 = document.createElement('script')
+script3.src = "/resources/js/xwiki/suggest/ajaxSuggest.js"
+document.getElementsByTagName('head')[0].appendChild(script1);
+document.getElementsByTagName('head')[0].appendChild(script2);
+document.getElementsByTagName('head')[0].appendChild(script3);
+</script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.editor = "";
+XWiki.viewer = "";
+// ]]>
+</script>
+
+
+
+  </head>
+    	<body id="body" class="xwiki viewbody hideright">
+  <!-- These elements will be closed in the footer vm file -->
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+
+  <br/>
+  <br/>
+  <div id="Masthead">
+    <h1><a href="/bin/view/Main/">OpenSolaris</a></h1>
+    <a href="/bin/view/Main/" id="MastheadLogo"></a>
+    <a href="/bin/view/Main/" title="Home" rel="home"></a>
+    <div id="Iconbar">
+	<a id="CollectivesIcon" href="/bin/view/Main/collectives">Collectives</a>
+	<a id="DiscussionsIcon" href="/bin/view/Main/discussions">Discussions</a>
+	<a id="DocumentationIcon" href="/bin/view/Main/documentation">Documentation</a>
+	<a id="DownloadIcon" href="/bin/view/Main/downloads">Download</a>
+	<a id="SourceBrowserIcon" href="http://src.opensolaris.org">Source Browser</a>
+	<a id="FreeCD" href="http://www.opensolaris.org/os/TryOpenSolaris/">Free CD</a>
+    </div>
+  </div>
+
+
+ <div class="layoutsection">
+<div class="minwidthb"></div>
+
+    <div style="text-align:right;">
+      <a class="glink" href="http://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Btickless%2F%3Flanguage%3D" id="headerlogin">Log-in</a><span class="separator"> | </span>
+  <span class="glink" id="headerlanguages">
+  <a href="/bin/view/Project+tickless/?language="></a>
+    </span>
+    </div> 
+</div>
+
+ <div id="headerspace" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+  <div id="breadcrumbs">
+    <span class="breadcrumbspace"><a href="/bin/view/Project+tickless/">Project tickless</a>: </span>
+<a href='/bin/view/Project+tickless/'>Tickless Kernel Architecture</a>
+  </div>
+<hr/>
+</div>
+
+
+<div id="menuview"> 
+  <div id="actionmenu" class="layoutsubsection">
+<h3 id="xwikimenutitle" class="hidden">Top Menu</h3>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+<div class="topmenuentry" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmShow">
+<a class="tme"  href="/bin/view/Project+tickless/?viewer=code" ><strong>Show</strong></a><span class="hidden menucolon">: </span><span class="submenu hidden">
+<span class="submenuitem"><a href="/bin/view/Project+tickless/?viewer=comments" id="tmShowComments">Comments</a></span>
+<span class="submenuitem"><a href="/bin/view/Project+tickless/?viewer=attachments" id="tmShowAttachments">Attachments</a></span>
+<span class="submenuitem"><a href="/bin/view/Project+tickless/?viewer=history" id="tmShowHistory">History</a></span>
+<span class="submenuitem"><a href="/bin/view/Project+tickless/?viewer=information" id="tmShowInformation">Information</a></span>
+</span></div>
+ <div class="topmenuentry" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmPrint">
+<a class="tme"  href="javascript:window.print()" ><strong>Print</strong></a><span class="hidden menucolon">: </span><span class="submenu hidden">
+<span class="submenuitem"><a href="javascript:window.print()" id="tmPrintAction">Print</a></span>
+<span class="submenuitem"><a href="/bin/view/Project+tickless/?xpage=print" id="tmPrintPreview">Print preview</a></span>
+<span class="submenuseparator">&nbsp;</span>
+<span class="submenuitem"><a href="/bin/export/Project+tickless/WebHome?format=pdf" id="tmExportPdf">Export as PDF</a></span>
+<span class="submenuitem"><a href="/bin/export/Project+tickless/WebHome?format=rtf" id="tmExportRtf">Export as RTF</a></span>
+<span class="submenuitem"><a href="/bin/export/Project+tickless/WebHome?format=html" id="tmExportHtml">Export as HTML</a></span>
+<span class="submenuitem"><a href="/bin/export/Project+tickless/WebHome?format=xar&amp;name=Project+tickless.WebHome&amp;pages=Project+tickless.WebHome" id="tmExportXar">Export as XAR</a></span>
+</span></div>
+</div>
+</div>
+
+</div>
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+<div class="minwidthb"></div>
+<div class="main layoutsubsection">
+<div id="xwikicontent">
+<h2 id="HTicklessKernelArchitecture"><span>Tickless Kernel Architecture</span></h2><h3 id="HOverview"><span>Overview</span></h3><p>By default, the clock cyclic fires at 100 Hz, regardless of whether or not any timeouts/callouts are scheduled to fire/expire. This is suboptimal from a power efficiency standpoint, as at least one of the system's CPUs never become quiescent/idle enough to be brought into a low power state.</p><p>This work involves re-implementing the services presently provided by clock() in a tickless (or event based) fashion, eliminating the need for the system to "wake up", only to realize that there's nothing to do on an otherwise idle system.</p><h3 id="HTasks"><span>Tasks</span></h3><p>Please have a look at the <!--startwikilink:Project tickless.tasks--><span class="wikilink"><a href="/bin/view/Project+tickless/tasks">Tasks</a></span><!--stopwikilink--> page and it's child pages for more information on the implementation of this project.</p><h3 id="HGettingInvolved"><span>Getting Involved</span></h3><p>&nbsp;If you would like to be involved with this project, the best way to get started is to join the project development mailing list, and introduce yourself (who you are, what you do, what interests you about this project, etc). If there is something in particular you a looking for, please feel free to ask.</p><h3 id="HProjectMailAliases"><span>Project Mail Aliases</span></h3><p>&nbsp;tickless-dev@opensolaris.org is the project's primary development mailing list. Please feel free to subscribe.</p><ul><li><strong><!--startwikilink:http://mail.opensolaris.org/mailman/listinfo/tickless-dev--><span class="wikiexternallink"><a href="http://mail.opensolaris.org/mailman/listinfo/tickless-dev">Subscribe</a></span><!--stopwikilink--></strong></li><li><strong><!--startwikilink:http://mail.opensolaris.org/mailman/listinfo/tickless-dev--><span class="wikiexternallink"><a href="http://mail.opensolaris.org/mailman/listinfo/tickless-dev">Unsubscribe</a></span><!--stopwikilink--></strong></li><li><strong><!--startwikilink:http://mail.opensolaris.org/mailman/listinfo/tickless-dev--><span class="wikiexternallink"><a href="http://mail.opensolaris.org/mailman/listinfo/tickless-dev">Change your subscription options</a></span><!--stopwikilink--></strong></li><li><strong><!--startwikilink:http://mail.opensolaris.org/pipermail/tickless-dev/--><span class="wikiexternallink"><a href="http://mail.opensolaris.org/pipermail/tickless-dev/">View the list archives</a></span><!--stopwikilink--></strong></li></ul><h3 id="HDevTeamMeetings"><span>Dev Team Meetings</span></h3><p>&nbsp;The tickless development team has a weekly team meeting that is a forum for technical discussion, sharing progress, and discussing issues. The meeting is open to anyone interested in participating. Here are the details:</p><ul><li>When: Tuesdays, 10:30 - 11:30 AM Pacific</li><li>Where: MPK17-3445 (Telegraph Hill) Concall: (866) 651-9314 code: 6160454</li></ul><h3 id="HDocumentsPresentations"><span>Documents / Presentations</span></h3><ul><li><!--startwikilink:attach:ticklesstickoff.pdf--><span class="wikiexternallink"><a href="/bin/download/Project+tickless/WebHome/ticklesstickoff.pdf">"Kick Off" Meeting Presentation</a></span><!--stopwikilink--></li><li><!--startwikilink:attach:ticklesskernelericsaxe.pdf--><span class="wikiexternallink"><a href="/bin/download/Project+tickless/WebHome/ticklesskernelericsaxe.pdf">OSDevCon 2009 Presentation</a></span><!--stopwikilink--></li></ul><h3 id="HVideos"><span>Videos</span></h3><h3 id="HBugIDs"><span>Bug IDs</span></h3><ul><li>The following are the list of bug ids existing in Bugster (Sun's internal bug database that track the tickless work.<ul><li><!--startwikilink:http://bugs.opensolaris.org/view_bug.do?bug_id=6567390--><span class="wikiexternallink"><a href="http://bugs.opensolaris.org/view_bug.do?bug_id=6567390">6567390</a></span><!--stopwikilink--> clock efficiency optimizations ("tickless clock")</li></ul></li><li>Click <!--startwikilink:http://defect.opensolaris.org/bz/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&product=power-mgmt&component=Tickless+-+clock+misc&component=tickless+lbolt&component=tickless+tick+accounting&component=tickless+time+sync&long_desc_type=substring&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ACCEPTED&bug_status=CAUSEKNOWN&bug_status=FIXUNDERSTOOD&bug_status=FIXINPROGRESS&bug_status=REOPENED&emailassigned_to1=1&emailtype1=substring&email1=&emailassigned_to2=1&emailreporter2=1&emailqa_contact2=1&emailcc2=1&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=--><span class="wikiexternallink"><a href="http://defect.opensolaris.org/bz/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;product=power-mgmt&amp;component=Tickless+-+clock+misc&amp;component=tickless+lbolt&amp;component=tickless+tick+accounting&amp;component=tickless+time+sync&amp;long_desc_type=substring&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ACCEPTED&amp;bug_status=CAUSEKNOWN&amp;bug_status=FIXUNDERSTOOD&amp;bug_status=FIXINPROGRESS&amp;bug_status=REOPENED&amp;emailassigned_to1=1&amp;emailtype1=substring&amp;email1=&amp;emailassigned_to2=1&amp;emailreporter2=1&amp;emailqa_contact2=1&amp;emailcc2=1&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">here</a></span><!--stopwikilink--> for the Tickless kernel project's list of open development bugs. These are tracked in bugzilla.</li></ul>
+</div>
+
+<div id="xwikidata" class="layoutsubsection">
+                          <div class="about">
+<span id="aboutauthor">last modified by esaxe</span>
+<span id="aboutdate">on 2009/11/10 18:24</span>
+</div>
+</div>  
+<div class="clearfloats"></div>
+</div>    </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded Search">
+<h5 class="xwikipaneltitle hidden" onclick="togglePanelVisibility(this.parentNode);">Search</h5>
+<div class="xwikipanelcontents">
+  <form action="/bin/view/Main/WebSearch">
+    <div id="globalsearch">
+      <input id="globalsearchinput" type="text" name="text" value="search..." size="15" onfocus="if (this.value == 'search...') value=''; this.select();" onblur="if (this.value == '') value='search...'; this.blur()"/>
+&nbsp;
+      <input class="button" value="Go" type="image" src="/skins/oso/go.png"/>
+    </div>
+  </form>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h5 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSDocs','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSDocs'); togglePanelVisibility(this.parentNode);">Project tickless Pages</h5>
+<div class="xwikipanelcontents"><p/>
+                         <span class="wikilink"><a href="#">Tickless Kernel Architecture</a></span>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/Testing">Testing</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/clock_and_lbolt">clock() and lbolt</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/tasks">Tasks</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/ev_load_avg">Event based load avg</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/lbolt">clock() and lbolt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/tick_accting">Tick Accounting</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/time_adj">Time Adjustment</a></span></li>
+</ul></li>
+</ul>
+            </div>
+</div>
+                        
+                        <div class="panel expanded Subsites">
+<h5 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.Subsites','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.Subsites'); togglePanelVisibility(this.parentNode);">Subsites</h5>
+<div class="xwikipanelcontents">
+<span class="wikiexternallink"><a href="http://cr.opensolaris.org">Code Reviews</a></span><br/>
+<span class="wikiexternallink"><a href="http://repo.opensolaris.org">Code Repositories</a></span><br/>
+<span class="wikiexternallink"><a href="http://pkg.opensolaris.org">Package Search</a></span><br/>
+<span class="wikiexternallink"><a href="http://bugs.opensolaris.org">Bugster</a></span><br/>
+<span class="wikiexternallink"><a href="http://defect.opensolaris.org">Bugzilla</a></span><br/>
+<span class="wikiexternallink"><a href="http://test.opensolaris.org">Test Machines</a></span><br/>
+<span class="wikiexternallink"><a href="http://planet.opensolaris.org">Planet</a></span><br/>
+<span class="wikiexternallink"><a href="http://mail.opensolaris.org">Mailing Lists</a></span><br/>
+<span class="wikiexternallink"><a href="http://poll.opensolaris.org">Elections & Polls</a></span><br/>
+<span class="wikiexternallink"><a href="http://arc.opensolaris.org">ARC Case Logs</a></span><br/>
+<span class="wikiexternallink"><a href="http://jucr.opensolaris.org">Source Juicer</a></span><br/>
+<span class="wikiexternallink"><a href="http://pkgfactory.opensolaris.org">Package Factory</a></span><br/>
+<span class="wikiexternallink"><a href="http://auth.opensolaris.org">User Authentication</a></span><br/>
+</div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+  <div id="xwikilicence">&copy; Sun Microsystems Inc. 2009</div>
+          <div id="xwikiplatformversion">XWiki Enterprise 1.8.2.19075 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div> 
+    <div><a href="/bin/view/Main/tou">Terms Of Use</a> |
+         <a href="http://www.sun.com/privacy/">Privacy</a> | 
+         <a href="/bin/view/Main/trademark">Trademarks</a> |
+         <a href="/bin/view/Main/copyrights">Copyright Policy</a> |
+         <a href="/bin/view/Main/site_guidelines">Site Guidelines</a> |
+         <a href="/bin/view/Main/site%2Dmap">Site map</a> |
+         <a href="/bin/view/Main/help">Help</a></div>
+    <div>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.</div>
+<hr/>
+</div>
+
+</div></div></body>
+</html>

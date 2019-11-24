@@ -1,0 +1,1272 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <title>
+                  Firewall framework (Project vpanels.firewall-design) - XWiki
+              </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="imagetoolbar" content="no"/>
+                <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+vpanels/firewall%2Ddesign" />
+                        <meta name="document" content="Project vpanels.firewall-design"/>
+    <meta name="space" content="Project vpanels"/>
+    <meta name="page" content="firewall-design"/>
+        <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Firewall framework" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+
+        <!-- com.xpn.xwiki.plugin.skinx.LinkExtensionPlugin -->
+    <link href="/bin/skin/skins/oso/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/oso/os_base1.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/oso/print.css" rel="stylesheet" type="text/css" media="print" />
+        
+
+
+    
+
+    <link href="/resources/js/xwiki/fullscreenedit/fullscreenEdit.css" rel="stylesheet" type="text/css" />
+<link href="/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript">
+var script1 = document.createElement('script')
+script1.src = "/resources/js/prototype/prototype.js"
+var script2 = document.createElement('script')
+script2.src = "/bin/skin/resources/js/xwiki/xwiki.js"
+var script3 = document.createElement('script')
+script3.src = "/resources/js/xwiki/suggest/ajaxSuggest.js"
+document.getElementsByTagName('head')[0].appendChild(script1);
+document.getElementsByTagName('head')[0].appendChild(script2);
+document.getElementsByTagName('head')[0].appendChild(script3);
+</script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.editor = "";
+XWiki.viewer = "";
+// ]]>
+</script>
+
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js'></script><script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js'></script>
+
+  </head>
+    	<body id="body" class="xwiki viewbody hideright">
+  <!-- These elements will be closed in the footer vm file -->
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+
+  <br/>
+  <br/>
+  <div id="Masthead">
+    <h1><a href="/bin/view/Main/">OpenSolaris</a></h1>
+    <a href="/bin/view/Main/" id="MastheadLogo"></a>
+    <a href="/bin/view/Main/" title="Home" rel="home"></a>
+    <div id="Iconbar">
+	<a id="CollectivesIcon" href="/bin/view/Main/collectives">Collectives</a>
+	<a id="DiscussionsIcon" href="/bin/view/Main/discussions">Discussions</a>
+	<a id="DocumentationIcon" href="/bin/view/Main/documentation">Documentation</a>
+	<a id="DownloadIcon" href="/bin/view/Main/downloads">Download</a>
+	<a id="SourceBrowserIcon" href="http://src.opensolaris.org">Source Browser</a>
+	<a id="FreeCD" href="http://www.opensolaris.org/os/TryOpenSolaris/">Free CD</a>
+    </div>
+  </div>
+
+
+ <div class="layoutsection">
+<div class="minwidthb"></div>
+
+    <div style="text-align:right;">
+      <a class="glink" href="http://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bvpanels%2Ffirewall%252Ddesign%3Flanguage%3Den" id="headerlogin">Log-in</a><span class="separator"> | </span>
+  <span class="glink" id="headerlanguages">
+  <a href="/bin/view/Project+vpanels/firewall%2Ddesign?language=en">en</a>
+    </span>
+    </div> 
+</div>
+
+ <div id="headerspace" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+  <div id="breadcrumbs">
+    <span class="breadcrumbspace"><a href="/bin/view/Project+vpanels/">Project vpanels</a>: </span>
+<a href='/bin/view/Project+vpanels/firewall%2Ddesign'>Firewall framework</a>
+  </div>
+<hr/>
+</div>
+
+
+<div id="menuview"> 
+  <div id="actionmenu" class="layoutsubsection">
+<h3 id="xwikimenutitle" class="hidden">Top Menu</h3>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+<div class="topmenuentry" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmShow">
+<a class="tme"  href="/bin/view/Project+vpanels/firewall%2Ddesign?viewer=code&amp;language=en" ><strong>Show</strong></a><span class="hidden menucolon">: </span><span class="submenu hidden">
+<span class="submenuitem"><a href="/bin/view/Project+vpanels/firewall%2Ddesign?viewer=comments&amp;language=en" id="tmShowComments">Comments</a></span>
+<span class="submenuitem"><a href="/bin/view/Project+vpanels/firewall%2Ddesign?viewer=attachments&amp;language=en" id="tmShowAttachments">Attachments</a></span>
+<span class="submenuitem"><a href="/bin/view/Project+vpanels/firewall%2Ddesign?viewer=history&amp;language=en" id="tmShowHistory">History</a></span>
+<span class="submenuitem"><a href="/bin/view/Project+vpanels/firewall%2Ddesign?viewer=information&amp;language=en" id="tmShowInformation">Information</a></span>
+</span></div>
+ <div class="topmenuentry" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmPrint">
+<a class="tme"  href="javascript:window.print()" ><strong>Print</strong></a><span class="hidden menucolon">: </span><span class="submenu hidden">
+<span class="submenuitem"><a href="javascript:window.print()" id="tmPrintAction">Print</a></span>
+<span class="submenuitem"><a href="/bin/view/Project+vpanels/firewall%2Ddesign?xpage=print&amp;language=en" id="tmPrintPreview">Print preview</a></span>
+<span class="submenuseparator">&nbsp;</span>
+<span class="submenuitem"><a href="/bin/export/Project+vpanels/firewall%2Ddesign?format=pdf&amp;language=en" id="tmExportPdf">Export as PDF</a></span>
+<span class="submenuitem"><a href="/bin/export/Project+vpanels/firewall%2Ddesign?format=rtf&amp;language=en" id="tmExportRtf">Export as RTF</a></span>
+<span class="submenuitem"><a href="/bin/export/Project+vpanels/firewall%2Ddesign?format=html&amp;language=en" id="tmExportHtml">Export as HTML</a></span>
+<span class="submenuitem"><a href="/bin/export/Project+vpanels/firewall%2Ddesign?format=xar&amp;name=Project+vpanels.firewall%2Ddesign&amp;pages=Project+vpanels.firewall%2Ddesign&amp;language=en" id="tmExportXar">Export as XAR</a></span>
+</span></div>
+</div>
+</div>
+
+</div>
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+<div class="minwidthb"></div>
+<div class="main layoutsubsection">
+<div id="xwikicontent">
+<h2 id="HFirewallFramework"><span>Firewall Framework</span></h2><p>In order to provide a firewall configuration utility, we're proposing a generic firewall framework for Solaris which utilizes IPfilter to provide a simple mechanism to configure a firewall on Solaris systems. The proposed firewall framework is functionally complete on which the Visual Panels project will provide a panel, a configuration UI.</p><hr/><h3 id="H1Introduction"><span>1. Introduction</span></h3><pre>
+
+   This document describes a framework that simplifies system and service
+   firewall configuration. Currently, Solaris has IPfilter which allows user to
+   set up system and service firewall policies.
+
+   IPfilter uses a set of ipf rules from which it determines whether an IP
+   packet should be allowed in or out of the system. Although ipf rule syntax
+   is fairly simple and straightforward, it still demands good understanding of
+   networking and security concepts, a non-trivial learning curve for 'casual'
+   Solaris users. Moreover, the task of creating and testing ipf rules are
+   mostly manual and can become a management burden in systems where large
+   number of rules are used.
+
+   The proposed framework aims to simplify user model by allowing users to
+   express firewall policy at system and service level. Given the user defined
+   firewall policy, the framework generates a set of IPfilter rules to enforce
+   the desired system behavior. Users specify system and service firewall
+   policies that allow or disallow network traffic from certain hosts, subnets,
+   and interface(s). The policies can be translated into a set of active ipf
+   rules to enforce the specified firewall policies.
+
+   Existing firewall tools, fwbuilder being a good example, may provide highly
+   customized configuration but have other drawbacks. Our proposed solution
+   which targets casual OpenSolaris users, has clear advantages.
+
+	- Very simple user model. While FirewallBuilder is able to produce
+	  highly customized configurations, it requires good understanding of 
+	  firewall concept and knowledge of the system networking
+	  configuration. Setting up FirewallBuilder requires specifying a path,
+	  a file, local address, create objects for each service, *configure*
+	  firewall for the objects, compile, and run. Our firewall only
+	  requires setting policy by changing properties and enable service(s).
+
+	- Well-integrated with Solaris
+
+	- Supports IPfilter configuration generated by other tools. Our
+	  framework should satisfy the needs of most casual users. However,
+	  advanced users can always use tools such as FirewallBuilder to
+	  generate IPfilter rules that can be consumed by the proposed
+	  framework.
+</pre><h3 id="H2Scope"><span>2. Scope</span></h3><pre>
+
+   Our goal is to provide casual OpenSolaris users and developers a simple
+   way to harden their systems. System administrators can certainly use the
+   firewall framework but may find some deficiencies such as inability to
+   synchronize policies across a group of Solaris systems.
+
+   The propose project is NOT a firewall configuration tool but an
+   IPfilter-based firewall framework that allows high-level firewall policies
+   and translates those policies to IPfilter rules. Generic firewall
+   construction tools, if possible, should use the proposed framework to
+   configure IPfilter for Solaris machines.
+
+   The proposed framework isn't a full IPfilter configuration tool, thus it
+   won't generate every possible IPfilter configuration. However, users can
+   specified a custom ipf rule set to be used if the framework can't provide
+   the desired IPfilter configuration.
+</pre><h3 id="H3Design"><span>3. Design</span></h3><pre>
+
+   Model:   The proposed firewall framework provides a simple mechanism to
+   restrict incoming network traffic to a Solaris machine. Network traffic is
+   normally from remote servers and clients to local clients and servers(local
+   network services), respectively. Other types of network traffic include
+   broadcasts and ICMP messages. The goal of any firewall is to block unwanted
+   incoming network traffic and/or restrict access to certain source(s) while
+   allow local client programs to work seamlessly.
+
+   A three layer approach with different precedence levels helps us achieve the
+   desired behaviors.
+
+	Global Default - default system-wide policy. This policy is
+	automatically inherited by all services unless services modify their
+	firewall policy.
+
+	Network Services - higher precedence than Global Default. A service's
+	policy allows/disallows traffic to its specific ports, regardless of
+	Global Default policy.
+
+	Global Override - another system-wide policy that takes precedence over
+	the needs of specific services in Network Services layer.
+
+		Global Override
+		      |
+		      |
+		Network Services
+		      |
+		      |
+		Global Default
+
+   A firewall policy includes a firewall mode and an optional set of network
+   sources. Network sources are IP addresses, subnets, and local network
+   interfaces, from which a system can receive incoming traffic. The basic set
+   of firewall modes are:
+
+	None - no firewall, allow all incoming traffic
+
+	Allow All Except - allow all incoming traffic but deny traffic from
+	specified source(s).
+
+	Deny All Except  - deny all incoming traffic but allow from specified
+	source(s)
+
+   Layers in Detail:   The first system-wide layer, Global Default, defines a
+   firewall policy that applies to *any* incoming traffic, e.g. allowing or
+   blocking all traffic from an IP address. This makes it simple to have a
+   policy that blocks all incoming traffic or all incoming traffic from
+   unwanted source(s).
+
+   The Network Services layer contains firewall policies for local programs
+   that provide service to remote clients, e.g. telnetd, sshd, and httpd. Each
+   of these programs, a network service, has its own firewall policy that
+   controls access to its service. Initially, a service's policy is set to
+   inherit Global Default policy, a "Use Global Default" mode. This makes it
+   simple to set a single policy, at the Global Default layer, that can be
+   inherited by all services. When a service's policy is different from Global
+   Default policy, the service's policy has higher precedence.  If Global
+   Default policy is set to block all traffic from a subnet, the SSH service
+   could be configured to allow access from certain hosts in that subnet. The
+   set of all policies for all network services comprises the Network Service
+   layer.
+
+   The second sytem-wide layer, Global Override, has a firewall policy that
+   also applies to any incoming network traffic. This policy has highest
+   precedence and overrides policies in other layers, specifically overriding
+   the needs of network services. The example is when it's desirable block
+   known malicious source(s) regardless of services' policies.
+
+   User Interaction:   This framework leverages IPfilter functionality and is
+   only active when svc:/network/ipfilter is enabled. Similarly, a network
+   service's firewall policy is only active when that service is enabled. A
+   system with an active firewall has IPfilter rules for each running/enabled
+   network service and for system-wide policy(s) with firewall mode other than
+   "None". User's enabling and disabling action for a service corresponds to
+   firewall policy activation and deactivation for that service. A user changes
+   firewall settings by modifying a service and/or system-wide firewall policy.
+
+   At a high level, the firewall framework composes of policy configuration and
+   a mechanism to generate ipfilter rules from the policy and applying those
+   rules to get the desired IPfilter configuration. A quick summary of the
+   design:
+
+	- system-wide policy(s) are stored in network/ipfilter
+
+   	- network services' policies are stored in each SMF service
+
+	- firewall is only activated when network/ipfilter is enabled.
+
+	- enabling/disabling a network service activates/deactivates a
+	  service's firewall policy
+
+	- changing a global or per-service firewall policy results in an update
+	  to the system's firewall rules
+</pre><h3 id="H4Configuration"><span>4. Configuration</span></h3><pre>
+
+   Customizable configuration:   Firewall policies comprising a mode and two
+   lists of network sources, strings, are stored as SMF properties. A
+   per-service firewall policy allows each SMF network service to store its
+   policy as a property group. Thus, the Network Services layer is made up of
+   all SMF network services and their corresponding firewall policies. A new
+   per-service property group, firewall_config, is used to store its firewall
+   policy. The system-wide policies, Global Default and Global Override, are
+   stored as separate property groups, firewall_config and firewall_config_ovr,
+   respectively, in svc:/network/ipfilter since this service controls firewall
+   activation for the entire system.
+
+   A policy is stored in a property group, firewall_config or
+   firewall_config_ovr, with the following properties and values:
+
+	policy -  "none", "allow_all_except", "deny_all_except"
+
+	allow_except_list - a list of network sources, IP addresses and network
+	interface names
+
+	deny_except_list - a list of network sources
+
+	For individual services only:
+
+	    	policy - can also be set to "use_global"
+
+		allow_ovr_list - a list of network sources
+
+		deny_ovr_list - a list of network sources
+
+	For the Global Default only:
+
+		policy - can also be set to "custom"
+
+		custom_policy_file - if policy is "custom", a file path
+
+		client{N} - protocol and port(s) tuple in the form
+		"{tcp | udp}:{PORT | PORT-PORT}"
+
+   "none" policy mode: no access restriction. For a global policy, this mode
+   allows all incoming traffic. For a service policy, this mode allows all
+   incoming traffic to its service.
+
+   "allow_all_except" policy mode: more restrictive than "none". This mode
+   allows incoming traffic from all sources except those specified in the
+   "allow_except_list" property.
+
+   "deny_all_except" policy mode: most restrictive mode. This mode blocks
+   incoming traffic from all sources except those specified in the
+   "deny_except_list" property.
+
+   "allow_except_list" property: a multi-value property listing sources to be
+   blocked when the policy is "allow_all_except". The syntax for possible
+   values are:
+
+	host:		host:IP			"host:192.168.84.14"
+	subnet:		network:IP/netmask	"network:129.168.1.5/24"
+	interface:	if:interface_name	"if:e1000g0"
+
+   "allow_ovr_list" property: overrides those listed in "allow_except_list",
+   a multi-value property listing sources to explicitly allow when the policy
+   is "allow_all_except".
+
+   "deny_except_list" property: a multi-value property listing sources that are
+   allowed access when the policy is "deny_all_except".
+
+   "deny_ovr_list" property: overrides those listed in "deny_except_list",
+   a multi-value property listing sources to explicitly deny when the policy
+   is "deny_all_except".
+
+   "use_global" policy mode: This mode is only valid for policies in Network
+   Services layer. Services with "use_global" policy mode inherits the Global
+   Default firewall policy.
+
+   "custom" policy mode:   Users preferring to use a custom ipfilter
+   configuration, e.g. existing ipfilter configuration or configurations that
+   can't be provided by the framework can choose the custom policy. This Global
+   Default only policy mode allows users to supply a text file containing the
+   complete set of ipfilter rules. When "custom" mode is selected, the
+   specified set of ipfilter rules is *complete* and the framework will not
+   generate additional ipfilter rules. The Global Default policy property group
+   has an additional custom_policy_file property to store the complete file
+   path.
+
+   "client" properties:   Only Global Default policy has these optional
+   properties. A non-service client requiring allowance of its incoming traffic
+   can request the firewall to allow traffic to its communication ports. This
+   per client property contains value of the form
+
+	"{tcp | udp}:{PORT | PORT-PORT}"
+
+   The properties are stored in firewall_config property group in
+   network/ipfilter.
+
+   Initially, system-wide policies are set to "none" and network services'
+   policies are set to "use_global". Enabling network/ipfilter activates the
+   firewall with an empty set of ipfilter rules, since system-wide policy is
+   "none" and all services inherit that policy. This behavior is compatible
+   with prior systems when network/ipfilter is initially enabled. To configure
+   a more restrictive policy, user needs to modify policy(s) for network
+   services or a system-wide policy.
+
+   Static configuration:   Network services may need additional information to
+   help translate a firewall policy into IPfilter rules. Additionally, some
+   services may require a mechanism to generate and supply their own rules to
+   the framework. An optional per-service property group, firewall_context,
+   provides the necessary service information and allows custom rule
+   generation. The Implementation section will explain how these properties are
+   consumed but brief definitions are provided here.
+
+	- firewall_context/name, IANA name for non-inetd service, equivalent to
+	  inetd/name property 
+
+	- firewall_context/isrpc, a boolean property where a "true" value
+	  indicates an RPC service, equivalent to inetd/isrpc property. This
+	  property adds contextual information for non-inetd RPC services but
+	  doesn't affect the meaning of firewall_context/name property.
+
+	- firewall_context/ipf_method, a command, normally a script that
+	  generates ipf rules for a service. The framework does not generate
+	  rules for services with this property definition but expect these
+	  services to provide their own rules.
+
+	  A service's ipf_method specifies a command that takes an additional
+	  argument, its own fmri and generates the service's firewall rules and
+	  output the rules to stdout. To generate rules for a service with
+	  ipf_method property, the framework execs the command specified in
+	  ipf_method, passing the service fmri as the additional argument and
+	  stores the rules for that service by redirecting the command output,
+	  the rules, to the service's rule file. Because an ipf_method is
+	  exec'ed from the context of either network/ipfilter start or refresh
+	  method process, it inherits the execution context and runs as root.
+
+</pre><h3 id="H5Firewalladministrationprivilege"><span>5. Firewall administration privilege</span></h3><pre>
+
+   User configures firewall policy by modifying the service's firewall_config
+   property group. A new authorization "solaris.smf.value.firewall.config" is
+   created to allow delgation of firewall administration privilege to users.
+   The Service Operator users will need this new authorization to be able to
+   configuration firewall policy.
+
+   Service static definition, in firewall_context property group, is delivered
+   by service developers. These properties are not user configurable and are
+   only modified upon installation of an updated service definition.
+</pre><h3 id="H6Implementation"><span>6. Implementation</span></h3><pre>
+
+   The implementation consists of additions of SMF property groups to store
+   firewall configuration, network/ipfilter modifications to activate,
+   deactivate firewall settings, a new daemon to monitor and update per-service
+   firewall setting, and a mechanism to generate ipfilter rules given a
+   firewall policy.
+
+   Configuration store:   The above Confguration section described in detail
+   firewall policy and other information are stored as SMF property groups. 
+
+   network/ipfilter:   The SMF network/ipfilter service drives the rule
+   generation process as the firewall active and inactive states are directly
+   tied to network/ipfilter service's enabled state. network/ipfilter start
+   method is modified to read the system-wide firewall policies and each
+   enabled service's firewall policy, generate and load all the rules. The
+   refresh method also performs the same steps as a complete regeneration is
+   necessary. The existing stop method disables IPfilter, unloading all the
+   rules, doesn't need any modification.
+
+   svc.ipfd: The above process sets up and tears down the entire system's
+   firewall configuration.  However, it's necessary to be able to react to
+   changes in the system's configuration and do so in an incremental fashion. A
+   service's firewall policy is activated when it's enabled, deactivated when
+   it's disabled, and updated when its configuration property group is
+   modified.
+
+   In order to configure the firewall for individual services, we need to know
+   when a service is enabled or disabled, or when its configuration has changed
+   and invoke the rule generation process to carry out the service's firewall
+   policy. We will implement this by introducing a new deamon,
+   /lib/svc/bin/svc.ipfd, that monitors the repository for relevant changes.
+   This daemon is started by the network/ipfilter service.
+
+   Rules Generation:   IPfilter rules generation uses the firewall policy to
+   create the appropriate ipf rules that allow or disallow network packets from
+   specified network source(s). The configuration the firewall framework
+   permits the user to express can be mapped into a subset of the IPfilter
+   language. Configuration in system-wide layers map to rules of the form:
+
+	{block|pass} in from SOURCE to DESTINATION
+	{block|pass} on INTERFACE to DESTINATION
+
+   where DESTINATION is the local machine. Note that for system-wide layers, we
+   do not specify a port. In contrast, a service's configuration will map to
+   rules of the form:
+
+	{block|pass} in from SOURCE to DESTINATION on port = PORT
+	{block|pass} on INTERFACE to DESTINATION on port = PORT
+
+   where PORT is the service's port. A firewall policy configuration is a set
+   of block and pass rules on the same destination and (optionally) port.
+
+   IPfiler rules are order sensitive so some planning is necessary to correctly
+   implement a firewall policy. For a policy configuration, there is a primary
+   rule to allow or deny all and zero or more exception rules to deny or allow
+   specific source(s). The exception rules by definition will have higher
+   priority. Thus, exception rules are always on top of primary rule and the
+   "quick" keyword is added to tell IPfilter to take action on the first
+   matched rule.
+
+   To clarify the ordering discussion, let's see some examples of how rules can
+   be generated from different policies.  The network service of interest is
+   network/ssh whose sshd listens on port 22.
+
+	- "None" or no firewall policy simply allows all incoming packets
+	  destined to port 22 with the rule
+
+		"pass in log quick from any to any port = 22"
+
+	- "Allow All Except" policy with the 1.2.3.4 address in the
+	  allow_except_list will generate the following rules:
+
+		"block in log quick from 1.2.3.4 to any port = 22"
+		"pass in log quick from any to any port = 22"
+
+	- "Allow All Except" policy with the 1.2/16 address in the
+	  allow_except_list and 1.2.3.5 in the allow_ovr_list will generate
+	  the following rules:
+
+		"pass in log quick from 1.2.3.5 to any port = 22"
+		"block in log quick from 1.2/16 to any port = 22"
+		"pass in log quick from any to any port = 22"
+
+	- "Deny All Except" policy with the 1.2.3.4 address in the
+	  deny_except_list will generate the following rules:
+
+		"pass in log quick from 1.2.3.4 to any port = 22"
+		"block in log quick from any to any port = 22"
+
+	- "Deny All Except" policy with the 1.2/16 address in the
+	  deny_except_list and 1.2.3.5 in the deny_ovr_list will generate
+	  the following rules:
+
+		"block in log quick from 1.2.3.5 to any port = 22"
+		"pass in log quick from 1.2/16 to any port = 22"
+		"block in log quick from any to any port = 22"
+
+   The Global Default policy has a boilerplate rule
+
+	pass out log quick all keep state
+
+   which allows incoming traffic if communication session is locally initiated.
+   This rule allows most client programs to carry out their communication and
+   is generated when Global Default policy isn't "none".
+
+   Starting the firewall:   Firewall activation is done by enabling
+   network/ipfilter whose start method is modified to do the following:
+
+	- create Global Default rules based on its firewall policy
+
+	- create network services' rules for enabled services with firewall
+	  policy
+
+	- create Global Override rules based on its firewall policy
+
+	- load rules from Global Default, Network Services, and Global
+	  Override, in that order
+
+   Since the start method sets up the system firewall configuration, it also
+   configures the system firewall on boot and whenever network/ipfilter is
+   refreshed.
+
+   Partial update:   While the system is running, the set of IPfilter rules
+   need to change as services get enabled or disabled, or when a policy is
+   modified. We want to update the IPfilter rules without reloading all the
+   rules. Network services are independent of each other so we can add and
+   remove each service's rules as needed. Global Override rules are reloaded
+   whenever there's an update to the rules in Network Services layer to
+   maintain their highest priority in the system rule set.
+
+   A change in system-wide policy will cause regeneration and reloading of
+   rules from all three layers. While not the most efficient approach, this
+   complete regeneration takes care of all policy inheritance and rule
+   ordering. In practice, it's reasonable because most policy changes happen at
+   the service policy level and system-wide policies are seldom changed.
+
+   Each policy has its rules stored in a separate and temporary file whose
+   content is loaded or unload by IPfilter to activate or deactivate the
+   policy. An update to the policy requires unloading the stored rule(s) and
+   regenerate and load the new rule(s).
+
+   Continuing the network/ssh service example, let's say the user would like to
+   add the IP address "1.2.3.10" to the deny_except_list, thus policy mode is
+   "Deny All Except", the following steps will take place:
+
+	- Global Override rules stored in its rule file are unloaded
+
+	- Unloading service's current rules which are
+
+		"pass in log quick from 1.2.3.4 to any port = 22"
+		"block in quick from any to any port = 22"
+
+	- Generating new rules 
+
+		"pass in log quick from 1.2.3.10 to any port = 22"
+		"pass in log quick from 1.2.3.4 to any port = 22"
+		"block in quick from any to any port = 22"
+
+	- service's updated rule set above is loaded to enforce its new policy
+
+	- Global Override rules stored in its rule file are reloaded
+
+   Complicated services:  Some services have rules that can't be generated by
+   the proposed model and require another mechanism. network/ftp uses port 21
+   for control and ports 20 and/or others in ephemeral(active clients) for data
+   so its configuration requires ftp protocol specific rules or in this case a
+   NAT rule that activate the IPfilter ftp proxy. Moreover, client programs
+   such as nis/client, network/autofs, and network/ntp requires the system to
+   allow their communication with remote servers when a system-wide policy is
+   "Deny All Except".
+
+   A service whose rules can't be generated by the framework can provide a
+   script that generate its IPfilter rules and outputs the rules to stdout. The
+   firewall_context/ipf_method property contains the script's path and
+   argument, similar to SMF method properties. During rule generation, the
+   service's script is invoked with the service FMRI as an additional argument
+   and the expected output is redirected that service's rule file. The file can
+   be loaded as if it were generated by the framework.
+
+   Example: network/ftp and firewall_context/ipf_method
+
+	- policy mode is "Deny All Except" with an empty except list
+
+	- ipf_method is "firewall_context/ipf_method astring
+	  /lib/svc/method/svc-ftp\ ipfilter"
+
+	- script is invoked as "/lib/svc/method/svc-ftp ipfilter
+	  network/ftp:default &gt;&gt;/var/run/ipfilter/ftp.ipf"
+
+	- the resulting content of /var/run/ipfilter/ftp.ipf is 
+
+		block in log quick proto tcp from any to any port = 21
+		block in log quick proto tcp from any to any port = 20
+
+	- resulting content of /var/run/ipfilter/ftp.nat is
+
+		rdr * any -&gt; 0/32  proxy port ftp ftp/tcp
+
+   The example shows the 'script' defined as an SMF 'ipfilter' method, thus
+   potentially small modification to existing service's method script.
+
+   Example: network/ntp running as a client, ntp.conf specifies the server
+   129.144.134.19 and multicastclient group 224.0.1.1. Its ipf_method script
+   generates the following rules:
+
+	pass in quick from 129.144.134.19 to any port = 123
+	pass in log quick from any to 224.0.1.1
+
+   Non-service client software:   We also need to allow non-SMF client programs
+   such as BitTorrent &amp; video conferencing peers/servers to carry out their
+   communication, allowing incoming traffic to certain local ports. A
+   firewall_config/client property value in the form
+   "{tcp | udp}:{PORT | PORT-PORT}" can generate rules
+
+	pass in quick proto {tcp | udp} from any to any port = PORT
+	pass in quick proto {tcp | udp} from any to any port = port range
+
+   which should be sufficient to support these client programs. 
+
+   RPC services:   These services are problematic because they may use
+   dynamically chosen ports and clients may also require access to rpbind,
+   (network/rpc service). Initially, network/rpc and all RPC services inherit
+   the same Global Default policy so there isn't a conflict. But if an RPC
+   service's policy is modified, it is important to note the policy for
+   network/rpc, unless it is less restrictive than the RPC service's, some
+   clients may not be able to access the RPC service as intended.
+
+   For a service, the value of inetd/isrpc or firewall_context/isrpc property,
+   or the lack of those properties indicates whether a service is an RPC
+   service. For RPC services, the framework queries rpcbind to get their port
+   information.
+</pre><h3 id="H7Puttingitalltogether"><span>7. Putting it all together</span></h3><pre>
+
+   Some simple but more complete examples to show the entire system firewall
+   configuration and the interactions of IPfilter rules at all three layers.
+   Each example building on previous examples, briefly describes the firewall
+   policy(s) and show the resulting firewall configuration, rule set.
+
+   Example 1 - Global Default policy is "None", all network services' policies
+   are "use_global", and Global Override policy is "None". This is the initial
+   configuration which corresponds to the initial empty ipf.conf file, thus an
+   empty set of IPfilter rules.
+
+   Example 2 - set a strict system-wide policy by changing Global Default
+   policy to "Deny All Except". This policy generates rules for Global Default
+   system-wide policy and any enabled network services. In this case, the only
+   enabled network service is network/ssh which by default inherits Global
+   Default policy. The resulting firewall configuration blocks all incoming
+   traffic:
+
+	block in log quick from any to any port = 22
+	block in log quick from all
+
+   Example 3 - resume normal operation for network/ssh by changing its policy
+   to "Allow All Except" and enable network/ftp service. This new policy
+   generates a different set of rules for network/ssh and network/ftp policy is
+   activated. Below is the new firewall configuration with a less than useful
+   network/ftp service since it doesn't allow any connection.
+
+	block in log quick from any to any port = 20
+	block in log quick from any to any port = 21
+	pass in log quick from any to any port = 22
+	block in log quick from all
+
+   Example 4 - restrict network/ftp access to two IP addresses "10.253.195.57"
+   and "10.253.195.60" by setting policy mode to "Deny All Except" and
+   deny_except_list to contain the two IP address. This new policy generates
+   set of rules for network/ftp and results in the below firewall configuration
+
+	pass in log quick from 10.253.195.60 to any port = 21
+	pass in log quick from 10.253.195.60 to any port = 20
+	pass in log quick from 10.253.195.57 to any port = 21
+	pass in log quick from 10.253.195.57 to any port = 20
+	block in log quick from any to any port = 20
+	block in log quick from any to any port = 21
+	pass in log quick from any to any port = 22
+	block in log quick from all
+
+   Example 5 - a malicious host, "10.253.195.66", is discovered which no
+   service should accept incoming traffic. This is accomplished by changing
+   system-wide Global Override policy from "None" to "Allow All Except" and set
+   its allow_all_except list to contain "10.253.195.66". The below new firewall
+   configuration blocks all incoming packets from 10.253.195.66
+
+	block in log quick from 10.253.195.66 to any
+	pass in log quick from 10.253.195.60 to any port = 21
+	pass in log quick from 10.253.195.60 to any port = 20
+	pass in log quick from 10.253.195.57 to any port = 21
+	pass in log quick from 10.253.195.57 to any port = 20
+	block in log quick from any to any port = 20
+	block in log quick from any to any port = 21
+	pass in log quick from any to any port = 22
+	block in log quick from all
+
+</pre>
+</div>
+
+<div id="xwikidata" class="layoutsubsection">
+                          <div class="about">
+<span id="aboutauthor">last modified by admin</span>
+<span id="aboutdate">on 2009/10/26 12:18</span>
+</div>
+</div>  
+<div class="clearfloats"></div>
+</div>    </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded Search">
+<h5 class="xwikipaneltitle hidden" onclick="togglePanelVisibility(this.parentNode);">Search</h5>
+<div class="xwikipanelcontents">
+  <form action="/bin/view/Main/WebSearch">
+    <div id="globalsearch">
+      <input id="globalsearchinput" type="text" name="text" value="search..." size="15" onfocus="if (this.value == 'search...') value=''; this.select();" onblur="if (this.value == '') value='search...'; this.blur()"/>
+&nbsp;
+      <input class="button" value="Go" type="image" src="/skins/oso/go.png"/>
+    </div>
+  </form>
+</div>
+</div>
+                        <div class="panel expanded OSNav">
+<h5 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSNav','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSNav'); togglePanelVisibility(this.parentNode);">Collectives</h5>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavCommunity Group">
+            <div id="xwikinavCommunity GroupHeader" class="accordionTabTitleBar"><h6>Community Group</h6>
+            </div>
+            <div id="xwikinavCommunity GroupContent" class="accordionTabContentBox">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+edu/">Academic and Research</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+accessibility/">Accessibility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+advocacy/">Advocacy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+appliances/">Appliances</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+approachability/">Approachability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/">Architecture Process and Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+brandz/">BrandZ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+chinese_users/">Chinese Users</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/">Community Advisory Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+databases/">Databases</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+desktop/">Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/">Device Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+distribution/">Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+dtrace/">DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+emerging_platforms/">Emerging Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+fm/">Fault Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+games/">Games on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ha%2Dclusters/">HA Clusters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+hpcdev/">HPC Developer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+install/">Installation and Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+int_localization/">Internationalization and Localization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+laptop/">Laptop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ldoms/">Logical Domains</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+mdb/">Modular Debugger (MDB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/">Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+nfs/">NFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+observability/">Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ogb/">OpenSolaris Governing Board (OGB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+printing/">OpenSolaris Printing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/">OS/Net (ON)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/">Performance</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+pm/">Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+power_pc/">PowerPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/">Security</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+smf/">Service Management Facility (smf(5))</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sw%2Dporters/">Software Porters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+volume_manager/">Solaris Volume Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+storage/">Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sysadmin/">Systems Administration Community Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+testing/">Testing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/">Tools Home</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ufs/">Unix File Systems (UFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+web/">Website Community</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+x_win/">X Window System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+xen/">Xen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/">ZFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/">Zones</a></span></li>
+</ul>
+                                        </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavProject">
+            <div id="xwikinavProjectHeader" class="accordionTabTitleBar"><h6>Project</h6>
+            </div>
+            <div id="xwikinavProjectContent" class="accordionTabContentBox">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+adsl/">ADSL Modem Enhancement</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+arc%2Dprocess/">ARC Process Definition</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osarm/">ARM Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+adm/">Automatic Data Migration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bind/">BIND Update</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bluetooth/">Bluetooth Stack & Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dinitiator/">Brocade FC HBA &#45; Initiator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dtarget/">Brocade FC HBA &#45; Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brussels/">Brussels &#45; unified network link configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/">Caiman, Solaris Install Revisited</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+celeste/">Celeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cz/">Český portál</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/">Chime Visualization Tool for DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smbfs/">CIFS client for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cifs%2Dserver/">CIFS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+clearview/">Clearview: Network Interface Coherence</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dinformix/">Cluster Agent: Informix Dynamic Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dcontainer/">Cluster Agent: OpenSolaris Container</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dxvm/">Cluster Agent: OpenSolaris xVM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Debs/">Cluster Agent: Oracle E&#45;Business Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dpostgresql/">Cluster agent: PostgreSQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dsmb/">Cluster Agent: Samba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dtomcat/">Cluster Agent: Tomcat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cmt/">CMT</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+data%2Dflow/">Coarse Data Flow Parallelism</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+colorado/">Colorado: Open HA Cluster on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+commandassist/">Command Assistant</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cam/">Common Array Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+companion/">Companion &#45; /opt/sfw: Free and Open Source software</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/">COMSTAR: Common Multiprotocol SCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+content/">Content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+contest/">Contest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpufs/">CPU Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpg/">Credentials Process Groups</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crossbow/">Crossbow: Network Virtualization and Resource Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmsagenttoolkit/">Crypto KMS Agent Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/">Cryptographic Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dmm/">Data Migration Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+datatethers/">Data Tethers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+de/">Deutsches Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ddtool/">Device Detection Tool</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+driver%2Dutility/">Device Driver Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devicemgr/">Device Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devmapper/">Device Mapper</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dri/">Direct Rendering Infrastructure & 3D drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Ddoc/">DTrace Guide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/">Duckwater: Simplified name services management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+phpEasyTools/">Easy Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emancipation/">Emancipation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex/">Emulex Fibre Channel Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex-cna/">Emulex Advanced Ethernet Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+intel%2Dplatform/">Enable/Enhance Solaris support for Intel Platform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webcams/">Enhance the support of USB webcams</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Dprofiles/">Enhanced SMF Profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+amd/">Enhancements for AMD&#45;based Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+erlang%2Ddtrace/">Erlang DTrace Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ethbridge/">Ethernet bridge module for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+conary%2Deval/">Evaluate Conary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+events%2Dregistry/">Events Registry</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ext3/">Ext3 file system support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkgbase/">F/OSS Package Base</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+facilitation/">Facilitation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fcoe/">Fibre Channel over Ethernet</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fgap/">Fine Grained Access Policy (FGAP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fingerprint%2Dauthentication/">Fingerprint Authentication</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fmac/">Flexible Mandatory Access Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+forensics/">Forensic Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fox/">Fully Open X Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fuse/">Fuse on Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gcore/">gcore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+generic%2Dmca/">Generic Machine Check Architecture Improvements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+summerofcode/">Google SOC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Djboss/">HA&#45;JBoss</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dmysql/">HA&#45;MySQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livehadoop/">Hadoop Live CD</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hitachi/">Hitachi</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+honeycomb/">HoneyComb Fixed Content Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hpc%2Dstack/">HPC Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/">Image Packaging System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+perfmib/">Improved Performance MIB</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/">Indiana</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+awards/">Innovation Awards</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/">Input Method</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+intelgraphics/">Intel Graphics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ikev2/">Internet Key Exchange, version 2</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+irm/">Interrupt Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ip%2Drefactor/">IP Datapath Refactoring</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ipoib/">IP over Infiniband</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tref/">IPsec Tunnel Reform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iser/">iSCSI Extensions for Remote DMA (iSER)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isns/">iSNS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jeos/">JeOS &#45; Just enough Operating System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jkstat/">JKstat &#45; a java binding for libkstat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jfs/">Journaled File System (JFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kde/">K Desktop Environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kerberos/">Kerberos</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kernel%2Dsockets/">Kernel Sockets</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kssl/">Kernel SSL Enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmf/">Key Management Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ksh93%2Dintegration/">Korn Shell 93 integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+txipsec/">Labeled IPsec</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+latencytop/">LatencyTOP</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+l2filter/">Layer 2 Filtering</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ldoms%2Dmgr/">LDoms Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lending/">Lending</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+libmicro/">libMicro &#45; portable microbenchmarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lld/">Link Layer Discovery</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livemedia/">Live Media: Technologies for distributions running from CD and other media</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+localedata/">Locale Data</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+loficc/">lofi compression and cryptography support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lx64/">lx64 brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mms/">Media Management System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mega_sas/">Mega_sas</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mx/">Mexico</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+milax/">MilaX minimal Live Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mips/">MIPS Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mozilla%2Ddtrace/">Mozilla DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohac%2Davs/">MRSL.NONsharedDevice</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+glossary/">Multi&#45;lingual Glossary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mpxio/">Multi&#45;pathing software (MPxIO)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+large%2Dsector/">Multiple disk sector size support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+multiple%2Ddoi/">Multiple DOI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+muskoka/">Muskoka: An open repository for OpenSolaris technical content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+navigator/">Navigator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nemo/">Nemo: A Framework for High&#45;Performance Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/">Network Auto&#45;Magic</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ndmp/">Network Data Management Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+net%2Dmib/">Network MIBs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npp/">Network Performance Projects</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nws/">Network Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ntp/">Network Time Protocol (NTP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nv%2Dg11n/">Nevada Globalization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+4over6/">New Design of 4over6 Mechanism Based on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsrdma/">NFS RDMA transport update and performance analysis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dzones/">NFS Server in non&#45;Global Zones</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsv41/">NFS version 4.1 pNFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dnamespace/">NFSv4 namespace extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nightingale/">Nightingale: Port Songbird to OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npiv/">NPort ID Virtualization (NPIV)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+numa/">NUMA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osd/">Object Storage Device (OSD) support for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohacge%2Dsbp/">OHACGE Script Based Plug&#45;in</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+onnv/">ON/Nevada (ONNV) Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opendev/">Open Development Infrastructure</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dutilities/">Open HA Cluster Utilities</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opensound/">Open Sound System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/">OpenGrok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cim%2Dserver/">OpenPegasus CIM Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+openrti/">OpenRTI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+busybox/">OpenSolaris Busybox</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/">OpenSolaris Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+es/">OpenSolaris Hispano</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+audit/">OpenSolaris Security Audit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/">OpenSolaris support for the QEMU processor emulator: host and guest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pef/">PEF: Packet Event Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+performance%2Dwrappers/">Performance Wrappers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkgfactory/">Pkgfactory</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pl/">Polski Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fr/">Portail Francophone</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+br/">Portal Brasil</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+portals/">Portals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmui/">Power Management Usability Interfaces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+presto/">Presto: Automatic Printing Configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmpsm/">Printable Many Page Solaris Manuals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+promise%2Dstorage/">Promise SuperTrak RAID HBA Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qlogic-cna/">QLogic Converged Network Adapter GLDv3 NIC Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+quagga/">Quagga Routing Protocol Suite Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+raidcfg/">RAID Configuration Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rbridges/">RBridge (IETF TRILL) support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rof/">RDMA Offload Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+reno/">Reno: Login Process Enhancements for Interop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/">Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+s10brand/">s10brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+samqfs/">SAM/QFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+scm%2Dmigration/">SCM Migration Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+srp/">SCSI RDMA Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sdcard%2Ddrivers/">SDcard Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sensors/">Sensor Abstraction Layer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dsip/">Session Initiation Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sfwnv/">SFW</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+shell/">Shell: bourne shell, korn shell, C shell, etc.</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sierra/">Sierra: Intel WiFi Chipsets Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+simplepanels/">Simple Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sm%2Dhba/">SM&#45;HBA Based SAS HBA Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Ddoc/">SMF Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iscsitgt/">Solaris iSCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/">Solaris PowerPC Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sourcejuicer/">SourceJuicer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/">Sparks: name service switch/nscd enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+squashfs/">Squashfs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+star/">Star integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starfish/">Starfish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starterkit/">Starter Kit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+storagepm/">Storage Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sst/">Sun Security Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+avs/">Sun StorageTek Availability Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ofuv/">Support for OpenFabrics User Verbs / API on OpenSolaris OS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/">Support gcc4/GCCfss in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+suspend%2Dresume/">Suspend/Resume</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+svr4_packaging/">SVR4 Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+systemz/">Systemz</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tamarack/">Tamarack: Removable Media Enhancements in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tesla/">Tesla: OpenSolaris Enhanced Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+test%2Ddev/">Test Development</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/">Tickless Kernel Architecture</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tipc/">TIPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+branding/">Trademarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tnipdb/">Trusted networking interface policy database for Trusted Extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tpm/">Trusted Platform Module support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+usecase/">Use Case</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+valex/">Validated Execution Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vconsole/">Virtual Console</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vnm/">Virtual Network Machines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/">Visual Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+visualization%2Dhpc/">Visualization for HPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+volo/">Volo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vrrp/">VRRP: Virtual Router Redundancy Protocol Implementation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vscan/">VSCAN service</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/">Web Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+website/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+winchester/">Winchester: Schema mapping and ID mapping for AD Interoperability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wusb/">Wireless USB Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wwan/">Wireless Wide Area Network</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x%2Dcons/">X Consolidation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x86gentopo/">x86 Generic FMA Topology Enumerator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xen%2Dgate/">Xen Gate</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xfce/">Xfce: A lightweight desktop environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfsboot/">ZFS Boot and Install</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfs%2Dcrypto/">ZFS on disk encryption support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonemgr/">Zone Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonestat/">Zone Statistics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ru/">Русский портал</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ar/">البوابة العربية</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+in/">भारतीय पोर्टल</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cn/">中国门户</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/">日本ポータル</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kr/">한국 포탈</a></span></li>
+</ul>
+                                        </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavUser Group">
+            <div id="xwikinavUser GroupHeader" class="accordionTabTitleBar"><h6>User Group</h6>
+            </div>
+            <div id="xwikinavUser GroupContent" class="accordionTabContentBox">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/User+Group+adl%2Dauosug/">Adelaide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+aosug/">Argentina</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+azosug/">Arizona</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+atl%2Dosug/">Atlanta</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bwosug/">Baltimore&#45;Washington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bosug/">Bangalore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bkkosug/">Bangkok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bdosug/">Bangladesh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bjosug/">Beijing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+blmosug/">Bélem</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+brosug/">Berlin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bvrm%2Dosug/">Bhimavaram</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+btn%2Dosug/">Bloomington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+os_user_groups_amb/">Campus Ambassadors</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+crosug/">Capital Region</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cfosug/">Cardiff</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ceosug/">Ceara</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cltosug/">Charlotte</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cdosug/">Chengdu</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chennai/">Chennai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chmxosug/">Chihuahua</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+closug/">Chile</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cle%2Dosug/">Cleveland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+colosug/">Colombia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cmh%2Dosug/">Columbus</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ctosug/">Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+knp%2Duek/">Cracow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+czosug/">Czech</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfw%2Dosug/">Dallas/Ft. Worth</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dosug/">Danish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+deosug/">Delaware</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+eduosug/">Edinburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+egosug/">Egypt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fiosug/">Finland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+flosug/">Florida</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+frosug/">Front Range</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fzosug/">FuZhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+glug/">Great Lakes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+grosug/">Greece</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hzosug/">Hangzhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hi%2Dosug/">Hawaii</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hfosug/">HeFei</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hugs/">Houston</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hkosug/">Hong Kong</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hosug/">Hyderabad</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+idosug/">Indonesia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ie%2Dosug/">Irish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+iosug/">Israel</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+itl%2Dosug/">Italian</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jnosug/">Jinan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jogja-osug/">Jogja</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kbosug/">Kabul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kc%2Dosug/">Kansas City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+lavosug/">Latvia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+losug/">London</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madosug/">Madurai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mansug/">Manchester</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mssosug/">Mato Grosso</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+msosug/">Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mgosug/">Minas Gerais</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mnosug/">Minnesota</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mtlosug/">Montreal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mosug/">Moscow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mmosug/">Mumbai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mucosug/">Munich</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+neaosug/">NEA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nlosug/">Netherlands</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ne%2Dosug/">New England</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nycosug/">New York City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nzosug/">New Zealand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nit%2Dhamirpur%2Dosug/">NIT Hamirpur</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+norosug/">Noroeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nerosug/">Nuremberg-Erlangen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+okcosug/">Oklahoma City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ososug/">Osnabrück</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+peosug/">Peru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+paosug/">Philadelphia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+piaski%2Dosug/">Piaski</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ptosug/">Pittsburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+poaosug/">Porto Alegre</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+psosug/">Puget Sound</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+posug/">Pune</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+qosug/">Queensland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+riosug/">Rio de Janeiro</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rtp%2Dosug/">Research Triangle Park</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ro%2Dosug/">Romania</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ruosug/">Russia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+alamo%2Dosug/">San Antonio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sdosug/">San Diego</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sfosug/">San Francisco</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sampaosug/">São Paulo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+scosug/">Scottish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rs%2Dosug/">Serbia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+shosug/">Shanghai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szosug/">Shenzhen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svosug/">Silicon Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sgosug/">Singapore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+skosug/">Slovak</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+saosug/">South African</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+soctosug/">Southern Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+stl%2Dosug/">St. Louis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svgosug/">Stavanger</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+swosug/">Sweden</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chosug/">Switzerland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sosug/">Sydney</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szc%2Dosug/">Szczecin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+twosug/">Taiwan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ostug/">Tecum</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tvosug/">Thames Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tsug/">Tokyo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+torosug/">Toronto</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+trosug/">Trondheim</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+toss/">Tulsa</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tosug/">Turkey</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ufaosug/">Ufa</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+uaosug/">Ukraine</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+unimelb%2Dosug/">University of Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+valeosug/">Vale do Paraíba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vanosug/">Vancouver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vosug/">Venezuela</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wosug/">Welsh &#45; Cymru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wiosug/">Wisconsin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+xaosug/">Xi'an</a></span></li>
+</ul>
+                                        </div>
+        </div>
+    </div>
+</div><p/><p/>
+<script type="text/javascript">
+var obj = {div:'xwikinav',no:-1,height:250};
+var acc = createAccordion(obj);
+</script>
+</div>
+</div>
+                        <div class="panel expanded Subsites">
+<h5 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.Subsites','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.Subsites'); togglePanelVisibility(this.parentNode);">Subsites</h5>
+<div class="xwikipanelcontents">
+<span class="wikiexternallink"><a href="http://cr.opensolaris.org">Code Reviews</a></span><br/>
+<span class="wikiexternallink"><a href="http://repo.opensolaris.org">Code Repositories</a></span><br/>
+<span class="wikiexternallink"><a href="http://pkg.opensolaris.org">Package Search</a></span><br/>
+<span class="wikiexternallink"><a href="http://bugs.opensolaris.org">Bugster</a></span><br/>
+<span class="wikiexternallink"><a href="http://defect.opensolaris.org">Bugzilla</a></span><br/>
+<span class="wikiexternallink"><a href="http://test.opensolaris.org">Test Machines</a></span><br/>
+<span class="wikiexternallink"><a href="http://planet.opensolaris.org">Planet</a></span><br/>
+<span class="wikiexternallink"><a href="http://mail.opensolaris.org">Mailing Lists</a></span><br/>
+<span class="wikiexternallink"><a href="http://poll.opensolaris.org">Elections & Polls</a></span><br/>
+<span class="wikiexternallink"><a href="http://arc.opensolaris.org">ARC Case Logs</a></span><br/>
+<span class="wikiexternallink"><a href="http://jucr.opensolaris.org">Source Juicer</a></span><br/>
+<span class="wikiexternallink"><a href="http://pkgfactory.opensolaris.org">Package Factory</a></span><br/>
+<span class="wikiexternallink"><a href="http://auth.opensolaris.org">User Authentication</a></span><br/>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h5 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSDocs','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSDocs'); togglePanelVisibility(this.parentNode);">Project vpanels Pages</h5>
+<div class="xwikipanelcontents"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/Documentation">Documentation</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/2008%2D05docs">Visual Panels Documentation for 2008.05</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/build%2Dinst">OpenSolaris Development</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/devel">Development</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/faq">FAQs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/firewall%2Ddesign">Firewall framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/install">Installation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/javascf">The Java SCF interfaces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/jmxagent">The JMX Agent</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/screenshots">Screenshots</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/screenshots200805">Screenshots (2008.05)</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/templates">Template extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/vpdemo">The Visual Panels demo</a></span></li>
+</ul>
+            </div>
+</div>
+                        
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+  <div id="xwikilicence">&copy; Sun Microsystems Inc. 2009</div>
+          <div id="xwikiplatformversion">XWiki Enterprise 1.8.2.19075 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div> 
+    <div><a href="/bin/view/Main/tou">Terms Of Use</a> |
+         <a href="http://www.sun.com/privacy/">Privacy</a> | 
+         <a href="/bin/view/Main/trademark">Trademarks</a> |
+         <a href="/bin/view/Main/copyrights">Copyright Policy</a> |
+         <a href="/bin/view/Main/site_guidelines">Site Guidelines</a> |
+         <a href="/bin/view/Main/site%2Dmap">Site map</a> |
+         <a href="/bin/view/Main/help">Help</a></div>
+    <div>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.</div>
+<hr/>
+</div>
+
+</div></div></body>
+</html>

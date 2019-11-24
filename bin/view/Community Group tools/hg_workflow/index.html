@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Mercurial work flow (Community Group tools.hg_workflow) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Community+Group+tools/hg_workflow" />
+                    <link rel="canonical" href="/bin/view/Community+Group+tools/hg_workflow" />
+                            <meta name="document" content="Community Group tools.hg_workflow"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Community Group tools"/>
+    <meta name="page" content="hg_workflow"/>
+    <meta name="version" content="2.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Community+Group+tools/pages/hg_workflow"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Mercurial work flow" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="kupfer" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Community Group tools";
+XWiki.currentPage = "hg_workflow";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Community+Group+tools/hg_workflow";
+window.docediturl = "/bin/edit/Community+Group+tools/hg_workflow";
+window.docsaveurl = "/bin/save/Community+Group+tools/hg_workflow";
+window.docgeturl = "/bin/get/Community+Group+tools/hg_workflow";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Community_Group_tools viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FCommunity%2BGroup%2Btools%2Fhg_workflow"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+tools/"><strong>Community Group tools</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Community+Group+tools" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+            </td>
+            <td id="logo-text" style="width: 1%;">
+                Solaris
+            </td>         
+            <td style="width: 98%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                                          <a href='/bin/view/Community+Group+tools/scm'>OpenSolaris Source Code Management</a> <span class='separator'>&#187;</span> <a href='/bin/view/Community+Group+tools/hg_teamware_transition'>How To Transition from Teamware to Mercurial</a> <span class='separator'>&#187;</span> <span class='current'>Mercurial work flow</span>
+                      </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Community+Group+tools/hg_workflow?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Community+Group+tools/hg_workflow?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+tools/hg_workflow?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+tools/hg_workflow?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+tools/hg_workflow?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Community+Group+tools/hg_workflow?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+tools/hg_workflow?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+tools/hg_workflow?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+tools/hg_workflow?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+tools/hg_workflow?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Community+Group+tools/hg_workflow?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>Mercurial work flow</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h1 id="HMercurialWorkflow"><span>Mercurial Workflow</span></h1><h2 id="HThingsyoushouldknow"><span>Things you should know</span></h2><h3 id="HTheONgatewillbeunderMercurialcontrolstartingwithbuild97"><span>The ON gate will be under Mercurial control starting with build 97</span></h3><p>You need to be familiar with the uses of Mercurial and the tools by that point, preferably sooner.</p><h3 id="HTheMercurialONgateismadeupoftwoMercurialrepositories"><span>The Mercurial ON gate is made up of two Mercurial repositories</span></h3><dl><dt>ssh://onnv.sfbay.sun.com//export/onnv-clone</dt><dt>ssh://hg.opensolaris.org/hg/onnv/onnv-gate</dt><dd>These repositories are equivalent, and contain the open source portions of the ON gate.</dd><dt>ssh://onnv.sfbay.sun.com//export/onnv-clone/usr/closed</dt><dd>This is the repository for the closed code.</dd></dl><h3 id="HMosttoolsoperateononlyonerepositoryatatime"><span>Most tools operate on only one repository at a time</span></h3><dl><dt>&nbsp;… except <strong>nightly</strong>(1)</dt><dd>nightly(1) is an exception to this, it will bringover usr/closed if you have CLOSED_BRINGOVER_WS (or CLOSED_CLONE_WS) set in your env file, and update usr/closed if you already have it in your workspace.</dd><dt><strong>webrev</strong>(1) especially does not cross between repositories</dt><dd>This is a feature. If you touch both open and closed code, you create two webrevs, one of which you can publish completely, one of which should never leave the SWAN. No risk of accidentally publishing closed code because you forgot -O</dd></dl><h3 id="HNoIDkeywords"><span>No ID keywords</span></h3><p>Mercurial has no native concept of ID keywords (%I%, $Id$, etc). You should not add keywords to any file, for any reason. They will not be expanded. The CRT will not accept RTIs which depend upon SCCS keywords.</p><h4 id="HWhatyoushoulddoinstead"><span>What you should do instead</span></h4><h5 id="HNothing"><span>Nothing</span></h5><p>In almost all cases, these keywords serve no useful purpose.</p><ul><li>They only reflect the information of one file (no good for binary versioning)</li><li>We adjust the ELF .comment section in the build (no good with #pragma ident)</li></ul><p>Instead of using keywords to identify binaries, there are other means to discover the version of files delivered to users:</p><ul><li>Packaging information</li><li><strong>what</strong>(1)</li><li><strong>mdb</strong>(1)'s ::showrev -v</li></ul><h5 id="HWe27reseriousaboutdoingnothing"><span>We're serious about doing nothing</span></h5><p>We don't make this recommendation lightly. This is something that we hashed over extensively. Arguably, the folks most affected by this change work in Sun's RPE organization, and they're on board with no keywords.</p><p>If you want some background reading, please go through these threads (and probably others):</p><ul><li><span class="wikiexternallink"><a href="http://www.opensolaris.org/jive/thread.jspa?messageID=39328"><span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://www.opensolaris.org/jive/thread.jspa?messageID=39328"><span class="wikigeneratedlinkcontent">http://www.opensolaris.org/jive/thread.jspa?messageID=39328</span></a></span></a></span></li><li><span class="wikiexternallink"><a href="http://www.opensolaris.org/jive/thread.jspa?messageID=88133"><span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://www.opensolaris.org/jive/thread.jspa?messageID=88133"><span class="wikigeneratedlinkcontent">http://www.opensolaris.org/jive/thread.jspa?messageID=88133</span></a></span></a></span></li></ul><h5 id="HIfyou27rereallyconvincedthatyoumustembedyourownversioningtext"><span>If you're really convinced that you must embed your own versioning text</span></h5><p>Iff it is absolutely critical to expose such information, you can use the hg id command:</p><pre>
+$ MY_VERSION=$(hg id)
+$ echo $MY_VERSION
+53efa13dec6f+ tip
+$
+</pre><p>You should only do this with good reason. Expect your RTI Advocate to question you about why you are doing it, and to require you to justify your choice.</p><h2 id="HGettingrealworkdonewithMercurial"><span>Getting real work done with Mercurial</span></h2><h3 id="HPopulateyourworkspace28bringover2Cclone29"><span>Populate your workspace (bringover, clone)</span></h3><h4 id="HGettheopensource"><span>Get the open source</span></h4><pre>
+hg clone ssh://anon@hg.opensolaris.org/hg/onnv/onnv-gate your-ws
+</pre><h4 id="HForON:gettheclosedsourceortheclosedbinaries"><span>For ON: get the closed source or the closed binaries</span></h4><pre>
+hg clone ssh://anonhg@onnv.sfbay.sun.com//export/onnv-clone/usr/closed your-ws/usr/closed
+</pre><p>…or just download the closed binaries.</p><h4 id="HHavenightlycreateorupdateyourworkspaceforyou"><span>Have nightly create or update your workspace for you</span></h4><p>If you don't include -n on the command line or in your NIGHTLY_OPTIONS, then <strong>nightly</strong>(1) will create or update your repository for you.</p><p>If $CODEMGR_WS exists, then <strong>nightly</strong>(1) will pull from $BRINGOVER_WS into $CODEMGR_WS. $BRINGOVER_WS defaults to $CLONE_WS. Then, if the repository $CODEMGR_WS/usr/closed exists and $CLOSED_BRINGOVER_WS is set in your environment file, <strong>nightly</strong>(1) will also pull from $CLOSED_BRINGOVER_WS to update $CODEMGR_WS/usr/closed.</p><p>If $CODEMGR_WS does not exist, then <strong>nightly</strong>(1) will create it as a clone of $BRINGOVER_WS. It will NOT, however, create a new $CLOSED_BRINGOVER_WS if one does not already exist.</p><h3 id="HBuild"><span>Build</span></h3><p>Build as you always have, nothing has changed in this regard.</p><h3 id="HMakingchanges"><span>Making changes</span></h3><p>Make your changes as you normally would. There is no explicit "edit" step required by Mercurial.</p><p>Mercurial does not lock files in your workspace for editing, and Cadmium (a Mercurial extension providing wx-like functionality, useful for OpenSolaris development) does not make use of a statically maintained list of changed files (as <strong>wx</strong>(1) would). You can make changes freely in your workspace without any required bookkeeping.</p><p>The hg status command will tell you what you have changed in your repository.</p><h3 id="HCommityourchanges"><span>Commit your changes</span></h3><p>You may commit changes as and when you choose, as with TeamWare a commit is local to a repository until you choose to push it to others.</p><p>For small fixes you may choose to only commit when you're done with your work, or perhaps prior to a merge before you file your RTI.</p><p>For larger workspaces it's generally best to commit at appropriate intervals in your work.</p><p>Cadmium's hg backup command (described below) is not really intended to return you to a point-in-time snapshot of your ongoing work, but to recover a lost (or destroyed) workspace. It is recommended that you move around within your workspace's history using the hg update command to move to prior revisions as necessary. You should do this with both the main and usr/closed repositories at the same time, of course.</p><h3 id="HCheckfornits"><span>Check for nits</span></h3><p>As with <strong>wx</strong>(1), Cadmium provides a command that will run a sub-set of the pre-putback checks on your workspace. You may find it useful to run hg nits (cf. wx nits) at intervals to keep your changes generally tidy as you work. Remember that Cadmium does not cross Mercurial repository boundaries, so must run this separately for usr/closed.</p><p>This will check CDDL blocks, copyrights, C style, header format, Java style, permissions, and (absence of) keywords.</p><h3 id="HBackupyourwork"><span>Backup your work</span></h3><p>You'll want to backup your work at regular intervals, in case of disaster (disk failure, plagues of beetles, possession by the demons of stupidity, and such).</p><p>hg backup will save the changes (both committed and uncommitted) in the working copy of &lt;your-repo&gt; to a subdirectory named &lt;your-repo&gt; in the cdm.backup directory within your home directory, by default.</p><p>As stated above (see "Commit your changes"), these commands do not cross repository boundaries, so you must take separate backups for usr/closed, if appropriate.</p><p>When backing up usr/closed, the backup will be named &lt;your-repo&gt;-closed, so, for instance:</p><pre>
+your-repo -&gt; ~/cdm.backup/your-ws
+your-repo/usr/closed -&gt; ~/cdm.backup/your-ws-closed
+</pre><p>hg backup takes a -t flag which, like wx, will only take a backup if changes have been made since the most recent. Backups are ordered by generation number (a monotonically increasing digit).</p><p>To restore your workspace, clone the parent and restore from your backup:</p><pre>
+your-machine:.../your-repo% hg backup
+your-machine:~% hg clone ssh://machine//your-parent your-repo-restore
+your-machine:~% cd your-repo-restore
+your-machine:.../your-repo-restore% hg restore ~/cdm.backup/your-repo
+</pre><p>you will need to restore usr/closed separately, if appropriate.</p><p>hg restore takes a -g flag with which you can specify the generation from which you want to restore.</p><h3 id="HMergingwiththeparent"><span>Merging with the parent</span></h3><p>Unlike TeamWare, Mercurial merges the lines of history, rather than only file contents. Therefore, you will need to perform merges <em>even if</em> there are no conflicting file changes (though the merges will be simple then, of course).</p><p>This will no doubt come as a shock, initially.</p><p>You should always update and merge usr/closed in conjunction with merging the rest of your workspace.</p><p>By default, if your .hgrc was configured with <strong>hgsetup</strong>(1), we will default to use TeamWare's <strong>filemerge</strong>(1) for merges, if TeamWare is in your $PATH, and meld or gpyfm if it is not, and you have one of them.</p><h4 id="HMergingwithcommittedchanges"><span>Merging with committed changes</span></h4><p>If your workspace has committed changes, and you pull from your parent workspace, you will likely find that you now have two "heads" (revisions with no children) in your workspace, and that you received output from Mercurial suggesting that you may wish to merge them with hg merge. You almost certainly do.</p><pre>
+$ hg pull -u
+pulling from /home/mjnelson/work/scm/hg_merge/repo_2
+searching for changes
+adding changesets
+adding manifests
+adding file changes
+added 1 changesets with 1 changes to 1 files (+1 heads)
+not updating, since new heads added
+(run 'hg heads' to see heads, 'hg merge' to merge)
+$
+</pre><p>When you run the hg merge command, Mercurial will merge the two heads, starting your merge application as necessary to resolve content changes in individual files, and asking you questions as necessary to resolve name changes. When complete, your working copy will represent the <em>still uncommitted</em> merge.</p><p>You should commit your merge soon after you are finished performing it, perhaps after some verification that you merged correctly.</p><h4 id="HMergingwithuncommittedchanges"><span>Merging with uncommitted changes</span></h4><p>If you have uncommitted changes in your workspace, you will also need to merge when you use hg pull -u or hg pull &amp;&amp; hg update to update your workspace.</p><p>If the pull added two heads, it means you have both committed and uncommited changes in your repository. In this case, your changes will be as they were, and you may continue working in that state until you see fit to commit, and then hg merge to merge with the extra head.</p><p>If you have <em>only</em> uncommitted changes in your respository, then there is no need to merge the history of your workspace and its parent. In this case, hg update (or the -u part of hg pull -u) will behave similarly to the resolution of a regular merge; your merge application will be start, or you might be asked questions about name conflicts.</p><pre>
+$ hg pull -u
+pulling from /home/mjnelson/work/scm/hg_merge/repo_1
+searching for changes
+adding changesets
+adding manifests
+adding file changes
+added 1 changesets with 1 changes to 1 files
+1 files updated, 0 files merged, 0 files removed, 0 files unresolved
+$
+</pre><h4 id="HBestpractices"><span>Best practices</span></h4><h5 id="HDon27tmakeotherchangesalongwithamerge"><span>Don't make other changes along with a merge</span></h5><p>It is to your advantage for a merge changeset to only represent a merge, rather than a merge and some other changes you happened to be making at the time. This keeps a clear distinction between each change and makes it easy to backout a specific change if required.</p><h5 id="HAlwayscommityourworkbeforeyoumerge."><span>Always commit your work before you merge.</span></h5><p>As we've seen above, if updating your workspace from its parent would cause their histories to diverge, then you will need to merge your changes with the parent. You should commit your changes to your workspace before doing the merge, such that your merge changeset is entirely separate from any ongoing work in your workspace.</p><h3 id="HRecommittingyourworkintoasinglechangeset"><span>Recommitting your work into a single changeset</span></h3><p>As with TeamWare, you may not integrate your changes into the gate with merge changesets, uninteresting interim changes, etc.</p><p>In most cases, you're going to need to make these go away before you push your changes out.</p><p>The command to do this is hg recommit (much like wx redelget, etc.)</p><p>recommit will take your changes to date, and create a single changeset containing those changes.</p><p>You may specify a checkin comment on the command line (-m), a file containing your checkin comments (-l), or, if neither are specified, hg recommit will pop up your $EDITOR with a buffer containing all the checkin comments you have used thus far, for you to edit into a form suitable for integration.</p><p>The same comment format is used with Mercurial as with TeamWare: a bug ID or ARC case reference, followed by its synopsis.</p><pre>
+XXX: Example (of all 3)
+</pre><p>hg recommit will perform certain sanity checks as it runs.</p><dl><dt>&nbsp;You may not recommit if you have uncommitted changes in your workspace</dt><dd>You must commit them, when appropriate, then recommit.</dd><dt>&nbsp;You may not recommit if your workspace has more than one head, or branch</dt><dd>You must merge your changes such that your workspace contains only a single head (hg heads), and then recommit.</dd></dl><p>recommit will also offer to take a backup if there have been changes since your last backup, before actually recommitting your changes. For the sake of all that is good and sane, say "yes."</p><p>You will need to use hg recommit separately, in usr/closed.</p><h4 id="HBestPractices"><span>Best Practices</span></h4><p>In general, you should recommit your work as late as possible (though prior to filing an RTI), this way your full local history is available to you, and backed up, should you need to refer to it at a later point.</p><p>Even though Cadmium will ask whether you wish to backup before recomitting a workspace, you should <em>always</em> answer <em>Yes</em>.</p><h3 id="HRunthepre-putbackchecksonyourworkspace"><span>Run the pre-putback checks on your workspace</span></h3><p>Cadmium's hg pbchk command will run a full set of pre-putback checks on your workspace (cf. wx pbchk).</p><p>This includes checking CDDL blocks, checkin comments, copyrights, C, Header and Java style checks, checks for executable files which you intend to integrate, that you have not added any tags, that you have not added any branches, nor changed the name of the main branch, that your work does not include SCCS ID keywords, and that your RTI is approved.</p><p>In most cases, each and every one of these checks should pass. You should already know if you will be exempt from one or more of these rules.</p><p>You must also run this separately within usr/closed.</p><p>If passed the Hg global option -q, pbchk and nits will be silent about passing checks, only providing output for checks that fail.</p><h3 id="HIntegratingyourchanges28putback2Cpush29"><span>Integrating your changes (putback, push)</span></h3><p>Your RTI is approved, your workspace passes pbchk, your testing is complete. Now all you have to do is integrate.</p><p>You must push changes first from usr/closed (if appropriate) and then from your main workspace when you integrate. You should never allow them to be out of sync. So you'll want to push both in quick succession.</p><p>XXX: Notes about gate hooks, etc, etc, etc.</p><h2 id="HRunningaprojectgate"><span>Running a project gate</span></h2><p>Most of how you choose to run your project gates is entirely your own decision, these are merely recommendations, though it is probably worth your time to read them anyway.</p><p>Of course, when your project integrates you will have to follow most of the steps outlined in the previous section too.</p><h3 id="HSyncingupwithyourparentgate"><span>Syncing up with your parent gate</span></h3><p>At intervals, you're going to want to sync your project gate with its parent (onnv-gate, for instance). You probably want to do this on a regular schedule and at suitable points, what this schedule or these points are is entirely up to you, though we would advice you not merge constantly, both for the sake of providing you a stable basis for work, and to avoid filling your project gate history with minor merges. Merging as builds close may work fine in many cases, others may have different preferences.</p><p>Syncing with the parent is different in the case of the project gate, as you wish to preserve history of the merge, among other things.</p><h4 id="HCloneafreshchildofyourprojectgate"><span>Clone a fresh child of your project gate</span></h4><p>You should never do real work directly within your project gate, do the work in a child and push the changes to your gate when you are finished, as normal.</p><h4 id="HPullfromyourprojectgate27sparentatthepointyouwishtosyncupwith"><span>Pull from your project gate's parent at the point you wish to sync up with</span></h4><pre>
+your-machine:.../your-gate-merge% hg pull -r &lt;revision or tag&gt; your-gate-&lt;parent&gt;
+</pre><h4 id="HMergetheheadfromyourprojectwiththeheadfromtheparent"><span>Merge the head from your project with the head from the parent</span></h4><pre>
+your-machine:.../your-gate-merge% hg merge
+</pre><table><tr><td>&nbsp;Note&nbsp;</td><td>The above did not specify the -u flag, so the working copy remained at the head of your project, this way your project is the first side of the merge, and the parent the second.</td></tr></table><h4 id="HCommityourmerge"><span>Commit your merge</span></h4><p>Commit the merge, using some sensible message of your choosing, maybe something like <em>sync with onnv_97</em>.</p><h4 id="HBuildingthemerge"><span>Building the merge</span></h4><p>If you intend to run the merge through a full build to verify it, you'd be well served to build in children of the merge workspace, leaving the workspace in which you performed the merge free of detritus.</p><h4 id="HMakesureeverythingisasyouexpect"><span>Make sure everything is as you expect</span></h4><p>The first few times through this, you may wish to use Cadmium's hg list and hg pdiffs with the -p option to specify which parent to use, to make sure that the changes relative to your project gate and/or its parent are as you expect.</p><h4 id="HPushthemergetoyourprojectgate"><span>Push the merge to your project gate</span></h4><p>Push the changes out to your project gate.</p><table><tr><td>&nbsp;Warning&nbsp;</td><td><em><strong>DO NOT</strong></em> recommit the merges used to sync your project gate with its parent.<br/>There are multiple reasons for this.</td></tr></table><ul><li>They represent valuable history to you and the rest of your project. … so you don't want them to go away.</li><li>There is no good way to achieve this. If you recommit relative to your project gate, you will not only remove the merge changeset you created, but also the changesets from your project gate's parent since, relative to your project gate, those changes are local to your merge workspace.<br/>So when you do this, you're throwing out a lot of history from the parent of your project gate.<br/>This is not fatal, in that when you next sync up, you'll pull all that history again, then merge it again, but you're making work for yourself as well as throwing away information. Eventually, when you plan to integrate, you would have to pull all this history (throughout the life of your project), and recommit again against the gate to which you intend your project to integrate.<br/>Don't do it.</li></ul><p>You may notice that the above may take some time, during which others may be changing your project gate, and causing you to possibly have to merge with them.</p><p>In our experience this has been fairly rare, and how it should be dealt with is a project specific choice.</p><h3 id="HNeverrecommitwithinyourprojectgate"><span>Never recommit within your project gate</span></h3><p>You should never, ever, recommit the contents of your project within the project gate. This will considerably disrupt each and every person who has a child of your project gate (your co-workers), throw away valuable project history, and serve no practical purpose.</p><p>Don't do it, ever.</p><h3 id="HBackingoutundesirablechanges"><span>Backing out undesirable changes</span></h3><p>Mercurial's hg backout command is the best way to achieve this.</p><p>It will create an inverse changeset on top of the change to be backed out, which you may then need to merge if the changeset to be backed out is not the tip (using the -m flag to backout will start the merge for you).</p><p>This will want two commit messages, one for the backout changeset itself, and once for the merge (if necessary).</p><p>As with syncing up with your gate's parent, you should perform backouts in a child of your project gate, and then push them to the project gate itself.</p><p>If your backout required a merge, you should probably recommit it, as its function is plain enough, and the extra merge in the history is not useful to you.</p><p>If the change to be backed out contained changes to the closed portion of your project gate, you will need to perform a similar backout there, too. Never backout only one side of such a change.</p><pre>
+XXX: Example
+</pre><h3 id="HCherry-pickingchangesfromyourprojectgate27sparent"><span>Cherry-picking changes from your project gate's parent</span></h3><p>From time to time, you may wish to have changes from the parent in your project gate where a merge would be inconvenient, or outside of the schedule you're using for your merges.</p><p>You have several options, which of them is correct is largely up to you. You could merge out of schedule, which is probably better if what you want is large, or depends on other changes.</p><p>You can hg export that revision from the parent, and import that diff into a child of your project gate, test, and the push to your project gate.</p><p>The latter can be somewhat automated using Mercurial's transplant extension, which is not documented here.</p><p>If you choose to do a full merge, it should be performed as all other merges, and as documented above.</p><h3 id="HIntegration"><span>Integration</span></h3><p>Integrating your project is much like integrating any other change you have made, however there are a few other things which you should do.</p><p>Do the integration from a child of your project gate.</p><p>Take a fresh child of your project gate, run hg pbchk within that child. If file changes are necessary, integrate those changes into your project gate, and update the child you intend to integrate from.</p><p>Once pbchk is clean, beyond checks that depend upon your checkin comments, recommit within the child of your project gate.</p><p>Perform any test builds within children of this child, keep the child you intend to integrate from as pristine as possible.</p><p>File your RTI.</p><p>Once your RTI is accepted, sync this child with your project gate, and retest as necessary.</p><p>Integrate from this child.</p><p>This leaves your actual project gate untouched, so its history can be kept around as long as you think may be valuable.</p><h2 id="HQuickReference"><span>Quick Reference</span></h2><h3 id="HTeamWarecommandequivalents."><span>TeamWare command equivalents.</span></h3><p><span class="wikiexternallink"><a href="http://www.genunix2.org/wiki/index.php/TeamwareToMercurial#Appendix_I_-_Quick_Reference_Chart"><span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://www.genunix2.org/wiki/index.php/TeamwareToMercurial#Appendix_I_-_Quick_Reference_Chart"><span class="wikigeneratedlinkcontent">http://www.genunix2.org/wiki/index.php/TeamwareToMercurial#Appendix_I_-_Quick_Reference_Chart</span></a></span></a></span></p><h3 id="Hwx28129commandequivalents"><span><strong>wx</strong>(1) command equivalents</span></h3><p>Almost all Cadmium commands share the name of their wx counterparts.</p><p>Exceptions are:</p><table><tr><th scope="col">&nbsp;wx&nbsp;</th><th scope="col">&nbsp;Cadmium</th></tr><tr><td>&nbsp;active&nbsp;</td><td>&nbsp;list (active is a valid alias)</td></tr><tr><td>&nbsp;redelget&nbsp;</td><td>&nbsp;recommit (reci is a valid alias)</td></tr></table><p>Other commands without identical names in Cadmium most likely do not exist. For example, simply use webrev, not hg webrev.</p><h3 id="HWheretogethelp"><span>Where to get help</span></h3><ul><li>Mercurial's built-in help is available via hg help <em>&lt;command&gt;</em> or hg help <em>&lt;extension&gt;</em> (eg. hg help log, hg help cdm).</li><li>Bryan O'Sullivan (a Mercurial contributor), has written a book "Distributed revision control with Mercurial" which is freely available from:<br/><span class="wikiexternallink"><a href="http://hgbook.red-bean.com/"><span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://hgbook.red-bean.com/"><span class="wikigeneratedlinkcontent">http://hgbook.red-bean.com/</span></a></span></a></span><br/>You should bookmark it, and perhaps print out the pdf and keep it on your desk for a while.</li><li>General questions (and questions about OpenSolaris specifics, such as Cadmium and workflow) should be directed to <span class="wikiexternallink"><a href="mailto:tools-discuss@opensolaris.org">tools-discuss@opensolaris.org</a></span></li><li>As a last resort, you may also wish to ask the SCM Migration project, also on opensolaris.org</li></ul><p>&nbsp;Last updated 2008-07-16 14:52:28 MDT</p>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:11<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by kupfer on 2010/07/14 22:03
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Community Group tools Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/building_opensolaris">Build/Install OpenSolaris (Part 1)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/building_opensolaris_part2">Build/Install OpenSolaris (Part 2)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/downloads">Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/gcc">GCC</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/bug_fixing_notes">Bug Fixing Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/build_instr">Build Instructions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/flagday">Important Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/on_policy">ONNV Policy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/rationale">Background and Rationale</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/shadow">Shadow Compilation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/status">Current Status</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/hg">Mercurial Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/linker">Dynamic Linking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/scm">OpenSolaris Source Code Management</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/bzr%2Deval">OpenSolaris DSCM Evaluation: Bzr (Interim Report)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/dcm_evaluation_mercurial">OpenSolaris DSCM Evaluation: Mercurial</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/dscmreqdoc">DSCM Requirements Document</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/evalform">Candidate Evaluation Form</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/evalplan">Evaluation Plan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/hg_help">How To Use Mercurial (hg) Repositories</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/hg_teamware_transition">How To Transition from Teamware to Mercurial</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/history">SCM Project History</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/on%2Dscm%2Dtools">ON SCM&#45;Related Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/scm_milestone">Source Code Management for OpenSolaris: MILESTONES</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/scmconsolespec">SCM console specification</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/scmhostspec">SCM hosting implementation specification</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/svn_help">How To Use SVN Repositories</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/scmdownloads">Source Code Management Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_tools">Sun Studio Downloads</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/faqs">Sun Studio FAQs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/getstarted">Sun Studio Getting Started</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sss11ent">Sun Studio 11 License</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sss12ent_license">Sun Studio 12 License</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sssent">Sun Studio 10 License</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_10_tools">Sun Studio 10 Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_11_tools">Sun Studio 11 Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_11_tools_previous">Sun Studio 11&#45;&#45; Previous Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_12_tools">Sun Studio 12 Compilers and Tools for the OpenSolaris Common Build Environment (CBE)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/support">Sun Studio Support</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/testing+nightly">testing nightly</a></span></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2013, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

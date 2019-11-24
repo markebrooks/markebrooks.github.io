@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>ZFS FAQ (Community Group zfs.faq-2) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Community+Group+zfs/faq%2D2" />
+                                <meta name="document" content="Community Group zfs.faq-2"/>
+    <meta name="space" content="Community Group zfs"/>
+    <meta name="page" content="faq-2"/>
+    <meta name="version" content="1.1"/>
+                    <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="ZFS FAQ" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                <!-- com.xpn.xwiki.plugin.skinx.LinkExtensionPlugin -->
+    <link href="/bin/skin/skins/colibri/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/>
+
+    
+    <link href="/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript" src="/resources/js/xwiki/suggest/ajaxSuggest.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Community Group zfs";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes" ];
+window.docviewurl = "/bin/view/Community+Group+zfs/faq%2D2";
+window.docediturl = "/bin/edit/Community+Group+zfs/faq%2D2";
+window.docsaveurl = "/bin/save/Community+Group+zfs/faq%2D2";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js'></script><script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js'></script><script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js'></script>
+
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/compatibility.js"></script>
+
+  </head>
+        <body id="body" class="xwiki viewbody hideright">
+  <div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+<div id="menuview">
+  <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div class="topmenuentry " id="tmLogin"><a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FCommunity%2BGroup%2Bzfs%2Ffaq%252D2%3Fviewer%3Dcode%26%2338%3Blanguage%3Den"><strong>Log-in</strong></a></div>
+  </div>
+<div class="leftmenu">
+  <div class="topmenuentry hasIcon" id="tmWiki"><a class="tme" href="/bin/view/Main/"><strong>xwiki</strong></a></div>
+  <div class="topmenuentry hasIcon" id="tmSpace"><a class="tme" href="/bin/view/Community+Group+zfs/"><strong>Community Group zfs</strong></a></div>
+
+<div class="topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmSubSites">
+<span class="tme-extensible"><a class="tme"><strong>Subsites</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="http://cr.opensolaris.org/" id="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth">Auth</a></span>
+</span></div>
+
+
+</div>
+</div>
+
+</div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+
+  <div id="company">
+  <div id="companylogo">
+    <a href="/bin/view/Main/" title="Home" rel="home">
+    <img src="/skins/colibri/logo.png" alt="Wiki Logo"/>
+    </a>
+  </div>   </div> 
+  <div id="Iconbar">
+    <a id="CollectivesIcon" href="/bin/view/Main/collectives">Collectives</a>
+    <a id="DiscussionsIcon" href="/bin/view/Main/discussions">Discussions</a>
+    <a id="DocumentationIcon" href="/bin/view/Main/documentation">Documentation</a>
+    <a id="DownloadIcon" href="/bin/view/Main/downloads">Download</a>
+    <a id="SourceBrowserIcon" href="http://src.opensolaris.org">Source Browser</a>
+  </div>
+  <div class="clearfloats"></div>
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/WebSearch">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+   <div id="hierarchy">
+                      <a href='/bin/view/Community+Group+zfs/translations'>Translations</a> <span class='separator'>&raquo;</span> <a href='/bin/view/Community+Group+zfs/french'>French</a> <span class='separator'>&raquo;</span> <a href='/bin/view/Community+Group+zfs/faq%2D2'>ZFS FAQ</a>
+        </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Community+Group+zfs/faq%2D2?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+        <div class="main layoutsubsection">
+  <div id="contentmenu" class="actionmenu">
+  <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div class="topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmExport">
+<span class="tme-extensible"><a class="tme"><strong>Export</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Community+Group+zfs/faq%2D2?format=pdf&amp;language=en" id="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+zfs/faq%2D2?format=rtf&amp;language=en" id="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+zfs/faq%2D2?format=html&amp;language=en" id="tmExportHtml">Export as HTML</a></span>
+  </span></div>
+
+<div class="topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmShow">
+<span class="tme-extensible"><a class="tme" href="/bin/view/Community+Group+zfs/faq%2D2?viewer=code&amp;language=en"><strong>View</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Community+Group+zfs/faq%2D2?viewer=comments&amp;language=en" id="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+zfs/faq%2D2?viewer=attachments&amp;language=en" id="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+zfs/faq%2D2?viewer=history&amp;language=en" id="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+zfs/faq%2D2?viewer=information&amp;language=en" id="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+zfs/faq%2D2?viewer=code&amp;language=en" id="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div class="topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmMoreActions">
+<span class="tme-extensible"><a class="tme"><strong>More actions</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Community+Group+zfs/faq%2D2?xpage=print&amp;language=en" id="tmPrintPreview">Print preview</a></span>
+    </span></div>
+  </div>
+
+
+  </div>
+  <div id="mainContentArea">
+      <h1><span>Wiki source code of <a href="/bin/view/Community+Group+zfs/faq%2D2">ZFS FAQ</a></span></h1>
+  <a href="/bin/view/Community+Group+zfs/faq%2D2?viewer=code&showlinenumbers=0&language=en">Hide line numbers</a>
+    <textarea readonly="readonly" style="width: 100%; height: 300px;">
+1: == ZFS : Foire aux questions (FAQ)
+2: 
+3: //Dernière mise à jour : mai 2008//
+4: [[Questions sur les versions de ZFS&#62;&#62;#zfsproduct]]
+5: [[Questions techniques sur ZFS&#62;&#62;#zfstech]]
+6: [[Questions sur les différences entre ZFS et UFS &#62;&#62;#zfsufs]]
+7: [[Questions sur l&#8217;administration de ZFS&#62;&#62;#zfsadmin]]
+8: [[Questions sur l&#8217;interaction entre ZFS et d&#8217;autres produits&#62;&#62;#zfsother]]
+9: 
+10: === Questions sur les versions de ZFS
+11: 
+12: 1. [[Comment obtenir ZFS ?&#62;&#62;#howcaniget]]
+13: 1. [[Quand ZFS sera-t-il disponible pour &#60;nom du SE&#62; ?&#62;&#62;#whennonsolaris]]
+14: 1. [[Que signifie ZFS ?&#62;&#62;#whatstandfor]]
+15: 
+16: 1. **Comment obtenir ZFS ?**
+17: ZFS est disponible dans les versions suivantes :
+18: 1* [[Solaris Nevada, version 27a et versions supérieures&#62;&#62;Main.downloads]]
+19: 1* [[Solaris Express&#62;&#62;http://www.sun.com/software/solaris/solaris-express/get.jsp]]
+20: 1* [[Démarrer avec Solaris 10, version 6/06&#62;&#62;http://www.sun.com/solaris/get.jsp/]]
+21: 1. **Quand ZFS sera-t-il disponible pour &#60;nom du SE&#62; ?**
+22: Il est prévu de rendre ZFS disponible pour [[FreeBSD&#62;&#62;http://lists.freebsd.org/pipermail/freebsd-current/2006-August/065306.html]] et [[Linux&#62;&#62;http://zfs-on-fuse.blogspot.com/]] (via FUSE). Pour plus d&#8217;informations sur la CDDL, reportez-vous à la section [[FAQ sur les licences&#62;&#62;Main.licensing_faq]].
+23: 1. **Que signifie ZFS ?**
+24: A l&#8217;origine, ZFS était l&#8217;acronyme de « Zettabyte File System ». Le plus grand [[Préfixe SI&#62;&#62;http://en.wikipedia.org/wiki/SI_prefix]] envisageable était zetta, yotta n&#8217;entrait pas en ligne de compte. ZFS est un système de fichiers 128 bits ; son nom fait référence au fait que ZFS peut stocker 256 quadrillions de zetaoctets, chaque zetaoctet équivalant à 270 octets. Outre une capacité de 128 bits, ZFS offre une intégrité de données à toute épreuve, une administration facilitée, ainsi qu&#8217;un modèle simplifié pour la gestion de vos données.
+25: 
+26: === Questions techniques sur ZFS
+27: 
+28: 1. [[Pourquoi ZFS a-t-il une capacité de 128 bits ?&#62;&#62;#why128bit]]
+29: 1. [[Quelles sont les limites de ZFS ?&#62;&#62;#whatlimits]]
+30: 
+31: 1. **Pourquoi ZFS a-t-il une capacité de 128 bits ?**
+32:  Les systèmes de fichiers ont une durée de vie bien supérieure à la plupart des logiciels classiques. Ceci est notamment dû au fait que le format sur disque est très difficile à modifier. Dans la mesure où UFS a duré près de 20 ans, la plupart du temps sous sa forme actuelle, il n&#8217;est pas impensable que ZFS puisse durer 30 ans. La loi de Moore s&#8217;applique déjà au stockage et il sera peut-être possible de stocker plus de 64 bits de données sur un seul système de fichiers. Pour obtenir une description plus complète et savoir pourquoi 128 bits suffisent, reportez-vous au [[Blog de Jeff.&#62;&#62;http://blogs.sun.com/roller/page/bonwick?entry=128_bit_storage_are_you]]
+33: 1. **Quelles sont les limites de ZFS ?**
+34: Les capacités de ZFS sont telles, qu&#8217;en pratique il est impossible d&#8217;atteindre ses limites. ZFS permet de stocker jusqu&#8217;à 16 Exabytes dans chaque pool de stockage, système de fichiers, fichier ou attribut de fichier. ZFS peut stocker des milliards de noms : fichiers ou répertoires dans un répertoire, systèmes de fichiers dans un système de fichiers, ou des instantanés d&#8217;un système de fichiers. ZFS peut stocker des trillions d&#8217;éléments : fichiers dans un système de fichiers, systèmes de fichiers, volumes ou instantanés dans un pool.
+35: 
+36: === Questions sur les différences entre ZFS et UFS
+37: 
+38: 1. [[Pourquoi ZFS n&#8217;a-t-il pas d&#8217;utilitaire fsck ?&#62;&#62;#whynofsck]]
+39: 1. [[Pourquoi du(1) indique-t-il des tailles de fichiers différentes pour ZFS et UFS ?&#62;&#62;#whydusize]]
+40: 1. [[Pourquoi ZFS n&#8217;a-t-il pas de quotas d&#8217;utilisateurs ou de groupes ?&#62;&#62;#zfsquotas]]
+41: 
+42: 1. **Pourquoi ZFS n&#8217;a-t-il pas d&#8217;utilitaire fsck ?**
+43:  Les utilitaires fsck présentent deux avantages. Ils permettent de :
+44: 1* **Vérifier l&#8217;intégrité du système de fichiers** : bien souvent, les administrateurs désirent simplement s&#8217;assurer que les disques de leurs systèmes de fichiers ne sont pas corrompus. Pour la plupart des systèmes de fichiers, cela équivaut à exécuter fsck alors que le système de fichiers est hors ligne. Ce processus peut être très long et très cher. Grâce à ZFS, vous pouvez nettoyer toutes les données au sein d&#8217;un pool tandis que le système fonctionne. Toutes les données corrompues sont détectées et réparées au cours du processus. Cette fonctionnalité sera améliorée à l&#8217;avenir afin de permettre un nettoyage en arrière-plan.
+45: 1* **Réparer sur le disque** : si un ordinateur s&#8217;arrête brutalement, l&#8217;état sur le disque de certains systèmes de fichiers ne sera plus cohérent. L&#8217;ajout de la journalisation a permis de résoudre certains de ces problèmes, mais souvent le journal ne peut pas être déployé et le système de fichiers doit ainsi être réparé. Les différentes erreurs, telles que la création d&#8217;une entrée de répertoire avant la mise à jour du lien parent, sont bien connues. Il est facile de remédier à ce problème. Ce problème n&#8217;affectera pas ZFS car les données sont toujours cohérentes sur le disque.
+46: Le problème est plus délicat lorsque le matériel ou les logiciels ne fonctionnent pas correctement. Même les systèmes de fichiers ou les gestionnaires de volumes ayant des sommes de contrôle des blocs sont vulnérables à de nombreuses pathologies pouvant corrompre les données. Dans ce cas, le mode d&#8217;échec est principalement aléatoire et la plupart des systèmes de fichiers signalent une erreur grave (s&#8217;il s&#8217;agit de métadonnées) ou renvoient silencieusement les mauvaises données à l&#8217;application. Dans les deux cas, un utilitaire fsck n&#8217;est pas très utile. Il sera probablement impossible de réparer la corruption car elle ne correspond à aucune pathologie connue. Avec ZFS, ces erreurs seront statistiquement inexistantes dans une configuration redondante. Dans le cas d&#8217;une configuration non redondante, ces erreurs seront correctement détectées, mais génèreront une erreur E/S lors de la tentative de lecture du bloc. En théorie, il est possible de créer un outil qui réparerait la corruption, mais nous nous retrouverions avec un outil utilisable uniquement pour une tâche donnée. Bien sûr, ZFS est tout aussi vulnérable aux bogues logiciels, mais ces bogues permettraient d&#8217;établir un schéma logique de corruption pouvant être réparée par un outil générique. Au cours des 5 années de développement de ZFS, aucun schéma n&#8217;a pu être déterminé.
+47: 1. **Pourquoi du(1) indique-t-il des tailles de fichiers différentes pour ZFS et UFS ?**
+48: Sur UFS, du(1) indique la taille des blocs de données au sein du fichier. Sur ZFS, du(1) indique la taille réelle du fichier telle qu&#8217;enregistrée sur le disque. Cette taille inclut les métadonnées, ainsi que la compression. Ces indications permettent vraiment de répondre à la question : « Combien d&#8217;espace puis-je gagner en supprimant ce fichier ? ». Ainsi, même lorsque la compression n&#8217;est pas activée, vous obtenez des résultats différents pour ZFS et UFS.
+49: 1. **Pourquoi ZFS n&#8217;a-t-il pas de quotas d&#8217;utilisateurs ou de groupes ?**
+50: Les systèmes de fichiers ZFS peuvent être utilisés comme des points de contrôle administratifs logiques. Cela vous permet d&#8217;afficher les données d&#8217;utilisation, de gérer les propriétés, d&#8217;effectuer des sauvegardes, de réaliser des instantanés, etc. Grâce au modèle ZFS, vous pouvez aisément définir un système de fichiers par utilisateur pour les serveurs de répertoires personnels. La non-association des quotas ZFS à un utilisateur donné est intentionnelle car les systèmes de fichiers sont des points de contrôle administratif.
+51: Vous pouvez définir les quotas ZFS sur les systèmes de fichiers pouvant représenter des utilisateurs, des projets, des groupes etc., ainsi que des portions entières d&#8217;une hiérarchie de système de fichiers. Cela permet de combiner les quotas différemment des quotas par utilisateur classiques. Les quotas par utilisateur ont été mis en place car il fallait que plusieurs utilisateurs puissent partager le même système de fichiers.
+52: Les quotas de systèmes de fichiers ZFS sont flexibles et simples à mettre en place. Vous pouvez appliquer un quota au moment de la création du système de fichiers. Par exemple :
+53: |
+54: 
+55: {{{
+56: # zfs create -o quota=20g tank/home/users
+57: }}}
+58: 
+59: Les systèmes de fichiers utilisateurs de ce système de fichiers héritent automatiquement le quota de 20 Go défini pour le système de fichiers parent. Par exemple : |
+60: 
+61: {{{
+62: # zfs create tank/home/users/user1
+63: # zfs create tank/home/users/user2
+64: # zfs list -r tank/home/users
+65: NAME                    USED  AVAIL  REFER  MOUNTPOINT
+66: tank/home/users        76.5K  20.0G  27.5K  /tank/home/users
+67: tank/home/users/user1  24.5K  20.0G  24.5K  /tank/home/users/user1
+68: tank/home/users/user2  24.5K  20.0G  24.5K  /tank/home/users/user2
+69: }}}
+70: 
+71: Vous pouvez augmenter les quotas ZFS lors de l&#8217;augmentation de l&#8217;espace disque dans les pools de stockage ZFS tout en maintenant le système de fichiers actif, sans interruption de fonctionnement.
+72: Plutôt que de tenter d&#8217;adapter les quotas utilisateur à un modèle d&#8217;administration qui se base sur des systèmes de fichiers comme points de contrôle, l&#8217;équipe ZFS œuvre à améliorer la gestion de plusieurs systèmes de fichiers à la fois.
+73: Il existe une alternative à l&#8217;utilisation des quotas d&#8217;utilisateur permettant de maîtriser l&#8217;espace disque pour les courriers électroniques : utiliser un logiciel de serveur de courrier électronique incluant une fonctionnalité de quota, par exemple, Sun Java System Messaging Server. Ce logiciel fournit des quotas utilisateur pour les courriers électroniques, des messages d&#8217;avertissement pour les quotas et des fonctionnalités d&#8217;expiration et de purge.
+74: 
+75: === Questions sur l&#8217;administration de ZFS
+76: 
+77: 1. [[Que faire si ZFS me signale une erreur grave lors de chaque initialisation ?&#62;&#62;#zfspanic]]
+78: 1. [[Est-ce que ZFS prend en charge les disques hot spare ?&#62;&#62;#hotspares]]
+79: 1. [[Est-il possible de retirer des périphériques d&#8217;un pool ZFS ?&#62;&#62;#deviceremoval]]
+80: 1. [[Puis-je utiliser ZFS comme système de fichiers racine ? Qu&#8217;en est-il des zones ?&#62;&#62;#zfsboot]]
+81: 1. [[Est-il possible de diviser une configuration ZFS mise en miroir ?&#62;&#62;#zfsnosplit]]
+82: 
+83: 1. **Que faire si ZFS me signale une erreur grave lors de chaque initialisation ?**
+84: ZFS est destiné à résister aux pannes matérielles arbitraires grâce à l&#8217;utilisation de la redondance (mise en miroir ou RAID-Z). Malheureusement, certaines pannes survenant dans les configurations non répliquées peuvent provoquer des erreurs graves dans ZFS lors du chargement du pool. Il s&#8217;agit là d&#8217;un bogue qui sera résolu prochainement. Les bogues d&#8217;autres fonctionnalités très utiles, telles que le nettoyage en arrière-plan, seront eux aussi résolus prochainement. En attendant, si vous ne parvenez pas à effectuer l&#8217;initialisation parce que le pool est corrompu, procédez comme suit :
+85: 11. boot using &#8217;-m milestone=none&#8217;
+86: 11. # mount -o remount /
+87: 11. # rm /etc/zfs/zpool.cache
+88: 11. # redémarrage
+89:  Cela permettra de supprimer toutes les informations relatives aux pools de votre système. Vous devrez ensuite recréer votre pool et le restaurer en vous servant de la sauvegarde.
+90: 1. **Est-ce que ZFS prend en charge les disques hot spare ?**
+91: Oui, les disques hot spare ZFS sont disponibles dans la version Solaris Express Community, build 42, la version Solaris Express de juillet 2006 et la version Solaris 10 11/06. Consultez le guide d&#8217;administration de ZFS pour plus d&#8217;informations sur les disques hot spare.
+92: 1. **Est-il possible de retirer des périphériques d&#8217;un pool ZFS ?**
+93: Il est actuellement impossible de retirer un périphérique de niveau supérieur, tel qu&#8217;un groupe RAID-Z ou un disque dans une configuration non mise en miroir. Cette fonctionnalité sera disponible dans une version ultérieure.
+94: Vous pouvez retirer un périphérique d&#8217;une configuration ZFS non mise en miroir à l&#8217;aide de la commande zpool detach.
+95: La commande zpool replace vous permet de remplacer un périphérique par un périphérique de taille équivalente, aussi bien dans une configuration mise en miroir que dans une configuration RAID-Z.
+96: 1. **Puis-je utiliser ZFS comme système de fichiers racine ? Qu&#8217;en est-il des zones ?**
+97: Actuellement, il est impossible d&#8217;utiliser les systèmes de fichiers ZFS comme système de fichiers racine sur les versions Solaris 10. Cependant, la version SX community pour les systèmes x86 permet la prise en charge d&#8217;un petit sous-ensemble de racine et d&#8217;initialisation ZFS. Pour plus d&#8217;informations, reportez-vous à la section [[Initialisation ZFS&#62;&#62;Community Group zfs.boot]]. Vérifiez régulièrement la présence de nouvelles informations relatives à l&#8217;initialisation ZFS pour Solaris 10.
+98: ZFS est utilisé comme chemin racine de zone dans la version Solaris Express, mais ne peut être corrigé ou mis à jour tant que ces outils ne seront pas reconnus par les systèmes de fichiers ZFS. Pour plus d&#8217;informations, voir [[FAQ sur les zones&#62;&#62;Community Group zones.#cfg_zfsboot]].
+99: Il est en outre impossible de créer un cache cachefs sur un système de fichiers ZFS.
+100: 1. **Est-il possible de diviser une configuration ZFS mise en miroir ?**
+101: Actuellement, ZFS ne permet pas de diviser une configuration mise en miroir pour le clonage ou la sauvegarde. La meilleure méthode de clonage et de sauvegarde est d&#8217;utiliser les fonctionnalités de clonage et d&#8217;instantanés de ZFS. Pour plus d&#8217;informations sur l&#8217;utilisation des fonctionnalités de clonage et d&#8217;instantanés de ZFS, consultez la section [[Guide Admin de ZFS&#62;&#62;Community Group zfs.docs]]. Reportez-vous à RFE [[6421958&#62;&#62;http://bugs.opensolaris.org/view_bug.do?bug_id=6421958]] pour envoyer des instantanés de manière récursive afin d&#8217;améliorer le processus de réplication au sein des systèmes.
+102: Outre les fonctionnalités de clonage et d&#8217;instantanés de ZFS, vous pouvez effectuer la réplication des systèmes de fichiers ZFS à distance grâce au logiciel Sun StorageTek Availability Suite. Cliquez [[ici&#62;&#62;Project avs.WebHome]] pour accéder à des démonstrations AVS/ZFS.
+103: Lorsque vous divisez une configuration ZFS mise en miroir à des fins de clonage ou de sauvegarde, tenez compte des informations suivantes :
+104: 1* ZFS ne prend pas en charge la division d&#8217;une configuration ZFS mise en miroir. RFE [[6421958&#62;&#62;http://bugs.opensolaris.org/view_bug.do?bug_id=6421958]] est configuré pour fournir cette fonctionnalité.
+105: 1* Il est impossible de retirer un disque d&#8217;une configuration ZFS mise en miroir, de sauvegarder les données sur le disque et d&#8217;utiliser ensuite ces données pour cloner ce pool.
+106: 1* Si vous souhaitez utiliser une fonctionnalité de sauvegarde ou d&#8217;instantanés matérielle plutôt que la fonctionnalité d&#8217;instantanés de ZFS, procédez comme suit :
+107: 1*1. zpool export pool-name
+108: 1*1. Étapes d&#8217;instantanés au niveau matériel
+109: 1*1. zpool export pool-name
+110: 1* Toute tentative de diviser un pool de stockage ZFS mis en miroir via la suppression de disques ou la modification du matériel faisant partie d&#8217;un pool en direct, risque de provoquer la corruption des données.
+111: 
+112: === Questions sur l&#8217;interaction entre ZFS et d&#8217;autres produits
+113: 
+114: 1. [[Les environnements en cluster prennent-ils en charge ZFS ?&#62;&#62;#zfscluster]]
+115: 1. [[Quels sont les produits de sauvegarde tiers prenant ZFS en charge ?&#62;&#62;#backupsoftware]]
+116: 1. [[ZFS fonctionne-t-il avec les périphériques à connexion SAN ?&#62;&#62;#hardwareraid]]
+117: 
+118: 1. **Les environnements en cluster prennent-ils en charge ZFS ?**
+119: Solaris Cluster 3.2 prend en charge un système de fichiers ZFS local hautement disponible (HA) dans la version Solaris 10 11/06. Cette prise en charge permet le basculement en direct entre les systèmes, sans importation automatique des pools entre les systèmes.
+120: Si vous utilisez Solaris Cluster 3.2 pour configurer un système de fichiers ZFS local hautement disponible, tenez compte de l&#8217;information suivante :
+121: N&#8217;ajoutez pas un périphérique quorum configuré à un pool de stockage ZFS. Si vous ajoutez un périphérique quorum configuré à un pool de stockage, un nouvel étiquetage est appliqué au disque et les informations de configuration du quorum seront perdues. Ainsi, le disque ne fournira plus de vote de quorum au cluster. Après avoir ajouté un disque à un pool de stockage, vous pouvez le configurer en tant que périphérique quorum. Vous pouvez également configurer le disque, l&#8217;ajouter au pool de stockage, puis reconfigurer le disque en tant que périphérique quorum.
+122: Les version OpenSolaris et Nevada ne prennent pas en charge Solaris Cluster 3.2. Pour plus d&#8217;informations sur l&#8217;utilisation de la version Solaris Cluster open source, consultez la [[page de la communauté Cluster en haute disponibilité ouvert&#62;&#62;Community Group ha-clusters.WebHome]].
+123: ZFS n&#8217;est pas un système de fichiers en cluster, distribué, ni parallèle natif  et il ne permet pas d&#8217;accéder simultanément à plusieurs hôtes différents. ZFS fonctionne bien lorsqu&#8217;il est partagé dans un environnement NFS distribué.
+124: À long terme, nous prévoyons de faire de ZFS un système de fichiers en cluster natif permettant l&#8217;accès simultané à plusieurs hôtes. L&#8217;ampleur de ce travail n&#8217;a pas encore été évaluée.
+125: 1. **Quels sont les produits de sauvegarde tiers prenant en charge ZFS ?**
+126: 1* EMC Networker 7.3.2. permet de sauvegarder et de restaurer les systèmes de fichiers ZFS (ACL ZFS).
+127: 1* Veritas Netbackup 6.5 permet de sauvegarder et de restaurer les systèmes de fichiers ZFS (ACL ZFS).
+128: 1* Le logiciel client IBM Tivoli Storage Manager (5.4.1.2) permet de sauvegarder et de restaurer les systèmes de fichiers ZFS via l&#8217;interface de ligne de commande et l&#8217;interface utilisateur. Les ACL ZFS sont également préservées.
+129: 1* BrightStor ARCserve de Computer Associates sauvegarde et restaure les systèmes de fichiers ZFS, mais les ACL ZFS ne sont pas préservées.
+130: 1. **ZFS fonctionne-t-il avec les périphériques à connexion SAN ?**
+131: Oui, ZFS fonctionne aussi bien avec les périphériques à connexion directe qu&#8217;avec les périphériques à connexion SAN. Cependant, si votre pool de stockage ne contient pas de périphériques mis en miroir ou RAID-Z de niveau supérieur, ZFS peut indiquer les erreurs de sommes de contrôle mais ne peut pas les corriger. Cependant, si votre pool de stockage contient des périphériques mis en miroir ou RAID-Z de niveau supérieur, ZFS peut indiquer et corriger les erreurs de sommes de contrôle.
+132: Prenons l&#8217;exemple d&#8217;un système de stockage RAID à connexion SAN, configuré pour présenter les LUN à la structure SAN basée sur les disques mis en miroir en interne. Si vous utilisez une seule LUN de ce système de stockage pour créer un pool à disque unique, le pool ne contiendra pas de données dupliquées dont ZFS a besoin pour corriger les erreurs détectées. Dans ce cas, ZFS ne pourrait pas corriger d&#8217;erreur introduite par le système de stockage.
+133: Si vous utilisez deux LUN de ce système de stockage pour créer un pool de stockage mis en miroir, ou trois LUN pour créer un pool de stockage RAID-Z, alors ZFS disposerait de données dupliquées permettant de corriger les erreurs détectées. Dans ce cas, ZFS ne pourrait pas corriger d&#8217;erreur introduite par le système de stockage.
+134: Dans tous les cas où des pools de stockage ZFS n&#8217;ont pas de périphériques virtuels de niveau supérieur RAID-Z ou mis en miroir, la viabilité du pool dépend entièrement de la fiabilité des périphériques de stockage sous-jacents.
+135: Si votre pool de stockage ZFS ne contient qu&#8217;un seul périphérique, qu&#8217;il s&#8217;agisse d&#8217;un stockage à connexion SAN ou directe, vous ne pourrez pas bénéficier des fonctionnalités telles que RAID-Z, l&#8217;entrelacement dynamique, l&#8217;équilibrage de charge E/S etc.
+136: ZFS détecte toujours les corruptions de données silencieuses. Certains systèmes de stockage peuvent détecter les erreurs de sommes de contrôle mais pas les types d&#8217;erreurs suivants :
+137: 1* Écrasements accidentels ou fichiers fantômes
+138: 1* Lectures et écritures mal dirigées
+139: 1* Erreurs de chemin de données
+140: Généralement, les fonctions ZFS sont conçues pour les périphériques à connexion SAN, mais l&#8217;utilisation de périphériques plus simples vous permettra de tirer meilleur profit des diverses fonctionnalités disponibles.
+141: En résumé, utiliser ZFS avec des périphériques à connexion SAN vous permettra de tirer profit des fonctionnalités d&#8217;auto-rétablissement de ZFS en configurant la redondance dans vos pools de stockage ZFS même si la redondance est disponible à des niveaux matériels inférieurs.
+  </textarea>
+
+    <div class="clearfloats"></div>
+  </div>    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSNav','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSNav'); togglePanelVisibility(this.parentNode);">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavCommunity Group">
+            <div id="xwikinavCommunity GroupHeader" class="accordionTabTitleBar"><h6>Community Group</h6>
+            </div>
+            <div id="xwikinavCommunity GroupContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+edu/">Academic and Research</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+accessibility/">Accessibility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+advocacy/">Advocacy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+appliances/">Appliances</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+approachability/">Approachability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/">Architecture Process and Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+brandz/">BrandZ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+chinese_users/">Chinese Users</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/">Community Advisory Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+dtrace/">DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+databases/">Databases</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+desktop/">Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/">Device Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+distribution/">Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+emerging_platforms/">Emerging Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+fm/">Fault Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+games/">Games on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ha%2Dclusters/">HA Clusters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+hpcdev/">HPC Developer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+int_localization/">Internationalization and Localization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+laptop/">Laptop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ldoms/">Logical Domains</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+mdb/">Modular Debugger (MDB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+nfs/">NFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/">Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/">OS/Net (ON)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+observability/">Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ogb/">OpenSolaris Governing Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+printing/">OpenSolaris Printing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/">Performance</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+pm/">Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+power_pc/">PowerPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/">Security</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+smf/">Service Management Facility (smf(5))</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sw%2Dporters/">Software Porters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+volume_manager/">Solaris Volume Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+storage/">Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sysadmin/">Systems Administration Community Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+testing/">Testing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/">Tools Home</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ufs/">Unix File Systems (UFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+web/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+x_win/">X Window System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+xen/">Xen</a></span></li>
+<li><em class="underline"><em><span class="wikilink"><a href="/bin/view/Community+Group+zfs/">ZFS</a></span></em></em></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/">Zones</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavProject">
+            <div id="xwikinavProjectHeader" class="accordionTabTitleBar"><h6>Project</h6>
+            </div>
+            <div id="xwikinavProjectContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/"></a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+adsl/">ADSL Modem Enhancement</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+arc%2Dprocess/">ARC Process Definition</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osarm/">ARM Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bind/">BIND Update</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bluetooth/">Bluetooth Stack & Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dinitiator/">Brocade FC HBA &#45; Initiator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dtarget/">Brocade FC HBA &#45; Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brussels/">Brussels &#45; unified network link configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cifs%2Dserver/">CIFS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smbfs/">CIFS client for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cmt/">CMT</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/">COMSTAR: Common Multiprotocol SCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpufs/">CPU Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/">Caiman, Solaris Install Revisited</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+celeste/">Celeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/">Chime Visualization Tool for DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+clearview/">Clearview: Network Interface Coherence</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dinformix/">Cluster Agent: Informix Dynamic Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dcontainer/">Cluster Agent: OpenSolaris Container</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dxvm/">Cluster Agent: OpenSolaris xVM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Debs/">Cluster Agent: Oracle E&#45;Business Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dsmb/">Cluster Agent: Samba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dtomcat/">Cluster Agent: Tomcat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dpostgresql/">Cluster agent: PostgreSQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+data%2Dflow/">Coarse Data Flow Parallelism</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+colorado/">Colorado: Open HA Cluster on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+commandassist/">Command Assistant</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cam/">Common Array Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+companion/">Companion &#45; /opt/sfw: Free and Open Source software</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+content/">Content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+contest/">Contest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpg/">Credentials Process Groups</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crossbow/">Crossbow: Network Virtualization and Resource Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmsagenttoolkit/">Crypto KMS Agent Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/">Cryptographic Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Ddoc/">DTrace Guide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dmm/">Data Migration Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+datatethers/">Data Tethers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+de/">Deutsches Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ddtool/">Device Detection Tool</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+driver%2Dutility/">Device Driver Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devicemgr/">Device Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devmapper/">Device Mapper</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dri/">Direct Rendering Infrastructure & 3D drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/">Duckwater: Simplified name services management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+phpEasyTools/">Easy Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emancipation/">Emancipation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex%2Dcna/">Emulex Advanced Ethernet Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex/">Emulex Fibre Channel Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webcams/">Enhance the support of USB webcams</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Dprofiles/">Enhanced SMF Profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+amd/">Enhancements for AMD&#45;based Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+erlang%2Ddtrace/">Erlang DTrace Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ethbridge/">Ethernet bridge module for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+conary%2Deval/">Evaluate Conary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+events%2Dregistry/">Events Registry</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ext3/">Ext3 file system support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+facilitation/">Facilitation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fcoe/">Fibre Channel over Ethernet</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fgap/">Fine Grained Access Policy (FGAP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fingerprint%2Dauthentication/">Fingerprint Authentication</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fmac/">Flexible Mandatory Access Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+forensics/">Forensic Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fox/">Fully Open X Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fuse/">Fuse on Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+generic%2Dmca/">Generic Machine Check Architecture Improvements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+raidcfg/">Generic RAID Configuration Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+summerofcode/">Google SOC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Djboss/">HA&#45;JBoss</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dmysql/">HA&#45;MySQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hpc%2Dstack/">HPC Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livehadoop/">Hadoop Live CD</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hitachi/">Hitachi</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+honeycomb/">HoneyComb Fixed Content Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hotplug/">Hotplug Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ip%2Drefactor/">IP Datapath Refactoring</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ipoib/">IP over Infiniband</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tref/">IPsec Tunnel Reform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/">Image Packaging System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isc/">Immutable Service Containers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+perfmib/">Improved Performance MIB</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/">Indiana</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+awards/">Innovation Awards</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ikev2/">Internet Key Exchange, version 2 (IKEv2)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+irm/">Interrupt Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jkstat/">JKstat &#45; a java binding for libkstat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jeos/">JeOS &#45; Just enough Operating System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jfs/">Journaled File System (JFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kde/">K Desktop Environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kerberos/">Kerberos</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kssl/">Kernel SSL Enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kernel%2Dsockets/">Kernel Sockets</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmf/">Key Management Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ksh93%2Dintegration/">Korn Shell 93 integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ldoms%2Dmgr/">LDoms Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+txipsec/">Labeled IPsec</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+l2filter/">Layer 2 Filtering</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lending/">Lending</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lld/">Link Layer Discovery</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livemedia/">Live Media: Technologies for distributions running from CD and other media</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+localedata/">Locale Data</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mips/">MIPS Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohac%2Davs/">MRSL.NONsharedDevice</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mega_sas/">Mega_sas</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mx/">Mexico</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+milax/">MilaX minimal Live Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mozilla%2Ddtrace/">Mozilla DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+glossary/">Multi&#45;lingual Glossary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mpxio/">Multi&#45;pathing software (MPxIO)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+multiple%2Ddoi/">Multiple DOI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+muskoka/">Muskoka: An open repository for OpenSolaris technical content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsrdma/">NFS RDMA transport update and performance analysis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dzones/">NFS Server in non&#45;Global Zones</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsv41/">NFS version 4.1 pNFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dnamespace/">NFSv4 namespace extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npiv/">NPort ID Virtualization (NPIV)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+navigator/">Navigator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nemo/">Nemo: A Framework for High&#45;Performance Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/">Network Auto&#45;Magic</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ndmp/">Network Data Management Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+net%2Dmib/">Network MIBs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npp/">Network Performance Projects</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dpm/">Network Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nws/">Network Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nv%2Dg11n/">Nevada Globalization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+4over6/">New Design of 4over6 Mechanism Based on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nightingale/">Nightingale: Port Songbird to OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+onnv/">ON/Nevada (ONNV) Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osd/">Object Storage Device (OSD) support for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opendev/">Open Development Infrastructure</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dutilities/">Open HA Cluster Utilities</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opensound/">Open Sound System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/">OpenGrok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cim%2Dserver/">OpenPegasus CIM Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+openrti/">OpenRTI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+busybox/">OpenSolaris Busybox</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/">OpenSolaris Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+es/">OpenSolaris Hispano</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+audit/">OpenSolaris Security Audit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/">OpenSolaris support for the QEMU processor emulator: host and guest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pef/">PEF: Packet Event Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+performance%2Dwrappers/">Performance Wrappers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkgfactory/">Pkgfactory</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pl/">Polski Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fr/">Portail Francophone</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+br/">Portal Brasileiro de OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+portals/">Portals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmui/">Power Management Usability Interfaces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+presto/">Presto: Automatic Printing Configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmpsm/">Printable Many Page Solaris Manuals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+promise%2Dstorage/">Promise SuperTrak RAID HBA Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qlogic%2Dcna/">QLogic Converged Network Adapter GLDv3 NIC Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+quagga/">Quagga Routing Protocol Suite Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rbridges/">RBridge (IETF TRILL) support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rof/">RDMA Offload Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+releasenotes/">Release Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+reno/">Reno: Login Process Enhancements for Interop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/">Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+samqfs/">SAM/QFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+scm%2Dmigration/">SCM Migration Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+srp/">SCSI RDMA Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sdcard%2Ddrivers/">SDcard Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sfwnv/">SFW</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sm%2Dhba/">SM&#45;HBA Based SAS HBA Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Ddoc/">SMF Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+svr4_packaging/">SVR4 Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sensors/">Sensor Abstraction Layer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dsip/">Session Initiation Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+simplepanels/">Simple Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/">Solaris PowerPC Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iscsitgt/">Solaris iSCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sourcejuicer/">SourceJuicer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/">Sparks: name service switch/nscd enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+squashfs/">Squashfs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+star/">Star integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starfish/">Starfish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starterkit/">Starter Kit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+storagepm/">Storage Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sst/">Sun Security Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+avs/">Sun StorageTek Availability Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ofuv/">Support for OpenFabrics User Verbs / API on OpenSolaris OS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/">Support gcc4/GCCfss in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+suspend%2Dresume/">Suspend/Resume</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+systemz/">Systemz</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tipc/">TIPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+branding/">Trademarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tpm/">Trusted Platform Module support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tnipdb/">Trusted networking interface policy database for Trusted Extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+usecase/">Use Case</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+userland/">Userland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vrrp/">VRRP: Virtual Router Redundancy Protocol Implementation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vscan/">VSCAN service</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+valex/">Validated Execution Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vconsole/">Virtual Console</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vnm/">Virtual Network Machines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/">Visual Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+visualization%2Dhpc/">Visualization for HPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+volo/">Volo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/">Web Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+website/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+winchester/">Winchester: Schema mapping and ID mapping for AD Interoperability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wusb/">Wireless USB Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wwan/">Wireless Wide Area Network</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x%2Dcons/">X Consolidation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xkblayout/">X Keyboard Layout</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xen%2Dgate/">Xen Gate</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xfce/">Xfce: A lightweight desktop environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfsboot/">ZFS Boot and Install</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfs%2Dcrypto/">ZFS on disk encryption support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonemgr/">Zone Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonestat/">Zone Statistics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gcore/">gcore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iser/">iSCSI Extensions for Remote DMA (iSER)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isns/">iSNS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+libmicro/">libMicro &#45; portable microbenchmarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+loficc/">lofi compression and cryptography support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lx64/">lx64 brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+s10brand/">s10brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x86gentopo/">x86 Generic FMA Topology Enumerator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cz/">Český portál</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ru/">Русский портал</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ar/">البوابة العربية</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+in/">भारतीय पोर्टल</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cn/">中国门户</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/">日本ポータル</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kr/">한국 포탈</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavUser Group">
+            <div id="xwikinavUser GroupHeader" class="accordionTabTitleBar"><h6>User Group</h6>
+            </div>
+            <div id="xwikinavUser GroupContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+kr/"></a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+adl%2Dauosug/">Adelaide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+aosug/">Argentina</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+azosug/">Arizona</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+atl%2Dosug/">Atlanta OpenSolaris Users Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bwosug/">Baltimore&#45;Washington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bosug/">Bangalore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bkkosug/">Bangkok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bdosug/">Bangladesh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bjosug/">Beijing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+brosug/">Berlin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bvrm%2Dosug/">Bhimavaram</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+btn%2Dosug/">Bloomington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfosug/">Brasilia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+blmosug/">Bélem</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+crosug/">Capital Region</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cfosug/">Cardiff</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ccosug/">Caribbean OSUG</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ceosug/">Ceara</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cltosug/">Charlotte</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chennai/">Chennai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chmxosug/">Chihuahua</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+closug/">Chile</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cle%2Dosug/">Cleveland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+colosug/">Colombia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cmh%2Dosug/">Columbus</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ctosug/">Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+knp%2Duek/">Cracow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+czosug/">Czech</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfw%2Dosug/">Dallas/Ft. Worth</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dosug/">Danish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+deosug/">Delaware</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+eduosug/">Edinburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+egosug/">Egypt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fiosug/">Finland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+flosug/">Florida</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fraosug/">Frankfurt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+frosug/">Front Range</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+glug/">Great Lakes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+grosug/">Greece</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hzosug/">Hangzhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hi%2Dosug/">Hawaii</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hkosug/">Hong Kong</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hugs/">Houston</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hosug/">Hyderabad</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+idosug/">Indonesia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madridosug/">Inicio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ie%2Dosug/">Irish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+iosug/">Israel</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+istosug/">Istanbul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+itl%2Dosug/">Italian</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jnosug/">Jinan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jogja%2Dosug/">Jogja</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kbosug/">Kabul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kc%2Dosug/">Kansas City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+lavosug/">Latvia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+losug/">London</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madosug/">Madurai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mansug/">Manchester</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mssosug/">Mato Grosso</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+msosug/">Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mgosug/">Minas Gerais</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mnosug/">Minnesota</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mtlosug/">Montreal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mosug/">Moscow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mmosug/">Mumbai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mucosug/">Munich</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+neaosug/">NEA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nlosug/">Netherlands</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ne%2Dosug/">New England</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nycosug/">New York City OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nzosug/">New Zealand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+norosug/">Noroeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nerosug/">Nuremberg&#45;Erlangen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+okcosug/">Oklahoma City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ososug/">Osnabrück</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+peosug/">Peru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+paosug/">Philadelphia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+piaski%2Dosug/">Piaski</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ptosug/">Pittsburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+poaosug/">Porto Alegre</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+psosug/">Puget Sound</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+posug/">Pune</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+qosug/">Queensland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rtp%2Dosug/">Research Triangle Park</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+riosug/">Rio de Janeiro</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ro%2Dosug/">Romania</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ruosug/">Russia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+alamo%2Dosug/">San Antonio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sdosug/">San Diego</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sfosug/">San Francisco</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+scosug/">Scottish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rs%2Dosug/">Serbia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szosug/">Shenzhen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svosug/">Silicon Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sgosug/">Singapore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+skosug/">Slovak</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+saosug/">South African</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+soctosug/">Southern Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+stl%2Dosug/">St. Louis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svgosug/">Stavanger</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+swosug/">Sweden</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chosug/">Switzerland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sosug/">Sydney</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szc%2Dosug/">Szczecin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sampaosug/">São Paulo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+twosug/">Taiwan OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ostug/">Tecum</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tvosug/">Thames Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tsug/">Tokyo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+torosug/">Toronto</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+trosug/">Trondheim</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+toss/">Tulsa</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tosug/">Turkey</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ufaosug/">Ufa OSUG</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+uaosug/">Ukraine OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+unimelb%2Dosug/">University of Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+valeosug/">Vale do Paraíba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vanosug/">Vancouver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vosug/">Venezuela &#45; Pagina de incio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vvoosug/">Vladivostok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wosug/">Welsh &#45; Cymru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wiosug/">Wisconsin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+xaosug/">Xi'an</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+</div><p/>
+<script type="text/javascript">
+var obj = {div:'xwikinav',no:0,height:250};
+var acc = createAccordion(obj);
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSDocs','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSDocs'); togglePanelVisibility(this.parentNode);">Community Group zfs Pages</h1>
+<div class="xwikipanelcontents"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/boot">ZFS Boot</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/flash">ZFS Flash Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/zfsbootFAQ">ZFS Boot  Project FAQ</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/demos">Demos</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/basics">ZFS Basics Screencast</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/selfheal">ZFS Self Healing</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/docs">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/faq">ZFS FAQ</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/dedup">ZFS Dedup FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/encrypt">ZFS Encryption FAQ</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/intro">Getting Started</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/links">Links</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/porting">Porting ZFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/source">Source Tour</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/structures">Data Structures</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/translations">Translations</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/french">French</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/japanese">Japanese</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/ptBR">Brazilian Portuguese</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/russian">Russian</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/simplifiedchinese">Simplified Chinese</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/spanish">Spanish</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/version">version</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/1">ZFS Pool Version 1</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/1%2D1">ZFS File System Version 1</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/10">ZFS Pool Version 10</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/11">ZFS Pool Version 11</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/12">ZFS Pool Version 12</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/13">ZFS Pool Version 13</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/14">ZFS Pool Version 14</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/15">ZFS Pool Version 15</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/16">ZFS Pool Version 16</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/17">ZFS Pool Version 17</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/18">ZFS Pool Version 18</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/19">ZFS Pool Version 19</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/2">ZFS Pool Version 2</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/2%2D1">ZFS File System Version 2</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/20">ZFS Pool Version 20</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/21">ZFS Pool Version 21</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/22">ZFS Pool Version 22</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/23">ZFS Pool Version 23</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/24">ZFS Pool Version 24</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/25">ZFS Pool Version 25</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/26">ZFS Pool Version 26</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/27">ZFS Pool Version 27</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/28">ZFS Pool Version 28</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/29">ZFS Pool Version 29</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/3">ZFS Pool Version 3</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/3%2D1">ZFS File System Version 3</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/30">ZFS Pool Version 30</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/31">ZFS Pool Version 31</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/4">ZFS Pool Version 4</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/4%2D1">ZFS File System Version 4</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/5">ZFS Pool Version 5</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/5%2D1">ZFS File System Version 5</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/6">ZFS Pool Version 6</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/7">ZFS Pool Version 7</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/8">ZFS Pool Version 8</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/9">ZFS Pool Version 9</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/N">versionN</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/N%2D1">zplN</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/whatis">What is ZFS?</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/zfstestsuite">ZFS Test Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/ztest">ZTEST</a></span></li>
+</ul>
+                        </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div>  <div id="footerglobal" class="layoutsection">
+  <div class="minwidth"></div>
+
+  <script language="JavaScript" src="/resources/js/s_code_remote.js"></script>
+
+
+          <div id="xwikiplatformversion">XWiki Enterprise 2.1.1.25889 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+  <br/>
+
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>&copy; 2011, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+  </div>
+
+
+</div></div></body>
+</html>

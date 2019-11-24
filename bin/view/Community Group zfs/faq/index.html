@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>ZFS FAQ (Community Group zfs.faq) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Community+Group+zfs/faq" />
+                    <link rel="canonical" href="/bin/view/Community+Group+zfs/faq" />
+                            <meta name="document" content="Community Group zfs.faq"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Community Group zfs"/>
+    <meta name="page" content="faq"/>
+    <meta name="version" content="122.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Community+Group+zfs/pages/faq"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="ZFS FAQ" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="Cindy Swearingen" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Community Group zfs";
+XWiki.currentPage = "faq";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Community+Group+zfs/faq";
+window.docediturl = "/bin/edit/Community+Group+zfs/faq";
+window.docsaveurl = "/bin/save/Community+Group+zfs/faq";
+window.docgeturl = "/bin/get/Community+Group+zfs/faq";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Community_Group_zfs viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FCommunity%2BGroup%2Bzfs%2Ffaq%2F"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+zfs/"><strong>Community Group zfs</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Community+Group+zfs" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <div id="header_banner">
+	<table style="width: 100%;">
+	    <tr>
+		<td style="width: 1%;">
+		    <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+		</td>
+		<td id="logo-text" style="width: 1%;">
+		    Solaris
+		</td>         
+		<td style="width: 98%;">
+		    <table id="loading-indicator">
+			<tr>
+			    <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+				    alt="Loading" title="Loading"/></td>
+			    <td>Loading...</td>
+			</tr>
+		    </table>
+		</td>
+		<td style="width: 1%;">
+		    <table id="iconbar">
+			<tr>
+			<td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+			    Collectives</a></td>
+			<td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+				Discussions</a></td>
+			<td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+				Documentation</a></td>
+			<td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+				Download</a></td>
+			<td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+				Source Browser</a></td>
+			</tr>
+		    </table>
+		</td>
+	    </tr>
+	</table>
+    </div>
+    <div id="site-notice">
+	<span>
+	    <a href="https://markebrooks.github.io/bin/view/Main/">ATTENTION: This website and all services within the opensolaris.org domain will be unavailable after March 24, 2013.</a>	   
+	</span>
+    </div>
+</div>
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                  <span class='current'>ZFS FAQ</span>
+          </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Community+Group+zfs/faq?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Community+Group+zfs/faq?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+zfs/faq?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+zfs/faq?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+zfs/faq?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Community+Group+zfs/faq?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+zfs/faq?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+zfs/faq?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+zfs/faq?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+zfs/faq?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Community+Group+zfs/faq?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>ZFS FAQ</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h2 id="HZFSFrequentlyAskedQuestions28FAQ29"><span>ZFS Frequently Asked Questions (FAQ)</span></h2><p>For information about dedup, see the <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/view/Community+Group+zfs/dedup">ZFS Dedup FAQ.&nbsp;</a></span></p><ol><li><span class="wikilink"><a href="#HZFSProductReleaseQuestions">ZFS Product Release Questions</a></span></li><li><span class="wikilink"><a href="#HZFSTechnicalQuestions">ZFS Technical Questions</a></span></li><li><span class="wikilink"><a href="#HZFS2FUFSComparisonQuestions">ZFS/UFS Comparison Questions</a></span></li><li><span class="wikilink"><a href="#HZFSAdministrationQuestions">ZFS Administration Questions</a></span></li><li><span class="wikilink"><a href="#HZFSandOtherProductInteractionQuestions">ZFS and Other Product Interaction Questions</a></span></li></ol><h3 id="HZFSProductReleaseQuestions"><span>ZFS Product Release Questions</span></h3><ol><li><span class="wikilink"><a href="#HHowcanIgetZFS3F">How can I get ZFS?</a></span></li><li><span class="wikilink"><a href="#HWhenwillZFSbeavailablefor3CinsertOShere3E">When will ZFS be available for &lt;insert OS here&gt;</a></span></li><li><span class="wikilink"><a href="#HWhatdoesZFSstandfor3F">What does ZFS stand for?</a></span></li></ol><h4 id="HHowcanIgetZFS3F"><span><strong>How can I get ZFS?</strong></span></h4><p>ZFS is available in the following releases:</p><ul><li><span class="wikilink"><a href="/bin/view/Main/downloads">Solaris Nevada release, build 27a and later</a></span></li><li><span class="wikiexternallink"><a href="http://www.sun.com/software/solaris/solaris-express/get.jsp">Solaris Express releases</a></span></li><li><span class="wikiexternallink"><a href="http://www.sun.com/solaris/get.jsp/">Starting in the Solaris 10 6/06 release</a></span></li></ul><h4 id="HWhenwillZFSbeavailablefor3CinsertOShere3E"><span><strong>When will ZFS be available for &lt;insert OS here&gt;</strong></span></h4><p>Projects are under way to port ZFS to <span class="wikiexternallink"><a href="http://lists.freebsd.org/pipermail/freebsd-current/2006-August/065306.html">FreeBSD</a></span> and to <span class="wikiexternallink"><a href="http://zfs-on-fuse.blogspot.com/">Linux</a></span> (using FUSE). For more information on CDDL, see the <span class="wikilink"><a href="/bin/view/Main/licensing_faq">licensing FAQ</a></span>.</p><h4 id="HWhatdoesZFSstandfor3F"><span><strong>What does ZFS stand for?</strong></span></h4><p>Originally, ZFS was an acronym for "Zettabyte File System." The largest <span class="wikiexternallink"><a href="http://en.wikipedia.org/wiki/SI_prefix">SI prefix</a></span> we liked was 'zetta' ('yotta' was out of the question). Since ZFS is a 128-bit file system, the name was a reference to the fact that ZFS can store 256 quadrillion zettabytes (where each ZB is 270 bytes). Over time, ZFS gained a lot more features besides 128-bit capacity, such as rock-solid data integrity, easy administration, and a simplified model for managing your data.</p><h3 id="HZFSTechnicalQuestions"><span>ZFS Technical Questions</span></h3><ol><li><span class="wikilink"><a href="#HWhydoesZFShave128-bitcapacity3F">Why does ZFS have 128-bit capacity?</a></span></li><li><span class="wikilink"><a href="#HWhatlimitsdoesZFShave3F">What limits does ZFS have?</a></span></li></ol><h4 id="HWhydoesZFShave128-bitcapacity3F"><span><strong>Why does ZFS have 128-bit capacity?</strong></span></h4><p>File systems have proven to have a much longer lifetime than most traditional pieces of software, due in part to the fact that the on-disk format is extremely difficult to change. Given the fact that UFS has lasted in its current form (mostly) for nearly 20 years, it's not unreasonable to expect ZFS to last at least 30 years into the future. At this point, Moore's law starts to kick in for storage, and we start to predict that we'll be storing more than 64 bits of data in a single filesystem. For a more thorough description of this topic, and why 128 bits is enough, see <span class="wikiexternallink"><a href="http://blogs.sun.com/roller/page/bonwick?entry=128_bit_storage_are_you">Jeff's blog entry.</a></span></p><h4 id="HWhatlimitsdoesZFShave3F"><span><strong>What limits does ZFS have?</strong></span></h4><p>The limitations of ZFS are designed to be so large that they will never be encountered in any practical operation. ZFS can store 16 Exabytes in each storage pool, file system, file, or file attribute. ZFS can store billions of names: files or directories in a directory, file systems in a file system, or snapshots of a file system. ZFS can store trillions of items: files in a file system, file systems, volumes, or snapshots in a pool.</p><h3 id="HZFS2FUFSComparisonQuestions"><span>ZFS/UFS Comparison Questions</span></h3><ol><li><span class="wikilink"><a href="#HWhydoesn27tZFShaveanfsck-likeutility3F">Why doesn't ZFS have an fsck-like utility?</a></span></li><li><span class="wikilink"><a href="#HWhydoesdu28129reportdifferentfilesizesforZFSandUFS3FWhydoesn27tthespaceconsumptionthatisreportedbythedfcommandandthezfslistcommandmatch3F">Why does du(1) report different file sizes for ZFS and UFS? Why doesn't the space consumption that is reported by the df command and the zfs list command match?</a></span></li><li><span class="wikilink"><a href="#HCanIsetquotasonZFSfilesystems3F">Can I set quotas on ZFS file systems?&nbsp;</a></span></li></ol><h4 id="HWhydoesn27tZFShaveanfsck-likeutility3F"><span><strong>Why doesn't ZFS have an fsck-like utility?</strong></span></h4><p>There are two basic reasons to have an fsck-like utility:</p><ul><li><strong>Verify file system integrity</strong> - Many times, administrators simply want to make sure that there is no on-disk corruption within their file systems. With most file systems, this involves running fsck while the file system is offline. This can be time consuming and expensive. Instead, ZFS provides the ability to 'scrub' all data within a pool while the system is live, finding and repairing any bad data in the process. There are future plans to enhance this to enable background scrubbing.</li><li><strong>Repair on-disk state</strong> - If a machine crashes, the on-disk state of some file systems will be inconsistent. The addition of journalling has solved some of these problems, but failure to roll the log may still result in a file system that needs to be repaired. In this case, there are well known pathologies of errors, such as creating a directory entry before updating the parent link, which can be reliably repaired. ZFS does not suffer from this problem because data is always consistent on disk.<br/>A more insidious problem occurs with faulty hardware or software. Even file systems or volume managers that have per-block checksums are vulnerable to a variety of other pathologies that result in valid but corrupt data. In this case, the failure mode is essentially random, and most file systems will panic (if it was metadata) or silently return bad data to the application. In either case, an fsck utility will be of little benefit. Since the corruption matches no known pathology, it will be likely be unrepairable. With ZFS, these errors will be (statistically) nonexistent in a redundant configuration. In an non-redundant config, these errors are correctly detected, but will result in an I/O error when trying to read the block. It is theoretically possible to write a tool to repair such corruption, though any such attempt would likely be a one-off special tool. Of course, ZFS is equally vulnerable to software bugs, but the bugs would have to result in a consistent pattern of corruption to be repaired by a generic tool. During the 5 years of ZFS development, no such pattern has been seen.</li></ul><h4 id="HWhydoesdu28129reportdifferentfilesizesforZFSandUFS3FWhydoesn27tthespaceconsumptionthatisreportedbythedfcommandandthezfslistcommandmatch3F"><span><strong>Why does du(1) report different file sizes for ZFS and UFS? Why doesn't the space consumption that is reported by the df command and the zfs list command match?</strong></span></h4><p>On UFS, the du command reports the size of the data blocks within the file. On ZFS, <tt>du</tt> reports the actual size of the file as stored on disk. This size includes metadata as well as compression. This reporting really helps answer the question of "how much more space will I get if I remove this file?" So, even when compression is off, you will still see different results between ZFS and UFS.<br/>When you compare the space consumption that is reported by the <tt>df</tt> command with the <tt>zfs list</tt> command, consider that <tt>df</tt> is reporting the pool size and not just file system sizes. In addition, <tt>df</tt> doesn't understand descendent datasets or whether snapshots exist. If any ZFS properties, such as compression and quotas, are set on file systems, reconciling the space consumption that is reported by df might be difficult.<br/>Consider the following scenarios that might also impact reported space consumption:</p><ul><li>For files that are larger than recordsize, the last block of the file is generally about 1/2 full. With the default recordsize set to 128 KB, approximately 64 KB is wasted per file, which might be a large impact. The integration of RFE 6812608 would resolve this scenario. You can work around this by enabling compression. Even if your data is already compressed, the unused portion of the last block will be zero-filled, and compresses very well.</li><li>On a RAIDZ-2 pool, every block consumes at least 2 sectors (512-byte chunks) of parity information. The space consumed by the parity information is not reported, but because it can vary, and be a much larger percentage for small blocks, an impact to space reporting might be seen. The impact is more extreme for a recordsize set to 512 bytes, where each 512-byte logical block consumes 1.5 KB (3 times the space).<br/>Regardless of the data being stored, if space efficiency is your primary concern, you should leave the recordsize at the default (128 KB), and enable compression (to the default of lzjb).</li><li>The <tt>df</tt> command is not aware of deduplicated file data.</li></ul><h4 id="HCanIsetquotasonZFSfilesystems3F"><span><strong>Can I set quotas on ZFS file systems?&nbsp;</strong></span></h4><p>Yes, ZFS provides several different quota features:</p><ul><li>File system quotas (quota property) - ZFS file systems can be used as logical administrative control points, which allow you to view usage, manage properties, perform backups, take snapshots, and so on. For home directory servers, the ZFS model enables you to easily set up one file system per user. ZFS quotas are intentionally not associated with a particular user because file systems are points of administrative control. ZFS quotas can be set on file systems that could represent users, projects, groups, and so on, as well as on entire portions of a file system hierarchy. This allows quotas to be combined in ways that traditional per-user quotas cannot. Per-user quotas were introduced because multiple users had to share the same file system. ZFS file system quotas are flexible and easy to set up. A quota can be applied when the file system is created. For example:</li></ul><pre># zfs create -o quota=20g tank/home/users</pre><p>User file systems created in this file system automatically inherit the 20-Gbyte quota set on the parent file system. For example:&nbsp;</p><pre># zfs create tank/home/users/user1
+# zfs create tank/home/users/user2
+# zfs list -r tank/home/users
+NAME                   USED  AVAIL  REFER  MOUNTPOINT
+tank/home/users        76.5K  20.0G  27.5K  /tank/home/users
+tank/home/users/user1  24.5K  20.0G  24.5K  /tank/home/users/user1
+tank/home/users/user2  24.5K  20.0G  24.5K  /tank/home/users/user2</pre><p>ZFS quotas can be increased when the disk space in the ZFS storage pools is increased while the file systems are active, without having any down time.</p><ul><li>Reference file system quotas (refquota property) - File system quota that does not limit space used by descendents, including file systems and snapshots</li><li>User and group quotas (userquota and groupquota properties) - Limits the amount of space that is consumed by the specified user or group. The userquota or groupquota space calculation does not include space that is used by descendent datasets, such as snapshots and clones, similar to the refquota property.</li></ul><p>In general, file system quotas are appropriate for most environments, but user/group quotas are needed in some environments, such as universities that must manage many student user accounts. RFE <span class="wikiexternallink"><a href="http://bugs.opensolaris.org/view_bug.do?bug_id=6501037">6501037</a></span> has integrated into Nevada build 114 and the Solaris 10 10/09 release.</p><p>An alternative to user-based quotas for containing disk space used for mail, is using mail server software that includes a quota feature, such as the Sun Java System Messaging Server. This software provides user mail quotas, quota warning messages, and expiration and purge features.</p><h3 id="HZFSAdministrationQuestions"><span>ZFS Administration Questions</span></h3><ol><li><span class="wikilink"><a href="#HWhydoesn27tthespacethatisreportedbythezpoollistcommandandthezfslistcommandmatch3F">Why doesn't the space that is reported by the zpool list command and the zfs list command match?</a></span></li><li><span class="wikilink"><a href="#HWhatcanIdoifZFSfilesystempanicsoneveryboot3F">What can I do if ZFS file system panics on every boot?</a></span></li><li><span class="wikilink"><a href="#HDoesZFSsupporthotspares3F">Does ZFS support hot spares?</a></span></li><li><span class="wikilink"><a href="#HCandevicesberemovedfromaZFSpool3F">Can devices be removed from a ZFS pool?</a></span></li><li><span class="wikilink"><a href="#HCanIuseZFSasmyrootfilesystem3FWhataboutforzones3F">Can I use ZFS as my root file system? What about for zones?</a></span></li><li><span class="wikilink"><a href="#HCanIsplitamirroredZFSconfiguration3F">Can I split a mirrored ZFS configuration?</a></span></li><li><span class="wikilink"><a href="#HWhyhasthezpoolcommandchanged3F">Why has the zpool command changed?</a></span></li></ol><h4 id="HWhydoesn27tthespacethatisreportedbythezpoollistcommandandthezfslistcommandmatch3F"><span><strong>Why doesn't the space that is reported by the zpool list command and the zfs list command match?</strong></span></h4><p>The SIZE value that is reported by the zpool list command is generally the amount of physical disk space in the pool, but varies depending on the pool's redundancy level. See the examples below. The zfs list command lists the usable space that is available to file systems, which is disk space minus ZFS pool redundancy metadata overhead, if any.</p><ul><li>A non-redundant storage pool created with one 136-GB disk reports SIZE and initial FREE values as 136 GB. The initial AVAIL space reported by the zfs list command is 134 GB, due to a small amount pool metadata overhead.</li></ul><pre># zpool create tank c0t6d0
+# zpool list tank
+NAME   SIZE  ALLOC   FREE    CAP  DEDUP  HEALTH  ALTROOT
+tank   136G  95.5K   136G     0%  1.00x  ONLINE  -
+# zfs list tank
+NAME   USED  AVAIL  REFER  MOUNTPOINT
+tank    72K   134G    21K  /tank</pre><ul><li>A mirrored storage pool created with two 136-GB disks reports SIZE as 136 GB and initial FREE values as 136 GB. This reporting is referred to as the deflated space value. The initial AVAIL space reported by the zfs list command is 134 GB, due to a small amount of pool metadata overhead.</li></ul><pre># zpool create tank mirror c0t6d0 c0t7d0   
+# zpool list tank
+NAME   SIZE  ALLOC   FREE    CAP  DEDUP  HEALTH  ALTROOT
+tank   136G  95.5K   136G     0%  1.00x  ONLINE  -
+# zfs list tank
+NAME   USED  AVAIL  REFER  MOUNTPOINT
+tank    72K   134G    21K  /tank</pre><ul><li>A RAIDZ-2 storage pool created with three 136-GB disks reports SIZE as 408 GB and initial FREE values as 408 GB. This reporting is referred to as the inflated disk space value, which includes redundancy overhead, such as parity information. The initial AVAIL space reported by the zfs list command is 133 GB, due to the pool redundancy overhead.</li></ul><pre># zpool create tank raidz2 c0t6d0 c0t7d0 c0t8d0
+# zpool list tank
+NAME   SIZE  ALLOC   FREE    CAP  DEDUP  HEALTH  ALTROOT
+tank   408G   286K   408G     0%  1.00x  ONLINE  -
+# zfs list tank
+NAME   USED  AVAIL  REFER  MOUNTPOINT
+tank  73.2K   133G  20.9K  /tank</pre><h4 id="HWhatcanIdoifZFSfilesystempanicsoneveryboot3F"><span><strong>What can I do if ZFS file system panics on every boot?</strong></span></h4><p>ZFS is designed to survive arbitrary hardware failures through the use of redundancy (mirroring or RAID-Z). Unfortunately, certain failures in non-replicated configurations can cause ZFS to panic when trying to load the pool. This is a bug, and will be fixed in the near future (along with several other nifty features, such as background scrubbing). In the meantime, if you find yourself in the situation where you cannot boot due to a corrupt pool, do the following:</p><pre>&lt;boot using '-m milestone=none'&gt;
+# mount -o remount /
+# rm /etc/zfs/zpool.cache
+# reboot</pre><p>This will remove all knowledge of pools from your system. You will have to re-create your pool and restore from backup.<br/>If a ZFS root file system panics, then you must boot from alternate media, import the root pool, resolve the issue that is causing the failure, export the root pool, and reboot the system. For more information, see the <span class="wikiexternallink"><a href="http://http://www.solarisinternals.com/wiki/index.php/ZFS_Troubleshooting_Guide">ZFS Troubleshooting Guide</a></span>.</p><h4 id="HDoesZFSsupporthotspares3F"><span><strong>Does ZFS support hot spares?</strong></span></h4><p>Yes, the ZFS hot spares feature is available in the Solaris Express Community Release, build 42, the Solaris Express July 2006 release, and the Solaris 10 11/06 release. For more information about hot spares, see the ZFS Administration Guide.</p><h4 id="HCandevicesberemovedfromaZFSpool3F"><span><strong>Can devices be removed from a ZFS pool?</strong></span></h4><p>Removal of a top-level vdev, such as an entire RAID-Z group or a disk in an unmirrored configuration, is not currently supported. This feature is planned for a future release and can be tracked with CR <span class="wikiexternallink"><a href="http://bugs.opensolaris.org/view_bug.do?bug_id=4852783">4852783</a></span>.<br/>You can remove a device from a mirrored ZFS configuration by using the zpool detach command.<br/>You can replace a device with a device of equivalent size in both a mirrored or RAID-Z configuration by using the zpool replace command.</p><h4 id="HCanIuseZFSasmyrootfilesystem3FWhataboutforzones3F"><span><strong>Can I use ZFS as my root file system? What about for zones?</strong></span></h4><p>You can install and boot a ZFS root file system starting in the SXCE build 90 release and starting in the Solaris 10 10/08 release. For more information, see <span class="wikilink"><a href="/bin/view/Community+Group+zfs/boot">ZFS Boot</a></span>.<br/>ZFS can be used as a zone root path in the Solaris 10 10/08 release, but configurations that can be patched and upgraded are limited. Additional ZFS zone root configurations that can be patched and upgraded are supported starting in the Solaris 10 5/09 release.<br/>For more information, see the <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/819-5461">ZFS Admin Guide</a></span>.<br/>In addition, you cannot create a cachefs cache on a ZFS file system.</p><h4 id="HCanIsplitamirroredZFSconfiguration3F"><span><strong>Can I split a mirrored ZFS configuration?</strong></span></h4><p>Yes, you can split a mirrored ZFS configuration for cloning or backup purposes in the SXCE, build 131 release. The best method for cloning and backups is to use ZFS clone and snapshot features. For information about using ZFS clone and snapshot features, see the <span class="wikilink"><a href="/bin/view/Community+Group+zfs/docs">ZFS Admin Guide</a></span>. See RFE <span class="wikiexternallink"><a href="http://bugs.opensolaris.org/view_bug.do?bug_id=6421958">6421958</a></span> to recursively send snapshots that will improve the replication process across systems.<br/>In addition to ZFS clone and snapshot features, remote replication of ZFS file systems is provided by the Sun StorageTek Availability Suite product. AVS/ZFS demonstrations are available <span class="wikilink"><a href="/bin/view/Project+avs/">here</a></span>.<br/>Keep the following cautions in mind if you attempt to split a mirrored ZFS configuration for cloning or backup purposes:</p><ul><li>Support for splitting a mirrored ZFS configuration integrated with RFE <span class="wikiexternallink"><a href="http://bugs.opensolaris.org/view_bug.do?bug_id=5097228">5097228</a></span>.</li><li>You cannot remove a disk from a mirrored ZFS configuration, back up the data on the disk, and then use this data to create a cloned pool.</li><li>If you want to use a hardware-level backup or snapshot feature instead of the ZFS snapshot feature, then you will need to do the following steps:<ul><li>zpool export pool-name</li><li>Hardware-level snapshot steps</li><li>zpool import pool-name</li></ul></li><li>Any attempt to split a mirrored ZFS storage pool by removing disks or changing the hardware that is part of a live pool could cause data corruption.</li></ul><h4 id="HWhyhasthezpoolcommandchanged3F"><span><strong>Why has the zpool command changed?</strong></span></h4><p>Changes to the <tt>zpool</tt> command in Nevada, builds 125-129, are as follows:</p><ol><li>Device name changes due to integration of 6574286 (removing a slog doesn't work) - This change adds a top-level virtual device name to support device removal operations. The top-level device name is constructed by using the logical name (mirror, raidz2, and so on) and appends a unique numeric number. The <tt>zpool status</tt> and <tt>zpool import</tt> commands now display configuration information using this new naming convention. For example, the following configuration contains two top-level virtual devices named <tt>mirror-0</tt> and <tt>mirror-1</tt>.</li></ol><pre># zpool status
+   pool: export
+ state: ONLINE
+ scrub: none requested
+config:
+
+        NAME        STATE     READ WRITE CKSUM
+        export      ONLINE       0     0     0
+          mirror-0  ONLINE       0     0     0
+            c1t3d0  ONLINE       0     0     0
+            c1t4d0  ONLINE       0     0     0
+        logs
+          mirror-1  ONLINE       0     0     0
+            c1t5d0  ONLINE       0     0     0
+            c1t6d0  ONLINE       0     0     0</pre><p>In this release, you could potentially remove the mirrored log device (<tt>mirror-1</tt>) as follows:</p><pre># zpool remove export mirror-1
+# zpool status export
+  pool: export
+ state: ONLINE
+ scrub: none requested
+config:
+
+        NAME        STATE     READ WRITE CKSUM
+        export      ONLINE       0     0     0
+          mirror-0  ONLINE       0     0     0
+            c1t3d0  ONLINE       0     0     0
+            c1t4d0  ONLINE       0     0     0</pre><p>Currently, only cache, log, and spare devices can be removed from a pool.</p><p>2. New dedup ratio property due to integration of 6677093 (zfs should have dedup capability) - The <tt>zpool list</tt> command includes <tt>dedupratio</tt> for each pool. You can also display the value of this read-only property by using the <tt>zpool get</tt> command. For example:</p><pre># zpool list
+NAME     SIZE  ALLOC   FREE    CAP  DEDUP  HEALTH  ALTROOT
+export   928G  47.5G   881G     5%  1.77x  ONLINE  -
+rpool    928G  25.7G   902G     2%  1.40x  ONLINE  -
+# zpool get dedup rpool
+NAME   PROPERTY    VALUE  SOURCE
+rpool  dedupratio  1.40x  - </pre><p>3. The <tt>zpool list</tt> output has changed due to integration of 6897693 (deduplication can only go so far) - In previous releases, the <tt>zpool list</tt> command reported <tt>used</tt> and <tt>available</tt> physical block space and <tt>zfs list</tt> reports <tt>used</tt> and <tt>available</tt> space to the file system. The previous <tt>zpool list</tt> <tt>used</tt> and <tt>available</tt> columns have changed to report <tt>allocated</tt> and <tt>free</tt> physical blocks. These changes should help clarify the accounting difference reported by the <tt>zpool list</tt> and <tt>zfs list</tt> commands.</p><pre># zpool list
+NAME     SIZE  ALLOC   FREE    CAP  DEDUP  HEALTH  ALTROOT
+export   928G  47.5G   881G     5%  1.77x  ONLINE  -
+rpool    928G  25.7G   902G     2%  1.40x  ONLINE  - </pre><p>Any scripts that utilized the old <tt>used</tt> and <tt>available</tt> properties of the <tt>zpool</tt> command should be updated to use the new naming conventions.</p><div class="wikimodel-emptyline"></div><h3 id="HZFSandOtherProductInteractionQuestions"><span>ZFS and Other Product Interaction Questions</span></h3><ol><li><span class="wikilink"><a href="#HIsZFSsupportedinaclusteredenvironment3F">Is ZFS supported in a clustered environment?</a></span></li><li><span class="wikilink"><a href="#HWhichthirdpartybackupproductssupportZFS3F">Which third party backup products support ZFS?</a></span></li><li><span class="wikilink"><a href="#HDoesZFSworkwithSAN-attacheddevices3F">Does ZFS work with SAN-attached devices?</a></span></li></ol><h4 id="HIsZFSsupportedinaclusteredenvironment3F"><span><strong>Is ZFS supported in a clustered environment?</strong></span></h4><p>Solaris Cluster 3.2 supports a local ZFS file system as highly available (HA) in the Solaris 10 11/06 release. This support allows for live failover between systems, with automatic import of pools between systems.<br/>If you use Solaris Cluster 3.2 to configure a local ZFS file system as highly available, review the following caution:<br/>Do not add a configured quorum device to a ZFS storage pool. When a configured quorum device is added to a storage pool, the disk is relabeled and the quorum configuration information is lost. This means the disk no longer provides a quorum vote to the cluster. After a disk is added to a storage pool, you can configure that disk as a quorum device. Or, you can unconfigure the disk, add it to the storage pool, then reconfigure the disk as a quorum device.<br/>Solaris Cluster 3.2 is not supported on the OpenSolaris or Nevada releases. For information about using the open-source Solaris Cluster version, go to the <span class="wikilink"><a href="/bin/view/Community+Group+ha%2Dclusters/">Open High-Availability Cluster community page</a></span>.<br/>ZFS is not a native cluster, distributed, or parallel file system and cannot provide concurrent access from multiple, different hosts. ZFS works great when shared in a distributed NFS environment.<br/>In the long term, we plan on investigating ZFS as a native cluster file system to allow concurrent access. This work has not yet been scoped.</p><h4 id="HWhichthirdpartybackupproductssupportZFS3F"><span><strong>Which third party backup products support ZFS?</strong></span></h4><ul><li>EMC Networker 7.3.2. backs up and restores ZFS file systems, including ZFS ACLs.</li><li>Veritas Netbackup 6.5 backs up and restores ZFS file systems, including ZFS ACLs.</li><li>IBM Tivoli Storage Manager client software (5.4.1.2) backs up and restores ZFS file systems with both the CLI and the GUI. ZFS ACLs are also preserved.</li><li>Computer Associates' BrightStor ARCserve product backs up and restores ZFS file systems, but ZFS ACLs are not preserved.</li></ul><h4 id="HDoesZFSworkwithSAN-attacheddevices3F"><span><strong>Does ZFS work with SAN-attached devices?</strong></span></h4><p>Yes, ZFS works with either direct-attached devices or SAN-attached devices. However, if your storage pool contains no mirror or RAID-Z top-level devices, ZFS can only report checksum errors but cannot correct them. If your storage pool consists of mirror or RAID-Z devices built using storage from SAN-attached devices, ZFS can report and correct checksum errors.<br/>For example, consider a SAN-attached hardware-RAID array, set up to present LUNs to the SAN fabric that are based on its internally mirrored disks. If you use a single LUN from this array to build a single-disk pool, the pool contains no duplicate data that ZFS needs to correct detected errors. In this case, ZFS could not correct an error introduced by the array.<br/>If you use two LUNs from this array to construct a mirrored storage pool, or three LUNs to create a RAID-Z storage pool, ZFS then would have duplicate data available to correct detected errors. In this case, ZFS could typically correct errors introduced by the array.<br/>In all cases where ZFS storage pools lack mirror or RAID-Z top-level virtual devices, pool viability depends entirely on the reliability of the underlying storage devices.<br/>If your ZFS storage pool only contains a single device, whether from SAN-attached or direct-attached storage, you cannot take advantage of features such as RAID-Z, dynamic striping, I/O load balancing, and so on.<br/>ZFS always detects silent data corruption. Some storage arrays can detect checksum errors, but might not be able to detect the following class of errors:</p><ul><li>Accidental overwrites or phantom writes</li><li>Mis-directed reads and writes</li><li>Data path errors</li></ul><p>Keep the following points in mind when using ZFS with SAN devices:</p><ul><li>Overall, ZFS functions as designed with SAN-attached devices, as long as all the drives are only accessed from a single host at any given time. You cannot share SAN disks between pools on the same system or different systems. This limitation includes sharing SAN disks as shared hot spares between pools on different systems.</li><li>If you expose simpler devices to ZFS, you can better leverage all available features.<br/>In summary, if you use ZFS with SAN-attached devices, you can take advantage of the self-healing features of ZFS by configuring redundancy in your ZFS storage pools even though redundancy is available at a lower hardware level.</li></ul>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by Administrator on 2009/10/26 12:11<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by Cindy Swearingen on 2010/08/10 19:09
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Community Group zfs Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/boot">ZFS Boot</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/flash">ZFS Flash Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/zfsbootFAQ">ZFS Boot  Project FAQ</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/demos">Demos</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/basics">ZFS Basics Screencast</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/selfheal">ZFS Self Healing</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/docs">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/faq">ZFS FAQ</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/dedup">ZFS Dedup FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/encrypt">ZFS Encryption FAQ</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/intro">Getting Started</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/links">Links</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/porting">Porting ZFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/source">Source Tour</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/structures">Data Structures</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/translations">Translations</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/french">French</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/japanese">Japanese</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/ptBR">Brazilian Portuguese</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/russian">Russian</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/simplifiedchinese">Simplified Chinese</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/spanish">Spanish</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/version">version</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/1">ZFS Pool Version 1</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/1%2D1">ZFS File System Version 1</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/10">ZFS Pool Version 10</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/11">ZFS Pool Version 11</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/12">ZFS Pool Version 12</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/13">ZFS Pool Version 13</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/14">ZFS Pool Version 14</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/15">ZFS Pool Version 15</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/16">ZFS Pool Version 16</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/17">ZFS Pool Version 17</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/18">ZFS Pool Version 18</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/19">ZFS Pool Version 19</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/2">ZFS Pool Version 2</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/2%2D1">ZFS File System Version 2</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/20">ZFS Pool Version 20</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/21">ZFS Pool Version 21</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/22">ZFS Pool Version 22</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/23">ZFS Pool Version 23</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/24">ZFS Pool Version 24</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/25">ZFS Pool Version 25</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/26">ZFS Pool Version 26</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/27">ZFS Pool Version 27</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/28">ZFS Pool Version 28</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/29">ZFS Pool Version 29</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/3">ZFS Pool Version 3</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/3%2D1">ZFS File System Version 3</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/30">ZFS Pool Version 30</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/31">ZFS Pool Version 31</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/4">ZFS Pool Version 4</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/4%2D1">ZFS File System Version 4</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/5">ZFS Pool Version 5</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/5%2D1">ZFS File System Version 5</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/6">ZFS Pool Version 6</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/7">ZFS Pool Version 7</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/8">ZFS Pool Version 8</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/9">ZFS Pool Version 9</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/N">versionN</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/N%2D1">zplN</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/whatis">What is ZFS?</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/zfstestsuite">ZFS Test Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/ztest">ZTEST</a></span></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2013, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

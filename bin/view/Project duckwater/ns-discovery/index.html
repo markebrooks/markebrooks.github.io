@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Name Services Discovery (Project duckwater.ns-discovery) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+duckwater/ns%2Ddiscovery" />
+                    <link rel="canonical" href="/bin/view/Project+duckwater/ns%2Ddiscovery" />
+                            <meta name="document" content="Project duckwater.ns-discovery"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Project duckwater"/>
+    <meta name="page" content="ns-discovery"/>
+    <meta name="version" content="1.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Project+duckwater/pages/ns-discovery"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Name Services Discovery" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project duckwater";
+XWiki.currentPage = "ns-discovery";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Project+duckwater/ns%2Ddiscovery";
+window.docediturl = "/bin/edit/Project+duckwater/ns%2Ddiscovery";
+window.docsaveurl = "/bin/save/Project+duckwater/ns%2Ddiscovery";
+window.docgeturl = "/bin/get/Project+duckwater/ns%2Ddiscovery";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Project_duckwater viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bduckwater%2Fns-discovery"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+duckwater/"><strong>Project duckwater</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Project+duckwater" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+            </td>
+            <td id="logo-text" style="width: 1%;">
+                Solaris
+            </td>         
+            <td style="width: 98%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                              <a href='/bin/view/Project+duckwater/Documentation'>Documentation</a> <span class='separator'>&#187;</span> <span class='current'>Name Services Discovery</span>
+                </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+duckwater/ns%2Ddiscovery?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+duckwater/ns%2Ddiscovery?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+duckwater/ns%2Ddiscovery?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+duckwater/ns%2Ddiscovery?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+duckwater/ns%2Ddiscovery?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+duckwater/ns%2Ddiscovery?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+duckwater/ns%2Ddiscovery?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+duckwater/ns%2Ddiscovery?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+duckwater/ns%2Ddiscovery?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+duckwater/ns%2Ddiscovery?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+duckwater/ns%2Ddiscovery?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          <span class="submenuitem "><a href="/bin/view/Project+duckwater/ns%2Ddiscovery?xpage=copy" id="tmActionCopy" class="tmActionCopy">Copy</a></span>
+      </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+                      
+<div id="document-title"><h1>Name Services Discovery</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h1 class='hidden'>Name Services Discovery</h1><table><tr><th scope="col">Authors:</th><td>Slava Leanovich &lt;Viachaslau.Leanovich@Sun.COM&gt;</td></tr><tr><th scope="row">Version:</th><td>0.1</td></tr><tr><th scope="row">Date:</th><td>2007-06-27</td></tr><tr><th scope="row">Status:</th><td>DRAFT</td></tr></table><p>Contents</p><ul><li><span class="wikilink"><a href="#discovery-procedure">Discovery procedure</a></span></li><li><span class="wikilink"><a href="#configuring-dhcp-server">Configuring DHCP server</a></span></li><li><span class="wikilink"><a href="#configuring-dns-server">Configuring DNS server</a></span></li><li><span class="wikilink"><a href="#ldap-attributes">LDAP attributes</a></span></li><li><span class="wikilink"><a href="#performing-a-discovery">Performing a discovery</a></span></li></ul><h1 id="HDiscoveryprocedure"><span><span class="wikilink"><a href="#id1">Discovery procedure</a></span></span></h1><p>The Name Service discovery procedure works in the following way:</p><ul><li><strong>Step 1</strong>: Send the DHCPINFORM request for the options:<br/>DNSdmain (15), DNSserv (6), NISdmain (40), NISservs (41), NIS+dom (64), NIS+serv (65).<br/>Refer to dhcp_inittab(4) and /etc/dhcp/inittab.<br/>In case of the machine is already has DHCP configured interfaces, step 1 just gets these options from the dhcpagent(1M).</li><li><strong>Step 2</strong>: Make necessary backend configurations based on:<ul><li>predefined configuration template for the particular backend type;</li><li>values of the DHCP options retrieved.</li></ul></li><li><strong>Step 3</strong>: If DNSdmain and DNSserv are specified:<br/>Query "_ldap._tcp._ns.&lt;domain name&gt;" records of SRV and TXT type from the DNS and generate the backend configuration. These SRV/TXT resource records basically tell where the LDAP server is and how to access it.<br/>The "&lt;domain name&gt;" is basically the value of DNSdmain option, target DNS server address is the value of DNSserv option correspondingly.</li><li><strong>Step 4</strong>: Based on the discovered configurations for the available backends, make the corresponding Name Service profile.<br/>Each name service database (e.g. "passwd", "hosts", etc.) has two entities associated with it:<ul><li>A default list of backends supporting this database.<br/>This list is ordered according to a backend preferences. For example, for the "hosts" database the preference is DNS, LDAP, NIS+, NIS.</li><li>A default policy, which is one of the following:<ul><li>P_FILES_ONLY -- the only local files can be used;</li><li>P_FILES_NS -- try local files, then Name Service;</li><li>P_NS_FALLBACK -- try Name Service, and only in case of it is unavailable, use local files;</li><li>P_NS_ONLY -- use a Name Service only.<br/>So, going through the database list, step 4 finds the most efficient according to preferences backend, and generates a property based on the policy.<br/>For example, consider "hosts" database, which has preferences: DNS, LDAP, NIS+, NIS, and the policy is P_NS_FALLBACK -- in this case if there are DNS and NIS backends discovered, we'll get the following property generated:</li></ul></li></ul></li></ul><pre>
+hosts = dns [NOTFOUND=return] files
+</pre><p>Refer to nsswitch.conf(4).</p><ul><li><strong>Step 5</strong>: Put all configuration profiles created to the repository. In particular, the configuration profiles are:<ul><li>Configurations of the backends discovered at the steps 2 and 3;</li><li>Switch configuration generated at the step 4.<br/>The default name for all configuration profiles is auto, however the name can be changed by the -n option in the discover subcommand of the nscfg(1M).</li></ul></li></ul><h1 id="HConfiguringDHCPserver"><span><span class="wikilink"><a href="#id2">Configuring DHCP server</a></span></span></h1><p>Assume that DHCP server (known as in.dhcpd(1M), which is basically the smf(5) service named network/dhcp-server) is unconfigured and therefore disabled.</p><pre>
+
+# dhcpconfig -Sq
+dhcpconfig: Error - failed to read DHCP server parameters.
+
+# svcs dhcp-server
+STATE     STIME    FMRI
+disabled  12:42:43 svc:/network/dhcp-server:default
+
+</pre><p>So, firstly DHCP must be initialized. Simpliest way of doing that is to create DHCP configuration database as a number of plain text files somewhere in /var/dhcp:</p><pre>
+
+# dhcpconfig -D -r SUNWfiles -p /var/dhcp
+Created DHCP configuration file.
+Created dhcptab.
+Added "Locale" macro to dhcptab.
+Added server macro to dhcptab.
+DHCP server started.
+
+</pre><p>If you're not ok with that "dhcpconfig -D" starts DHCP service automatically after initialization, do "dhcpconfig -Sd" or "svcadm -v disable dhcp-server" to stop it.</p><p><strong>NOTE:</strong> "dhcpconfig -U" unconfigures everything.</p><p>Now you can configure the network, supposed to be served by this DHCP server. As an example, if your network is 10.18.138.0/26, then you can create the network table in the following way:</p><pre>
+
+# pntadm -C 10.18.138.0
+
+</pre><p><strong>NOTE:</strong> before adding the network definition, make sure you have correct netmask specified in the netmasks(4) database:</p><pre>
+
+# getent netmasks 10.18.138.0
+10.18.138.0   255.255.255.192
+
+</pre><p>The next step is to create the macro containing your DNS, NIS, NIS+ settings. The name of this macro can be equal to the network name, so all DHCPDISCOVER or DHCPINFORM requests coming from this network will get the DHCPOFFER or DHCPACK with the settings in this macro.</p><p><strong>Example</strong>: add the macro 10.18.138.0 with the network settings, DNS and NIS options:</p><pre>
+
+# dhtadm -A -m 10.18.138.0 -d \
+':Subnet=255.255.255.192'\
+':Router=10.18.138.1'\
+':NISdmain="lab.sun.com"'\
+':NISservs=129.157.72.244'\
+':DNSdmain="lab.sun.com"'\
+':DNSserv=10.18.138.43 10.18.138.22:'
+
+</pre><p><strong>NOTE</strong>: DHCP option names are declared in the /etc/dhcp/inittab file, see dhcp_inittab(4) for a details.</p><p>So, it's time to start/restart the DHCP server</p><pre>
+
+# svcadm -v enable dhcp-server
+svc:/network/dhcp-server:default enabled.
+
+</pre><p>In order to verify whether the DHCP does respond with the right options, it's possible to run snoop(1M) on the server machine and dhcpinfo(1) on the client machine.</p><p><strong>Example</strong>: snoop(1M) running at the server machine:</p><pre>
+
+# snoop -v dhcp
+Using device eri0 (promiscuous mode)
+...
+DHCP: Message type = DHCPINFORM
+DHCP: Maximum DHCP Message Size = 1472 bytes
+DHCP: Client Class Identifier = "SUNW.i86pc"
+...
+DHCP: Message type = DHCPACK
+DHCP: DHCP Server Identifier = 10.18.138.22
+DHCP: DNS Servers at = 10.18.138.43
+DHCP: DNS Servers at = 10.18.138.22
+DHCP: DNS Domain Name = lab.sun.com
+DHCP: NIS Servers at = 129.157.72.244
+DHCP: NIS Domainname = lab.sun.com
+DHCP: Subnet Mask = 255.255.255.192
+DHCP: Router at = 10.18.138.1
+DHCP: Broadcast Address = 10.18.138.63
+...
+
+</pre><p><strong>Example</strong>: dhcpinfo(1) running at the client machine, where bge0 is the statically configured network interface, so the DHCPINFORM needs to be sent explicitly using ifconfig(1M):</p><pre>
+
+# ifconfig -a
+    lo0: &lt;UP,LOOPBACK,RUNNING,MULTICAST,IPv4,VIRTUAL&gt;
+        inet 127.0.0.1 netmask ff000000
+    bge0: &lt;UP,BROADCAST,RUNNING,MULTICAST,IPv4,CoS&gt;
+        inet 10.18.138.12 netmask ffffffc0
+
+# ifconfig bge0 dhcp status
+ifconfig: bge0: interface is not under DHCP control
+
+# ifconfig bge0 dhcp inform
+
+# dhcpinfo -i bge0 DNSdmain
+lab.sun.com
+
+# ifconfig bge0 dhcp drop
+
+</pre><p>DHCP server looks up and running.</p><h1 id="HConfiguringDNSserver"><span><span class="wikilink"><a href="#id3">Configuring DNS server</a></span></span></h1><p>The default config file for the named(1M) DNS server, also known as network/dns/server in smf(5), is the /etc/named.conf.</p><p>The minimal /etc/named.conf may look like the following:</p><pre>
+
+# cat /etc/named.conf
+options {
+    directory "/var/named";
+    recursion no;
+};
+zone "lab.sun.com" {
+    type master;
+    file "lab.sun.com";
+};
+
+</pre><p>where:</p><blockquote><p>* options -- server options:</p></blockquote><ul><li><ul><li>directory -- working directory for the server;</li><li>"recursion no" just prevents our DNS server from forwarding the DNS requests to the other servers;</li></ul></li><li>zone -- a zone definition for our lab.sun.com domain:<ul><li>"type master" tells that we're the master for lab.sun.com data;</li><li>"file lab.sun.com" means that actual data is stored in the /var/named/lab.sun.com file.</li></ul></li></ul><p>Here is an example of the zone file:</p><pre>
+
+# cat /var/named/lab.sun.com
+$TTL 86400
+lab.sun.com.            IN SOA  ascaris root.ascaris (
+                            20070530   ; serial
+                            21600      ; refresh after 6 hours
+                            3600       ; retry after 1 hour
+                            604800     ; expire after 1 week
+                            86400      ; minimum TTL of 1 day
+                            )
+                        IN NS   ascaris
+
+ascaris                 IN A    10.18.138.22
+adorus                  IN A    10.18.138.43
+
+_ldap._tcp._ns          IN SRV  0 0 389 adorus
+                        IN SRV  1 0 389 ascaris
+                        IN TXT  "NS_LDAP_SERVERS=10.18.138.43"
+                        IN TXT  "NS_LDAP_SEARCH_BASEDN=dc=lab"
+                        IN TXT  "NS_LDAP_CREDENTIAL_LEVEL=anonymous"
+
+</pre><p>where:</p><blockquote><p>* $TTL -- default Time To Live (sec.) for resource records;</p></blockquote><ul><li>IN -- means the Internet class of the resource records;</li><li>SOA -- Start of Authority resource record:<ul><li>lab.sun.com -- domain name / origin of the zone;</li><li>ascaris -- the primary DNS server for the zone;</li><li>root.ascaris -- the e-mail address of the zone's administator, a period "." is used instead of "@";</li><li>20070530 -- the serial number;</li><li>21600 -- refresh interval (sec.) -- this is how often the secondary name servers check with the primary name server to see if any changes have been made;</li><li>3600 -- retry interval (sec.) -- this is the time a secondary server waits before retrying a failed zone transfer;</li><li>604800 -- expire interval (sec.) -- the time before a secondary server stops responding to queries after a lapsed refresh interval where the zone was not refreshed or updated;</li><li>86400 -- minimum Time To Live interval (sec.) of all resource records from this zone;</li></ul></li><li>NS -- authoritative Name Server, several NS records can be specified;</li><li>A -- a host Address (IPv4);</li><li>SRV -- a Service record (RFC 2782):</li></ul><pre>
++~---------- the priority of this target host
+| +~-------- relative weight for entries with
+| |         the same priority
+| | +~------ service port
+| | |   +~-- service host
+V V V   V
+0 0 389 adorus
+</pre><ul><li>TXT -- Text record, usually consists of one or several "name=value" pairs;</li><li>_ldap._tcp._ns is the name used for the RFC2307 LDAP Name Service definition.<br/>For the list of LDAP properties, refer to the "LDAP settings" section below. Note that currently the ldap client uses "NS_LDAP_*" property names.</li></ul><p>Now try to start / restart the DNS server:</p><pre>
+
+# svcadm -v enable dns/server
+svc:/network/dns/server:default enabled.
+
+</pre><p>The verification lookup may be the following:</p><pre>
+
+# nslookup -type=any _ldap._tcp._ns.lab.sun.com 10.18.138.22
+Server:         10.18.138.22
+Address:        10.18.138.22#53
+
+_ldap._tcp._ns.lab.sun.com service = 0 0 389 adorus.lab.sun.com.
+_ldap._tcp._ns.lab.sun.com text = NS_LDAP_SERVERS=10.18.138.43
+_ldap._tcp._ns.lab.sun.com text = NS_LDAP_CREDENTIAL_LEVEL=anonymous
+_ldap._tcp._ns.lab.sun.com text = NS_LDAP_SEARCH_BASEDN=dc=lab
+
+</pre><p>So, we have the reference to the LDAP Name Service in DNS.</p><h1 id="HLDAPattributes"><span><span class="wikilink"><a href="#id4">LDAP attributes</a></span></span></h1><p>Here is the summary table, contains properties recognized by the native ldap client:</p><table><tr><th scope="col">Name in DUA profile</th><th scope="col">Name in Native LDAP</th><th scope="col">Default value</th></tr><tr><td>--</td><td>NS_LDAP_FILE_VERSION</td><td>2.0</td></tr><tr><td>attributeMap</td><td>NS_LDAP_ATTRIBUTEMAP</td><td> </td></tr><tr><td>authenticationMethod</td><td>NS_LDAP_AUTH</td><td> </td></tr><tr><td>bindTimeLimit</td><td>NS_LDAP_BIND_TIME</td><td>10</td></tr><tr><td>certificatePath</td><td>NS_LDAP_HOST_CERTPATH</td><td> </td></tr><tr><td>credentialLevel</td><td>NS_LDAP_CREDENTIAL_LEVEL</td><td> </td></tr><tr><td>defaultSearchBase</td><td>NS_LDAP_SEARCH_BASEDN</td><td> </td></tr><tr><td>defaultSearchScope</td><td>NS_LDAP_SEARCH_SCOPE</td><td>one</td></tr><tr><td>defaultServerList</td><td>NS_LDAP_SERVERS</td><td> </td></tr><tr><td>followReferrals</td><td>NS_LDAP_SEARCH_REF</td><td>false</td></tr><tr><td>objectclassMap</td><td>NS_LDAP_OBJECTCLASSMAP</td><td> </td></tr><tr><td>preferredServerList</td><td>NS_LDAP_SERVER_PREF</td><td> </td></tr><tr><td>profileName</td><td>NS_LDAP_PROFILE</td><td>default</td></tr><tr><td>profileTTL</td><td>NS_LDAP_CACHETTL</td><td>43200</td></tr><tr><td>proxyDN</td><td>NS_LDAP_BINDDN</td><td> </td></tr><tr><td>proxyPassword</td><td>NS_LDAP_BINDPASSWD</td><td> </td></tr><tr><td>searchTimeLimit</td><td>NS_LDAP_SEARCH_TIME</td><td>30</td></tr><tr><td>serviceAuthenticationMethod</td><td>NS_LDAP_SERVICE_AUTH_METHOD</td><td> </td></tr><tr><td>serviceCredentialLevel</td><td>NS_LDAP_SERVICE_CRED_LEVEL</td><td> </td></tr><tr><td>serviceSearchDescriptor</td><td>NS_LDAP_SERVICE_SEARCH_DESC</td><td> </td></tr></table><p>where:</p><blockquote><p>* <strong>Name in DUA profile</strong> -- an attribute name used by the ldapclient(1M) and identified in RFC 4876 (<span class="wikiexternallink"><a href="http://www.ietf.org/rfc/rfc4876.txt"><span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://www.ietf.org/rfc/rfc4876.txt"><span class="wikigeneratedlinkcontent">http://www.ietf.org/rfc/rfc4876.txt</span></a></span></a></span>);</p></blockquote><ul><li><strong>Name in Native LDAP</strong> -- a property name used by the Native LDAP client internally. In particular, the ldap cache manager, ldap_cachemgr(1M), uses these names in its configuration files, /var/ldap/ldap_client_file and /var/ldap/ldap_client_cred;</li></ul><p><strong>NOTE</strong>: the NS_LDAP_FILE_VERSION property is not a part of DUA profile, it just used internally by the Native LDAP client.</p><h1 id="HPerformingadiscovery"><span><span class="wikilink"><a href="#id5">Performing a discovery</a></span></span></h1><p>Here is an example of the discover subcommand usage in the nscfg(1M):</p><pre>
+
+# nscfg
+
+nscfg&gt; help discover
+
+    Usage: discover [ -n bec_name ] [ -w timeout_sec ]
+
+    Query DHCP and DNS to find Name Services back-end(s) available
+    on the network and store their configuration(s) under 'bec_name'
+
+nscfg&gt; discover
+
+The name for the back-end configuration(s) is defaulting to 'auto'
+Discover timeout is defaulting to 5 sec.
+3 back-end(s) discovered
+
+ldap auto
+    NS_LDAP_SERVERS          = "10.18.138.43"
+    NS_LDAP_CREDENTIAL_LEVEL = "anonymous"
+    NS_LDAP_SEARCH_BASEDN    = "dc=lab"
+
+dns auto
+    domain     = "lab.sun.com"
+    nameserver = "10.18.138.43 10.18.138.22"
+
+nis auto
+    domainname = "lab.sun.com"
+    serverlist = "129.157.72.244"
+
+nsswitch auto
+    passwd = "files ldap"
+    hosts  = "dns [NOTFOUND=return] files"
+    ...
+    PROF_profile_be_ldap = "auto"
+    PROF_profile_be_dns  = "auto"
+
+</pre><p>So, now there is the "auto" Name Service profile defined in the system:</p><pre>
+
+# nsadm list
+    Profile 'auto' (LDAP:'auto', DNS:'auto')
+
+</pre>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:13<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by admin on 2009/10/26 12:13
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Project duckwater Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/BuildSCM">Build Status & Gate Information</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/Documentation">Documentation</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/Reconfiguration">Name Service Reconfiguration (SMF)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/TrackedBugs">Tracked Project Bugs/RFEs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/finder">Finder APIs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/legacyconffiles">Legacy Configuration Files Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/libnsconf">libnsconf &#45; Name services configuration library</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/ns%2Ddiscovery">Name Services Discovery</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/nsadm_man">nsadm(1m) Draft Man Page</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/nscfg_man">nscfg(1m) Draft Man Page</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/nssconfig">NSS config API draft</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/nssversion">PSARC/2008/035 nss versioning API draft</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/profiles_new">Name Service Profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/requirements">Requirements</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/alpha2">Alpha2 Release Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/demo">Alpha1 Release Notes &#45; Duckwater Demo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/downloads">Duckwater Download Page</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/duckwater_phase0">Duckwater Phase 0</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/codereview">Code&#45;review</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/new_connmgmt">New Connection Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/std_ldapaddent">Standalone ldapaddent(1M)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/std_ldapclient_man">Standalone libldapclient(1M)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/std_ldaplist">Standalone ldaplist(1)</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/hg_cheatsheet">Duckwater/Mercurial Cheat sheet</a></span></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2012, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

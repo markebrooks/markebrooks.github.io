@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Finder APIs (Project duckwater.finder) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+duckwater/finder" />
+                    <link rel="canonical" href="/bin/view/Project+duckwater/finder" />
+                            <meta name="document" content="Project duckwater.finder"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Project duckwater"/>
+    <meta name="page" content="finder"/>
+    <meta name="version" content="2.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Project+duckwater/pages/finder"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Finder APIs" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="Doug Leavitt" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project duckwater";
+XWiki.currentPage = "finder";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Project+duckwater/finder";
+window.docediturl = "/bin/edit/Project+duckwater/finder";
+window.docsaveurl = "/bin/save/Project+duckwater/finder";
+window.docgeturl = "/bin/get/Project+duckwater/finder";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Project_duckwater viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bduckwater%2Ffinder"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+duckwater/"><strong>Project duckwater</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Project+duckwater" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>
+            </td>
+            <td style="width: 99%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                              <a href='/bin/view/Project+duckwater/Documentation'>Documentation</a> <span class='separator'>&#187;</span> <span class='current'>Finder APIs</span>
+                </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+duckwater/finder?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+duckwater/finder?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+duckwater/finder?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+duckwater/finder?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+duckwater/finder?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+duckwater/finder?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+duckwater/finder?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+duckwater/finder?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+duckwater/finder?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+duckwater/finder?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+duckwater/finder?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>Finder APIs</h1></div>
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h1 id="HDuckwater:NameServiceSwitchVersioningandFinderDesign"><span>Duckwater: Name Service Switch Versioning and Finder Design</span></h1><table><tr><th scope="col">Author:</th><td>Doug Leavitt &lt;<span class="wikiexternallink"><a href="mailto:doug.leavitt@sun.com">doug.leavitt@sun.com</a></span>&gt;</td></tr><tr><th scope="row">Version:</th><td>DRAFT 0.5</td></tr><tr><th scope="row">Date:</th><td>2008-03-05</td></tr></table><p>Contents</p><ul><li><span class="wikilink"><a href="#introduction">1   Introduction</a></span></li><li><span class="wikilink"><a href="#interface-taxonomy">2   Interface Taxonomy</a></span><ul><li><span class="wikilink"><a href="#open-issues">2.1   OPEN ISSUES:</a></span></li></ul></li><li><span class="wikilink"><a href="#overview">3   Overview</a></span></li><li><span class="wikilink"><a href="#backend-versioning">4   Backend Versioning</a></span><ul><li><span class="wikilink"><a href="#pre-psarc-2005-133">4.1   Pre PSARC/2005/133</a></span></li><li><span class="wikilink"><a href="#psarc-2005-133-sparks-phase-1">4.2   PSARC/2005/133 - Sparks [phase 1]</a></span><ul><li><span class="wikilink"><a href="#issues">4.2.1   issues</a></span></li></ul></li><li><span class="wikilink"><a href="#psarc-2008-035">4.3   PSARC/2008/035</a></span><ul><li><span class="wikilink"><a href="#details">4.3.1   Details</a></span></li></ul></li><li><span class="wikilink"><a href="#psarc-2007-694">4.4   PSARC/2007/694</a></span><ul><li><span class="wikilink"><a href="#nss-finder-summary">4.4.1   NSS Finder Summary</a></span></li></ul></li><li><span class="wikilink"><a href="#nss2-versioning">4.5   NSS2 Versioning</a></span><ul><li><span class="wikilink"><a href="#version-structure">4.5.1   Version Structure</a></span></li><li><span class="wikilink"><a href="#version-numbers">4.5.2   Version Numbers</a></span></li><li><span class="wikilink"><a href="#backend-api-structure">4.5.3   Backend API Structure</a></span></li><li><span class="wikilink"><a href="#backend-option-structure">4.5.4   Backend Option Structure</a></span></li></ul></li></ul></li><li><span class="wikilink"><a href="#finder-functions">5   Finder Functions</a></span><ul><li><span class="wikilink"><a href="#purpose">5.1   Purpose</a></span></li><li><span class="wikilink"><a href="#finder-function-interfaces">5.2   Finder Function Interfaces</a></span></li><li><span class="wikilink"><a href="#nss-default-finders">5.3   nss_default_finders</a></span></li><li><span class="wikilink"><a href="#version-1-finder-functions">5.4   Version 1 finder functions</a></span></li><li><span class="wikilink"><a href="#version-1-structures">5.5   Version 1 Structures</a></span><ul><li><span class="wikilink"><a href="#nss-backend-nss-backend-t">5.5.1   nss_backend &amp; nss_backend_t</a></span></li></ul></li><li><span class="wikilink"><a href="#version-2-structures">5.6   Version 2 Structures</a></span></li><li><span class="wikilink"><a href="#version-2-finder-functions">5.7   Version 2 finder functions</a></span><ul><li><span class="wikilink"><a href="#scan-ext">5.7.1   scan_ext</a></span></li><li><span class="wikilink"><a href="#lookup-ext">5.7.2   lookup_ext</a></span></li><li><span class="wikilink"><a href="#query-ext">5.7.3   query_ext</a></span></li><li><span class="wikilink"><a href="#free-ext">5.7.4   free_ext</a></span></li><li><span class="wikilink"><a href="#delete-ext">5.7.5   delete_ext</a></span></li></ul></li><li><span class="wikilink"><a href="#naming-semantics">5.8   Naming Semantics</a></span><ul><li><span class="wikilink"><a href="#versioning-symbols">5.8.1   Versioning symbols</a></span></li><li><span class="wikilink"><a href="#dl-library-names">5.8.2   DL Library Names</a></span></li><li><span class="wikilink"><a href="#version-1-constructor-symbols">5.8.3   Version 1 constructor symbols</a></span></li><li><span class="wikilink"><a href="#version-2-get-put-api-symbols">5.8.4   Version 2 get/put/... API symbols</a></span></li><li><span class="wikilink"><a href="#version-2-option-symbols">5.8.5   Version 2 option symbols</a></span></li><li><span class="wikilink"><a href="#version-2-extension-symbols">5.8.6   Version 2 extension symbols</a></span></li></ul></li></ul></li></ul><h1 id="H1A0A0A0Introduction"><span><span class="wikilink"><a href="#id1">1   Introduction</a></span></span></h1><p>This document specifies the historical (previously undocumented) finder API interfaces and the NSS2 extensions to those APIs as they as part of the following projects:</p><blockquote><p>PSARC/2008/035 - Sparks foreign backend support</p></blockquote><p>PSARC/2007/694 - Duckwater: Simplified name services management</p><p>The initial delivery of Sparks: PSARC/2005/133 made no modifications to these APIs.</p><h1 id="H2A0A0A0InterfaceTaxonomy"><span><span class="wikilink"><a href="#id2">2   Interface Taxonomy</a></span></span></h1><p>The versioning and finder interfaces are currently classified as:</p><blockquote><p>&nbsp;&nbsp;Project Private and Committed Private</p></blockquote><p>Because the other nss policy engine to backend interfaces are currently classified in this manner. See PSARC/2005/133.</p><p>However, these interfaces are currently treated as:</p><blockquote><p>&nbsp;&nbsp;Volatile</p></blockquote><p>because the new development is being pursued via OpenSolaris.</p><p>One of the goals of the Sparks and Duckwater efforts are to document all the name service switch interfaces and eventually expose the interfaces first as volatile, and eventually Committed at some point in the future.</p><h2 id="H2.1A0A0A0OPENISSUES:"><span><span class="wikilink"><a href="#id3">2.1   OPEN ISSUES:</a></span></span></h2><ol><li>By pursuing this work on OpenSolaris, are these Project Private APIs automatically reclassified as Volatile?</li><li>Does PSARC want us to reclassify them as part of this case?</li></ol><h1 id="H3A0A0A0Overview"><span><span class="wikilink"><a href="#id4">3   Overview</a></span></span></h1><p>The name service switch interfaces have been private [and mostly undocumented] since their development. While the private status of the interfaces has been restated multiple times, and explicitly documented as private as far back as 1994, this has not prevented uncontracted API usage outside the ON consolidation and unsupported usage by third parties.</p><p>This is a well known problem that has been partly responsible for the lack of evolution of these APIs, until the initial delivery of the Sparks project [PSARC/2005/133], in snv_50.</p><p>This document is one step towards rectifying this problem.</p><p>Currently, it is unclear how many nsswitch backends making use of the uncontracted/unsupported APIs actually exist. Realistically the number of "foreign" nsswitch backends is probably more than 10.</p><h1 id="H4A0A0A0BackendVersioning"><span><span class="wikilink"><a href="#id5">4   Backend Versioning</a></span></span></h1><h2 id="H4.1A0A0A0PrePSARC2F20052F133"><span><span class="wikilink"><a href="#id6">4.1   Pre PSARC/2005/133</a></span></span></h2><p>Prior to PSARC/2005/133, the only known documentation for the name service switch is PSARC/1991/018, which briefly discusses the switch at a very high level, and does not document any specific internal interfaces.</p><p>Followup ARC cases make it clearer, that these interfaces are all considered project private. See PSARC/2005/133 for a more detailed analysis of prior work.</p><h2 id="H4.2A0A0A0PSARC2F20052F133-Sparks5Bphase15D"><span><span class="wikilink"><a href="#id7">4.2   PSARC/2005/133 - Sparks [phase 1]</a></span></span></h2><p>The sparks effort currently preserves backwards compatibility by keeping the old, backwards compatible, nsswitch interface code in it's original libc location. The new redesigned nsswitch is located in nscd. As discussed in PSARC/2005/133, the public APIs send requests to the new nsswitch which in turn can return a request back to the libc nsswitch via the TRYLOCAL protocol, if the new switch determines that the request must be executed by the old nsswitch to preserve backwards compatibility.</p><p>The PSARC/2005/133 delivery preserves compatibility and stability between the old and new interfaces, through 2 means:</p><ol><li>all ON backends have been updated to behave consistently in both environments</li><li>the new switch/nscd has built-in knowledge of the legal backends that can be used</li></ol><p>PSARC/2005/133 created 2 classes of backends with this behavior.</p><p>The first class of backends are pre PSARC/2005/133 backends. These are any backend that has not been updated to behave with the new name service switch engine in nscd, and subsequent versionable changes. These backends are considered 'foreign' to the new name service switch engine. The new name service switch engine returns requests that need to use a foreign backend to the original (obsolete) libc name service switch for local processing on the client. Databases using an old style backend are generally not cached.</p><p>The second class of backends are backends that have been updated to support the new interfaces. Nscd has a built in knowledge of a core set of backends that are delivered in unison with nscd and must always adhere to all the current latest nsswitch specifications. In PSARC 2005/133, these backends are the backends delivered with nscd in the ON consolidation.</p><h3 id="H4.2.1A0A0A0issues"><span><span class="wikilink"><a href="#id8">4.2.1   issues</a></span></span></h3><p>PSARC/2005/133 introduced the notion of new extended APIs, but failed to also introduce a versioning model.</p><p>PSARC/2005/133 used this new model to introduce at least one project private API, in the nss_dns backend to return DNS lookups with associated timeout values from the resolver. Something impossible in the interfaces prior to PSARC/2005/133.</p><p>Prior to PSARC 2005/133, changes in backend behavior required physical changes to the project private C structures and #defines in nss header files and accompanying recompilation of all components that depended upon those header files.</p><h2 id="H4.3A0A0A0PSARC2F20082F035"><span><span class="wikilink"><a href="#id9">4.3   PSARC/2008/035</a></span></span></h2><p>Prior to PSARC/2008/035 the name service switch has no versioning capability and no way to differentiate (except with explicit knowledge) what backend has or has not been updated to at least PSARC/2005/133 specifications.</p><p>PSARC/2008/035 introduces a method to distinguish unversioned (pre PSARC/2005/133) and versioned (PSARC/2005/133 or later) libraries.</p><p>The purpose of this change is to allow nscd to distinguish between foreign backends that have been updated to PSARC/2005/133 specifications and foreign backends that have not been updated. Foreign backends that are updated to PSARC/2008/035 can be used by nscd and therefore caching of data from those backends can occur.</p><h3 id="H4.3.1A0A0A0Details"><span><span class="wikilink"><a href="#id10">4.3.1   Details</a></span></span></h3><p>This project introduces minimal versioning support. That is, the ability to distinguish between pre PSARC/2005/133 and post PSARC/2005/133 backends.</p><p>This project defines a versioned backend to have, at a minimum, an externally defined version global symbol [dlsym retrievable] whose name is in the form:</p><pre>
+
+_nss_[backend-name]_version
+
+</pre><p>where backend-name corresponds to the backend name used in nsswitch.conf as in:</p><pre>
+
+_nss_nis_version, _nss_files_version
+
+</pre><p>The contents of the variable are treated as a castable (void *) pointer in the native pointer size for the compiled library.</p><p>Existence of the symbol in a nsswitch backend with a value of NULL implies that the backend is in compliance with the specifications of PSARC/2005/133.</p><p>If this NULL valued symbol exists, nscd will treat the nsswitch backend as eligible for being dlopen'd and used per PSARC/2005/133 specifications. The results from lookups from a backend will be cached along with other lookup results as applicable.</p><h2 id="H4.4A0A0A0PSARC2F20072F694"><span><span class="wikilink"><a href="#id11">4.4   PSARC/2007/694</a></span></span></h2><p>PSARC/2007/694 extends PSARC/2008/035 with the introduction of new finder functions and extensible versioning data provided by each updated nss backend.</p><p>This extensible model enables the name service switch projects to add new backend interfaces including configuration and management interfaces. Prior to this effort, the pre PSARC/2005/133 project private finder APIs only lookup pre NSS2 style interfaces.</p><p>The extended finder APIs are the interfaces used to detect and extract the new interfaces and options for use by updated applications and nscd.</p><p>In PSARC/2007/694, the Duckwater project defines new backend APIs, and options that the Duckwater management tools use to manage naming configuration auto detection, setup, verification etc.</p><p>These finder APIs will also allow future Sparks, Duckwater and other projects the flexible ability to easily add and extend backend APIs moving forward.</p><h3 id="H4.4.1A0A0A0NSSFinderSummary"><span><span class="wikilink"><a href="#id12">4.4.1   NSS Finder Summary</a></span></span></h3><p>the pre Sparks name service switch has no concept of versioning.</p><p>The finder APIs in NSS are rudimentary APIs that perform simple dlopen/dlsym lookups for function APIs called constructors.</p><p>These NSS (pre Sparks) constructor functions, when called, return a project private pointer to a fixed size structure of function pointers for a given set of NSS interfaces. These pointers are then used in undocumented project private behaviors to process backend lookups. Prior to PSARC/2005/133 usage was inconsistent and undocumented. the finder APIs were also undocumented.</p><p>The constructor names, function APIs and values are all considered project private APIs.</p><p>By it's nature, any API change, addition, or other requires multiple header changes and recompilation of libc, all the nsswitch backends, nscd and any other component that depends on these hard coded interfaces.</p><p>This is made worse, by the fact that the project private headers (nss_common.h, nss_dbdefs.h) were publicly exposed in /usr/include and third parties have chosen to become dependent on them.</p><p>As a result these interfaces have been left virtually unenhanced for years, resulting in significant lack of functionality enhancements, such as put XbyY.</p><p>More NSS details to be provided below.</p><p>The NSS2 finder APIs keep the NSS APIs in their backwards compatible behavior, but extend the finder structure to include new APIs that look for a versioning symbol, and then process that symbol as appropriate.</p><h2 id="H4.5A0A0A0NSS2Versioning"><span><span class="wikilink"><a href="#id13">4.5   NSS2 Versioning</a></span></span></h2><p>A backend that supports NSS2 versioning compiles, at a minimum with PSARC/2005/133 and PSARC/2008/035 with the further addition that the version symbol defined in PSARC/2008/035 is not NULL, but instead points to a nss_version structure as described below.</p><h3 id="H4.5.1A0A0A0VersionStructure"><span><span class="wikilink"><a href="#id14">4.5.1   Version Structure</a></span></span></h3><p>The version structure is the structure pointed to by the versioning symbol in all post PSARC/2008/035 backends. The purpose of the versioning structure is to specify the version number of the library and to specify the APIs supported by the backend plus and backend options that may exist.</p><p>The structures are intended to be extensible over time. The contents of the structures include variable length lists of APIs and options, both of which can be extended over time.</p><p>The intent is to provide a easy to manage, extensible C interface to nss2 backends that is upwards compatible with nss.</p><p>The version structure proposed by the ARC case looks like:</p><pre>
+
+/* Currently supported backend version(s) */
+#ifndef NSS_VERSION_2_1
+#define     NSS_VERSION_2_1 0x00020001
+#endif
+
+/* Current backend version */
+#ifndef NSS_VERSION
+#define     NSS_VERSION     NSS_VERSION_2_1
+#endif
+
+/* internal nss_version signal markers for unversioned or foreign backends */
+#define     NSS_NOVERSION   0x00020000      /* Supports PSARC/2008/035 */
+#define     NSS_FOREIGN     0xFFFFFFFF      /* Unversioned pre PSARC/2005/133 BE */
+
+/*
+ * NSS version 2 version structure
+ * This is the structure pointed to by the dlsym accessible version variable.
+ *  _nss_[backend-name]_version
+ *
+ *  nss_v_version - version supported by the backend.
+ *  nss_v_sz - sizeof nss_version structure
+ *  nss_v_api - list [array] of APIs supported by the backend
+ *  nss_v_api_cnt - API list count
+ *  nss_v_api_flags - NSS_VERSION_SORTED or 0
+ *  nss_v_opt - list [array] of version options supported in the backend
+ *  nss_v_opt_cnt - option list count
+ *  nss_v_opt_flags - NSS_VERSION_SORTED or 0
+ */
+
+/* set if API/option names are in ascii sorted order [search] */
+#define     NSS_VERSION_SORTED      0x1
+/* internal flag set if backend api is alloc'd - for V2 compatibility */
+#define     NSS_ITEM_ALLOCED        0x80000000
+
+struct nss_version {
+    nssuint_t               nss_v_version;          /* backend version */
+    nssuint_t               nss_v_sz;               /* sizeof struct */
+    nss_backend_api_t       *nss_v_api;             /* API array */
+    nssuint_t               nss_v_api_cnt;          /* API count */
+    nssuint_t               nss_v_api_flags;
+    nss_backend_opt_t       *nss_v_opt;             /* option array */
+    nssuint_t               nss_v_opt_cnt;          /* option count */
+    nssuint_t               nss_v_opt_flags;
+};
+
+typedef struct nss_version  nss_version_t;
+
+</pre><dl><dt>struct nss_version &amp; nss_version_t</dt><dd>Structure pointed to by the versioning symbol. This structure includes a version number of the backend, sizeof this structure, pointer to a list of APIs an associated count and flags, pointer to a list of options an associated count and flags.</dd><dt>nss_v_version</dt><dd>Version number for this backend</dd><dt>nss_v_sz</dt><dd>sizeof(nss_version_t)</dd><dt>nss_v_api</dt><dd>Pointer to list of API structures</dd><dt>nss_v_api_cnt</dt><dd>Count of APIs in list</dd><dt>nss_v_api_flags</dt><dd>Option flags for API list</dd><dt>nss_v_opt</dt><dd>Pointer to list of option structures</dd><dt>nss_v_opt_cnt</dt><dd>Count of options in list</dd><dt>nss_v_opt_flags</dt><dd>Option flags for option list</dd><dt>NSS_VERSION_SORTED</dt><dd>API or option list is (ascii) sorted by name.</dd></dl><h3 id="H4.5.2A0A0A0VersionNumbers"><span><span class="wikilink"><a href="#id15">4.5.2   Version Numbers</a></span></span></h3><p>The following #define values help determine a backend version</p><dl><dt>NSS_VERSION</dt><dd>This value represents the most current version supported by the nsswitch</dd><dt>NSS_NOVERSION</dt><dd>This value represents a nsswitch backend that supports PSARC 2005/133 but has no specific version number. That is a PSARC 2008/035 foreign backend.</dd><dt>NSS_FOREIGN</dt><dd>This value represents a nsswitch backend whose version cannot be detected. That is a pre PSARC/2005/133 backend.</dd><dt>NSS_VERSION_X_Y</dt><dd>A #define of this form represents a specific version. X is the major version number, Y is the minor version number. Version 2.1 is represented as: NSS_VERSION_2_1</dd><dt>NSS_VERSION_2_1</dt><dd>This value represents a backend that supports PSARC 2007/694</dd></dl><h3 id="H4.5.3A0A0A0BackendAPIStructure"><span><span class="wikilink"><a href="#id16">4.5.3   Backend API Structure</a></span></span></h3><p>The API structure is created as a list of APIs supported in a particular backend.</p><pre>
+
+/*
+ * NSS version 2 backend API array item
+ * This structure is used to define support for a single API in a nss2 backend.
+ *  be_api_name - nss2 (dlsym equivalent) search name
+ *  be_api_flags - API option flags
+ *  be_api_func - pointer to API
+ *  be_api_constr - pointer to [optional] API constructor/init function
+ */
+
+struct nss_backend_api {
+    char                    *be_api_name;           /* API name */
+    nssuint_t               be_api_version;         /* API version */
+    nssuint_t               be_api_flags;           /* support flags */
+    nss_backend_nop_t       be_api_func;            /* API */
+    nss_backend_nop_t       be_api_constr;          /* constructor [opt] */
+    nss_backend_nop_t       be_api_destr;           /* destructor [opt] */
+    nssuint_t               be_api_reserved;        /* reserved field */
+};
+
+typedef struct nss_backend_api      nss_backend_api_t;
+
+/*
+ * nss_backend_api_t helper macros
+ * NSS_API_ENTRY_V1 - creates a V1 entry in a api list.
+ *  cname = V1 constructor function name
+ * NSS_API_ENTRY_V2 - creates a V2 entry in a api list.
+ *  func = V2 function name
+ *  flag = API flags or 0
+ *  cname = address of [optional] constructor name
+ *  dname = address of [optional] destructor name
+ */
+
+#ifndef     NSS_APIENTRY_V1
+#define     NSS_APIENTRY_V1(cname) \
+    { #cname,   0, 0, (nss_backend_nop_t)NULL, \
+        (nss_backend_nop_t)&amp;cname, (nss_backend_nop_t)NULL, 0 }
+#endif
+#ifndef     NSS_APIENTRY_V2
+#define     NSS_APIENTRY_V2(func, flag, cname, dname) \
+    { #func, NSS_VERSION, flag, (nss_backend_nop_t)&amp;func, \
+        (nss_backend_nop_t)cname, (nss_backend_nop_t)dname, 0 }
+#endif
+
+</pre><dl><dt>nss_backend_api &amp; nss_backend_api_t</dt><dd>API structure as defined by PSARC/2007/694. includes the name of the API a specific API version value, flags, and function pointers</dd><dt>be_api_name</dt><dd>API name as defined by the API naming scheme. The actual API can be locatable via dlsym.</dd><dt>be_api_version</dt><dd>Specific API version value. Unused in PSARC/2007/694. Future backend updates may choose to optionally allow/support different API versions within backends, or across different backend versions.</dd><dt>be_api_flags</dt><dd>specific API flags.</dd><dt>NSS_ITEM_ALLOCED</dt><dd>Internally used API flag, used to support PSARC/2008/035 backends withing the NSS2 finder interfaces.</dd><dt>be_api_func</dt><dd>API function pointer</dd><dt>be_api_constr</dt><dd>Optional API constructor. Called prior to API call.</dd><dt>be_api_destr</dt><dd>Optional API destructor. Called after API call</dd><dt>NSS_APIENTRY_V1</dt><dd>API helper macro to specify a pre Sparks API in an API list</dd><dt>NSS_APIENTRY_V2</dt><dd>API helper macro to specify a NSS2 API in an API list</dd></dl><h3 id="H4.5.4A0A0A0BackendOptionStructure"><span><span class="wikilink"><a href="#id17">4.5.4   Backend Option Structure</a></span></span></h3><p>The option structure is created as a list of options supported in a particular backend. Options may be generic across backends, or backend specific.</p><pre>
+
+/*
+ * NSS version 2 backend option array item
+ * This structure is used to define support for a nss2 backend option.
+ * This is to allow extensibility within a version by defining optional
+ * support in a backend beyond APIs.
+ *
+ * This structure specifies support for a single API in the nss2 backend
+ *  be_opt_name - supported backend option name
+ *  be_opt_flags - flags applicable to this option
+ *          NSS_FINDER_WRITABLE     this option is writable (not const)
+ *  be_opt_string - field for options with string type value(s)
+ *  be_opt_int - field for options with int type value(s)
+ */
+
+struct nss_backend_opt {
+    char                    *be_opt_name;           /* option name */
+    nssuint_t               be_opt_flags;           /* support flags */
+    char                    *be_opt_string;         /* string value(s) */
+    nssuint_t               be_opt_int;             /* int/flag value(s) */
+    nssuint_t               be_opt_reserved;        /* reserved field */
+};
+
+typedef struct nss_backend_opt      nss_backend_opt_t;
+
+</pre><dl><dt>nss_backend_opt &amp; nss_backend_opt_t</dt><dd>Option structure as defined by PSARC/2007/694. includes the name of the option flags, an option string value and/or integer value</dd><dt>be_opt_name</dt><dd>Option name as defined by the option naming scheme. The actual option can be locatable via dlsym.</dd><dt>be_opt_flags</dt><dd>Specific per options flags.</dd><dt>NSS_FINDER_WRITABLE</dt><dd>the values in this option are writable (not const)</dd><dt>be_opt_string</dt><dd>pointer to a [const] char * value. Default is const unless NSS_FINDER_WRITABLE is set.</dd><dt>be_opt_int</dt><dd>nssuint_t value. Assumed const unless NSS_FINDER_WRITABLE is set.</dd></dl><h1 id="H5A0A0A0FinderFunctions"><span><span class="wikilink"><a href="#id18">5   Finder Functions</a></span></span></h1><h2 id="H5.1A0A0A0Purpose"><span><span class="wikilink"><a href="#id19">5.1   Purpose</a></span></span></h2><p>The purposes of the finder functions are as follows:</p><ol><li>detect and optionally load available name service switch backends for use by the name service switch and any associated application, such as the name service switch management tools</li><li>inspect name service switch backends for versioning information categorize backends by their versioning information as either</li></ol><blockquote><p>11. foreign (pre-sparks PSARC/2005/133)</p></blockquote><ol><li><ol><li>PSARC/2005/133 capable</li><li>Post PSARC 2005/133 capable</li></ol></li><li>Determine the supported functionality of a given backend</li><li>return the following information to applications and the nsswitch</li></ol><blockquote><p>11. lists of backends matching certain search criteria This is the scan feature</p></blockquote><ol><li><ol><li>one or more function(s) based on certain search criteria This is the lookup feature</li><li>lists of capabilities based on search criteria this is the query feature</li></ol></li></ol><h2 id="H5.2A0A0A0FinderFunctionInterfaces"><span><span class="wikilink"><a href="#id20">5.2   Finder Function Interfaces</a></span></span></h2><pre>
+
+/*
+ * FINDER flag options
+ *
+ *  NSS_FINDER_VCHK         version check library (temp opens dyn lib)
+ *  NSS_FINDER_OPEN         open (keep open) dyn lib
+ *  NSS_FINDER_CLOSE        close dyn lib (OPEN/CLOSE mutually exclusive)
+ *  NSS_FINDER_DELETE       TBD
+ *  NSS_FINDER_V1API        process (scan/lookup) V1API
+ *  NSS_FINDER_EXTENSION    process (scan/lookup) extension API
+ *  NSS_FINDER_WRITABLE     dyn lib options are writable (not const)
+ */
+
+#define     NSS_FINDER_VCHK         0x00000001
+#define     NSS_FINDER_OPEN         0x00000002
+#define     NSS_FINDER_CLOSE        0x00000004
+#define     NSS_FINDER_DELETE       0x00000008
+#define     NSS_FINDER_V1API        0x00000010
+#define     NSS_FINDER_EXTENSION    0x00000020
+#define     NSS_FINDER_WRITABLE     0x00000040
+
+struct nss_backend_finder {
+    /* NSS version 1 finder operations */
+#if defined(__STDC__)
+    nss_backend_constr_t    (*lookup)
+            (void *lkp_priv, const char *, const char *, void **del_privp);
+    void                    (*delete)
+            (void *del_priv, nss_backend_constr_t);
+#else
+    nss_backend_constr_t    (*lookup)();
+    void                    (*delete)();
+#endif
+    struct nss_backend_finder *next;
+    void                    *lookup_priv;
+    /* NSS version 2 finder operations */
+#if defined(__STDC__)
+    nss_status_t            (*scan_ext)
+            (const char *db_name, const char *src_name,
+            nssuint_t flags, nss_backend_src_t ***be_list,
+            uint32_t *count, void **finder_priv);
+    nss_status_t    (*lookup_ext)
+            (const char *db_name, const char *src_name,
+            const char *op_name, const char *key_name,
+            nssuint_t flags, nss_backend_api_t ***api_list,
+            uint32_t *count, void **finder_priv);
+    nss_status_t    (*query_ext)
+            (const char *db_name, const char *src_name,
+            const char *opt_name,
+            nssuint_t flags, nss_backend_opt_t ***opt_list,
+            uint32_t *count, void **finder_priv);
+    void            (*free_ext)
+            (nss_backend_src_t ***be_list, uint32_t *be_cnt,
+            nss_backend_api_t ***api_list, uint32_t *api_cnt,
+            nss_backend_opt_t ***opt_list, uint32_t *opt_cnt,
+            void **finder_priv);
+    void            (*delete_ext)(void **finder_priv);
+#else
+    nss_status_t    (*scan_ext)();
+    nss_status_t    (*lookup_ext)();
+    nss_status_t    (*query_ext)();
+    void            (*free_ext)();
+    void            (*delete_ext)();
+#endif
+};
+
+typedef struct nss_backend_finder nss_backend_finder_t;
+
+extern nss_backend_finder_t *nss_default_finders;
+
+</pre><h2 id="H5.3A0A0A0nss_default_finders"><span><span class="wikilink"><a href="#id21">5.3   nss_default_finders</a></span></span></h2><p>nss_default_finders is a symbol exposed by libc. This symbol points to the nss_backend_finder_t structure. This structure is the list of pointers to the nss finder function interfaces.</p><p>The contents of the structure are currently considered project private. Prior to PSARC 2007/694, The old structure definition is as follows:</p><pre>
+
+struct nss_backend_finder {
+    /* NSS version 1 finder operations */
+#if defined(__STDC__)
+    nss_backend_constr_t    (*lookup)
+            (void *lkp_priv, const char *, const char *, void **del_privp);
+    void                    (*delete)
+            (void *del_priv, nss_backend_constr_t);
+#else
+    nss_backend_constr_t    (*lookup)();
+    void                    (*delete)();
+#endif
+    struct nss_backend_finder *next;
+    void                    *lookup_priv;
+};
+
+</pre><h2 id="H5.4A0A0A0Version1finderfunctions"><span><span class="wikilink"><a href="#id22">5.4   Version 1 finder functions</a></span></span></h2><p>The original name service switch provided a lookup finder API that searched for a specific API by database and named backend.</p><p>Additionally there is a cleanup/delete API.</p><p>The version 1 lookup API returns a pointer to a constructor function for the backend, or NULL if it can not find the backend. The switch engine caches these function pointers; when it needs to perform a backend lookup. The switch calls the constructor function, which returns a pointer to a new instance of the backend, properly initialized or NULL.</p><p>The nsswitch engine then uses a hardwired function array indexed by defines in nss_dbdefs.h and nss_backend_t to call the appropriate API in version 1 format. See PSARC/2005/133 for further details.</p><p>This behavior is considered stable but obsolete. The array indexes, databases and version 1 definitions related to these finder definitions array indices and other internal behaviors and the associated backend API behaviors are considered stable/standard and obsolete.</p><p>The nss version 1 finder interfaces are:</p><pre>
+
+lookup(void *dummy, const char *db_name, const char *src_name,
+    void **delete_privp)
+delete(void *delete_priv, nss_backend_constr_t dummy)
+
+</pre><p>Where:</p><dl><dt>db_name</dt><dd>Is a null terminated ascii string that is one of the database names such as "hosts" or "passwd" from the name service switch</dd><dt>src_name</dt><dd>Is a null terminated ascii string that is one of the source names such as "files" or "nis" from the name service switch</dd><dt>delete_privp</dt><dd>This is an internal opaque priv pointer that is initialized by the lookup API. data pointed to by the opaque pointer must be freed by calling the delete function after finder lookups are completed.</dd></dl><p>The following rules apply to these APIs:</p><ol><li>These interfaces are considered project private and obsolete.</li><li>These APIs are not to be modified/extended in order to preserve backwards compatibility. Use the version 2 finder functions and PSARC/2005/133 and beyond for non NSS1 lookups and nsswitch enhancements.</li><li>These APIs are not MT safe</li></ol><h2 id="H5.5A0A0A0Version1Structures"><span><span class="wikilink"><a href="#id23">5.5   Version 1 Structures</a></span></span></h2><h3 id="H5.5.1A0A0A0nss_backend26nss_backend_t"><span><span class="wikilink"><a href="#id24">5.5.1   nss_backend &amp; nss_backend_t</a></span></span></h3><p>nss_backend &amp; nss_backend_t are the hardcoded v1 structures of function pointers used to define the function indices for the various get operations on a per DB basis. Offsets are hardcoded index values defined in nss_dbdefs.h</p><p>These structures are considered stable but obsolete as of PSARC/2005/133. New sizes, indices or behaviors post PSARC/2005/133 are not permitted.</p><p>The NSS_DBOP_* macros define the indices for the various db behaviors for v1 structure use.</p><p>For nsswitch version 2 interfaces, nss_backend_t is considered a backend private pointer and is required to be treated as a void pointer by the frontend.</p><h2 id="H5.6A0A0A0Version2Structures"><span><span class="wikilink"><a href="#id25">5.6   Version 2 Structures</a></span></span></h2><p>The version2 APIs use and return data structures defined by the versioning specification.</p><p>Additionally, the version2 finder APIs track scanned and open nss backends using the following nss_backend_src structure.</p><pre>
+
+/*
+ * NSS version 2
+ * nss_backend_src in memory representation of a found backend library
+ * This data is returned from the extended scan API.
+ *  be_src_dlh - dlhandle [if the source has been dlopened, NULL if not]
+ *  be_src_name - backend name used in nsswitch.conf
+ *  be_src_lib - backend library name nss_[backend].so.1
+ *  be_src_path - backend library directory path (if opened)
+ *  be_src_verp - backend's version structure ptr/NULL
+ *  be_src_version - backend's version number/NSS_FOREIGN/NSS_NOVERSION
+ *  be_src_mtim - opened libraries mtime timestamp
+ */
+
+struct nss_backend_src {
+    void                    *be_src_dlh;
+    char                    *be_src_name;
+    char                    *be_src_lib;
+    char                    *be_src_path;
+    nss_version_t           *be_src_verp;
+    nssuint_t               be_src_version;
+    timestruc_t             be_src_mtim;
+};
+
+typedef struct nss_backend_src      nss_backend_src_t;
+
+</pre><p>These interfaces are considered project private. The purpose of the structure is to list and manage the internal state of open or closed nss backends.</p><h2 id="H5.7A0A0A0Version2finderfunctions"><span><span class="wikilink"><a href="#id26">5.7   Version 2 finder functions</a></span></span></h2><p>Version 2 adds 5 new extended finder functions.</p><dl><dt>scan_ext - extended scan, scans the ld library path, matches and</dt><dd>optionally opens one or more backends.</dd><dt>lookup_ext - extended lookup, performs the lookup function accepting</dt><dd>new API formats, and uses versioning control information. May call scan_ext to find required libraries.</dd><dt>query_ext - extended lookup for property/options queries. Uses</dt><dd>version control information. May call scan_ext to find required libraries.</dd></dl><p>free_ext - frees memory from previously returned scan/lookup/query delete_ext - closes opened backend(s) from previous *_ext requests</p><h3 id="H5.7.1A0A0A0scan_ext"><span><span class="wikilink"><a href="#id27">5.7.1   scan_ext</a></span></span></h3><pre>
+
+nss_status_t            (*scan_ext)
+        (const char *db_name, const char *src_name,
+        nssuint_t flags, nss_backend_src_t ***be_list,
+        uint32_t *count, void **finder_priv);
+
+</pre><p>scan_ext scans library paths and [optionally] dlopens backends to determine the versioning information of the nsswitch library</p><p>If libraries are opened, they are opened in RTLD_LAZY mode to reduce dependency loading</p><p>Arguments:</p><dl><dt>db_name</dt><dd>NULL or a null terminated regular expression regcomp(3c) that is one of the database names such as "hosts" or "passwd" from the name service switch.</dd><dt>src_name</dt><dd>NULL or a null terminated regular expression regcomp(3c) that is one of the source names such as "files" or "nis" from the name service switch.</dd><dt>flags</dt><dd>0 or one of the following: NSS_FINDER_VCHK, NSS_FINDER_OPEN</dd><dt>be_list</dt><dd>Array of backends found during the scan operation, and the current Status of the backends. This data should be treated as read only. The data must be freed by the free_ext API.</dd><dt>count</dt><dd>Number of found backends.</dd><dt>finder_priv</dt><dd>Opaque internal backend data. this data must be freed by delete_ext</dd></dl><p>The scan API returns the list of found backends. The data is considered read only. The be_list and count may be passed back through repeated scan_ext calls, if the caller wants to add non-duplicate new entries to the current list.</p><p>A NULL db_name is a wildcard allowing the scan operation to report for any database. A NULL src_name is a wildcard allowing the scan operation to report for any source.</p><p>If the be_list and count pointers are NULL, then the scanning occurs but no results are returned. This is to allow for opening and version checking side effects only.</p><p>Flags:</p><dl><dt>NSS_FINDER_VCHK</dt><dd>This flag tells scan to open, version check then close the library The backend source data will contain the appropriate version type.</dd><dt>NSS_FINDER_OPEN</dt><dd>This flag tells scan to open, and version check the library. The library will reamin open for future operations. The backend source data will contain the appropriate version type. The backend source data will point to the actual library and library timestamp data.</dd><dt>0</dt><dd>If the flag operation is 0, then the library is neither opened or version checked. All found backends are returned.</dd></dl><h3 id="H5.7.2A0A0A0lookup_ext"><span><span class="wikilink"><a href="#id28">5.7.2   lookup_ext</a></span></span></h3><pre>
+
+nss_status_t    (*lookup_ext)
+        (const char *db_name, const char *src_name,
+        const char *op_name, const char *key_name,
+        nssuint_t flags, nss_backend_api_t ***api_list,
+        uint32_t *count, void **finder_priv);
+
+</pre><p>As needed, the lookup_ext API performs a scan_ext on the library paths, dlopening the required backends (NSS_FINDER_OPEN) , and determining the versioning information of the nsswitch library. If the library has been previously opened by a scan or earlier lookup operation, the existing open will be shared. The function then performs the lookup function using the new API formats, and versioning control information.</p><dl><dt>db_name</dt><dd>NULL or a null terminated regular expression regcomp(3c) that is one of the database names such as "hosts" or "passwd" from the name service switch.</dd><dt>src_name</dt><dd>NULL or a null terminated regular expression regcomp(3c) that is one of the source names such as "files" or "nis" from the name service switch.</dd><dt>op_name</dt><dd>NULL or a null terminated regular expression regcomp(3c) that is one of the operations defined by the naming semantics (PSARC/2005/133 and later).</dd><dt>key_name</dt><dd>NULL or a null terminated regular expression regcomp(3c) that is one of the keys defined by the naming semantics (PSARC/2005/133 and later).</dd><dt>flags</dt><dd>0 or one of the following: NSS_FINDER_V1API, NSS_FINDER_EXTENSION</dd><dt>api_list</dt><dd>Array of APIs found during the lookup operation. This data should be treated as read only. The data must be freed by the free_ext API.</dd><dt>count</dt><dd>Number of found APIs.</dd><dt>finder_priv</dt><dd>Opaque internal backend data. this data must be freed by delete_ext</dd></dl><p>The lookup API returns the list of found APIs. The data is considered direct read-only pointers into the applicable backend library. The api_list and count may be passed back through repeated lookup_ext calls, if the caller wants to add non-duplicate new entries to the current list.</p><p>A NULL db_name is a wildcard allowing the lookup operation to report for any database. A NULL src_name is a wildcard allowing the lookup operation to report for any source.</p><p>If the api_list and count or finder_priv pointers are NULL, then the lookup fails with a EINVAL errno.</p><p>Flags:</p><dl><dt>NSS_FINDER_V1API</dt><dd>Perform a version 1 API lookup for a verion 1 constructor API.</dd><dt>NSS_FINDER_EXTENSION</dt><dd>Perform a version 2 extension lookup</dd><dt>0</dt><dd>Perform a version 2 API lookup</dd></dl><h3 id="H5.7.3A0A0A0query_ext"><span><span class="wikilink"><a href="#id29">5.7.3   query_ext</a></span></span></h3><pre>
+
+nss_status_t    (*query_ext)
+        (const char *db_name, const char *src_name,
+        const char *opt_name,
+        nssuint_t flags, nss_backend_opt_t ***opt_list,
+        uint32_t *count, void **finder_priv);
+
+</pre><p>As needed, the query_ext API performs a scan_ext on the library paths, dlopening the required backends (NSS_FINDER_OPEN) , and determining the versioning information of the nsswitch library. If the library has been previously opened by a scan or earlier lookup operation, the existing open will be shared. The function then performs the query function returning and nss2 options information.</p><dl><dt>db_name</dt><dd>NULL or a null terminated regular expression regcomp(3c) that is one of the database names such as "hosts" or "passwd" from the name service switch.</dd><dt>src_name</dt><dd>NULL or a null terminated regular expression regcomp(3c) that is one of the source names such as "files" or "nis" from the name service switch.</dd><dt>opt_name</dt><dd>NULL or a null terminated regular expression regcomp(3c) that is one of the option names defined by the naming semantics (PSARC/2007/694 and later).</dd><dt>flags</dt><dd>0 or one of the following: NSS_FINDER_V1API, NSS_FINDER_EXTENSION</dd><dt>opt_list</dt><dd>Array of options found during the lookup operation. This data should be treated as read only, unless stated otherwise. The data must be freed by the free_ext API.</dd><dt>count</dt><dd>Number of found options.</dd><dt>finder_priv</dt><dd>Opaque internal backend data. this data must be freed by delete_ext</dd></dl><p>The query API returns the list of found options. The data is considered direct read-only pointers into the applicable backend library. The opt_list and count may be passed back through repeated lookup_ext calls, if the caller wants to add non-duplicate new entries to the current list.</p><p>A NULL db_name is a wildcard allowing the lookup operation to report for any database. A NULL src_name is a wildcard allowing the lookup operation to report for any source.</p><p>If the api_list and count or finder_priv pointers are NULL, then the query fails with a EINVAL errno.</p><p>Only version 2 backends with versioning information are queried. All other backends are ignored.</p><p>Specific options may be enabled as read/write. See the versioning section on options for details.</p><p>Flags:</p><dl><dt>0</dt><dd>Perform a version 2 option query</dd></dl><h3 id="H5.7.4A0A0A0free_ext"><span><span class="wikilink"><a href="#id30">5.7.4   free_ext</a></span></span></h3><pre>
+
+void            (*free_ext)
+        (nss_backend_src_t ***be_list, uint32_t *be_cnt,
+        nss_backend_api_t ***api_list, uint32_t *api_cnt,
+        nss_backend_opt_t ***opt_list, uint32_t *opt_cnt,
+        void **finder_priv);
+
+</pre><p>This API frees one or more lists.</p><p>If be_list and be_cnt are non NULL, this API will free the be_list. be_cnt is assumed to the appropriate length.</p><p>If api_list and api_cnt are non NULL, this API will free the api_list. api_cnt is assumed to the appropriate length.</p><p>If opt_list and opt_cnt are non NULL, this API will free the opt_list. opt_cnt is assumed to the appropriate length.</p><p>finder_priv is currently ignored.</p><h3 id="H5.7.5A0A0A0delete_ext"><span><span class="wikilink"><a href="#id31">5.7.5   delete_ext</a></span></span></h3><pre>
+
+void            (*delete_ext)(void **finder_priv);
+
+</pre><p>This API frees the finder_priv data, and closes any unclosed backends. One the delete_ext API is called any copies or references to any internal nss backend details is invalid.</p><h2 id="H5.8A0A0A0NamingSemantics"><span><span class="wikilink"><a href="#id32">5.8   Naming Semantics</a></span></span></h2><p>This section defines the symbol name formats as defined by PSARC/2007/694 and previous.</p><h3 id="H5.8.1A0A0A0Versioningsymbols"><span><span class="wikilink"><a href="#id33">5.8.1   Versioning symbols</a></span></span></h3><p>Are of the form:</p><pre>
+
+_nss_[src_name]_version
+
+</pre><ul><li>Where src_name is the name of a backend source such as "files".</li></ul><h3 id="H5.8.2A0A0A0DLLibraryNames"><span><span class="wikilink"><a href="#id34">5.8.2   DL Library Names</a></span></span></h3><p>Are of the form:</p><pre>
+
+nss_[src_name].so.1
+
+</pre><ul><li>Where src_name is the name of a backend source such as "files".</li></ul><h3 id="H5.8.3A0A0A0Version1constructorsymbols"><span><span class="wikilink"><a href="#id35">5.8.3   Version 1 constructor symbols</a></span></span></h3><p>Are of the form:</p><pre>
+
+_nss_[src_name]_[db_name]_constr
+
+</pre><ul><li>Where src_name is the name of a backend source such as "files".</li><li>Where db_name is the name of a database such as "hosts".</li></ul><h3 id="H5.8.4A0A0A0Version2get2Fput2F...APIsymbols"><span><span class="wikilink"><a href="#id36">5.8.4   Version 2 get/put/... API symbols</a></span></span></h3><p>Are of the form:</p><pre>
+
+_nss_[op_name]_[src_name]_[db_name]_[key]
+
+</pre><ul><li>Where operation is one of : get, put, setent, getent, endent</li><li>Where src_name is the name of a backend source such as "files".</li><li>Where db_name is the name of a database such as "hosts".</li><li>Where key is one of the supported key types such as name, uid, gid, etc...</li></ul><h3 id="H5.8.5A0A0A0Version2optionsymbols"><span><span class="wikilink"><a href="#id37">5.8.5   Version 2 option symbols</a></span></span></h3><p>Are of the form:</p><pre>
+
+_nss_[src_name]_[db_name]_opt_[opt_name]
+
+</pre><ul><li>Where src_name is the name of a backend source such as "files".</li><li>Where db_name is the name of a database such as "hosts".</li><li>Where opt_name is a supported option in the backend</li></ul><h3 id="H5.8.6A0A0A0Version2extensionsymbols"><span><span class="wikilink"><a href="#id38">5.8.6   Version 2 extension symbols</a></span></span></h3><p>Are of the form:</p><pre>
+
+_nss_[src_name]_[ext_name]_[extop_name]
+
+</pre><ul><li>Where src_name is the name of a backend source such as "files".</li><li>Where ext_name is the name of an extension such as "config".</li><li>Where extopt_name is a supported extension API in the backend</li></ul>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:13<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by Doug Leavitt on 2010/04/06 18:23
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Project duckwater Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/BuildSCM">Build Status & Gate Information</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/Documentation">Documentation</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/Reconfiguration">Name Service Reconfiguration (SMF)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/TrackedBugs">Tracked Project Bugs/RFEs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/finder">Finder APIs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/legacyconffiles">Legacy Configuration Files Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/libnsconf">libnsconf &#45; Name services configuration library</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/ns%2Ddiscovery">Name Services Discovery</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/nsadm_man">nsadm(1m) Draft Man Page</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/nscfg_man">nscfg(1m) Draft Man Page</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/nssconfig">NSS config API draft</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/nssversion">PSARC/2008/035 nss versioning API draft</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/profiles_new">Name Service Profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/requirements">Requirements</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/alpha2">Alpha2 Release Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/demo">Alpha1 Release Notes &#45; Duckwater Demo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/downloads">Duckwater Download Page</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/duckwater_phase0">Duckwater Phase 0</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/codereview">Code&#45;review</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/new_connmgmt">New Connection Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/std_ldapaddent">Standalone ldapaddent(1M)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/std_ldapclient_man">Standalone libldapclient(1M)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/std_ldaplist">Standalone ldaplist(1)</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/hg_cheatsheet">Duckwater/Mercurial Cheat sheet</a></span></li>
+</ul>
+                    </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2011, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

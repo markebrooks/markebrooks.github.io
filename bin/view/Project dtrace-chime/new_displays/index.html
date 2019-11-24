@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Adding New Traces (Project dtrace-chime.new_displays) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+dtrace%2Dchime/new_displays" />
+                    <link rel="canonical" href="/bin/view/Project+dtrace%2Dchime/new_displays" />
+                            <meta name="document" content="Project dtrace-chime.new_displays"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Project dtrace-chime"/>
+    <meta name="page" content="new_displays"/>
+    <meta name="version" content="22.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Project+dtrace-chime/pages/new_displays"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Adding New Traces" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="Tom Erickson" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project dtrace-chime";
+XWiki.currentPage = "new_displays";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Project+dtrace%2Dchime/new_displays";
+window.docediturl = "/bin/edit/Project+dtrace%2Dchime/new_displays";
+window.docsaveurl = "/bin/save/Project+dtrace%2Dchime/new_displays";
+window.docgeturl = "/bin/get/Project+dtrace%2Dchime/new_displays";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Project_dtrace-chime viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bdtrace-chime%2Fnew_displays"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+dtrace%2Dchime/"><strong>Project dtrace-chime</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Project+dtrace%2Dchime" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+            </td>
+            <td id="logo-text" style="width: 1%;">
+                Solaris
+            </td>         
+            <td style="width: 98%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                  <span class='current'>Adding New Traces</span>
+          </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+dtrace%2Dchime/new_displays?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+dtrace%2Dchime/new_displays?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+dtrace%2Dchime/new_displays?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+dtrace%2Dchime/new_displays?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+dtrace%2Dchime/new_displays?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+dtrace%2Dchime/new_displays?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+dtrace%2Dchime/new_displays?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+dtrace%2Dchime/new_displays?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+dtrace%2Dchime/new_displays?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+dtrace%2Dchime/new_displays?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+dtrace%2Dchime/new_displays?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>Adding New Traces</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h2 id="HAddingNewChimeTraces"><span>Adding New Chime Traces</span></h2><h3 id="HContents"><span>Contents</span></h3><ul><li><span class="wikilink"><a href="#HOverview">Overview</a></span></li><li><span class="wikilink"><a href="#HAdaptinganExistingDTraceProgram">Adapting an Existing DTrace Program</a></span></li><li><span class="wikilink"><a href="#HNewTraceWizard">New Trace Wizard</a></span></li><li><span class="wikilink"><a href="#HGeneratingTracesOnTheCommandLine">Generating Traces On The Command Line</a></span></li><li><span class="wikilink"><a href="#HXMLProperties">XML Properties</a></span></li></ul><h2 id="HOverview"><span>Overview</span></h2><p>To add a new Chime trace, you need to describe the trace in XML as a set of properties recognized by Chime. Chime provides a <span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/wizard">wizard</a></span> as well as <span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/cmdgen">command line options</a></span> to generate the XML for you, and trace properties are documented <span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/xml">here</a></span> in case you need to edit the XML by hand. Once you add a <span class="xwikirenderingerror">Failed to execute the [code] macro</span><span class="xwikirenderingerrordescription hidden"><tt class="wikimodel-verbatim">org.xwiki.rendering.macro.MacroExecutionException: Failed to highlight content
+	at org.xwiki.rendering.internal.macro.code.CodeMacro.parseContent(CodeMacro.java:108)
+	at org.xwiki.rendering.internal.macro.code.CodeMacro.parseContent(CodeMacro.java:48)
+	at org.xwiki.rendering.macro.box.AbstractBoxMacro.execute(AbstractBoxMacro.java:125)
+	at org.xwiki.rendering.macro.box.AbstractBoxMacro.execute(AbstractBoxMacro.java:51)
+	at org.xwiki.rendering.internal.transformation.macro.MacroTransformation.transformOnce(MacroTransformation.java:184)
+	at org.xwiki.rendering.internal.transformation.macro.MacroTransformation.transform(MacroTransformation.java:129)
+	at org.xwiki.rendering.internal.transformation.DefaultTransformationManager.performTransformations(DefaultTransformationManager.java:72)
+	at com.xpn.xwiki.doc.XWikiDocument.performSyntaxConversion(XWikiDocument.java:7483)
+	at com.xpn.xwiki.doc.XWikiDocument.performSyntaxConversion(XWikiDocument.java:7432)
+	at com.xpn.xwiki.doc.XWikiDocument.getRenderedContent(XWikiDocument.java:835)
+	at com.xpn.xwiki.doc.XWikiDocument.getRenderedContent(XWikiDocument.java:783)
+	at com.xpn.xwiki.doc.XWikiDocument.getRenderedContent(XWikiDocument.java:878)
+	at com.xpn.xwiki.api.Document.getRenderedContent(Document.java:545)
+	at sun.reflect.GeneratedMethodAccessor325.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.velocity.util.introspection.UberspectImpl$VelMethodImpl.doInvoke(UberspectImpl.java:389)
+	at org.apache.velocity.util.introspection.UberspectImpl$VelMethodImpl.invoke(UberspectImpl.java:378)
+	at org.apache.velocity.runtime.parser.node.ASTMethod.execute(ASTMethod.java:270)
+	at org.apache.velocity.runtime.parser.node.ASTReference.execute(ASTReference.java:252)
+	at org.apache.velocity.runtime.parser.node.ASTReference.value(ASTReference.java:493)
+	at org.apache.velocity.runtime.parser.node.ASTExpression.value(ASTExpression.java:71)
+	at org.apache.velocity.runtime.parser.node.ASTSetDirective.render(ASTSetDirective.java:142)
+	at org.apache.velocity.runtime.parser.node.ASTBlock.render(ASTBlock.java:72)
+	at org.apache.velocity.runtime.parser.node.SimpleNode.render(SimpleNode.java:336)
+	at org.apache.velocity.runtime.parser.node.ASTIfStatement.render(ASTIfStatement.java:106)
+	at org.apache.velocity.runtime.parser.node.SimpleNode.render(SimpleNode.java:336)
+	at org.xwiki.velocity.internal.DefaultVelocityEngine.evaluate(DefaultVelocityEngine.java:196)
+	at org.xwiki.velocity.internal.DefaultVelocityEngine.evaluate(DefaultVelocityEngine.java:161)
+	at com.xpn.xwiki.render.XWikiVelocityRenderer.evaluate(XWikiVelocityRenderer.java:116)
+	at com.xpn.xwiki.XWiki.evaluateTemplate(XWiki.java:1895)
+	at com.xpn.xwiki.XWiki.parseTemplate(XWiki.java:1833)
+	at com.xpn.xwiki.api.XWiki.parseTemplate(XWiki.java:860)
+	at sun.reflect.GeneratedMethodAccessor137.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.velocity.util.introspection.UberspectImpl$VelMethodImpl.doInvoke(UberspectImpl.java:389)
+	at org.apache.velocity.util.introspection.UberspectImpl$VelMethodImpl.invoke(UberspectImpl.java:378)
+	at org.apache.velocity.runtime.parser.node.ASTMethod.execute(ASTMethod.java:270)
+	at org.apache.velocity.runtime.parser.node.ASTReference.execute(ASTReference.java:252)
+	at org.apache.velocity.runtime.parser.node.ASTReference.render(ASTReference.java:332)
+	at org.apache.velocity.runtime.parser.node.ASTBlock.render(ASTBlock.java:72)
+	at org.apache.velocity.runtime.directive.VelocimacroProxy.render(VelocimacroProxy.java:212)
+	at org.apache.velocity.runtime.directive.RuntimeMacro.render(RuntimeMacro.java:247)
+	at org.apache.velocity.runtime.parser.node.ASTDirective.render(ASTDirective.java:175)
+	at org.apache.velocity.runtime.parser.node.ASTBlock.render(ASTBlock.java:72)
+	at org.apache.velocity.runtime.parser.node.ASTIfStatement.render(ASTIfStatement.java:87)
+	at org.apache.velocity.runtime.parser.node.ASTBlock.render(ASTBlock.java:72)
+	at org.apache.velocity.runtime.parser.node.SimpleNode.render(SimpleNode.java:336)
+	at org.apache.velocity.runtime.parser.node.ASTIfStatement.render(ASTIfStatement.java:106)
+	at org.apache.velocity.runtime.parser.node.SimpleNode.render(SimpleNode.java:336)
+	at org.xwiki.velocity.internal.DefaultVelocityEngine.evaluate(DefaultVelocityEngine.java:196)
+	at org.xwiki.velocity.internal.DefaultVelocityEngine.evaluate(DefaultVelocityEngine.java:161)
+	at com.xpn.xwiki.render.XWikiVelocityRenderer.evaluate(XWikiVelocityRenderer.java:116)
+	at com.xpn.xwiki.XWiki.parseTemplate(XWiki.java:1943)
+	at com.xpn.xwiki.XWiki.evaluateTemplate(XWiki.java:1856)
+	at com.xpn.xwiki.web.Utils.parseTemplate(Utils.java:154)
+	at com.xpn.xwiki.web.XWikiAction.execute(XWikiAction.java:226)
+	at com.xpn.xwiki.web.XWikiAction.execute(XWikiAction.java:117)
+	at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:431)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:236)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1196)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:414)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.xpn.xwiki.web.ActionFilter.doFilter(ActionFilter.java:129)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.xpn.xwiki.wysiwyg.server.filter.ConversionFilter.doFilter(ConversionFilter.java:152)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.xwiki.container.servlet.filters.internal.SavedRequestRestorerFilter.doFilter(SavedRequestRestorerFilter.java:218)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.xwiki.container.servlet.filters.internal.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:112)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:433)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:568)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:286)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:845)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:583)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:354)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: Traceback (most recent call last):
+  File "&lt;string&gt;", line 3, in &lt;module&gt;
+  File "&lt;string&gt;", line 3, in &lt;module&gt;
+  File "__pyclasspath__/pygments/lexers/__init__.py", line 199, in guess_lexer
+  File "__pyclasspath__/pygments/util.py", line 116, in text_analyse
+TypeError: float() argument must be a string or a number
+
+	at org.python.core.PyException.fillInStackTrace(PyException.java:70)
+	at java.lang.Throwable.&lt;init&gt;(Throwable.java:181)
+	at java.lang.Exception.&lt;init&gt;(Exception.java:29)
+	at java.lang.RuntimeException.&lt;init&gt;(RuntimeException.java:32)
+	at org.python.core.PyException.&lt;init&gt;(PyException.java:46)
+	at org.python.core.PyException.&lt;init&gt;(PyException.java:43)
+	at org.python.core.PyException.&lt;init&gt;(PyException.java:61)
+	at org.python.core.Py.TypeError(Py.java:221)
+	at org.python.core.PyFloat.float_new(PyFloat.java:69)
+	at org.python.core.PyFloat$exposed___new__.new_impl(Unknown Source)
+	at org.python.core.PyType.invokeNew(PyType.java:466)
+	at org.python.core.PyType.type___call__(PyType.java:1558)
+	at org.python.core.PyType.__call__(PyType.java:1548)
+	at org.python.core.PyObject.__call__(PyObject.java:387)
+	at org.python.core.PyObject.__call__(PyObject.java:391)
+	at pygments.util$py.text_analyse$9(__pyclasspath__/pygments/util.py:116)
+	at pygments.util$py.call_function(__pyclasspath__/pygments/util.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:165)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:134)
+	at org.python.core.PyFunction.__call__(PyFunction.java:317)
+	at pygments.lexers$py.guess_lexer$10(__pyclasspath__/pygments/lexers/__init__.py:206)
+	at pygments.lexers$py.call_function(__pyclasspath__/pygments/lexers/__init__.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:165)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:301)
+	at org.python.core.PyFunction.function___call__(PyFunction.java:376)
+	at org.python.core.PyFunction.__call__(PyFunction.java:371)
+	at org.python.pycode._pyx2364204.f$0(&lt;string&gt;:5)
+	at org.python.pycode._pyx2364204.call_function(&lt;string&gt;)
+	at org.python.core.PyTableCode.call(PyTableCode.java:165)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1261)
+	at org.python.core.Py.exec(Py.java:1305)
+	at org.python.util.PythonInterpreter.exec(PythonInterpreter.java:206)
+	at org.xwiki.rendering.internal.parser.pygments.PygmentsParser.getLexer(PygmentsParser.java:267)
+	at org.xwiki.rendering.internal.parser.pygments.PygmentsParser.highlight(PygmentsParser.java:222)
+	at org.xwiki.rendering.internal.parser.pygments.PygmentsParser.highlight(PygmentsParser.java:193)
+	at org.xwiki.rendering.internal.macro.code.CodeMacro.highlight(CodeMacro.java:146)
+	at org.xwiki.rendering.internal.macro.code.CodeMacro.parseContent(CodeMacro.java:105)
+	... 92 more
+</tt></span> description to <span class="box code"><span style="color: #666666; ">/</span>opt<span style="color: #666666; ">/</span>OSOL0chime<span style="color: #666666; ">/</span>displays</span>, Chime will pick it up automatically and add an entry to the <strong>Traces</strong> list in the main window. Subdirectories under the <span class="box code">displays</span> directory are also loadable from the Chime menu and the <strong>Categories</strong> pulldown, so you can group traces in your own categories and subcategories. &nbsp;A special file, <span class="box code">description.xml</span> may be included in any subdirectory to specify the directory properties, such as a name for the group of traces included in that subdirectory (other than the directory name, which is used by default), text to describe the group of traces, a mnemonic for the menu item that accesses the traces, and the order in which the traces should be listed (if unspecified, traces are listed alphabetically by title).&nbsp;&nbsp;</p><p>Chime comes installed with a set of traces that you are free to change (although you may want to save the originals in a separate directory).&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace%2Dchime/WebHome/chime.png" alt="Chime main window"/></p><p>Alternatively, you can create your traces in any directory specified on the command line with the <span class="box code"><span style="color: #666666; ">-</span>d</span> option, and Chime will treat the specified directory as if it were the <span class="box code">displays</span> directory.&nbsp;&nbsp;</p><p>To see trace creation in action, you can watch this <span class="wikiexternallink"><a href="http://frsun.downloads.edgesuite.net/sun/07C00941">screencast</a></span> (22 min 28 sec) that introduces Chime and demonstrates how to use it.&nbsp;&nbsp;</p><p>For a good introduction to DTrace, I found Bryan Cantrill's <span class="wikiexternallink"><a href="http://blogs.sun.com/bmc/entry/demo_ing_dtrace">Demo'ing DTrace</a></span> blog very helpful, and good for an occasional re-read. &nbsp;<br/>&nbsp;&nbsp;</p><h2 id="HAdaptinganExistingDTraceProgram"><span>Adapting an Existing DTrace Program</span></h2><p>There are few important observations to make about your DTrace program:</p><ol><li>Since Chime is a tool for visualizing DTrace aggregations, it follows that your program must include at least one aggregation. &nbsp;See the <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/817-6223/6mlkidlh7?a=view">Aggregations</a></span> chapter of the <em>Solaris Dynamic Tracing Guide</em> for details about DTrace aggregations.</li><li>If you use the <strong>printa()</strong> action on an aggregation, that aggregation will thereafter be <strong>unavailable to Chime</strong>. &nbsp;Typically, <span class="box code">printa()</span> is found in a <span class="box code">profile</span> probe such as <span class="box code">tick<span style="color: #666666; ">-</span>1<span style="color: #008000; ">sec</span></span>. &nbsp;You should delete these <span class="box code">tick</span> clauses from your program. &nbsp;Instead of printing your aggregations, you are now relying on Chime to display them.</li><li>You can have multiple aggregations in your program. &nbsp;However, Chime assumes that all aggregations in the same program <strong>share the same tuple</strong> (aggregation key), or at least almost the same: you can specify two different tuples, A and B, such that B starts with A. For example: @[execname] and @[execname, ppid]. &nbsp;&nbsp;If two aggregations in your program have completely different tuples, the results in Chime are currently undefined.&nbsp;</li></ol><p>For examples of scripts from the <span class="wikiexternallink"><a href="http://www.brendangregg.com/dtrace.html#DTraceToolkit">DTraceToolkit</a></span>, see the following blog entries:&nbsp;&nbsp;</p><p><span class="wikiexternallink"><a href="http://blogs.sun.com/tomee/entry/chime_and_the_dtracetoolkit">Chime and the DTraceToolkit</a></span> &nbsp;<br/><span class="wikiexternallink"><a href="http://blogs.sun.com/tomee/entry/chime_and_the_dtracetoolkit_part">Chime and the DTraceToolkit, Part 2</a></span>&nbsp;&nbsp;</p><h2 id="HNewTraceWizard"><span>New Trace Wizard</span></h2><p>Chime provides a wizard to create or edit trace descriptions. You can access the wizard from the menu (<strong>File \| New Trace ...</strong>), the <img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/new_displays/New16.gif" alt="New Trace Wizard Toolbar Button"/>&nbsp;toolbar button, or by using the <span class="box code"><span style="color: #666666; ">-</span>W</span> command line option.&nbsp;&nbsp;</p><p>See the <span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/wizard">New Trace Wizard</a></span> page for details, including an example walk-through.&nbsp;&nbsp;</p><h2 id="HGeneratingTracesOnTheCommandLine"><span>Generating Traces On The Command Line</span></h2><p>Chime will generate traces dynamically on the command line if you specify a program that meets the criteria listed above. The program may be specified as a string using the <span class="box code"><span style="color: #666666; ">-</span>n</span> option or as a file using the <span class="box code"><span style="color: #666666; ">-</span>s</span> option, just as with the <span class="box code">dtrace(1M)</span> command. You can even specify DTrace options for the trace using <span class="box code"><span style="color: #666666; ">-</span>x name=value</span> and <span class="box code"><span style="color: #666666; ">-</span>Z</span>, just as you would with <span class="box code">dtrace(1M)</span>. The column headers will be generated automatically from the aggregation key and the aggregation names in your program, although you can specify your own column headers using the <span class="box code"><span style="color: #666666; ">-</span>H</span> option followed by a comma-separated list in quotes. The <span class="box code"><span style="color: #666666; ">-</span>T</span> option specifies a title to appear in the display's title bar.&nbsp;&nbsp;</p><p>See the <span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/cmdgen">Command Line</a></span> page for details.&nbsp;&nbsp;</p><h2 id="HXMLProperties"><span>XML Properties</span></h2><p>You can also specify trace properties by hand in the display's <span class="xwikirenderingerror">Failed to execute the [code] macro</span><span class="xwikirenderingerrordescription hidden"><tt class="wikimodel-verbatim">org.xwiki.rendering.macro.MacroExecutionException: Failed to highlight content
+	at org.xwiki.rendering.internal.macro.code.CodeMacro.parseContent(CodeMacro.java:108)
+	at org.xwiki.rendering.internal.macro.code.CodeMacro.parseContent(CodeMacro.java:48)
+	at org.xwiki.rendering.macro.box.AbstractBoxMacro.execute(AbstractBoxMacro.java:125)
+	at org.xwiki.rendering.macro.box.AbstractBoxMacro.execute(AbstractBoxMacro.java:51)
+	at org.xwiki.rendering.internal.transformation.macro.MacroTransformation.transformOnce(MacroTransformation.java:184)
+	at org.xwiki.rendering.internal.transformation.macro.MacroTransformation.transform(MacroTransformation.java:129)
+	at org.xwiki.rendering.internal.transformation.DefaultTransformationManager.performTransformations(DefaultTransformationManager.java:72)
+	at com.xpn.xwiki.doc.XWikiDocument.performSyntaxConversion(XWikiDocument.java:7483)
+	at com.xpn.xwiki.doc.XWikiDocument.performSyntaxConversion(XWikiDocument.java:7432)
+	at com.xpn.xwiki.doc.XWikiDocument.getRenderedContent(XWikiDocument.java:835)
+	at com.xpn.xwiki.doc.XWikiDocument.getRenderedContent(XWikiDocument.java:783)
+	at com.xpn.xwiki.doc.XWikiDocument.getRenderedContent(XWikiDocument.java:878)
+	at com.xpn.xwiki.api.Document.getRenderedContent(Document.java:545)
+	at sun.reflect.GeneratedMethodAccessor325.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.velocity.util.introspection.UberspectImpl$VelMethodImpl.doInvoke(UberspectImpl.java:389)
+	at org.apache.velocity.util.introspection.UberspectImpl$VelMethodImpl.invoke(UberspectImpl.java:378)
+	at org.apache.velocity.runtime.parser.node.ASTMethod.execute(ASTMethod.java:270)
+	at org.apache.velocity.runtime.parser.node.ASTReference.execute(ASTReference.java:252)
+	at org.apache.velocity.runtime.parser.node.ASTReference.value(ASTReference.java:493)
+	at org.apache.velocity.runtime.parser.node.ASTExpression.value(ASTExpression.java:71)
+	at org.apache.velocity.runtime.parser.node.ASTSetDirective.render(ASTSetDirective.java:142)
+	at org.apache.velocity.runtime.parser.node.ASTBlock.render(ASTBlock.java:72)
+	at org.apache.velocity.runtime.parser.node.SimpleNode.render(SimpleNode.java:336)
+	at org.apache.velocity.runtime.parser.node.ASTIfStatement.render(ASTIfStatement.java:106)
+	at org.apache.velocity.runtime.parser.node.SimpleNode.render(SimpleNode.java:336)
+	at org.xwiki.velocity.internal.DefaultVelocityEngine.evaluate(DefaultVelocityEngine.java:196)
+	at org.xwiki.velocity.internal.DefaultVelocityEngine.evaluate(DefaultVelocityEngine.java:161)
+	at com.xpn.xwiki.render.XWikiVelocityRenderer.evaluate(XWikiVelocityRenderer.java:116)
+	at com.xpn.xwiki.XWiki.evaluateTemplate(XWiki.java:1895)
+	at com.xpn.xwiki.XWiki.parseTemplate(XWiki.java:1833)
+	at com.xpn.xwiki.api.XWiki.parseTemplate(XWiki.java:860)
+	at sun.reflect.GeneratedMethodAccessor137.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.velocity.util.introspection.UberspectImpl$VelMethodImpl.doInvoke(UberspectImpl.java:389)
+	at org.apache.velocity.util.introspection.UberspectImpl$VelMethodImpl.invoke(UberspectImpl.java:378)
+	at org.apache.velocity.runtime.parser.node.ASTMethod.execute(ASTMethod.java:270)
+	at org.apache.velocity.runtime.parser.node.ASTReference.execute(ASTReference.java:252)
+	at org.apache.velocity.runtime.parser.node.ASTReference.render(ASTReference.java:332)
+	at org.apache.velocity.runtime.parser.node.ASTBlock.render(ASTBlock.java:72)
+	at org.apache.velocity.runtime.directive.VelocimacroProxy.render(VelocimacroProxy.java:212)
+	at org.apache.velocity.runtime.directive.RuntimeMacro.render(RuntimeMacro.java:247)
+	at org.apache.velocity.runtime.parser.node.ASTDirective.render(ASTDirective.java:175)
+	at org.apache.velocity.runtime.parser.node.ASTBlock.render(ASTBlock.java:72)
+	at org.apache.velocity.runtime.parser.node.ASTIfStatement.render(ASTIfStatement.java:87)
+	at org.apache.velocity.runtime.parser.node.ASTBlock.render(ASTBlock.java:72)
+	at org.apache.velocity.runtime.parser.node.SimpleNode.render(SimpleNode.java:336)
+	at org.apache.velocity.runtime.parser.node.ASTIfStatement.render(ASTIfStatement.java:106)
+	at org.apache.velocity.runtime.parser.node.SimpleNode.render(SimpleNode.java:336)
+	at org.xwiki.velocity.internal.DefaultVelocityEngine.evaluate(DefaultVelocityEngine.java:196)
+	at org.xwiki.velocity.internal.DefaultVelocityEngine.evaluate(DefaultVelocityEngine.java:161)
+	at com.xpn.xwiki.render.XWikiVelocityRenderer.evaluate(XWikiVelocityRenderer.java:116)
+	at com.xpn.xwiki.XWiki.parseTemplate(XWiki.java:1943)
+	at com.xpn.xwiki.XWiki.evaluateTemplate(XWiki.java:1856)
+	at com.xpn.xwiki.web.Utils.parseTemplate(Utils.java:154)
+	at com.xpn.xwiki.web.XWikiAction.execute(XWikiAction.java:226)
+	at com.xpn.xwiki.web.XWikiAction.execute(XWikiAction.java:117)
+	at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:431)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:236)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1196)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:414)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.xpn.xwiki.web.ActionFilter.doFilter(ActionFilter.java:129)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.xpn.xwiki.wysiwyg.server.filter.ConversionFilter.doFilter(ConversionFilter.java:152)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.xwiki.container.servlet.filters.internal.SavedRequestRestorerFilter.doFilter(SavedRequestRestorerFilter.java:218)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.xwiki.container.servlet.filters.internal.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:112)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:433)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:568)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:286)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:845)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:583)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:354)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: Traceback (most recent call last):
+  File "&lt;string&gt;", line 3, in &lt;module&gt;
+  File "&lt;string&gt;", line 3, in &lt;module&gt;
+  File "__pyclasspath__/pygments/lexers/__init__.py", line 199, in guess_lexer
+  File "__pyclasspath__/pygments/util.py", line 116, in text_analyse
+TypeError: float() argument must be a string or a number
+
+	at org.python.core.PyException.fillInStackTrace(PyException.java:70)
+	at java.lang.Throwable.&lt;init&gt;(Throwable.java:181)
+	at java.lang.Exception.&lt;init&gt;(Exception.java:29)
+	at java.lang.RuntimeException.&lt;init&gt;(RuntimeException.java:32)
+	at org.python.core.PyException.&lt;init&gt;(PyException.java:46)
+	at org.python.core.PyException.&lt;init&gt;(PyException.java:43)
+	at org.python.core.PyException.&lt;init&gt;(PyException.java:61)
+	at org.python.core.Py.TypeError(Py.java:221)
+	at org.python.core.PyFloat.float_new(PyFloat.java:69)
+	at org.python.core.PyFloat$exposed___new__.new_impl(Unknown Source)
+	at org.python.core.PyType.invokeNew(PyType.java:466)
+	at org.python.core.PyType.type___call__(PyType.java:1558)
+	at org.python.core.PyType.__call__(PyType.java:1548)
+	at org.python.core.PyObject.__call__(PyObject.java:387)
+	at org.python.core.PyObject.__call__(PyObject.java:391)
+	at pygments.util$py.text_analyse$9(__pyclasspath__/pygments/util.py:116)
+	at pygments.util$py.call_function(__pyclasspath__/pygments/util.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:165)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:134)
+	at org.python.core.PyFunction.__call__(PyFunction.java:317)
+	at pygments.lexers$py.guess_lexer$10(__pyclasspath__/pygments/lexers/__init__.py:206)
+	at pygments.lexers$py.call_function(__pyclasspath__/pygments/lexers/__init__.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:165)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:301)
+	at org.python.core.PyFunction.function___call__(PyFunction.java:376)
+	at org.python.core.PyFunction.__call__(PyFunction.java:371)
+	at org.python.pycode._pyx2364331.f$0(&lt;string&gt;:5)
+	at org.python.pycode._pyx2364331.call_function(&lt;string&gt;)
+	at org.python.core.PyTableCode.call(PyTableCode.java:165)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1261)
+	at org.python.core.Py.exec(Py.java:1305)
+	at org.python.util.PythonInterpreter.exec(PythonInterpreter.java:206)
+	at org.xwiki.rendering.internal.parser.pygments.PygmentsParser.getLexer(PygmentsParser.java:267)
+	at org.xwiki.rendering.internal.parser.pygments.PygmentsParser.highlight(PygmentsParser.java:222)
+	at org.xwiki.rendering.internal.parser.pygments.PygmentsParser.highlight(PygmentsParser.java:193)
+	at org.xwiki.rendering.internal.macro.code.CodeMacro.highlight(CodeMacro.java:146)
+	at org.xwiki.rendering.internal.macro.code.CodeMacro.parseContent(CodeMacro.java:105)
+	... 92 more
+</tt></span> description file. Here's a <span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/xml#HASimpleDisplayExample">simple example</a></span> to get you started; you can find other (less simple) examples installed in the <span class="box code"><span style="color: #666666; ">/</span>opt<span style="color: #666666; ">/</span>OSOL0chime<span style="color: #666666; ">/</span>displays</span> directory.</p><p>See the <span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/xml">XML Properties</a></span> page for a complete description of each available property.</p><div class="wikimodel-emptyline"></div><p><span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/view/Project+dtrace-chime/WebHome">Back to Chime</a></span> | <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/view/Project+dtrace-chime/new_displays">Back to top</a></span></p>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:13<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by Tom Erickson on 2011/01/05 01:05
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Project dtrace-chime Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/articles">Articles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/changelog">Change Log</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/displays">Traces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/install">Installation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/java_dtrace_api">Java DTrace API</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/jdtrace">jdtrace Example</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/javaone2007_screens">JavaOne 2007 Screenshots</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/new_displays">Adding New Traces</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/cmdgen">Command Line</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/wizard">New Trace Wizard</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/xml">XML Properties</a></span></li>
+</ul></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2012, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

@@ -1,0 +1,1522 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Solaris10-Branded Zone Developer Guide (Community Group zones.s10brand_dev_guide) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Community+Group+zones/s10brand_dev_guide" />
+                    <link rel="canonical" href="/bin/view/Community+Group+zones/s10brand_dev_guide" />
+                            <meta name="document" content="Community Group zones.s10brand_dev_guide"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Community Group zones"/>
+    <meta name="page" content="s10brand_dev_guide"/>
+    <meta name="version" content="16.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Community+Group+zones/pages/s10brand_dev_guide"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Solaris10-Branded Zone Developer Guide" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="flippedb" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/fullScreen.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Community Group zones";
+XWiki.currentPage = "s10brand_dev_guide";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Community+Group+zones/s10brand_dev_guide";
+window.docediturl = "/bin/edit/Community+Group+zones/s10brand_dev_guide";
+window.docsaveurl = "/bin/save/Community+Group+zones/s10brand_dev_guide";
+window.docgeturl = "/bin/get/Community+Group+zones/s10brand_dev_guide";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/viewers/code.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/fullScreen.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Community_Group_zones viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FCommunity%2BGroup%2Bzones%2Fs10brand_dev_guide%3Fviewer%3Dcode%26%2338%3Blanguage%3Den"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+zones/"><strong>Community Group zones</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Community+Group+zones" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+            </td>
+            <td id="logo-text" style="width: 1%;">
+                Solaris
+            </td>         
+            <td style="width: 98%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                  <span class='current'>Solaris10-Branded Zone Developer Guide</span>
+          </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Community+Group+zones/s10brand_dev_guide?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+        <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Community+Group+zones/s10brand_dev_guide?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+zones/s10brand_dev_guide?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+zones/s10brand_dev_guide?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+zones/s10brand_dev_guide?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Community+Group+zones/s10brand_dev_guide?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+zones/s10brand_dev_guide?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+zones/s10brand_dev_guide?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+zones/s10brand_dev_guide?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+zones/s10brand_dev_guide?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Community+Group+zones/s10brand_dev_guide?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+<div id="document-title"><h1>Wiki source code of <a href="/bin/view/Community+Group+zones/s10brand_dev_guide">Solaris10-Branded Zone Developer Guide</a></h1></div>
+                <div id="document-info">
+    <div>
+                      <span id="contentshortcut"><a href="/bin/view/Community+Group+zones/s10brand_dev_guide?viewer=content">Content</a></span>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+
+
+
+
+
+
+<div>
+  <a href="/bin/view/Community+Group+zones/s10brand_dev_guide?viewer=code&amp;showlinenumbers=0&amp;language=en" id="toggleLineNumbers">Hide line numbers</a>
+                                        <textarea readonly="readonly" class="wiki-code" rows="25" cols="80">
+   1: = //Solaris10//-Branded Zone Developer Guide =
+   2: 
+   3: This guide familiarizes readers with the //solaris10// zone brand, which allows OpenSolaris administrators to create [[Solaris 10 Containers&gt;&gt;Project s10brand.WebHome]]. The guide explains how the brand affects Solaris development and how developers can enhance the brand so that it can cope with changes to Solaris 10 and OpenSolaris. This document is aimed at all Solaris kernel developers whose work might affect the //solaris10// brand's functionality. (The [[introduction&gt;&gt;#HIntroduction]] and the section entitled &quot;[[What kinds of changes to OpenSolaris and Solaris 10 might break the //solaris10// brand?&gt;&gt;#HWhatkindsofchangestoOpenSolarisandSolaris10canbreakthesolaris10brand]]&quot; delineate the kinds of projects and fixes that are impacted.)
+   4: 
+   5: Note that this is a living document: The guide changes as the Solaris 10 Containers development team receives feedback from readers. Please send questions, comments, suggestions, and corrections to [[zones-discuss@opensolaris.org&gt;&gt;mailto:zones-discuss@opensolaris.org]]. Please ensure that your emails' subject lines start with &quot;S10C Dev Guide&quot; if the emails specifically address this guide.
+   6: 
+   7: = Table of Contents =
+   8: 
+   9: {{toc numbered=&quot;true&quot;/}}
+  10: 
+  11: == Introduction ==
+  12: 
+  13: This section introduces //solaris10//-branded zones by providing brief overviews of zones, branded zones, what //solaris10//-branded zones do, and the reasons why Solaris kernel developers should take //solaris10//-branded zones into consideration when fixing bugs or adding new features to Solaris 10 or OpenSolaris.
+  14: 
+  15: === What are zones? ===
+  16: 
+  17: //Solaris Zones// (also known as //Solaris Containers// or simply //zones//) are lightweight virtual machines that isolate user-level workloads on Solaris systems. They differ markedly from virtual machines created with other virtualization technologies such as [[Xen&gt;&gt;Community Group xen.WebHome]], [[VirtualBox&gt;&gt;http://www.virtualbox.org]], and [[Logical Domains (LDoms)&gt;&gt;Community Group ldoms.WebHome]] in that zones do not rely on hypervisors to provide abstracted hardware resources and isolate themselves from the native host system and each other. Zones are built into the Solaris kernel and many of the kernel's subsystems are zone-aware (i.e., they associate their abstractions with zones and base decisions in part on such associations). Consequently, processes executing within zones experience little overhead (a high estimate is 5% of total execution time) and thus come close to achieving bare-metal performance. Furthermore, the lack of overhead makes zones highly scalable: Even low-end consumer desktops are capable of running dozens of zones at a time. The noticeable lack of execution overhead experienced by zoned processes, the relative ease of zone creation and management, and the maturity of zones technology make zones one of the most popular virtualization technologies (if not //the// most popular virtualization technology) supported on Solaris 10 and OpenSolaris.
+  18: 
+  19: However, zones have a few well-known, fundamental limitations. Zones cannot host processes running programs compiled for non-native architectures because zones lack hypervisors. Furthermore, not all Solaris kernel subsystems are zone-aware, which limits the kinds of resources that can be fully isolated and supported within zones. Finally, ordinary zones cannot host user environments from non-native operating systems (OSes). The last limitation is largely eliminated through the use of //branded zones//, which will be discussed shortly.
+  20: 
+  21: You can learn more about zones by visiting the [[OpenSolaris.org Zones Community Page&gt;&gt;Community Group zones.WebHome]], the [[Solaris Containers BigAdmin Page&gt;&gt;http://www.sun.com/bigadmin/content/zones/index.jsp]], or the [[zones chapter of the //System Administration Guide// on docs.sun.com&gt;&gt;http://docs.sun.com/app/docs/doc/817-1592/zone]] (Solaris 10 only).
+  22: 
+  23: [[Back to the Table of Contents&gt;&gt;#HTableofContents]]
+  24: 
+  25: === What are branded zones? ===
+  26: 
+  27: //Branded zones// are zones that are capable of emulating user environments from OSes other than Solaris 10 and OpenSolaris. Branded zones achieve this by emulating the non-native OSes' system calls (syscalls). Syscalls constitute the sole interface between user environments and kernels; therefore, if a branded zone emulates syscalls such that they have the same side effects as the syscalls of a particular non-native OS (e.g., Linux 2.4), then processes running within the zone will act as though they are running on the targeted non-native OS. A branded zone's //brand// is the collection of support libraries, support hooks, and auxiliary data files that make emulating the zone's targeted OS possible. Brands are named after the OSes whose syscalls they emulate. For example, there are //solaris8// and //solaris9// brands on Solaris 10 that allow Solaris 10 zones to host Solaris 8 and Solaris 9 user environments, respectively. Zones that host native Solaris user environments (i.e., zones that lack syscall emulation) are //native//-branded zones (often simply called //native zones//). (OpenSolaris' native zones currently use the //ipkg// brand.)
+  28: 
+  29: Maintaining brands can be incredibly difficult. Changes in Solaris syscalls' semantics (i.e., their parameters and side effects) can break emulation provided by brands if the brands' support libraries are not updated to account for the changes. Similarly, changes in non-native OSes' syscalls' semantics can break the emulation provided by brands. Maintaining a brand is especially difficult when the user-kernel interfaces exported by both the native Solaris kernel and the hosted non-native OS are continually in flux (as would be the case if we were to maintain a brand for the latest development releases of Linux 2.6 on OpenSolaris).
+  30: 
+  31: You can learn more about branded zones and the framework that makes them possible by visiting the [[OpenSolaris.org BrandZ Community Page&gt;&gt;Community Group brandz.WebHome]], which describes the brand framework and the //lx// [Linux 2.4] brand on OpenSolaris, or the [[Solaris Containers BigAdmin Page&gt;&gt;http://www.sun.com/bigadmin/content/zones/index.jsp]].
+  32: 
+  33: [[Back to the Table of Contents&gt;&gt;#HTableofContents]]
+  34: 
+  35: === What are //solaris10//-branded zones? ===
+  36: 
+  37: //solaris10//-branded zones host Solaris 10 (S10) user environments inside zones on OpenSolaris. They are meant to help maintainers of Solaris 10 systems consolidate their production environments onto systems running OpenSolaris. Workloads running within //solaris10//-branded zones can take advantage of the performance improvements made to the OpenSolaris kernel and utilize some of the innovative technologies available only on OpenSolaris (e.g., Crossbow VNICs). Only Solaris 10u8 and beyond are supported and tested in such zones.
+  38: 
+  39: Ultimately, the purpose of //solaris10//-branded zones is to provide the proper emulation for Solaris 10 processes running inside the zones so that they work correctly with the OpenSolaris kernel. This is summarized in the following principle, which should serve as a guide for enhancing and maintaining //solaris10//-branded zones: **Any script or program that works in native Solaris 10 zones should also work in //solaris10//-branded zones.**
+  40: 
+  41: You can learn more about the //solaris10// brand and track the project's progress by visiting the [[OpenSolaris.org //solaris10// Brand Project Page&gt;&gt;Project s10brand.WebHome]].
+  42: 
+  43: [[Back to the Table of Contents&gt;&gt;#HTableofContents]]
+  44: 
+  45: === Why should I care about //solaris10//-branded zones? ===
+  46: 
+  47: Because a //solaris10//-branded zone is running Solaris 10 user-level binaries on top of the OpenSolaris kernel, mismatches in the user-kernel interfaces provided by both systems are possible. This does not happen within normal OpenSolaris zones (i.e., native OpenSolaris zones) because such zones run OpenSolaris user-level binaries, which are built to run in sync with the OpenSolaris kernel. If you make changes to either OpenSolaris or Solaris 10 that impact their user-kernel boundaries, then you will have to take //solaris10//-branded zones into consideration. If your changes break the emulation provided by //solaris10//-branded zones, then you will have to enhance the brand's emulation layer so that it can cope with such changes. OpenSolaris community contribution sponsors should ensure that ON contributions will not break the //solaris10// brand.
+  48: 
+  49: [[Back to the Table of Contents&gt;&gt;#HTableofContents]]
+  50: 
+  51: === Does the Solaris ABI take care of this for me? ===
+  52: 
+  53: No. The ABI deals with published, well-documented interfaces such as those provided by libc and documented in the [[section 2 man pages&gt;&gt;http://docs.sun.com/app/docs/doc/816-5167]]. The //solaris10// brand must deal with undocumented, unstable interfaces such as how libc traps into the kernel. Normally changes to such interfaces are hidden within libraries such as libc in a compatible way so that applications don't notice them. However, //solaris10//-branded zones run the Solaris 10 version of libc (as well as other Solaris 10 libraries), which is not built to work with the OpenSolaris kernel. Therefore, the brand emulation layer is needed to translate between the Solaris 10 user level code and the OpenSolaris kernel code.
+  54: 
+  55: Here is a simple example: [[##issetugid(2)##&gt;&gt;http://docs.sun.com/app/docs/doc/819-2241/issetugid-2]] is a libc function whose semantics haven't changed between Solaris 10 and OpenSolaris. However, Solaris 10's libc invokes the ##SYS_issetugid## syscall (syscall number 75), which doesn't take arguments, while OpenSolaris' libc invokes the ##SYS_privsys## syscall (number 82), which takes six arguments. Furthermore, the OpenSolaris kernel replaced ##SYS_issetugid## with ##SYS_sidsys##, which has radically different semantics. Consequently, if a Solaris 10 process linked with the Solaris 10 libc running on top of the OpenSolaris kernel were to invoke ##issetugid(2)##, then it would issue the wrong syscall. This might result in the Solaris 10 process dumping core or producing incorrect results. The solution is to emulate the Solaris 10 ##SYS_issetugid## syscall so that ##SYS_privsys## is issued instead (with proper arguments, of course).
+  56: 
+  57: [[Back to the Table of Contents&gt;&gt;#HTableofContents]]
+  58: 
+  59: === Does this restrict my ability to innovate or make incompatible changes? ===
+  60: 
+  61: No. The purpose of //solaris10//-branded zones is to translate between the old Solaris 10 code running within them and the new OpenSolaris kernel. There are existing proofs of concept with the //lx// brand running Linux on Solaris 10 and OpenSolaris as well as the //solaris8// and //solaris9// brands running those releases on Solaris 10. The capability to run Linux on OpenSolaris did not stop developers from creating ZFS, DTrace, or Crossbow (to name just a few prominent examples of Solaris innovation). You can continue to make new, innovative changes to OpenSolaris, but you will have to take the //solaris10// brand into account during your development and you may need to modify the brand so that //solaris10//-branded zones continue to work with your innovation. This guide tells you how to do this.
+  62: 
+  63: [[Back to the Table of Contents&gt;&gt;#HTableofContents]]
+  64: 
+  65: == What kinds of changes to OpenSolaris and Solaris 10 can break the //solaris10// brand? ==
+  66: 
+  67: Changes that cross the user-kernel boundary affect //solaris10//-branded zones. In other words, beware all changes that cause [[cap-I Install(1)&gt;&gt;http://src.opensolaris.org/source/xref/onnv/onnv-gate/usr/src/tools/scripts/Install.1]] [[flag days&gt;&gt;Community Group on.flag-days]]. The following list details these kinds of changes:
+  68: 
+  69: * **Changes in syscalls**
+  70: Does the change touch [[##usr/src/uts/common/os/sysent.c##&gt;&gt;http://src.opensolaris.org/source/xref/onnv/onnv-gate/usr/src/uts/common/os/sysent.c]]? If a new syscall is added, then there probably will not be an issue. If an existing syscall is removed or changed then the change will likely impact the brand. Likewise for syscall parameters: if a syscall's parameters' structures or semantics change, then the brand will almost certainly be impacted.
+  71: * **Changes in ioctls**
+  72: Changes in ioctl commands or parameters for devices that are accessible within zones will likely impact the brand. Disks and NICs are the devices most commonly added to zone configurations. Exclusive-stack zones, which have dedicated NIC devices and are responsible for their administration, are expected to be ubiquitous on OpenSolaris because VNICs and the Crossbow project provide a wealth of interesting networking options for branded zones. Explorer data suggest that it is uncommon for other devices to be configured inside zones.
+  73: \\The following list contains the devices available to //solaris10//-branded zones by default:
+  74: ** arp, conslog, console, cpu/self/cpuid, crypto, cryptoadm, dtrace/dtrace, dtrace/helper, dtrace/provider/*, fd/*, ipnet/{netif}, ipnet/lo0, kstat, lo0, log, logindmux, msglog, net/{netif}, null, openprom, poll, pool, ptmx, pts/*, random, sad/user, stderr, stdin, stdout, syscon, sysevent, sysmsg, systty, tcp, tcp6, ticlts, ticots, ticotsord, tty, udp, udp6, urandom, zconsole, zero, zfs
+  75: * **Changes in libraries**
+  76: Bugfixes and projects that modify libraries that interact closely with the kernel could impact the brand. The following are examples of such libraries:
+  77: ** libaio.so (a real library in s10)
+  78: ** libbc.so
+  79: ** libbsm.so
+  80: ** libc.so
+  81: ** libc_db.so
+  82: ** libcontract.so
+  83: ** libdlpi.so
+  84: ** libdoor.so
+  85: ** libdtrace.so
+  86: ** libkstat.so
+  87: ** libpkcs11.so (CRYPTO_GET_FUNCTION_LIST ioctl)
+  88: ** libproc.so
+  89: ** libproject.so
+  90: ** librt.so (a real library in s10)
+  91: ** librtld_db.so
+  92: ** libzfs.so
+  93: * **Changes in signals**
+  94: There have been no signal changes between Solaris 10 and OpenSolaris. However, making such changes could impact the brand. For example, Solaris 10 changed the range for real time signals, which forced //solaris8// and //solaris9// branded zones to emulate the Solaris 8 and 9 real time signal ranges.
+  95: * **Changes in auditing or accounting**
+  96: If auditing or accounting change in an incompatible way, then the brand could be impacted. Although this has not occurred between Solaris 10 and OpenSolaris, this was an issue for the //solaris8// brand on Solaris 10 and could become a problem for the //solaris10// brand if such a change were made to Solaris 10 or OpenSolaris.
+  97: * **Changes in /proc**
+  98: Changes in the /proc file system or libproc can impact the ptools and other commands linked with libproc. At this point there have been no /proc changes that need emulation but the //lx// brand does provide /proc emulation and this could be done for the //solaris10// brand in the future if necessary.
+  99: * **Changes in native commands or daemons used within //solaris10//-branded zones**
+ 100: If an OpenSolaris command or daemon (both will hereafter be simply referred to as 'commands' for brevity's sake) that replaces a command within a //solaris10//-branded zone is changed, then backwards compatibility with the replaced Solaris 10 command could break. Changes to such commands must be made such that the requirements for the commands to be used within //solaris10//-branded zones continue to be satisfied. (See &quot;Use native commands or daemons&quot; under &quot;[[What techniques can be used to make //solaris10//-branded zones work with my changes?&gt;&gt;#HWhattechniquescanbeusedtomakesolaris10brandedzonesworkwithmychanges]]&quot; below for the list of requirements.)
+ 101: \\The following native commands are used within //solaris10//-branded zones:
+ 102: ** automount
+ 103: ** automountd
+ 104: ** ifconfig
+ 105: * **Changes in kstats**
+ 106: kstats are generally private and unstable; however, they are consumed by various user-level utilities. If the kstats on which Solaris 10 utilities depend are removed or changed, then those utilities could break. If this happens, one option is to use the the native version of the utility in place of the Solaris 10 version. This issue is currently hypothetical: No kstat issues have been observed.
+ 107: \\The following utilities use various kstats:
+ 108: ** ##dladm##: name:mac
+ 109: ** ##fssnap##: mod:fssnap, name: highwater
+ 110: ** ##fsstat##: variety
+ 111: ** ##fuser##: mod:unix, name:var
+ 112: ** ##in.routed##: class:net
+ 113: ** ##iostat##: mod:cpu_info; mod:cpu, name:vm; mod:cpu, name:sys; mod:unix, name:system_misc, statistic:clk_intr
+ 114: ** ##mibiisa##: name:mac
+ 115: ** ##mpstat##: mod:cpu_info; mod:cpu, name:vm; mod:cpu, name:sys; mod:unix, name:system_misc, statistic:clk_intr
+ 116: ** ##netstat##: class:net; mod:sockfs, name:sock_unix_list
+ 117: ** ##nfsstat##: mod:unix, name:rpc_*; mod:nfs, name:nfs_client; mod:nfs, name:nfs_server; mod:nfs, name:rfs*; mod:nfs_acl, name:acl*
+ 118: ** ##poolstat##: mod:cpu, name:sys
+ 119: ** ##psrinfo##: mod:cpu_info
+ 120: ** ##rpc.rstatd##: mod:unix, name:system_misc; mod:cpu, name:sys; mod:cpu, name:vm; class:disk; class:net
+ 121: ** ##sar##: mod:unix, name:sysinfo; mod:unix, name:vminfo; mod:unix, name:var; mod:unix, name:system_misc; mod:unix, name:file_cache; mod:ufs, name:inode_cache; mod:vmem, name:kmem_oversize
+ 122: ** ##sendmail##: mod:unix, name:system_misc, statistic:avenrun_1min
+ 123: ** ##svc.startd##: mod:unix, name:system_misc, statistic:boot_time
+ 124: ** ##umount(nfs)##: mod:nfs, name:mntinfo
+ 125: ** ##vmstat##: mod:cpu_info; mod:cpu, name:vm; mod:cpu, name:sys; mod:unix, name:system_misc, statistic:clk_intr
+ 126: * **Changes in supported platforms**
+ 127: If support for a new platform is added to OpenSolaris but is withheld from Solaris 10, then the //solaris10// brand could be impacted.
+ 128: * **Changes in privileges**
+ 129: If existing privileges are broken up or removed, then the brand could be impacted. Adding new privileges should work because nothing in Solaris 10 should use those privileges and properly written Solaris 10 applications should cope with new, unfamiliar privileges.
+ 130: 
+ 131: [[Back to the Table of Contents&gt;&gt;#HTableofContents]]
+ 132: 
+ 133: == What techniques can be used to make //solaris10//-branded zones work with my changes? ==
+ 134: 
+ 135: * **New features**
+ 136: In general, new features that will only exist in OpenSolaris do not need to work in //solaris10//-branded zones because Solaris 10 programs and libraries will not expect them. Note that branded zones can leverage new features that are not manageable within their emulated user environments. For example, //solaris8// branded zones can reside on ZFS and DTrace can be used from the native user environment (a.k.a. the global zone) on the zones' processes. Similarly, //solaris10//-branded zones can use Crossbow network configurations managed by the global zone.
+ 137: * **Maintain compatibility**
+ 138: Change the interfaces in a backward compatible manner. This is the simplest thing to do and is often the approach a developer automatically uses without even thinking about it.
+ 139: * **Add emulation**
+ 140: The brand module can be enhanced to interpose on syscalls and act as a filter between Solaris 10 and OpenSolaris behaviors. This includes interposing on the ioctl syscall and translating commands and parameters from one format to the other. See &quot;[[How can I add or update the emulation?&quot;&gt;&gt;#HHowcanIaddtoorupdatetheemulation]] for details about emulating ioctls and syscalls.
+ 141: * **Use native commands or daemons**
+ 142: If the change is in the private interaction between a command or daemon (both will hereafter be simply referred to as 'commands' for brevity's sake) and the kernel where no published API is involved, then the zone can be configured to use the native OpenSolaris command instead of the Solaris 10 command. (See &quot;[[How can I set up the brand to use a native command?&gt;&gt;#HHowcanIsetupthebrandtouseanativecommand]]&quot; below for details about how to do this.) For example, the native ##ifconfig## command can be used to configure network interfaces from within exclusive stack //solaris10//-branded zones. Syscalls issued by native commands are not emulated.
+ 143: \\An OpenSolaris replacement command must meet several requirements:
+ 144: *1. Any related configuration files must be compatible between Solaris 10 and OpenSolaris.
+ 145: *1. The replacement command's command line interface (CLI) must be backwards-compatible with that of the replaced command.
+ 146: *1. The interprocess communication (IPC) protocols utilized by the replacement command must be backwards-compatible with those of the replaced command. (If they are not, then the commands with which the replaced command communicates can also be replaced by OpenSolaris commands if and only if they also meet these requirements.)
+ 147: *1. Scripts, libraries, and executables that expect a particular output format from the replaced Solaris 10 command must be able to parse output provided by the replacement OpenSolaris command. This requirement can be relaxed only if:
+ 148: *11. it is known that the output of the replaced command is never or rarely consumed by scripts, libraries, or other commands and it is acceptable for known consumers to fail to parse such output; or
+ 149: *11. it is acceptable for the outputs of some of the replacement program's behaviors to differ from those of the equivalent behaviors in the replaced command and it is acceptable for known consumers to fail to parse such outputs.
+ 150: *1. If the replacement command modifies environment variables, then it must do so in a backwards-compatible manner.
+ 151: *1. The replacement command's network communication protocols must be backwards-compatible with those of the replaced command.
+ 152: *1. The replacement command must expect the same file permissions as the replaced command when accessing files.
+ 153: * **Keep existing kernel support**
+ 154: If major changes are made to the kernel, it is possible to keep the existing behavior with the solaris10 brand as the only consumer. The brand can be enhanced to interact with the legacy behavior.
+ 155: * **Backport to Solaris 10**
+ 156: The changes can be backported to Solaris 10 and a patch can be produced for use in the zone. The brand can be enhanced to check for certain patches: See the section entitled &quot;[[How is versioning handled for different Solaris 10 updates or patches running in the zone when they need different emulation?&gt;&gt;#HHowisversioninghandledfordifferentSolaris10updatesorpatchesrunninginthezonewhentheyneeddifferentemulation]]&quot; for details.
+ 157: * **Disallow certain configurations**
+ 158: The brand can validate zones and disallow unsupported configurations. For example, if a specific device is problematic, the brand can prevent zones from being configured or from booting with that device. This would only be practical for corner cases.
+ 159: * **Platform-specific libraries**
+ 160: If support is added to OpenSolaris for a new hardware platform but the platform will not be be supported by Solaris 10, then the associated OpenSolaris psr libraries can be installed into //solaris10//-branded zones from the global zone. Doing so ensures that //solaris10//-branded zones will be able to function correctly on new platforms.
+ 161: 
+ 162: [[Back to the Table of Contents&gt;&gt;#HTableofContents]]
+ 163: 
+ 164: == Where is the source code? ==
+ 165: 
+ 166: The //solaris10// brand's source tree is layed out thus:
+ 167: 
+ 168: * [[##usr/src/lib/brand/solaris10##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;path=usr/src/lib/brand/solaris10]]
+ 169: This directory contains source files for the userland brand emulation library, various ##/usr/sbin/zoneadm## and ##/usr/lib/zones/zoneadmd## hooks, and auxiliary brand data files.
+ 170: * [[##usr/src/lib/brand/solaris10/s10_brand##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;path=usr/src/lib/brand/solaris10/s10_brand]]
+ 171: This directory contains the source files that construct the userland brand emulation library. All [[syscall and ioctl emulation&gt;&gt;#HHowcanIaddtoorupdatetheemulation]] is defined in here (see [[##common/s10_brand.c##)&gt;&gt;http://src.opensolaris.org/source/xref/onnv/onnv-gate/usr/src/lib/brand/solaris10/s10_brand/common/s10_brand.c]].
+ 172: * [[##usr/src/lib/brand/solaris10/zone##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;path=usr/src/lib/brand/solaris10/zone]]
+ 173: This directory contains various shell scripts and auxiliary data files that serve as zone state transition hooks for ##/usr/sbin/zoneadm## and ##/usr/lib/zones/zoneadmd##. [[##s10_boot.ksh##&gt;&gt;http://src.opensolaris.org/source/xref/onnv/onnv-gate/usr/src/lib/brand/solaris10/zone/s10_boot.ksh]] is the //solaris10// brand's boot hook script: You should modify this file if you plan to [[use a native OpenSolaris command or daemon&gt;&gt;#HHowcanIsetupthebrandtouseanativecommand]] inside of //solaris10//-branded zones. ##version## specifies the maximum emulation version supported by the //solaris10// brand. (See the section on [[emulation versioning&gt;&gt;#HHowisversioninghandledfordifferentSolaris10updatesorpatchesrunninginthezonewhentheyneeddifferentemulation]] for details.)
+ 174: * [[##usr/src/lib/brand/solaris10/s10_support##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;path=usr/src/lib/brand/solaris10/s10_support]]
+ 175: This directory contains support C functions utilized by ##/usr/sbin/zoneadm## and ##/usr/lib/zones/zoneadmd##.
+ 176: * [[##usr/src/uts/common/brand/solaris10##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;path=usr/src/uts/common/brand/solaris10]]
+ 177: This directory contains source files that constitute the //solaris10// brand's kernel module, which resides in ##/usr/kernel/brand## and ##/usr/kernel/brand/amd64## on x86 systems and ##/platform/sun4u/kernel/brand/sparcv9## and ##/platform/sun4v/kernel/brand/sparcv9## on sparc systems.
+ 178: 
+ 179: [[Back to the Table of Contents&gt;&gt;#HTableofContents]]
+ 180: 
+ 181: == How does system call emulation work in the //solaris10// brand? ==
+ 182: 
+ 183: Syscall emulation is what makes the //solaris10// brand work. As mentioned in the [[introduction&gt;&gt;#HIntroduction]], the syscall interface (which includes ioctls) is the sole interface by which user processes interact with the kernel. By emulating syscalls, the //solaris10// brand can make Solaris 10 processes running within //solaris10//-branded zones act as though they are communicating with a Solaris 10 kernel.
+ 184: 
+ 185: When a process execs within a //solaris10//-branded zone, the dynamic linker loads the //solaris10// brand emulation library (which resides in the global zone) prior to all other dynamic libraries to which the process' executable is linked. The emulation library initializes its data structures and registers itself with the //solaris10// kernel module via a special brand syscall (##SYS_brand## with a special subcode). Thus the kernel module will know how to transfer control to the emulation library in the event a syscall is issued from the associated process. Once the emulation library finishes initializing, the dynamic linker continues to set up the associated process and transfers control to its start routine.
+ 186: 
+ 187: When a non-native process in a //solaris10//-branded zone issues a syscall, the following steps occur in order:
+ 188: 
+ 189: 1. The thread issuing the syscall traps to the kernel's syscall-handling routines.
+ 190: 1. The syscall-handling routines determine that the thread's process resides in a //solaris10//-branded zone and invoke a special syscall-handling callback registered by the //solaris10// brand's kernel module.
+ 191: 1. The callback looks up the syscall's entry in [[##s10_emulation_table##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_emulation_table]], an array of flags defined by the brand's kernel module and indexed by syscall number. If the syscall's entry is not flagged (i.e., the entry is zero), then the callback returns to the kernel's syscall-handling routines: The syscall is not emulated by the brand. Otherwise, the callback transfers control to the brand's emulation library (which resides in userland) at a registered entry point.
+ 192: 1. The brand emulation library's entry point looks up the syscall's entry in [[##s10_sysent_table##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_sysent_table]], an array mapping syscalls to library functions that emulate the syscalls. If the syscall's entry indicates that a library function handles the syscall, then the handler is invoked with all of the syscall's parameters; otherwise, the emulation library sends ##SIGSYS## (bad syscall) to the associated process.
+ 193: 1. After the handler returns to the emulation library's entry point, the thread returns to its process' code at the instruction following the syscall. The library's entry point makes the emulated syscall's handler's return value and error code visible to the thread's process.
+ 194: 
+ 195: [[Back to the Table of Contents&gt;&gt;#HTableofContents]]
+ 196: 
+ 197: == How can I add to or update the emulation? ==
+ 198: 
+ 199: The //solaris10// brand's emulation library is constructed from [[##usr/src/lib/brand/solaris10/s10_brand/common/s10_brand.c##&gt;&gt;http://src.opensolaris.org/source/xref/onnv/onnv-gate/usr/src/lib/brand/solaris10/s10_brand/common/s10_brand.c]] in the source tree.
+ 200: 
+ 201: === Emulating a System Call ===
+ 202: 
+ 203: To emulate a Solaris 10 syscall, you must create a static function in the brand emulation library with the following signature:
+ 204: 
+ 205: {{code language=&quot;none&quot;}}
+ 206: static int
+ 207: &lt;function-name&gt;(sysret_t *&lt;rv&gt;, &lt;syscall-args&gt;)
+ 208: {{/code}}
+ 209: 
+ 210: where ##&lt;function-name&gt;## is the name of the function and ##&lt;syscall-args&gt;## are the syscall's parameter declarations. The function should return the ##errno## value that the emulated Solaris 10 syscall would produce. You should store the emulated syscall's return value in ##&lt;rv&gt;##.
+ 211: 
+ 212: You must make two additional changes, one to the brand emulation library and the other to the //solaris10// brand's kernel module ([[##usr/src/uts/common/brand/solaris10/s10_brand.c##&gt;&gt;http://src.opensolaris.org/source/xref/onnv/onnv-gate/usr/src/uts/common/brand/solaris10/s10_brand.c]] in the source tree):
+ 213: 
+ 214: * Find the definition of the array [[##s10_sysent_table##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_sysent_table]] at the bottom of the brand emulation library's source file and locate the row/entry corresponding to the numeric identifier of the emulated syscall. (Comments have been added to each row/entry indicating its corresponding numeric syscall identifier.) Change the entry from &quot;##NOSYS##&quot; to
+ 215: {{code language=&quot;none&quot;}}
+ 216: EMULATE(&lt;function-name&gt;, &lt;num-syscall-args&gt; | &lt;syscall-RV-flags&gt;)
+ 217: {{/code}}
+ 218: where ##&lt;function-name&gt;## is the name of the emulation function in the brand library that will handle the syscall, ##&lt;num-syscall-args&gt;## is the number of parameters for the emulated Solaris 10 syscall, and ##&lt;syscall-RV-flags&gt;## is one of the following constants:
+ 219: ** **##RV_DEFAULT##**: The syscall returns &quot;default&quot; values. Use this when the Solaris 10 syscall is defined in the sysent table in ##uts/common/os/sysent.c## with ##SYSENT_C##, ##SYSENT_CI##, or ##SYSENT_CL##.
+ 220: ** **##RV_32RVAL2##**: The syscall returns two 32-bit values. Use this when the Solaris 10 syscall is defined with ##SYSENT_2CI##.
+ 221: ** **##RV_64RVAL##**: The syscall returns a single 64-bit value. Use this when the Solaris 10 syscall is defined with ##SYSENT_AP##.
+ 222: * Find the definition of [[##_init()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=_init&amp;path=usr/src/uts/common/brand/solaris10]] in the //solaris10// brand kernel module and add
+ 223: {{code language=&quot;none&quot;}}
+ 224: s10_emulation_table[&lt;SYS-identifier&gt;] = 1;
+ 225: {{/code}}
+ 226: near the beginning of the function, where ##&lt;SYS-identifier&gt;## is the numeric code of the emulated syscall as defined in [[##usr/src/uts/common/sys/syscall.h##&gt;&gt;http://src.opensolaris.org/source/xref/onnv/onnv-gate/usr/src/uts/common/sys/syscall.h]]. There are already several such lines and they should be ordered by syscall number.
+ 227: 
+ 228: ==== An Example ====
+ 229: 
+ 230: In this example, we will emulate the Solaris 10 ##SYS_sigqueue## syscall. We will name the emulation function [[##s10_sigqueue()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_sigqueue]] and define it thus:
+ 231: 
+ 232: {{code language=&quot;none&quot;}}
+ 233: /*
+ 234:  * New last arg &quot;block&quot; flag should be zero.  The block flag is used by
+ 235:  * the Opensolaris AIO implementation, which is now part of libc.
+ 236:  */
+ 237: static int
+ 238: s10_sigqueue(sysret_t *rval, pid_t pid, int signo, void *value, int si_code)
+ 239: {
+ 240:         return (__systemcall(rval, SYS_sigqueue + 1024, pid, signo, value,
+ 241:             si_code, 0));
+ 242: }
+ 243: {{/code}}
+ 244: 
+ 245: (For information about ##~_~_systemcall()##, see &quot;[[Issuing System Calls within Emulation Functions&gt;&gt;#HIssuingSystemCallswithinEmulationFunctions]]&quot;.)
+ 246: 
+ 247: We need to modify the entry in the brand emulation library's [[##s10_sysent_table##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_sysent_table]] array corresponding to ##SYS_sigqueue## (entry 190) so that [[##s10_sigqueue()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_sigqueue]] will be invoked when processes issue ##SYS_sigqueue##. ##SYS_sigqueue## takes four arguments and returns &quot;default&quot; values in Solaris 10, so the correct entry is:
+ 248: 
+ 249: {{code language=&quot;none&quot;}}
+ 250: EMULATE(s10_sigqueue, 4 | RV_DEFAULT)
+ 251: {{/code}}
+ 252: 
+ 253: Finally, we need to modify the //solaris10// brand kernel module so that it knows to emulate ##SIG_sigqueue##. We would add the following line to the beginning of the [[##_init()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=_init&amp;path=usr/src/uts/common/brand/solaris10]] function in the kernel module:
+ 254: 
+ 255: {{code language=&quot;none&quot;}}
+ 256: s10_emulation_table[SYS_sigqueue] = 1;
+ 257: {{/code}}
+ 258: 
+ 259: [[Back to the Table of Contents&gt;&gt;#HTableofContents]]
+ 260: 
+ 261: === Emulating an Ioctl ===
+ 262: 
+ 263: All ioctls are issued via the ##SYS_ioctl## syscall, which the brand emulation library emulates in [[##s10_ioctl()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_ioctl]]. All ioctls are currently emulated by first checking the ##request## argument to [[##ioctl(2)##&gt;&gt;http://docs.sun.com/app/docs/doc/816-5167/ioctl-2]] (the ##cmd## argument to [[##s10_ioctl()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_ioctl]]) and taking appropriate action based on its value (usually calling separate emulation functions to handle subsystem- or device-specific ioctls, such as [[##zfs_ioctl()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=zfs_ioctl&amp;path=usr/src/lib/brand/solaris10/s10_brand/common]] to handle ZFS ioctls). If the argument does not match any emulated ioctls, then the syscall is passed to the OpenSolaris kernel.
+ 264: 
+ 265: Here is an example of [[##s10_ioctl()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_ioctl]]:
+ 266: 
+ 267: {{code language=&quot;none&quot;}}
+ 268: int
+ 269: s10_ioctl(sysret_t *rval, int fdes, int cmd, intptr_t arg)
+ 270: {
+ 271:         /*
+ 272:          * Is the ioctl command a specific ioctl that needs to
+ 273:          * be emulated?
+ 274:          */
+ 275:         switch (cmd) {
+ 276:         case CRYPTO_GET_FUNCTION_LIST:
+ 277:                 return (crypto_ioctl(rval, fdes, cmd, arg));
+ 278:         case CT_TGET:
+ 279:                 return (ctfs_ioctl(rval, fdes, cmd, arg));
+ 280:         case CT_TSET:
+ 281:                 return (ctfs_ioctl(rval, fdes, cmd, arg));
+ 282:         }
+ 283: 
+ 284:         /*
+ 285:          * Does the ioctl belong to the ZFS ioctl family?
+ 286:          */
+ 287:         if ((cmd &amp; 0xff00) == ZFS_IOC)
+ 288:                 return (zfs_ioctl(rval, fdes, cmd, arg));
+ 289: 
+ 290:         /*
+ 291:          * The ioctl doesn't need to be emulated.  Pass it to the
+ 292:          * OpenSolaris kernel.
+ 293:          */
+ 294:         return (__systemcall(rval, SYS_ioctl + 1024, fdes, cmd, arg));
+ 295: }
+ 296: {{/code}}
+ 297: 
+ 298: Note that the same ioctl command number might be used by two different devices: Checking the command number does not determine which of the two is being controlled. Although most Solaris devices have unique ioctl commands, there is no guarantee that a Solaris device-specific ioctl command is not used by a third-party device. If this is a concern, then ioctl emulation code can gather more information about the targeted device by performing an ##fstat## operation (##SYS_fstat##) and checking the results.
+ 299: 
+ 300: For example, suppose that we will emulate the contract file system's (CTFS's) ##CT_TGET## and ##CT_TSET## ioctl commands in the emulation function [[##ctfs_ioctl()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=ctfs_ioctl]]. Suppose further that we want to ensure that we only emulate these ioctls when they target CTFS files. We can issue a ##SYS_fstat## syscall and check that the targeted file's filesystem's type is ##MNTTYPE_CTFS##:
+ 301: 
+ 302: {{code language=&quot;none&quot;}}
+ 303: static int
+ 304: ctfs_ioctl(sysret_t *rval, int fdes, int cmd, intptr_t arg)
+ 305: {
+ 306:         int err;
+ 307:         struct stat statbuf;
+ 308: 
+ 309:         /* ... */
+ 310: 
+ 311:         if ((err = __systemcall(rval, SYS_fstat + 1024, fdes, &amp;statbuf)) != 0)
+ 312:                 return (err);
+ 313:         if (strcmp(statbuf.st_fstype, MNTTYPE_CTFS) != 0) {
+ 314:                 /*
+ 315:                  * The target doesn't reside on CTFS.  Assume that the ioctl
+ 316:                  * doesn't need to be emulated and pass it to the kernel.
+ 317:                  */
+ 318:                 return (__systemcall(rval, SYS_ioctl + 1024, fdes, cmd, arg));
+ 319:         }
+ 320: 
+ 321:         /* ... */
+ 322: }
+ 323: {{/code}}
+ 324: 
+ 325: (For information about ##~_~_systemcall()##, see &quot;[[Issuing System Calls within Emulation Functions&gt;&gt;#HIssuingSystemCallswithinEmulationFunctions]]&quot;.)
+ 326: 
+ 327: Notice that the above function assumes that ##CT_TGET## and ##CT_TSET## ioctls should not be emulated if they are not intended for CTFS files. This might not be the case if another device uses either ioctl command and needs to be emulated.
+ 328: 
+ 329: [[Back to the Table of Contents&gt;&gt;#HTableofContents]]
+ 330: 
+ 331: === General Emulation Techniques ===
+ 332: 
+ 333: The following sections detail common techniques used in syscall and ioctl emulation functions.
+ 334: 
+ 335: ==== Issuing System Calls within Emulation Functions ====
+ 336: 
+ 337: Many emulation functions need to issue syscalls to the native OpenSolaris kernel. To do so, invoke the ##~_~_systemcall()## function as follows:
+ 338: 
+ 339: {{code language=&quot;none&quot;}}
+ 340: __systemcall(&lt;rv&gt;, &lt;SYS-identifier&gt; + 1024, &lt;syscall-args&gt;);
+ 341: {{/code}}
+ 342: 
+ 343: ##&lt;SYS-identifier&gt;## is the numeric code of the syscall being issued as defined in [[##usr/src/uts/common/sys/syscall.h##&gt;&gt;http://src.opensolaris.org/source/xref/onnv/onnv-gate/usr/src/uts/common/sys/syscall.h]] (e.g., ##SYS_fstat##) and ##&lt;syscall-args&gt;## are the arguments to the syscall. The return value of the syscall is stored in ##&lt;rv&gt;##, which has type ##sysret_t *##. The return value of ##~_~_systemcall()## indicates whether or not an error occurred. If it is zero, then no errors occurred.
+ 344: 
+ 345: Notice that you should add 1024 to the syscall's numeric identifier. The brand framework treats all syscalls whose identifiers are less than 1024 as emulated syscalls and will bounce them back to the brand emulation library, whereas syscalls whose identifiers are offset by 1024 are treated as native syscalls and are not emulated. If you do not add 1024 to the identifier, then the brand emulation library will handle the syscall, which is probably not what you want. Not adding 1024 might also cause infinite recursion if the emulation function inadvertently invokes itself while issuing the syscall, resulting in stack overflows and, ultimately, core dumps.
+ 346: 
+ 347: ===== An Example =====
+ 348: 
+ 349: Refer to the example emulation function [[##s10_sigqueue()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_sigqueue]] provided in the last section, which emulates the ##SYS_sigqueue## syscall:
+ 350: 
+ 351: {{code language=&quot;none&quot;}}
+ 352: /*
+ 353:  * New last arg &quot;block&quot; flag should be zero.  The block flag is used by
+ 354:  * the Opensolaris AIO implementation, which is now part of libc.
+ 355:  */
+ 356: static int
+ 357: s10_sigqueue(sysret_t *rval, pid_t pid, int signo, void *value, int si_code)
+ 358: {
+ 359:         return (__systemcall(rval, SYS_sigqueue + 1024, pid, signo, value,
+ 360:             si_code, 0));
+ 361: }
+ 362: {{/code}}
+ 363: 
+ 364: In Solaris 10, ##SYS_sigqueue## takes five arguments, but the OpenSolaris version takes six. The new sixth argument is a flag used by OpenSolaris' AIO subsystem and should be zero when ##SYS_sigqueue## is issued from within a //solaris10//-branded zone. Reissuing the syscall within the emulation function with a zeroed sixth argument solves the problem. The above code issues a native ##SYS_sigqueue## syscall (notice that the function offsets the syscall identifier by 1024), passing all of the arguments provided by the calling process untouched and adding a zero as the sixth argument. The return value of the syscall is stored in ##rval##, which is handed to the calling process when the emulation function completes. The error code (if any) produced by the syscall is returned to the calling process.
+ 365: 
+ 366: [[Back to the Table of Contents&gt;&gt;#HTableofContents]]
+ 367: 
+ 368: ==== Inserting ##truss## Points ====
+ 369: 
+ 370: No truss points are triggered when a syscall is emulated by the brand library. If a native syscall is issued from an emulation function (see &quot;[[Issuing System Calls within Emulation Functions&gt;&gt;#HIssuingSystemCallswithinEmulationFunctions]]&quot; above), then the native syscall's truss point is triggered. However, if the emulation function does not issue a native syscall, then you should insert a truss point via the ##S10_TRUSS_POINT_*## macros. These macros issue a ##SYS_brand## syscall in order to simulate a truss point.
+ 371: 
+ 372: The macros have the following signature:
+ 373: 
+ 374: {{code language=&quot;none&quot;}}
+ 375: S10_TRUSS_POINT_N(&lt;rv&gt;, &lt;SYS-identifier&gt;, &lt;errno-value&gt;, &lt;arguments&gt;)
+ 376: {{/code}}
+ 377: 
+ 378: ##N## is an integer between one and five (inclusive) that specifies the number of arguments to report in the truss point. ##&lt;rv&gt;## is a non-NULL ##sysret_t *## that stores the return value of the syscall that performs the truss operation. ##&lt;SYS-identifier&gt;## is the numeric identifier of the syscall being issued as defined in [[##usr/src/uts/common/sys/syscall.h##&gt;&gt;http://src.opensolaris.org/source/xref/onnv/onnv-gate/usr/src/uts/common/sys/syscall.h]] (e.g., ##SYS_fstat##). ##&lt;errno-value&gt;## is an integer such that if it is nonzero, then the ##SYS_brandsys## syscall that simulates the truss point stores it in the calling thread's ##errno##. ##&lt;arguments&gt;## is a comma-separated list of ##N## values to report in the truss point.
+ 379: 
+ 380: The macros return zero for success and an ##errno## error code for failure.
+ 381: 
+ 382: ===== An Example =====
+ 383: 
+ 384: In this example, ##SYS_systeminfo## is emulated entirely in the brand emulation library by the function [[##s10_sysinfo()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_sysinfo]]. If a process running in a //solaris10//-branded zone issues ##SYS_systeminfo## and an instance of ##truss## is observing the process' syscalls, then the latter won't see the ##SYS_systeminfo## syscall because [[##s10_sysinfo()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_sysinfo]] never issues a native syscall. Creating a simulated truss point solves this problem:
+ 385: 
+ 386: {{code language=&quot;none&quot;}}
+ 387: int
+ 388: s10_sysinfo(sysret_t *rv, int command, char *buf, long count)
+ 389: {
+ 390:         char *value;
+ 391:         int len;
+ 392: 
+ 393:         /* ... */
+ 394: 
+ 395:         /*
+ 396:          * On success, sysinfo(2) returns the size of buffer required to hold
+ 397:          * the complete value plus its terminating NULL byte.
+ 398:          */
+ 399:         (void) S10_TRUSS_POINT_3(rv, SYS_systeminfo, 0, command, buf, count);
+ 400:         rv-&gt;sys_rval1 = len;
+ 401:         rv-&gt;sys_rval2 = 0;
+ 402:         return (0);
+ 403: }
+ 404: {{/code}}
+ 405: 
+ 406: Notice that the function passes zero as ##&lt;errno-value&gt;## in the truss macro in order to tell observing ##truss## processes that the syscall completed successfully.
+ 407: 
+ 408: [[Back to the Table of Contents&gt;&gt;#HTableofContents]]
+ 409: 
+ 410: ==== Copying Memory ====
+ 411: 
+ 412: If you need to copy data to or from a buffer or structure provided by the calling process, then you should use [[##s10_uucopy()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_uucopy]] and [[##s10_uucopystr()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_uucopystr]]. Both prevent the emulation library from performing illegal memory accesses if the calling process provides junk pointers. The signatures of the two functions are identical:
+ 413: 
+ 414: {{code language=&quot;none&quot;}}
+ 415: static int s10_uucopy[str](const void *from, void *to, size_t size)
+ 416: {{/code}}
+ 417: 
+ 418: [[##s10_uucopy()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_uucopy]] copies ##size## bytes from ##from## to ##to##. [[##s10_uucopystr()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_uucopystr]] functions like [[##strncpy(3C)##&gt;&gt;http://docs.sun.com/app/docs/doc/816-5168/strncpy-3c]] in that it copies at most ##size## characters from ##from## to ##to##, but unlike [[##strncpy(3C)##&gt;&gt;http://docs.sun.com/app/docs/doc/816-5168/strncpy-3c]] it **never** adds a terminating ##NULL## byte. Both functions indicate success by returning zero and indicate failure by returning an ##errno## value (e.g., ##EFAULT##).
+ 419: 
+ 420: ===== An Example =====
+ 421: 
+ 422: This example expands the [[example of inserting truss points&gt;&gt;#HAnExample-2]], which showcased part of the emulation function for ##SYS_systeminfo##.
+ 423: 
+ 424: {{code language=&quot;none&quot;}}
+ 425: int
+ 426: s10_sysinfo(sysret_t *rv, int command, char *buf, long count)
+ 427: {
+ 428:         char *value;
+ 429:         int len;
+ 430: 
+ 431:         /*
+ 432:          * We must interpose on the sysinfo(2) commands SI_RELEASE and
+ 433:          * SI_VERSION; all others get passed to the native sysinfo(2)
+ 434:          * command.
+ 435:          */
+ 436:         switch (command) {
+ 437:                 case SI_RELEASE:
+ 438:                         value = &quot;5.10&quot;;
+ 439:                         break;
+ 440: 
+ 441:                 case SI_VERSION:
+ 442:                         value = &quot;Generic_Virtual&quot;;
+ 443:                         break;
+ 444: 
+ 445:                 default:
+ 446:                         /* ... */
+ 447:         }
+ 448: 
+ 449:         /*
+ 450:          * Copy the string to the buffer provided by the calling
+ 451:          * process.  Use s10_uucopystr() in order to properly
+ 452:          * handle memory access/protection faults.  (We can't
+ 453:          * trust pointers provided by the calling process!)
+ 454:          */
+ 455:         len = strlen(value) + 1;
+ 456:         if (count &gt; 0) {
+ 457:                 if (s10_uucopystr(value, buf, count) != 0)
+ 458:                         return (EFAULT);
+ 459: 
+ 460:                 /* Ensure NULL termination of buf as s10_uucopystr() doesn't. */
+ 461:                 if (len &gt; count &amp;&amp; s10_uucopy(&quot;\0&quot;, buf + (count - 1), 1) != 0)
+ 462:                         return (EFAULT);
+ 463:         }
+ 464: 
+ 465:         /*
+ 466:          * On success, sysinfo(2) returns the size of buffer required to hold
+ 467:          * the complete value plus its terminating NULL byte.
+ 468:          */
+ 469:         (void) S10_TRUSS_POINT_3(rv, SYS_systeminfo, 0, command, buf, count);
+ 470:         rv-&gt;sys_rval1 = len;
+ 471:         rv-&gt;sys_rval2 = 0;
+ 472:         return (0);
+ 473: }
+ 474: {{/code}}
+ 475: 
+ 476: When the calling process requests either the release (##SI_RELEASE##) or the version (##SI_VERSION##) of the kernel, the emulation function produces fake values so that the calling process will see values reflecting a Solaris 10 kernel. Once the appropriate string is selected, [[##s10_uucopystr()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_uucopystr]] copies it to the buffer provided by the calling process. However, [[##s10_uucopystr()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_uucopystr]] does not copy the string's terminating ##NULL## byte, so the function invokes [[##s10_uucopy()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_uucopy]] to append a ##NULL## byte to the end of the buffer.
+ 477: 
+ 478: [[Back to the Table of Contents&gt;&gt;#HTableofContents]]
+ 479: 
+ 480: ==== Modifying Parameter Structures ====
+ 481: 
+ 482: Some syscalls' and ioctls' parameters' structures and semantics differ between Solaris 10 and OpenSolaris. For example, the contract file system's ##ct_param_t## structure changed in OpenSolaris so that it looks like
+ 483: 
+ 484: {{code language=&quot;none&quot;}}
+ 485: /* OpenSolaris version */
+ 486: typedef struct ct_param {
+ 487:         uint32_t ctpm_id;
+ 488:         uint32_t ctpm_size;
+ 489:         void     *ctpm_value;
+ 490: } ct_param_t;
+ 491: {{/code}}
+ 492: 
+ 493: instead of
+ 494: 
+ 495: {{code language=&quot;none&quot;}}
+ 496: /* Solaris 10 version */
+ 497: typedef struct ct_param {
+ 498:         uint32_t ctpm_id;
+ 499:         uint32_t ctpm_pad;
+ 500:         uint64_t ctpm_value;
+ 501: } ct_param_t;
+ 502: {{/code}}
+ 503: 
+ 504: Notice that the third field, ##ctpm_value##, changed from ##uint64_t## to ##void *##. Unfortunately, this means that the size of the structure is 12 bytes on 32-bit systems and 16 bytes on 64-bit systems. Solaris 10 processes issuing ##CT_TGET## or ##CT_TSET## contract file system ioctls will pass the Solaris 10 version of the structure as the ioctl argument, which is invalid on 32-bit OpenSolaris systems.
+ 505: 
+ 506: Other examples of incompatible structure changes include new fields, deleted fields, new flag field values, and field value range changes.
+ 507: 
+ 508: Structure changes can be overcome by defining the Solaris 10 version of the structure in the brand emulation library, declaring a stack instance (local variable) of the OpenSolaris version of the structure in the associated emulation function, copying the contents of the structure parameter to the local structure variable in the appropriate places (see &quot;[[Copying Memory&gt;&gt;#HCopyingMemory]]&quot; above), adjusting the fields of the structure on the stack as necessary, issuing the system call or ioctl and passing the OpenSolaris structure instead of the Solaris 10 structure, and copying modified fields from the OpenSolaris structure to the Solaris 10 structure if any of the former's fields were modified by the syscall or ioctl. Sometimes a stack instance of the Solaris 10 structure must also be declared and utilized: see the example below for a case in which this is necessary.
+ 509: 
+ 510: ===== An Example =====
+ 511: 
+ 512: The following example shows how the aforementioned ##ct_param_t## structure change can be circumvented by the brand emulation library. [[##ctfs_ioctl()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=ctfs_ioctl]] emulates the contract file system ##CT_TGET## and ##CT_TSET## ioctls in the emulation library. Here is its definition:
+ 513: 
+ 514: {{code language=&quot;none&quot;}}
+ 515: #include &lt;sys/ctfs.h&gt;
+ 516: 
+ 517: /* Solaris 10 version of ct_param_t */
+ 518: typedef struct s10_ct_param {
+ 519:         uint32_t ctpm_id;
+ 520:         uint32_t ctpm_pad;
+ 521:         uint64_t ctpm_value;
+ 522: } s10_ct_param_t;
+ 523: 
+ 524: /*
+ 525:  * We have to emulate process contract ioctls for init(1M) because the
+ 526:  * ioctl parameter structure changed between Solaris 10 and OpenSolaris.
+ 527:  * This is a relatively simple process of filling OpenSolaris structure
+ 528:  * fields, shuffling values, and initiating a native syscall.
+ 529:  */
+ 530: static int
+ 531: ctfs_ioctl(sysret_t *rval, int fdes, int cmd, intptr_t arg)
+ 532: {
+ 533:         int err;
+ 534:         s10_ct_param_t s10param; /* Solaris 10 version */
+ 535:         ct_param_t param;        /* OpenSolaris version */
+ 536: 
+ 537:         /*
+ 538:          * Copy the structure provided by the caller to the stack
+ 539:          * and fill the fields of the OpenSolaris version of the structure
+ 540:          * with appropriate values.  Then issue the syscall with
+ 541:          * the OpenSolaris version of the structure.
+ 542:          */
+ 543:         if (s10_uucopy((const void *)arg, &amp;s10param, sizeof (s10param)) != 0)
+ 544:                 return (EFAULT);
+ 545:         param.ctpm_id = s10param.ctpm_id;
+ 546:         param.ctpm_size = sizeof (uint64_t);
+ 547:         param.ctpm_value = &amp;s10param.ctpm_value;
+ 548:         if ((err = __systemcall(rval, SYS_ioctl + 1024, fdes, cmd, &amp;param))
+ 549:             != 0)
+ 550:                 return (err);
+ 551: 
+ 552:         /*
+ 553:          * If the ioctl is CT_TGET, then the syscall stored a value in
+ 554:          * the 'ctpm_value' field of the Solaris 10 structure (notice that
+ 555:          * the OpenSolaris version's 'ctpm_value' field is a pointer to the
+ 556:          * Solaris 10 version's 'ctpm_value' field).  Copy the entire
+ 557:          * Solaris 10 structure back to the caller so that it sees the
+ 558:          * new value.
+ 559:          */
+ 560:         if (cmd == CT_TGET)
+ 561:                 return (s10_uucopy(&amp;s10param, (void *)arg, sizeof (s10param)));
+ 562:         return (0);
+ 563: }
+ 564: {{/code}}
+ 565: 
+ 566: [[Back to the Table of Contents&gt;&gt;#HTableofContents]]
+ 567: 
+ 568: ==== Producing Architecture-Specific Code ====
+ 569: 
+ 570: The //solaris10// brand emulation library is compiled twice for both x86 and sparc in order to produce 32- and 64-bit shared libraries. Consequently, it is possible to restrict pieces of code in the emulation library to particular architectures via the standard architecture preprocessor symbols: ##~_~_x86## for 32- or 64-bit x86; ##~_~_i386## for 32-bit x86; ##~_~_amd64## for 64-bit x86 (i.e., x86-64); ##~_~_sparc## for any sparc architecture; ##~_~_sparcv7##, ##~_~_sparcv8##, and ##~_~_sparcv9## for sparc V7, V8, and V9, respectively; and ##_LP64## for any 64-bit architecture. For example, suppose that a particular ioctl only needs to be emulated when issued by a 64-bit x86 process. We can implement such emulation by wrapping the emulation code (and its invocations) with preprocessor conditional statements:
+ 571: 
+ 572: {{code language=&quot;none&quot;}}
+ 573: #ifdef  __amd64
+ 574: static int
+ 575: s10_some_ioctl_emulation_function(sysret_t *rval, int fdes, int cmd,
+ 576:     intptr_t arg)
+ 577: {
+ 578:         /* ... */
+ 579: }
+ 580: #endif  /* __amd64 */
+ 581: 
+ 582: int
+ 583: s10_ioctl(sysret_t *rval, int fdes, int cmd, intptr_t arg)
+ 584: {
+ 585:         /* ... */
+ 586: 
+ 587: #ifdef  __amd64
+ 588:         if (cmd == SOME_IOCTL)
+ 589:                 return (s10_some_ioctl_emulation_function(rval, fdes, cmd,
+ 590:                     arg));
+ 591: #endif  /* __amd64 */
+ 592: 
+ 593:         /* ... */
+ 594: }
+ 595: {{/code}}
+ 596: 
+ 597: However, care must be taken when restricting syscall emulation to specific architectures. If the syscall emulation function will only exist for some architectures, then the [[##s10_sysent_table##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_sysent_table]] array in the emulation library should be configured such that it specifies ##NOSYS## for the architectures for which the syscall will not be emulated. The brand's kernel module's [[##s10_emulation_table##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_emulation_table]] should also be properly configured so that the syscall is only emulated for those architectures for which emulation is necessary. (For more information about [[##s10_sysent_table##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_sysent_table]] and [[##s10_emulation_table##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_emulation_table]], see &quot;[[Emulating a System Call&gt;&gt;#HEmulatingaSystemCall]]&quot; above.) For example, if ##SYS_fstat## were to be emulated by sparc alone, then we should define the emulation function thus:
+ 598: 
+ 599: {{code language=&quot;none&quot;}}
+ 600: #ifdef  __sparc
+ 601: static int
+ 602: s10_fstat(sysret_t *rval, int fd, struct stat *sb)
+ 603: {
+ 604:         /* ... */
+ 605: }
+ 606: #endif  /* __sparc */
+ 607: {{/code}}
+ 608: 
+ 609: We would have to modify [[##s10_sysent_table##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_sysent_table]] as follows (note that ##SYS_fstat## is syscall number 28):
+ 610: 
+ 611: {{code language=&quot;none&quot;}}
+ 612: s10_sysent_table_t s10_sysent_table[] = {
+ 613:         /* ... */
+ 614:         NOSYS,                                /* 27 */
+ 615: #ifdef  __sparc
+ 616:         EMULATE(s10_fstat, 2 | RV_DEFAULT),   /* 28 */
+ 617: #else   /* !__sparc */
+ 618:         NOSYS,                                /* 28 */
+ 619: #endif  /* !__sparc */
+ 620:         NOSYS,                                /* 29 */
+ 621:         /* ... */
+ 622: };
+ 623: {{/code}}
+ 624: 
+ 625: Finally, we would have to modify [[##_init()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=_init&amp;path=usr/src/uts/common/brand/solaris10]] in the kernel module thus:
+ 626: 
+ 627: {{code language=&quot;none&quot;}}
+ 628: int
+ 629: _init(void)
+ 630: {
+ 631:         /* ... */
+ 632: #ifdef  __sparc
+ 633:         s10_emulation_table[SYS_fstat] = 1;   /* 28 */
+ 634: #endif  /* __sparc */
+ 635:         /* ... */
+ 636: }
+ 637: {{/code}}
+ 638: 
+ 639: If a syscall will only be emulated on one or more 64-bit architectures, then an emulation function usually has to be created for 32-bit architectures that only passes the syscall's arguments to the native kernel. For example, if ##SYS_fstat## should only be emulated by 64-bit x86 processes, then we should define the emulation function thus:
+ 640: 
+ 641: {{code language=&quot;none&quot;}}
+ 642: #ifdef  __x86
+ 643: static int
+ 644: s10_fstat(sysret_t *rval, int fd, struct stat *sb)
+ 645: {
+ 646: #ifdef  __amd64
+ 647:         /* ... */
+ 648: #else   /* !__amd64 */
+ 649:         /*
+ 650:          * The brand library won't do anything special for SYS_fstats issued by
+ 651:          * 32-bit x86 processes, so we'll hand the syscall back to the kernel.
+ 652:          */
+ 653:         return (__systemcall(rval, SYS_fstat + 1024, fd, sb));
+ 654: #endif  /* !__amd64 */
+ 655: }
+ 656: #endif  /* __x86 */
+ 657: {{/code}}
+ 658: 
+ 659: We would have to modify [[##s10_sysent_table##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_sysent_table]] as follows:
+ 660: 
+ 661: {{code language=&quot;none&quot;}}
+ 662: s10_sysent_table_t s10_sysent_table[] = {
+ 663:         /* ... */
+ 664:         NOSYS,                                /* 27 */
+ 665: #ifdef  __x86
+ 666:         EMULATE(s10_fstat, 2 | RV_DEFAULT),   /* 28 */
+ 667: #else   /* !__x86 */
+ 668:         NOSYS,                                /* 28 */
+ 669: #endif  /* !__x86 */
+ 670:         NOSYS,                                /* 29 */
+ 671:         /* ... */
+ 672: };
+ 673: {{/code}}
+ 674: 
+ 675: This specifies that ##SYS_fstat## will be emulated by ##s10_fstat()## on both 32- and 64-bit x86 but not on sparc. Finally, we would have to modify [[##_init()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=_init&amp;path=usr/src/uts/common/brand/solaris10]] in the kernel module thus:
+ 676: 
+ 677: {{code language=&quot;none&quot;}}
+ 678: int
+ 679: _init(void)
+ 680: {
+ 681:         /* ... */
+ 682: #ifdef  __amd64
+ 683:         /*
+ 684:          * NOTE: Even though SYS_fstat will only be emulated when running a
+ 685:          * 64-bit x86 kernel, SYS_fstat will be emulated for both 32- and 64-
+ 686:          * bit processes.
+ 687:          */
+ 688:         s10_emulation_table[SYS_fstat] = 1;   /* 28 */
+ 689: #endif  /* __amd64 */
+ 690:         /* ... */
+ 691: }
+ 692: {{/code}}
+ 693: 
+ 694: The above code ensures that only the 64-bit x86 kernel module will pass ##SYS_fstat## syscalls to the brand emulation library. However, both 32- and 64-bit processes are capable of running on 64-bit kernels and the kernel brand framework does not discriminate between syscalls issued by 32- and 64-bit processes. Consequently, [[##s10_sysent_table##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_sysent_table]] must be configured so that ##SYS_fstat## is handled by the brand emulation library for both 32- and 64-bit processes even though the 32-bit emulation function simply hands control back to the kernel. If [[##s10_sysent_table##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_sysent_table]] were instead configured thus:
+ 695: 
+ 696: {{code language=&quot;none&quot;}}
+ 697: s10_sysent_table_t s10_sysent_table[] = {
+ 698:         /* ... */
+ 699:         NOSYS,                                /* 27 */
+ 700: #ifdef  __amd64     /* fstat() is only emulated for 64-bit x86 processes, right? */
+ 701:         EMULATE(s10_fstat, 2 | RV_DEFAULT),   /* 28 */
+ 702: #else   /* !__amd64 */
+ 703:         NOSYS,                                /* 28 */
+ 704: #endif  /* !__amd64 */
+ 705:         NOSYS,                                /* 29 */
+ 706:         /* ... */
+ 707: };
+ 708: {{/code}}
+ 709: 
+ 710: then if a 32-bit x86 process running on a 64-bit kernel were to issue ##SYS_fstat##, then the brand's kernel module would pass the syscall to the brand emulation library and the library would signal the calling process with ##SIGSYS## (bad syscall) because the 32-bit library does not emulate ##SYS_fstat##.
+ 711: 
+ 712: [[Back to the Table of Contents&gt;&gt;#HTableofContents]]
+ 713: 
+ 714: === General Emulation Considerations ===
+ 715: 
+ 716: Keep the following considerations in mind when you modify the emulation library:
+ 717: 
+ 718: 1. **Do not set ##errno##!** The brand emulation library has its own copy of ##errno##, so processes running in //solaris10//-branded zones will not see any modifications to ##errno## that are made from the emulation library. Emulation functions should return ##errno## values: The brand framework and Solaris 10 libc move these values into ##errno## as seen by the processes running in //solaris10//-branded zones. For example, if a syscall emulation function succeeds, then it should return zero (i.e., ##return (0);##) and ensure that the ##sysret_t## value passed to the emulation function is properly set. On the other hand, if the emulation function needs to indicate ##EFAULT## to the invoking process, then it should return ##EFAULT## (i.e., ##return (EFAULT);##).
+ 719: 1. **Take care regarding which library functions you invoke.** The brand emulation library is linked to its own copy of the Solaris 10 libc and other libraries, so it can invoke standard functions such as [[##strtol(3C)##&gt;&gt;http://docs.sun.com/app/docs/doc/816-5168/strtol-3c]]. However, you must be careful when you invoke a library function because it might issue syscalls that result in recursion as described in &quot;[[Issuing System Calls within Emulation Functions&gt;&gt;#HIssuingSystemCallswithinEmulationFunctions]]&quot; above.
+ 720: 1. **Always leave comments explaining why you are providing emulation.** Make everyone's life easier. People reviewing the brand emulation library will most likely not be intimately familiar with the subsystem(s) whose behaviors you are emulating.
+ 721: 
+ 722: [[Back to the Table of Contents&gt;&gt;#HTableofContents]]
+ 723: 
+ 724: == How can I set up the brand to use a native command? ==
+ 725: 
+ 726: Modify the //solaris10// brand boot script ([[##usr/src/lib/brand/solaris10/zone/s10_boot.ksh##&gt;&gt;http://src.opensolaris.org/source/xref/onnv/onnv-gate/usr/src/lib/brand/solaris10/zone/s10_boot.ksh]] in the source tree) as follows:
+ 727: 
+ 728: 1. Navigate to the section labeled &quot;STEP ONE&quot;.
+ 729: 1. If the replaced command's path is ##/d_1/d_2/.../d_N/B##, where ##d_i## is a directory (##i## is between ##1## and ##N##) and ##B## is the name of the command, then add the following lines to the script under &quot;STEP ONE&quot;:
+ 730: {{code language=&quot;none&quot;}}
+ 731: safe_dir /d_1
+ 732: safe_dir /d_1/d_2
+ 733: ...
+ 734: safe_dir /d_1/d_2/.../d_N
+ 735: {{/code}}
+ 736: For example, if you want to replace ##/foo/bar/baz/some_command##, then add the following lines to the script under &quot;STEP ONE&quot;:
+ 737: {{code language=&quot;none&quot;}}
+ 738: safe_dir /foo
+ 739: safe_dir /foo/bar
+ 740: safe_dir /foo/bar/baz
+ 741: {{/code}}
+ 742: You do not need to duplicate these lines for two commands residing within the same directory. For example, if you want to replace ##/foo/bar/baz/command_1## and ##/foo/bar/baz/command_2##, then you only need to add the above lines once.
+ 743: 1. Navigate to the section labeled &quot;STEP TWO&quot;.
+ 744: 1. If the path of the replacement command is identical to that of the replaced command, then add the following line to the script under &quot;STEP TWO&quot;: ##replace_with_native &lt;abs-path&gt; &lt;mode&gt; &lt;user&gt;:&lt;group&gt;##, where ##&lt;abs-path&gt;## is the absolute path to the replacement command, ##&lt;mode&gt;## is the hex UNIX permissions that the replacement command will have, ##&lt;user&gt;## is the name of the command's owner, and ##&lt;group&gt;## is the owner's group.
+ 745: \\The following example replaces ##/sbin/ifconfig## with the native OpenSolaris ##ifconfig##, both of which reside in ##/sbin##; gives the replacement owner, group, and world read and execute permissions; and makes the zone's ##root## user (group ##bin##) the replacement's owner:
+ 746: {{code language=&quot;none&quot;}}
+ 747: replace_with_native /sbin/ifconfig 0555 root:bin
+ 748: {{/code}}
+ 749: 1. If the path of the replacement command differs from that of the replaced command, then add the following line to the script under &quot;STEP TWO&quot;: ##safe_replace $ZONEROOT/&lt;replaced-abs-path&gt; &lt;replacement-abs-path&gt; &lt;mode&gt; &lt;user&gt;:&lt;group&gt; remove##, where ##&lt;replaced-abs-path&gt;## is the absolute path of the replaced command (as seen from within the zone), ##&lt;replacement-abs-path&gt;## is the absolute path of the replacement command, and ##&lt;mode&gt;##, ##&lt;owner&gt;##, and ##&lt;group&gt;## have the same semantics as in the previous step.
+ 750: \\The following example replaces the Solaris 10 ##/usr/bin/true## with the OpenSolaris ##/usr/bin/false##, gives the replacement owner, group, and world read and execute permissions, and makes the zone's ##root## user (group ##bin##) the replacement's owner:
+ 751: {{code language=&quot;none&quot;}}
+ 752: safe_replace $ZONEROOT/usr/bin/true /usr/bin/false 0555 root:bin remove
+ 753: {{/code}}
+ 754: 
+ 755: The brand boot script executes whenever a //solaris10//-branded zone boots. Once zone bootup is complete, every replaced command ##X## will have been backed up to ##X.pre_p2v##. If you need to restore the replaced command's binary within a zone, then execute ##mv X.pre_p2v X## within the zone, where ##X## is the full path of the replaced command.
+ 756: 
+ 757: Here is an example that replaces ##/usr/bin/zcat## with OpenSolaris' ##/usr/bin/zcat## (with owner ##root##, group ##bin##, and UNIX file permissions ##0555##) and ##/usr/demo/dtrace/kstat.d## with OpenSolaris' ##/usr/bin/true## (with owner ##root##, group ##bin##, and UNIX file permissions ##0644##):
+ 758: 
+ 759: {{code language=&quot;none&quot;}}
+ 760: #
+ 761: # STEP ONE
+ 762: #
+ 763: # Validate that the zone filesystem looks like we expect it to.
+ 764: #
+ 765: safe_dir /usr
+ 766: safe_dir /usr/bin
+ 767: safe_dir /usr/demo
+ 768: safe_dir /usr/demo/dtrace
+ 769: 
+ 770: # ...
+ 771: 
+ 772: #
+ 773: # STEP TWO
+ 774: #
+ 775: # Replace Solaris 10 binaries with OpenSolaris binaries.
+ 776: #
+ 777: replace_with_native /usr/bin/zcat 0555 root:bin
+ 778: safe_replace $ZONEROOT/usr/demo/dtrace/kstat.d /usr/bin/true 0644 root:bin \
+ 779:     remove
+ 780: 
+ 781: # ...
+ 782: {{/code}}
+ 783: 
+ 784: [[Back to the Table of Contents&gt;&gt;#HTableofContents]]
+ 785: 
+ 786: === A Note Concerning Split Binaries ===
+ 787: 
+ 788: Some commands in ##/usr/bin##, such as ##/usr/bin/pmap##, are split into 32- and 64-bit versions that reside in architecture-dependent subdirectories of ##/usr/bin##. For example, the 32-bit version of ##pmap## resides in ##/usr/bin/i86## while the 64-bit version resides in ##/usr/bin/amd64## on x86 systems. Sparc systems only have a 64-bit version of ##pmap##: ##/usr/bin/sparcv9/pmap##. To replace a split command such as ##pmap##, you must replace both the 32-bit binary (if it exists) and the 64-bit binary.
+ 789: 
+ 790: Suppose that you want to replace the split command ##/usr/bin/X## with the OpenSolaris version of ##/usr/bin/X##. Then skip steps four and five above and add the following lines below &quot;STEP TWO&quot; instead:
+ 791: 
+ 792: {{code language=&quot;none&quot;}}
+ 793: if [ -n &quot;$ARCH32&quot; ]; then
+ 794:         replace_with_native /usr/bin/$ARCH32/X &lt;mode&gt; &lt;owner&gt;:&lt;group&gt;
+ 795: fi
+ 796: if [ -n &quot;$ARCH64&quot; ]; then
+ 797:         replace_with_native /usr/bin/$ARCH64/X &lt;mode&gt; &lt;owner&gt;:&lt;group&gt;
+ 798: fi
+ 799: {{/code}}
+ 800: 
+ 801: ##&lt;mode&gt;##, ##&lt;owner&gt;##, and ##&lt;group&gt;## have the same semantics as in steps four and five above.
+ 802: 
+ 803: Here is an example that replaces the split command ##/usr/bin/pmap##:
+ 804: 
+ 805: {{code language=&quot;none&quot;}}
+ 806: if [ -n &quot;$ARCH32&quot; ]; then
+ 807:         replace_with_native /usr/bin/$ARCH32/pmap 0555 root:bin
+ 808: fi
+ 809: if [ -n &quot;$ARCH64&quot; ]; then
+ 810:         replace_with_native /usr/bin/$ARCH64/pmap 0555 root:bin
+ 811: fi
+ 812: {{/code}}
+ 813: 
+ 814: If the replacement command's path differs from that of the replaced command, then add the following lines below &quot;STEP TWO&quot; instead:
+ 815: 
+ 816: {{code language=&quot;none&quot;}}
+ 817: if [ -n &quot;$ARCH32&quot; ]; then
+ 818:         safe_replace $ZONEROOT/usr/bin/$ARCH32/X \
+ 819:             &lt;32-bit-replacement-abs-path&gt; &lt;mode&gt; &lt;owner&gt;:&lt;group&gt; remove
+ 820: fi
+ 821: if [ -n &quot;$ARCH64&quot; ]; then
+ 822:         safe_replace $ZONEROOT/usr/bin/$ARCH64/X \
+ 823:             &lt;64-bit-replacement-abs-path&gt; &lt;mode&gt; &lt;owner&gt;:&lt;group&gt; remove
+ 824: fi
+ 825: {{/code}}
+ 826: 
+ 827: ##X## is the name of the replaced command. ##&lt;32-bit-replacement-abs-path&gt;## and ##&lt;64-bit-replacement-abs-path&gt;## are the absolute paths of the replacement commands for the 32- and 64-bit binaries (respectfully).
+ 828: 
+ 829: [[Back to the Table of Contents&gt;&gt;#HTableofContents]]
+ 830: 
+ 831: == How is versioning handled for different Solaris 10 updates or patches running in the zone when they need different emulation? ==
+ 832: 
+ 833: Any OpenSolaris changes that require updates to the brand's emulation must ensure that Solaris 10u8 and later will function correctly inside of //solaris10//-branded zones. This is simply a matter of straightforward compatibility and no special versioning support is needed.
+ 834: 
+ 835: Versioning becomes a factor when making changes to Solaris 10 code. A single OpenSolaris system can host //solaris10//-branded zones running different releases of Solaris 10 (u8, u9, etc.). For example, an OpenSolaris system might have two zones ##foo## and ##bar## that host Solaris 10u8 and Solaris 10u9 environments, respectively. This is problematic because different Solaris 10 releases might require different emulation due to backports and other Solaris 10 changes. The //solaris10// brand overcomes this problem through a basic versioning system.
+ 836: 
+ 837: Note that enhancing the brand's emulation library to dynamically detect the presence or absence of features in hosted Solaris 10 environments is preferable to versioning. You can see an example of this in [[##s10_lwp_private()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_lwp_private]], which determines whether a zone's libc works when the ##%fs## x86 segment register is zero. (Solaris 10u8 sets ##%fs## to a nonzero value in 64-bit x86 processes whereas OpenSolaris clears it.) If it does not, then [[##s10_lwp_private()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_lwp_private]] changes the current LWP's ##%fs## register to a nonzero value and adjusts the brand emulation library so that future LWPs created via the ##SYS_lwp_create## syscall will have nonzero ##%fs## registers; otherwise, the emulation library does not change ##%fs##. Read the subsection entitled &quot;[[Dynamic Feature Detection: Sysent Table Patching&gt;&gt;#HDynamicFeatureDetectionSysentTablePatching]]&quot; to learn about techniques that improve the performance of emulation functions that utilize dynamic feature detection.
+ 838: 
+ 839: In order to use versioning, you must change OpenSolaris thus:
+ 840: 
+ 841: 1. Create a new enumeration constant in [[##s10_emulated_features##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_emulated_features]] that represents the Solaris 10 backport or fix.  Choose a name that starts with ##S10_FEATURE_## and describes the fix (e.g., ##S10_FEATURE_ALTERED_MNTFS_IOCTL## or ##S10_FEATURE_CR_6813502##).  Place the new enumeration value immediately before ##S10_NUM_EMUL_FEATURES##.\\
+ 842: If your new constant conflicts with someone's putback (i.e., someone else adds a new constant to the enumeration), then merge the changes such that your new constant appears immediately before ##S10_NUM_EMUL_FEATURES##.\\
+ 843: Remember the value of your new constant.  You will need it in later steps.
+ 844: 1. Alter the fix's emulation in the brand's emulation library so that it performs conditional emulation.  For example, if some emulation will not be necessary when your backport integrates into Solaris 10, then you can alter the emulation so that it only occurs when the backport is not present in the hosted Solaris 10 environment.  On the other hand, if your Solaris 10 fix will require new emulation in the //solaris10// brand's emulation library, then you should modify the library so that the new emulation is only performed when the backport is present in the hosted Solaris 10 environment.  See &quot;[[How can I add to or update the emulation?&gt;&gt;#HHowcanIaddtoorupdatetheemulation]]&quot; for details about adding and updating syscall and ioctl emulation.
+ 845: 
+ 846: For example, suppose that you need to backport a fix to Solaris 10u9 that would eliminate the need for MNTFS ioctl emulation.  You would have to add a new constant to ##s10_emulated_features## representing the backport.  If you were to name the constant ##S10_FEATURE_ALTERED_MNTFS_IOCTL##, then you would have to add it to ##s10_emulated_features## thus:
+ 847: 
+ 848: {{code language=&quot;none&quot;}}
+ 849: enum s10_emulated_features {
+ 850:         /* ... */
+ 851:         S10_FEATURE_ALTERED_MNTFS_IOCTL,
+ 852:         S10_NUM_EMUL_FEATURES           /* This must be the last entry! */ 
+ 853: };
+ 854: {{/code}}
+ 855: 
+ 856: If your addition were to conflict with another developer's putback because the developer also added a constant (say, ##S10_FEATURE_SOME_BACKPORT##), then you would have to merge the changes thus:
+ 857: 
+ 858: {{code language=&quot;none&quot;}}
+ 859: enum s10_emulated_features {
+ 860:         /* ... */
+ 861:         S10_FEATURE_SOME_BACKPORT,
+ 862:         S10_FEATURE_ALTERED_MNTFS_IOCTL,
+ 863:         S10_NUM_EMUL_FEATURES           /* This must be the last entry! */
+ 864: };
+ 865: {{/code}}
+ 866: 
+ 867: Emulation functions can easily detect fixes and backports inside //solaris10//-branded zones via the [[##S10_FEATURE_IS_PRESENT()##&gt;&gt;http://src.opensolaris.org/source/search?q=S10_FEATURE_IS_PRESENT]] macro.  ##S10_FEATURE_IS_PRESENT(N)## is true iff the fix or backport represented by the [[##s10_emulated_features##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_emulated_features]] constant ##N## is present in the associated zone's Solaris 10 environment.  Armed with this macro and your new [[##s10_emulated_features##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_emulated_features]] constant, you can make the emulation library conditionally emulate syscalls or ioctls (or both).
+ 868: 
+ 869: Take the aforementioned example of a backport that obsoletes MNTFS ioctl emulation. You cannot delete the emulation because older Solaris 10 environments (e.g., u8 environments) will need the emulation in order to function properly; therefore, the emulation library should emulate the ioctl iff the Solaris 10 backport is not present.  You should make the ioctl's emulation look something like this:
+ 870: 
+ 871: {{code language=&quot;none&quot;}}
+ 872:         if (S10_FEATURE_IS_PRESENT(S10_FEATURE_ALTERED_MNTFS_IOCTL)) {
+ 873:                 /*
+ 874:                  * Emulation isn't necessary. Do whatever the
+ 875:                  * native kernel would do.
+ 876:                  */
+ 877:                 return (__systemcall(/* ... */));
+ 878:         } else {
+ 879:                 /* Perform the emulation... */
+ 880:         }
+ 881: {{/code}}
+ 882: 
+ 883: On the other hand, suppose that the backport represented by ##S10_FEATURE_ALTERED_MNTFS_IOCTL## would //require// MNTFS ioctl emulation that did not previously exist.  Swapping the above example's branches would achieve the desired effect: The MNTFS ioctl would be emulated iff ##S10_FEATURE_IS_PRESENT(S10_FEATURE_ALTERED_MNTFS_IOCTL)## were true.
+ 884: 
+ 885: You must do the following as part of your Solaris 10 fix or backport after you finish modifying the //solaris10// brand's emulation:
+ 886: 
+ 887: 1. Create a file named ##usr/src/lib/brand/solaris10/M## in Solaris 10's source tree, where ##M## is the integral value of your new [[##s10_emulated_features##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_emulated_features]] constant.  For example, if your new [[##s10_emulated_features##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_emulated_features]] constant equals four, then your fix should create a file named ##usr/src/lib/brand/solaris10/4##.  The file can be empty, but it might be useful to insert a short description of the fix (what it changes, its CR number, etc.) so that developers will be able to more easily determine the file's associated fix.
+ 888: 1.  Update Solaris 10's ##usr/src/lib/brand/solaris10/Makefile## to install the new file into your proto area's ##/usr/lib/brand/solaris10## directory.
+ 889: 1.  Update the Solaris 10 SVr4 package that delivers your fix to also deliver the new file into the ##/usr/lib/brand/solaris10## directory.  This ensures that the new file is delivered together with your fix.
+ 890: 
+ 891: zoneadm(1M) will refuse to boot //solaris10//-branded zones that host Solaris 10 environments containing unrecognized numbered files in ##/usr/lib/brand/solaris10##. In other words, //solaris10//-branded zones hosting newer versions of Solaris 10 will not boot if the //solaris10// brand does not provide sufficiently up-to-date emulation (i.e., OpenSolaris is not sufficiently up-to-date).  For example, the brand will not permit a //solaris10//-branded zone containing ##/usr/lib/brand/solaris10/5## to boot when the brand only recognizes [[##s10_emulated_features##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_emulated_features]] constants that are less than five (i.e., ##S10_NUM_EMULATED_FEATURES## equals five).  This prevents users from hosting Solaris 10 environments that cannot be correctly emulated.
+ 892: 
+ 893: [[Back to the Table of Contents&gt;&gt;#HTableofContents]]
+ 894: 
+ 895: === An Example ===
+ 896: 
+ 897: Suppose that you need to change a device's ioctl in OpenSolaris and backport the change to Solaris 10u9 at the same time. Furthermore, suppose that the device is used in native Solaris 10 zones. Then you will have to change OpenSolaris thus:
+ 898: 
+ 899: 1. Create a new constant in [[##s10_emulated_features##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_emulated_features]] using the procedure described above. (This example will name the constant ##S10_FEATURE_DEV_IOCTL_BACKPORT##.)
+ 900: 1. Update the //solaris10// brand's emulation library to emulate the ioctl's old Solaris 10 format when ##S10_FEATURE_IS_PRESENT(S10_FEATURE_DEV_IOCTL_BACKPORT)## is true. This ensures that //solaris10//-branded zones will properly host Solaris 10 images that lack your backport.
+ 901: 
+ 902: Additionally, you should do the following in the Solaris 10 backport:
+ 903: 
+ 904: 1. Create the file ##usr/lib/brand/solaris10/M## in the Solaris 10 source tree, where ##M## is the value of ##S10_FEATURE_DEV_IOCTL_BACKPORT##.
+ 905: 1. Modify Solaris 10's ##usr/src/lib/brand/solaris10/Makefile## so that it installs the new file into the ##/usr/lib/brand/solaris10## directory.
+ 906: 1. Ensure that the appropriate Solaris 10 SVr4 packages install the new file.
+ 907: 
+ 908: [[Back to the Table of Contents&gt;&gt;#HTableofContents]]
+ 909: 
+ 910: === Dynamic Feature Detection: Sysent Table Patching ===
+ 911: 
+ 912: Syscall emulation functions can dynamically adjust syscalls' [[##s10_sysent_table##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_sysent_table]] entries to make the emulation library invoke different syscall emulation functions. This technique, called //sysent table patching//, eliminates repeated dynamic feature detection (e.g., probing zones' environments for indications of whether a fix or backport is present) at the cost coding and maintaining multiple emulation functions.
+ 913: 
+ 914: [[##s10_lwp_private()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_lwp_private]] uses sysent table patching. [[As described above&gt;&gt;#HHowisversioninghandledfordifferentSolaris10updatesorpatchesrunninginthezonewhentheyneeddifferentemulation]], [[##s10_lwp_private()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_lwp_private]] determines whether the Solaris 10 libc can function when the ##%fs## x86 segment register is zero. If libc cannot, then [[##s10_lwp_private()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_lwp_private]] modifies the ##SYS_lwp_create## syscall's entry in [[##s10_sysent_table##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_sysent_table]] so that [[##s10_lwp_create_correct_fs##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_lwp_create_correct_fs]] emulates ##SYS_lwp_create## syscalls rather than the default handler, [[##s10_lwp_create##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_lwp_create]]. [[##s10_lwp_create_correct_fs##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_lwp_create_correct_fs]] ensures that new LWPs start in [[##s10_lwp_create_entry_point##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_lwp_create_entry_point]], which sets the new LWP's ##%fs## register to the legacy nonzero Solaris 10 selector value before making the LWP jump to its true entry point. [[##s10_lwp_create##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_lwp_create]] simply hands the ##SYS_lwp_create## syscall to the kernel. [[##s10_lwp_private()##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_lwp_private]] is invoked once after a process execs and only while the process is single-threaded; therefore, its sysent table patch, if applied, affects all of the process' ##SYS_lwp_create## syscalls.
+ 915: 
+ 916: In general, do the following when you want a syscall to use sysent table patching:
+ 917: 
+ 918: 1. Create two emulation functions: one that does not emulate the syscall (i.e., one that simply passes the syscall to the kernel) and one that does. The next step will refer to the former as ##&lt;first-emulation-function&gt;## and the latter as ##&lt;second-emulation-function&gt;##.
+ 919: 1. Create an additional emulation function as follows:
+ 920: {{{TEST}}}\\
+ 921: {{{TEST2}}}\\
+ 922: {{code language=&quot;none&quot;}}
+ 923: static int
+ 924: &lt;function-name&gt;(sysret_t *&lt;rv&gt;, &lt;syscall-args&gt;)
+ 925: {
+ 926:         /* Determine whether the syscall should be emulated. */
+ 927:         if (/* The syscall needs to be emulated */) {
+ 928:                 s10_sysent_table[&lt;SYS-identifier&gt;].st_callc =
+ 929:                     (sysent_cb_t)&lt;second-emulation-function&gt;;
+ 930:                 return (&lt;second-emulation-function&gt;(&lt;rv&gt;, &lt;syscall-args&gt;));
+ 931:         } else {
+ 932:                 s10_sysent_table[&lt;SYS-identifier&gt;].st_callc =
+ 933:                     (sysent_cb_t)&lt;first-emulation-function&gt;;
+ 934:                 return (&lt;first-emulation-function&gt;(&lt;rv&gt;, &lt;syscall-args&gt;));
+ 935:         }
+ 936: }
+ 937: {{/code}}
+ 938: where ##&lt;function-name&gt;## is the name of the emulation function, ##&lt;syscall-args&gt;## is the comma-separated list of the syscall's parameters, ##&lt;SYS-identifier&gt;## is the syscall's numeric identifier as defined in [[##usr/src/uts/common/sys/syscall.h##&gt;&gt;http://src.opensolaris.org/source/xref/onnv/onnv-gate/usr/src/uts/common/sys/syscall.h]], and ##&lt;first-emulation-function&gt;## and ##&lt;second-emulation-function&gt;## are the names of the emulation functions defined in the previous step.
+ 939: 1. Configure the syscall's [[##s10_sysent_table##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_sysent_table]] entry to use the emulation function defined in the last step. (See the section entitled &quot;[[Emulating a System Call&gt;&gt;#HEmulatingaSystemCall]]&quot; above for instructions on modifying [[##s10_sysent_table##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_sysent_table]].)
+ 940: 
+ 941: For example, suppose that ##SYS_fstat## needs to be emulated when a zone's Solaris 10 environment contains the fix represented by a hypothetical [[##s10_emulated_features##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_emulated_features]] constant named ##S10_FEATURE_FSTAT_CHANGE##. We would follow the above procedure thus:
+ 942: 
+ 943: 1. Define a function named ##s10_noemu_fstat##:
+ 944: {{code language=&quot;none&quot;}}
+ 945: /*
+ 946:  * This function simply hands SYS_fstat syscalls to the kernel.  It doesn't
+ 947:  * emulate the syscall.
+ 948:  */
+ 949: static int
+ 950: s10_noemu_fstat(sysret_t *rv, int fd, struct stat *sb)
+ 951: {
+ 952:         return (__systemcall(rv, SYS_fstat + 1024, fd, sb));
+ 953: }
+ 954: {{/code}}
+ 955: Define another function named ##s10_emulate_fstat##:
+ 956: {{code language=&quot;none&quot;}}
+ 957: /*
+ 958:  * This function emulates SYS_fstat syscalls when S10_FEATURE_FSTAT_CHANGE is
+ 959:  * in the zone.
+ 960:  */
+ 961: static int
+ 962: s10_emulate_fstat(sysret_t *rv, int fd, struct stat *sb)
+ 963: {
+ 964:         /* Emulation... */
+ 965: }
+ 966: {{/code}}
+ 967: 1. Define an emulation function named ##s10_fstat##:
+ 968: {{code language=&quot;none&quot;}}
+ 969: /*
+ 970:  * This emulation function is the initial handler for SYS_fstat syscalls.
+ 971:  * Its sole purpose is to patch the sysent table when the process issues its
+ 972:  * first SYS_fstat syscall.  If the Solaris 10 fix represented by
+ 973:  * S10_FEATURE_FSTAT_CHANGE is in the zone, then the sysent table will
+ 974:  * be patched so that s10_emulate_fstat() will handle all future SYS_fstat
+ 975:  * syscalls; otherwise, the sysent table will be patched so that it uses
+ 976:  * s10_noemu_fstat() instead.
+ 977:  */
+ 978: static int
+ 979: s10_fstat(sysret_t *rv, int fd, struct stat *sb)
+ 980: {
+ 981:         /*
+ 982:          * SYS_fstat must be emulated if S10_FEATURE_FSTAT_CHANGE is present
+ 983:          * in the zone.
+ 984:          */
+ 985:         if (S10_FEATURE_IS_PRESENT(S10_FEATURE_FSTAT_CHANGE)) {
+ 986:                 s10_sysent_table[SYS_fstat].st_callc =
+ 987:                     (sysent_cb_t)s10_emulate_fstat;
+ 988:                 return (s10_emulate_fstat(rv, fd, sb));
+ 989:         } else {
+ 990:                 s10_sysent_table[SYS_fstat].st_callc =
+ 991:                     (sysent_cb_t)s10_noemu_fstat;
+ 992:                 return (s10_noemu_fstat(rv, fd, sb));
+ 993:         }
+ 994: }
+ 995: {{/code}}
+ 996: 1. Modify ##SYS_fstat##'s entry in [[##s10_sysent_table##&gt;&gt;http://src.opensolaris.org/source/search?q=&amp;defs=s10_sysent_table]] so that ##s10_fstat()## handles ##SYS_fstat## syscalls:
+ 997: {{code language=&quot;none&quot;}}
+ 998:         EMULATE(s10_fstat, 2 | RV_DEFAULT)
+ 999: {{/code}}
+1000: 
+1001: [[Back to the Table of Contents&gt;&gt;#HTableofContents]]
+1002: 
+1003: == What is the procedure for backporting an incompatible change to a Solaris 10 update release? ==
+1004: 
+1005: Please see the section entitled &quot;[[How is versioning handled for different Solaris 10 updates or patches running in the zone when they need different emulation?&gt;&gt;#HHowisversioninghandledfordifferentSolaris10updatesorpatchesrunninginthezonewhentheyneeddifferentemulation]]&quot; for the full backporting and conditional emulation procedure.
+1006: 
+1007: [[Back to the Table of Contents&gt;&gt;#HTableofContents]]
+1008: 
+1009: == How can I test my OpenSolaris changes with the brand? ==
+1010: 
+1011: There are two ways to test your OpenSolaris fixes and projects with //solaris10//-branded zones:
+1012: 
+1013: === Run do-it-yourself (DIY) tests ===
+1014: 
+1015: The DIY test page at diy,ireland includes tests for zones under Category:Zones.  When you run these tests you will automatically run tests for solaris10 branded zones.
+1016: 
+1017: === Manually set up a zone on a test system and test your changes ===
+1018: 
+1019: Your system must have the ##SUNWs10brand## package.  You can install it on OpenSolaris via the ##pkg(5)## command:
+1020: 
+1021: {{code language=&quot;none&quot;}}
+1022: # pkg install SUNWs10brand
+1023: {{/code}}
+1024: 
+1025: The [[OpenSolaris.org development repository&gt;&gt;http://pkg.opensolaris.org/dev]] publishes the ##SUNWs10brand## package.
+1026: 
+1027: Use [[zonecfg(1M)&gt;&gt;http://docs.sun.com/app/docs/doc/819-2240/zonecfg-1m]] to configure a new //solaris10//-branded zone. Be sure to specify ##SUNWsolaris10## when issuing the ##create## subcommand. For example:
+1028: 
+1029: {{code language=&quot;none&quot;}}
+1030: # zonecfg -z testzone
+1031: testzone: No such zone configured
+1032: Use 'create' to begin configuring a new zone.
+1033: zonecfg:testzone&gt; create -t SUNWsolaris10
+1034: {{/code}}
+1035: 
+1036: Each zone configuration must specify a ##zonepath##: Every other property is optional. Note that the zone path of a //solaris10//-branded zone must reside on a ZFS filesystem. The following is an example of a minimal configuration for a //solaris10//-branded zone:
+1037: 
+1038: {{code language=&quot;none&quot;}}
+1039: # zonecfg -z testzone
+1040: testzone: No such zone configured
+1041: Use 'create' to begin configuring a new zone.
+1042: zonecfg:testzone&gt; create -t SUNWsolaris10
+1043: zonecfg:testzone&gt; set zonepath=/export/zones/testzone
+1044: zonecfg:testzone&gt; info
+1045: zonename: testzone
+1046: zonepath: /export/zones/testzone
+1047: brand: solaris10
+1048: autoboot: false
+1049: bootargs: 
+1050: pool: 
+1051: limitpriv: 
+1052: scheduling-class: 
+1053: ip-type: shared
+1054: hostid: 
+1055: zonecfg:testzone&gt; exit
+1056: {{/code}}
+1057: 
+1058: Once you have configured a //solaris10//-branded zone, install it via [[zoneadm(1M)&gt;&gt;http://docs.sun.com/app/docs/doc/819-2240/zoneadm-1m]] using the ##install## subcommand. You will have to use one of the ##-a## or the ##-d## options. ##-a &lt;archive-path&gt;## specifies a [[##flash_archive(4)##&gt;&gt;http://docs.sun.com/app/docs/doc/816-5174/flash-archive-4]]; a [[##cpio(1)##&gt;&gt;http://docs.sun.com/app/docs/doc/816-5165/cpio-1]] archive, which can be compressed with either ##gzip(1)## or ##bzip2(1)##; a [[##pax(1)##&gt;&gt;http://docs.sun.com/app/docs/doc/816-5165/pax-1]] &quot;xustar&quot; archive; or a level zero [[##ufsdump(1M)##&gt;&gt;http://docs.sun.com/app/docs/doc/816-5166/ufsdump-1m]] of the installed Solaris 10 system (either a physical system or a native Solaris 10 zone) whose files will be installed into the new zone. ##-d &lt;s10-system-root-path&gt;## specifies the full path of the root directory of an installed Solaris 10 system (again, either a physical system or a native Solaris 10 zone) whose files will be installed into the new zone. You must also specify either ##-p## to preserve the virtualized system's configuration or ##-u## to run [[##sys-unconfig(1M)##&gt;&gt;http://docs.sun.com/app/docs/doc/816-5166/sys-unconfig-1m]] within the zone after it is installed. The following example installs the zone configured above from a flash archive of a physical Solaris 10 update 8 system and indicates that [[##sys-unconfig(1M)##&gt;&gt;http://docs.sun.com/app/docs/doc/816-5166/sys-unconfig-1m]] should be run within the zone:
+1059: 
+1060: {{code language=&quot;none&quot;}}
+1061: # zoneadm -z testzone install -a /net/kodiak.sfbay/gates/s10brand/public/images/s10u8b8ax.flar -u
+1062: A ZFS file system has been created for this zone.
+1063:       Log File: /var/tmp/testzone.install_log.esaZ0g
+1064:     Installing: This may take several minutes...
+1065: Postprocessing: This may take a while...
+1066:    Postprocess: Updating the image to run within a zone
+1067: 
+1068:         Result: Installation completed successfully.
+1069:       Log File: /export/zones/testzone/root/var/log/testzone.install111754.log
+1070: {{/code}}
+1071: 
+1072: The ##solaris10(5)## man page contains more information about configuring and installing //solaris10//-branded zones.
+1073: 
+1074: A variety of pre-built Solaris 10u8 images are available within Sun for testing. They are located in ##/net/kodiak.sfbay/gates/s10brand/public/images##.
+1075: 
+1076: Boot the zone via the [[zoneadm(1M)&gt;&gt;http://docs.sun.com/app/docs/doc/819-2240/zoneadm-1m]] ##boot## subcommand:
+1077: 
+1078: {{code language=&quot;none&quot;}}
+1079: # zoneadm -z testzone boot
+1080: {{/code}}
+1081: 
+1082: Once the zone boots, you can log into the zone via the [[zlogin(1)&gt;&gt;http://docs.sun.com/app/docs/doc/819-2239/zlogin-1]] command. If you specified ##-u## when you installed the zone, then you should grab the zone's console and step through the [[##sys-unconfig(1M)##&gt;&gt;http://docs.sun.com/app/docs/doc/816-5166/sys-unconfig-1m]] screens via ##zlogin -C##. For example:
+1083: 
+1084: {{code language=&quot;none&quot;}}
+1085: # zlogin -C testzone
+1086: [Connected to zone 'testzone' console]
+1087: 
+1088: What type of terminal are you using?
+1089:  1) ANSI Standard CRT
+1090:  2) DEC VT52
+1091:  3) DEC VT100
+1092:  4) Heathkit 19
+1093:  5) Lear Siegler ADM31
+1094:  6) PC Console
+1095:  7) Sun Command Tool
+1096:  8) Sun Workstation
+1097:  9) Televideo 910
+1098:  10) Televideo 925
+1099:  11) Wyse Model 50
+1100:  12) X Terminal Emulator (xterms)
+1101:  13) CDE Terminal Emulator (dtterm)
+1102:  14) Other
+1103: Type the number of your choice and press Return:
+1104: {{/code}}
+1105: 
+1106: The zone's filesystem is accessible from the global zone via ##&lt;zonepath&gt;/root##, where ##&lt;zonepath&gt;## is the zone's path as specified in its configuration.
+1107: 
+1108: Once you boot a //solaris10//-branded zone, you can do two things:  (Please note that these options are not mutually exclusive; in fact, doing both is highly recommended.)
+1109: 
+1110: ==== Manually test your changes ====
+1111: 
+1112: If your changes only affect a few binaries (e.g., your changes alter private interfaces between special libraries and the kernel), then it is usually sufficient to test the affected binaries in your zone.  For example, if your changes alter a ZFS ioctl, then you can execute relevant ZFS commands in your zone in order to ensure that the ioctl functions properly.  If your changes affect a syscall, then you can create and execute tests that invoke library functions that issue the syscall.  If you are using [[native command replacement&gt;&gt;#HHowcanIsetupthebrandtouseanativecommand]], then you can log into your zone and test the functionality of the replacement binary's CLI and the functionality of commands that fork the binary if it is a command or test the functionality of commands that communicate with the replacement if it is a daemon.  You should also consider running multithreaded tests that stress the interfaces affected by your changes if the interfaces are thread-safe in Solaris 10.
+1113: 
+1114: Remember, syscalls, ioctls, and other facets of the user-kernel interface as seen from within //solaris10//-branded zones must function as they do in Solaris 10.  The same is true of commands and daemons within //solaris10//-branded zones.
+1115: 
+1116: ==== Run all of the relevant PIT tests or just the MSTC portion ====
+1117: 
+1118: Consider running one or more PIT tests, such as MSTC, in your zone in addition to manually testing your changes if your changes are extensive or affect frequently-used syscalls or ioctls (e.g., ##SYS_lwp_create## or a tty ioctl).
+1119: 
+1120: NOTE: The following procedure uses Sun-internal links to the test pages. Links to procedures for external testing will be provided soon.
+1121: 
+1122: Determine which PIT tests run within //solaris10//-branded zones. Many but not all of the existing test suites work in //solaris10//-branded zones. Any suite that runs in native Solaris 10 zones should run identically in //solaris10//-branded zones. You can do one of the following to determine whether a test will work:
+1123: 
+1124: 1. Go to the Solaris 10 PIT chessboard, which is accessible from the [[main PIT page&gt;&gt;http://diablo.ireland]], and navigate to the &quot;Virtualization/Zones/Native&quot; icon. Clicking it should give you a list of tests that have been run inside of native Solaris 10 zones.
+1125: 1. From the [[main PIT page&gt;&gt;http://diablo.ireland]], select &quot;Search PIT results database&quot;. Click on the &quot;All Test Suites&quot; pull-down menu, select the test suite that you want to run, and click &quot;Go&quot;. You should get a list of all the test runs associated with the selected test suite. If you see any results associated with a native Solaris 10 zone, then the test can be run in //solaris10//-branded zones. Any host that ends in &quot;-z*&quot; (e.g., foo-z1) is a zone.
+1126: 
+1127: Afterwards, run the test suite. All PIT test suites can be run via the STEP tool. [[Click here for instructions on how to run STEP.&gt;&gt;http://step.ireland/cgi-bin/step-web/main.cgi?html_display=Intro_about.html]] You should run STEP from the global zone. STEP will query you for the hostname of your test system, at which point you should enter the name of the //solaris10//-branded zone that you created for the test. Specify &quot;zlogin_console&quot; when STEP queries for the connection type.
+1128: 
+1129: [[Back to the Table of Contents&gt;&gt;#HTableofContents]]
+1130: 
+1131: == How can I test my Solaris 10 changes with the brand? ==
+1132: 
+1133: You will need to follow the procedures for [[manually testing the zone&gt;&gt;#HHowcanItestmyOpenSolarischangeswiththebrand]]. However, you will not be able to use one of the pre-built Solaris 10u8 images. Instead, as part of your testing of the Solaris 10 change, you should create a flash archive of a physical system onto which you installed your change.
+1134: 
+1135: {{code language=&quot;none&quot;}}
+1136: # flar create -n testflar /export/home/test.flar
+1137: {{/code}}
+1138: 
+1139: Instead of ##test.flar##, you can name the flar as you choose.  If your physical Solaris 10 test system has a ZFS root, then you must create the flar with an explicit ##cpio## or ##pax## archive using the ##-L## option:
+1140: 
+1141: {{code language=&quot;none&quot;}}
+1142: # flar create -n testflar -L cpio /export/home/test.flar
+1143: {{/code}}
+1144: 
+1145: You can now use this flar to install the zone and complete the testing.  When installing the zone using your new flar, you must also use the ##-F## option which
+1146: bypasses the built-in version checking.  This is needed because only Solaris 10u8 and later are supported and a BFU image does not look like a supported 
+1147: version of Solaris 10.
+1148: 
+1149: {{code language=&quot;none&quot;}}
+1150: # zoneadm -z testzone install -a /home/foo/test.flar -F -u
+1151: {{/code}}
+1152: 
+1153: If your code changes are simple, an alternative to creating your own flar is to use one of the pre-existing archives to install the zone and then
+1154: replace the updated user-level binaries with the new binaries that you've built.  If you use this technique, you must be sure that the base archive you're
+1155: using is fully compatible with the changed files you're replacing.
+1156: 
+1157: [[Back to the Table of Contents&gt;&gt;#HTableofContents]]
+</textarea>
+</div>
+
+    <div class="clearfloats"></div>
+  </div>    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Community Group zones Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/brandz">BrandZ</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/brandz_bugfixes">BrandZ Bugfixes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/brandz_contribute">Contribute Code to BrandZ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/brandz_design_doc">BrandZ Design Doc</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/brandz_downloads">BrandZ Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/brandz_install">BrandZ Installation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/brandz_on_dev">BrandZ Impact on ON Development</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/brandz_project_list">BrandZ Project List</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/brandz_scla_faq">BrandZ/SCLA FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/linux_applications">Linux Applications</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/faq">Zones and Containers FAQ</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/flar_zones">Flash Archives & Zones</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/roadmap">Zones Roadmap</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/s10brand_dev_guide">Solaris10&#45;Branded Zone Developer Guide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/zones_design_docs">Zones Project Documents</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/rm_enhancements">Enhanced Resource Management Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/zoss">zones on shared storage proposal</a></span></li>
+</ul></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2012, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

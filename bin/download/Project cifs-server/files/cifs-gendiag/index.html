@@ -1,0 +1,185 @@
+#!/usr/bin/bash
+
+#======================================================================
+# CIFS Diagnostics Generator
+#
+# This script will gather some basic information which could be helpful
+# in diagnosing CIFS problems.
+#
+# Usage
+#
+# 	cifs-gendiag
+#
+# The following information is gathered by this script:
+#
+# 	o OS and hardware
+# 	o /etc/nsswitch.conf
+# 	o /etc/resolv.conf
+# 	o /etc/krb5/krb5.conf
+#	o network and routing information
+#	o list of zpools
+#	o list of zfs datasets
+#	o properties for all zpools and datasets
+#	o idmap properties, rules, cache
+#	o list of shares
+#	o ACL of CIFS shared directories
+#	o ACL of CIFS shares
+#	o CIFS server configuration and status
+#	o pam_smb_passwd line in /etc/pam.conf (if exists)
+#	o list of usernames in /var/smb/smbpasswd (if any)
+#	o last 50 lines of /var/adm/messages
+#	o last 50 lines of smb/server SMF log
+#
+#======================================================================
+
+nsswitch_conf=/etc/nsswitch.conf
+resolv_conf=/etc/resolv.conf
+krb_conf=/etc/krb5/krb5.conf
+pam_conf=/etc/pam.conf
+smbpasswd=/var/smb/smbpasswd
+system_log=/var/adm/messages
+smbsvc=smb/server
+LS=/usr/bin/ls
+
+head1=0
+
+header1_echo()
+{
+	let "head1 += 1"
+	echo
+	echo "+=========================================="
+	echo "| $head1) $1"
+	echo "+=========================================="
+	head2=1
+}
+
+header2_echo()
+{
+	echo
+	echo "| $head1.$head2) $1"
+	echo "+------------------------------------------"
+	let "head2 += 1"
+}
+
+#
+# System
+#
+date
+header1_echo "OS and Hardware"
+uname -a
+
+header1_echo "NS Switch ($nsswitch_conf)"
+cat $nsswitch_conf
+
+header1_echo "Resolver ($resolv_conf)"
+cat $resolv_conf
+
+header1_echo "Kerberos ($krb_conf)"
+cat $krb_conf
+
+header1_echo "Network and routing information"
+ifconfig -a
+echo
+netstat -rn
+
+#
+# ZFS
+#
+header1_echo "ZFS"
+
+header2_echo "List of zpools available"
+zpool list
+
+header2_echo "List of datasets available"
+zfs list
+
+header2_echo "Zpools properties"
+for zpl in `zpool list -H -o name`; do
+        zpool get all $zpl
+        echo "----------------------------------------------------"
+done
+echo
+
+header2_echo "Datasets properties"
+for zfs in `zfs list -H -o name`; do
+        zfs get all $zfs
+        echo "----------------------------------------------------"
+done
+
+#
+# idmap
+#
+header1_echo "idmap"
+
+header2_echo "Properties"
+svccfg -s idmap listprop
+
+header2_echo "name-based mapping rules"
+idmap list
+
+header2_echo "mappings cache"
+idmap dump
+echo "-----------------------"
+idmap dump -n
+
+#
+# Shares
+#
+header1_echo "Shares"
+sharemgr show -vp
+
+header2_echo "ACL of shared directories"
+for shdir in `sharemgr show | grep /`; do
+	if [ -d $shdir ]; then
+		$LS -Vd $shdir ;
+	fi
+done
+
+header2_echo "ACL of shares"
+for x in `zfs list -H -o mountpoint | uniq | grep /`; do
+        $LS -Vd $x/.zfs/shares/*
+        echo "----------------------------------------------------"
+done
+
+
+#
+# CIFS Server
+#
+header1_echo "CIFS"
+
+header2_echo "Status"
+svcs -l $smbsvc
+echo
+modinfo | grep smbsrv
+echo
+svcs -xv $smbsvc
+
+header2_echo "Package Info"
+pkginfo | grep SUNWsmbs
+
+header2_echo "Properties"
+svccfg -s smb/server listprop
+echo
+
+smbadm list
+echo
+
+header2_echo "SMB local groups"
+smbadm show -mp
+
+header2_echo "SMB PAM module"
+grep pam_smb_passwd $pam_conf
+echo
+
+header2_echo "SMB local password file"
+awk -F":" '{ print $1 }' $smbpasswd
+
+#
+# System log
+#
+header1_echo "System log (last 50 lines)"
+tail -50 $system_log
+
+header1_echo "smb/server SMF log (last 50 lines)"
+smf_log=`svcs -l smb/server | grep logfile | awk -F" " '{ print $2 }'`
+tail -50 $smf_log

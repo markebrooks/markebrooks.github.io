@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Project OpenGrok</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+opengrok/installdescription" />
+                    <link rel="canonical" href="/bin/view/Project+opengrok/installdescription" />
+                            <meta name="document" content="Project opengrok.installdescription"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Project opengrok"/>
+    <meta name="page" content="installdescription"/>
+    <meta name="version" content="26.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Project+opengrok/pages/installdescription"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="How to install OpenGrok" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="Lubos Kosco" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/fullScreen.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project opengrok";
+XWiki.currentPage = "installdescription";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Project+opengrok/installdescription";
+window.docediturl = "/bin/edit/Project+opengrok/installdescription";
+window.docsaveurl = "/bin/save/Project+opengrok/installdescription";
+window.docgeturl = "/bin/get/Project+opengrok/installdescription";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/viewers/code.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/fullScreen.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Project_opengrok viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bopengrok%2Finstalldescription%3Fviewer%3Dcode%26%2338%3Blanguage%3Den"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+opengrok/"><strong>Project opengrok</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Project+opengrok" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+            </td>
+            <td id="logo-text" style="width: 1%;">
+                Solaris
+            </td>         
+            <td style="width: 98%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                              <a href='/bin/view/Project+opengrok/manual'>Documentation</a> <span class='separator'>&#187;</span> <span class='current'>How to install OpenGrok</span>
+                </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+opengrok/installdescription?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+        <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+opengrok/installdescription?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+opengrok/installdescription?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+opengrok/installdescription?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+opengrok/installdescription?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+opengrok/installdescription?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+opengrok/installdescription?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+opengrok/installdescription?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+opengrok/installdescription?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+opengrok/installdescription?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+opengrok/installdescription?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+<div id="document-title"><h1>Wiki source code of <a href="/bin/view/Project+opengrok/installdescription">How to install OpenGrok</a></h1></div>
+                <div id="document-info">
+    <div>
+                      <span id="contentshortcut"><a href="/bin/view/Project+opengrok/installdescription?viewer=content">Content</a></span>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+
+
+
+
+
+
+<div>
+  <a href="/bin/view/Project+opengrok/installdescription?viewer=code&amp;showlinenumbers=0&amp;language=en" id="toggleLineNumbers">Hide line numbers</a>
+                                  <textarea readonly="readonly" class="wiki-code" rows="25" cols="80">
+  1: = How to install &amp; use [[image:Project opengrok.WebHome@logo.png||alt=&quot;OpenGrok&quot;]] =
+  2: 
+  3: {OpenGrok can be installed and used under different use cases, we will just show how to use the wrapper script. Advanced usage depends on your knowledge of running java applications and command line options of {OpenGrok.
+  4:  Note, that you **need** the **index setup** no matter what use case you plan to use. Without indexes {Opengrok will be simply useless.
+  5:  This document is a live document, we are updating it as the new versions/changes come out (note the date at the right bottom of the page).
+  6: 
+  7: === Requirements ===
+  8: 
+  9: You need the following:
+ 10: 
+ 11: * [[JDK&gt;&gt;http://java.sun.com/javase/downloads/index.jsp]] 1.6 (&quot;1.6.0_17&quot;) or higher
+ 12: * {OpenGrok **binaries** from [[files section&gt;&gt;Project opengrok.files]](either the package for Solaris, or .tar.gz with binaries, NOT the src! )
+ 13: * [[Exuberant Ctags&gt;&gt;http://ctags.sourceforge.net]] for analysis
+ 14: * A servlet container like [[GlassFish&gt;&gt;https://glassfish.dev.java.net/]] or [[Tomcat&gt;&gt;http://tomcat.apache.org]] (5.x or later) also running with java at least 1.6
+ 15: * If history is needed, appropriate binary (in some cases also cvs/svn repository) must be present on the system (e.g. [[Subversion&gt;&gt;http://subversion.tigris.org]] or [[Mercurial&gt;&gt;http://www.selenic.com/mercurial/wiki/index.cgi]] or [[SCCS&gt;&gt;http://dlc.sun.com/osol/devpro/downloads/current/]] or ... )
+ 16: * 2GB of memory for indexing process using OpenGrok script (can use less, this is scaled for bigger deployments)
+ 17: * a recent browser for clients - IE8, FF3.x, recent Chrome or Safari
+ 18: 
+ 19: === Recommended links to read for advanced users ===
+ 20: 
+ 21: * [[Opengrok script trunk source&gt;&gt;http://src.opensolaris.org/source/xref/opengrok/trunk/OpenGrok]]
+ 22: * [[Sample setup of opengrok&gt;&gt;http://src.opensolaris.org/source/xref/opengrok/trunk/doc/EXAMPLE.txt]]
+ 23: * [[development trunk usage info(CommandLineOptions class)&gt;&gt;http://src.opensolaris.org/source/xref/opengrok/trunk/src/org/opensolaris/opengrok/index/CommandLineOptions.java#69]]
+ 24: * [[manual javadb installation for historycache to be kept in derby instead of plain files&gt;&gt;http://src.opensolaris.org/source/xref/opengrok/trunk/README.txt#260]]
+ 25: 
+ 26: == INDEX and web application setup ==
+ 27: 
+ 28: After installing the package (e.g. {{code}}pkgadd -d ./OSOLopengrok-0.?.pkg{{/code}}) or untgzing the binaries in your target directory (e.g. {{code}}cd your_target_dir ; gzcat opengrok-0.?.tar.gz | tar xf - {{/code}}), you just need to create the index and then you can use the command line interface to grok your sources.
+ 29: 
+ 30: === Creating the index ===
+ 31: 
+ 32:  OpenGrok's command line use is a typical case where OpenGrok is deployed as indexing service on a webserver for an active source repository, which is updated automatically using scheduled cron jobs.
+ 33: **Project concept** - one project is one directory underneath SRC_ROOT and usually contains a checkout of a project(or it's branch, version, ...) sources, it can have several attributes (in its XML description), note that interface of projects is being stabilized so it can change. Projects effectively replace need for more web applications with opengrok .war and leave you with one indexer and one web application serving MORE source code repositories - projects. A nice concept is to have directories underneath SRC_ROOT with a naming convention, thereby creating a good overview of projects (e.g. name-version-branch). Then you have a simple update script &amp; simple index refresher script in place, which simplifies management of more repositories.
+ 34:  [[image:setup-project.png]]
+ 35: 
+ 36: ==== __Step.0__ - Setting up the Sources. Having the web application container ready. ====
+ 37: 
+ 38: Source base must be available locally for OpenGrok to work efficiently. No changes are required to your source tree. If the code is under CVS or SVN, OpenGrok requires the **checked out source** tree under SRC_ROOT.
+ 39: **Note:** A local CVSROOT (or SVN if opengrok version less than 0.7) repository must be available. File history will not be fetched from a remote server for CVS (&amp; SVN if opengrok version less than 0.7) !. For newer opengrok versions you must use option {{code}}-r on{{/code}} for remote repositories history to be indexed, also note this can be more resource(time,cpu,network) demanding.
+ 40: Note also that OpenGrok ignores symbolic links.
+ 41: 
+ 42: Please install web application container of your choice (e.g. [[Tomcat&gt;&gt;http://tomcat.apache.org/]],[[GlassFish&gt;&gt;https://glassfish.dev.java.net/]] or [[Sun Java Application Server&gt;&gt;http://www.sun.com/software/products/appsrvr]]) before going to the next step and make sure it's started.
+ 43: 
+ 44: ==== __Step.1__ - Deploy the web application ====
+ 45: 
+ 46: We provided you with OpenGrok wrapper script, which should aid in deploying the web application.
+ 47: Please change to opengrok directory (can vary on your system)
+ 48: 
+ 49: {{{# cd /usr/opengrok/bin}}}
+ 50: 
+ 51: and run 
+ 52: 
+ 53: {{{# ./OpenGrok deploy}}}
+ 54: 
+ 55: This command will do some sanity checks and will deploy the source.war in its directory to one of detected web application containers.
+ 56: Please follow the error message it provides.
+ 57: If it fails to discover your container, please refer to optional steps on changing web application properties, which has manual steps on how to do this.
+ 58: Alternatively use OPENGROK_TOMCAT_BASE environment variable, e.g.
+ 59: 
+ 60: {{{# OPENGROK_TOMCAT_BASE=/path/to/my/tomcat/install ./OpenGrok deploy}}}
+ 61: 
+ 62: Note that OpenGrok script expects the directory {{code}}/var/opengrok{{/code}} to be available to user running opengrok with all permissions. In root user case it will create all the directories needed, otherwise you have to manually create the directory and grant all permissions to the user used.
+ 63: 
+ 64: ==== __Step.2__ - Populate DATA_ROOT Directory, let the indexer generate the project XML config file, update configuration.xml to your web app ====
+ 65: 
+ 66: Second step is to just run the indexing (can take a lot of time). After this is done, indexer automatically attempts to upload newly generated configuration to the web application. Most probably you will not be able to use {Opengrok before this is done.
+ 67: 
+ 68: Please change to opengrok directory (can vary on your system)
+ 69: 
+ 70: {{{# cd /usr/opengrok/bin}}}
+ 71: 
+ 72: and run, if your SRC_ROOT is prepared under /var/opengrok/src
+ 73: 
+ 74: {{{# ./OpenGrok index}}}
+ 75: 
+ 76: otherwise (if SRC_ROOT is in different directory) run:
+ 77: 
+ 78: {{{# ./OpenGrok index &lt;absolute_path_to_your_SRC_ROOT&gt;}}}
+ 79: 
+ 80: Above command should try to upload latest index status reflected into configuration.xml to a running source web application.
+ 81: Once above command finishes without errors(e.g. SEVERE: Failed to send configuration to localhost:2424
+ 82: ), you should be able to enjoy your opengrok and search your sources using latest indexes and setup.
+ 83: 
+ 84: Congratulations, you should now be able to point your browser to http://&lt;YOUR_WEBAPP_SERVER&gt;:&lt;WEBAPPSRV_PORT&gt;/source to work with your fresh opengrok installation! :-)
+ 85: 
+ 86: \\
+ 87: 
+ 88: At this time we'd like to point out some customization to OpenGrok script for advanced users.
+ 89: A common case would be, that you want the data in some other directory than /var/opengrok.
+ 90: This can be easily achieved by using environment variable OPENGROK_INSTANCE_BASE .
+ 91: E.g. if my opengrok data directory is /tank/opengrok and my source root is in /tank/source and I'd like to get more verbosity I'd run the indexer as:
+ 92: 
+ 93: {{{# OPENGROK_VERBOSE=true OPENGROK_INSTANCE_BASE=/tank/opengrok ./OpenGrok index /tank/source }}}
+ 94: 
+ 95: Since above will also change default location of config file, beforehands(or restart your web container after creating this symlink) I suggest doing below for our case of having opengrok instance in /tank/opengrok :
+ 96: 
+ 97: {{{# ln -s /tank/opengrok/etc/configuration.xml /var/opengrok/etc/configuration.xml }}}
+ 98: 
+ 99: 
+100: A lot more customizations can be found inside the script, you just need to have a look [[at it&gt;&gt;http://src.opensolaris.org/source/xref/opengrok/trunk/OpenGrok]], eventually create a [[configuration&gt;&gt;http://src.opensolaris.org/source/xref/opengrok/trunk/OpenGrok#75]] out of it and use OPENGROK_CONFIGURATION environment variable to point to it. Obviously such setups can be used for nightly cron job updates of index or other automated purposes.
+101: 
+102: == Optional info ==
+103: 
+104: === CLI - Command Line Interface Usage ===
+105: 
+106:  You need to pass location of project file + the query to Search class, e.g. for fulltext search for project with above generated configuration.xml you'd do:
+107: 
+108: {{{$ java -cp ./opengrok.jar org.opensolaris.opengrok.search.Search -R /var/opengrok/etc/configuration.xml -f fulltext_search_string}}}
+109: 
+110:  For quick help run:
+111: 
+112: {{{$ java -cp ./opengrok.jar org.opensolaris.opengrok.search.Search}}}
+113: 
+114:  Sample search:
+115: [[image:CLI-search.png]]
+116: 
+117: ==== Optional need to change web application properties or name ====
+118: 
+119:  You might need to modify the web application if you don't store the configuration file in the default location ({{code}}/var/opengrok/etc/configuration.xml{{/code}}).
+120: 
+121: To** configure **the webapp source.war, look into the parameters defined in **WEB-INF/web.xml** of **source.war** (use {{code}}jar{{/code}} or {{code}}zip/unzip{{/code}} or your preffered zip tool to get into it - e.g. extract the web.xml file from source.war ($ unzip source.war WEB-INF/web.xml) file, edit web.xml and re-package the jar file (zip -u source.war WEB-INF/web.xml) ) file and change those web.xml parameters appropriately. These sample parameters need modifying(there are more options, refer to [[manual&gt;&gt;Project opengrok.WebHome]] or read param comments).
+122: 
+123: * CONFIGURATION - the absolute path to XML file containing project configuration (e.g. /var/opengrok/etc/configuration.xml )
+124: * ConfigAddress - port for remote updates to configuration, optional, but **advised(since there is no authentification)** to be set to **localhost**:&lt;some_port&gt; (e.g. localhost:2424), if you choose some_port below 1024 you have to have root privileges
+125: 
+126: If you need to change name of the web application from source to something else you need to use special option {{code}}-w &lt;new_name&gt;{{/code}} for indexer to create proper xrefs, besides changing the .war file name. Examples below show just deploying source.war, but you can use it to deploy your new_name.war too.
+127: 
+128: ==== Deploy the modified .war file in glassfish/Sun Java App Server: ====
+129: 
+130: * **Option 1:** Use browser and log into {{code}}glassfish web administration interface{{/code}}
+131: 
+132: : Common Tasks / Applications / Web Applications , button **Deploy** and point it to your source.war webarchive
+133: 
+134: * **Option 2:** Copy the source.war file to //GLASSFISH///domains///YOURDOMAIN///autodeploy directory, glassfish will try to deploy it &quot;automagically&quot;.
+135: * **Option 3:** Use cli from //GLASSFISH// directory:
+136: 
+137: {{{# ./bin/asadmin deploy /path/to/source.war}}}
+138: 
+139: ==== Deploy the modified .war file in tomcat: ====
+140: 
+141: * just copy the source.war file to //TOMCAT_INSTALL///webapps directory.
+142: 
+143: ==== Optional setup of security manager for tomcat ====
+144: 
+145:  On some linux distribution you need to setup permissions for SRC_ROOT and DATA_ROOT. Please check your [[tomcat documentation&gt;&gt;http://tomcat.apache.org/tomcat-5.5-doc/security-manager-howto.html]] on this, or simply disable(your risk!) __security manager__ for tomcat (e.g. in debian/ubuntu : in file /etc/default/tomcat5.5 set TOMCAT5_SECURITY=no ).
+146:  A sample approach is to __edit__ /etc/tomcat5.5/04webapps.policy (or /var/apache/tomcat/conf/catalina.policy ) and set this(it will give opengrok all permissions) for your opengrok webapp instance:
+147: 
+148: {{code}}grant codeBase &quot;file:${catalina.home}/webapps/source/-&quot; {     permission java.security.AllPermission;};
+149: grant codeBase &quot;file:${catalina.home}/webapps/source/WEB-INF/lib/-&quot; {     permission java.security.AllPermission;};{{/code}}
+150: 
+151:  Alternatively you can be more restrictive(haven't tested below with a complex setup(e.g. some versioning system which needs local access as cvs), if it will not work, please report to [[discuss&gt;&gt;http://www.opensolaris.org/jive/forum.jspa?forumID=117]]):
+152: 
+153: {{code}}grant codeBase &quot;file:${catalina.home}/webapps/source/-&quot; {  permission java.util.PropertyPermission &quot;subversion.native.library&quot;, &quot;read&quot;;  permission java.lang.RuntimePermission &quot;loadLibrary.svnjavahl-1?;  permission java.lang.RuntimePermission &quot;loadLibrary.libsvnjavahl-1?;  permission java.lang.RuntimePermission &quot;loadLibrary.svnjavahl&quot;;  permission java.util.PropertyPermission &quot;disableLuceneLocks&quot;, &quot;read&quot;;  permission java.util.PropertyPermission &quot;catalina.home&quot;, &quot;read&quot;;  permission java.util.PropertyPermission &quot;java.io.tmpdir&quot;, &quot;read&quot;;  permission java.util.PropertyPermission &quot;org.apache.lucene.lockdir&quot;, &quot;read&quot;;  permission java.util.PropertyPermission &quot;org.apache.lucene.writeLockTimeout&quot;, &quot;read&quot;;  permission java.util.PropertyPermission &quot;org.apache.lucene.commitLockTimeout&quot;, &quot;read&quot;;  permission java.util.PropertyPermission &quot;org.apache.lucene.mergeFactor&quot;, &quot;read&quot;;  permission java.util.PropertyPermission &quot;org.apache.lucene.minMergeDocs&quot;, &quot;read&quot;;  permission java.util.PropertyPermission &quot;org.apache.lucene.*&quot;, &quot;read&quot;;  permission java.io.FilePermission &quot;/var/lib/tomcat5/temp&quot;, &quot;read&quot;;  permission java.io.FilePermission &quot;/var/lib/tomcat5/temp/*&quot;, &quot;write&quot;;  permission java.io.FilePermission &quot;/var/lib/tomcat5/temp/*&quot;, &quot;delete&quot;;};grant codeBase &quot;file:${catalina.home}/webapps/source/WEB-INF/lib/-&quot; {  permission java.util.PropertyPermission &quot;subversion.native.library&quot;, &quot;read&quot;;  permission java.lang.RuntimePermission &quot;loadLibrary.svnjavahl-1?;  permission java.util.PropertyPermission &quot;disableLuceneLocks&quot;, &quot;read&quot;;  permission java.util.PropertyPermission &quot;catalina.home&quot;, &quot;read&quot;;  permission java.util.PropertyPermission &quot;java.io.tmpdir&quot;, &quot;read&quot;;};grant codeBase &quot;file:${catalina.home}/webapps/source/WEB-INF/classes/-&quot; {  permission java.util.PropertyPermission &quot;subversion.native.library&quot;, &quot;read&quot;;  permission java.lang.RuntimePermission &quot;loadLibrary.svnjavahl-1?;  permission java.util.PropertyPermission &quot;disableLuceneLocks&quot;, &quot;read&quot;;  permission java.util.PropertyPermission &quot;catalina.home&quot;, &quot;read&quot;;  permission java.util.PropertyPermission &quot;java.io.tmpdir&quot;, &quot;read&quot;;};{{/code}}
+154: 
+155:  Thanks to Vincent Liu &amp; Flo.
+156: 
+157: 
+158: {{html}}
+159: &lt;script type=&quot;text/javascript&quot;&gt;
+160: var gaJsHost = ((&quot;https:&quot; == document.location.protocol) ? &quot;https://ssl.&quot; : &quot;http://www.&quot;);
+161: document.write(unescape(&quot;%3Cscript src='&quot; + gaJsHost + &quot;google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E&quot;));
+162: &lt;/script&gt;
+163: &lt;script type=&quot;text/javascript&quot;&gt;
+164: try {
+165: var pageTracker = _gat._getTracker(&quot;UA-3665334-1&quot;);
+166: pageTracker._trackPageview();
+167: } catch(err) {}&lt;/script&gt;
+168: {{/html}}
+</textarea>
+</div>
+
+    <div class="clearfloats"></div>
+  </div>    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded Search">
+<h1 class="xwikipaneltitle hidden">Search</h1>
+<div class="xwikipanelcontents">
+<form action="/bin/view/Main/Search">
+<div class="globalsearch">
+<label class="hidden" for="globalsearchinput">Search query</label>
+<input class="globalsearchinput" id="globalsearchinput" name="text" onblur="if (this.value == '') value='search...'; this.blur()" onfocus="if (this.value == 'search...') value=''; this.select();" size="15" type="text" value="search..."></input>
+&nbsp;
+<input alt="Go" class="button" src="/skins/colibri/go.png" type="image" value="Go"></input>
+</div>
+</form>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Project opengrok Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/Discussions">Discussions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/Issues">Issues</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/Roadmap">Tentative Roadmap</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/files">Files / Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/manual">Documentation</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/Repositories">Supported Revision Control Systems</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/Supported+Languages+and+Formats">Supported Languages and Formats</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/builddescription">How to build OpenGrok from source</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/installdescription">How to install OpenGrok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/internals">Internals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/story">Story of OpenGrok</a></span></li>
+</ul></li>
+</ul>
+                              </div>
+</div>
+                        <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded Subsites">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.Subsites');">Subsites</h1>
+<div class="xwikipanelcontents">
+<span class="wikiexternallink"><a href="http://cr.opensolaris.org">Code Reviews</a></span><br/>
+<span class="wikiexternallink"><a href="http://repo.opensolaris.org">SCM Management</a></span><br/>
+<span class="wikiexternallink"><a href="http://pkg.opensolaris.org">Package Search</a></span><br/>
+<span class="wikiexternallink"><a href="http://bugs.opensolaris.org">Bugster</a></span><br/>
+<span class="wikiexternallink"><a href="http://defect.opensolaris.org">Bugzilla</a></span><br/>
+<span class="wikiexternallink"><a href="http://test.opensolaris.org">Test Machines</a></span><br/>
+<span class="wikiexternallink"><a href="http://planet.opensolaris.org">Planet</a></span><br/>
+<span class="wikiexternallink"><a href="http://mail.opensolaris.org">Mailing Lists</a></span><br/>
+<span class="wikiexternallink"><a href="http://poll.opensolaris.org">Elections & Polls</a></span><br/>
+<span class="wikiexternallink"><a href="http://arc.opensolaris.org">ARC Case Logs</a></span><br/>
+<span class="wikiexternallink"><a href="http://jucr.opensolaris.org">Source Juicer</a></span><br/>
+<span class="wikiexternallink"><a href="http://pkgfactory.opensolaris.org">Package Factory</a></span><br/>
+<span class="wikiexternallink"><a href="http://auth.opensolaris.org">User Authentication</a></span><br/>
+</div>
+</div>
+                        
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2012, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

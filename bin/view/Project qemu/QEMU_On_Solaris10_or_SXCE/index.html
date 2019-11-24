@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Building and Installing QEMU on Solaris 10 or SXCE (Updated Jun 22, 2008) (Project qemu.QEMU_On_Solaris10_or_SXCE) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+qemu/QEMU_On_Solaris10_or_SXCE" />
+                    <link rel="canonical" href="/bin/view/Project+qemu/QEMU_On_Solaris10_or_SXCE" />
+                            <meta name="document" content="Project qemu.QEMU_On_Solaris10_or_SXCE"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Project qemu"/>
+    <meta name="page" content="QEMU_On_Solaris10_or_SXCE"/>
+    <meta name="version" content="1.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Project+qemu/pages/QEMU_On_Solaris10_or_SXCE"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Building and Installing QEMU on Solaris 10 or SXCE (Updated Jun 22, 2008)" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project qemu";
+XWiki.currentPage = "QEMU_On_Solaris10_or_SXCE";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Project+qemu/QEMU_On_Solaris10_or_SXCE";
+window.docediturl = "/bin/edit/Project+qemu/QEMU_On_Solaris10_or_SXCE";
+window.docsaveurl = "/bin/save/Project+qemu/QEMU_On_Solaris10_or_SXCE";
+window.docgeturl = "/bin/get/Project+qemu/QEMU_On_Solaris10_or_SXCE";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Project_qemu viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bqemu%2FQEMU_On_Solaris10_or_SXCE"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+qemu/"><strong>Project qemu</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Project+qemu" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>
+            </td>
+            <td style="width: 99%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                              <a href='/bin/view/Project+qemu/host'>Building QEMU</a> <span class='separator'>&#187;</span> <span class='current'>Building and Installing QEMU on Solaris 10 or SXCE (Updated Jun 22, 2008)</span>
+                </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+qemu/QEMU_On_Solaris10_or_SXCE?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+qemu/QEMU_On_Solaris10_or_SXCE?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+qemu/QEMU_On_Solaris10_or_SXCE?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+qemu/QEMU_On_Solaris10_or_SXCE?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+qemu/QEMU_On_Solaris10_or_SXCE?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+qemu/QEMU_On_Solaris10_or_SXCE?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+qemu/QEMU_On_Solaris10_or_SXCE?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+qemu/QEMU_On_Solaris10_or_SXCE?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+qemu/QEMU_On_Solaris10_or_SXCE?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+qemu/QEMU_On_Solaris10_or_SXCE?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+qemu/QEMU_On_Solaris10_or_SXCE?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          <span class="submenuitem "><a href="/bin/view/Project+qemu/QEMU_On_Solaris10_or_SXCE?xpage=copy" id="tmActionCopy" class="tmActionCopy">Copy</a></span>
+      </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>Building and Installing QEMU on Solaris 10 or SXCE (Updated Jun 22, 2008)</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h2 id="HBuildingandInstallingQEMUonaSolaris10orSXCEHost28UpdatedJuly032C200829"><span>Building and Installing QEMU on a Solaris 10 or SXCE Host (Updated July 03, 2008)</span></h2><h3 id="HUpdateJuly032C2008"><span>Update July 03, 2008</span></h3><p>Updated kqemu-1.4.0pre1 (fix file name 1.0.4pre1 -&gt; 1.4.0pre1)<br/>and increase default monitor size from 32MB to 128MB.</p><p>Updated kqemu-1.3.0pre11 (fix file name 1.0.3pre11 -&gt; 1.3.0pre11)<br/>and increase default monitor size from 32MB to 128MB.</p><h3 id="HIntro:"><span>Intro:</span></h3><p>QEMU with the TCG generator and KQEMU-1.4.0pre1 are used together, or<br/>QEMU with the Dyngen generator and KQEMU-1.3.0pre11 are used together.<br/>Do not mix the two code bases.</p><h3 id="HPrerequisites:"><span>Prerequisites:</span></h3><ul><li><span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Project+qemu/downloads/qemu-0.9.1-06222008-sol.tar.bz2">QEMU TCG (Tiny Code Generator) source SVN version 0.9.1, June 22, 2008</a></span></li><li>Use subversion to get the latest trunk - svn co <span class="wikiexternallink"><a class="wikimodel-freestanding" href="svn://svn.savannah.nongnu.org/qemu/trunk"><span class="wikigeneratedlinkcontent">svn://svn.savannah.nongnu.org/qemu/trunk</span></a></span> qemu</li></ul><p>and&nbsp;</p><ul><li>Optional <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Project+qemu/downloads/kqemu-1.4.0pre1-07032008-sol.tar.bz2">KQEMU source TCG Enabled QEMU, version 1.4.0pre1, July 03, 2008</a></span> the i386/x86_64 kernel acceleration module</li></ul><h1 id="HOR"><span>OR</span></h1><ul><li><span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Project+qemu/downloads/qemu-src-CVSdrop-12112007-pluspatches.tar.bz2">QEMU Dyngen Enabled source, version 0.9.1, December 11, 2007</a></span></li></ul><p>and</p><ul><li>Optional <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Project+qemu/downloads/kqemu-1.3.0pre11-07032008-sol.tar.bz2">KQEMU source for Dyngen Enabled QEMU, version 1.3.0pre11, July 03, 2008</a></span> the i386/x86_64 kernel acceleration module</li></ul><ul><li><span class="wikilink"><a href="/bin/view/Project+qemu/gcc%2Dfailures">gcc3.4.x</a></span> with the existing Dyngen code on the QEMU OpenSolaris<br/>Project page, gcc-3.4.x is required. with the current SVN TCG code, we may be able to use gcc4 or Studio 12.</li><li><span class="wikiexternallink"><a href="http://www.libsdl.org">libSDL</a></span>. Native on Solaris Express Build 62 or later; otherwise, you will need to roll your own <span class="wikiexternallink"><a href="http://www.libsdl.org/release/SDL-1.2.12.tar.gz">from source</a></span>, or install the <span class="wikiexternallink"><a href="http://www.blastwave.org">Blastwave</a></span> package. Note the Blastwave package is 32-bit only</li><li>/usr/ccs/bin/ar - the library archiver</li><li>/usr/sfw/bin/texi2html - convert texinfo files to html</li><li>pod2man - from /usr/perl5/bin, or /opt/csw/bin if using Blastwave</li><li>gmake - from /usr/sfw/bin, or /opt/csw/bin if using Blastwave</li><li>ginstall - from /opt/csw/bin (CSWfileutils) or use --install=/usr/ucb/install</li></ul><ul><li>Optional&nbsp;</li><li><span class="wikiexternallink"><a href="http://www.opensound.com/oss.html">Open Sound System</a></span>. By default, QEMU can use SunAudio through libSDL, but the Open Sound System produces better results</li></ul><p>Consult the <span class="wikilink"><a href="/bin/view/Project+qemu/Dependencies">dependencies</a></span> page for more detailed information. Pre-packaged and patched sources are available from the <span class="wikilink"><a href="/bin/view/Project+qemu/downloads">downloads page</a></span>.</p><p>Your path should look something like this if you're using Sun's provided GCC and libSDL (as is available on Solaris Express Build 62 or later):</p><blockquote><p>&nbsp;PATH=/usr/sfw/bin:/usr/bin:/usr/ccs/bin:/usr/perl5/bin</p></blockquote><p>If you are compiling QEMU for a 64-bit host on Nevada Build 62 or later, <br/>your path should look like:</p><blockquote><p>&nbsp;PATH=/usr/bin/amd64:/usr/sfw/bin:/usr/ccs/bin:/usr/perl5/bin</p></blockquote><p>If you are using Sun's provided GCC and libSDL from <span class="wikiexternallink"><a href="http://www.blastwave.org">Blastwave</a></span> on a 32-bit host:</p><blockquote><p>&nbsp;PATH=/usr/sfw/bin:/usr/bin:/usr/ccs/bin:/usr/perl5/bin:/opt/csw/bin</p></blockquote><p>If you are using Blastwave's gcc <em>and</em> libSDL:</p><blockquote><p>&nbsp;PATH=/opt/csw/gcc3/bin:/opt/csw/bin:/usr/sfw/bin:/usr/bin:/usr/ccs/bin:/usr/perl5/bin</p></blockquote><div class="wikimodel-emptyline"></div><p>If you are compiling QEMU for a 64-bit host and &nbsp;you want to roll everything from source, then you will need the 64-bit version of sdl-config and Sun's GCC at the beginning of the path as follows:</p><blockquote><p>&nbsp;PATH=/opt/local/bin/amd64:/usr/sfw/bin:/usr/bin:/usr/sbin:/usr/ccs/bin:/usr/perl5/bin:/opt/csw/bin</p></blockquote><h3 id="HBuildingandInstallingQEMU"><span>Building and Installing QEMU</span></h3><p>If you're reading this page, you get the hint that you need to disable the gcc check, which assumes that you haven't read any of the documentation yet. Seeing as you're here, you are expected to be using a recommended gcc compiler...</p><p>32-bit:</p><blockquote><p>&nbsp;./configure --prefix=/opt/qemu --target-list=i386-softmmu --disable-gcc-check</p></blockquote><blockquote><p>&nbsp;gmake install</p></blockquote><p>64-bit:</p><blockquote><p>&nbsp;./configure --prefix=/opt/qemu &nbsp;--target-list=x86_64-softmmu,i386-softmmu --disable-gcc-check</p></blockquote><blockquote><p>&nbsp;gmake install</p></blockquote><h4 id="HNote:donotuseanyofthe--sparc_cpuconfiguredirectives.TheymaynotfunctionasyouexpectonSolaris.ThedefaultsareworkingcorrectlyonaSparcprocessorrunningSolaris."><span>Note: &nbsp;do not use any of the --sparc_cpu configure directives. They may not function as you expect on Solaris. &nbsp;The defaults are working correctly on a Sparc processor running Solaris.</span></h4><h3 id="HBuildingandInstallingtheKQEMUModule"><span>Building and Installing the KQEMU Module</span></h3><p>(duplicating the contents of README.solaris in the kqemu tarball)</p><p>32-bit:</p><blockquote><p>&nbsp;./configure</p></blockquote><blockquote><p>&nbsp;gmake kqemu32</p></blockquote><blockquote><p>&nbsp;gmake install32</p></blockquote><blockquote><p>&nbsp;chmod 666 /dev/kqemu</p></blockquote><p>64-bit:</p><blockquote><p>&nbsp;./configure</p></blockquote><blockquote><p>&nbsp;gmake kqemu64</p></blockquote><blockquote><p>&nbsp;gmake install64</p></blockquote><blockquote><p>&nbsp;chmod 666 /dev/kqemu</p></blockquote>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:17<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by admin on 2009/10/26 12:17
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Project qemu Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/QEMUGuests">Configuring Various QEMU Guests</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/Ubuntu">Ubuntu Linux</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/Win98SE">Windows 98 SE</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/guest">Open Solaris Guest</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/Qemu_Networking">Understanding Networking in QEMU Guests</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/downloads">QEMU Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/host">Building QEMU</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/BuildingOnOS200805">Building and Installing QEMU on OpenSolaris nee OS200805</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/Dependencies">Dependencies for Building QEMU on Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/QEMU_On_Solaris10_or_SXCE">Building and Installing QEMU on Solaris 10 or SXCE (Updated Jun 22, 2008)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/gcc%2Dfailures">Which gcc on Solaris cannot compile QEMU?</a></span></li>
+</ul></li>
+</ul>
+                    </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2011, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

@@ -1,0 +1,1465 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <title>
+                  JavaScript Tracing (Project mozilla-dtrace.JavaScript) - XWiki
+              </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="imagetoolbar" content="no"/>
+                <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+mozilla%2Ddtrace/JavaScript" />
+                        <meta name="document" content="Project mozilla-dtrace.JavaScript"/>
+    <meta name="space" content="Project mozilla-dtrace"/>
+    <meta name="page" content="JavaScript"/>
+        <meta name="revisit-after" content="7 days" />
+<meta name="description" content="JavaScript Tracing" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+
+        <!-- com.xpn.xwiki.plugin.skinx.LinkExtensionPlugin -->
+    <link href="/bin/skin/skins/oso/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/oso/os_base1.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/oso/print.css" rel="stylesheet" type="text/css" media="print" />
+        
+
+
+    
+
+    <link href="/resources/js/xwiki/fullscreenedit/fullscreenEdit.css" rel="stylesheet" type="text/css" />
+<link href="/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript">
+var script1 = document.createElement('script')
+script1.src = "/resources/js/prototype/prototype.js"
+var script2 = document.createElement('script')
+script2.src = "/bin/skin/resources/js/xwiki/xwiki.js"
+var script3 = document.createElement('script')
+script3.src = "/resources/js/xwiki/suggest/ajaxSuggest.js"
+document.getElementsByTagName('head')[0].appendChild(script1);
+document.getElementsByTagName('head')[0].appendChild(script2);
+document.getElementsByTagName('head')[0].appendChild(script3);
+</script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.editor = "";
+XWiki.viewer = "";
+// ]]>
+</script>
+
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js'></script><script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js'></script>
+
+  </head>
+    	<body id="body" class="xwiki viewbody hideright">
+  <!-- These elements will be closed in the footer vm file -->
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+
+  <br/>
+  <br/>
+  <div id="Masthead">
+    <h1><a href="/bin/view/Main/">OpenSolaris</a></h1>
+    <a href="/bin/view/Main/" id="MastheadLogo"></a>
+    <a href="/bin/view/Main/" title="Home" rel="home"></a>
+    <div id="Iconbar">
+	<a id="CollectivesIcon" href="/bin/view/Main/collectives">Collectives</a>
+	<a id="DiscussionsIcon" href="/bin/view/Main/discussions">Discussions</a>
+	<a id="DocumentationIcon" href="/bin/view/Main/documentation">Documentation</a>
+	<a id="DownloadIcon" href="/bin/view/Main/downloads">Download</a>
+	<a id="SourceBrowserIcon" href="http://src.opensolaris.org">Source Browser</a>
+	<a id="FreeCD" href="http://www.opensolaris.org/os/TryOpenSolaris/">Free CD</a>
+    </div>
+  </div>
+
+
+ <div class="layoutsection">
+<div class="minwidthb"></div>
+
+    <div style="text-align:right;">
+      <a class="glink" href="http://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bmozilla%252Ddtrace%2FJavaScript%3Fviewer%3Dcode%26%2338%3Blanguage%3Den" id="headerlogin">Log-in</a><span class="separator"> | </span>
+  <span class="glink" id="headerlanguages">
+  <a href="/bin/view/Project+mozilla%2Ddtrace/JavaScript?language=en">en</a>
+    </span>
+    </div> 
+</div>
+
+ <div id="headerspace" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+  <div id="breadcrumbs">
+    <span class="breadcrumbspace"><a href="/bin/view/Project+mozilla%2Ddtrace/">Project mozilla-dtrace</a>: </span>
+<a href='/bin/view/Project+mozilla%2Ddtrace/JavaScript'>JavaScript Tracing</a>
+  </div>
+<hr/>
+</div>
+
+
+<div id="menuview"> 
+  <div id="actionmenu" class="layoutsubsection">
+<h3 id="xwikimenutitle" class="hidden">Top Menu</h3>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+<div class="topmenuentry" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmShow">
+<a class="tme"  href="/bin/view/Project+mozilla%2Ddtrace/JavaScript?viewer=code&amp;language=en" ><strong>Show</strong></a><span class="hidden menucolon">: </span><span class="submenu hidden">
+<span class="submenuitem"><a href="/bin/view/Project+mozilla%2Ddtrace/JavaScript?viewer=comments&amp;language=en" id="tmShowComments">Comments</a></span>
+<span class="submenuitem"><a href="/bin/view/Project+mozilla%2Ddtrace/JavaScript?viewer=attachments&amp;language=en" id="tmShowAttachments">Attachments</a></span>
+<span class="submenuitem"><a href="/bin/view/Project+mozilla%2Ddtrace/JavaScript?viewer=history&amp;language=en" id="tmShowHistory">History</a></span>
+<span class="submenuitem"><a href="/bin/view/Project+mozilla%2Ddtrace/JavaScript?viewer=information&amp;language=en" id="tmShowInformation">Information</a></span>
+</span></div>
+ <div class="topmenuentry" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmPrint">
+<a class="tme"  href="javascript:window.print()" ><strong>Print</strong></a><span class="hidden menucolon">: </span><span class="submenu hidden">
+<span class="submenuitem"><a href="javascript:window.print()" id="tmPrintAction">Print</a></span>
+<span class="submenuitem"><a href="/bin/view/Project+mozilla%2Ddtrace/JavaScript?xpage=print&amp;language=en" id="tmPrintPreview">Print preview</a></span>
+<span class="submenuseparator">&nbsp;</span>
+<span class="submenuitem"><a href="/bin/export/Project+mozilla%2Ddtrace/JavaScript?format=pdf&amp;language=en" id="tmExportPdf">Export as PDF</a></span>
+<span class="submenuitem"><a href="/bin/export/Project+mozilla%2Ddtrace/JavaScript?format=rtf&amp;language=en" id="tmExportRtf">Export as RTF</a></span>
+<span class="submenuitem"><a href="/bin/export/Project+mozilla%2Ddtrace/JavaScript?format=html&amp;language=en" id="tmExportHtml">Export as HTML</a></span>
+<span class="submenuitem"><a href="/bin/export/Project+mozilla%2Ddtrace/JavaScript?format=xar&amp;name=Project+mozilla%2Ddtrace.JavaScript&amp;pages=Project+mozilla%2Ddtrace.JavaScript&amp;language=en" id="tmExportXar">Export as XAR</a></span>
+</span></div>
+</div>
+</div>
+
+</div>
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+<div class="main layoutsubsection">
+<h1><span>Wiki code for <em>JavaScript Tracing</em></span></h1>
+<a href="/bin/view/Project+mozilla%2Ddtrace/JavaScript?viewer=code&showlinenumbers=0&language=en">Hide Line numbers</a>
+<br />
+<br />
+<textarea readonly="readonly" style="width: 100%; height: 300px;">
+1: = JavaScript Tracing
+2: 
+3:  The following are example scripts for tracing JavaScript using the [[Mozilla DTrace&#62;&#62;Project mozilla-dtrace.WebHome]] provider.
+4: 
+5: == Example Scripts
+6: 
+7: These scripts have been writen to trace activity from all browsers on the system that support the Mozilla DTrace provider; to trace single browser instances, modify the scripts to match the provider &#34;javascript$target&#34; and run the scripts with &#34;-p PID&#34; as the argument.
+8: 
+9: A feature of DTrace is that the browser does not need to be restarted for DTrace to work. The JavaScript probes cause zero overhead until they are enabled by a DTrace script, and tracing begins.
+10: 
+11: === Example Target: clock.html
+12: 
+13:  This simple JavaScript clock will be run as the target for the tracing demonstrations that follow,
+14: 
+15: {{{
+16: 
+17: &#60;HTML&#62;
+18: &#60;HEAD&#62;
+19: &#60;TITLE&#62;Clock, JavaScript&#60;/TITLE&#62;
+20: &#60;SCRIPT type=&#34;text/javascript&#34;&#62;
+21: function padZero(i)
+22: {
+23:         if (i &#60; 10) return &#34;0&#34; + i;
+24:         return i;
+25: }
+26: 
+27: function startTime()
+28: {
+29:         var now = new Date;
+30:         var time = padZero(now.getHours()) + &#34;:&#34; +
+31:             padZero(now.getMinutes()) + &#34;:&#34; +
+32:             padZero(now.getSeconds());
+33:         document.getElementById(&#8217;clock&#8217;).innerHTML = &#34;time: &#34; + time + &#34;&#60;br&#62;&#34;;
+34:         var timeout = setTimeout(&#8217;startTime()&#8217;, 1000);
+35: }
+36: &#60;/SCRIPT&#62;
+37: &#60;/HEAD&#62;
+38: &#60;BODY onload=&#34;startTime()&#34;&#62;
+39: &#60;DIV id=&#34;clock&#34;&#62;&#60;/DIV&#62;
+40: &#60;/BODY&#62;
+41: &#60;/HTML&#62;
+42: 
+43: }}}
+44: 
+45: === js_funccalls.d
+46: 
+47:  This is a simple script to count the number of JavaScript function calls while the script was running.
+48: 
+49: {{{
+50: 
+51: #!/usr/sbin/dtrace -Zs
+52: /*
+53:  * js_funccalls.d - measure JavaScript function calls using DTrace.
+54:  *                  Written for the Solaris Mozilla DTrace provider.
+55:  *
+56:  * This traces JavaScript activity from all running browers on the system
+57:  * which support the mozilla DTrace provider.
+58:  *
+59:  * USAGE: js_calls.d            # hit Ctrl-C to end
+60:  *
+61:  * FIELDS:
+62:  *              FILE            Filename that contained the function
+63:  *              FUNC            JavaScript function name
+64:  *              CALLS           Function calls during this sample
+65:  *
+66:  * Filename and function names are printed if available, else &#34;&#60;null&#62;&#34;.
+67:  */
+68: #pragma ident   &#34;@(#)js_funccalls.d     1.3     07/03/26 SMI&#34;
+69: 
+70: #pragma D option quiet
+71: 
+72: dtrace:::BEGIN
+73: {
+74:         printf(&#34;Tracing... Hit Ctrl-C to end.\n&#34;);
+75: }
+76: 
+77: javascript*:::function-entry
+78: {
+79:         @funcs[basename(copyinstr(arg0)), copyinstr(arg2)] = count();
+80: }
+81: 
+82: dtrace:::END
+83: {
+84:         printf(&#34; %-32s %-36s %8s\n&#34;, &#34;FILE&#34;, &#34;FUNC&#34;, &#34;CALLS&#34;);
+85:         printa(&#34; %-32s %-36s %@8d\n&#34;, @funcs);
+86: }
+87: 
+88: }}}
+89: 
+90:  Example output,
+91: 
+92: {{{
+93: 
+94: # ./js_funccalls.d 
+95: Tracing... Hit Ctrl-C to end.
+96: ^C
+97:  FILE                             FUNC                                    CALLS
+98:  nsMicrosummaryService.js         GetSources                                  1
+99:  nsMicrosummaryService.js         MSS__getBookmarks                           1
+100:  nsMicrosummaryService.js         MSS__updateMicrosummaries                   1
+101:  nsMicrosummaryService.js         getPref                                     1
+102:  nsMicrosummaryService.js         getPrefType                                 1
+103:  nsMicrosummaryService.js         getService                                  1
+104:  nsMicrosummaryService.js         hasMoreElements                             1
+105:  nsMicrosummaryService.js         max                                         1
+106:  nsMicrosummaryService.js         now                                         1
+107:  nsMicrosummaryService.js         GetResource                                 2
+108:  nsMicrosummaryService.js         MSS__resource                               2
+109:  clock.html                       getElementById                              3
+110:  clock.html                       getHours                                    3
+111:  clock.html                       getMinutes                                  3
+112:  clock.html                       getSeconds                                  3
+113:  clock.html                       setTimeout                                  3
+114:  clock.html                       startTime                                   3
+115:  clock.html                       padZero                                     9
+116: 
+117: }}}
+118: 
+119: Apart from events from clock.html, the script also traced some events from the browser.
+120: 
+121: === js_funcinfo.d
+122: 
+123:  This script is similar to js_funccalls.d, however prints additional call information which is especially useful for tracing anonymous functions,
+124: 
+125: {{{
+126: 
+127: # ./js_funcinfo.d
+128: Tracing... Hit Ctrl-C to end.
+129: ^C
+130:  BASE[FILE:LINE]         FUNCNAME             RUN[FILE:LINE]             CALLS
+131:  clock2.html:7           getElementById       clock2.html:12                 1
+132:  clock2.html:7           getHours             clock2.html:9                  1
+133:  clock2.html:7           getMinutes           clock2.html:10                 1
+134:  clock2.html:7           getSeconds           clock2.html:11                 1
+135:  clock2.html:7           setTimeout           clock2.html:13                 1
+136:  clock2.html:7           startTime            clock2.html:13                 1
+137:  clocklib.js:2           padLibZero           clock2.html:10                 1
+138:  clocklib.js:2           padLibZero           clock2.html:11                 1
+139:  clocklib.js:2           padLibZero           clock2.html:9                  1
+140: 
+141: }}}
+142: 
+143: The &#34;BASE&#34; details show where the function was declared or first used; the &#34;RUN&#34; info shows where the function was executed.
+144: 
+145: === js_funcflow.d
+146: 
+147:  This script traces the flow of JavaScript functions, by indenting as a function is entered and un-indenting as the function completes.
+148: 
+149: {{{
+150: 
+151: #!/usr/sbin/dtrace -Zs
+152: /*
+153:  * js_funcflow.d - snoop JavaScript function execution using DTrace.
+154:  *                 Written for the Solaris Mozilla DTrace provider.
+155:  *
+156:  * This traces JavaScript activity from all running browers on the system
+157:  * which support the mozilla DTrace provider.
+158:  *
+159:  * USAGE: js_funcflow.d                 # hit Ctrl-C to end
+160:  *
+161:  * This watches JavaScript function entries and returns, and indents child
+162:  * function calls. For busy JavaScript, the output will be very verbose.
+163:  *
+164:  * FIELDS:
+165:  *              C               CPU-id
+166:  *              TIME            Time of function call
+167:  *              FILE            Filename that this function belongs to
+168:  *              FUNC            JavaScript function name
+169:  *
+170:  * Filename and function names are printed if available, else &#34;&#60;null&#62;&#34;.
+171:  *
+172:  * WARNING: Watch the first column carefully, it prints the CPU-id. If it
+173:  * changes, then it is very likely that the output has been shuffled.
+174:  */
+175: #pragma ident   &#34;@(#)js_funcflow.d      1.3     07/03/26 SMI&#34;
+176: 
+177: #pragma D option quiet
+178: #pragma D option switchrate=10
+179: 
+180: dtrace:::BEGIN
+181: {
+182:         depth = 0;
+183:         printf(&#34;%s %-20s  %-22s   ~-- %s\n&#34;, &#34;C&#34;, &#34;TIME&#34;, &#34;FILE&#34;, &#34;FUNC&#34;);
+184: }
+185: 
+186: javascript*:::function-entry
+187: {
+188:         depth++;
+189:         printf(&#34;%d %-20Y  %-22s %*s-&#62; %s\n&#34;, cpu, walltimestamp, 
+190:             basename(copyinstr(arg0)), depth*2, &#34;&#34;, copyinstr(arg2));
+191: }
+192: 
+193: javascript*:::function-return
+194: {
+195:         printf(&#34;%d %-20Y  %-22s %*s&#60;- %s\n&#34;, cpu, walltimestamp,
+196:             basename(copyinstr(arg0)), depth*2, &#34;&#34;, copyinstr(arg2));
+197:         depth~--;
+198: }
+199: 
+200: }}}
+201: 
+202: Running this script while clock.html runs produces,
+203: 
+204: {{{
+205: 
+206: # ./js_funcflow.d 
+207: C TIME                  FILE                     ~-- FUNC
+208: 0 2007 Mar 26 16:42:09  clock.html               -&#62; startTime
+209: 0 2007 Mar 26 16:42:09  clock.html                 -&#62; getHours
+210: 0 2007 Mar 26 16:42:09  clock.html                 &#60;- getHours
+211: 0 2007 Mar 26 16:42:09  clock.html                 -&#62; padZero
+212: 0 2007 Mar 26 16:42:09  clock.html                 &#60;- padZero
+213: 0 2007 Mar 26 16:42:09  clock.html                 -&#62; getMinutes
+214: 0 2007 Mar 26 16:42:09  clock.html                 &#60;- getMinutes
+215: 0 2007 Mar 26 16:42:09  clock.html                 -&#62; padZero
+216: 0 2007 Mar 26 16:42:09  clock.html                 &#60;- padZero
+217: 0 2007 Mar 26 16:42:09  clock.html                 -&#62; getSeconds
+218: 0 2007 Mar 26 16:42:09  clock.html                 &#60;- getSeconds
+219: 0 2007 Mar 26 16:42:09  clock.html                 -&#62; padZero
+220: 0 2007 Mar 26 16:42:09  clock.html                 &#60;- padZero
+221: 0 2007 Mar 26 16:42:09  clock.html                 -&#62; getElementById
+222: 0 2007 Mar 26 16:42:09  clock.html                 &#60;- getElementById
+223: 0 2007 Mar 26 16:42:09  clock.html                 -&#62; setTimeout
+224: 0 2007 Mar 26 16:42:09  clock.html                 &#60;- setTimeout
+225: 0 2007 Mar 26 16:42:09  clock.html               &#60;- startTime
+226: 0 2007 Mar 26 16:42:10  clock.html               -&#62; startTime
+227: 0 2007 Mar 26 16:42:10  clock.html                 -&#62; getHours
+228: 0 2007 Mar 26 16:42:10  clock.html                 &#60;- getHours
+229: 0 2007 Mar 26 16:42:10  clock.html                 -&#62; padZero
+230: 0 2007 Mar 26 16:42:10  clock.html                 &#60;- padZero
+231: 0 2007 Mar 26 16:42:10  clock.html                 -&#62; getMinutes
+232: 0 2007 Mar 26 16:42:10  clock.html                 &#60;- getMinutes
+233: 0 2007 Mar 26 16:42:10  clock.html                 -&#62; padZero
+234: 0 2007 Mar 26 16:42:10  clock.html                 &#60;- padZero
+235: 0 2007 Mar 26 16:42:10  clock.html                 -&#62; getSeconds
+236: 0 2007 Mar 26 16:42:10  clock.html                 &#60;- getSeconds
+237: 0 2007 Mar 26 16:42:10  clock.html                 -&#62; padZero
+238: 0 2007 Mar 26 16:42:10  clock.html                 &#60;- padZero
+239: 0 2007 Mar 26 16:42:10  clock.html                 -&#62; getElementById
+240: 0 2007 Mar 26 16:42:10  clock.html                 &#60;- getElementById
+241: 0 2007 Mar 26 16:42:10  clock.html                 -&#62; setTimeout
+242: 0 2007 Mar 26 16:42:10  clock.html                 &#60;- setTimeout
+243: 0 2007 Mar 26 16:42:10  clock.html               &#60;- startTime
+244: ^C
+245: 
+246: }}}
+247: 
+248: The execution of the clock.html script can be seen. This tool isn&#8217;t as useful as it may appear - serious JavaScript applications will produce hundreds of pages of output per second. Perhaps this is more useful as a demonstration of DTrace capabilities.
+249: 
+250: === js_functime.d
+251: 
+252:  The following script traces elapsed times for JavaScript functions. Elapsed is the time from the function entry to the return, and may include other JavaScript functions and time the JavaScript spent off the CPU. If you&#8217;d prefer other ways to calculate time spent in functions, hack away...
+253: 
+254: {{{
+255: 
+256: #!/usr/sbin/dtrace -Zs
+257: /*
+258:  * js_functime.d - measure JavaScript function times using DTrace.
+259:  *                 Written for the Solaris Mozilla DTrace provider.
+260:  *
+261:  * This traces JavaScript activity from all running browers on the system
+262:  * which support the mozilla DTrace provider.
+263:  *
+264:  * USAGE: js_functime.d         # hit Ctrl-C to end
+265:  *
+266:  * FIELDS:
+267:  *              FILE            Filename that contained the function
+268:  *              FUNCTION        JavaScript function name
+269:  *              COUNT           Number of calls during this sample
+270:  *              AVG(us)         Average function elapsed time, us
+271:  *              SUM(us)         Total function elapsed time, us
+272:  *
+273:  * This measures the elapsed times for function entries to returns, and
+274:  * provides some aggregated statistics. Be aware that the elapsed time for
+275:  * a function is overlapping; it includes the elapsed times for child
+276:  * functions that it called.
+277:  *
+278:  * Filename and function names are printed if available, else &#34;&#60;null&#62;&#34;.
+279:  */
+280: #pragma ident   &#34;@(#)js_functime.d      1.3     07/03/26 SMI&#34;
+281: 
+282: #pragma D option quiet
+283: 
+284: this string str;
+285: 
+286: dtrace:::BEGIN
+287: {
+288:         printf(&#34;Tracing... Hit Ctrl-C to end.\n&#34;);
+289:         depth = 0;
+290: }
+291: 
+292: javascript*:::function-entry
+293: {
+294:         self-&#62;depth++;
+295:         self-&#62;start[copyinstr(arg2), self-&#62;depth] = timestamp;
+296: }
+297: 
+298: javascript*:::function-return
+299: /(this-&#62;str = copyinstr(arg2)) != NULL &#38;&#38; self-&#62;start[this-&#62;str, self-&#62;depth]/
+300: {
+301:         this-&#62;file = basename(copyinstr(arg0));
+302:         this-&#62;elapsed = timestamp - self-&#62;start[this-&#62;str, self-&#62;depth];
+303:         @num[this-&#62;file, this-&#62;str] = count();
+304:         @eavg[this-&#62;file, this-&#62;str] = avg(this-&#62;elapsed);
+305:         @esum[this-&#62;file, this-&#62;str] = sum(this-&#62;elapsed);
+306:         @edist[this-&#62;str] = quantize(this-&#62;elapsed);
+307:         self-&#62;start[this-&#62;file, self-&#62;depth] = 0;
+308:         self-&#62;depth~--;
+309: }
+310: 
+311: dtrace:::END
+312: {
+313:         normalize(@eavg, 1000);
+314:         normalize(@esum, 1000);
+315:         printf(&#34;ELAPSED TIME DISTRIBUTION,\n&#34;);
+316:         printa(@edist);
+317:         setopt(&#34;aggsortpos&#34;, &#34;2&#34;);
+318:         printf(&#34;%-33s %45s\n&#34;, &#34;{{{___}}} OVERLAP TIMES: {{{___}}}&#34;,
+319:             &#34;{{{______}}} ELAPSED {{{_____}}}&#34;);
+320:         printf(&#34;%-24s %-23s %6s %10s %12s\n&#34;, &#34;FILE&#34;, &#34;FUNCTION&#34;,
+321:             &#34;COUNT&#34;, &#34;AVG(us)&#34;, &#34;SUM(us)&#34;);
+322:         printa(&#34;%-24.24s %-23.23s %@6d %@10d %@12d\n&#34;, @num, @eavg, @esum);
+323: }
+324: 
+325: }}}
+326: 
+327:  Example output,
+328: 
+329: {{{
+330: 
+331: # ./js_functime.d 
+332: Tracing... Hit Ctrl-C to end.
+333: ^C
+334: ELAPSED TIME DISTRIBUTION,
+335: 
+336:   getMinutes                                        
+337:            value  ~------------- Distribution ~------------- count    
+338:             2048 |                                         0        
+339:             4096 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 3        
+340:             8192 |                                         0        
+341: 
+342:   getSeconds                                        
+343:            value  ~------------- Distribution ~------------- count    
+344:             2048 |                                         0        
+345:             4096 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 3        
+346:             8192 |                                         0        
+347: 
+348:   getHours                                          
+349:            value  ~------------- Distribution ~------------- count    
+350:             8192 |                                         0        
+351:            16384 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 3        
+352:            32768 |                                         0        
+353: 
+354:   padZero                                           
+355:            value  ~------------- Distribution ~------------- count    
+356:             2048 |                                         0        
+357:             4096 |@@@@@@@@@@@@@@@@@@@@@@@@@@@              6        
+358:             8192 |@@@@@@@@@@@@@                            3        
+359:            16384 |                                         0        
+360: 
+361:   getElementById                                    
+362:            value  ~------------- Distribution ~------------- count    
+363:            16384 |                                         0        
+364:            32768 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 3        
+365:            65536 |                                         0        
+366: 
+367:   setTimeout                                        
+368:            value  ~------------- Distribution ~------------- count    
+369:            16384 |                                         0        
+370:            32768 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 3        
+371:            65536 |                                         0        
+372: 
+373:   startTime                                         
+374:            value  ~------------- Distribution ~------------- count    
+375:           262144 |                                         0        
+376:           524288 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 3        
+377:          1048576 |                                         0        
+378: 
+379: {{{___}}} OVERLAP TIMES: {{{___}}}                                     {{{______}}} ELAPSED {{{_____}}}
+380: FILE                     FUNCTION                 COUNT    AVG(us)      SUM(us)
+381: clock.html               getSeconds                   3          6           20
+382: clock.html               getMinutes                   3          7           22
+383: clock.html               padZero                      9          7           64
+384: clock.html               getHours                     3         26           78
+385: clock.html               getElementById               3         44          132
+386: clock.html               setTimeout                   3         51          155
+387: clock.html               startTime                    3        975         2925
+388: 
+389: }}}
+390: 
+391: The example output shows that the slowest function was startTime, which isn&#8217;t suprising as startTime contains all the other function calls. The slowest individual function was setTimeout with 3 calls at an average elapsed time of 51 microseconds per call; and the fastest function was getSeconds, which was called 3 times at an average of 6 microseconds per call.
+392: 
+393: Care must be taken when using a tool like this to fully understand how the time measurements are taken, and what conclusions can and can&#8217;t be made based on the output.
+394: 
+395: === js_objs.d
+396: 
+397:  This script snoops (traces) JavaScript object creation,
+398: 
+399: {{{
+400: 
+401: #!/usr/sbin/dtrace -Zs
+402: /*
+403:  * js_objs.d - snoop JavaScript Object creation using DTrace.
+404:  *             Written for the Solaris Mozilla DTrace provider.
+405:  *
+406:  * This traces JavaScript activity from all running browers on the system
+407:  * which support the mozilla DTrace provider.
+408:  *
+409:  * USAGE: js_objs.d             # hit Ctrl-C to end
+410:  *
+411:  * FIELDS:
+412:  *              TIME            Time string
+413:  *              FILE            Filename that contained the function
+414:  *              LINENO          File line number where object was created
+415:  *              CLASS           Class to which this new object belongs
+416:  *
+417:  * Filename and class names are printed if available, else &#34;&#60;null&#62;&#34;.
+418:  */
+419: #pragma ident   &#34;@(#)js_objs.d  1.3     07/03/26 SMI&#34;
+420: 
+421: #pragma D option quiet
+422: 
+423: dtrace:::BEGIN
+424: {
+425:         printf(&#34;%-20s %24s:%-7s %s\n&#34;, &#34;TIME&#34;, &#34;FILE&#34;, &#34;LINENO&#34;, &#34;CLASS&#34;);
+426: }
+427: 
+428: javascript*:::object-create
+429: /arg2/
+430: {
+431:         printf(&#34;%-20Y %24.24s:%-7d %s\n&#34;, walltimestamp, 
+432:             basename(copyinstr(arg0)), (int)arg3, copyinstr(arg1));
+433: }
+434: 
+435: }}}
+436: 
+437:  Example output,
+438: 
+439: {{{
+440: 
+441: # ./js_objs.d
+442: TIME                                     FILE:LINENO  CLASS
+443: 2007 Mar 26 18:31:31               clock.html:13      Date
+444: 2007 Mar 26 18:31:32               clock.html:13      Date
+445: 2007 Mar 26 18:31:33               clock.html:13      Date
+446: 2007 Mar 26 18:31:34               clock.html:13      Date
+447: 2007 Mar 26 18:31:35               clock.html:13      Date
+448: 2007 Mar 26 18:31:36               clock.html:13      Date
+449: ^C
+450: 
+451: }}}
+452: 
+453: In the above output, several Date objects were created by line 13 of clock.html.
+454: 
+455: The following example output traces JavaScript activity by the browser interface (triggered by clicking on plugins and menus),
+456: 
+457: {{{
+458: 
+459: # ./js_objs.d
+460: TIME                                     FILE:LINENO  CLASS
+461: 2007 Mar 26 18:36:22               clock.html:13      Date
+462: 2007 Mar 26 18:36:22                   &#60;null&#62;:-1      Event
+463: 2007 Mar 26 18:36:22                   &#60;null&#62;:-1      Function
+464: 2007 Mar 26 18:36:22                   &#60;null&#62;:-1      Function
+465: 2007 Mar 26 18:36:22                   &#60;null&#62;:-1      MouseEvent
+466: 2007 Mar 26 18:36:22              browser.xul:1       Call
+467: 2007 Mar 26 18:36:22        utilityOverlay.js:380     Function
+468: 2007 Mar 26 18:36:22             sb-loader.js:161     XULElement
+469: 2007 Mar 26 18:36:22             sb-loader.js:167     XPCWrappedNative_NoHelper
+470: 2007 Mar 26 18:36:22                   &#60;null&#62;:-1      Function
+471: 2007 Mar 26 18:36:22             sb-loader.js:168     Function
+472: 2007 Mar 26 18:36:22        utilityOverlay.js:387     nsJSCID
+473: 2007 Mar 26 18:36:22        utilityOverlay.js:388     nsJSIID
+474: 2007 Mar 26 18:36:22        utilityOverlay.js:388     XPCWrappedNative_NoHelper
+475: 2007 Mar 26 18:36:22       nsUpdateService.js:1593    Function
+476: 2007 Mar 26 18:36:22       nsUpdateService.js:1593    XPC_WN_NoMods_Proto_JSClass
+477: 2007 Mar 26 18:36:22       nsUpdateService.js:1593    nsXPCComponents_Interfaces
+478: 2007 Mar 26 18:36:22       nsUpdateService.js:1593    nsJSIID
+479: 2007 Mar 26 18:36:22        utilityOverlay.js:388     XPCWrappedNative_NoHelper
+480: 2007 Mar 26 18:36:22       nsUpdateService.js:1593    Function
+481: 2007 Mar 26 18:36:22       nsUpdateService.js:1594    nsJSIID
+482: 2007 Mar 26 18:36:22       nsUpdateService.js:1595    nsJSIID
+483: 2007 Mar 26 18:36:22       nsUpdateService.js:1596    nsJSIID
+484: 2007 Mar 26 18:36:22        utilityOverlay.js:388     XPCWrappedNative_NoHelper
+485: [...]
+486: 
+487: }}}
+488: 
+489:  Sometimes the filename and line number are not available, and so &#34;&#60;null&#62;&#34; and -1 are printed to indicate this.
+490: 
+491: === js_objnew.d
+492: 
+493:  This is a simple script to summarize the number of new objects created,
+494: 
+495: {{{
+496: 
+497: #!/usr/sbin/dtrace -Zs
+498: /*
+499:  * js_objnew.d - measure JavaScript new objects using DTrace.
+500:  *               Written for the Solaris Mozilla DTrace provider.
+501:  *
+502:  * This traces JavaScript activity from all running browers on the system
+503:  * which support the mozilla DTrace provider.
+504:  *
+505:  * USAGE: js_objnew.d           # hit Ctrl-C to end
+506:  *
+507:  * FIELDS:
+508:  *              FILE            Filename that contained the function
+509:  *              CLASS           Class to which this new object belongs
+510:  *              COUNT           Number of objects created
+511:  *
+512:  * Filename and class names are printed if available, else &#34;&#60;null&#62;&#34;.
+513:  */
+514: #pragma ident   &#34;@(#)js_objnew.d        1.3     07/03/26 SMI&#34;
+515: 
+516: #pragma D option quiet
+517: 
+518: dtrace:::BEGIN
+519: {
+520:         printf(&#34;Tracing... Hit Ctrl-C to end.\n&#34;);
+521: }
+522: 
+523: javascript*:::object-create
+524: {
+525:         @objs[basename(copyinstr(arg0)), copyinstr(arg1)] = count();
+526: }
+527: 
+528: dtrace:::END
+529: {
+530:         printf(&#34; %-24s %-36s %8s\n&#34;, &#34;FILE&#34;, &#34;CLASS&#34;, &#34;COUNT&#34;);
+531:         printa(&#34; %-24.24s %-36s %@8d\n&#34;, @objs);
+532: }
+533: 
+534: }}}
+535: 
+536:  Example output,
+537: 
+538: {{{
+539: 
+540: # ./js_objnew.d 
+541: Tracing... Hit Ctrl-C to end.
+542: ^C
+543:  FILE                     CLASS                                   COUNT
+544:  clock.html               Date                                        6
+545: 
+546: }}}
+547: 
+548:  Example &#34;noisy&#34; output,
+549: 
+550: {{{
+551: 
+552: # ./js_objnew.d 
+553: Tracing... Hit Ctrl-C to end.
+554: ^C
+555:  FILE                     CLASS                                   COUNT
+556:  browser.xul              Call                                        2
+557:  menu.xml                 Array                                       2
+558:  sb-loader.js             Function                                    2
+559:  sb-loader.js             XPCWrappedNative_NoHelper                   2
+560:  utilityOverlay.js        Function                                    2
+561:  nsUpdateService.js       Array                                       4
+562:  bookmarks.js             Error                                       6
+563:  clock.html               Date                                        6
+564:  nsUpdateService.js       XPCWrappedNative_NoHelper                   6
+565:  popup.xml                Array                                       9
+566:  browser.js               Function                                   18
+567:  menu.xml                 XPCWrappedNative_NoHelper                  20
+568:  nsUpdateService.js       Function                                   22
+569:  &#60;null&#62;                   MouseEvent                                 28
+570:  &#60;null&#62;                   Event                                      84
+571:  menu.xml                 XULElement                                120
+572:  &#60;null&#62;                   Function                                  231
+573: 
+574: }}}
+575: 
+576: === js_objcpu.d
+577: 
+578:  Sometimes the CPU time consumed to create new objects can be a performance issue. This simple script measures that time,
+579: 
+580: {{{
+581: 
+582: #!/usr/sbin/dtrace -Zs
+583: /*
+584:  * js_objcpu.d - measure JavaScript Object create on-CPU time using DTrace.
+585:  *               Written for the Solaris Mozilla DTrace provider.
+586:  *
+587:  * This traces JavaScript activity from all running browers on the system
+588:  * which support the mozilla DTrace provider.
+589:  *
+590:  * USAGE: js_objcpu.d           # hit Ctrl-C to end
+591:  *
+592:  * This measures the on-CPU time consumed due to JavaScript Object creation.
+593:  */
+594: #pragma ident   &#34;@(#)js_objcpu.d        1.3     07/03/26 SMI&#34;
+595: 
+596: #pragma D option quiet
+597: 
+598: dtrace:::BEGIN
+599: {
+600:         printf(&#34;Tracing... Hit Ctrl-C to end.\n&#34;);
+601: }
+602: 
+603: javascritp*:::object-create-start
+604: {
+605:         self-&#62;vstart = vtimestamp;
+606: }
+607: 
+608: javascript*:::object-create-done
+609: /self-&#62;vstart/
+610: {
+611:         this-&#62;oncpu = vtimestamp - self-&#62;vstart;
+612:         @dist[&#34;Object Creation on-CPU time (ns):&#34;] = quantize(this-&#62;oncpu);
+613:         @total[&#34;Total on-CPU time (us):&#34;] = sum(this-&#62;oncpu);
+614:         self-&#62;vstart = 0;
+615: }
+616: 
+617: dtrace:::END
+618: {
+619:         normalize(@total, 1000);
+620: }
+621: 
+622: }}}
+623: 
+624:  Example output,
+625: 
+626: {{{
+627: 
+628: # ./js_objcpu.d 
+629: Tracing... Hit Ctrl-C to end.
+630: ^C
+631: 
+632:   Object Creation on-CPU time (ns):                 
+633:            value  ~------------- Distribution ~------------- count    
+634:              256 |                                         0        
+635:              512 |@@@@@@@@@                                92       
+636:             1024 |@@@@@@@@@@@@@@@@@@@@@@@@                 235      
+637:             2048 |@@@@                                     36       
+638:             4096 |@                                        13       
+639:             8192 |@@                                       19       
+640:            16384 |                                         0        
+641:            32768 |                                         1        
+642:            65536 |                                         0        
+643: 
+644:   Total on-CPU time (us):                                         824
+645: 
+646: }}}
+647: 
+648: === js_objgc.d
+649: 
+650:  The following script is useful to check the behaviour of garbage collect. It tallys the number of objects and prints a summary every second. By watching the output for a while (several minutes or more), steadily increasing object counts into the thousands may be evidence of an object leak.
+651: 
+652: {{{
+653: 
+654: #!/usr/sbin/dtrace -Zs
+655: /*
+656:  * js_objgc.d - measure JavaScript Object GC using DTrace.
+657:  *              Written for the Solaris Mozilla DTrace provider.
+658:  *
+659:  * This traces JavaScript activity from all running browers on the system
+660:  * which support the mozilla DTrace provider.
+661:  *
+662:  * USAGE: js_objgc.d            # hit Ctrl-C to end
+663:  *
+664:  * FIELDS:
+665:  *              FILE            Filename that contained the function
+666:  *              CLASS           Class to which this new object belongs
+667:  *              TOTAL           Object entropy (positive == uncollected)
+668:  *
+669:  * This script provides information on which objects are not being garbage
+670:  * collected, an issue which causes the browser to steadily leak memory.
+671:  * We trace object creation (+1) and destruction (-1), and provide a
+672:  * summary each second of the running tally of the object class and
+673:  * originating filename. If over the period of several minutes an object
+674:  * type is still steadily increasing, then that would be of interest.
+675:  * Be patient, depending on the rate of object creation, it can take over
+676:  * ten minutes for garbage collect to kick in.
+677:  *
+678:  * Filename and class names are printed if available, else &#34;&#60;null&#62;&#34;.
+679:  *
+680:  * NOTE: there are other Things that GC handles, other than Objects; extra
+681:  * probes can be added to trace them, should the need arise.
+682:  */
+683: #pragma ident   &#34;@(#)js_objgc.d 1.3     07/03/26 SMI&#34;
+684: 
+685: #pragma D option quiet
+686: #pragma D option dynvarsize=32m
+687: 
+688: dtrace:::BEGIN
+689: {
+690:         printf(&#34;Tracing... Hit Ctrl-C to end.\n&#34;);
+691: }
+692: 
+693: javascript*:::object-create
+694: /arg2/
+695: {
+696:         this-&#62;file = basename(copyinstr(arg0));
+697:         @objs[this-&#62;file, copyinstr(arg1)] = sum(1);
+698:         filename[arg2] = this-&#62;file;
+699: }
+700: 
+701: javascript*:::object-finalize
+702: /filename[arg2] == NULL/
+703: {
+704:         /* these are caused by dynvardrops. increase dynvarsize */
+705:         @objs[&#34;&#60;missed&#62;&#34;, copyinstr(arg1)] = sum(-1);
+706: }
+707: 
+708: javascript*:::object-finalize
+709: /filename[arg2] != NULL/
+710: {
+711:         @objs[filename[arg2], copyinstr(arg1)] = sum(-1);
+712:         filename[arg2] = 0;
+713: }
+714: 
+715: profile:::tick-1sec,
+716: dtrace:::END
+717: {
+718:         printf(&#34;\n %-24s %-36s %8s\n&#34;, &#34;FILE&#34;, &#34;CLASS&#34;, &#34;TOTAL&#34;);
+719:         printa(&#34; %-24.24s %-36s %@8d\n&#34;, @objs);
+720: }
+721: 
+722: }}}
+723: 
+724:  Example output,
+725: 
+726: {{{
+727: 
+728: # ./js_objgc.d 
+729: Tracing... Hit Ctrl-C to end.
+730: 
+731:  FILE                     CLASS                                   TOTAL
+732:  fastclock.html           Date                                       88
+733: 
+734:  FILE                     CLASS                                   TOTAL
+735:  fastclock.html           Date                                      173
+736: 
+737:  FILE                     CLASS                                   TOTAL
+738:  fastclock.html           Date                                      259
+739: 
+740:  FILE                     CLASS                                   TOTAL
+741:  fastclock.html           Date                                      345
+742: 
+743:  FILE                     CLASS                                   TOTAL
+744:  nsMicrosummaryService.js Array                                       1
+745:  nsMicrosummaryService.js Function                                    3
+746:  nsMicrosummaryService.js XPCWrappedNative_NoHelper                   4
+747:  fastclock.html           Date                                      431
+748: 
+749: [...time passes...]
+750: 
+751:  FILE                     CLASS                                   TOTAL
+752:  &#60;null&#62;                   MouseEvent                                  1
+753:  browser.js               Array                                       1
+754:  browser.js               CSSStyleDeclaration                         1
+755:  browser.js               ComputedCSSStyleDeclaration                 1
+756:  browser.js               XPCNativeWrapper                            1
+757:  browser.xul              XPCNativeWrapper                            1
+758:  popup.xml                Array                                       1
+759:  browser.js               Constructor                                 2
+760:  browser.js               XPC_WN_ModsAllowed_Proto_JSClass            2
+761:  nsMicrosummaryService.js Array                                       4
+762:  nsMicrosummaryService.js Function                                    6
+763:  nsMicrosummaryService.js XPCWrappedNative_NoHelper                   7
+764:  &#60;null&#62;                   Function                                   14
+765:  browser.js               Function                                   17
+766:  fastclock.html           Date                                     5321
+767: 
+768:  FILE                     CLASS                                   TOTAL
+769:  &#60;missed&#62;                 Function                                 -172
+770:  &#60;missed&#62;                 Date                                     -152
+771:  &#60;missed&#62;                 XPCWrappedNative_NoHelper                 -33
+772:  &#60;missed&#62;                 Object                                    -19
+773:  &#60;missed&#62;                 Attr                                      -15
+774:  &#60;missed&#62;                 Array                                     -14
+775:  &#60;missed&#62;                 Call                                       -8
+776:  &#60;missed&#62;                 XPC_WN_NoMods_Proto_JSClass                -7
+777:  &#60;missed&#62;                 BarProp                                    -6
+778:  &#60;missed&#62;                 BoxObject                                  -1
+779:  &#60;missed&#62;                 HTMLDivElement                             -1
+780:  &#60;missed&#62;                 Iterator                                   -1
+781:  &#60;missed&#62;                 NamedNodeMap                               -1
+782:  &#60;missed&#62;                 XULElement                                 -1
+783:  &#60;null&#62;                   MouseEvent                                  0
+784:  browser.js               Array                                       0
+785:  browser.js               CSSStyleDeclaration                         0
+786:  browser.js               ComputedCSSStyleDeclaration                 0
+787:  browser.js               XPCNativeWrapper                            0
+788:  nsMicrosummaryService.js Array                                       0
+789:  nsMicrosummaryService.js Function                                    0
+790:  nsMicrosummaryService.js XPCWrappedNative_NoHelper                   0
+791:  popup.xml                Array                                       0
+792:  browser.xul              XPCNativeWrapper                            1
+793:  fastclock.html           HTMLDivElement                              1
+794:  browser.js               Constructor                                 2
+795:  browser.js               XPC_WN_ModsAllowed_Proto_JSClass            2
+796:  &#60;null&#62;                   Function                                    3
+797:  browser.js               Function                                    6
+798:  fastclock.html           Date                                        7
+799: 
+800: }}}
+801: 
+802: In the above output, the Date object from fastclock.html steadily increased until there were 5321 of them, then the following output shows that the Date object count has dropped to 7 - this shows garbage collect working. Also in the final output are many negative count objects with a &#34;&#60;missed&#62;&#34; filename - these are objects that were already in memory when tracing began (so their count was zero), and we traced their destruction (so they count became negative).
+</textarea>
+
+<div class="clearfloats">
+</div>
+</div>    </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded Search">
+<h5 class="xwikipaneltitle hidden" onclick="togglePanelVisibility(this.parentNode);">Search</h5>
+<div class="xwikipanelcontents">
+  <form action="/bin/view/Main/WebSearch">
+    <div id="globalsearch">
+      <input id="globalsearchinput" type="text" name="text" value="search..." size="15" onfocus="if (this.value == 'search...') value=''; this.select();" onblur="if (this.value == '') value='search...'; this.blur()"/>
+&nbsp;
+      <input class="button" value="Go" type="image" src="/skins/oso/go.png"/>
+    </div>
+  </form>
+</div>
+</div>
+                        <div class="panel expanded OSNav">
+<h5 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSNav','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSNav'); togglePanelVisibility(this.parentNode);">Collectives</h5>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavCommunity Group">
+            <div id="xwikinavCommunity GroupHeader" class="accordionTabTitleBar"><h6>Community Group</h6>
+            </div>
+            <div id="xwikinavCommunity GroupContent" class="accordionTabContentBox">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+edu/">Academic and Research</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+accessibility/">Accessibility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+advocacy/">Advocacy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+appliances/">Appliances</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+approachability/">Approachability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/">Architecture Process and Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+brandz/">BrandZ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+chinese_users/">Chinese Users</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/">Community Advisory Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+databases/">Databases</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+desktop/">Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/">Device Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+distribution/">Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+dtrace/">DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+emerging_platforms/">Emerging Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+fm/">Fault Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+games/">Games on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ha%2Dclusters/">HA Clusters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+hpcdev/">HPC Developer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+install/">Installation and Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+int_localization/">Internationalization and Localization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+laptop/">Laptop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ldoms/">Logical Domains</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+mdb/">Modular Debugger (MDB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/">Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+nfs/">NFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+observability/">Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ogb/">OpenSolaris Governing Board (OGB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+printing/">OpenSolaris Printing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/">OS/Net (ON)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/">Performance</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+pm/">Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+power_pc/">PowerPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/">Security</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+smf/">Service Management Facility (smf(5))</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sw%2Dporters/">Software Porters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+volume_manager/">Solaris Volume Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+storage/">Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sysadmin/">Systems Administration Community Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+testing/">Testing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/">Tools Home</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ufs/">Unix File Systems (UFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+web/">Website Community</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+x_win/">X Window System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+xen/">Xen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/">ZFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/">Zones</a></span></li>
+</ul>
+                                        </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavProject">
+            <div id="xwikinavProjectHeader" class="accordionTabTitleBar"><h6>Project</h6>
+            </div>
+            <div id="xwikinavProjectContent" class="accordionTabContentBox">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+adsl/">ADSL Modem Enhancement</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+arc%2Dprocess/">ARC Process Definition</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osarm/">ARM Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+adm/">Automatic Data Migration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bind/">BIND Update</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bluetooth/">Bluetooth Stack & Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dinitiator/">Brocade FC HBA &#45; Initiator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dtarget/">Brocade FC HBA &#45; Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brussels/">Brussels &#45; unified network link configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/">Caiman, Solaris Install Revisited</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+celeste/">Celeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cz/">Český portál</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/">Chime Visualization Tool for DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smbfs/">CIFS client for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cifs%2Dserver/">CIFS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+clearview/">Clearview: Network Interface Coherence</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dinformix/">Cluster Agent: Informix Dynamic Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dcontainer/">Cluster Agent: OpenSolaris Container</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dxvm/">Cluster Agent: OpenSolaris xVM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Debs/">Cluster Agent: Oracle E&#45;Business Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dpostgresql/">Cluster agent: PostgreSQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dsmb/">Cluster Agent: Samba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dtomcat/">Cluster Agent: Tomcat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cmt/">CMT</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+data%2Dflow/">Coarse Data Flow Parallelism</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+colorado/">Colorado: Open HA Cluster on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+commandassist/">Command Assistant</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cam/">Common Array Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+companion/">Companion &#45; /opt/sfw: Free and Open Source software</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/">COMSTAR: Common Multiprotocol SCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+content/">Content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+contest/">Contest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpufs/">CPU Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpg/">Credentials Process Groups</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crossbow/">Crossbow: Network Virtualization and Resource Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmsagenttoolkit/">Crypto KMS Agent Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/">Cryptographic Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dmm/">Data Migration Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+datatethers/">Data Tethers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+de/">Deutsches Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ddtool/">Device Detection Tool</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+driver%2Dutility/">Device Driver Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devicemgr/">Device Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devmapper/">Device Mapper</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dri/">Direct Rendering Infrastructure & 3D drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Ddoc/">DTrace Guide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/">Duckwater: Simplified name services management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+phpEasyTools/">Easy Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emancipation/">Emancipation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex/">Emulex Fibre Channel Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex-cna/">Emulex Advanced Ethernet Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+intel%2Dplatform/">Enable/Enhance Solaris support for Intel Platform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webcams/">Enhance the support of USB webcams</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Dprofiles/">Enhanced SMF Profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+amd/">Enhancements for AMD&#45;based Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+erlang%2Ddtrace/">Erlang DTrace Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ethbridge/">Ethernet bridge module for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+conary%2Deval/">Evaluate Conary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+events%2Dregistry/">Events Registry</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ext3/">Ext3 file system support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkgbase/">F/OSS Package Base</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+facilitation/">Facilitation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fcoe/">Fibre Channel over Ethernet</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fgap/">Fine Grained Access Policy (FGAP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fingerprint%2Dauthentication/">Fingerprint Authentication</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fmac/">Flexible Mandatory Access Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+forensics/">Forensic Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fox/">Fully Open X Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fuse/">Fuse on Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gcore/">gcore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+generic%2Dmca/">Generic Machine Check Architecture Improvements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+summerofcode/">Google SOC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Djboss/">HA&#45;JBoss</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dmysql/">HA&#45;MySQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livehadoop/">Hadoop Live CD</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hitachi/">Hitachi</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+honeycomb/">HoneyComb Fixed Content Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hpc%2Dstack/">HPC Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/">Image Packaging System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+perfmib/">Improved Performance MIB</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/">Indiana</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+awards/">Innovation Awards</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/">Input Method</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+intelgraphics/">Intel Graphics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ikev2/">Internet Key Exchange, version 2</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+irm/">Interrupt Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ip%2Drefactor/">IP Datapath Refactoring</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ipoib/">IP over Infiniband</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tref/">IPsec Tunnel Reform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iser/">iSCSI Extensions for Remote DMA (iSER)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isns/">iSNS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jeos/">JeOS &#45; Just enough Operating System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jkstat/">JKstat &#45; a java binding for libkstat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jfs/">Journaled File System (JFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kde/">K Desktop Environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kerberos/">Kerberos</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kernel%2Dsockets/">Kernel Sockets</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kssl/">Kernel SSL Enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmf/">Key Management Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ksh93%2Dintegration/">Korn Shell 93 integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+txipsec/">Labeled IPsec</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+latencytop/">LatencyTOP</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+l2filter/">Layer 2 Filtering</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ldoms%2Dmgr/">LDoms Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lending/">Lending</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+libmicro/">libMicro &#45; portable microbenchmarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lld/">Link Layer Discovery</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livemedia/">Live Media: Technologies for distributions running from CD and other media</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+localedata/">Locale Data</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+loficc/">lofi compression and cryptography support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lx64/">lx64 brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mms/">Media Management System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mega_sas/">Mega_sas</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mx/">Mexico</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+milax/">MilaX minimal Live Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mips/">MIPS Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mozilla%2Ddtrace/">Mozilla DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohac%2Davs/">MRSL.NONsharedDevice</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+glossary/">Multi&#45;lingual Glossary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mpxio/">Multi&#45;pathing software (MPxIO)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+large%2Dsector/">Multiple disk sector size support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+multiple%2Ddoi/">Multiple DOI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+muskoka/">Muskoka: An open repository for OpenSolaris technical content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+navigator/">Navigator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nemo/">Nemo: A Framework for High&#45;Performance Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/">Network Auto&#45;Magic</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ndmp/">Network Data Management Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+net%2Dmib/">Network MIBs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npp/">Network Performance Projects</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nws/">Network Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ntp/">Network Time Protocol (NTP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nv%2Dg11n/">Nevada Globalization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+4over6/">New Design of 4over6 Mechanism Based on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsrdma/">NFS RDMA transport update and performance analysis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dzones/">NFS Server in non&#45;Global Zones</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsv41/">NFS version 4.1 pNFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dnamespace/">NFSv4 namespace extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nightingale/">Nightingale: Port Songbird to OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npiv/">NPort ID Virtualization (NPIV)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+numa/">NUMA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osd/">Object Storage Device (OSD) support for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohacge%2Dsbp/">OHACGE Script Based Plug&#45;in</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+onnv/">ON/Nevada (ONNV) Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opendev/">Open Development Infrastructure</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dutilities/">Open HA Cluster Utilities</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opensound/">Open Sound System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/">OpenGrok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cim%2Dserver/">OpenPegasus CIM Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+openrti/">OpenRTI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+busybox/">OpenSolaris Busybox</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/">OpenSolaris Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+es/">OpenSolaris Hispano</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+audit/">OpenSolaris Security Audit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/">OpenSolaris support for the QEMU processor emulator: host and guest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pef/">PEF: Packet Event Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+performance%2Dwrappers/">Performance Wrappers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkgfactory/">Pkgfactory</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pl/">Polski Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fr/">Portail Francophone</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+br/">Portal Brasil</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+portals/">Portals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmui/">Power Management Usability Interfaces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+presto/">Presto: Automatic Printing Configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmpsm/">Printable Many Page Solaris Manuals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+promise%2Dstorage/">Promise SuperTrak RAID HBA Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qlogic-cna/">QLogic Converged Network Adapter GLDv3 NIC Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+quagga/">Quagga Routing Protocol Suite Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+raidcfg/">RAID Configuration Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rbridges/">RBridge (IETF TRILL) support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rof/">RDMA Offload Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+reno/">Reno: Login Process Enhancements for Interop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/">Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+s10brand/">s10brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+samqfs/">SAM/QFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+scm%2Dmigration/">SCM Migration Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+srp/">SCSI RDMA Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sdcard%2Ddrivers/">SDcard Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sensors/">Sensor Abstraction Layer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dsip/">Session Initiation Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sfwnv/">SFW</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+shell/">Shell: bourne shell, korn shell, C shell, etc.</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sierra/">Sierra: Intel WiFi Chipsets Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+simplepanels/">Simple Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sm%2Dhba/">SM&#45;HBA Based SAS HBA Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Ddoc/">SMF Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iscsitgt/">Solaris iSCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/">Solaris PowerPC Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sourcejuicer/">SourceJuicer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/">Sparks: name service switch/nscd enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+squashfs/">Squashfs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+star/">Star integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starfish/">Starfish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starterkit/">Starter Kit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+storagepm/">Storage Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sst/">Sun Security Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+avs/">Sun StorageTek Availability Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ofuv/">Support for OpenFabrics User Verbs / API on OpenSolaris OS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/">Support gcc4/GCCfss in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+suspend%2Dresume/">Suspend/Resume</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+svr4_packaging/">SVR4 Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+systemz/">Systemz</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tamarack/">Tamarack: Removable Media Enhancements in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tesla/">Tesla: OpenSolaris Enhanced Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+test%2Ddev/">Test Development</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/">Tickless Kernel Architecture</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tipc/">TIPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+branding/">Trademarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tnipdb/">Trusted networking interface policy database for Trusted Extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tpm/">Trusted Platform Module support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+usecase/">Use Case</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+valex/">Validated Execution Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vconsole/">Virtual Console</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vnm/">Virtual Network Machines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/">Visual Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+visualization%2Dhpc/">Visualization for HPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+volo/">Volo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vrrp/">VRRP: Virtual Router Redundancy Protocol Implementation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vscan/">VSCAN service</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/">Web Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+website/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+winchester/">Winchester: Schema mapping and ID mapping for AD Interoperability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wusb/">Wireless USB Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wwan/">Wireless Wide Area Network</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x%2Dcons/">X Consolidation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x86gentopo/">x86 Generic FMA Topology Enumerator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xen%2Dgate/">Xen Gate</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xfce/">Xfce: A lightweight desktop environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfsboot/">ZFS Boot and Install</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfs%2Dcrypto/">ZFS on disk encryption support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonemgr/">Zone Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonestat/">Zone Statistics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ru/">Русский портал</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ar/">البوابة العربية</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+in/">भारतीय पोर्टल</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cn/">中国门户</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/">日本ポータル</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kr/">한국 포탈</a></span></li>
+</ul>
+                                        </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavUser Group">
+            <div id="xwikinavUser GroupHeader" class="accordionTabTitleBar"><h6>User Group</h6>
+            </div>
+            <div id="xwikinavUser GroupContent" class="accordionTabContentBox">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/User+Group+adl%2Dauosug/">Adelaide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+aosug/">Argentina</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+azosug/">Arizona</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+atl%2Dosug/">Atlanta</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bwosug/">Baltimore&#45;Washington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bosug/">Bangalore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bkkosug/">Bangkok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bdosug/">Bangladesh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfosug/">Brasilia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bjosug/">Beijing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+blmosug/">Bélem</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+brosug/">Berlin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bvrm%2Dosug/">Bhimavaram</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+btn%2Dosug/">Bloomington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+os_user_groups_amb/">Campus Ambassadors</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+crosug/">Capital Region</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cfosug/">Cardiff</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ceosug/">Ceara</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cltosug/">Charlotte</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cdosug/">Chengdu</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chennai/">Chennai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chmxosug/">Chihuahua</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+closug/">Chile</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cle%2Dosug/">Cleveland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+colosug/">Colombia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cmh%2Dosug/">Columbus</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ctosug/">Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+knp%2Duek/">Cracow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+czosug/">Czech</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfw%2Dosug/">Dallas/Ft. Worth</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dosug/">Danish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+deosug/">Delaware</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+eduosug/">Edinburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+egosug/">Egypt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fiosug/">Finland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+flosug/">Florida</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+frosug/">Front Range</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fzosug/">FuZhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+glug/">Great Lakes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+grosug/">Greece</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hzosug/">Hangzhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hi%2Dosug/">Hawaii</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hfosug/">HeFei</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hugs/">Houston</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hkosug/">Hong Kong</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hosug/">Hyderabad</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+idosug/">Indonesia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ie%2Dosug/">Irish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+iosug/">Israel</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+itl%2Dosug/">Italian</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jnosug/">Jinan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jogja-osug/">Jogja</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kbosug/">Kabul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kc%2Dosug/">Kansas City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+lavosug/">Latvia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+losug/">London</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madosug/">Madurai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mansug/">Manchester</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mssosug/">Mato Grosso</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+msosug/">Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mgosug/">Minas Gerais</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mnosug/">Minnesota</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mtlosug/">Montreal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mosug/">Moscow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mmosug/">Mumbai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mucosug/">Munich</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+neaosug/">NEA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nlosug/">Netherlands</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ne%2Dosug/">New England</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nycosug/">New York City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nzosug/">New Zealand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nit%2Dhamirpur%2Dosug/">NIT Hamirpur</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+norosug/">Noroeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nerosug/">Nuremberg-Erlangen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+okcosug/">Oklahoma City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ososug/">Osnabrück</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+peosug/">Peru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+paosug/">Philadelphia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+piaski%2Dosug/">Piaski</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ptosug/">Pittsburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+poaosug/">Porto Alegre</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+psosug/">Puget Sound</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+posug/">Pune</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+qosug/">Queensland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+riosug/">Rio de Janeiro</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rtp%2Dosug/">Research Triangle Park</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ro%2Dosug/">Romania</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ruosug/">Russia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+alamo%2Dosug/">San Antonio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sdosug/">San Diego</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sfosug/">San Francisco</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sampaosug/">São Paulo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+scosug/">Scottish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rs%2Dosug/">Serbia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+shosug/">Shanghai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szosug/">Shenzhen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svosug/">Silicon Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sgosug/">Singapore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+skosug/">Slovak</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+saosug/">South African</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+soctosug/">Southern Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+stl%2Dosug/">St. Louis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svgosug/">Stavanger</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+swosug/">Sweden</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chosug/">Switzerland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sosug/">Sydney</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szc%2Dosug/">Szczecin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+twosug/">Taiwan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ostug/">Tecum</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tvosug/">Thames Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tsug/">Tokyo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+torosug/">Toronto</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+trosug/">Trondheim</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+toss/">Tulsa</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tosug/">Turkey</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ufaosug/">Ufa</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+uaosug/">Ukraine</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+unimelb%2Dosug/">University of Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+valeosug/">Vale do Paraíba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vanosug/">Vancouver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vosug/">Venezuela</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wosug/">Welsh &#45; Cymru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wiosug/">Wisconsin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+xaosug/">Xi'an</a></span></li>
+</ul>
+                                        </div>
+        </div>
+    </div>
+</div><p/><p/>
+<script type="text/javascript">
+var obj = {div:'xwikinav',no:-1,height:250};
+var acc = createAccordion(obj);
+</script>
+</div>
+</div>
+                        <div class="panel expanded Subsites">
+<h5 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.Subsites','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.Subsites'); togglePanelVisibility(this.parentNode);">Subsites</h5>
+<div class="xwikipanelcontents">
+<span class="wikiexternallink"><a href="http://cr.opensolaris.org">Code Reviews</a></span><br/>
+<span class="wikiexternallink"><a href="http://repo.opensolaris.org">Code Repositories</a></span><br/>
+<span class="wikiexternallink"><a href="http://pkg.opensolaris.org">Package Search</a></span><br/>
+<span class="wikiexternallink"><a href="http://bugs.opensolaris.org">Bugster</a></span><br/>
+<span class="wikiexternallink"><a href="http://defect.opensolaris.org">Bugzilla</a></span><br/>
+<span class="wikiexternallink"><a href="http://test.opensolaris.org">Test Machines</a></span><br/>
+<span class="wikiexternallink"><a href="http://planet.opensolaris.org">Planet</a></span><br/>
+<span class="wikiexternallink"><a href="http://mail.opensolaris.org">Mailing Lists</a></span><br/>
+<span class="wikiexternallink"><a href="http://poll.opensolaris.org">Elections & Polls</a></span><br/>
+<span class="wikiexternallink"><a href="http://arc.opensolaris.org">ARC Case Logs</a></span><br/>
+<span class="wikiexternallink"><a href="http://jucr.opensolaris.org">Source Juicer</a></span><br/>
+<span class="wikiexternallink"><a href="http://pkgfactory.opensolaris.org">Package Factory</a></span><br/>
+<span class="wikiexternallink"><a href="http://auth.opensolaris.org">User Authentication</a></span><br/>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h5 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSDocs','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSDocs'); togglePanelVisibility(this.parentNode);">Project mozilla-dtrace Pages</h5>
+<div class="xwikipanelcontents"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+mozilla%2Ddtrace/JavaScript">JavaScript Tracing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mozilla%2Ddtrace/files">Files</a></span></li>
+</ul>
+            </div>
+</div>
+                        
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+  <div id="xwikilicence">&copy; Sun Microsystems Inc. 2009</div>
+          <div id="xwikiplatformversion">XWiki Enterprise 1.8.2.19075 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div> 
+    <div><a href="/bin/view/Main/tou">Terms Of Use</a> |
+         <a href="http://www.sun.com/privacy/">Privacy</a> | 
+         <a href="/bin/view/Main/trademark">Trademarks</a> |
+         <a href="/bin/view/Main/copyrights">Copyright Policy</a> |
+         <a href="/bin/view/Main/site_guidelines">Site Guidelines</a> |
+         <a href="/bin/view/Main/site%2Dmap">Site map</a> |
+         <a href="/bin/view/Main/help">Help</a></div>
+    <div>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.</div>
+<hr/>
+</div>
+
+</div></div></body>
+</html>

@@ -1,0 +1,1132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Building the Code (Project jds.building) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+jds/building" />
+                                <meta name="document" content="Project jds.building"/>
+    <meta name="space" content="Project jds"/>
+    <meta name="page" content="building"/>
+    <meta name="version" content="1.1"/>
+                    <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Building the Code" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                <!-- com.xpn.xwiki.plugin.skinx.LinkExtensionPlugin -->
+    <link href="/bin/skin/skins/colibri/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript" src="/resources/js/xwiki/suggest/ajaxSuggest.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project jds";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes" ];
+window.docviewurl = "/bin/view/Project+jds/building";
+window.docediturl = "/bin/edit/Project+jds/building";
+window.docsaveurl = "/bin/save/Project+jds/building";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js'></script><script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js'></script><script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js'></script><script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js'></script>
+
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/compatibility.js"></script>
+
+  </head>
+        <body id="body" class="xwiki viewbody hideright">
+  <div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+<div id="menuview">
+  <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div class="topmenuentry " id="tmLogin"><a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bjds%2Fbuilding%3Flanguage%3Den"><strong>Log-in</strong></a></div>
+  </div>
+<div class="leftmenu">
+  <div class="topmenuentry hasIcon" id="tmWiki"><a class="tme" href="/bin/view/Main/"><strong>xwiki</strong></a></div>
+  <div class="topmenuentry hasIcon" id="tmSpace"><a class="tme" href="/bin/view/Project+jds/"><strong>Project jds</strong></a></div>
+
+<div class="topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmSubSites">
+<span class="tme-extensible"><a class="tme"><strong>Subsites</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="http://cr.opensolaris.org/" id="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth">Auth</a></span>
+</span></div>
+
+
+</div>
+</div>
+
+</div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+
+  <div id="company">
+  <div id="companylogo">
+    <a href="/bin/view/Main/" title="Home" rel="home">
+    <img src="/skins/colibri/logo.png" alt="Wiki Logo"/>
+    </a>
+  </div>   </div> 
+  <div id="Iconbar">
+    <a id="CollectivesIcon" href="/bin/view/Main/collectives">Collectives</a>
+    <a id="DiscussionsIcon" href="/bin/view/Main/discussions">Discussions</a>
+    <a id="DocumentationIcon" href="/bin/view/Main/documentation">Documentation</a>
+    <a id="DownloadIcon" href="/bin/view/Main/downloads">Download</a>
+    <a id="SourceBrowserIcon" href="http://src.opensolaris.org">Source Browser</a>
+  </div>
+  <div class="clearfloats"></div>
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/WebSearch">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+   <div id="hierarchy">
+                <a href='/bin/view/Project+jds/contributing'>Getting Involved</a> <span class='separator'>&raquo;</span> <a href='/bin/view/Project+jds/building'>Building the Code</a>
+      </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+jds/building?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+  <div id="contentmenu" class="actionmenu">
+  <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div class="topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmExport">
+<span class="tme-extensible"><a class="tme"><strong>Export</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+jds/building?format=pdf&amp;language=en" id="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+jds/building?format=rtf&amp;language=en" id="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+jds/building?format=html&amp;language=en" id="tmExportHtml">Export as HTML</a></span>
+  </span></div>
+
+<div class="topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmShow">
+<span class="tme-extensible"><a class="tme" href="/bin/view/Project+jds/building?viewer=code&amp;language=en"><strong>View</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+jds/building?viewer=comments&amp;language=en" id="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+jds/building?viewer=attachments&amp;language=en" id="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+jds/building?viewer=history&amp;language=en" id="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+jds/building?viewer=information&amp;language=en" id="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+jds/building?viewer=code&amp;language=en" id="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div class="topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmMoreActions">
+<span class="tme-extensible"><a class="tme"><strong>More actions</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+jds/building?xpage=print&amp;language=en" id="tmPrintPreview">Print preview</a></span>
+    </span></div>
+  </div>
+
+
+  </div>
+  <div id="mainContentArea">
+      
+
+
+  
+<div id="document-title"><h1>Building the Code</h1></div>
+                            <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h2 id="HBuildingOSDonOpenSolaris"><span>Building OSD on OpenSolaris</span></h2><h3 id="HIntroduction"><span>Introduction</span></h3><ol><li><span class="wikilink"><a href="#jds-compilers">Compilers</a></span></li><li><span class="wikilink"><a href="#jds-package-requirements">Package Requirements</a></span></li><li><span class="wikilink"><a href="#jds-cbe">OSD Common Build Environment</a></span></li><li><span class="wikilink"><a href="#jds-build-sources">OSD Build Sources</a></span></li><li><span class="wikilink"><a href="#jds-build-quickstart-jds">Quickstart to building OSD</a></span></li><li><span class="wikilink"><a href="#jds-build-solaris-packages">Building Solaris Packages</a></span></li><li><span class="wikilink"><a href="#jds-build-manual-pkgbuild">Manually building packages with pkgbuild</a></span></li><li><span class="wikilink"><a href="#jds-build-automatic-pkgtool">Automatically building packages with pkgtool</a></span></li></ol><h3 id="H1Compilers"><span>1. Compilers</span></h3><p>&nbsp;We recommend to build OSD with <span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_11_tools">Sun Studio 11</a></span> or <span class="wikilink"><a href="/bin/view/Community+Group+tools/sun_studio_tools">Sun Studio 10</a></span>. Building with <span class="wikilink"><a href="/bin/view/Community+Group+tools/gcc">gcc</a></span> is also possible, but may require a little extra work during the build. We would much welcome patches to fix this so that both compilers can be used out of the box. The rest of this document assumes you are building the OSD sources with Sun Studio.</p><h3 id="H2PackageRequirements"><span>2. Package Requirements</span></h3><p>&nbsp;Some of the OSD components require other packages to be available on your system in order for you to build.</p><table><tr><td>SUNWgpch</td><td>SUNWgtar</td><td>SUNWwgetu</td></tr></table><p>&nbsp;You can find these packages on your Solaris install media. The cbe-install script will assist with installing them.</p><h3 id="H3OSDCommonBuildEnvironment"><span>3. OSD Common Build Environment</span></h3><p>&nbsp;The OSD Common Build Environment (CBE) is a set of build tools required to build GNOME, Mozilla and Evolution on Solaris. It includes the following tools -</p><blockquote><p>&nbsp;|Apache ant|GNU autoconf|GNU automake</p></blockquote><table><tr><td>GNU bison</td><td>CVS</td><td>GNU diffutils</td></tr><tr><td>GNU fileutils</td><td>GNU flex</td><td>GNU gettext</td></tr><tr><td>GNU libtool</td><td>GNU m4</td><td>GNU make</td></tr><tr><td>pkgbuild</td><td>rsync *</td><td>subversion</td></tr></table><p>&nbsp;*=optional</p><p>&nbsp;Download the latest tarball from the <span class="wikiexternallink"><a href="http://dlc.sun.com/osol/jds/downloads/cbe/">OSD download center</a></span>.</p><p>&nbsp;The latest version of CBE builds packages by default in /packages, while installing the tools in /opt/jdsbld. Installing the CBE for your architecture gives you the opportunity of easily installing packages, rather than having to build the tools yourself.</p><p>&nbsp;You don't need root access for installing the CBE or building GNOME, but the build user needs to have the 'Software Installation' profile for installing the packages that the CBE creates. In a typical case, you need to add the following profile to /etc/user_attr -</p><pre>
+
+       osduser::::profiles=Software Installation
+
+</pre><p>&nbsp;Then run the cbe-install script as follows -</p><pre>
+
+osduser@osdbuild:~&gt; ./cbe-install 
+Checking for required packages...
+Installing the OSD Common Build Environment (CBE) version 1.6.1
+The recommended C compiler(s) for this version of the OSD CBE is/are:
+        Sun Studio 11 (Venus) (cc: Sun C 5.8 Patch 121016-02 2006/03/31)
+        Sun Studio 10 (Vulcan) (cc: Sun C 5.7 Patch 117837-04 2005/05/11)
+Enter the path to the C compiler [/opt/SUNWspro/bin/cc]: 
+This version of the CBE comes with some optional utilities.
+These are not required for building the OSD code, nevertheless
+they are useful to have on your system.
+Please see the README file for the list of optional utilities.
+Would you like to install the optional packages? [yes]: 
+Installing package SFpkgbuild
+
+Installation of  was successful.
+Installing package CBEmake
+....
+....
++ cd /home/osduser/packages/BUILD
++ rm -rf /var/tmp/pkgbuild-osduser/CBEenv-1.6.1-build
++ exit 0
+Installing package CBEenv
+
+Installation of  was successful.
+CBE setup complete
+Run
+  . /opt/jdsbld/bin/env.sh
+or
+  source /opt/jdsbld/bin/env.csh
+depending on your shell, to use this build environment.
+Installation log saved in /tmp/jds-cbe-1.6.1.install.log.4030
+
+</pre><p>&nbsp;You may want to put the following in your profile, adjusting to your shell of preference - <span class="box code"><br/></span></p><pre>
+
+JDS_CBE_ENV_QUIET=1 . /opt/jdsbld/bin/env.sh
+
+</pre><p>&nbsp;Note: if you already have a previous version of the OSD CBE installed, the cbe-install script will upgrade it to the new version.</p><p>&nbsp;The OSD CBE sets up the following default directory structure for you to build packages -</p><blockquote><p>&nbsp;|=Location|=Description</p></blockquote><table><tr><td>$HOME/packages/BUILD/</td><td>Sources are unpacked, patched and built</td></tr><tr><td>$HOME/packages/PKGMAPS/</td><td>Information for contents of Solaris packages and any pre/post install scripts</td></tr><tr><td>$HOME/packages/PKGS/</td><td>Binary packages are produced</td></tr><tr><td>$HOME/packages/SOURCES/</td><td>Source code, patches and other miscellaneous files used in the build</td></tr><tr><td>$HOME/packages/SPECS/</td><td>Spec files</td></tr><tr><td>$HOME/packages/SPKGS/</td><td>Source packages are produced</td></tr></table><h3 id="H4OSDBuildSources"><span>4. OSD Build Sources</span></h3><p>&nbsp;Once you have installed the OSD CBE, you are now ready to fetch the build sources. You can get the latest set of OSD sources from the SVN repository with anonymous access - <span class="box code"><br/></span></p><pre>
+
+osduser@osdbuild:~/&gt; svn co svn+ssh://anon@svn.opensolaris.org/svn/jds/spec-files/trunk spec-files
+
+</pre><p>&nbsp;Once you have downloaded the sources, take some time to take a <span class="wikilink"><a href="/bin/view/Project+jds/source_code_tour">&nbsp;source code tour</a></span> to get a feel of the build structure. The current OSD source code on 'trunk' is based on <strong>GNOME 2.24</strong>, along with a number of other components. Other branches are available by doing the following - <span class="box code"><br/></span></p><pre>
+
+osduser@osdbuild:~/&gt; svn list svn+ssh://anon@svn.opensolaris.org/svn/jds/spec-files/branches
+217update/
+gnome-2-10/
+gnome-2-12/
+gnome-2-14/
+gnome-2-16/
+osduser@osdbuild:~/&gt; svn co svn+ssh://anon@svn.opensolaris.org/svn/jds/spec-files/branches/gnome-2-16 spec-files-gnome-2-16-branch
+
+</pre><p>&nbsp;As part of our policy for developing on OSD, we only apply and manage patches on top of a pre existing community released tarball. Not only does this allow us to separate out our work into atomic changes, it also maximizes the chances of getting these changes upstream in the original community. Along with the build sources that you just downloaded, you will also need to download the original community tarball - this can be done manually, or automatically using pkgtool.</p><p>&nbsp;Solaris specific manual pages are found in tarballs named SUNWgnome-something-manpages-<em>version</em>.tar.bz2. These tarballs are generated from the manual page files found in spec-files/manpages. To generate the tarballs, use the following commands:</p><div class="box code"><br/></div><pre>
+
+osduser@osdbuild:~&gt; cd spec-files/manpages
+osduser@osdbuild:~&gt; make
+
+</pre><p>&nbsp;The manpage tarballs will be placed in the spec-files/sun-manpage-tarballs directory.</p><p>&nbsp;Solaris specific changes to translations are found in tarballs named module-po-sun-<em>version</em>.tar.bz2. These tarballs are generated from the .po files found in spec-files/po-sun. To generate the tarballs, use the following commands:</p><div class="box code"><br/></div><pre>
+
+osduser@osdbuild:~&gt; cd spec-files/po-sun
+osduser@osdbuild:~&gt; make
+
+</pre><p>&nbsp;The manpage tarballs will be placed in the spec-files/po-sun/po-sun-tarballs directory.</p><h3 id="H5QuickstarttobuildingOSD"><span>5. Quickstart to building OSD</span></h3><p>&nbsp;First, set up the environment for building OSD -</p><pre>
+
+osduser@osdbuild:~&gt; . /opt/jdsbld/bin/env.sh
+
+</pre><p>&nbsp;Uninstall the existing OSD packages using pkgtool -</p><pre>
+
+osduser@osdbuild:~&gt; cd spec-files
+osduser@osdbuild:~&gt; pkgtool uninstall-pkgs *.spec
+
+</pre><p>&nbsp;This command extracts the package names from the spec files and then uninstalls them using the pkgrm command. Packages are uninstalled even if other installed packages require them. It is advised that you are not logged into GNOME during this step as it uninstalls all GNOME packages. Use a CDE session, remote login or a failsafe session instead.</p><p>&nbsp;Now build the entire stack -</p><pre>
+
+osduser@osdbuild:~&gt; pkgtool ~--download build -v *.spec
+
+</pre><p>&nbsp;pkgtool will read all spec files to determine the build order, then builds and installs them one by one. For more details on building OSD manually, see the following sections.</p><p>&nbsp;Build log files for individual packages are placed in /tmp by default. You can change this using the --logdir option or specifying logdir in /.pkgtoolrc:</p><pre>
+
+osduser@osdbuild:~&gt; echo 'logdir: /path/to/my/logdir' &gt;&gt; ~/.pkgtoolrc
+
+</pre><h3 id="H6BuildingSolarisPackages"><span>6. Building Solaris Packages</span></h3><p>&nbsp;At the heart of the OSD build environment is <span class="wikiexternallink"><a href="http://pkgbuild.sourceforge.net/">pkgbuild</a></span>, a perl script for building Solaris SVr4 packages from an RPM spec file. It is intended to be a plug-in replacement of the rpmbuild command on many Linux distributions. pkgbuild allows you to build a <strong>single package</strong> at a time.</p><p>&nbsp;Building a package goes through 4 stages -</p><blockquote><p>&nbsp;|=Stage|=Description</p></blockquote><table><tr><td>Preparation</td><td>Sources are unpacked, and patched.</td></tr><tr><td>Compilation</td><td>Sources are compiled locally.</td></tr><tr><td>Installation</td><td>The compiled binaries and data are installed into a temporary directory.</td></tr><tr><td>Package</td><td>The compiled binaries and data in the temporary directory are put into a package.</td></tr></table><p>&nbsp;A command summary of pkgbuild is as follows -</p><pre>
+
+osduser@osdbuild:~&gt; pkgbuild ~--help
+pkgbuild version 1.3.2
+Copyright 2003-2008 - Sun Microsystems, Inc.
+This may be freely redistributed under the terms of the GNU GPL
+
+* = the option is implemented
+
+ Usage:
+*  ~--help                  - print this message
+*  ~--version               - print the version of rpm being used
+*  ~--interactive           - start a shell in the build directory if fails
+                             and allow to continue after the shell terminates
+   all modes support the following arguments:
+      ~--rcfile &lt;file&gt;      - use &lt;file&gt; instead of /etc/rpmrc and $HOME/.rpmrc
+     -v                    - be a little more verbose
+     -vv                   - be incredibly verbose (for debugging)
+*   -b&lt;stage&gt; &lt;spec&gt;
+    -t&lt;stage&gt; &lt;tarball&gt;    - build package, where &lt;stage&gt; is one of:
+*         p                - prep (unpack sources and apply patches)
+          l                - list check (do some cursory checks on %files)
+*         c                - compile (prep and compile)
+*         i                - install (prep, compile, install)
+*         b                - binary package (prep, compile, install, package)
+*         a                - bin/src package (prep, compile, install, package)
+*     ~--short-circuit      - skip straight to specified stage (only for c,i)
+      ~--clean              - remove build tree when done
+      ~--rmsource           - remove sources and spec file when done
+      ~--sign               - generate PGP/GPG signature
+      ~--buildroot &lt;dir&gt;    - use &lt;dir&gt; as the build root
+      ~--target=&lt;platform&gt;+ - build the packages for the build targets
+                             platform1...platformN.
+      ~--nobuild            - do not execute any stages
+      ~--timecheck &lt;secs&gt;   - set the time check to &lt;secs&gt; seconds (0 disables)
+*     ~--define "&lt;name&gt; &lt;value&gt;"
+                           - define &lt;name&gt; as &lt;value&gt; as if you had
+                             "%define &lt;name&gt; &lt;value&gt;" in the spec file
+
+*   ~--rebuild &lt;src_pkg&gt;    - install source package, build binary package and
+                             remove spec file, sources, patches, and icons.
+    ~--rmsource &lt;spec&gt;      - remove sources and spec file
+    ~--recompile &lt;src_pkg&gt;  - like ~--rebuild, but don't build any package
+
+</pre><h3 id="H7Manuallybuildingyourfirstpackagewithpkgbuild"><span>7. Manually building your first package with pkgbuild</span></h3><p>&nbsp;As an example package to build, take SUNWspeex. Speex is an open source and patent-free speech multimedia codec. As mentioned in the <span class="wikilink"><a href="/bin/view/Project+jds/source_code_tour">source code tour</a></span>, the Solaris SUNWspeex package is built from a RPM spec file. Looking at the SUNWspeex.spec file within the <strong>spec-files</strong> directory of the OSD build sources, you will notice the lines -</p><pre>
+
+%include Solaris.inc
+%use speex = speex.spec
+
+</pre><p>&nbsp;The SUNWspeex.spec file includes much of the core information already detailed in the speex.spec "base" spec file, which is in the <strong>spec-files/base-specs</strong>. As such, the SUNWspeex.spec file is an <strong>extension</strong>, detailing how the Solaris package is created. You will need both of these files to successfully build the package - copy them to <strong>/packages/SPECS</strong>. Along with that, you'll notice it includes some default settings as detailed in Solaris.inc. This, and other include files are in the <strong>spec-files/include</strong> directory. Copy this file, along with default-depend.inc into <strong>/packages/SPECS</strong>. Also, copy the default-copyright.txt file, (which is available in the <strong>ext-sources</strong> top-level directory) into <strong>/packages/SOURCES</strong>.</p><p>&nbsp;Within the speex.spec file you will notice the block of lines -</p><pre>
+
+Name:              speex
+License:           Xiph
+Group:             Application/Devel
+Version:           1.0.5
+Distribution:      Java Desktop System
+Vendor:            Sun Microsystems, Inc.
+Summary:           An open-source, patent-free speech codec
+Source:            http://www.speex.org/download/%{name}-%{version}.tar.gz
+URL:               http://www.speex.org/
+
+</pre><p>&nbsp;This describes much of the core information about the package - what version and license it uses, along with details of where to download it. While we have automated much of the process of downloading the sources from their original community as you will see a little later, for now, proceed to download <span class="wikiexternallink"><a href="http://www.speex.org/download/speex-1.0.5.tar.gz">speex-1.0.5.tar.gz</a></span>. Copy the downloaded file to <strong>/jds/packages/SOURCES</strong>.</p><p>&nbsp;Now you are ready to build your first package. All the spec files and the sources are in the correct directory locations under <strong>/packages/</strong>, as follows -</p><blockquote><p>&nbsp;|=Location|=Contents</p></blockquote><table><tr><td>$HOME/packages/SOURCES/</td><td>speex-1.0.5.tar.gz, default-copyright.txt</td></tr><tr><td>$HOME/packages/SPECS/</td><td>speex.spec, SUNWspeex.spec, Solaris.inc, default-depend.inc</td></tr></table><p>&nbsp;We want to create a full binary and source SUNWspeex package, so we will use the -ba option with pkgbuild -</p><pre>
+
+osduser@osdbuild:~&gt; . /opt/jdsbld/bin/env.sh
+osduser@osdbuild:~&gt; cd ~/packages/SPECS
+osduser@osdbuild:~&gt; pkgbuild -ba SUNWspeex.spec
+Executing(%prep): /bin/bash /var/tmp/pkgbuild-tmp-1.11242
++ umask 022
++ uname -a
+SunOS zenity 5.10 Generic i86pc i386 i86pc
++ cd /home/osduser/packages/BUILD
++ rm -rf SUNWspeex-2.12.0
++ mkdir SUNWspeex-2.12.0
++ cd /home/osduser/packages/BUILD
++ cd /home/osduser/packages/BUILD/SUNWspeex-2.12.0
++ rm -rf speex-1.0.5
++ /usr/bin/gzip -dc /home/osduser/packages/SOURCES/speex-1.0.5.tar.gz
++ /bin/tar xf -
++ STATUS=0
++ '[' 0 -ne 0 ']'
++ cd speex-1.0.5
++ ++ /usr/xpg4/bin/id -u
++ '[' 100 = 0 ']'
++ ++ /usr/xpg4/bin/id -u
++ '[' 100 = 0 ']'
++ /bin/chmod -Rf a+rX,g-w,o-w .
++ cd ..
++ exit 0
+Executing(%build): /bin/bash /var/tmp/pkgbuild-tmp-2.11242
++ umask 022
++ uname -a
+SunOS zenity 5.10 Generic i86pc i386 i86pc
++ cd /home/osduser/packages/BUILD
++ cd SUNWspeex-2.12.0
++ cd /home/osduser/packages/BUILD/SUNWspeex-2.12.0
++ cd speex-1.0.5
+++ /usr/sbin/psrinfo
+++ grep on-line
+++ wc -l
+++ tr -d ' '
++ CPUS=1
++ test x1 = x -o 1 = 0
++ CFLAGS='-i -x04 -xspace -xstrconst -xpentium -mr'
++ ./configure ~--enable-shared ~--enable-static ~--prefix=/usr ~--sysconfdir=/etc ~--mandir=/usr/share/man
+.....
+.....
+## Packaging one part.
+/home/osduser/packages/SPKGS/SUNWspeex-src/pkgmap
+/home/osduser/packages/SPKGS/SUNWspeex-src/pkginfo
+/home/osduser/packages/SPKGS/SUNWspeex-src/install/copyright
+/home/osduser/packages/SPKGS/SUNWspeex-src/reloc/share/src/SUNWspeex-2.12.0/SOURCES/default-copyright.txt
+/home/osduser/packages/SPKGS/SUNWspeex-src/reloc/share/src/SUNWspeex-2.12.0/SOURCES/speex-1.0.5.tar.gz
+/home/osduser/packages/SPKGS/SUNWspeex-src/reloc/share/src/SUNWspeex-2.12.0/SPECS/..pkgbuild
+/home/osduser/packages/SPKGS/SUNWspeex-src/reloc/share/src/SUNWspeex-2.12.0/SPECS/SUNWspeex.spec
+/home/osduser/packages/SPKGS/SUNWspeex-src/reloc/share/src/SUNWspeex-2.12.0/SPECS/Solaris.inc
+/home/osduser/packages/SPKGS/SUNWspeex-src/reloc/share/src/SUNWspeex-2.12.0/SPECS/default-depend.inc
+/home/osduser/packages/SPKGS/SUNWspeex-src/reloc/share/src/SUNWspeex-2.12.0/SPECS/speex.spec
+## Validating control scripts.
+## Packaging complete.
+Executing(%clean): /bin/bash /var/tmp/pkgbuild-tmp-15.11388
++ umask 022
++ uname -a
+SunOS zenity 5.10 Generic i86pc i386 i86pc
++ cd /home/osduser/packages/BUILD
++ cd SUNWspeex-2.12.0
++ rm -rf /var/tmp/SUNWspeex-2.12.0-build
++ exit 0
+
+</pre><h3 id="H8Automaticallybuildingpackageswithpkgtool"><span>8. Automatically building packages with pkgtool</span></h3><p>&nbsp;While using pkgbuild allows you to build Solaris packages easily, it doesn't allow for automatic dependency checking, and very much relies on the spec files and the sources to be in the correct place. pkgtool is a wrapper script around pkgbuild that helps to solve this problem. pkgtool will also allow you to download the original source community tarballs. Not only is pkgtool very useful in this respect, it also acts as a tinderbox script allowing you log your builds and report any errors that might have occurred. A command summary of pkgtool is as follows -</p><pre>
+
+osduser@osdbuild:~&gt; pkgtool ~--help
+pkgtool [options] [command] specs...
+
+Options:
+
+  General:
+
+    -v|~--verbose:
+                  Increase verbosity: the more -v's the more diag messages.
+
+    -q|~--quiet:
+                  Silent operation.
+
+    ~--halt-on-errors:
+                  Halt on the first build error, do not attempt to continue.
+
+    ~--rcfile=file
+                  Read default configuration from file.
+                  Default: ./.pkgtoolrc, ~/.pkgtoolrc
+
+    ~--norc
+                  Ignore the default rc files.
+
+    ~--dumprc
+                  Print the current configuration in a format suitable
+                  for an rc file, then exit.
+
+    ~--download
+
+                  Automatically download sources if not found in the local
+                  search paths (requires wget)  Specify your proxy servers
+                  using the http_proxy and ftp_proxy environment variables.
+
+    ~--download-to=dir
+
+                  Save downloaded files in dir.  By default, files are
+                  downloaded to /usr/src/packages/SOURCES.  Implies ~--download.
+
+    ~--interactive  [EXPERIMENTAL]
+
+                  Interactive mode: pkgbuild/rpm output is displayed on
+                  the standard output; pkgbuild is executed in interactive
+                  mode which makes it start a subshell if the build fails
+
+  Directories and search paths:
+
+    ~--specdirs=path, ~--spec=path:
+                  Specify a colon separated list of directories to search
+                  for spec files in
+
+    ~--tarballdirs=path, ~--tarballs=path, ~--tar=path:
+                  Specify a colon separated list of directories to search
+                  for tarballs in
+
+    ~--sourcedirs=path, ~--src=path:
+                  Specify a colon separated list of directories to search
+                  for additional source files in
+
+    ~--patchdirs=path, ~--patches=path, ~--patch=path
+                  Specify a colon separated list of directories to search
+                  for patches (source diffs) in
+
+    ~--topdir=dir
+                  Use dir as the rpm base directory (aka %topdir, where the
+                  SPECS, SOURCES, RPMS, SRPMS, BUILD directories are found).
+                  Default: /usr/src/packages
+
+    ~--logdir=dir, ~--log=dir:
+                  Write build logs to dir.
+
+  Options controlling the build:
+
+    ~--nodeps, ~--deps:
+                  Ignore/verify dependencies before building a component.
+                  Default: ~--deps
+
+    ~--with foo, ~--without foo
+                  This option is passed on to rpm/pkgbuild as is.  Use it
+                  for enabling/disabling conditional build options.
+
+    ~--target=arch
+                  This option is passed on to rpm/pkgbuild as is.
+
+    ~--pkgformat={filesystem|fs|datastream|ds}
+                  Create Solaris packages in filesystem or datastream format.
+                  This option is ignored when running on Linux.
+                  Default: filesystem
+
+    ~--nightly, ~--nonightly:
+                  Suffix/Don't suffix the rpm Release with the current date.
+                  Default: ~--nonightly;  See also: ~--date-format
+
+    ~--date-format=format, ~--date=format:
+                  Use "date +format" to generate the date suffix for
+                  the nightly builds.  Default: %y%m%d
+
+  Reporting:
+
+    ~--mail-errors-to=address
+
+                  Send the last few lines of the build log to address
+                  if the build fails
+
+    ~--report=file
+
+                  Write a build report to file (in HTML format)
+
+    ~--prodname=string
+
+                  The name of the product as appears in the build report
+
+    ~--full-path:
+                  Print the full path to the package when running install-order
+
+Commands:
+
+    build-install  Build and install the specs listed on the command line.
+                   The build order is determined by the dependencies
+                   defined in the spec files.
+
+    build          Same as build-install
+
+    build-only     Build the specs listed on the command line, don't install
+                   them.
+
+    prep           run the %prep section of the spec files listed on the
+                   command line
+
+    spkg           create source package(s) only (no build done)
+
+    build-order    Print the build order of the specs listed on the
+                   command line.
+
+    install-order  Print the rpms in the order they should be installed
+
+    install-pkgs   (not implemented yet): install the packages defined
+                   by the spec files listed on the command line from
+                   the PKGS directory.  No build is done.  Useful to
+                   install packages previously built using the build-only
+                   command.
+
+    uninstall-pkgs Uninstall all packages defined in the spec files listed
+                   on the command line. (runs rpm ~--erase ~--nodeps on
+                   Linux, pkgrm on Solaris)
+
+    download       Download the source files from the URLs specified in
+                   the spec files listed on the command line.  Source
+                   files found in the local search paths will not be
+                   downloaded.  (See ~--tarballdirs, ~--sourcedirs,
+                   ~--download-to)
+
+specs...
+
+    List of spec files to build. Either full path names or names of spec
+    files in the spec directory search path.
+
+</pre><h4 id="HBuildexampleswithpkgtool"><span>Build examples with pkgtool</span></h4><p>&nbsp;Print out the build order of the packages -</p><pre>
+
+osduser@osdbuild:Solaris&gt; pkgtool -q build-order *.spec
+/export/home/osduser/osd-spec-files/SUNWPython.spec
+/export/home/osduser/osd-spec-files/SUNWTiff.spec
+/export/home/osduser/osd-spec-files/SUNWaspell.spec
+....
+
+</pre><p>&nbsp;Download all the community source tarballs needed to build the SUNWgnome-panel package -</p><pre>
+
+osduser@osdbuild:~&gt; pkgtool download SUNWgnome-panel.spec
+
+</pre><p>&nbsp;Download, build, and install all the packages in the correct order. You will need to set the environmental variables http_proxy and ftp_proxy if necessary -</p><pre>
+
+osduser@osdbuild:~&gt; pkgtool ~--download build-install *.spec
+
+</pre><p>&nbsp;Uninstall packages SUNWgnome-utils and SUNWgnome-config-editor -</p><pre>
+
+osduser@osdbuild:~&gt; pkgtool uninstall-pkgs SUNWgnome-utils.spec SUNWgnome-config-editor.spec
+
+</pre><p>&nbsp;Build the SUNWgnome-img-viewer package, but don't install it -</p><pre>
+
+osduser@osdbuild:~&gt; pkgtool build-only SUNWgnome-img-viewer.spec
+
+</pre>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:14<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by admin on 2009/10/26 12:14
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+                </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSNav','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSNav'); togglePanelVisibility(this.parentNode);">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavCommunity Group">
+            <div id="xwikinavCommunity GroupHeader" class="accordionTabTitleBar"><h6>Community Group</h6>
+            </div>
+            <div id="xwikinavCommunity GroupContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+edu/">Academic and Research</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+accessibility/">Accessibility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+advocacy/">Advocacy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+appliances/">Appliances</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+approachability/">Approachability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/">Architecture Process and Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+brandz/">BrandZ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+chinese_users/">Chinese Users</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/">Community Advisory Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+dtrace/">DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+databases/">Databases</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+desktop/">Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/">Device Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+distribution/">Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+emerging_platforms/">Emerging Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+fm/">Fault Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+games/">Games on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ha%2Dclusters/">HA Clusters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+hpcdev/">HPC Developer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+int_localization/">Internationalization and Localization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+laptop/">Laptop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ldoms/">Logical Domains</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+mdb/">Modular Debugger (MDB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+nfs/">NFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/">Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/">OS/Net (ON)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+observability/">Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ogb/">OpenSolaris Governing Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+printing/">OpenSolaris Printing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/">Performance</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+pm/">Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+power_pc/">PowerPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/">Security</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+smf/">Service Management Facility (smf(5))</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sw%2Dporters/">Software Porters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+volume_manager/">Solaris Volume Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+storage/">Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sysadmin/">Systems Administration Community Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+testing/">Testing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/">Tools Home</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ufs/">Unix File Systems (UFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+web/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+x_win/">X Window System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+xen/">Xen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/">ZFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/">Zones</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavProject">
+            <div id="xwikinavProjectHeader" class="accordionTabTitleBar"><h6>Project</h6>
+            </div>
+            <div id="xwikinavProjectContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/"></a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+adsl/">ADSL Modem Enhancement</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+arc%2Dprocess/">ARC Process Definition</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osarm/">ARM Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bluetooth/">Bluetooth Stack & Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dinitiator/">Brocade FC HBA &#45; Initiator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dtarget/">Brocade FC HBA &#45; Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brussels/">Brussels &#45; unified network link configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cifs%2Dserver/">CIFS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smbfs/">CIFS client for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cmt/">CMT</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/">COMSTAR: Common Multiprotocol SCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpufs/">CPU Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/">Caiman, Solaris Install Revisited</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+celeste/">Celeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/">Chime Visualization Tool for DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+clearview/">Clearview: Network Interface Coherence</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dinformix/">Cluster Agent: Informix Dynamic Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dcontainer/">Cluster Agent: OpenSolaris Container</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dxvm/">Cluster Agent: OpenSolaris xVM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Debs/">Cluster Agent: Oracle E&#45;Business Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dsmb/">Cluster Agent: Samba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dtomcat/">Cluster Agent: Tomcat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dpostgresql/">Cluster agent: PostgreSQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+data%2Dflow/">Coarse Data Flow Parallelism</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+colorado/">Colorado: Open HA Cluster on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+commandassist/">Command Assistant</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cam/">Common Array Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+companion/">Companion &#45; /opt/sfw: Free and Open Source software</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+content/">Content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+contest/">Contest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpg/">Credentials Process Groups</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crossbow/">Crossbow: Network Virtualization and Resource Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmsagenttoolkit/">Crypto KMS Agent Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/">Cryptographic Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Ddoc/">DTrace Guide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dmm/">Data Migration Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+datatethers/">Data Tethers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+de/">Deutsches Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ddtool/">Device Detection Tool</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+driver%2Dutility/">Device Driver Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devicemgr/">Device Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devmapper/">Device Mapper</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dri/">Direct Rendering Infrastructure & 3D drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/">Duckwater: Simplified name services management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+phpEasyTools/">Easy Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emancipation/">Emancipation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex%2Dcna/">Emulex Advanced Ethernet Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex/">Emulex Fibre Channel Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webcams/">Enhance the support of USB webcams</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Dprofiles/">Enhanced SMF Profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+amd/">Enhancements for AMD&#45;based Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+erlang%2Ddtrace/">Erlang DTrace Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ethbridge/">Ethernet bridge module for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+conary%2Deval/">Evaluate Conary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+events%2Dregistry/">Events Registry</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ext3/">Ext3 file system support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+facilitation/">Facilitation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fcoe/">Fibre Channel over Ethernet</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fgap/">Fine Grained Access Policy (FGAP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fingerprint%2Dauthentication/">Fingerprint Authentication</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fmac/">Flexible Mandatory Access Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+forensics/">Forensic Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fox/">Fully Open X Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fuse/">Fuse on Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+generic%2Dmca/">Generic Machine Check Architecture Improvements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+raidcfg/">Generic RAID Configuration Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+summerofcode/">Google SOC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Djboss/">HA&#45;JBoss</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dmysql/">HA&#45;MySQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hpc%2Dstack/">HPC Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livehadoop/">Hadoop Live CD</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hitachi/">Hitachi</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+honeycomb/">HoneyComb Fixed Content Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hotplug/">Hotplug Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ip%2Drefactor/">IP Datapath Refactoring</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ipoib/">IP over Infiniband</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tref/">IPsec Tunnel Reform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/">Image Packaging System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isc/">Immutable Service Containers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+perfmib/">Improved Performance MIB</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/">Indiana</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ikev2/">Internet Key Exchange, version 2 (IKEv2)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+irm/">Interrupt Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jkstat/">JKstat &#45; a java binding for libkstat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jeos/">JeOS &#45; Just enough Operating System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jfs/">Journaled File System (JFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kde/">K Desktop Environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kerberos/">Kerberos</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kssl/">Kernel SSL Enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kernel%2Dsockets/">Kernel Sockets</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmf/">Key Management Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ksh93%2Dintegration/">Korn Shell 93 integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ldoms%2Dmgr/">LDoms Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+txipsec/">Labeled IPsec</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+l2filter/">Layer 2 Filtering</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lending/">Lending</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lld/">Link Layer Discovery</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livemedia/">Live Media: Technologies for distributions running from CD and other media</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+localedata/">Locale Data</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mips/">MIPS Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohac%2Davs/">MRSL.NONsharedDevice</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mega_sas/">Mega_sas</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mx/">Mexico</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+milax/">MilaX minimal Live Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mozilla%2Ddtrace/">Mozilla DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+glossary/">Multi&#45;lingual Glossary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mpxio/">Multi&#45;pathing software (MPxIO)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+multiple%2Ddoi/">Multiple DOI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+large%2Dsector/">Multiple disk sector size support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+muskoka/">Muskoka: An open repository for OpenSolaris technical content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsrdma/">NFS RDMA transport update and performance analysis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dzones/">NFS Server in non&#45;Global Zones</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsv41/">NFS version 4.1 pNFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dnamespace/">NFSv4 namespace extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npiv/">NPort ID Virtualization (NPIV)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+navigator/">Navigator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nemo/">Nemo: A Framework for High&#45;Performance Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/">Network Auto&#45;Magic</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ndmp/">Network Data Management Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+net%2Dmib/">Network MIBs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npp/">Network Performance Projects</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dpm/">Network Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nws/">Network Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ntp/">Network Time Protocol (NTP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nv%2Dg11n/">Nevada Globalization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+4over6/">New Design of 4over6 Mechanism Based on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nightingale/">Nightingale: Port Songbird to OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+onnv/">ON/Nevada (ONNV) Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osd/">Object Storage Device (OSD) support for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opendev/">Open Development Infrastructure</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dutilities/">Open HA Cluster Utilities</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opensound/">Open Sound System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/">OpenGrok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cim%2Dserver/">OpenPegasus CIM Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+openrti/">OpenRTI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+busybox/">OpenSolaris Busybox</a></span></li>
+<li><em class="underline"><em><span class="wikilink"><a href="/bin/view/Project+jds/">OpenSolaris Desktop</a></span></em></em></li>
+<li><span class="wikilink"><a href="/bin/view/Project+es/">OpenSolaris Hispano</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+audit/">OpenSolaris Security Audit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/">OpenSolaris support for the QEMU processor emulator: host and guest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pef/">PEF: Packet Event Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+performance%2Dwrappers/">Performance Wrappers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkgfactory/">Pkgfactory</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pl/">Polski Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fr/">Portail Francophone</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+br/">Portal Brasileiro de OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+portals/">Portals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmui/">Power Management Usability Interfaces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+presto/">Presto: Automatic Printing Configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmpsm/">Printable Many Page Solaris Manuals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+promise%2Dstorage/">Promise SuperTrak RAID HBA Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qlogic%2Dcna/">QLogic Converged Network Adapter GLDv3 NIC Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+quagga/">Quagga Routing Protocol Suite Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rbridges/">RBridge (IETF TRILL) support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rof/">RDMA Offload Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+releasenotes/">Release Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+reno/">Reno: Login Process Enhancements for Interop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/">Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+samqfs/">SAM/QFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+scm%2Dmigration/">SCM Migration Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+srp/">SCSI RDMA Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sdcard%2Ddrivers/">SDcard Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sfwnv/">SFW</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sm%2Dhba/">SM&#45;HBA Based SAS HBA Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Ddoc/">SMF Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+svr4_packaging/">SVR4 Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sensors/">Sensor Abstraction Layer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dsip/">Session Initiation Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+shell/">Shell: bourne shell, korn shell, C shell, etc.</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+simplepanels/">Simple Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/">Solaris PowerPC Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iscsitgt/">Solaris iSCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sourcejuicer/">SourceJuicer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/">Sparks: name service switch/nscd enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+squashfs/">Squashfs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+star/">Star integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starfish/">Starfish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starterkit/">Starter Kit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+storagepm/">Storage Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sst/">Sun Security Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+avs/">Sun StorageTek Availability Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ofuv/">Support for OpenFabrics User Verbs / API on OpenSolaris OS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/">Support gcc4/GCCfss in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+suspend%2Dresume/">Suspend/Resume</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+systemz/">Systemz</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tipc/">TIPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+branding/">Trademarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tpm/">Trusted Platform Module support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tnipdb/">Trusted networking interface policy database for Trusted Extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+usecase/">Use Case</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+userland/">Userland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vrrp/">VRRP: Virtual Router Redundancy Protocol Implementation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vscan/">VSCAN service</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+valex/">Validated Execution Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vconsole/">Virtual Console</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vnm/">Virtual Network Machines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/">Visual Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+visualization%2Dhpc/">Visualization for HPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+volo/">Volo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/">Web Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+website/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+winchester/">Winchester: Schema mapping and ID mapping for AD Interoperability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wusb/">Wireless USB Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wwan/">Wireless Wide Area Network</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x%2Dcons/">X Consolidation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xkblayout/">X Keyboard Layout</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xen%2Dgate/">Xen Gate</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xfce/">Xfce: A lightweight desktop environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfsboot/">ZFS Boot and Install</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfs%2Dcrypto/">ZFS on disk encryption support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonemgr/">Zone Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonestat/">Zone Statistics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gcore/">gcore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iser/">iSCSI Extensions for Remote DMA (iSER)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isns/">iSNS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+libmicro/">libMicro &#45; portable microbenchmarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+loficc/">lofi compression and cryptography support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lx64/">lx64 brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+s10brand/">s10brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x86gentopo/">x86 Generic FMA Topology Enumerator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cz/">Český portál</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ru/">Русский портал</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ar/">البوابة العربية</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+in/">भारतीय पोर्टल</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cn/">中国门户</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/">日本ポータル</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kr/">한국 포탈</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavUser Group">
+            <div id="xwikinavUser GroupHeader" class="accordionTabTitleBar"><h6>User Group</h6>
+            </div>
+            <div id="xwikinavUser GroupContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+kr/"></a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+adl%2Dauosug/">Adelaide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+aosug/">Argentina</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+azosug/">Arizona</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+atl%2Dosug/">Atlanta OpenSolaris Users Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bwosug/">Baltimore&#45;Washington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bosug/">Bangalore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bkkosug/">Bangkok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bdosug/">Bangladesh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bjosug/">Beijing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+brosug/">Berlin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bvrm%2Dosug/">Bhimavaram</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+btn%2Dosug/">Bloomington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfosug/">Brasilia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+blmosug/">Bélem</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+crosug/">Capital Region</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cfosug/">Cardiff</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ccosug/">Caribbean OSUG</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ceosug/">Ceara</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cltosug/">Charlotte</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chennai/">Chennai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chmxosug/">Chihuahua</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+closug/">Chile</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cle%2Dosug/">Cleveland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+colosug/">Colombia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cmh%2Dosug/">Columbus</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ctosug/">Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+knp%2Duek/">Cracow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+czosug/">Czech</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfw%2Dosug/">Dallas/Ft. Worth</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dosug/">Danish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+deosug/">Delaware</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+eduosug/">Edinburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+egosug/">Egypt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fiosug/">Finland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+flosug/">Florida</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fraosug/">Frankfurt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+frosug/">Front Range</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+glug/">Great Lakes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+grosug/">Greece</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hzosug/">Hangzhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hi%2Dosug/">Hawaii</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hkosug/">Hong Kong</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hugs/">Houston</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hosug/">Hyderabad</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+idosug/">Indonesia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madridosug/">Inicio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ie%2Dosug/">Irish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+iosug/">Israel</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+istosug/">Istanbul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+itl%2Dosug/">Italian</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jnosug/">Jinan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jogja%2Dosug/">Jogja</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kbosug/">Kabul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kc%2Dosug/">Kansas City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+lavosug/">Latvia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+losug/">London</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madosug/">Madurai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mansug/">Manchester</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mssosug/">Mato Grosso</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+msosug/">Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mgosug/">Minas Gerais</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mnosug/">Minnesota</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mtlosug/">Montreal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mosug/">Moscow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mmosug/">Mumbai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mucosug/">Munich</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+neaosug/">NEA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nlosug/">Netherlands</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ne%2Dosug/">New England</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nycosug/">New York City OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nzosug/">New Zealand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+norosug/">Noroeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nerosug/">Nuremberg&#45;Erlangen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+okcosug/">Oklahoma City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ososug/">Osnabrück</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+peosug/">Peru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+paosug/">Philadelphia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+piaski%2Dosug/">Piaski</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ptosug/">Pittsburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+poaosug/">Porto Alegre</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+psosug/">Puget Sound</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+posug/">Pune</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+qosug/">Queensland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rtp%2Dosug/">Research Triangle Park</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+riosug/">Rio de Janeiro</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ro%2Dosug/">Romania</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ruosug/">Russia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+alamo%2Dosug/">San Antonio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sdosug/">San Diego</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sfosug/">San Francisco</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+scosug/">Scottish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rs%2Dosug/">Serbia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szosug/">Shenzhen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svosug/">Silicon Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sgosug/">Singapore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+skosug/">Slovak</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+saosug/">South African</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+soctosug/">Southern Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+stl%2Dosug/">St. Louis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svgosug/">Stavanger</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+swosug/">Sweden</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chosug/">Switzerland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sosug/">Sydney</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szc%2Dosug/">Szczecin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sampaosug/">São Paulo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+twosug/">Taiwan OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ostug/">Tecum</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tvosug/">Thames Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tsug/">Tokyo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+torosug/">Toronto</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+trosug/">Trondheim</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+toss/">Tulsa</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tosug/">Turkey</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ufaosug/">Ufa OSUG</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+uaosug/">Ukraine OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+unimelb%2Dosug/">University of Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+valeosug/">Vale do Paraíba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vanosug/">Vancouver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vosug/">Venezuela &#45; Pagina de incio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vvoosug/">Vladivostok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wosug/">Welsh &#45; Cymru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wiosug/">Wisconsin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+xaosug/">Xi'an</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+</div><p/>
+<script type="text/javascript">
+var obj = {div:'xwikinav',no:1,height:250};
+var acc = createAccordion(obj);
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSDocs','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSDocs'); togglePanelVisibility(this.parentNode);">Project jds Pages</h1>
+<div class="xwikipanelcontents"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+jds/contributing">Getting Involved</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+jds/building">Building the Code</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/documents">Documents</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+jds/bug_lifecycle">Bug Lifecycle</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/code_review">Code Review Process</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/desktop_gaps">Solaris Desktop Gaps</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/development_guidelines">Development Guidelines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/development_model">Development Model</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/indiana_build">Building GNOME for OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/installing_from_ips">Installing Development Desktop Builds</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/jds_schedule">OSD Build Schedule</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/patch_comments">Format of Patch Comments</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/pkging_guidelines">Packaging Guidelines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/requesting_svn_account">Requesting an SVN Account</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/source_code_tour">OSD Source Code Tour</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/tasks">Tasks</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+jds/MetaTracker">MetaTracker</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/desktop_printing">Desktop Printing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/gdesklets">gDesklets</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/jpack">JPack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/netbeans_java_gnome">Java GNOME Plugin for Netbeans</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/single_sys_admin">Single System Admin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/virt%2Dmanager">Virtual Machine Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/zfs_nautilus">ZFS Support in Nautilus</a></span></li>
+</ul></li>
+</ul>
+                        </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div>  <div id="footerglobal" class="layoutsection">
+  <div class="minwidth"></div>
+
+  <script language="JavaScript" src="/resources/js/s_code_remote.js"></script>
+
+
+          <div id="xwikiplatformversion">XWiki Enterprise 2.1.1.25889 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+  <br/>
+
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2011, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+  </div>
+
+
+</div></div></body>
+</html>

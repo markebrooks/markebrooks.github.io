@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>CAB Voting System (Community Group cab.cab_voting_system) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Community+Group+cab/cab_voting_system" />
+                                <meta name="document" content="Community Group cab.cab_voting_system"/>
+    <meta name="space" content="Community Group cab"/>
+    <meta name="page" content="cab_voting_system"/>
+    <meta name="version" content="1.1"/>
+                    <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="CAB Voting System" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                <!-- com.xpn.xwiki.plugin.skinx.LinkExtensionPlugin -->
+    <link href="/bin/skin/skins/colibri/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript" src="/resources/js/xwiki/suggest/ajaxSuggest.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Community Group cab";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes" ];
+window.docviewurl = "/bin/view/Community+Group+cab/cab_voting_system";
+window.docediturl = "/bin/edit/Community+Group+cab/cab_voting_system";
+window.docsaveurl = "/bin/save/Community+Group+cab/cab_voting_system";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js'></script><script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js'></script><script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js'></script><script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js'></script>
+
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/compatibility.js"></script>
+
+  </head>
+        <body id="body" class="xwiki viewbody hideright">
+  <div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+<div id="menuview">
+  <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div class="topmenuentry " id="tmLogin"><a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FCommunity%2BGroup%2Bcab%2Fcab_voting_system"><strong>Log-in</strong></a></div>
+  </div>
+<div class="leftmenu">
+  <div class="topmenuentry hasIcon" id="tmWiki"><a class="tme" href="/bin/view/Main/"><strong>xwiki</strong></a></div>
+  <div class="topmenuentry hasIcon" id="tmSpace"><a class="tme" href="/bin/view/Community+Group+cab/"><strong>Community Group cab</strong></a></div>
+
+<div class="topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmSubSites">
+<span class="tme-extensible"><a class="tme"><strong>Subsites</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="http://cr.opensolaris.org/" id="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth">Auth</a></span>
+</span></div>
+
+
+</div>
+</div>
+
+</div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+
+  <div id="company">
+  <div id="companylogo">
+    <a href="/bin/view/Main/" title="Home" rel="home">
+    <img src="/skins/colibri/logo.png" alt="Wiki Logo"/>
+    </a>
+  </div>   </div> 
+  <div id="Iconbar">
+    <a id="CollectivesIcon" href="/bin/view/Main/collectives">Collectives</a>
+    <a id="DiscussionsIcon" href="/bin/view/Main/discussions">Discussions</a>
+    <a id="DocumentationIcon" href="/bin/view/Main/documentation">Documentation</a>
+    <a id="DownloadIcon" href="/bin/view/Main/downloads">Download</a>
+    <a id="SourceBrowserIcon" href="http://src.opensolaris.org">Source Browser</a>
+  </div>
+  <div class="clearfloats"></div>
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/WebSearch">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+   <div id="hierarchy">
+                <a href='/bin/view/Community+Group+cab/first_cab_election'>First CAB Election</a> <span class='separator'>&raquo;</span> <a href='/bin/view/Community+Group+cab/cab_voting_system'>CAB Voting System</a>
+      </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Community+Group+cab/cab_voting_system?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+  <div id="contentmenu" class="actionmenu">
+  <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div class="topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmExport">
+<span class="tme-extensible"><a class="tme"><strong>Export</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Community+Group+cab/cab_voting_system?format=pdf&amp;language=en" id="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+cab/cab_voting_system?format=rtf&amp;language=en" id="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+cab/cab_voting_system?format=html&amp;language=en" id="tmExportHtml">Export as HTML</a></span>
+  </span></div>
+
+<div class="topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmShow">
+<span class="tme-extensible"><a class="tme" href="/bin/view/Community+Group+cab/cab_voting_system?viewer=code&amp;language=en"><strong>View</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Community+Group+cab/cab_voting_system?viewer=comments&amp;language=en" id="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+cab/cab_voting_system?viewer=attachments&amp;language=en" id="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+cab/cab_voting_system?viewer=history&amp;language=en" id="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+cab/cab_voting_system?viewer=information&amp;language=en" id="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+cab/cab_voting_system?viewer=code&amp;language=en" id="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div class="topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmMoreActions">
+<span class="tme-extensible"><a class="tme"><strong>More actions</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Community+Group+cab/cab_voting_system?xpage=print&amp;language=en" id="tmPrintPreview">Print preview</a></span>
+    </span></div>
+  </div>
+
+
+  </div>
+  <div id="mainContentArea">
+      
+
+
+
+<div id="document-title"><h1>CAB Voting System</h1></div>
+                            <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<p><strong>Pilot Conversation: 1/29/05 to 2/02/05</strong><br/><strong>CAB Voting System<br/></strong></p><ul><li><ul><li><ul><li><ul><li>-<del>- Original Message -</del>-<br/>&nbsp;Subject: [Opensolaris-discuss] CAB: voting system?<br/>&nbsp;Date: Sat, 29 Jan 2005 11:51:04 -0500<br/>&nbsp;From: Bill Sommerfeld &lt;sommerfeld@sun.com&gt;<br/>&nbsp;To: James Grisanzio &lt;Jim.Grisanzio@Sun.COM&gt;<br/>&nbsp;CC: opensolaris-discuss@opensolaris.org<br/>&nbsp;I don't believe I've seen any discussion of the voting method to be used.<br/>&nbsp;If you list a bunch of desirable properties of a voting system, traditional voting systems used (vote for single candidate; person with most votes wins) tend to not score so well.&#160; In particular, traditional systems work very poorly when there are large numbers of similar candidates, which is most likely what we'll face in selecting the CAB.<br/>&nbsp;On the other hand, there are a bewildering array of alternative systems out there (including approval voting, preferential systems such as STV, and the bizarrely named "Cloneproof Schwartz Sequential Dropping"); some of these systems take some effort to understand and that by itself is a negative. &#160;<br/>&nbsp;As a perhaps extreme example of how this can hurt, my understanding is that New Zealand just changed to use a particularly complex hybrid scheme, with the result that in some precincts 10% or more of the ballots were<br/>&nbsp;uncountable.<br/>&nbsp;Anyhow, there are a bunch of writeups on the various systems out there;&#160; many are written by people with an axe to grind one way or another, so read skeptically.<br/>&nbsp;background reading:<br/> <span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://electionmethods.org/"><span class="wikigeneratedlinkcontent">http://electionmethods.org/</span></a></span><br/> <span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://en.wikipedia.org/wiki/Arrow%27s_impossibility_theorem"><span class="wikigeneratedlinkcontent">http://en.wikipedia.org/wiki/Arrow%27s_impossibility_theorem</span></a></span><br/> <span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://en.wikipedia.org/wiki/Category:Voting_systems"><span class="wikigeneratedlinkcontent">http://en.wikipedia.org/wiki/Category:Voting_systems</span></a></span><br/> <span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://en.wikipedia.org/wiki/Category:Voting_theory"><span class="wikigeneratedlinkcontent">http://en.wikipedia.org/wiki/Category:Voting_theory</span></a></span><br/>&nbsp;and, of course, there are open source software packages out there<br/>&nbsp;implementing some of these algorithms:<br/> <span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://stv.sourceforge.net/"><span class="wikigeneratedlinkcontent">http://stv.sourceforge.net/</span></a></span><br/>&nbsp;- Bill<br/>&nbsp;-<del>- Original Message -</del>-<br/>&nbsp;Subject: Re: [Opensolaris-discuss] CAB: voting system?<br/>&nbsp;Date: Sat, 29 Jan 2005 11:48:46 -0800 (PST)<br/>&nbsp;From: hostmaster@rite-online.net<br/>&nbsp;To: Bill Sommerfeld &lt;sommerfeld@sun.com&gt;<br/>&nbsp;CC: James Grisanzio &lt;Jim.Grisanzio@Sun.COM&gt;, opensolaris-discuss@opensolaris.org<br/>&nbsp;On Sat, 29 Jan 2005, Bill Sommerfeld wrote:<br/>&nbsp;&gt; I don't believe I've seen any discussion of the voting method to be used.<br/>&nbsp;I'm sure Rick Hennasee (the guy who wrote an x86 assembler in<br/>&nbsp;ksh or bash) would love us to use his scripts!&#160; :-)<br/>&nbsp;--<br/>&nbsp;Rich Teer, SCNA, SCSA, author of "Solaris Systems Programming"<br/>&nbsp;President,<br/>&nbsp;Rite Online Inc.<br/>&nbsp;Voice: +1 (250) 979-1638<br/>&nbsp;URL: <span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://www.rite-group.com/rich"><span class="wikigeneratedlinkcontent">http://www.rite-group.com/rich</span></a></span><br/>&nbsp;-<del>- Original Message -</del>-<br/>&nbsp;Subject: Re: [Opensolaris-discuss] CAB: voting system?<br/>&nbsp;Date: Mon, 31 Jan 2005 15:31:11 +0100<br/>&nbsp;From: Joerg Schilling &lt;schilling@fokus.fraunhofer.de&gt;<br/>&nbsp;To: sommerfeld@sun.com, Jim.Grisanzio@Sun.COM<br/>&nbsp;CC: opensolaris-discuss@opensolaris.org<br/>&nbsp;Bill Sommerfeld &lt;sommerfeld@sun.com&gt; wrote:<br/>&nbsp;&gt; I don't believe I've seen any discussion of the voting method to be used.<br/>&nbsp;&gt;<br/>&nbsp;&gt; If you list a bunch of desirable properties of a voting system,<br/>&nbsp;&gt; traditional voting systems used (vote for single candidate; person with<br/>&nbsp;&gt; most votes wins) tend to not score so well.&#160; In particular, traditional systems work very poorly when there are large numbers of similar candidates, which is most likely what we'll face in selecting the CAB.<br/>&nbsp;Let me introduce that we will have something between 70 and 100<br/>&nbsp;voters for the Pilot part of the CAB. This is more than you may<br/>&nbsp;easily survey without involving a formal voting process - except<br/>&nbsp;when there are only 2-3 candidates.<br/>&nbsp;I believe that we may really first try to find the rules.<br/>&nbsp;If we would like to follow usual formal voting rules, we should<br/>&nbsp;first try to create a voting commitee.<br/>&nbsp;The first duty of this commite would be to find the names<br/>&nbsp;of the candidates and the names of the permitted voters. Usual rules<br/>&nbsp;forbid that a member of the voting commitee would become a<br/>&nbsp;candidate. If we go this way, I believe that this is a godd idea<br/>&nbsp;for our election too. So if we go this way, we would need some<br/>&nbsp;volunteers for this job.<br/>&nbsp;What we all need to find out in addition is the way we would like<br/>&nbsp;to vote: open, secret, or whatever....<br/>&nbsp;Of course if you believe that we will be able to find the right<br/>&nbsp;way without a formal process, you are welcome to describe your ideas.<br/>&nbsp;P.S. I don't like bureaucracy but it may help us to defend our election<br/>&nbsp;later to non pilot members of the community.<br/>&nbsp;J&#246;rg<br/>&nbsp;-<del>- Original Message -</del>-<br/>&nbsp;Subject: Re: [Opensolaris-discuss] CAB: voting system?<br/>&nbsp;Date: Mon, 31 Jan 2005 15:31:11 +0100<br/>&nbsp;From: Joerg Schilling &lt;schilling@fokus.fraunhofer.de&gt;<br/>&nbsp;To: sommerfeld@sun.com, Jim.Grisanzio@Sun.COM<br/>&nbsp;CC: opensolaris-discuss@opensolaris.org<br/>&nbsp;Bill Sommerfeld &lt;sommerfeld@sun.com&gt; wrote:<br/>&nbsp;&gt; I don't believe I've seen any discussion of the voting method to be used.<br/>&nbsp;&gt;<br/>&nbsp;&gt; If you list a bunch of desirable properties of a voting system,<br/>&nbsp;&gt; traditional voting systems used (vote for single candidate; person with<br/>&nbsp;&gt; most votes wins) tend to not score so well.&#160; In particular, traditional systems work very poorly when there are large numbers of similar candidates, which is most likely what we'll face in selecting the CAB.<br/>&nbsp;Let me introduce that we will have something between 70 and 100<br/>&nbsp;voters for the Pilot part of the CAB. This is more than you may<br/>&nbsp;easily survey without involving a formal voting process - except<br/>&nbsp;when there are only 2-3 candidates.<br/>&nbsp;I believe that we may really first try to find the rules.<br/>&nbsp;If we would like to follow usual formal voting rules, we should<br/>&nbsp;first try to create a voting commitee.<br/>&nbsp;The first duty of this commite would be to find the names<br/>&nbsp;of the candidates and the names of the permitted voters. Usual rules<br/>&nbsp;forbid that a member of the voting commitee would become a<br/>&nbsp;candidate. If we go this way, I believe that this is a godd idea<br/>&nbsp;for our election too. So if we go this way, we would need some<br/>&nbsp;volunteers for this job.<br/>&nbsp;What we all need to find out in addition is the way we would like<br/>&nbsp;to vote: open, secret, or whatever....<br/>&nbsp;Of course if you believe that we will be able to find the right<br/>&nbsp;way without a formal process, you are welcome to describe your ideas.<br/>&nbsp;P.S. I don't like bureaucracy but it may help us to defend our election<br/>&nbsp;later to non pilot members of the community.<br/>&nbsp;J&#246;rg<br/>&nbsp;-<del>- Original Message -</del>-<br/>&nbsp;Subject: Re: [Opensolaris-discuss] CAB: voting system?<br/>&nbsp;Date: Tue, 01 Feb 2005 12:04:12 -0800<br/>&nbsp;From: Andrew Tucker &lt;Andrew.Tucker@Sun.COM&gt;<br/>&nbsp;To: Bill Sommerfeld &lt;sommerfeld@sun.com&gt;<br/>&nbsp;CC: James Grisanzio &lt;Jim.Grisanzio@Sun.COM&gt;, Andrew Tucker &lt;tucker@trinity.sfbay.sun.com&gt;<br/>&nbsp;So, what do you recommend?<br/>&nbsp;I'd be happy to let the external community decide how they're going to<br/>&nbsp;select their representatives, but I don't think we can expect them<br/>&nbsp;to come to a consensus on their own.&#160; We're going to need to put a<br/>&nbsp;stake in the ground, at least for the initial election (presumably<br/>&nbsp;the CAB can then determine rules for future elections).<br/>&nbsp;Andy<br/>&nbsp;On Sat, Jan 29, 2005 at 11:51:04AM -0500, Bill Sommerfeld wrote:<br/>&nbsp;&gt; I don't believe I've seen any discussion of the voting method to be used.<br/>&nbsp;&gt;<br/>&nbsp;&gt; If you list a bunch of desirable properties of a voting system,<br/>&nbsp;&gt; traditional voting systems used (vote for single candidate; person with<br/>&nbsp;&gt; most votes wins) tend to not score so well.&#160; In particular, traditional systems work very poorly when there are large numbers of similar candidates, which is most likely what we'll face in selecting the CAB.<br/>&nbsp;&gt;<br/>&nbsp;&gt; On the other hand, there are a bewildering array of alternative systems out there (including approval voting, preferential systems such as STV, and the<br/>&nbsp;&gt; bizarrely named "Cloneproof Schwartz Sequential Dropping"); some of these systems take some effort to understand and that by itself is a negative. &#160;<br/>&nbsp;&gt;<br/>&nbsp;&gt; As a perhaps extreme example of how this can hurt, my understanding is that<br/>&nbsp;&gt; New Zealand just changed to use a particularly complex hybrid scheme, with<br/>&nbsp;&gt; the result that in some precincts 10% or more of the ballots were<br/>&nbsp;&gt; uncountable.<br/>&nbsp;&gt;<br/>&nbsp;&gt; Anyhow, there are a bunch of writeups on the various systems out there;<br/>&nbsp;&gt; many are written by people with an axe to grind one way or another, so<br/>&nbsp;&gt; read skeptically.<br/>&nbsp;&gt;<br/>&nbsp;&gt; background reading:<br/>&nbsp;&gt;<br/>&nbsp;&gt; <span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://electionmethods.org/"><span class="wikigeneratedlinkcontent">http://electionmethods.org/</span></a></span><br/>&nbsp;&gt; <span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://en.wikipedia.org/wiki/Arrow%27s_impossibility_theorem"><span class="wikigeneratedlinkcontent">http://en.wikipedia.org/wiki/Arrow%27s_impossibility_theorem</span></a></span><br/>&nbsp;&gt; <span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://en.wikipedia.org/wiki/Category:Voting_systems"><span class="wikigeneratedlinkcontent">http://en.wikipedia.org/wiki/Category:Voting_systems</span></a></span><br/>&nbsp;&gt; <span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://en.wikipedia.org/wiki/Category:Voting_theory"><span class="wikigeneratedlinkcontent">http://en.wikipedia.org/wiki/Category:Voting_theory</span></a></span><br/>&nbsp;&gt;<br/>&nbsp;&gt; and, of course, there are open source software packages out there<br/>&nbsp;&gt; implementing some of these algorithms:<br/>&nbsp;&gt;<br/>&nbsp;&gt; <span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://stv.sourceforge.net/"><span class="wikigeneratedlinkcontent">http://stv.sourceforge.net/</span></a></span><br/>&nbsp;&gt;<br/>&nbsp;&gt; &#160;&#160; &#160;&#160;&#160; &#160;&#160;&#160; &#160;&#160;&#160; &#160;&#160;&#160; &#160;- Bill<br/>&nbsp;&gt;<br/>&nbsp;-<del>- Original Message -</del>-<br/>&nbsp;Subject: Re: [Opensolaris-discuss] CAB: voting system?<br/>&nbsp;Date: Tue, 01 Feb 2005 16:51:46 -0500<br/>&nbsp;From: Bill Sommerfeld &lt;sommerfeld@sun.com&gt;<br/>&nbsp;To: Andrew Tucker &lt;Andrew.Tucker@sun.com&gt;<br/>&nbsp;CC: James Grisanzio &lt;Jim.Grisanzio@Sun.COM&gt;, Andrew Tucker &lt;tucker@trinity.sfbay.sun.com&gt;<br/>&nbsp;On Tue, 2005-02-01 at 15:04, Andrew Tucker wrote:<br/>&nbsp;&gt; So, what do you recommend?<br/>&nbsp;My preference is for approval voting. &#160;<br/>&nbsp;You vote "yes" or "no" to every candidate, and add up all the "yes" votes.<br/>&nbsp;Whoever gets the most "yes" votes wins (or the top two).<br/>&nbsp;In the event of a tie, I'd break it randomly but allow for one to yield to the other.<br/>&nbsp;Very simple to explain and understand; does not require multiple rounds of ballot redistribution or graph theory to come up with the winner.<br/>&nbsp;downside is that you don't collect any information about relative preference<br/>&nbsp;among the approved candidates.<br/>&nbsp;you probably avoid seating someone that a significant minority hate.<br/>&nbsp;(probably good for consensus building)<br/>&nbsp;you may get more compromise candidates than favorites.<br/>&nbsp;-<del>- Original Message -</del>-<br/>&nbsp;Subject: Re: [Opensolaris-discuss] CAB: voting system?<br/>&nbsp;Date: Tue, 01 Feb 2005 14:29:48 -0800<br/>&nbsp;From: Andrew Tucker &lt;Andrew.Tucker@sun.com&gt;<br/>&nbsp;To: Bill Sommerfeld &lt;sommerfeld@sun.com&gt;<br/>&nbsp;CC: James Grisanzio &lt;Jim.Grisanzio@Sun.COM&gt;, Andrew Tucker &lt;tucker@trinity.sfbay.sun.com&gt;<br/>&nbsp;On Tue, Feb 01, 2005 at 04:51:46PM -0500, Bill Sommerfeld wrote:<br/>&nbsp;&gt; On Tue, 2005-02-01 at 15:04, Andrew Tucker wrote:<br/>&nbsp;&gt; &gt; So, what do you recommend?<br/>&nbsp;&gt;<br/>&nbsp;&gt; My preference is for approval voting. &#160;<br/>&nbsp;Sounds good to me (after a bit of research).&#160; I'll think about how<br/>&nbsp;to suggest it to the pilot folks.<br/>&nbsp;Andy<br/>&nbsp;-<del>- Original Message -</del>-<br/>&nbsp;Subject: Re: [Opensolaris-discuss] CAB: voting system?<br/>&nbsp;Date: Wed, 02 Feb 2005 14:06:15 -0800<br/>&nbsp;From: Andrew Tucker &lt;Andrew.Tucker@Sun.COM&gt;<br/>&nbsp;To: Joerg Schilling &lt;schilling@fokus.fraunhofer.de&gt;<br/>&nbsp;CC: sommerfeld@Sun.COM, Jim.Grisanzio@Sun.COM, opensolaris-discuss@opensolaris.org<br/>&nbsp;On Mon, Jan 31, 2005 at 03:31:11PM +0100, Joerg Schilling wrote:<br/>&nbsp;&gt; Bill Sommerfeld &lt;sommerfeld@sun.com&gt; wrote:<br/>&nbsp;&gt; &gt; I don't believe I've seen any discussion of the voting method to be used.<br/>&nbsp;&gt;<br/>&nbsp;&gt; If we would like to follow usual formal voting rules, we should<br/>&nbsp;&gt; first try to create a voting commitee.<br/>&nbsp;Although I think that's a reasonable idea, I'm worried about the<br/>&nbsp;time it will take.&#160; Also you still have a bootstrapping problem -<del><br/>&nbsp;how do you select members of the voting committee?&#160; In any case,<br/>&nbsp;you can look at the initial CAB as (at least in part) being that<br/>&nbsp;committee -</del> part of its role will be to define the format and<br/>&nbsp;rules for the ongoing board, including voting rules.<br/>&nbsp;Ideally, we'd let you (the pilot community) decide how you're going<br/>&nbsp;to select your representatives for the initial CAB.&#160; On the other<br/>&nbsp;hand, it's difficult to get consensus among 80 people.&#160; In order<br/>&nbsp;to bootstrap, I'd like to suggest a few basic rules and process<br/>&nbsp;steps.<br/>&nbsp;Once the nomination period is over, Jim will be contacting the<br/>&nbsp;nominees to make sure they're willing to serve, and asking each<br/>&nbsp;to provide a short bio.&#160; The bios will go up on the pilot site<br/>&nbsp;prior to the start of voting.<br/>&nbsp;In order to address the concerns Bill brought up, I suggest using<br/>&nbsp;approval voting.&#160; This is relatively simple, and avoids issues with<br/>&nbsp;similar candidates splitting votes (for those familiar with recent<br/>&nbsp;US politics, think Nader in 2000).&#160; The basic idea is that each<br/>&nbsp;voter makes a yes/no selection for each nominee -<em>&nbsp;the winners<br/>&nbsp;are those who receive the most "yes" votes.&#160; Approval voting is<br/>&nbsp;used by the IEEE as well as a few of the American mathematical<br/>&nbsp;societies (AMS, MAA, ASA).&#160; For more details see:<br/>&nbsp;&#160;&#160; &#160;http:<del>bcn.boulder.co.us/government/approvalvote/center.html<br/>&nbsp;or just google for "Approval Voting".<br/>&nbsp;The votes should be kept private, with only the results announced.<br/>&nbsp;We'll send out ballots (probably just a text file with yes/no boxes<br/>&nbsp;to fill in unless someone has a better idea) to individual pilot<br/>&nbsp;members, with the reply-to field set to an alias set up for the<br/>&nbsp;purpose.&#160; Once the voting period is over, we'll count the ballots,<br/>&nbsp;make sure there's only (at most) one per member, and post the<br/>&nbsp;results.&#160; Only a few people within the OpenSolaris team at Sun<br/>&nbsp;will see the raw ballots, and will of course keep the information<br/>&nbsp;about how individuals voted confidential.<br/>&nbsp;Comments?&#160; Concerns?<br/>&nbsp;Andy<br/>&nbsp;-</del>- Original Message -<del>-<br/>&nbsp;Subject: Re: [Opensolaris-discuss] CAB: voting system?<br/>&nbsp;Date: Wed, 02 Feb 2005 14:06:15 -0800<br/>&nbsp;From: Andrew Tucker &lt;Andrew.Tucker@Sun.COM&gt;<br/>&nbsp;To: Joerg Schilling &lt;schilling@fokus.fraunhofer.de&gt;<br/>&nbsp;CC: sommerfeld@Sun.COM, Jim.Grisanzio@Sun.COM, opensolaris-discuss@opensolaris.org<br/>&nbsp;On Mon, Jan 31, 2005 at 03:31:11PM +0100, Joerg Schilling wrote:<br/>&nbsp;&gt; Bill Sommerfeld &lt;sommerfeld@sun.com&gt; wrote:<br/>&nbsp;&gt; &gt; I don't believe I've seen any discussion of the voting method to be used.<br/>&nbsp;&gt;<br/>&nbsp;&gt; If we would like to follow usual formal voting rules, we should<br/>&nbsp;&gt; first try to create a voting commitee.<br/>&nbsp;Although I think that's a reasonable idea, I'm worried about the<br/>&nbsp;time it will take.&#160; Also you still have a bootstrapping problem -</del><br/>&nbsp;how do you select members of the voting committee?&#160; In any case,<br/>&nbsp;you can look at the initial CAB as (at least in part) being that<br/>&nbsp;committee -<del>&nbsp;part of its role will be to define the format and<br/>&nbsp;rules for the ongoing board, including voting rules.<br/>&nbsp;Ideally, we'd let you (the pilot community) decide how you're going<br/>&nbsp;to select your representatives for the initial CAB.&#160; On the other<br/>&nbsp;hand, it's difficult to get consensus among 80 people.&#160; In order<br/>&nbsp;to bootstrap, I'd like to suggest a few basic rules and process<br/>&nbsp;steps.<br/>&nbsp;Once the nomination period is over, Jim will be contacting the<br/>&nbsp;nominees to make sure they're willing to serve, and asking each<br/>&nbsp;to provide a short bio.&#160; The bios will go up on the pilot site<br/>&nbsp;prior to the start of voting.<br/>&nbsp;In order to address the concerns Bill brought up, I suggest using<br/>&nbsp;approval voting.&#160; This is relatively simple, and avoids issues with<br/>&nbsp;similar candidates splitting votes (for those familiar with recent<br/>&nbsp;US politics, think Nader in 2000).&#160; The basic idea is that each<br/>&nbsp;voter makes a yes/no selection for each nominee -</del> the winners<br/>&nbsp;are those who receive the most "yes" votes.&#160; Approval voting is<br/>&nbsp;used by the IEEE as well as a few of the American mathematical<br/>&nbsp;societies (AMS, MAA, ASA).&#160; For more details see:<br/>&nbsp;&#160;&#160; &#160;http:</em>bcn.boulder.co.us/government/approvalvote/center.html<br/>&nbsp;or just google for "Approval Voting".<br/>&nbsp;The votes should be kept private, with only the results announced.<br/>&nbsp;We'll send out ballots (probably just a text file with yes/no boxes<br/>&nbsp;to fill in unless someone has a better idea) to individual pilot<br/>&nbsp;members, with the reply-to field set to an alias set up for the<br/>&nbsp;purpose.&#160; Once the voting period is over, we'll count the ballots,<br/>&nbsp;make sure there's only (at most) one per member, and post the<br/>&nbsp;results.&#160; Only a few people within the OpenSolaris team at Sun<br/>&nbsp;will see the raw ballots, and will of course keep the information<br/>&nbsp;about how individuals voted confidential.<br/>&nbsp;Comments?&#160; Concerns?<br/>&nbsp;Andy<br/>&nbsp;-<del>- Original Message -</del>-<br/>&nbsp;Subject: Re[2]: [Opensolaris-discuss] CAB: voting system?<br/>&nbsp;Date: Wed, 02 Feb 2005 23:32:24 +0100<br/>&nbsp;From: Robert Milkowski &lt;rmilkowski@task.gda.pl&gt;<br/>&nbsp;Reply-To: Robert Milkowski &lt;rmilkowski@task.gda.pl&gt;<br/>&nbsp;Organization: CI TASK <span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://www.task.gda.pl"><span class="wikigeneratedlinkcontent">http://www.task.gda.pl</span></a></span><br/>&nbsp;To: Andrew Tucker &lt;Andrew.Tucker@sun.com&gt;<br/>&nbsp;CC: Joerg Schilling &lt;schilling@fokus.fraunhofer.de&gt;, Jim.Grisanzio@Sun.COM, opensolaris-discuss@opensolaris.org, sommerfeld@sun.com<br/>&nbsp;Hello Andrew,<br/>&nbsp;Wednesday, February 2, 2005, 11:06:15 PM, you wrote:<br/>&nbsp;AT&gt; On Mon, Jan 31, 2005 at 03:31:11PM +0100, Joerg Schilling wrote:<br/>&nbsp;&gt;&gt; Bill Sommerfeld &lt;sommerfeld@sun.com&gt; wrote:<br/>&nbsp;&gt;&gt; &gt; I don't believe I've seen any discussion of the voting method to be used.<br/>&nbsp;&gt;&gt;<br/>&nbsp;&gt;&gt; If we would like to follow usual formal voting rules, we should<br/>&nbsp;&gt;&gt; first try to create a voting commitee.<br/>&nbsp;AT&gt; Although I think that's a reasonable idea, I'm worried about the<br/>&nbsp;AT&gt; time it will take.&#160; Also you still have a bootstrapping problem -<del><br/>&nbsp;AT&gt; how do you select members of the voting committee?&#160; In any case,<br/>&nbsp;AT&gt; you can look at the initial CAB as (at least in part) being that<br/>&nbsp;AT&gt; committee -</del> part of its role will be to define the format and<br/>&nbsp;AT&gt; rules for the ongoing board, including voting rules.<br/>&nbsp;AT&gt; Ideally, we'd let you (the pilot community) decide how you're going<br/>&nbsp;AT&gt; to select your representatives for the initial CAB.&#160; On the other<br/>&nbsp;AT&gt; hand, it's difficult to get consensus among 80 people.&#160; In order<br/>&nbsp;AT&gt; to bootstrap, I'd like to suggest a few basic rules and process<br/>&nbsp;AT&gt; steps.<br/>&nbsp;AT&gt; Once the nomination period is over, Jim will be contacting the<br/>&nbsp;AT&gt; nominees to make sure they're willing to serve, and asking each<br/>&nbsp;AT&gt; to provide a short bio.&#160; The bios will go up on the pilot site<br/>&nbsp;AT&gt; prior to the start of voting.<br/>&nbsp;AT&gt; In order to address the concerns Bill brought up, I suggest using<br/>&nbsp;AT&gt; approval voting.&#160; This is relatively simple, and avoids issues with<br/>&nbsp;AT&gt; similar candidates splitting votes (for those familiar with recent<br/>&nbsp;AT&gt; US politics, think Nader in 2000).&#160; The basic idea is that each<br/>&nbsp;AT&gt; voter makes a yes/no selection for each nominee -<del>&nbsp;the winners<br/>&nbsp;AT&gt; are those who receive the most "yes" votes.&#160; Approval voting is<br/>&nbsp;AT&gt; used by the IEEE as well as a few of the American mathematical<br/>&nbsp;AT&gt; societies (AMS, MAA, ASA).&#160; For more details see:<br/>&nbsp;AT&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://bcn.boulder.co.us/government/approvalvote/center.html"><span class="wikigeneratedlinkcontent">http://bcn.boulder.co.us/government/approvalvote/center.html</span></a></span><br/>&nbsp;AT&gt; or just google for "Approval Voting".<br/>&nbsp;AT&gt; The votes should be kept private, with only the results announced.<br/>&nbsp;AT&gt; We'll send out ballots (probably just a text file with yes/no boxes<br/>&nbsp;AT&gt; to fill in unless someone has a better idea) to individual pilot<br/>&nbsp;AT&gt; members, with the reply-to field set to an alias set up for the<br/>&nbsp;AT&gt; purpose.&#160; Once the voting period is over, we'll count the ballots,<br/>&nbsp;AT&gt; make sure there's only (at most) one per member, and post the<br/>&nbsp;AT&gt; results.&#160; Only a few people within the OpenSolaris team at Sun<br/>&nbsp;AT&gt; will see the raw ballots, and will of course keep the information<br/>&nbsp;AT&gt; about how individuals voted confidential.<br/>&nbsp;AT&gt; Comments?&#160; Concerns?<br/>&nbsp;Easy and simple - imho it's definitely reasonable for first CAB.<br/>&nbsp;But all nominated candidates should speak now if they want or not the<br/>&nbsp;job. I don't see any reason why we should wait. It's because if one of<br/>&nbsp;my favorite decide not to take the job I prefer to know it before<br/>&nbsp;nominations end so there's still a time to potential new nomination in<br/>&nbsp;that case.<br/>&nbsp;--<br/>&nbsp;Best regards,<br/>&nbsp;&#160;Robert&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="wikiexternallink"><a class="wikimodel-freestanding" href="mailto:rmilkowski@task.gda.pl"><span class="wikigeneratedlinkcontent">mailto:rmilkowski@task.gda.pl</span></a></span><br/>&nbsp;-</del>- Original Message -<del>-<br/>&nbsp;Subject: Re: Re[2]: [Opensolaris-discuss] CAB: voting system?<br/>&nbsp;Date: Wed, 02 Feb 2005 23:33:22 +0100<br/>&nbsp;From: Joerg Schilling &lt;schilling@fokus.fraunhofer.de&gt;<br/>&nbsp;To: rmilkowski@task.gda.pl, Andrew.Tucker@sun.com<br/>&nbsp;CC: Jim.Grisanzio@Sun.COM, opensolaris-discuss@opensolaris.org<br/>&nbsp;Robert Milkowski &lt;rmilkowski@task.gda.pl&gt; wrote:<br/>&nbsp;&gt; But all nominated candidates should speak now if they want or not the<br/>&nbsp;&gt; job. I don't see any reason why we should wait. It's because if one of<br/>&nbsp;&gt; my favorite decide not to take the job I prefer to know it before<br/>&nbsp;&gt; nominations end so there's still a time to potential new nomination in<br/>&nbsp;&gt; that case.<br/>&nbsp;Did someone create a complete list?<br/>&nbsp;It would be nice if this list could be mailed to us.<br/>&nbsp;J&#246;rg</del></li></ul></li></ul></li></ul></li></ul>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:07<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by admin on 2009/10/26 12:07
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+                </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSNav','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSNav'); togglePanelVisibility(this.parentNode);">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavCommunity Group">
+            <div id="xwikinavCommunity GroupHeader" class="accordionTabTitleBar"><h6>Community Group</h6>
+            </div>
+            <div id="xwikinavCommunity GroupContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+edu/">Academic and Research</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+accessibility/">Accessibility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+advocacy/">Advocacy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+appliances/">Appliances</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+approachability/">Approachability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/">Architecture Process and Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+brandz/">BrandZ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+chinese_users/">Chinese Users</a></span></li>
+<li><em class="underline"><em><span class="wikilink"><a href="/bin/view/Community+Group+cab/">Community Advisory Board</a></span></em></em></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+dtrace/">DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+databases/">Databases</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+desktop/">Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/">Device Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+distribution/">Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+emerging_platforms/">Emerging Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+fm/">Fault Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+games/">Games on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ha%2Dclusters/">HA Clusters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+hpcdev/">HPC Developer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+int_localization/">Internationalization and Localization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+laptop/">Laptop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ldoms/">Logical Domains</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+mdb/">Modular Debugger (MDB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+nfs/">NFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/">Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/">OS/Net (ON)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+observability/">Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ogb/">OpenSolaris Governing Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+printing/">OpenSolaris Printing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/">Performance</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+pm/">Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+power_pc/">PowerPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/">Security</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+smf/">Service Management Facility (smf(5))</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sw%2Dporters/">Software Porters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+volume_manager/">Solaris Volume Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+storage/">Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sysadmin/">Systems Administration Community Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+testing/">Testing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/">Tools Home</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ufs/">Unix File Systems (UFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+web/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+x_win/">X Window System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+xen/">Xen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/">ZFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/">Zones</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavProject">
+            <div id="xwikinavProjectHeader" class="accordionTabTitleBar"><h6>Project</h6>
+            </div>
+            <div id="xwikinavProjectContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/"></a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+adsl/">ADSL Modem Enhancement</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+arc%2Dprocess/">ARC Process Definition</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osarm/">ARM Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bind/">BIND Update</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bluetooth/">Bluetooth Stack & Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dinitiator/">Brocade FC HBA &#45; Initiator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dtarget/">Brocade FC HBA &#45; Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brussels/">Brussels &#45; unified network link configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cifs%2Dserver/">CIFS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smbfs/">CIFS client for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cmt/">CMT</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/">COMSTAR: Common Multiprotocol SCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpufs/">CPU Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/">Caiman, Solaris Install Revisited</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+celeste/">Celeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/">Chime Visualization Tool for DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+clearview/">Clearview: Network Interface Coherence</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dinformix/">Cluster Agent: Informix Dynamic Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dcontainer/">Cluster Agent: OpenSolaris Container</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dxvm/">Cluster Agent: OpenSolaris xVM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Debs/">Cluster Agent: Oracle E&#45;Business Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dsmb/">Cluster Agent: Samba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dtomcat/">Cluster Agent: Tomcat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dpostgresql/">Cluster agent: PostgreSQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+data%2Dflow/">Coarse Data Flow Parallelism</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+colorado/">Colorado: Open HA Cluster on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+commandassist/">Command Assistant</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cam/">Common Array Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+companion/">Companion &#45; /opt/sfw: Free and Open Source software</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+content/">Content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+contest/">Contest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpg/">Credentials Process Groups</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crossbow/">Crossbow: Network Virtualization and Resource Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmsagenttoolkit/">Crypto KMS Agent Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/">Cryptographic Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Ddoc/">DTrace Guide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dmm/">Data Migration Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+datatethers/">Data Tethers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+de/">Deutsches Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ddtool/">Device Detection Tool</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+driver%2Dutility/">Device Driver Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devicemgr/">Device Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devmapper/">Device Mapper</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dri/">Direct Rendering Infrastructure & 3D drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/">Duckwater: Simplified name services management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+phpEasyTools/">Easy Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emancipation/">Emancipation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex%2Dcna/">Emulex Advanced Ethernet Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex/">Emulex Fibre Channel Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webcams/">Enhance the support of USB webcams</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Dprofiles/">Enhanced SMF Profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+amd/">Enhancements for AMD&#45;based Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+erlang%2Ddtrace/">Erlang DTrace Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ethbridge/">Ethernet bridge module for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+conary%2Deval/">Evaluate Conary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+events%2Dregistry/">Events Registry</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ext3/">Ext3 file system support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+facilitation/">Facilitation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fcoe/">Fibre Channel over Ethernet</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fgap/">Fine Grained Access Policy (FGAP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fingerprint%2Dauthentication/">Fingerprint Authentication</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fmac/">Flexible Mandatory Access Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+forensics/">Forensic Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fox/">Fully Open X Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fuse/">Fuse on Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+generic%2Dmca/">Generic Machine Check Architecture Improvements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+raidcfg/">Generic RAID Configuration Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+summerofcode/">Google SOC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Djboss/">HA&#45;JBoss</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dmysql/">HA&#45;MySQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hpc%2Dstack/">HPC Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livehadoop/">Hadoop Live CD</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hitachi/">Hitachi</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+honeycomb/">HoneyComb Fixed Content Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hotplug/">Hotplug Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ip%2Drefactor/">IP Datapath Refactoring</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ipoib/">IP over Infiniband</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tref/">IPsec Tunnel Reform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/">Image Packaging System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isc/">Immutable Service Containers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+perfmib/">Improved Performance MIB</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/">Indiana</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+awards/">Innovation Awards</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ikev2/">Internet Key Exchange, version 2 (IKEv2)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+irm/">Interrupt Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jkstat/">JKstat &#45; a java binding for libkstat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jeos/">JeOS &#45; Just enough Operating System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jfs/">Journaled File System (JFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kde/">K Desktop Environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kerberos/">Kerberos</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kssl/">Kernel SSL Enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kernel%2Dsockets/">Kernel Sockets</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmf/">Key Management Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ksh93%2Dintegration/">Korn Shell 93 integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ldoms%2Dmgr/">LDoms Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+txipsec/">Labeled IPsec</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+l2filter/">Layer 2 Filtering</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lending/">Lending</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lld/">Link Layer Discovery</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livemedia/">Live Media: Technologies for distributions running from CD and other media</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+localedata/">Locale Data</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mips/">MIPS Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohac%2Davs/">MRSL.NONsharedDevice</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mega_sas/">Mega_sas</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mx/">Mexico</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+milax/">MilaX minimal Live Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mozilla%2Ddtrace/">Mozilla DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+glossary/">Multi&#45;lingual Glossary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mpxio/">Multi&#45;pathing software (MPxIO)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+multiple%2Ddoi/">Multiple DOI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+muskoka/">Muskoka: An open repository for OpenSolaris technical content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsrdma/">NFS RDMA transport update and performance analysis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dzones/">NFS Server in non&#45;Global Zones</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsv41/">NFS version 4.1 pNFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dnamespace/">NFSv4 namespace extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npiv/">NPort ID Virtualization (NPIV)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+navigator/">Navigator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nemo/">Nemo: A Framework for High&#45;Performance Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/">Network Auto&#45;Magic</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ndmp/">Network Data Management Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+net%2Dmib/">Network MIBs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npp/">Network Performance Projects</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dpm/">Network Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nws/">Network Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nv%2Dg11n/">Nevada Globalization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+4over6/">New Design of 4over6 Mechanism Based on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nightingale/">Nightingale: Port Songbird to OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+onnv/">ON/Nevada (ONNV) Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osd/">Object Storage Device (OSD) support for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opendev/">Open Development Infrastructure</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dutilities/">Open HA Cluster Utilities</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opensound/">Open Sound System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/">OpenGrok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cim%2Dserver/">OpenPegasus CIM Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+openrti/">OpenRTI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+busybox/">OpenSolaris Busybox</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/">OpenSolaris Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+es/">OpenSolaris Hispano</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+audit/">OpenSolaris Security Audit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/">OpenSolaris support for the QEMU processor emulator: host and guest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pef/">PEF: Packet Event Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+performance%2Dwrappers/">Performance Wrappers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkgfactory/">Pkgfactory</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pl/">Polski Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fr/">Portail Francophone</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+br/">Portal Brasileiro de OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+portals/">Portals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmui/">Power Management Usability Interfaces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+presto/">Presto: Automatic Printing Configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmpsm/">Printable Many Page Solaris Manuals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+promise%2Dstorage/">Promise SuperTrak RAID HBA Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qlogic%2Dcna/">QLogic Converged Network Adapter GLDv3 NIC Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+quagga/">Quagga Routing Protocol Suite Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rbridges/">RBridge (IETF TRILL) support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rof/">RDMA Offload Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+releasenotes/">Release Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+reno/">Reno: Login Process Enhancements for Interop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/">Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+samqfs/">SAM/QFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+scm%2Dmigration/">SCM Migration Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+srp/">SCSI RDMA Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sdcard%2Ddrivers/">SDcard Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sfwnv/">SFW</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sm%2Dhba/">SM&#45;HBA Based SAS HBA Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Ddoc/">SMF Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+svr4_packaging/">SVR4 Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sensors/">Sensor Abstraction Layer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dsip/">Session Initiation Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+simplepanels/">Simple Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/">Solaris PowerPC Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iscsitgt/">Solaris iSCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sourcejuicer/">SourceJuicer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/">Sparks: name service switch/nscd enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+squashfs/">Squashfs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+star/">Star integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starfish/">Starfish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starterkit/">Starter Kit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+storagepm/">Storage Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sst/">Sun Security Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+avs/">Sun StorageTek Availability Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ofuv/">Support for OpenFabrics User Verbs / API on OpenSolaris OS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/">Support gcc4/GCCfss in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+suspend%2Dresume/">Suspend/Resume</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+systemz/">Systemz</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tipc/">TIPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+branding/">Trademarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tpm/">Trusted Platform Module support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tnipdb/">Trusted networking interface policy database for Trusted Extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+usecase/">Use Case</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+userland/">Userland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vrrp/">VRRP: Virtual Router Redundancy Protocol Implementation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vscan/">VSCAN service</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+valex/">Validated Execution Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vconsole/">Virtual Console</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vnm/">Virtual Network Machines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/">Visual Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+visualization%2Dhpc/">Visualization for HPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+volo/">Volo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/">Web Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+website/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+winchester/">Winchester: Schema mapping and ID mapping for AD Interoperability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wusb/">Wireless USB Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wwan/">Wireless Wide Area Network</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x%2Dcons/">X Consolidation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xkblayout/">X Keyboard Layout</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xen%2Dgate/">Xen Gate</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xfce/">Xfce: A lightweight desktop environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfsboot/">ZFS Boot and Install</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfs%2Dcrypto/">ZFS on disk encryption support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonemgr/">Zone Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonestat/">Zone Statistics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gcore/">gcore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iser/">iSCSI Extensions for Remote DMA (iSER)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isns/">iSNS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+libmicro/">libMicro &#45; portable microbenchmarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+loficc/">lofi compression and cryptography support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lx64/">lx64 brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+s10brand/">s10brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x86gentopo/">x86 Generic FMA Topology Enumerator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cz/">Český portál</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ru/">Русский портал</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ar/">البوابة العربية</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+in/">भारतीय पोर्टल</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cn/">中国门户</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/">日本ポータル</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kr/">한국 포탈</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavUser Group">
+            <div id="xwikinavUser GroupHeader" class="accordionTabTitleBar"><h6>User Group</h6>
+            </div>
+            <div id="xwikinavUser GroupContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+kr/"></a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+adl%2Dauosug/">Adelaide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+aosug/">Argentina</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+azosug/">Arizona</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+atl%2Dosug/">Atlanta OpenSolaris Users Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bwosug/">Baltimore&#45;Washington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bosug/">Bangalore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bkkosug/">Bangkok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bdosug/">Bangladesh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bjosug/">Beijing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+brosug/">Berlin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bvrm%2Dosug/">Bhimavaram</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+btn%2Dosug/">Bloomington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfosug/">Brasilia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+blmosug/">Bélem</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+crosug/">Capital Region</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cfosug/">Cardiff</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ccosug/">Caribbean OSUG</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ceosug/">Ceara</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cltosug/">Charlotte</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chennai/">Chennai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chmxosug/">Chihuahua</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+closug/">Chile</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cle%2Dosug/">Cleveland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+colosug/">Colombia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cmh%2Dosug/">Columbus</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ctosug/">Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+knp%2Duek/">Cracow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+czosug/">Czech</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfw%2Dosug/">Dallas/Ft. Worth</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dosug/">Danish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+deosug/">Delaware</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+eduosug/">Edinburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+egosug/">Egypt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fiosug/">Finland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+flosug/">Florida</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fraosug/">Frankfurt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+frosug/">Front Range</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+glug/">Great Lakes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+grosug/">Greece</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hzosug/">Hangzhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hi%2Dosug/">Hawaii</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hkosug/">Hong Kong</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hugs/">Houston</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hosug/">Hyderabad</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+idosug/">Indonesia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madridosug/">Inicio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ie%2Dosug/">Irish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+iosug/">Israel</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+istosug/">Istanbul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+itl%2Dosug/">Italian</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jnosug/">Jinan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jogja%2Dosug/">Jogja</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kbosug/">Kabul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kc%2Dosug/">Kansas City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+lavosug/">Latvia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+losug/">London</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madosug/">Madurai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mansug/">Manchester</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mssosug/">Mato Grosso</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+msosug/">Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mgosug/">Minas Gerais</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mnosug/">Minnesota</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mtlosug/">Montreal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mosug/">Moscow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mmosug/">Mumbai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mucosug/">Munich</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+neaosug/">NEA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nlosug/">Netherlands</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ne%2Dosug/">New England</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nycosug/">New York City OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nzosug/">New Zealand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+norosug/">Noroeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nerosug/">Nuremberg&#45;Erlangen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+okcosug/">Oklahoma City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ososug/">Osnabrück</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+peosug/">Peru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+paosug/">Philadelphia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+piaski%2Dosug/">Piaski</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ptosug/">Pittsburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+poaosug/">Porto Alegre</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+psosug/">Puget Sound</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+posug/">Pune</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+qosug/">Queensland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rtp%2Dosug/">Research Triangle Park</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+riosug/">Rio de Janeiro</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ro%2Dosug/">Romania</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ruosug/">Russia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+alamo%2Dosug/">San Antonio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sdosug/">San Diego</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sfosug/">San Francisco</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+scosug/">Scottish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rs%2Dosug/">Serbia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szosug/">Shenzhen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svosug/">Silicon Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sgosug/">Singapore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+skosug/">Slovak</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+saosug/">South African</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+soctosug/">Southern Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+stl%2Dosug/">St. Louis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svgosug/">Stavanger</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+swosug/">Sweden</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chosug/">Switzerland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sosug/">Sydney</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szc%2Dosug/">Szczecin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sampaosug/">São Paulo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+twosug/">Taiwan OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ostug/">Tecum</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tvosug/">Thames Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tsug/">Tokyo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+torosug/">Toronto</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+trosug/">Trondheim</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+toss/">Tulsa</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tosug/">Turkey</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ufaosug/">Ufa OSUG</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+uaosug/">Ukraine OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+unimelb%2Dosug/">University of Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+valeosug/">Vale do Paraíba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vanosug/">Vancouver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vosug/">Venezuela &#45; Pagina de incio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vvoosug/">Vladivostok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wosug/">Welsh &#45; Cymru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wiosug/">Wisconsin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+xaosug/">Xi'an</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+</div><p/>
+<script type="text/javascript">
+var obj = {div:'xwikinav',no:0,height:250};
+var acc = createAccordion(obj);
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSDocs','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSDocs'); togglePanelVisibility(this.parentNode);">Community Group cab Pages</h1>
+<div class="xwikipanelcontents"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/OGB_Election_Status">OGB Election March 2007</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/Position_Paper_20070207">Position Paper 20070207</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/Position_Paper_2007020700">Position Paper 20070207</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/Position_Paper_2007020701">Position_Paper_20070207</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/Position_Papers">Position Paper 20070207</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/cab_meeting_notes">CAB Meeting Notes</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/2005">2005</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/charter">OpenSolaris Charter</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/dev_team">Sun/CAB Dev Team Notes</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/dev_notes_20050330">2005&#45;03&#45;30</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/dev_notes_20050413">2005&#45;04&#45;13</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/dev_notes_20050414">2005&#45;04&#45;14</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/dev_notes_20050421">2005&#45;04&#45;21</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/dev_notes_20050427">2005&#45;04&#45;27</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/dev_notes_20050428">2005&#45;04&#45;28</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/dev_notes_20050512">2005&#45;05&#45;12</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/dev_notes_20050519">2005&#45;05&#45;19</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/dev_notes_20050526">2005&#45;05&#45;26</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/first_cab_election">First CAB Election</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/cab_5_member">CAB 5th Member</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/cab_election_opens">CAB Election Opens</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/cab_election_process">CAB Election Process</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/cab_election_results">CAB Election Results</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/cab_makeup">CAB Makeup</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/cab_update">CAB Update</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/cab_voting_system">CAB Voting System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/cab_wants_you">CAB Wants You</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/call_for_nominations">Call for Nominations</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/first_cab_meeting">First CAB Meeting</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/nominee_request">Nominee Request</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/sun_participants">Sun Participants</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/governance">OpenSolaris Governance</a></span></li>
+</ul>
+                        </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div>  <div id="footerglobal" class="layoutsection">
+  <div class="minwidth"></div>
+
+  <script language="JavaScript" src="/resources/js/s_code_remote.js"></script>
+
+
+          <div id="xwikiplatformversion">XWiki Enterprise 2.1.1.25889 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+  <br/>
+
+
+    <hr/>
+    <div><a href="/bin/view/Main/tou">Terms Of Use</a> |
+         <a href="http://www.sun.com/privacy/">Privacy</a> | 
+         <a href="/bin/view/Main/trademark">Trademarks</a> |
+         <a href="/bin/view/Main/copyrights">Copyright Policy</a> |
+         <a href="/bin/view/Main/site_guidelines">Site Guidelines</a> |
+         <a href="/bin/view/Main/site%2Dmap">Site map</a> |
+         <a href="/bin/view/Main/help">Help</a></div>
+    <div>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.</div>
+    <div id="xwikilicence">© 2010, Oracle Corporation and/or its affiliates</div>
+    <img src="http://opensolaris.org/oracle/logo_oracle_footer.gif")" alt="Oracle"/>
+  <hr/>
+  
+  </div>
+
+
+</div></div></body>
+</html>

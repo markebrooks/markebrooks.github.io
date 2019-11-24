@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>SunPinyin代码导读-IME部分 (Project input-method.sunpinyin_code_tour_ime) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+input%2Dmethod/sunpinyin_code_tour_ime" />
+                                <meta name="document" content="Project input-method.sunpinyin_code_tour_ime"/>
+    <meta name="space" content="Project input-method"/>
+    <meta name="page" content="sunpinyin_code_tour_ime"/>
+    <meta name="version" content="1.1"/>
+                    <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="SunPinyin代码导读-IME部分" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                <!-- com.xpn.xwiki.plugin.skinx.LinkExtensionPlugin -->
+    <link href="/bin/skin/skins/colibri/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+  <link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="all" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript" src="/resources/js/xwiki/suggest/ajaxSuggest.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project input-method";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes" ];
+window.docviewurl = "/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_ime";
+window.docediturl = "/bin/edit/Project+input%2Dmethod/sunpinyin_code_tour_ime";
+window.docsaveurl = "/bin/save/Project+input%2Dmethod/sunpinyin_code_tour_ime";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js'></script><script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js'></script><script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js'></script><script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js'></script>
+
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/compatibility.js"></script>
+
+  </head>
+        <body id="body" class="xwiki viewbody hideright">
+  <div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+<div id="menuview">
+  <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div class="topmenuentry " id="tmLogin"><a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Binput%252Dmethod%2Fsunpinyin_code_tour_ime%3Fxpage%3Dprint%26%2338%3Blanguage%3Den"><strong>Log-in</strong></a></div>
+  </div>
+<div class="leftmenu">
+  <div class="topmenuentry hasIcon" id="tmWiki"><a class="tme" href="/bin/view/Main/"><strong>xwiki</strong></a></div>
+  <div class="topmenuentry hasIcon" id="tmSpace"><a class="tme" href="/bin/view/Project+input%2Dmethod/"><strong>Project input-method</strong></a></div>
+
+<div class="topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmSubSites">
+<span class="tme-extensible"><a class="tme"><strong>Subsites</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="http://cr.opensolaris.org/" id="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth">Auth</a></span>
+</span></div>
+
+
+</div>
+</div>
+
+</div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+
+  <div id="company">
+  <div id="companylogo">
+    <a href="/bin/view/Main/" title="Home" rel="home">
+    <img src="/skins/colibri/logo.png" alt="Wiki Logo"/>
+    </a>
+  </div>   </div> 
+  <div id="Iconbar">
+    <a id="CollectivesIcon" href="/bin/view/Main/collectives">Collectives</a>
+    <a id="DiscussionsIcon" href="/bin/view/Main/discussions">Discussions</a>
+    <a id="DocumentationIcon" href="/bin/view/Main/documentation">Documentation</a>
+    <a id="DownloadIcon" href="/bin/view/Main/downloads">Download</a>
+    <a id="SourceBrowserIcon" href="http://src.opensolaris.org">Source Browser</a>
+  </div>
+  <div class="clearfloats"></div>
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/WebSearch">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+   <div id="hierarchy">
+                <a href='/bin/view/Project+input%2Dmethod/documents'>Documents</a> <span class='separator'>&raquo;</span> <a href='/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_ime'>SunPinyin代码导读-IME部分</a>
+      </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_ime?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+  <div id="contentmenu" class="actionmenu">
+  <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div class="topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmExport">
+<span class="tme-extensible"><a class="tme"><strong>Export</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+input%2Dmethod/sunpinyin_code_tour_ime?format=pdf&amp;language=en" id="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+input%2Dmethod/sunpinyin_code_tour_ime?format=rtf&amp;language=en" id="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+input%2Dmethod/sunpinyin_code_tour_ime?format=html&amp;language=en" id="tmExportHtml">Export as HTML</a></span>
+  </span></div>
+
+<div class="topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmShow">
+<span class="tme-extensible"><a class="tme" href="/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_ime?viewer=code&amp;language=en"><strong>View</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_ime?viewer=comments&amp;language=en" id="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_ime?viewer=attachments&amp;language=en" id="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_ime?viewer=history&amp;language=en" id="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_ime?viewer=information&amp;language=en" id="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_ime?viewer=code&amp;language=en" id="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div class="topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmMoreActions">
+<span class="tme-extensible"><a class="tme"><strong>More actions</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_ime?xpage=print&amp;language=en" id="tmPrintPreview">Print preview</a></span>
+    </span></div>
+  </div>
+
+
+  </div>
+  <div id="mainContentArea">
+      
+
+
+  
+<div id="document-title"><h1>SunPinyin代码导读-IME部分</h1></div>
+                            <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h2 id="H0"><span>0. &#32508;&#36848;</span></h2><p>&nbsp;&#36825;&#19968;&#37096;&#20998;&#20027;&#35201;&#20171;&#32461;Sunpinyin&#20013;ime&#37096;&#20998;&#30340;&#20195;&#30721;&#12290;<br/>&nbsp;&#35201;&#26500;&#24314;ime&#37096;&#20998;&#30340;&#20195;&#30721;&#65292;&#21487;&#20197;&#25191;&#34892;&#19979;&#38754;&#30340;&#25805;&#20316;&#65306;<br/>&nbsp;$ ./autogen.sh --prefix=/usr --enable-debug --enable-gtkstandalone<br/>&nbsp;$ make<br/>&nbsp;&#20351;&#29992;--enable-gtkstandalone&#36873;&#39033;&#65292;&#20250;&#29983;&#25104;&#19968;&#20010;&#19981;&#20381;&#36182;&#20110;&#36755;&#20837;&#27861;&#26694;&#26550;&#30340;&#28436;&#31034;&#31243;&#24207;&#65292;&#20301;&#20110;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/wrapper/gtk_standalone/">wrapper/gtk_standalone</a></span>&#30446;&#24405;&#20013;&#12290;&#20320;&#21487;&#20197;&#36890;&#36807;&#36825;&#20010;&#28436;&#31034;&#31243;&#24207;&#26469;&#20102;&#35299;&#25110;&#35843;&#35797;Sunpinyin&#36755;&#20837;&#27861;&#30340;&#20195;&#30721;&#12290;&#25105;&#20204;&#21518;&#38754;&#30340;&#31995;&#21015;&#65292;&#20063;&#20250;&#20174;&#36825;&#20010;&#28436;&#31034;&#31243;&#24207;&#20837;&#25163;&#12290;<br/>&nbsp;&#21516;&#26102;&#65292;&#22312;configure.ac&#20013;&#65292;--enable-cle&#26159;&#32570;&#30465;&#25171;&#24320;&#30340;&#65288;&#20320;&#21487;&#20197;&#36890;&#36807;--disable-cle&#26469;&#20851;&#38381;&#36825;&#20010;&#36873;&#39033;&#65289;&#65292;&#22240;&#27492;&#22312;&#25191;&#34892;make&#26102;&#65292;&#36824;&#21516;&#26102;&#20250;&#20026;iiimf-cle&#65288;Chinese Language Engine&#65289;&#26500;&#24314;&#19968;&#20010;&#36755;&#20837;&#27861;&#27169;&#22359;&#65292;&#25191;&#34892;make install&#65292;&#20250;&#25226;&#23427;&#23433;&#35013;&#21040;/usr/lib/iiim/le/cle&#30340;&#30446;&#24405;&#19979;&#12290;&#22914;&#26524;&#35201;&#22312;Mac OS&#19978;&#32534;&#35793;&#65292;&#38656;&#35201;export LDFLAGS=-liconv&#12290;<br/>&nbsp;Sunpinyin&#25903;&#25345;&#20004;&#31181;&#36755;&#20837;&#39118;&#26684;&#65292;&#8220;&#32463;&#20856;&#39118;&#26684;&#8221;&#21644;&#8220;&#21450;&#26102;&#36716;&#25442;&#39118;&#26684;&#8221;&#12290;&#8220;&#21450;&#26102;&#36716;&#25442;&#39118;&#26684;&#8221;&#21644;&#24494;&#36719;&#25340;&#38899;&#30340;&#39118;&#26684;&#31867;&#20284;&#65292;&#29992;&#25143;&#22312;&#36755;&#20837;&#25340;&#38899;&#26102;&#65292;&#21482;&#22312;preedit&#21306;&#22495;&#20013;&#26174;&#31034;&#24403;&#21069;&#30340;&#26368;&#20339;&#21477;&#23376;&#65292;&#21487;&#20197;&#36890;&#36807;&#24038;&#21491;&#38190;&#65292;&#23545;&#20854;&#20013;&#20219;&#24847;&#19981;&#28385;&#24847;&#30340;&#37096;&#20998;&#36827;&#34892;&#32534;&#36753;&#65288;&#21363;&#29992;&#25143;&#36873;&#25321;&#65292;user selection&#65289;&#12290;<br/><img src="http://blogs.sun.com/yongsun/resource/sunpinyin_morden_style.png" alt="http://blogs.sun.com/yongsun/resource/sunpinyin_morden_style.png"/>&#160; <img src="http://blogs.sun.com/yongsun/resource/sunpinyin_morden_style_editing.png" alt="http://blogs.sun.com/yongsun/resource/sunpinyin_morden_style_editing.png"/><br/>&nbsp;&#8220;&#32463;&#20856;&#39118;&#26684;&#8221;&#21644;&#32043;&#20809;&#25340;&#38899;&#65288;&#20197;&#21450;&#21518;&#26469;&#30340;&#25628;&#29399;&#25340;&#38899;&#12289;Google&#25340;&#38899;&#65289;&#30340;&#39118;&#26684;&#31867;&#20284;&#12290;&#29992;&#25143;&#22312;&#36755;&#20837;&#25340;&#38899;&#26102;&#65292;preedit&#21306;&#22495;&#20013;&#26174;&#31034;&#30340;&#26159;&#36755;&#20837;&#30340;&#25340;&#38899;&#20018;&#65288;&#25110;&#29992;&#25143;&#36873;&#25321;&#65289;&#65292;&#20505;&#36873;&#21306;&#20013;&#26174;&#31034;&#24403;&#21069;&#30340;&#26368;&#20339;&#21477;&#23376;&#65292;&#20197;&#21450;&#25340;&#38899;&#20018;&#24320;&#22987;&#37096;&#20998;&#30340;&#25340;&#38899;&#21487;&#33021;&#24471;&#21040;&#30340;&#35789;&#21644;&#23383;&#12290;&#20294;&#36825;&#31181;&#39118;&#26684;&#19979;&#65292;&#31532;&#19968;&#27425;&#29992;&#25143;&#36873;&#25321;&#21482;&#33021;&#20174;&#25340;&#38899;&#20018;&#30340;&#36215;&#22987;&#37096;&#20998;&#24320;&#22987;&#12290;<br/><img src="http://blogs.sun.com/yongsun/resource/sunpinyin_classic_style.png" alt="http://blogs.sun.com/yongsun/resource/sunpinyin_classic_style.png"/><br/><img src="http://blogs.sun.com/yongsun/resource/sunpinyin_classic_style_editing.png" alt="http://blogs.sun.com/yongsun/resource/sunpinyin_classic_style_editing.png"/><br/>&nbsp;Sunpinyin&#37319;&#29992;&#20102;view/window-handler&#30340;&#32467;&#26500;&#12290;&#19978;&#36848;&#30340;&#20004;&#31181;&#39118;&#26684;&#65292;&#22312;&#20195;&#30721;&#20013;&#20998;&#21035;&#23545;&#24212;&#20110;&#20004;&#20010;&#35270;&#22270;&#65288;view&#65289;&#31867;&#65306;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_view_modern.h">CIMIModernView</a></span>&#21644;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_view_classic.h">CIMIClassicView</a></span>&#12290;&#25152;&#35859;window-handler&#65292;&#23601;&#26159;view&#30340;&#19968;&#20010;callback&#31867;&#12290;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/wrapper/">ime/wrapper</a></span>&#30446;&#24405;&#19979;&#26377;&#20116;&#20010;window-handler&#30340;&#23454;&#29616;&#65292;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/wrapper/cle/">cle</a></span>, <span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/wrapper/scim/">scim</a></span>, <span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/wrapper/beos/">beos</a></span>, <span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/wrapper/macos/">macos</a></span>&#21644;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/wrapper/gtk_standalone/">gtk_standalone</a></span>&#12290;&#35201;&#23558;Sunpinyin&#31227;&#26893;&#21040;&#20854;&#23427;&#36755;&#20837;&#27861;&#26694;&#26550;&#25110;&#24179;&#21488;&#65292;&#20027;&#35201;&#30340;&#24037;&#20316;&#23601;&#26159;&#20026;&#20854;&#32534;&#20889;&#19968;&#20010;wrapper&#12290;<br/>&nbsp;&#19979;&#19968;&#33410;&#65292;&#25105;&#20204;&#20250;&#20171;&#32461;ime&#37096;&#20998;&#30340;&#27010;&#24565;&#27169;&#22411;&#65288;concept model&#65289;&#12290;</p><h2 id="H1"><span>1. &#27010;&#24565;&#27169;&#22411;</span></h2><p>&nbsp;&#35753;&#25105;&#20204;&#26469;&#30475;&#30475;ime&#37096;&#20998;&#30340;&#27010;&#24565;&#27169;&#22411;&#65288;concept model&#65289;&#65306;<br/><img src="http://blogs.sun.com/yongsun/resource/sunpinyin_concept_model.png" alt="http://blogs.sun.com/yongsun/resource/sunpinyin_concept_model.png"/></p><p><strong>&#25554;&#22270;1</strong></p><p><strong><br/>&nbsp;Static SLM&#65292;Lexicon&#65306;</strong>&#25105;&#20204;&#22312;&#21069;&#38754;&#20171;&#32461;slm&#37096;&#20998;&#30340;&#20195;&#30721;&#26102;&#24050;&#32463;&#20102;&#35299;&#36807;&#20102;&#12290;&#35775;&#38382;&#32479;&#35745;&#35821;&#35328;&#27169;&#22411;&#21644;&#25340;&#38899;&#35789;&#34920;&#30340;&#20195;&#30721;&#65292;&#20998;&#21035;&#20301;&#20110;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/slm/">ime/src/slm</a></span>&#21644;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/lexicon/">ime/src/lexicon</a></span>&#30446;&#24405;&#20013;&#12290;&#36825;&#37324;&#23601;&#19981;&#22810;&#20171;&#32461;&#20102;&#12290;<br/><strong><br/>&nbsp;View</strong>&#65306;&#30001;Window-Handler&#25509;&#25910;&#29992;&#25143;&#30340;&#36755;&#20837;&#65292;&#36890;&#36807;&#22238;&#35843;&#65288;call-back&#65289;&#65292;&#23558;pre-edit string&#21644;candidates&#36820;&#22238;&#32473;Window-Handler&#26469;&#36827;&#34892;&#26174;&#31034;&#12290;&#29992;&#25143;&#30340;&#25353;&#38190;&#36755;&#20837;&#65292;&#21487;&#33021;&#20250;&#23545;&#24403;&#21069;&#30340;&#25340;&#38899;&#20018;&#20799;&#36827;&#34892;&#28155;&#21152;&#12289;&#21024;&#38500;&#12289;&#25554;&#20837;&#31561;&#25805;&#20316;&#65292;&#28982;&#21518;&#23558;&#25340;&#38899;&#20018;&#20799;&#20256;&#36882;&#32473;Syllable Segmentor&#36827;&#34892;&#38899;&#33410;&#20999;&#20998;&#12290;&#22312;&#29992;&#25143;&#25552;&#20132;&#65288;commit&#65289;&#20505;&#36873;&#21477;&#65288;&#25110;&#35789;&#65289;&#20043;&#21518;&#65292;&#23427;&#35201;&#26356;&#26032;History Cache&#26469;&#35760;&#24405;&#29992;&#25143;&#26368;&#36817;&#30340;&#36755;&#20837;&#12290;&#22914;&#26524;&#29992;&#25143;&#36890;&#36807;&#25968;&#23383;&#38190;&#23545;&#20505;&#36873;&#36827;&#34892;&#20102;&#36873;&#25321;&#65292;&#23427;&#35201;&#36890;&#30693;Lattice Builder&#23545;&#29992;&#25143;&#36873;&#25321;&#36827;&#34892;&#30456;&#24212;&#30340;&#22788;&#29702;&#65288;&#32473;&#29992;&#25143;&#36873;&#25321;&#30340;&#35789;&#19968;&#20010;&#24456;&#39640;&#30340;&#35780;&#20998;&#12290;&#24182;&#19981;&#26159;&#23558;&#29992;&#25143;&#36873;&#25321;&#20043;&#22806;&#30340;&#35789;&#21450;&#30001;&#23427;&#20204;&#36716;&#31227;&#24471;&#21040;&#30340;&#29366;&#24577;&#20174;Lattice&#19978;&#21024;&#38500;&#65292;&#22240;&#20026;&#29992;&#25143;&#21518;&#38754;&#30340;&#32534;&#36753;&#21487;&#33021;&#20250;&#21462;&#28040;&#35813;&#36873;&#25321;&#65292;&#20445;&#30041;&#36825;&#20123;&#20449;&#24687;&#21487;&#20197;&#33410;&#30465;&#37325;&#26500;&#24314;Lattice&#30340;&#24037;&#20316;&#37327;&#65289;&#12290;<br/><strong>Syllable Segmentor</strong>&#65306;&#20351;&#29992;Lexicon&#65292;&#23545;&#25340;&#38899;&#20018;&#36827;&#34892;&#20999;&#20998;&#12290;&#22240;&#20026;&#20999;&#20998;&#21487;&#33021;&#23384;&#22312;&#27495;&#20041;&#65292;&#20363;&#22914;mingan&#21487;&#20197;&#20999;&#20998;&#20026;ming'an&#25110;min'gan&#65292;&#25925;&#32780;&#29983;&#25104;&#19968;&#20010;Syllable Graph&#65292;&#23558;&#20854;&#20256;&#36882;&#32473;Lattice Builder&#12290;&#65288;&#19981;&#36807;&#65292;&#30446;&#21069;&#30340;&#23454;&#29616;&#23578;&#19981;&#25903;&#25345;&#27169;&#31946;&#38899;&#33410;&#20999;&#20998;&#65292;&#29992;&#25143;&#38656;&#35201;&#36890;&#36807;&#36755;&#20837;'&#38190;&#26469;&#26126;&#30830;&#25351;&#23450;&#38899;&#33410;&#36793;&#30028;&#65292;&#25152;&#20197;Graph&#30446;&#21069;&#21482;&#26159;&#19968;&#20010;List&#12290;&#23601;&#19979;&#38754;&#30340;&#31034;&#20363;&#26469;&#35828;&#65292;&#24471;&#21040;&#30340;&#20999;&#20998;&#32467;&#26524;&#20026;xian'shi'min'gan&#12290;&#65289;<br/><img src="http://blogs.sun.com/yongsun/resource/sunpinyin_syllable_graph_and_word_lattice.png" alt="http://blogs.sun.com/yongsun/resource/sunpinyin_syllable_graph_and_word_lattice.png"/></p><p><strong>&#25554;&#22270;2</strong></p><p><strong><br/>&nbsp;Lattice Builder</strong>&#65306;&#23545;&#27599;&#20010;&#26377;&#25928;&#30340;&#38899;&#33410;&#65292;&#20174;Lexcion&#21450;History Cache&#20013;&#26597;&#21040;&#23545;&#24212;&#30340;&#35789;&#65288;&#36890;&#24120;&#26377;&#24456;&#22810;&#20010;&#65289;&#65292;&#23558;&#23427;&#20204;&#25918;&#21040;Lattice&#19978;&#12290;Lattice&#30340;&#23485;&#24230;&#20250;&#24433;&#21709;&#25628;&#32034;&#30340;&#36895;&#24230;&#12290;&#22312;&#36825;&#37324;&#20250;&#36827;&#34892;&#20102;&#19968;&#23450;&#30340;&#21098;&#26525;&#65288;pruning&#65289;&#65306;&#20248;&#20808;&#23558;History Cache&#20013;&#30340;&#35789;&#25918;&#21040;Lattice&#19978;&#65307;&#20877;&#23558;Lexicon&#20013;&#20986;&#29616;&#39057;&#29575;&#36739;&#39640;&#30340;&#35789;&#65292;&#20063;&#25918;&#21040;Lattice&#19978;&#12290;&#19978;&#22270;&#20013;&#65292;&#34013;&#33394;&#21152;&#31895;&#26174;&#31034;&#30340;&#31446;&#32447;&#65292;&#23601;&#26159;Lattice&#30340;&#19968;&#21015;&#65288;&#25110;&#31216;&#20026;frame&#65289;&#12290;&#22914;&#26524;&#25105;&#20204;&#20174;&#24038;&#21521;&#21491;&#23545;Lattice&#30340;&#21015;&#36827;&#34892;&#32534;&#21495;&#65292;L0&#26159;&lt;S&gt;&#65288;&#21363;&#21477;&#23376;&#24320;&#22987;&#65289;&#65292;L1&#19978;&#30340;&#35789;&#26377;&#65288;&#35199;&#65292;&#25103;&#65292;&#31995;&#65292;&#21916;&#65289;&#65292;L2&#19978;&#30340;&#35789;&#26377;&#65288;&#23433;&#65292;&#26696;&#65292;&#26263;&#65292;&#20808;&#65292;&#29616;&#65292;&#35199;&#23433;&#65289;&#65292;L3&#19978;&#30340;&#35789;&#26377;&#65288;&#26159;&#65292;&#24066;&#65292;&#31034;&#65292;&#20351;&#65292;&#35199;&#23433;&#24066;&#65292;&#26263;&#31034;&#65289;... &#25105;&#20204;&#20063;&#21487;&#20197;&#23558;&#27599;&#20010;&#25340;&#38899;&#23383;&#27597;&#20316;&#20026;Lattice&#30340;&#19968;&#20010;frame&#65292;&#36825;&#26679;&#24182;&#19981;&#20250;&#22686;&#21152;&#35768;&#22810;&#20869;&#23384;&#19978;&#30340;&#24320;&#38144;&#65292;&#32780;&#19988;&#23545;&#23558;&#26469;&#30340;&#25554;&#20837;&#21024;&#38500;&#25805;&#20316;&#26356;&#20026;&#26041;&#20415;&#12290;<br/><strong>Context Searcher&#65306;</strong>&#23545;&#24471;&#21040;&#30340;Word Lattice&#36827;&#34892;&#25628;&#32034;&#12290;&#25105;&#20204;&#35774;&#32622;beam width&#65288;&#32570;&#30465;&#20026;32&#65289;&#65292;&#26469;&#38480;&#21046;&#27599;&#20010;Lattice frame&#19978;&#29366;&#24577;&#33410;&#28857;&#30340;&#25968;&#30446;&#12290;&#26576;&#20123;&#24471;&#20998;&#27604;&#36739;&#20302;&#30340;&#29366;&#24577;&#65292;&#21487;&#33021;&#23601;&#34987;&#21098;&#26525;&#25481;&#20102;&#65288;&#20363;&#22914;&#19979;&#22270;&#20013;&#24102;&#32418;&#21449;&#30340;&#33410;&#28857;&#65289;&#12290;&#22914;&#25105;&#20204;&#22312;&#31532;&#19968;&#37096;&#20998;&#25152;&#35762;&#30340;&#65292;&#36825;&#26159;&#19968;&#20010;&#21160;&#24577;&#35268;&#21010;&#38382;&#39064;&#65292;&#20854;&#25628;&#32034;&#30340;&#22797;&#26434;&#24230;&#20026;O(B*C*N)&#65292;&#20854;&#20013;B&#20026;beam width&#65292;C&#20026;Lattice&#27599;&#19968;&#24103;&#19978;&#35789;&#30340;&#24179;&#22343;&#20010;&#25968;&#65292;N&#26159;Lattice&#30340;&#38271;&#24230;&#12290;&#22240;&#20026;&#20004;&#22788;&#37117;&#36827;&#34892;&#20102;&#21098;&#26525;&#65292;&#24471;&#21040;&#32467;&#26524;&#30340;&#21487;&#33021;<strong>&#24182;&#19981;&#26159;</strong>&#26368;&#20248;&#35299;&#12290;<br/>&nbsp;&#21478;&#22806;&#35201;&#27880;&#24847;&#65292;&#22312;&#19979;&#22270;&#20013;&#65288;&#30446;&#21069;&#30340;&#23454;&#29616;&#65289;&#65292;&#27599;&#20010;&#38899;&#33410;&#19979;&#38754;&#30340;&#29366;&#24577;&#33410;&#28857;&#65292;&#26159;&#23646;&#20110;&#21069;&#19968;&#20010;&#38899;&#33410;&#30340;&#12290;&#36825;&#31181;&#32467;&#26500;&#26159;&#19981;&#36866;&#29992;&#20110;Syllable Graph&#30340;&#12290;&#25105;&#20204;&#38656;&#35201;&#19968;&#20010;&#21333;&#29420;&#30340;&#12289;&#20849;&#26377;&#30340;&#36215;&#22987;&#24103;&#65292;&#36825;&#26679;&#23601;&#19981;&#38656;&#35201;T2&#36825;&#19968;&#21015;&#20102;&#12290;&#22914;&#39068;&#33394;&#36739;&#27973;&#30340;&#31532;&#20108;&#34892;&#25152;&#31034;&#12290;<br/><img src="http://blogs.sun.com/yongsun/resource/sunpinyin_lattice_search.png" alt="http://blogs.sun.com/yongsun/resource/sunpinyin_lattice_search.png"/></p><p><strong>&#25554;&#22270;3</strong></p><p><strong><br/>&nbsp;History Cache&#65306;</strong>&#35760;&#24405;&#29992;&#25143;&#26368;&#36817;&#25552;&#20132;&#30340;&#21477;&#23376;&#12290;&#36825;&#37324;&#20351;&#29992;&#30340;&#26159;&#19968;&#20010;&#31867;Bigram&#30340;&#27169;&#22411;&#12290;&#22312;&#35745;&#31639;P(z|xy)&#26102;&#65292;&#29992;Psmooth(z|xy)&#21644;Pcache(z|y)&#26469;&#25554;&#20540;&#24471;&#21040;&#12290;&#32780;Pcache(z|y)&#65292;&#26159;P(z|y)&#30340;MLE (Maximum Likelihood Estimation)&#65292;&#21644;P(z)&#30340;MLE&#30340;&#25554;&#20540;&#12290;</p><blockquote><p> <img src="http://blogs.sun.com/yongsun/resource/sunpinyin_history_cache.png" alt="http://blogs.sun.com/yongsun/resource/sunpinyin_history_cache.png"/></p></blockquote><p>&nbsp;&#27880;&#65306;&#22312;&#23454;&#29616;&#20013;&#65292;&#35745;&#31639;Pcache&#30340;&#20844;&#24335;&#31245;&#26377;&#19981;&#21516;&#12290;&#21040;&#26102;&#25105;&#20204;&#20877;&#20855;&#20307;&#35828;&#26126;&#12290;</p><h2 id="H2"><span>2. &#25968;&#25454;&#32467;&#26500;&#21450;&#26680;&#24515;&#31639;&#27861;</span></h2><p>&nbsp;&#19979;&#38754;&#65292;&#25105;&#20204;&#26469;&#20171;&#32461;&#19968;&#19979;&#20027;&#35201;&#30340;&#25968;&#25454;&#32467;&#26500;&#65292;&#30475;&#30475;&#22312;&#31243;&#24207;&#20013;Lattice&#26159;&#22914;&#20309;&#34920;&#31034;&#30340;&#12290;<br/><strong><span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.h#194">class CBone</a></span>;</strong><br/>&nbsp;CBone&#31867;&#23545;&#24212;&#20110;Word Lattice&#19978;&#30340;&#19968;&#20010;frame&#12290;CBone&#30340;public&#25104;&#21592;&#21253;&#25324;&#65292;m_BoneType&#65288;&#34920;&#31034;Bone&#30340;&#31867;&#22411;&#65292;&#25340;&#38899;&#25110;&#26631;&#28857;&#31561;&#65289;&#65292; m_BoundaryType&#65288;&#34920;&#31034;&#36793;&#30028;&#30340;&#31867;&#22411;&#65292;&#26159;&#33258;&#21160;&#36793;&#30028;&#25110;&#29992;&#25143;&#25351;&#23450;&#30340;&#36793;&#30028;&#31561;&#65289;&#65292;&#20197;&#21450;m_String&#65288;&#22914;&#26524;&#26159;&#25340;&#38899;&#33410;&#28857;&#65292;&#23601;&#26159;&#36825;&#20010;syllable&#30340;&#25340; &#38899;&#23383;&#31526;&#20018;&#65289;&#12290;&#23427;&#36824;&#26377;&#19968;&#20010;protected&#25104;&#21592;&#65292;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/lattice_states.h#250">CBoneInnerData</a></span> *m_pInnerData&#65292;&#36825;&#20010;&#25968;&#25454;&#32467;&#26500;&#35760;&#24405;&#20102;&#23646;&#20110;&#21069;&#19968;&#20010;Bone&#30340;Lattice&#20449;&#24687;&#65288;&#21442;&#35265;&#25554;&#22270;3&#65289;&#12290;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.h#336">CIMIContext</a></span>&#26159;CBone&#30340;&#21451;&#31867;&#65292;&#21487;&#20197;&#35775;&#38382;&#36825;&#20010;&#20445;&#25252;&#25104;&#21592;&#12290;<br/><strong><span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.h#109">class CSkeleton</a></span>;</strong><br/>&nbsp;Bone&#30340;&#21015;&#34920;&#65292;&#21363;std::list&lt;CBone&gt;&#65292;&#23601;&#26159;&#25105;&#20204;&#19978;&#38754;&#25152;&#35828;&#30340;Syllable List&#12290;&#20363;&#22914;&#25554;&#22270;&#19977;&#20013;&#30340;&#21015;&#34920;&#65292;[ce]-[shi]-[pin]-[yin]-[shu]-[ru]-[T1]-[T2]&#65292;&#38500;&#20102;T1&#21644;T2&#65292;&#25152;&#26377;&#30340;Bone&#37117;&#26159;&#25340;&#38899;&#31867;&#22411;&#30340;Bone&#12290;<br/><strong><span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/lattice_states.h#250">class CBoneInnerData</a></span>;</strong><br/>&nbsp;&#23427;&#20026;&#25628;&#32034;&#20445;&#23384;&#20102;&#20004;&#26041;&#38754;&#30340;&#29366;&#24577;&#25968;&#25454;&#12290;&#19968;&#26159;&#25340;&#38899;&#35789;&#34920;&#65288;<span class="wikiexternallink"><a href="http://blogs.sun.com/yongsun/resource/lexicon_example2.png">Pinyin Trie</a></span>&#26641;&#65289;&#30340;&#33509;&#24178;&#29366;&#24577;&#65292;m_LexiconStates&#65292;&#24403;&#26032;&#30340;&#25340;&#38899;Bone&#21152;&#20837;&#20043;&#21518;&#65292;&#25105;&#20204;&#36890;&#36807;&#23581;&#35797;&#25193;&#23637;&#23427;&#20204;&#26469;&#21028;&#26029;&#26159;&#21542;&#23384;&#22312;&#26356;&#38271;&#30340;&#35789;&#21487;&#20197;&#21152;&#20837; Lattice&#12290;&#20854;&#20108;&#26159;Lattice&#30340;&#33509;&#24178;&#25628;&#32034;&#29366;&#24577;&#65292;m_LatticeNodes&#65292;&#36825;&#20123;&#29366;&#24577;&#21487;&#20197;&#29992;&#21518;&#32493;Bone&#20013;&#30340;&#35789;&#26469;&#25193;&#23637;&#12290;&#26368;&#21518;&#36824;&#21253;&#25324;&#19982;&#29992;&#25143;&#20132;&#20114;&#30456; &#20851;&#30340;&#25104;&#21592;&#21464;&#37327;&#65306;&#36825;&#20010;Bone&#26159;&#21542;&#20301;&#20110;&#26368;&#20339;&#36335;&#24452;&#19978;&#65307;&#22914;&#26524;&#26159;&#65292;&#35813;Bone&#19978;&#30340;&#26368;&#20339;&#35789;&#65288;m_BestWord&#65289;&#12290;&#23601;&#25554;&#22270;3&#20013;&#30340;&#31034;&#20363;&#26469;&#35828;&#65292;B2&#65288;&#30001;0&#24320;&#22987;&#20174;&#24038;&#21040;&#21491;&#32534;&#21495;&#65289;&#22788;&#20110;&#26368;&#20339;&#36335;&#24452;&#19978;&#65292;&#19988;&#20854;m_BestWord&#20026;&#8220;&#25340;&#38899;&#8221;&#12290;<br/><strong><span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/lattice_states.h#56">class CLexiconState</a></span>;</strong><br/>&nbsp;m_pPYNode&#26159;Pinyin Trie&#19978;&#33410;&#28857;&#30340;&#25351;&#38024;&#65292;m_BoneStart&#35760;&#24405;&#20102;&#36825;&#20010;&#25340;&#38899;&#33410;&#28857;&#26159;&#20174;&#21738;&#20010;Bone&#24320;&#22987;&#30340;&#65292;&#22914;&#26524;&#35813;&#29366;&#24577;&#19981;&#26159;&#19968;&#20010;PINYIN&#33410;&#28857;&#65288;m_bPinyin == False&#65292;&#20363;&#22914;&#26631;&#28857;&#31561;&#65289;&#65292;&#21017;&#30452;&#25509;&#20351;&#29992;m_WordId&#12290;<br/><strong><span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/lattice_states.h#100">class CLexiconStates</a></span>;</strong><br/>&nbsp;&#21363;std::vector&lt;CLexiconState&gt;&#12290;&#25105;&#20204;&#24182;&#19981;&#38656;&#35201;&#20687;&#25554;&#22270;2&#37027;&#26679;&#65292;&#23558;&#23454;&#38469;&#30340;&#35789;&#25918;&#21040;Lattice&#19978;&#12290;&#22240;&#20026;&#38543;&#26102;&#21487;&#20197;&#20174;Pinyin Trie&#26641;&#30340;&#33410;&#28857;&#19978;&#24471;&#21040;&#25353;unigram&#25490;&#24207;&#30340;&#35789;&#21015;&#34920;&#12290;&#23545;&#25554;&#22270;3&#20013;&#30340;&#31034;&#20363;&#26469;&#35828;&#65292;B0&#19978;&#30340;LexiconStates&#20026;&#31354;&#65292;B1&#19978;&#20026;[(B0, ce')]&#65288;ce'&#34920;&#31034;Pinyin Trie&#26641;&#19978;&#30340;&#19968;&#26465;&#36793;&#65292;&#21363;c-e-'&#65289;&#65292;B2&#19978;&#20026;[(B0, ce'shi'), (B1, shi')]&#65292;B3&#19978;&#20026;[(B1, shi'pin'), (B2, pin')]&#65288;&#22240;&#20026;&#22312;ce'shi'&#36825;&#20010;&#33410;&#28857;&#30340;&#23376;&#26641;&#20013;&#65292;&#19981;&#23384;&#22312;pin'&#36825;&#26465;&#23376;&#36793;&#65307;&#32780;&#22312;shi'&#30340;&#23376;&#26641;&#20013;&#23384;&#22312;&#65289;... ...<br/><strong><span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/lattice_states.h#106">struct TLatticeState</a></span>;</strong><br/>&nbsp;m_Score&#26159;&#35813;&#33410;&#28857;&#19978;&#30340;&#27010;&#29575;&#20540;&#12290;m_BoneAfter&#23601;&#26159;&#35813;Lattice&#33410;&#28857;&#25152;&#22312;Bone&#65292;&#20363;&#22914;&#25554;&#22270;3&#31034;&#20363;&#20013;&#30340;B4[3]&#33410;&#28857;&#65288;B4&#37027;&#19968;&#21015;&#26368;&#19979;&#38754;&#37027;&#20010;&#33410;&#28857;&#65289;&#65292;&#20854;m_BoneAfter&#23601;&#26159;B4&#65307;Bone&#21644;TLatticeState&#26159;&#19968;&#20010;1:n&#30340;&#20851;&#31995;&#65292;&#25105;&#20204;&#21487;&#20197;&#24456;&#23481;&#26131;&#22320;&#36941;&#21382;&#24471;&#21040;Bone&#19979;&#25152;&#26377;&#30340;Lattice&#29366;&#24577;&#33410;&#28857;&#65292;&#32780;&#36825;&#20010;&#21453;&#21521;&#24341;&#29992;&#26159;&#20026;&#20102;&#26041;&#20415;&#22238;&#26597;&#12290;m_State&#26159;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/slm/slm.h">CThreadSlm</a></span>&#19978;&#30340;&#29366;&#24577;&#33410;&#28857;&#65288;&#21363;&#21518;&#32493;Lattice&#29366;&#24577;&#33410;&#28857;&#30340;history&#65289;&#65292;&#24403;&#21069;&#33410;&#28857;&#26159;&#30001;m_pBackTraceNode&#36890;&#36807;m_BackTraceWordId&#36716;&#31227;&#24471;&#21040;&#30340;&#12290;&#36825;&#37324;&#39034;&#20415;&#25552;&#19968;&#19979; Sunpinyin&#30340;coding style&#65292;&#20197;C&#24320;&#22836;&#30340;&#31867;&#22411;&#26159;class&#65292;&#20197;T&#24320;&#22836;&#30340;&#31867;&#22411;&#26159;struct&#25110;union&#12290;<br/><strong><span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/lattice_states.h#169">class CLatticeStates</a></span>;</strong><br/>&nbsp;&#36825;&#20010;&#31867;&#23454;&#38469;&#19978;&#26159;CLatticeStateVec&#65288;&#21363;std::vector&lt;TLatticeState&gt;&#65289;&#30340;&#19968;&#20010;&#21253;&#35013;&#31867;&#65288;wrapper&#65289;,&#35774;&#32622;&#20102;&#26368;&#22823;&#23481;&#37327;&#65288;&#21363;beam width&#65292;&#32570;&#30465;&#20026;32&#65289;&#12290;&#20854;&#20869;&#37096;&#20351;&#29992;&#20102;&#22534;&#65288;heap&#65289;&#25490;&#24207;&#12290;<br/>&nbsp;&#19979;&#38754;&#35753;&#25105;&#20204;&#26469;&#30475;&#30475;&#26500;&#36896;&#21644;&#25628;&#32034;Word Lattice&#30340;&#26041;&#27861;&#12290;<br/><span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.h">CIMIContext</a></span>&#31867;&#26159;&#25972;&#20010;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime">ime</a></span>&#37096;&#20998;&#20195;&#30721;&#30340;&#26680;&#24515;&#65292;&#23545;&#24212;&#19978;&#19968;&#33410;&#30340;<span class="wikiexternallink"><a href="http://blogs.sun.com/yongsun/resource/sunpinyin_concept_model.png">&#27010;&#24565;&#27169;&#22411;</a></span>&#65292;&#23427;&#20805;&#24403;&#20102;Syllable Segmentor&#12289;Lattice Builder&#21644;Context Searcher&#30340;&#35282;&#33394;&#65306;<br/><strong><span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.cpp#1228">CIMIContext::modifyAndReseg</a></span> (boneStart, boneEnd, skel, cursor, cursorIdx, candiStart)&#65306;</strong></p><blockquote><p>&nbsp;&nbsp;&#23454;&#38469;&#20351;&#29992;&#26102;&#65292;boneStart&#12289;boneEnd&#12289;candiStart&#22343;&#25351;&#21521;m_Skeleton&#20013;&#30340;&#33410;&#28857;&#12290;&#35843;&#29992;segPinyin()&#65292;&#23545;&#21442;&#25968;skel&#20013;&#30340;&#35832;Bone&#33410;&#28857;&#65288;&#22806;&#21152;boneStart&#20043;&#21069;&#30340;2/3&#20010;&#33410;&#28857;&#65292;&#36991;&#20813;&#20999;&#20998;&#30340;&#19981;&#20805;&#20998;&#65289;&#65292;&#21644;[boneEnd, T1-1)&#36827;&#34892;&#37325;&#26032;&#20999;&#20998;&#65292;&#24471;&#21040;&#30340;&#32467;&#26524;&#20445;&#23384;&#22312;newskel&#20013;&#12290;&#37325;&#26032;&#35745;&#31639;cursor&#21450;&#20854;index&#12290;&#28982;&#21518;&#35843;&#29992;modify(its, T1-1, newskel)&#65292;&#37325;&#26032;&#36827;&#34892;&#25628;&#32034;&#12290;</p></blockquote><p><strong><span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.cpp#1299">CIMIContext::segPinyin</a></span> (head1, tail1, head2, tail2, newskel)&#65306;</strong></p><blockquote><p>&nbsp;&nbsp;[head1, tail1)&#21644;[head2, tail2)&#22312;&#36923;&#36753;&#19978;&#32452;&#25104;&#19968;&#20010;&#24453;&#20999;&#20998;&#30340;&#25340;&#38899;&#20018;&#20799;&#12290;&#23454;&#38469;&#20351;&#29992;&#26102;&#65292;[head2, tail2)&#26159;CIMIContex::m_Skeleton&#20013;&#30340;&#33410;&#28857;&#12290;&#23558;&#20999;&#20998;&#30340;&#32467;&#26524;&#20445;&#23384;&#21040;newskel&#21464;&#37327;&#20013;&#12290;</p></blockquote><p><strong><span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.cpp#312">CIMIContext::modify</a></span> (boneStart, boneEnd, skel)&#65306;</strong></p><blockquote><p>&nbsp;&nbsp;&#23558;[boneStart, boneEnd)&#20013;&#30340;bone&#20174;&#20854;&#25152;&#22312;&#30340;skeleton&#21015;&#34920;&#65288;&#21363;m_Skeleton)&#20013;&#21024;&#38500;&#65292;&#23558;&#21442;&#25968;skel&#20013;&#30340;bone&#25554;&#20837;&#20854;&#38388;&#12290;&#35843;&#29992;searchFrom()&#65292;&#20174;&#26032;&#25554;&#20837;&#30340;Bone&#24320;&#22987;&#65292;&#37325;&#26032;&#36827;&#34892;&#25628;&#32034;&#12290;</p></blockquote><p><strong><span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.cpp#776">CIMIContext::searchFrom</a></span> (boneStart)&#65306;</strong></p><blockquote><p>&nbsp;&nbsp;&#36941;&#21382;boneStart&#21040;&#31532;&#20108;&#20010;&#23614;&#33410;&#28857;&#65288;T2&#65289;&#65292;&#26681;&#25454;&#21069;&#19968;&#20010;Bone&#65292;&#35843;&#29992;forwardXXX()&#26041;&#27861;&#25193;&#23637;&#33258;&#24049;&#30340;Lexicon&#29366;&#24577;&#33410;&#28857;&#65292;&#28982;&#21518;&#35843;&#29992;buildLatticeStates()&#26500;&#36896;&#33258;&#24049;&#30340;Lattice&#29366;&#24577;&#33410;&#28857;&#12290;&#36941;&#21382;&#32467;&#26463;&#20043;&#21518;&#65292;&#22238;&#28335;&#24471;&#21040;&#26368;&#20339;&#36335;&#24452;&#12290;</p></blockquote><p>&nbsp;&#20174;&#26576;&#19968;&#20010;bone&#24320;&#22987;&#36827;&#34892;&#25628;&#32034;&#65292;&#24847;&#21619;&#30528;&#20174;&#36825;&#20010;Bone&#21040;T2&#65292;&#27599;&#20010;Lattice Frame&#19978;&#21407;&#26377;&#30340;Lexicon&#21644;Lattice&#29366;&#24577;&#33410;&#28857;&#37117;&#34987;&#28165;&#31354;&#24182;&#37325;&#26032;&#35745;&#31639;&#12290;</p><p><strong><span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.cpp#1031">CIMIContext::forwardOnePinyinBone</a></span> (bone)&#65306;</strong></p><blockquote><p>&nbsp;&nbsp;&#23558;&#35813;bone&#30340;&#21518;&#32493;&#65288;boneNext&#65289;&#20013;&#30340;Lexicon&#29366;&#24577;&#33410;&#28857;&#38598;&#21512;&#65288;lexss2&#65289;&#28165;&#31354;&#12290;&#36941;&#21382;bone&#19978;&#30340;Lexicon&#29366;&#24577;&#33410;&#28857;&#65292;&#29992;&#26412;bone&#19978;&#30340;&#25340;&#38899;&#23383;&#31526;&#20018;&#65292;&#23581;&#35797;&#25193;&#23637;&#23427;&#65292;&#24182;&#23558;&#26032;&#30340;Lexicon&#33410;&#28857;&#21152;&#20837;&#21040;lexss2&#20013;&#12290;&#36845;&#20195;&#32467;&#26463;&#20043;&#21518;&#65292;&#23581;&#35797;&#29992;bone&#19978;&#30340;&#25340;&#38899;&#23383;&#31526;&#20018;&#65292;&#20174;Pinyin Trie&#30340;&#26681;&#33410;&#28857;&#36827;&#34892;&#25193;&#23637;&#65292;&#24182;&#21152;&#20837;&#21040;lexss2&#20013;&#12290;&#26368;&#21518;&#36820;&#22238;boneNext&#12290;&#20854;&#23427;&#30340;forwardXXX()&#26041;&#27861;&#27604;&#36739;&#31616;&#21333;&#65292;&#36825;&#37324;&#23601;&#19981;&#22810;&#20171;&#32461;&#20102;&#12290;</p></blockquote><p><strong><span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.cpp#941">CIMIContext::buildLatticeStates</a></span> (bone)&#65306;</strong></p><blockquote><p>&nbsp;&nbsp;&#24471;&#21040;bone&#30340;&#21069;&#32487;bonePrev&#65288;&#36825;&#24847;&#21619;&#30528;&#20256;&#20837;&#30340;&#21442;&#25968;&#19981;&#33021;&#26159;&#31532;&#19968;&#20010;Bone&#33410;&#28857;&#65289;&#65292;&#28165;&#31354;bone&#30340;Lattice&#29366;&#24577;&#33410;&#28857;&#12290;&#36941;&#21382;&#24403;&#21069;bone&#30340;Lexicon&#29366;&#24577;&#33410;&#28857;&#65292;&#25214;&#21040;&#35813;&#33410;&#28857;&#30340;&#36215;&#22987;bone&#65292;&#23545;Pinyin Trie&#33410;&#28857;&#19978;&#23545;&#24212;&#30340;&#35789;&#34920;&#65292;&#35843;&#29992;transferBetween&#65288;boneFrom, boneTo, wid, 1.0)&#65292;&#26500;&#36896;bone&#19978;&#30340;Lattice&#29366;&#24577;&#33410;&#28857;&#12290;</p></blockquote><p>&nbsp;&#23545;<span class="wikiexternallink"><a href="http://blogs.sun.com/yongsun/resource/sunpinyin_lattice_search.png">&#19978;&#19968;&#33410;&#30340;&#25554;&#22270;3</a></span>&#26469;&#35828;&#65292;B3&#19978;&#26377;&#20004;&#20010;Lexicon&#29366;&#24577;&#65292;(B1, shi'pin')&#21644;(B2, pin')&#65292;&#21487;&#20197;&#29992;&#8220;&#39135;&#21697;&#8221;&#12289;&#8220;&#35270;&#39057;&#8221;&#12289;&#8220;&#39280;&#21697;&#8221;&#31561;&#35789;&#26469;&#25193;&#23637;B1&#19978;&#30340;Lattice&#33410;&#28857;&#65292;&#28982;&#21518;&#29992;&#8220;&#21697;&#8221;&#12289;&#8220;&#39057;&#8221;&#12289;&#8220;&#25340;&#8221;&#31561;&#35789;&#20877;&#27425;&#26469;&#25193;&#23637;B2&#19978;&#30340;Lattice&#33410;&#28857;&#65292;&#23558;&#26032;&#24471;&#21040;&#30340;&#29366;&#24577;&#33410;&#28857;&#21152;&#20837;&#21040;B3&#30340;Lattice&#29366;&#24577;&#33410;&#28857;&#38598;&#21512;&#20013;&#12290;</p><p><strong><span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.cpp#857">CIMIContext::transferBetween</a></span> (from, to, wid, ic)&#65306;</strong></p><blockquote><p>&nbsp;&nbsp;&#24471;&#21040;from Bone&#30340;Lattice&#29366;&#24577;&#33410;&#28857;&#38598;&#21512;latss1&#12290;&#36941;&#21382;latss1&#65292;&#23545;&#27599;&#20010;LatticeState&#33410;&#28857;&#65292;&#29992;&#20854;&#20013;&#20445;&#23384;&#30340;SLM&#29366;&#24577;&#33410;&#28857;m_State&#65288;&#21363;&#21518;&#32493;Lattice&#29366;&#24577;&#33410;&#28857;&#30340;history&#65289;&#65292;&#35843;&#29992;CThreadSlm::transfer()&#26469;&#35745;&#31639;Pslm(wid|history)&#30340;&#20540;&#12290;</p></blockquote><p>&nbsp;&#22914;&#26524;&#36716;&#31227;&#20043;&#21518;&#30340;&#29366;&#24577;&#33410;&#28857;&#65292;&#20854;&#21382;&#21490;&#65288;&#22238;&#36864;&#65289;&#33410;&#28857;&#20026;pseudo root&#33410;&#28857;&#65288;&#21363;level&#20026;0&#65292;&#34920;&#31034;&#24179;&#22343;&#20998;&#24067;&#65289;&#65292;&#32780;&#26368;&#36817;&#30340;&#21382;&#21490;&#35760;&#24405;&#20013;&#21364;&#35265;&#21040;&#36807;&#36825;&#20010;&#35789;&#65292;&#21017;&#23558;&#36825;&#20010;pseudo unigram&#33410;&#28857;&#30340;index&#35774;&#32622;&#20026;wid&#65307;&#36825;&#26679;&#23545;&#19979;&#19968;&#20010;&#35789;w'&#65292;&#25165;&#33021;&#36890;&#36807;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/slm/slm.cpp#209">CThreadSlm::lastWordId</a></span>(state)&#24471;&#21040;&#19978;&#19968;&#20010;&#35789;&#30340;ID&#65288;&#21363;wid&#65289;&#65292;&#20197;&#27491;&#30830;&#35745;&#31639;Pcache(w'|wid)&#30340;&#27010;&#29575;&#20540;&#12290;<br/>&nbsp;&#28982;&#21518;&#35745;&#31639;Pcache(w|h)&#65292;&#21644;Pslm(w|h)&#36827;&#34892;&#25554;&#20540;&#65292;&#24471;&#21040;&#21477;&#23376;&#30340;&#27010;&#29575;&#35780;&#20998;&#20445;&#23384;&#21040;node.m_Score&#20013;&#12290;&#23558;&#36825;&#20010;&#26032;&#30340;Lattice&#33410;&#28857;&#65292;&#25554;&#20837;&#21040;to Bone&#30340;Lattice&#29366;&#24577;&#33410;&#28857;&#38598;&#21512;latss2&#20013;&#65288;&#21516;&#26102;&#20063;&#36827;&#34892;&#20102;beam pruning&#65289;&#12290;</p><h2 id="H3"><span>3. &#22788;&#29702;&#20505;&#36873;</span></h2><p>&nbsp;&#19979;&#38754;&#30340;&#25968;&#25454;&#32467;&#26500;&#21644;&#26041;&#27861;&#29992;&#26469;&#32452;&#32455;&#20505;&#36873;&#35789;&#21015;&#34920;&#65288;&#21363;&#22914;&#20309;&#21033;&#29992;&#25628;&#32034;&#32467;&#26524;&#65289;&#65306;<br/><strong><span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.h#153">class CCandidate</a></span>&#65306;</strong></p><blockquote><p>&nbsp;&nbsp;[m_BoneStart, m_BoneEnd)&#26159;&#36825;&#20010;&#20505;&#36873;&#35789;&#23545;&#24212;&#30340;bone&#21306;&#38388;&#65307;m_WordID&#26159;&#20505;&#36873;&#35789;&#23545;&#24212;&#30340;id&#65307;m_String&#26159;&#23485;&#23383;&#33410;&#23383;&#31526;&#20018;&#30340;&#25351;&#38024;&#12290;&#36890;&#24120; m_String&#23601;&#26159;m_WordID&#23545;&#24212;&#30340;&#23485;&#23383;&#33410;&#23383;&#31526;&#20018;&#34920;&#31034;&#65292;&#20294;&#26377;&#26102;&#20505;&#36873;&#35789;&#24182;&#19981;&#22312;&#35789;&#34920;&#20013;&#65288;&#20363;&#22914;&#26080;&#25928;&#30340;&#25340;&#38899;&#20018;&#20799;&#65289;&#12290;</p></blockquote><p><strong><span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.cpp#604">CIMIContext::getCandidates</a></span> (bone, result)&#65306;</strong></p><blockquote><p>&nbsp;&nbsp;&#22914; &#26524;bone&#26159;&#23614;&#33410;&#28857;&#65292;&#21017;&#30452;&#25509;&#36820;&#22238;&#12290;&#22914;&#26524;&#19981;&#26159;&#19968;&#20010;&#26377;&#25928;&#30340;pinyin Bone&#33410;&#28857;&#65292;&#23558;bone&#19978;&#30340;&#25340;&#38899;string&#20316;&#20026;&#20505;&#36873;&#65292;&#25918;&#21040;result&#20013;&#65292;&#24182;&#36820;&#22238;&#12290;&#22914;&#26524;&#36825;&#20010;bone&#19978;&#26377;&#29992;&#25143;&#36873;&#25321;&#25110;&#26368;&#20339;&#35789;&#65292;&#35774;&#32622;cp&#65288;&#20505;&#36873;&#35789;&#21644;&#35780;&#20998; pair&#65289;&#65292;&#23558;&#23427;&#20445;&#23384;&#22312;&#20197;word_id&#20026;&#32034;&#24341;&#30340;map&#20013;&#12290;</p></blockquote><p>&nbsp;&#28982;&#21518;&#36941;&#21382;[bone+1, T1]&#12290;&#23545;&#27599;&#20010;Bone&#33410;&#28857;&#65292;&#36941;&#21382;&#20854;lexicon&#29366;&#24577;&#33410;&#28857;&#65292;&#25214;&#21040;&#36215;&#22987;&#33410;&#28857;&#20026;bone&#30340;&#29366;&#24577;&#33410;&#28857;&#65288;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.cpp#644">itlex-&gt; m_BoneStart == bone</a></span>&#65289;&#65292;&#23558;pytrie&#19978;&#30340;&#35789;&#65288;&#22914;&#26524;&#19981;&#26159;&#25340;&#38899;&#33410;&#28857;&#65292;&#21017;&#26159;Bone&#19978;&#30340;&#25340;&#38899;&#23383;&#31526;&#20018;&#65289;&#21152;&#20837;&#21040;map&#20013;&#65307;&#36941;&#21382;&#20854;lattice&#29366;&#24577;&#33410;&#28857;&#65292;&#22914;&#26524;&#35813;&#33410;&#28857;&#26159;&#20174;&#21442;&#25968;bone&#19978;&#36716;&#31227;&#32780;&#26469;&#30340;&#65288;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.cpp#679">its-&gt;m_pBackTraceNode-&gt;m_BoneAfter == bone</a></span>&#65289;&#65292;&#21017;&#23558;m_BackTraceWordId&#23545;&#24212;&#30340;&#20505;&#36873;&#35789;&#65292;&#21152;&#20837;&#21040;map&#20013;&#12290;&#26368;&#21518;&#65292;&#25353;&#35780;&#20998;&#65288;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.h#117">TCandiRank</a></span>&#65289;&#65292;&#23545;&#36825;&#20010;map&#36827;&#34892;&#22534;&#25490;&#24207;&#65292;&#23558;&#25490;&#24207;&#21518;&#30340;&#32467;&#26524;&#20445;&#23384;&#22312;result&#20013;&#12290;<br/>&nbsp;&#35780;&#20998;&#30340;&#21407;&#21017;&#26159;&#65306;&#39318;&#20808;&#21015;&#20986;&#29992;&#25143;&#36873;&#25321;&#30340;&#35789;&#65292;&#25110;&#32773;&#20301;&#20110;&#26368;&#20339;&#36335;&#24452;&#19978;&#30340;&#35789;&#65307;&#20248;&#20808;&#21015;&#20986;&#20174;Lattice&#29366;&#24577;&#20013;&#24471;&#21040;&#30340;&#35789;&#65307;&#28982;&#21518;&#26159;Lexicon&#20013;&#30340;&#35789;&#12290;&#19988;&#35789;&#30340;&#38271;&#24230;&#36234;&#38271;&#65292;&#35780;&#20998;&#36234;&#39640;&#12290;</p><p><strong><span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.cpp#718">CIMIContext::getBestSentence</a></span>(result, boneStart, boneEnd, original_format)&#65306;</strong></p><blockquote><p>&nbsp;&nbsp;&#22914;&#26524;boneStart&#19978;&#27809;&#26377;&#26368;&#20339;&#35789;&#65292;&#21017;&#21521;&#21069;&#65288;&#24038;&#65289;&#26597;&#25214;&#65292;&#30452;&#21040;&#26576;&#20010;&#23384;&#22312;&#26368;&#20339;&#35789;&#30340;Bone&#65292;&#20445;&#23384;&#22312;realStart&#20013;&#12290;&#27839;&#30528;&#26368;&#20339;&#36335;&#24452;&#30340;&#36825;&#19968;&#27573;&#65288;[realStart, boneEnd)&#65289;&#65292;&#23558;&#26368;&#20339;&#35789;&#28155;&#21152;&#21040;result&#20013;&#65292;&#35760;&#24405;&#26399;&#38388;&#26377;&#25928;&#25340;&#38899;&#33410;&#28857;&#30340;&#20010;&#25968;&#65292;&#24182;&#36820;&#22238;&#12290;</p></blockquote><p>&nbsp;&#19979;&#38754;&#30340;&#26041;&#27861;&#65292;&#21644;&#29992;&#25143;&#36873;&#25321;&#30340;&#35774;&#23450;&#21644;&#21462;&#28040;&#26377;&#20851;&#65306;<br/><strong><span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.cpp#241">CIMIContext::cancelSelection</a></span>(bone, update)&#65306;</strong></p><blockquote><p>&nbsp;&nbsp;&#27880; &#24847;&#65292;m_Skeleton&#19978;&#30340;&#26368;&#20339;&#35789;&#65288;&#26080;&#35770;&#26159;&#29992;&#25143;&#36873;&#25321;&#36824;&#26159;&#35745;&#31639;&#30830;&#23450;&#65289;&#26159;&#21069;&#21518;&#30456;&#36830;&#30340;&#12290;&#20174;bone&#24320;&#22987;&#21521;&#24038;&#26597;&#25214;&#12290;&#22914;&#26524;&#26576;&#20010;Bone&#65288;&#35760;&#20026;uBone&#65289;&#30340;&#31867;&#22411;&#20026; UserSelectedBestWord&#65292;&#21017;&#23558;&#20854;&#25913;&#20026;NoBestWordStartHere&#65292;&#35774;&#32622;found&#20026;true&#65292;&#36864;&#20986;&#24490;&#29615;&#65307;&#21542;&#21017;&#65292;&#22914;&#26524;&#35813; Bone&#26159;&#35745;&#31639;&#30830;&#23450;&#30340;&#26368;&#20339;&#35789;&#65292;&#21017;&#36864;&#20986;&#24490;&#29615;&#65307;&#21542;&#21017;&#65292;&#21017;&#32487;&#32493;&#21521;&#24038;&#26597;&#25214;&#65292;&#30452;&#21040;&#31532;&#19968;&#20010;Bone&#12290;&#22914;&#26524;found&#20026;true&#65292;&#19988;update&#21442;&#25968;&#20026;true&#65292; uBone&#24320;&#22987;&#25628;&#32034;&#65292;&#24182;&#36820;&#22238;&#23427;&#65307;&#21542;&#21017;&#65292;&#22240;&#20026;&#26080;&#38656;&#25628;&#32034;&#65292;&#30452;&#25509;&#36820;&#22238;&#21442;&#25968;bone&#12290;&#23558;[firstBone, bone]&#36825;&#20010;&#21306;&#38388;&#31163;bone&#26368;&#36817;&#30340;&#29992;&#25143;&#36873;&#25321;&#21462;&#28040;&#12290;</p></blockquote><p><strong><span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.cpp#264">CIMIContext::cancelSelectionCover</a></span>(bone, update)&#65306;</strong></p><blockquote><p>&nbsp;&nbsp;&#36825;&#20010;&#26041;&#27861;&#21644;&#19978;&#38754;&#30340;&#31867;&#20284;&#65292;&#21482;&#26159;&#24403;&#21442;&#25968;bone&#30340;&#31867;&#22411;&#26159;&#26368;&#20339;&#35789;&#26102;&#65292;&#30452;&#25509;&#36820;&#22238;&#12290;&#30456;&#24403;&#20110;&#23558;[firstBone, bone)&#36825;&#20010;&#21306;&#38388;&#31163;bone&#26368;&#36817;&#30340;&#29992;&#25143;&#36873;&#25321;&#21462;&#28040;&#12290;</p></blockquote><p><strong><span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.cpp#289">CIMIContext::makeSelection</a></span>(candi)&#65306;</strong></p><blockquote><p>&nbsp;&nbsp;&#25214;&#21040;&#20505;&#36873;candi&#30340;&#36215;&#22987;Bone&#65288;m_BoneStart&#65289;&#65292;&#35843;&#29992;cancelSelection()&#23558;&#20854;&#25152;&#22788;&#30340;&#29992;&#25143;&#36873;&#25321;&#21462;&#28040;&#65288;&#36820;&#22238;&#20540;&#20026;boneLeft&#65289;&#65292;&#24182;&#23558;&#20505;&#36873;&#36215;&#22987;Bone&#30340;&#31867;&#22411;&#35774;&#32622;&#20026;UserSelectedBestWord&#65292;&#28982;&#21518;&#20174;boneLeft&#37325;&#26032;&#25628;&#32034;&#12290;</p></blockquote><h2 id="H4"><span>4. &#29992;&#25143;&#32534;&#36753;</span></h2><p>&nbsp;&#36825;&#19968;&#33410;&#25105;&#20204;&#20197;&#20197;&#8220;<span class="wikiexternallink"><a href="http://blogs.sun.com/yongsun/resource/sunpinyin_classic_style_editing.png">&#32463;&#20856;&#39118;&#26684;</a></span>&#8221;&#20026;&#20363;&#65292;&#20171;&#32461;&#23545;User Editing&#65288;&#21253;&#25324;insertPinyin&#65292;erase&#65292;move cursor&#65292;selection&#31561;&#65289;&#30340;&#22788;&#29702;&#12290;<br/><span class="box code"><tt class="wikimodel-verbatim">class [[CIMIClassicVIew&gt;&gt;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_view_classic.h]] {
+ &#160;&#160;&#160; m_CursorBone&#65306; &#24403;&#21069;&#20809;&#26631;&#25152;&#22312;&#30340;Bone
+ &#160;&#160;&#160; m_CursorIdx&#65306;&#160; &#20809;&#26631;&#22312;m_CursorBone&#20013;&#30340;&#20301;&#32622;&#32034;&#24341;
+ &#160;&#160;&#160; m_CandiBone&#65306;&#160; &#20505;&#36873;&#21015;&#34920;&#36215;&#22987;&#30340;Bone
+ &#160;&#160;&#160; m_CandiFirst&#65306; &#24403;&#21069;&#31383;&#21475;&#20013;&#31532;&#19968;&#26465;&#20505;&#36873;&#22312;&#25972;&#20010;&#20505;&#36873;&#21015;&#34920;&#20013;&#30340;&#32034;&#24341;
+ &#160;&#160;&#160; m_TailSetence&#65306;&#20174;m_CandiFirst&#24320;&#22987;&#30340;&#23614;&#21477;
+ };</tt></span><br/>&nbsp;&#32771;&#23519;&#19979;&#38754;&#30340;&#20363;&#23376;&#65292;m_CursorBone&#25351;&#21521;&#30340;&#26159;'yin'&#25152;&#22312;&#30340;Bone&#65307;m_CursorIdx&#20026;2&#65292;&#25351;&#21521;&#30340;&#26159;'n'&#25152;&#22312;&#30340;&#20301;&#32622;&#65307;&#32780;m_CandiBone&#25351;&#21521;&#30340;&#26159;'pin'&#25152;&#22312;&#30340;Bone&#65307;&#22240;&#20026;&#27809;&#26377;&#32763;&#39029;&#65292;&#25152;&#20197;m_CandiFirst&#20026;0&#65307;&#32780;&#20505;&#36873;1&#65292;&#21363;&#8220;&#25340;&#38899;&#36755;&#20837;&#8221;&#65292;&#23601;&#26159;m_TailSetence&#12290;</p><p><img src="http://blogs.sun.com/yongsun/resource/sunpinyin_classicview_example.png" alt="http://blogs.sun.com/yongsun/resource/sunpinyin_classicview_example.png"/><br/><img src="http://blogs.sun.com/yongsun/resource/sunpinyin_classicview_example_data.png" alt="http://blogs.sun.com/yongsun/resource/sunpinyin_classicview_example_data.png"/></p><p>&nbsp;&#22312;&#32463;&#20856;&#39118;&#26684;&#20013;&#65292;&#21521;&#24038;&#31227;&#21160;&#20809;&#26631;&#65292;&#24847;&#21619;&#30528;&#29992;&#25143;&#21487;&#33021;&#35201;&#20462;&#27491;&#20197;&#21069;&#30340;UserSelection&#65292;&#22240;&#27492;&#35201;&#28165;&#38500;&#20197;&#21069;&#30340;&#29992;&#25143;&#36873;&#25321;&#24182;&#37325;&#26032;&#25628;&#32034;&#12290;&#32780;&#21521;&#21518;&#31227;&#21160;&#65292;&#21518;&#32493;&#30340;&#21487;&#33021;&#25805;&#20316;&#26159;&#25554;&#20837;&#12289;&#21024;&#38500;&#21644;&#28155;&#21152;&#31561;&#25805;&#20316;&#65292;&#19981;&#24433;&#21709;&#24403;&#19979;&#30340;&#20505;&#36873;&#32467;&#26524;&#65292;&#22240;&#27492;&#19981;&#20250;&#37325;&#26032;&#36827;&#34892;&#25628;&#32034;&#12290;<br/><strong>CIMIClassicView::<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_view_classic.cpp#414">moveHome</a></span>(changeMask, searchAgain)</strong>:</p><blockquote><p>&nbsp;&nbsp;&#23558;[firstBone, m_CursorBone]&#20869;&#25152;&#26377;&#30340;&#29992;&#25143;&#36873;&#25321;&#37117;&#28165;&#38500;&#65292;&#36820;&#22238;&#24320;&#22987;&#26032;&#25628;&#32034;&#30340;Bone&#33410;&#28857;&#12290;&#22914;&#26524;&#23384;&#22312;&#29992;&#25143;&#36873;&#25321;&#65292;&#21017;&#20174;firstBone&#37325;&#26032;&#25628;&#32034;&#12290;&#22914;&#26524;&#19981;&#23384;&#22312;&#29992;&#25143;&#36873;&#25321;&#65292;&#21017;&#36820;&#22238;lastBone&#12290;</p></blockquote><p><strong>CIMIClassicView::<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_view_classic.cpp#365">moveLeft</a></span>(changeMask, searchAgain):</strong></p><blockquote><p>&nbsp;&nbsp;&#22914;&#26524;m_CursorIdx&#65288;&#20809;&#26631;&#22312;m_CursorBone&#20013;&#30340;&#32034;&#24341;&#65289;&#22823;&#20110;0&#65292;&#21017;&#20943;&#21435;1&#65292;&#36820;&#22238;lastBone&#65288;&#21363;&#19981;&#24433;&#21709;&#24403;&#21069;&#30340;&#20505;&#36873;&#32467;&#26524;&#65289;&#12290;&#22914;&#26524;m_CursorIdx&#20026;0&#65292;&#24182;&#19988;m_CursorBone&#19981;&#26159;firstBone&#65292;&#21017;&#23558;m_CursorBone&#24038;&#31227;&#19968;&#20010;&#21333;&#20301;&#65292;&#22914;&#26524;&#31227;&#20986;&#20102;&#24403;&#21069;&#30340;&#20505;&#36873;&#35789;&#33539;&#22260;&#65288;&#20063;&#23601;&#26159;&#36827;&#20837;&#20102;&#21069;&#19968;&#20010;&#20505;&#36873;&#35789;&#33539;&#22260;&#65289;&#65292;&#21017;&#35843;&#29992;m_pIC-&gt;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.cpp#241">cancelSelection</a></span>()&#21462;&#28040;&#20854;&#25152;&#22312;&#30340;UserSelection&#65292;&#28982;&#21518;&#35843;&#29992;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_view_classic.cpp#684">getCandidates</a></span>()&#37325;&#26032;&#24471;&#21040;&#20505;&#36873;&#65292;&#23558;m_CursorIdx&#35774;&#32622;&#20026;m_CursorBone&#20013;&#25340;&#38899;&#23383;&#31526;&#20018;&#20799;&#30340;&#38271;&#24230;&#65288;&#22914;&#26524;m_CursorBone&#19981;&#26159;&#19968;&#20010;&#25340;&#38899;&#31867;&#22411;&#30340;Bone&#65292;&#21017;m_CursorIdx&#20026;0&#65289;&#12290;&#26368;&#21518;&#65292;&#36820;&#22238;&#26032;&#25628;&#32034;&#30340;&#36215;&#22987;Bone&#33410;&#28857;&#12290;</p></blockquote><p><strong>CIMIClassicView::<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_view_classic.cpp#391">moveLeftSyllable</a></span>(changeMask, searchAgain):</strong></p><blockquote><p>&nbsp;&nbsp;&#36807;&#31243;&#21644;&#19978;&#38754;&#30340;&#31867;&#20284;&#65292;&#21482;&#19981;&#36807;&#31227;&#21160;&#26159;&#20197;Bone&#20026;&#21333;&#20301;&#30340;&#65292;&#19988;&#31227;&#21160;&#20043;&#21518;&#65292;m_CursorIdx&#35774;&#32622;&#20026;0&#12290;</p></blockquote><p><strong>CIMIClassicView::<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_view_classic.cpp#443">moveRight</a></span>(changeMask):</strong></p><blockquote><p>&nbsp;&nbsp;&#22914;&#26524;m_CursorIdx&#23578;&#26410;&#21040;&#36798;m_CursorBone&#30340;&#23614;&#37096;&#65292;&#21017;m_CursorIdx++&#24182;&#36820;&#22238;&#12290;&#22914;&#26524;&#24050;&#21040;&#23614;&#37096;&#65292;&#33509;m_CursorBone&#26159;&#19968;&#20010;&#25340;&#38899;&#31867;&#22411;&#30340;Bone&#33410;&#28857;&#65292;&#21017;m_CursorIdx++&#65288;&#30456;&#24403;&#20110;&#19968;&#20010;&#38899;&#33410;&#30340;&#36793;&#30028;&#65289;&#65307;&#21542;&#21017;&#23558;m_CursorIdx&#35774;&#32622;&#20026;0&#65292;&#19988;m_CursorBone&#21521;&#21491;&#31227;&#21160;&#19968;&#20010;&#21333;&#20301;&#12290;&#26368;&#21518;&#19968;&#31181;&#21487;&#33021;&#65288;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_view_classic.cpp#461">m_CursorIdx == m_CursorBone-&gt;m_String.size()</a></span>&#65289;&#65292;&#26159;&#20809;&#26631;&#20301;&#20110;&#38899;&#33410;&#36793;&#30028;&#19978;&#65292;&#23558;m_CursorIdx&#35774;&#32622;&#20026;0&#65292;&#19988;m_CursorBone&#21521;&#21491;&#31227;&#21160;&#19968;&#20010;&#21333;&#20301;&#65292;&#24182;&#36820;&#22238;&#12290;</p></blockquote><p><strong>CIMIClassicView::<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_view_classic.cpp#471">moveRightSyllable</a></span>(changeMask):</strong></p><blockquote><p>&nbsp;&nbsp;&#23558;m_CursorBone&#21521;&#21491;&#31227;&#21160;&#19968;&#20010;&#21333;&#20301;&#65292;&#24182;&#30456;&#24212;&#22320;&#35774;&#32622;m_CursorIdx&#12290;</p></blockquote><p><strong>CIMIClassicView::<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_view_classic.cpp#490">moveEnd</a></span>(changeMask):</strong></p><blockquote><p>&nbsp;&nbsp;&#23558;m_CursorBone&#31227;&#21160;&#21040;&#32467;&#23614;&#12290;</p></blockquote><p><strong>CIMIClassicView::<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_view_classic.cpp#702">makeSelection</a></span>(idx, mask):</strong></p><blockquote><p>&nbsp;&nbsp;idx&#26159;&#22312;&#24403;&#21069;&#20505;&#36873;&#31383;&#21475;&#20013;&#30340;&#32034;&#24341;&#65292;&#21644;m_CandiFirst&#30456;&#21152;&#65292;&#24471;&#21040;&#22312;&#25972;&#20010;&#20505;&#36873;&#21015;&#34920;&#20013;&#30340;&#32034;&#24341;&#12290;&#22914;&#26524;idx&lt;0&#65292;&#21017;&#25552;&#20132;preedit&#24182;&#37325;&#32622;IC&#65292;&#28982;&#21518;&#36820;&#22238;&#12290;&#22914;&#26524;idx&#22312;&#20505;&#36873;&#21015;&#34920;&#30340;&#33539;&#22260;&#20869;&#65292;&#21017;&#24471;&#21040;&#32034;&#24341;&#19979;&#30340;&#20505;&#36873;&#23545;&#35937;cand&#65292;&#35843;&#29992;m_pIC-&gt;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.cpp#289">makeSelection</a></span>(cand)&#35774;&#32622;&#29992;&#25143;&#36873;&#25321;&#12290;&#23558;m_CandiBone&#25351;&#21521;cand&#30340;&#32467;&#26463;&#20301;&#32622;&#65288;&#36824;&#35760;&#24471;&#20040;&#65292;[m_BoneStart, m_BoneEnd)&#26159;&#20505;&#36873;&#35789;&#23545;&#24212;&#30340;&#21306;&#38388;&#65289;&#65292;&#22914;&#26524;&#23427;&#26159;&#19981;&#26159;&#19968;&#20010;&#25340;&#38899;&#33410;&#28857;&#19988;&#26410;&#21040;&#36798;&#23614;&#33410;&#28857;&#65292;&#21017;&#23558;m_CandiBone&#21521;&#21491;&#31227;&#21160;&#12290;&#22914;&#26524;&#19968;&#30452;&#31227;&#21160;&#21040;&#20102;&#23614;&#33410;&#28857;&#65292;&#21017;&#25552;&#20132;preedit&#24182;&#37325;&#32622;IC&#65307;&#21542;&#21017;&#65292;&#22914;&#26524;m_Cursor&#20301;&#20110;[cand.m_BoneStart, m_CandiBone)&#20043;&#38388;&#65292;&#21017;&#23558;m_Cursor&#25351;&#21521;m_CandiBone&#65292;&#19988;&#23558;m_CursorIdx&#35774;&#32622;&#20026;0&#12290;&#28982;&#21518;&#23558;m_CandiFirst&#35774;&#32622;&#20026;0&#65292;&#35843;&#29992;getCandidates()&#26469;&#24471;&#21040;&#26032;&#30340;&#20505;&#36873;&#12290;</p></blockquote><p><strong>CIMIClassicView::<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_view_classic.cpp#504">erase</a></span>(bLeft, changeMask):</strong></p><blockquote><p>&nbsp;&nbsp;bLeft&#26631;&#35782;&#26159;&#21521;&#24038;&#36824;&#26159;&#21521;&#21491;&#36827;&#34892;&#21024;&#38500;&#12290;&#22914;&#26524;&#21521;&#24038;&#21024;&#38500;&#65292;&#21017;&#35843;&#29992;moveLeft()&#23558;&#20809;&#26631;&#21521;&#24038;&#31227;&#21160;&#19968;&#20010;&#21333;&#20301;&#12290;&#28982;&#21518;&#65292;&#22914;&#26524;m_CursorIdx&#25351;&#21521;&#30340;&#26159;&#38899;&#33410;&#36793;&#30028;&#30340;&#20301;&#32622;&#65288;&#21363;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_view_classic.cpp#516">m_CursorIdx == m_CursorBone-&gt;m_String.size()</a></span>&#65289;&#65292;&#19988;&#24403;&#21069;&#20809;&#26631;&#26159;&#29992;&#25143;&#30830;&#23450;&#30340;&#36793;&#30028;&#65292;&#21017;&#35843;&#29992;m_pIC-&gt;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.cpp#1228">modifyAndReseg</a></span>()&#23545;&#35813;&#37096;&#20998;&#37325;&#26032;&#33410;&#28857;&#36827;&#34892;&#20999;&#20998;&#21644;&#25628;&#32034;&#65292;&#22914;&#26524;&#36825;&#24433;&#21709;&#21040;&#20505;&#36873;&#21015;&#34920;&#65292;&#21017;&#35843;&#29992;getCandidates()&#37325;&#26032;&#33719;&#21462;&#65307;&#22914;&#26524;&#24403;&#21069;&#20809;&#26631;&#19981;&#26159;&#29992;&#25143;&#30830;&#23450;&#30340;&#36793;&#30028;&#65292;&#19988;&#35201;&#21521;&#21491;&#21024;&#38500;&#65292;&#21017;&#35843;&#29992;moveRight()&#23558;&#20809;&#26631;&#21521;&#21491;&#31227;&#21160;&#19968;&#20010;&#21333;&#20301;&#12290;&#22914;&#26524;m_CursorIdx&#24182;&#38750;&#25351;&#21521;&#38899;&#38454;&#36793;&#30028;&#30340;&#20301;&#32622;&#65292;&#21017;&#20462;&#25913;&#20809;&#26631;&#20869;&#30340;&#25340;&#38899;&#23383;&#31526;&#20018;&#65292;&#24182;&#35843;&#29992;m_pIC-&gt;modifyAndReseg()&#23545;&#35813;&#37096;&#20998;&#33410;&#28857;&#36827;&#34892;&#37325;&#26032;&#20999;&#20998;&#21644;&#25628;&#32034;&#65292;&#22914;&#26524;&#36825;&#24433;&#21709;&#21040;&#20505;&#36873;&#21015;&#34920;&#65292;&#21017;&#35843;&#29992;getCandidates()&#37325;&#26032;&#33719;&#21462;&#12290;</p></blockquote><p><strong>CIMIClassicView::<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_view_classic.cpp#559">insertPinyin</a></span>(keyvalue, changeMask):</strong></p><blockquote><p>&nbsp;&nbsp;&#22914;&#26524;m_CursorBone&#26159;&#26368;&#21518;&#19968;&#20010;Bone&#65288;&#20063;&#23601;&#26159;&#22312;&#23614;&#37096;&#28155;&#21152;&#25340;&#38899;&#23383;&#27597;&#30340;&#24773;&#20917;&#65289;&#65292;&#21017;&#23558;keyvalue&#20316;&#20026;&#19968;&#20010;&#33258;&#21160;&#20999;&#20998;&#30340;&#25340;&#38899;&#33410;&#28857;&#65292;&#21152;&#21040;&#19968;&#20010;&#26032;&#30340;&#21015;&#34920;skel&#20013;&#65292;&#24182;&#23558;m_CursorBone&#35774;&#32622;&#20026;skel.begin()&#65292;&#19988;m_CursorIdx&#20026;1&#65288;m_CursorIdx&#25351;&#21521;&#30340;&#26159;&#38899;&#38454;&#36793;&#30028;&#65292;&#22240;&#20026;Bone&#20013;&#21482;&#26377;&#19968;&#20010;&#25340;&#38899;&#23383;&#27597;&#65289;&#12290;&#22914;&#26524;m_CursorBone&#19981;&#26159;&#19968;&#20010;&#25340;&#38899;&#33410;&#28857;&#65292;&#24403;m_CursorIdx&gt;0&#26102;&#65288;&#36890;&#24120;&#19981;&#20250;&#21457;&#29983;&#36825;&#31181;&#24773;&#20917;&#65289;&#65292;&#23558;[0..cursorIdx)&#12289;keyvalue&#12289; [cursorIdx..end)&#36825;&#19977;&#20010;&#23383;&#31526;&#20018;&#26500;&#36896;&#20026;Bone&#65292;&#21152;&#20837;&#21040;&#21015;&#34920;skel&#20013;&#65292;cursor2&#33258;&#21152;&#65292;m_CursorBone&#25351;&#21521;&#20013;&#38388;&#30340;Bone&#65292;m_CursorIdx&#35774;&#32622;&#20026;1&#65307;&#24403;m_CursorIdx&#20026;0&#26102;&#65292;&#23558;keyvalue&#20316;&#20026;&#19968;&#20010;&#33258;&#21160;&#20999;&#20998;&#30340;&#25340;&#38899;&#33410;&#28857;&#65292;&#21152;&#21040;&#19968;&#20010;&#21015;&#34920;skel&#20013;&#65292;&#24182;&#23558;m_CursorBone&#35774;&#32622;&#20026;skel.begin()&#65292;&#19988;m_CursorIdx&#20026;0&#12290;&#26368;&#21518;&#26159;&#25554;&#20837;&#25340;&#38899;&#23383;&#27597;&#30340;&#24773;&#20917;&#65292;&#23558;m_CursorBone&#21387;&#20837;&#21040;skel&#20013;&#65292;&#19988;&#23558;keyvalue&#38468;&#21152;&#21040;&#24403;&#21069;Bone&#30340;&#25340;&#38899;&#23383;&#31526;&#20018;&#30340;&#23614;&#37096;&#65292;m_CursorBone&#20026;skel.begin()&#65292;m_CursorIdx&#33258;&#21152;&#65292;&#19988;cursor2&#33258;&#21152;&#12290;&#28982;&#21518;&#35843;&#29992;m_pIC-&gt;modifyAndReseg()&#23545;&#35813;&#37096;&#20998;Bone&#33410;&#28857;&#37325;&#26032;&#20999;&#20998;&#24182;&#25628;&#32034;&#65292;&#22914;&#26524;&#36825;&#24433;&#21709;&#21040;&#20505;&#36873;&#21015;&#34920;&#65292;&#21017;&#35843;&#29992;getCandidates()&#37325;&#26032;&#33719;&#21462;&#12290;</p></blockquote><p>&nbsp;&#36824;&#26377;&#20854;&#23427;&#30340;&#19968;&#20123;insert&#26041;&#27861;&#65292;&#20363;&#22914;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_view_classic.cpp#650">insertNormalChar</a></span>()&#12289;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_view_classic.cpp#599">insertBoundary</a></span>()&#65292;&#37117;&#20250;&#28041;&#21450;&#21040;&#23545;Bone&#21015;&#34920;&#30340;&#20462;&#25913;&#65292;&#32780;&#37325;&#26032;&#36827;&#34892;&#20999;&#20998;&#25628;&#32034;&#65292;&#24182;&#33719;&#21462;&#26356;&#26032;&#30340;&#20505;&#36873;&#21015;&#34920;&#12290;&#36825;&#37324;&#23601;&#19981;&#22810;&#20316;&#20171;&#32461;&#20102;&#12290;</p><h2 id="H5HistoryCache"><span>5. History Cache</span></h2><p>&nbsp;&#36825;&#19968;&#33410;&#25105;&#20204;&#26469;&#32771;&#23519;History Cache&#65306;<br/><span class="box code"><tt class="wikimodel-verbatim">class [[CBigramHistory&gt;&gt;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/ic_history.h#88]]{
+ &#160;&#160;&#160; typedef unsigned&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; TWordId;
+ &#160;&#160;&#160; typedef std::pair&lt;TWordId, TWordId&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; TBigram;
+ &#160;&#160;&#160; typedef TWordId&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; TUnigram;
+ &#160;&#160;&#160; typedef std::map&lt;TBigram, int&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; TBigramPool;
+ &#160;&#160;&#160; typedef std::map&lt;TUnigram, int&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; TUnigramPool;
+ &#160;&#160;&#160; typedef std::deque&lt;TWordId&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; TContextMemory;
+ &#160;&#160;&#160; TContextMemory&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; m_memory;
+ &#160;&#160;&#160; TUnigramPool&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; m_unifreq;
+ &#160;&#160;&#160; TBigramPool&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; m_bifreq;
+ };</tt></span><br/>&nbsp;&#20174;&#19978;&#38754;&#30340;&#23450;&#20041;&#21487;&#20197;&#30475;&#20986;&#65292;m_unifreq&#21644;m_bifreq&#20998;&#21035;&#20445;&#23384;&#20102;&#27599;&#20010;Unigram&#21644;Bigram&#20986;&#29616;&#22312;History Cache&#20013;&#30340;&#27425;&#25968;&#12290;&#32780;m_memory&#26159;&#19968;&#20010;&#21452;&#21521;&#38431;&#21015;&#65292;context_memory_size&#26159;&#20854;&#31354;&#38388;&#30340;&#19978;&#38480;&#65292;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/ic_history.cpp#71">&#32570;&#30465;&#20026;8K</a></span>&#12290;<br/><strong>CBigramHistory::<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/ic_history.cpp#318">incUniFreq</a></span>(ug):</strong></p><blockquote><p>&nbsp;&nbsp;&#23558;TUnigram ug&#30340;&#20986;&#29616;&#27425;&#25968;&#21152;1&#12290;</p></blockquote><p><strong>CBigramHistory::<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/ic_history.cpp#290">decUniFreq</a></span>(ug):</strong></p><blockquote><p>&nbsp;&nbsp;&#22914;&#26524;m_unifreq map&#20013;&#23384;&#22312;&#36825;&#20010;unigram&#65292;&#19988;&#20986;&#29616;&#30340;&#27425;&#25968;&#22823;&#20110;1&#65292;&#21017;&#20943;1&#65307;&#22914;&#26524;&#20986;&#29616;&#27425;&#25968;&#24050;&#32463;&#20026;0&#65292;&#21017;&#23558;&#20854;&#20174;m_unifreq&#20013;&#21024;&#38500;&#65292;&#20197;&#36991;&#20813;m_unifreq&#36825;&#20010;map&#21344;&#29992;&#30340;&#31354;&#38388;&#36807;&#22823;&#12290;</p></blockquote><p><strong>CBigramHistory::<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/ic_history.cpp#263">uniFreq</a></span>(ug):</strong></p><blockquote><p>&nbsp;&nbsp;&#22914;&#26524;ug&#19981;&#26159;stopword&#65288;&#22312;CBigramHistory::<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/ic_history.cpp#74">initClass</a></span>()&#26102;&#21021;&#22987;&#21270;&#65292;&#19988;&#35201;&#21644;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/raw/dict.utf8">slm&#35789;&#20856;</a></span>&#30340;id&#30456;&#19968;&#33268;&#65289;&#65292;&#19988;&#23384;&#22312;&#20110;m_unifreq&#20013;&#65292;&#21017;&#36820;&#22238;&#36825;&#20010;key&#23545;&#24212;&#30340;value&#12290;&#21542;&#21017;&#36820;&#22238;0&#12290;</p></blockquote><p><strong>CBigramHistory::<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/ic_history.cpp#324">incBiFreq</a></span>(bg):</strong></p><blockquote><p>&nbsp;&nbsp;&#23558;TBigram bg&#30340;&#20986;&#29616;&#27425;&#25968;&#21152;1&#12290;</p></blockquote><p><strong>CBigramHistory::<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/ic_history.cpp#307">decBiFreq</a></span>(bg):</strong></p><blockquote><p>&nbsp;&nbsp;&#22914;&#26524;m_bifreq map&#20013;&#23384;&#22312;&#36825;&#20010;bigram&#65292;&#19988;&#20986;&#29616;&#30340;&#27425;&#25968;&#22823;&#20110;1&#65292;&#21017;&#20943;1&#65307;&#22914;&#26524;&#20986;&#29616;&#27425;&#25968;&#24050;&#32463;&#20026;0&#65292;&#21017;&#23558;&#20854;&#20174;m_bifreq&#20013;&#21024;&#38500;&#65292;&#20197;&#36991;&#20813;m_bifreq&#36825;&#20010;map&#21344;&#29992;&#30340;&#31354;&#38388;&#36807;&#22823;&#12290;</p></blockquote><p><strong>CBigramHistory::<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/ic_history.cpp#276">biFreq</a></span>(bg):</strong></p><blockquote><p>&nbsp;&nbsp;&#22914;&#26524;bg&#19981;&#26159;&lt;DCWID, DCWID&gt;&#65292;&#19988;&#23384;&#22312;&#20110;m_unifreq&#20013;&#65292;&#21017;&#36820;&#22238;&#36825;&#20010;key&#23545;&#24212;&#30340;value&#12290;&#21542;&#21017;&#36820;&#22238;0&#12290;</p></blockquote><p><strong>CBigramHistory::<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/ic_history.cpp#121">memorize</a></span>(its_wid, ite_wid):</strong></p><blockquote><p>&nbsp;&nbsp;&#23558;&#35789;&#30340;&#24207;&#21015;[its_wid, ite_wid)&#35760;&#24405;&#19979;&#26469;&#12290;&#39318;&#20808;&#25105;&#20204;&#35201;&#22312;&#24403;&#21069;&#30340;&#21382;&#21490;&#35760;&#24405;&#20013;&#65292;&#25554;&#20837;&#19968;&#20010;&#20998;&#21106;&#31526;&#65288;DCWID&#65292;&#30456;&#24403;&#20110;&lt;/s&gt;&#65289;&#65292;&#20197;&#21644;&#21069;&#19968;&#20010;&#27969;&#20998;&#38548;&#24320;&#26469;&#65307;&#22914;&#26524;&#27492;&#26102;m_memory&#24050;&#32463;&#36798;&#21040;&#19978;&#38480;&#65292;&#21017;&#38656;&#23558;m_memory&#22836;&#37096;&#30340;&#19968;&#20010;&#35789;&#24377;&#20986;&#65292;&#24182;&#19988;&#35201;&#20943;&#23569;&#30456;&#24212;unigram&#21644;bigram&#30340;&#20986;&#29616;&#27425;&#25968;&#12290;&#25509;&#19979;&#26469;&#65292;&#36941;&#21382;[its_wid, ite_wid)&#65292;&#20551;&#23450;&#24403;&#21069;&#30340;&#35789;&#20026;Wi&#65288;i&#20174;0&#24320;&#22987;&#65289;&#65292;&#23558;Wi&#21152;&#20837;&#21040;m_memory&#20013;&#65292;&#23558;Wi&#20986;&#29616;&#30340;&#27425;&#25968;&#21152;1&#65292;&#24182;&#23558;bigram &lt;Wi-1, Wi&gt;&#65288;W-1&#20026;DCWID&#65289;&#20986;&#29616;&#30340;&#27425;&#25968;&#21152;1&#65307;&#26399;&#38388;&#65292;&#22914;&#26524;m_memory&#36798;&#21040;&#20102;&#19978;&#38480;&#65292;&#21644;&#19978;&#38754;&#30340;&#25805;&#20316;&#19968;&#26679;&#65292;&#23558;&#22836;&#37096;&#30340;&#35760;&#24405;&#24377;&#20986;&#12290;</p></blockquote><p>&nbsp;&#24403;&#35270;&#22270;&#31867;&#35843;&#29992;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_view_classic.cpp#116">doCommit()</a></span>&#26102;&#65292;&#20250;&#35843;&#29992;&#36825;&#20010;&#26041;&#27861;&#23558;&#29992;&#25143;&#25552;&#20132;&#30340;&#20505;&#36873;&#21477;&#23376;&#35760;&#24405;&#19979;&#26469;&#12290;</p><p><strong>CBigramHistory::<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/ic_history.cpp#196">bufferize</a></span>(buf_ptr, sz):</strong></p><blockquote><p>&nbsp;&nbsp;&#23558;m_memory&#25345;&#20037;&#21270;&#21040;buf_ptr&#25351;&#21521;&#30340;&#32531;&#20914;&#21306;&#20013;&#65292;&#21516;&#26102;&#27880;&#24847;&#22823;&#31471;&#21644;&#23567;&#31471;&#30340;&#38382;&#39064;&#12290;&#32780;m_unifreq&#21644;m_bifreq&#24182;&#19981;&#20445;&#23384;&#12290;</p></blockquote><p><strong>CBigramHistory::<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/ic_history.cpp#221">loadFromBuffer</a></span>(buf_ptr, sz)&#65306;</strong></p><blockquote><p>&nbsp;&nbsp;&#21152;&#36733;&#24050;&#25345;&#20037;&#21270;&#30340;History Cache&#65292;&#24182;&#32479;&#35745;unigram&#21644;bigram&#30340;&#20986;&#29616;&#27425;&#25968;&#12290;</p></blockquote><p><strong>CBigramHistory::<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/ic_history.cpp#301">seenBefore</a></span>(wid):</strong></p><blockquote><p>&nbsp;&nbsp;&#22914;&#26524;wid&#19981;&#26159;&#20998;&#21106;&#31526;&#65292;&#19988;&#38750;stopword&#65292;&#21516;&#26102;&#23384;&#22312;&#20110;m_unifreq&#20013;&#65292;&#21017;&#36820;&#22238;true&#12290;</p></blockquote><p><strong>CBigramHistory::<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/ic_history.cpp#251">pr</a></span>(bigram):</strong></p><blockquote><p>&nbsp;&nbsp;&#27714;P(bigram.second|bigram.first)&#30340;&#27010;&#29575;&#20540;&#12290;&#20197;Bigram &lt;x, y&gt;&#20030;&#20363;&#26469;&#35828;&#65292;uf0&#26159;C(x), bf&#20026;C(x, y)&#65292;&#32780;uf1&#26159;C(y)&#12290;&#27714;&#35299;&#27010;&#29575;&#30340;&#35745;&#31639;&#20844;&#24335;&#20026;:</p></blockquote><p><img src="http://blogs.sun.com/yongsun/resource/bigram_history_cache_eq.png" alt="P(y|x) = \lambda \frac{C(x,y)}{C(x)+0.5} + (1-\lambda) \frac {C(y)}{actual\_size + unused\_size/10} \\ (\lambda == 0.68)" height=""/><br/>&nbsp;&#36825;&#20010;&#20844;&#24335;&#26159;Pml(y|x)&#12289;Pml(y)&#30340;&#25554;&#20540;&#65292;0.5&#26159;&#20026;&#20102;&#24179;&#28369;Pml(y|x)&#65292;&#32780;(<em>actual_size + unused_size/10</em>)&#26159;&#20026;&#20102;&#38450;&#27490;&#21018;&#24320;&#22987;&#30340;&#26102;&#20505;history cache&#30340;size&#36807;&#23567;&#12290;&#26368;&#21518;&#36825;&#20010;&#27010;&#29575;&#20540;&#20877;&#21644;Pslm(y|h)&#36827;&#34892;<span class="wikiexternallink"><a href="http://blogs.sun.com/yongsun/resource/sunpinyin_history_cache.png">&#25554;&#20540;</a></span>&#65292;&#21442;&#35265;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.cpp#902">ime/src/imi_context.cpp#902</a></span>&#12290;</p><p><strong>CBigramHistory::<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/ic_history.cpp#158">pr</a></span>(its_wid, ite_wid):</strong></p><blockquote><p>&nbsp;&nbsp;y = *(ite_wid-1)&#65292;x = *(ite_wid-2)&#65292;&#27714;P(y|x)&#12290;</p></blockquote><p><strong>CBigramHistory::<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/ic_history.cpp#170">pr</a></span>(its_wid, ite_wid, wid):</strong></p><blockquote><p>&nbsp;&nbsp;y = wid, x = *(ite_wid-1)&#65292;&#27714;P(y|x)&#12290;</p></blockquote><h2 id="H6"><span>6. &#26434;&#39033;</span></h2><h3 id="HTDoubleAnatomyandTLongExpFloat"><span>TDoubleAnatomy and TLongExpFloat:</span></h3><p><span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/config/i386.h#34">TDoubleAnatomy</a></span>&#26159;&#19968;&#20010;union&#65292;&#29992;&#26469;&#25226;&#19968;&#20010;&#21452;&#31934;&#24230;&#30340;&#28014;&#28857;&#25968;&#65292;&#20998;&#35299;&#20026;&#31526;&#21495;&#20301;&#12289;&#25351;&#25968;&#21644;&#23614;&#25968;&#12290;&#36825;&#20010;&#26041;&#27861;&#36866;&#29992;&#20110;&#25152;&#26377;&#31526;&#21512;<span class="wikiexternallink"><a href="http://en.wikipedia.org/wiki/IEEE_floating-point_standard">IEEE-754</a></span>&#28014;&#28857;&#25968;&#30340;&#24179;&#21488;&#12290;&#19979;&#38754;&#26159;&#21452;&#31934;&#24230;&#28014;&#28857;&#25968;&#30340;&#20108;&#36827;&#21046;&#24067;&#23616;&#65306;<br/><img src="http://blogs.sun.com/yongsun/resource/General_double_precision_float_frac.PNG" alt="http://blogs.sun.com/yongsun/resource/General_double_precision_float_frac.PNG"/><br/>&nbsp;&#36825;&#20010;&#28014;&#28857;&#25968;&#23545;&#24212;&#30340;&#26377;&#29702;&#25968;&#20026;&#65306;</p><blockquote><p>&nbsp;&nbsp;V = sign * 2^{exp} * (1.fract)</p></blockquote><p>&nbsp;&#27880;&#24847;&#65306;&#20854;&#20013;&#25351;&#25968;&#20351;&#29992;&#30340;&#26159;&#31227;&#30721;&#65292;&#23545;&#21452;&#31934;&#24230;&#28014;&#28857;&#25968;&#26469;&#35828;&#65292;&#25351;&#25968;&#26159;11&#20301;&#65292;&#22240;&#27492;&#23454;&#38469;&#30340;&#25351;&#25968;&#35201;&#20943;&#21435;2(11-1)-1&#65292;&#21363;0x3FF&#12290;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/config/i386.h#47">TDoubleAnatomy::clearExp</a></span>()&#26041;&#27861;&#23558;&#28014;&#28857;&#25968;&#30340;&#25351;&#25968;&#37096;&#20998;&#28165;&#38500;&#65288;&#21363;&#35774;&#32622;&#20026;0x3FF&#65289;&#65292;&#28982;&#21518;&#20877;&#35843;&#29992;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/config/i386.h#43">TDoubleAnatomy::getValue</a></span>()&#24471;&#21040;&#30340;&#21452;&#31934;&#24230;&#28014;&#28857;&#25968;&#65292;&#23601;&#26159;sign * (1.fraction)&#65292;&#36825;&#20063;&#23601;&#26159;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.cpp#1487">TLongExpFloat::m_base</a></span>&#30340;&#20540;&#12290;&#19988;&#22312;Sunpinyin&#20013;&#65292;&#25152;&#26377;&#30340;&#27010;&#29575;&#20540;&#37117;&#19981;&#20250;&#20986;&#29616;&#36127;&#20540;&#12290;<br/>&nbsp;&#30452;&#25509;&#20351;&#29992;double&#36827;&#34892;&#27010;&#29575;&#20540;&#30340;&#36830;&#32493;&#30456;&#20056;&#36816;&#31639;&#65292;&#23481;&#26131;&#28322;&#20986;&#12290;&#32780;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.h#52">TLongExpFloat</a></span>&#34920;&#31034;&#30340;&#33539;&#22260;&#35201;&#22823;&#20102;&#24456;&#22810;&#65292;&#30456;&#24403;&#20110;&#23558;64&#20301;&#65288;1+11+52&#65289;&#30340;&#28014;&#28857;&#25968;&#25193;&#23637;&#21040;96&#20301;&#65288;32+64&#65289;&#12290;&#22240;&#27492;&#33021;&#32531;&#35299;&#28322;&#20986;&#30340;&#29366;&#20917;&#12290;TLongExpFloat&#37325;&#36733;&#20102;&#37096;&#20998;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/imi_context.cpp#1493">&#31639;&#26415;&#25805;&#20316;&#31526;</a></span>&#65292;&#35753;&#25105;&#20204;&#21487;&#20197;&#20687;&#23545;&#19968;&#20010;primitive&#25968;&#25454;&#31867;&#22411;&#37027;&#26679;&#36827;&#34892;&#27604;&#36739;&#21644;&#20056;&#38500;&#30340;&#25805;&#20316;&#65288;&#20294;&#19981;&#25903;&#25345;&#21152;&#20943;&#65289;&#12290;<br/>&nbsp;&#20320;&#21487;&#33021;&#20250;&#38382;&#21478;&#22806;&#19968;&#20010;&#38382;&#39064;&#65292;&#20026;&#20160;&#20040;&#19981;&#29992;&#23545;&#25968;&#23558;&#20056;&#27861;&#25805;&#20316;&#36716;&#25442;&#20026;&#21152;&#27861;&#21602;&#65311;&#36825;&#26159;&#22240;&#20026;&#25554;&#20540;&#30340;&#21407;&#22240;&#65292;&#22238;&#24518;&#19968;&#19979;<span class="wikiexternallink"><a href="http://blogs.sun.com/yongsun/resource/sunpinyin_history_cache.png">&#25554;&#20540;&#30340;&#20844;&#24335;</a></span>&#12290;&#22914;&#26524;&#20351;&#29992;&#23545;&#25968;&#65292;&#24517;&#39035;&#23558;&#23545;&#25968;&#24418;&#24335;&#30340;&#32467;&#26524;&#36716;&#25442;&#22238;&#26469;&#65292;&#25165;&#33021;&#25191;&#34892;&#21152;&#27861;&#12290;</p><h3 id="Hbow"><span>&#22788;&#29702;&#35745;&#31639;bow&#26102;&#30001;&#20110;&#28014;&#28857;&#25968;&#32047;&#21152;&#25152;&#36896;&#25104;&#30340;&#35823;&#24046;</span></h3><p>&nbsp;&#22312;&#35745;&#31639;bow&#26102;&#65288;&#21442;&#35265;<span class="wikiexternallink"><a href="http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/sim_slmbuilder.cpp#367">CalcNodeBow</a></span>()&#65289;&#65292;&#21487;&#33021;&#22240;&#20026;&#28014;&#28857;&#25968;&#30340;&#36830;&#32493;&#30456;&#21152;&#36896;&#25104;&#30340;&#35823;&#24046;&#65292;&#32780;&#23548;&#33268;sumnext&#25110;sum&#20986;&#29616;&#22823;&#20110;1&#30340;&#24773;&#20917;&#65292;&#27492;&#26102;&#20351;&#29992;&#19979;&#38754;&#30340;&#20844;&#24335;&#35745;&#31639;bow&#65306;<br/><img src="http://blogs.sun.com/yongsun/resource/new_bow.png" alt="http://blogs.sun.com/yongsun/resource/new_bow.png"/><br/>&nbsp;&#21407;&#26469;&#35201;&#32771;&#23519;&#30340;&#26159;sumnext&#21644;sum&#31163;1.0&#36317;&#31163;&#30340;&#27604;&#20540;&#65292;&#29616;&#22312;&#22240;&#20026;&#35823;&#24046;&#30340;&#21407;&#22240;&#65292;&#20004;&#32773;&#37117;&#26377;&#21487;&#33021;&#31245;&#31245;&#36229;&#36807;1.0&#65292;&#22240;&#27492;&#23558;&#27604;&#36739;&#30340;&#22522;&#20934;&#28857;&#21521;&#21491;&#31227;&#21160;&#19968;&#20123;&#65288;&#21363;&#947; = Max(sumnext, sum)+&#948;&#65292;&#19988;&#948;&#26159;&#19968;&#20010;&#36739;&#23567;&#30340;&#20540;&#65292;0.0001&#65289;&#12290;</p>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:14<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by admin on 2009/10/26 12:14
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+                </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSNav','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSNav'); togglePanelVisibility(this.parentNode);">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavCommunity Group">
+            <div id="xwikinavCommunity GroupHeader" class="accordionTabTitleBar"><h6>Community Group</h6>
+            </div>
+            <div id="xwikinavCommunity GroupContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+edu/">Academic and Research</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+accessibility/">Accessibility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+advocacy/">Advocacy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+appliances/">Appliances</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+approachability/">Approachability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/">Architecture Process and Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+brandz/">BrandZ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+chinese_users/">Chinese Users</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/">Community Advisory Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+dtrace/">DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+databases/">Databases</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+desktop/">Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/">Device Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+distribution/">Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+emerging_platforms/">Emerging Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+fm/">Fault Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+games/">Games on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ha%2Dclusters/">HA Clusters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+hpcdev/">HPC Developer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+int_localization/">Internationalization and Localization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+laptop/">Laptop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ldoms/">Logical Domains</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+mdb/">Modular Debugger (MDB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+nfs/">NFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/">Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/">OS/Net (ON)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+observability/">Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ogb/">OpenSolaris Governing Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+printing/">OpenSolaris Printing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/">Performance</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+pm/">Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+power_pc/">PowerPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/">Security</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+smf/">Service Management Facility (smf(5))</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sw%2Dporters/">Software Porters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+volume_manager/">Solaris Volume Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+storage/">Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sysadmin/">Systems Administration Community Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+testing/">Testing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/">Tools Home</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ufs/">Unix File Systems (UFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+web/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+x_win/">X Window System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+xen/">Xen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/">ZFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/">Zones</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavProject">
+            <div id="xwikinavProjectHeader" class="accordionTabTitleBar"><h6>Project</h6>
+            </div>
+            <div id="xwikinavProjectContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/"></a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+adsl/">ADSL Modem Enhancement</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+arc%2Dprocess/">ARC Process Definition</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osarm/">ARM Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bluetooth/">Bluetooth Stack & Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dinitiator/">Brocade FC HBA &#45; Initiator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dtarget/">Brocade FC HBA &#45; Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brussels/">Brussels &#45; unified network link configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cifs%2Dserver/">CIFS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smbfs/">CIFS client for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cmt/">CMT</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/">COMSTAR: Common Multiprotocol SCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpufs/">CPU Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/">Caiman, Solaris Install Revisited</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+celeste/">Celeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/">Chime Visualization Tool for DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+clearview/">Clearview: Network Interface Coherence</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dinformix/">Cluster Agent: Informix Dynamic Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dcontainer/">Cluster Agent: OpenSolaris Container</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dxvm/">Cluster Agent: OpenSolaris xVM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Debs/">Cluster Agent: Oracle E&#45;Business Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dsmb/">Cluster Agent: Samba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dtomcat/">Cluster Agent: Tomcat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dpostgresql/">Cluster agent: PostgreSQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+data%2Dflow/">Coarse Data Flow Parallelism</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+colorado/">Colorado: Open HA Cluster on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+commandassist/">Command Assistant</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cam/">Common Array Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+companion/">Companion &#45; /opt/sfw: Free and Open Source software</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+content/">Content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+contest/">Contest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpg/">Credentials Process Groups</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crossbow/">Crossbow: Network Virtualization and Resource Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmsagenttoolkit/">Crypto KMS Agent Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/">Cryptographic Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Ddoc/">DTrace Guide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dmm/">Data Migration Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+datatethers/">Data Tethers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+de/">Deutsches Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ddtool/">Device Detection Tool</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+driver%2Dutility/">Device Driver Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devicemgr/">Device Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devmapper/">Device Mapper</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dri/">Direct Rendering Infrastructure & 3D drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/">Duckwater: Simplified name services management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+phpEasyTools/">Easy Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emancipation/">Emancipation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex%2Dcna/">Emulex Advanced Ethernet Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex/">Emulex Fibre Channel Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webcams/">Enhance the support of USB webcams</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Dprofiles/">Enhanced SMF Profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+amd/">Enhancements for AMD&#45;based Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+erlang%2Ddtrace/">Erlang DTrace Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ethbridge/">Ethernet bridge module for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+conary%2Deval/">Evaluate Conary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+events%2Dregistry/">Events Registry</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ext3/">Ext3 file system support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+facilitation/">Facilitation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fcoe/">Fibre Channel over Ethernet</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fgap/">Fine Grained Access Policy (FGAP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fingerprint%2Dauthentication/">Fingerprint Authentication</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fmac/">Flexible Mandatory Access Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+forensics/">Forensic Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fox/">Fully Open X Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fuse/">Fuse on Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+generic%2Dmca/">Generic Machine Check Architecture Improvements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+raidcfg/">Generic RAID Configuration Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+summerofcode/">Google SOC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Djboss/">HA&#45;JBoss</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dmysql/">HA&#45;MySQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hpc%2Dstack/">HPC Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livehadoop/">Hadoop Live CD</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hitachi/">Hitachi</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+honeycomb/">HoneyComb Fixed Content Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hotplug/">Hotplug Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ip%2Drefactor/">IP Datapath Refactoring</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ipoib/">IP over Infiniband</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tref/">IPsec Tunnel Reform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/">Image Packaging System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isc/">Immutable Service Containers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+perfmib/">Improved Performance MIB</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/">Indiana</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ikev2/">Internet Key Exchange, version 2 (IKEv2)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+irm/">Interrupt Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jkstat/">JKstat &#45; a java binding for libkstat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jeos/">JeOS &#45; Just enough Operating System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jfs/">Journaled File System (JFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kde/">K Desktop Environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kerberos/">Kerberos</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kssl/">Kernel SSL Enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kernel%2Dsockets/">Kernel Sockets</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmf/">Key Management Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ksh93%2Dintegration/">Korn Shell 93 integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ldoms%2Dmgr/">LDoms Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+txipsec/">Labeled IPsec</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+l2filter/">Layer 2 Filtering</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lending/">Lending</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lld/">Link Layer Discovery</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livemedia/">Live Media: Technologies for distributions running from CD and other media</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+localedata/">Locale Data</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mips/">MIPS Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohac%2Davs/">MRSL.NONsharedDevice</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mega_sas/">Mega_sas</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mx/">Mexico</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+milax/">MilaX minimal Live Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mozilla%2Ddtrace/">Mozilla DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+glossary/">Multi&#45;lingual Glossary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mpxio/">Multi&#45;pathing software (MPxIO)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+multiple%2Ddoi/">Multiple DOI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+large%2Dsector/">Multiple disk sector size support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+muskoka/">Muskoka: An open repository for OpenSolaris technical content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsrdma/">NFS RDMA transport update and performance analysis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dzones/">NFS Server in non&#45;Global Zones</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsv41/">NFS version 4.1 pNFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dnamespace/">NFSv4 namespace extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npiv/">NPort ID Virtualization (NPIV)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+navigator/">Navigator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nemo/">Nemo: A Framework for High&#45;Performance Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/">Network Auto&#45;Magic</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ndmp/">Network Data Management Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+net%2Dmib/">Network MIBs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npp/">Network Performance Projects</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dpm/">Network Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nws/">Network Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ntp/">Network Time Protocol (NTP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nv%2Dg11n/">Nevada Globalization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+4over6/">New Design of 4over6 Mechanism Based on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nightingale/">Nightingale: Port Songbird to OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+onnv/">ON/Nevada (ONNV) Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osd/">Object Storage Device (OSD) support for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opendev/">Open Development Infrastructure</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dutilities/">Open HA Cluster Utilities</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opensound/">Open Sound System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/">OpenGrok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cim%2Dserver/">OpenPegasus CIM Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+openrti/">OpenRTI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+busybox/">OpenSolaris Busybox</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/">OpenSolaris Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+es/">OpenSolaris Hispano</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+audit/">OpenSolaris Security Audit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/">OpenSolaris support for the QEMU processor emulator: host and guest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pef/">PEF: Packet Event Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+performance%2Dwrappers/">Performance Wrappers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkgfactory/">Pkgfactory</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pl/">Polski Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fr/">Portail Francophone</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+br/">Portal Brasileiro de OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+portals/">Portals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmui/">Power Management Usability Interfaces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+presto/">Presto: Automatic Printing Configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmpsm/">Printable Many Page Solaris Manuals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+promise%2Dstorage/">Promise SuperTrak RAID HBA Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qlogic%2Dcna/">QLogic Converged Network Adapter GLDv3 NIC Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+quagga/">Quagga Routing Protocol Suite Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rbridges/">RBridge (IETF TRILL) support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rof/">RDMA Offload Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+releasenotes/">Release Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+reno/">Reno: Login Process Enhancements for Interop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/">Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+samqfs/">SAM/QFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+scm%2Dmigration/">SCM Migration Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+srp/">SCSI RDMA Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sdcard%2Ddrivers/">SDcard Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sfwnv/">SFW</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sm%2Dhba/">SM&#45;HBA Based SAS HBA Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Ddoc/">SMF Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+svr4_packaging/">SVR4 Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sensors/">Sensor Abstraction Layer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dsip/">Session Initiation Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+shell/">Shell: bourne shell, korn shell, C shell, etc.</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+simplepanels/">Simple Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/">Solaris PowerPC Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iscsitgt/">Solaris iSCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sourcejuicer/">SourceJuicer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/">Sparks: name service switch/nscd enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+squashfs/">Squashfs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+star/">Star integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starfish/">Starfish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starterkit/">Starter Kit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+storagepm/">Storage Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sst/">Sun Security Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+avs/">Sun StorageTek Availability Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ofuv/">Support for OpenFabrics User Verbs / API on OpenSolaris OS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/">Support gcc4/GCCfss in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+suspend%2Dresume/">Suspend/Resume</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+systemz/">Systemz</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tipc/">TIPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+branding/">Trademarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tpm/">Trusted Platform Module support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tnipdb/">Trusted networking interface policy database for Trusted Extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+usecase/">Use Case</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+userland/">Userland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vrrp/">VRRP: Virtual Router Redundancy Protocol Implementation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vscan/">VSCAN service</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+valex/">Validated Execution Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vconsole/">Virtual Console</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vnm/">Virtual Network Machines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/">Visual Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+visualization%2Dhpc/">Visualization for HPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+volo/">Volo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/">Web Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+website/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+winchester/">Winchester: Schema mapping and ID mapping for AD Interoperability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wusb/">Wireless USB Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wwan/">Wireless Wide Area Network</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x%2Dcons/">X Consolidation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xkblayout/">X Keyboard Layout</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xen%2Dgate/">Xen Gate</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xfce/">Xfce: A lightweight desktop environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfsboot/">ZFS Boot and Install</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfs%2Dcrypto/">ZFS on disk encryption support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonemgr/">Zone Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonestat/">Zone Statistics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gcore/">gcore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iser/">iSCSI Extensions for Remote DMA (iSER)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isns/">iSNS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+libmicro/">libMicro &#45; portable microbenchmarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+loficc/">lofi compression and cryptography support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lx64/">lx64 brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+s10brand/">s10brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x86gentopo/">x86 Generic FMA Topology Enumerator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cz/">Český portál</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ru/">Русский портал</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ar/">البوابة العربية</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+in/">भारतीय पोर्टल</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cn/">中国门户</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/">日本ポータル</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kr/">한국 포탈</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavUser Group">
+            <div id="xwikinavUser GroupHeader" class="accordionTabTitleBar"><h6>User Group</h6>
+            </div>
+            <div id="xwikinavUser GroupContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+kr/"></a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+adl%2Dauosug/">Adelaide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+aosug/">Argentina</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+azosug/">Arizona</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+atl%2Dosug/">Atlanta OpenSolaris Users Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bwosug/">Baltimore&#45;Washington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bosug/">Bangalore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bkkosug/">Bangkok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bdosug/">Bangladesh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bjosug/">Beijing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+brosug/">Berlin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bvrm%2Dosug/">Bhimavaram</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+btn%2Dosug/">Bloomington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfosug/">Brasilia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+blmosug/">Bélem</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+crosug/">Capital Region</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cfosug/">Cardiff</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ccosug/">Caribbean OSUG</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ceosug/">Ceara</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cltosug/">Charlotte</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chennai/">Chennai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chmxosug/">Chihuahua</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+closug/">Chile</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cle%2Dosug/">Cleveland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+colosug/">Colombia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cmh%2Dosug/">Columbus</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ctosug/">Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+knp%2Duek/">Cracow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+czosug/">Czech</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfw%2Dosug/">Dallas/Ft. Worth</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dosug/">Danish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+deosug/">Delaware</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+eduosug/">Edinburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+egosug/">Egypt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fiosug/">Finland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+flosug/">Florida</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fraosug/">Frankfurt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+frosug/">Front Range</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+glug/">Great Lakes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+grosug/">Greece</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hzosug/">Hangzhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hi%2Dosug/">Hawaii</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hkosug/">Hong Kong</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hugs/">Houston</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hosug/">Hyderabad</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+idosug/">Indonesia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madridosug/">Inicio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ie%2Dosug/">Irish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+iosug/">Israel</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+istosug/">Istanbul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+itl%2Dosug/">Italian</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jnosug/">Jinan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jogja%2Dosug/">Jogja</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kbosug/">Kabul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kc%2Dosug/">Kansas City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+lavosug/">Latvia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+losug/">London</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madosug/">Madurai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mansug/">Manchester</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mssosug/">Mato Grosso</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+msosug/">Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mgosug/">Minas Gerais</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mnosug/">Minnesota</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mtlosug/">Montreal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mosug/">Moscow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mmosug/">Mumbai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mucosug/">Munich</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+neaosug/">NEA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nlosug/">Netherlands</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ne%2Dosug/">New England</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nycosug/">New York City OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nzosug/">New Zealand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+norosug/">Noroeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nerosug/">Nuremberg&#45;Erlangen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+okcosug/">Oklahoma City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ososug/">Osnabrück</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+peosug/">Peru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+paosug/">Philadelphia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+piaski%2Dosug/">Piaski</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ptosug/">Pittsburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+poaosug/">Porto Alegre</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+psosug/">Puget Sound</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+posug/">Pune</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+qosug/">Queensland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rtp%2Dosug/">Research Triangle Park</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+riosug/">Rio de Janeiro</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ro%2Dosug/">Romania</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ruosug/">Russia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+alamo%2Dosug/">San Antonio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sdosug/">San Diego</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sfosug/">San Francisco</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+scosug/">Scottish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rs%2Dosug/">Serbia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szosug/">Shenzhen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svosug/">Silicon Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sgosug/">Singapore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+skosug/">Slovak</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+saosug/">South African</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+soctosug/">Southern Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+stl%2Dosug/">St. Louis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svgosug/">Stavanger</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+swosug/">Sweden</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chosug/">Switzerland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sosug/">Sydney</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szc%2Dosug/">Szczecin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sampaosug/">São Paulo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+twosug/">Taiwan OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ostug/">Tecum</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tvosug/">Thames Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tsug/">Tokyo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+torosug/">Toronto</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+trosug/">Trondheim</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+toss/">Tulsa</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tosug/">Turkey</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ufaosug/">Ufa OSUG</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+uaosug/">Ukraine OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+unimelb%2Dosug/">University of Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+valeosug/">Vale do Paraíba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vanosug/">Vancouver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vosug/">Venezuela &#45; Pagina de incio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vvoosug/">Vladivostok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wosug/">Welsh &#45; Cymru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wiosug/">Wisconsin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+xaosug/">Xi'an</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+</div><p/>
+<script type="text/javascript">
+var obj = {div:'xwikinav',no:1,height:250};
+var acc = createAccordion(obj);
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSDocs','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSDocs'); togglePanelVisibility(this.parentNode);">Project input-method Pages</h1>
+<div class="xwikipanelcontents"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/documents">Documents</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/building_ibus">Build and use iBus</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/building_iiimf">Build IIIMF</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/building_scim">Build SCIM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/building_sunpinyin">Build SunPinyin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/building_uim">Build UIM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/howtos">Howtos</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_ime">SunPinyin代码导读&#45;IME部分</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_slm">SunPinyin代码导读&#45;SLM部分</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_slm_en">SunPinyin Code Tour &#45; SLM</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/repository">Repository</a></span></li>
+</ul>
+                        </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div>  <div id="footerglobal" class="layoutsection">
+  <div class="minwidth"></div>
+
+  <script language="JavaScript" src="/resources/js/s_code_remote.js"></script>
+
+
+          <div id="xwikiplatformversion">XWiki Enterprise 2.1.1.25889 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+  <br/>
+
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2011, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+  </div>
+
+
+</div></div></body>
+</html>

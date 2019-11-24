@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>OSS Bite Size Bugs (Main.oss_bite_size) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Main/oss_bite_size" />
+                    <link rel="canonical" href="/bin/view/Main/oss_bite_size" />
+                            <meta name="document" content="Main.oss_bite_size"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Main"/>
+    <meta name="page" content="oss_bite_size"/>
+    <meta name="version" content="2.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Main/pages/oss_bite_size"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="google-site-verification" content="w1hwBFkJyIZhLy6Y6RK5S5lEb29buQ48gG3nCUMTR28" />
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/fullScreen.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Main";
+XWiki.currentPage = "oss_bite_size";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Main/oss_bite_size";
+window.docediturl = "/bin/edit/Main/oss_bite_size";
+window.docsaveurl = "/bin/save/Main/oss_bite_size";
+window.docgeturl = "/bin/get/Main/oss_bite_size";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/viewers/code.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/fullScreen.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Main viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FMain%2Foss_bite_size%3Fviewer%3Dcode%26%2338%3Blanguage%3Den"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Main/"><strong>Main</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Main" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>
+            </td>
+            <td style="width: 99%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                              <a href='/bin/view/Main/bug_reports'>Sponsor Pgm Bug Activity</a> <span class='separator'>&#187;</span> <span class='current'>OSS Bite Size Bugs</span>
+                </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Main/oss_bite_size?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+        <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Main/oss_bite_size?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Main/oss_bite_size?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Main/oss_bite_size?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Main/oss_bite_size?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Main/oss_bite_size?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Main/oss_bite_size?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Main/oss_bite_size?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Main/oss_bite_size?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Main/oss_bite_size?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Main/oss_bite_size?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          <span class="submenuitem "><a href="/bin/view/Main/oss_bite_size?xpage=copy" id="tmActionCopy" class="tmActionCopy">Copy</a></span>
+      </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+<div id="document-title"><h1>Wiki source code of <a href="/bin/view/Main/oss_bite_size">OSS Bite Size Bugs</a></h1></div>
+                <div id="document-info">
+    <div>
+                      <span id="contentshortcut"><a href="/bin/view/Main/oss_bite_size?viewer=content">Content</a></span>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+
+
+
+
+
+
+<div>
+  <a href="/bin/view/Main/oss_bite_size?viewer=code&amp;showlinenumbers=0&amp;language=en" id="toggleLineNumbers">Hide line numbers</a>
+                                  <textarea readonly="readonly" class="wiki-code" rows="25" cols="80">
+  1: == Available oss-bite-size Bugs ==
+  2: 
+  3:  - As of 10:52, 10/08/09
+  4: 
+  5: [[Fixed oss-bite-size Bugs&gt;&gt;Main.fixed_oss_bite_size]]
+  6: 
+  7: State Key|=State|=Definition
+  8: 
+  9: |1-Dispatched|Bug is available to be worked on by community, no engineer assigned
+ 10: |2-Incomplete|More information needed, not being actively worked: bug may be available to be worked on by community
+ 11: |3-Accepted|Engineer assigned, may be avaiable for the community to work on: contact the Responsible Engineer
+ 12: |4-Defer|Not being actively worked: bug may be available to be worked on by community
+ 13: 
+ 14: ||**CrNumber**|**Synopsis**|**Status**|**Responsible Manager**|**Responsible Engineer**|**Priority**|**Product**|**Category**|**SubCategory**|**Type**
+ 15: |1|1|[[6760685&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6760685]]|No MOTD (message of the day) when using zsh, /etc/zprofile is needed|1-Dispatched|Fred Thornborrow |4-Low|solaris|utility|zsh|Defect
+ 16: |2|2|[[6816753&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6816753]]|webrev could breakdown comments into revisions in index.html|1-Dispatched|Robert Porras |4-Low|solaris|consolidation|os-net-tools|RFE
+ 17: |3|3|[[6700707&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6700707]]|comments format nits in nss_common.c|1-Dispatched|Peter Harvey |5-Very Low|solaris|network|nsswitch|Defect
+ 18: |4|4|[[5054112&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=5054112]]|_tx_error needs to preserve the errno value it is supposed to display|1-Dispatched|Vincent Murphy |4-Low|solaris|library|libnsl|Defect
+ 19: |5|5|[[6458839&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6458839]]|remove 'is_z_a_power_of_x_le_y' from pcfs utils|1-Dispatched|Lisa Chatham |5-Very Low|solaris|utility|filesystem|Defect
+ 20: |6|6|[[6473940&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6473940]]|manifest-import should handle upgrade-file failure better|1-Dispatched|William Wahl |3-Medium|solaris|utility|smf|Defect
+ 21: |7|7|[[6461634&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6461634]]|gcore should warn the user if CTF was requested, but could not be produced|1-Dispatched|Darrin Johnson |4-Low|solaris|utility|proc|Defect
+ 22: |8|8|[[6419671&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6419671]]|svcprop -1 &amp; -T|1-Dispatched|William Wahl |3-Medium|solaris|utility|smf|RFE
+ 23: |9|9|[[6319974&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6319974]]|svc.configd should act consistently wrt service addition|1-Dispatched|William Wahl |4-Low|solaris|utility|smf|Defect
+ 24: |10|10|[[6297026&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6297026]]|fmri_to_entity() should have finer error semantics|1-Dispatched|William Wahl |3-Medium|solaris|utility|smf|Defect
+ 25: |11|11|[[6280513&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6280513]]|init needs to handle SCF_ERROR_NO_RESOURCES from scf_instance_add_pg()|1-Dispatched|William Wahl |3-Medium|solaris|utility|smf|Defect
+ 26: |12|12|[[6211054&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6211054]]|svcs -x might miss reasons|1-Dispatched|William Wahl |4-Low|solaris|utility|smf|Defect
+ 27: |13|13|[[6207957&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6207957]]|uu_list_find() leaves error unset when successfully returning NULL|1-Dispatched|William Wahl |4-Low|solaris|library|libuutil|Defect
+ 28: |14|14|[[6207437&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6207437]]|iostat should display merged requests|1-Dispatched|Joe G |4-Low|solaris|utility|performance|RFE
+ 29: |15|15|[[6199811&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6199811]]|svccfg doesn't detect conflicting property groups|1-Dispatched|William Wahl |4-Low|solaris|utility|smf|Defect
+ 30: |16|16|[[6530498&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6530498]]|HA DNS should provide a property to allow the DNS service to be run as a non-root user|1-Dispatched|Burt Clouse |Harish Sundaram |4-Low|suncluster|suncluster|ha-dns|RFE
+ 31: |17|17|[[4651563&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4651563]]|leveraging off iWS official way of enabling automatic start up of secure server|1-Dispatched|Burt Clouse |Prasad Dharmavaram |4-Low|suncluster|suncluster|ha-nshttp|RFE
+ 32: |18|18|[[4815382&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4815382]]|rfe: ha-nfs should syslog if Probe too close to timeout|1-Dispatched|Burt Clouse |3-Medium|suncluster|suncluster|ha-nfs|RFE
+ 33: |19|19|[[6466474&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6466474]]|SAP enq server resource creation throws a warning message in syslog for Retry_Interval=0|1-Dispatched|Burt Clouse |Harish Sundaram |3-Medium|suncluster|suncluster|ha-sapenq|RFE
+ 34: |20|20|[[6449857&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6449857]]|sap scs agent should log when message server starts and when it fails to start|1-Dispatched|Burt Clouse |3-Medium|suncluster|suncluster|ha-sapscs|RFE
+ 35: |21|21|[[6442030&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6442030]]|Have a new extension property to specify a new log directory for SAP start and monitor logs|1-Dispatched|Burt Clouse |3-Medium|suncluster|suncluster|ha-sapscs|RFE
+ 36: |22|22|[[6444208&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6444208]]|WebService interface failed, sapstartsrv stopped|1-Dispatched|Burt Clouse |2-High|suncluster|suncluster|ha-sap|RFE
+ 37: |23|23|[[6440210&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6440210]]|change the algo for sap start method|1-Dispatched|Burt Clouse |2-High|suncluster|suncluster|ha-sap|RFE
+ 38: |24|24|[[6401063&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6401063]]|SFW should not require a 64-bit build machine|1-Dispatched|Fred Thornborrow |Mike Sullivan |3-Medium|solaris|consolidation|sfw|Defect
+ 39: |25|25|[[6398871&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6398871]]|method macros should offer simple conditional expansions|1-Dispatched|William Wahl |4-Low|solaris|utility|smf|RFE
+ 40: |26|26|[[6848228&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6848228]]|clock(3c) shouldn't look at HZ environment variable|1-Dispatched|Joe G |4-Low|solaris|library|libc|Defect
+ 41: |27|27|[[6395924&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6395924]]|::set typo for follow_fork_mode|1-Dispatched|Michael Pogue |5-Very Low|solaris|utility|mdb|Defect
+ 42: |28|28|[[6208682&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6208682]]|-&gt;ri_utmpx_prefix check could go wrong|1-Dispatched|William Wahl |5-Very Low|solaris|utility|smf|Defect
+ 43: |29|29|[[6394382&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6394382]]|getpcstack() doesn't work post-panic on x86|1-Dispatched|Darrin Johnson |4-Low|solaris|kernel|arch-x86|Defect
+ 44: |30|30|[[4858166&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4858166]]|makewhatis should remove duplicate windex entries|1-Dispatched|Peter Fernandez |4-Low|solaris|utility|man|Defect
+ 45: |31|31|[[6494247&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6494247]]|ctfconvert of empty compilation units doesn't work when SS11 uses DWARF|1-Dispatched|Michael Pogue |3-Medium|solaris|utility|ctf|Defect
+ 46: |32|32|[[6493125&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6493125]]|df options needlessly differ between /usr/bin/ and /usr/xpg4/bin/|1-Dispatched|David Brittle |4-Low|solaris|utility|filesystem|Defect
+ 47: |33|33|[[6496621&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6496621]]|Simplify doprnt.c code with strnlen|1-Dispatched|Al Ikner |Jayakara Kini |5-Very Low|solaris|library|libc|RFE
+ 48: |34|34|[[6728184&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6728184]]|rc_node_delete() usually leaks a reference|1-Dispatched|William Wahl |3-Medium|solaris|utility|smf|Defect
+ 49: |35|35|[[6445628&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6445628]]|Add a ::rootpage dcmd|1-Dispatched|Michael Pogue |4-Low|solaris|utility|mdb|RFE
+ 50: |36|36|[[6445625&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6445625]]|::page_num2pp should work in a pipeline|1-Dispatched|Michael Pogue |4-Low|solaris|utility|mdb|RFE
+ 51: |37|37|[[6836624&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6836624]]|error emitted when useradd(1M) -m fails is cryptic|1-Dispatched|Joe G |3-Medium|solaris|utility|security|Defect
+ 52: |38|38|[[6717753&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6717753]]|default profile name can't be set by idsconfig.|1-Dispatched|Peter Harvey |3-Medium|solaris|ldap|switch|Defect
+ 53: |39|39|[[6661055&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6661055]]|usr/src/uts/common/sys/fsid.h should die or brought up to date|1-Dispatched|David Brittle |5-Very Low|solaris|kernel|fs|Defect
+ 54: |40|40|[[6199123&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6199123]]|svcadm enable -r leaks memory in set_fmri_enabled|1-Dispatched|William Wahl |4-Low|solaris|utility|smf|Defect
+ 55: |41|41|[[6436577&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6436577]]|useradd gives obscure error message when colliding with autofs|1-Dispatched|Joe G |Jayakara Kini |3-Medium|solaris|utility|security|Defect
+ 56: |42|42|[[6308408&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6308408]]|ncalogd should be converted to an smf(5) service.|1-Dispatched|Markus Flierl |4-Low|solaris|kernel|nca|Defect
+ 57: |43|43|[[6771201&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6771201]]|allow custom CSS templates for webrev|1-Dispatched|Robert Porras |4-Low|solaris|consolidation|os-net-tools|RFE
+ 58: |44|44|[[6495166&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6495166]]|confusion over CTF_MAX_TYPE|1-Dispatched|Michael Pogue |4-Low|solaris|utility|ctf|Defect
+ 59: |45|45|[[6767292&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6767292]]|autofs mount option string cleanup|1-Dispatched|Gerald Thornbrugh |5-Very Low|solaris|network|automounter|Defect
+ 60: |46|46|[[6323168&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6323168]]|Memory leaks in reserve.cc and scgdevs.c need to be fixed|1-Dispatched|Nancy Chow |4-Low|suncluster|suncluster|devfs|Defect
+ 61: |47|47|[[6647189&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6647189]]|scgdevs error when booting in single user|1-Dispatched|Nancy Chow |Stephen Docy |4-Low|suncluster|suncluster|devfs|Defect
+ 62: |48|48|[[5040850&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=5040850]]|unintialized struct ulp in ufs_alloc_data()|1-Dispatched|Nancy Chow |5-Very Low|suncluster|suncluster|pxfs|Defect
+ 63: |49|49|[[6444195&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6444195]]|Transport message should print the IP address in the correct byte order on amd64|1-Dispatched|Burt Clouse |4-Low|suncluster|suncluster|transport|Defect
+ 64: |50|50|[[5063917&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=5063917]]|scrgadm -t SUNW.iws - error messages|1-Dispatched|Burt Clouse |4-Low|suncluster|suncluster|networking|Defect
+ 65: |51|51|[[6546895&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6546895]]|get_ipmp_groups_from_rlist returns ssm_prop_err_t type|1-Dispatched|Burt Clouse |4-Low|suncluster|suncluster|pnm|Defect
+ 66: |52|52|[[4175981&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4175981]]|reboot_unode() should take configurable sleep value|1-Dispatched|Burt Clouse |4-Low|suncluster|suncluster|unode|RFE
+ 67: |53|53|[[4528483&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4528483]]|Comments needed explaining failfast_gracetime and failfast_proxy_panic_delay|1-Dispatched|Burt Clouse |4-Low|suncluster|suncluster|cmm|Defect
+ 68: |54|54|[[4349443&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4349443]]|cmm_ctl gives poor error messages|1-Dispatched|Burt Clouse |4-Low|suncluster|suncluster|cmm|RFE
+ 69: |55|55|[[6591323&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6591323]]|Makefile does not respect ONBLD_TOOLS path when referencing the tokenize utility|1-Dispatched|Robert Porras |4-Low|solaris|consolidation|os-net-tools|Defect
+ 70: |
+ 71: |56|1|[[6667501&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6667501]]|stable SMF FMRI access in DTrace|2-Incomplete|Michael Pogue |4-Low|solaris|kernel|dtrace|RFE
+ 72: |
+ 73: |57|1|[[6818540&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6818540]]|udptest() in netcat needs more work|3-Accepted|Peter Harvey |Vladimir Kotal |4-Low|solaris|network|internet-utility|Defect
+ 74: |58|2|[[6649088&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6649088]]|libsldap should use strerror() for error reporting, not only errno|3-Accepted|Peter Harvey |5-Very Low|solaris|ldap|switch|RFE
+ 75: |59|3|[[6486993&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6486993]]|fsdb: printf has too few items for format|3-Accepted|Lisa Chatham |4-Low|solaris|utility|filesystem|Defect
+ 76: |60|4|[[6425995&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6425995]]|svccfg should share what permission was denied for|3-Accepted|William Wahl |3-Medium|solaris|utility|smf|Defect
+ 77: |61|5|[[6821894&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6821894]]|[CLI] - ipseckey and ipsecconf command output lists some unlocalized messages|3-Accepted|Steven Detar |4-Low|solaris|network|ipsec|Defect
+ 78: |62|6|[[6764184&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6764184]]|tab instead of space in sadb.h|3-Accepted|Steven Detar |Mark Fenwick |5-Very Low|solaris|network|ipsec|Defect
+ 79: |63|7|[[5079375&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=5079375]]|svccfg should allow tab-completion on more commands|3-Accepted|William Wahl |4-Low|solaris|utility|smf|RFE
+ 80: |64|8|[[4687825&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4687825]]|*cron* /etc/cron.d/FIFO should move to /var/run/CRONFIFO|3-Accepted|Joe G |Daniel Price |4-Low|solaris|utility|scheduling|RFE
+ 81: |65|9|[[6213311&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6213311]]|zlogin should allow only one escape character to be specified for '-e' option.|3-Accepted|Sridhar Yedunuthula |4-Low|solaris|utility|zones|Defect
+ 82: |66|10|[[6292561&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6292561]]|{} characters in zonecfg usage messages confusing to users|3-Accepted|Joe G |Vineeth Pillai |4-Low|solaris|utility|zones|Defect
+ 83: |67|11|[[6641990&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6641990]]|*svcs* should not show instances which don't have a 'general' property group|3-Accepted|William Wahl |Thomas Whitten |4-Low|solaris|utility|smf|Defect
+ 84: |68|12|[[6586072&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6586072]]|uu_warn_internal should be more precise in its newline detection|3-Accepted|William Wahl |5-Very Low|solaris|library|libuutil|Defect
+ 85: |69|13|[[6476544&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6476544]]|acr argument processing could be improved|3-Accepted|Robert Porras |5-Very Low|solaris|consolidation|os-net-tools|Defect
+ 86: |70|14|[[4706502&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4706502]]|enhance ::whatis for libumem|3-Accepted|Darrin Johnson |Eric Saxe |5-Very Low|solaris|library|libumem|RFE
+ 87: |71|15|[[4339130&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4339130]]|telnetd error message should be more informative|3-Accepted|Anup Sekhar |4-Low|kerberosv5|kerberosv5|network|RFE
+ 88: |72|16|[[6240279&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6240279]]|dt_read() has potential buffer overflow|3-Accepted|John Harres |Thomas Whitten |4-Low|solaris|kernel|svm|Defect
+ 89: |73|17|[[6866661&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6866661]]|scf_values_destroy(3SCF) will segfault if is passed NULL|3-Accepted|William Wahl |Antonello Cruz |4-Low|solaris|utility|smf|Defect
+ 90: |74|18|[[6808620&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6808620]]|let netcat command line option handling experience a dose of perfectionism|3-Accepted|Peter Harvey |5-Very Low|solaris|network|internet-utility|RFE
+ 91: |75|19|[[6748301&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6748301]]|Dead code in nfs4_client.c: nfs4_getattr_cache|3-Accepted|Jeanne Hinegardner |5-Very Low|solaris|kernel|nfsv4|Defect
+ 92: |76|20|[[6689462&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6689462]]|nfs mdb dcmd: nfs_set - set what ?|3-Accepted|Gerald Thornbrugh |5-Very Low|solaris|kernel|nfs|Defect
+ 93: |77|21|[[6639390&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6639390]]|llib-lrpcsvc needs to be added to Makefile.lint and all warnings taken care of|3-Accepted|Gerald Thornbrugh |4-Low|solaris|kernel|nfs|Defect
+ 94: |78|22|[[6595943&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6595943]]|RFE: change msg displayed if user goes to add rg w/ inter-rg-dependencies outside &amp; pg prop set to F|3-Accepted|Burt Clouse |Elaine Ding |3-Medium|suncluster-geo|suncluster-geo|commands|RFE
+ 95: |79|23|[[6551625&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6551625]]|retreival of RG/resource property differences within a protection group should be easy|3-Accepted|Burt Clouse |Steve Mckinty |3-Medium|suncluster-geo|suncluster-geo|protection-groups|RFE
+ 96: |80|24|[[6468736&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6468736]]|exec() failure for inetd services is hard to diagnose|3-Accepted|Satish Murugesan |3-Medium|solaris|network|inetd|Defect
+ 97: |81|25|[[6425967&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6425967]]|svcs -x makes claims about disabled services that it can't back up|3-Accepted|William Wahl |3-Medium|solaris|utility|smf|Defect
+ 98: |82|26|[[6420134&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6420134]]|Want an easy &amp; fast way to retrieve multiple SCF properties|3-Accepted|William Wahl |4-Low|solaris|utility|smf|RFE
+ 99: |83|27|[[6417349&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6417349]]|svccfg import exits with status 0 after complaining about unexpected scope change|3-Accepted|William Wahl |3-Medium|solaris|utility|smf|Defect
+100: |84|28|[[6391362&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6391362]]|svcs -x found too many root causes|3-Accepted|William Wahl |4-Low|solaris|utility|smf|Defect
+101: |85|29|[[6341843&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6341843]]|Manifests should warn users against customizing via svccfg import|3-Accepted|William Wahl |3-Medium|solaris|utility|smf|Defect
+102: |86|30|[[6339753&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6339753]]|nsswitch should allow comments in local files|3-Accepted|Peter Harvey |4-Low|solaris|network|nsswitch|RFE
+103: |87|31|[[6319973&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6319973]]|svccfg should abort after a service addition conflict|3-Accepted|William Wahl |3-Medium|solaris|utility|smf|Defect
+104: |88|32|[[6310640&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6310640]]|NFS services confuse property group type framework &amp; application|3-Accepted|Jeanne Hinegardner |4-Low|solaris|kernel|nfsv4|Defect
+105: |89|33|[[6300751&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6300751]]|svccfg import should accept correct pre-existing dependents|3-Accepted|William Wahl |3-Medium|solaris|utility|smf|Defect
+106: |90|34|[[6299120&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6299120]]|Some of svccfg's upgrade messages should be more detailed|3-Accepted|William Wahl |3-Medium|solaris|utility|smf|Defect
+107: |91|35|[[6298482&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6298482]]|webrev should highlight XXX's|3-Accepted|Robert Porras |4-Low|solaris|consolidation|os-net-tools|RFE
+108: |92|36|[[6292689&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6292689]]|bfu looks in wrong directory when installing system/sac|3-Accepted|Robert Porras |5-Very Low|solaris|consolidation|os-net-tools|Defect
+109: |93|37|[[6272851&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6272851]]|startd should signal liveness if runlevel transition is delayed|3-Accepted|William Wahl |Truong Q Nguyen |4-Low|solaris|utility|smf|Defect
+110: |94|38|[[6248378&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6248378]]|general/enabled problems aren't handled completely|3-Accepted|William Wahl |John Sonnenschein |3-Medium|solaris|utility|smf|Defect
+111: |95|39|[[6239898&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6239898]]|If hostkeys are missing, network/ssh should point to system/sysidtool:net|3-Accepted|Anup Sekhar |Jan Pechanec |3-Medium|solaris|ssh|other|RFE
+112: |96|40|[[6196126&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6196126]]|svcs -xq|3-Accepted|William Wahl |Liane Praza |4-Low|solaris|utility|smf|RFE
+113: |97|41|[[6196024&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6196024]]|mdb should warn when it can't stop a process|3-Accepted|Michael Pogue |3-Medium|solaris|utility|mdb|Defect
+114: |98|42|[[6183392&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6183392]]|inetadm should take enable and disable|3-Accepted|Victor Nelson |Alan Maguire |3-Medium|solaris|network|inetd|RFE
+115: |99|43|[[6182724&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6182724]]|Would like a boot-order listing of services|3-Accepted|William Wahl |4-Low|solaris|utility|smf|RFE
+116: |100|44|[[6181085&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6181085]]|svc.startd should keep restarter_actions clean|3-Accepted|William Wahl |3-Medium|solaris|utility|smf|Defect
+117: |101|45|[[5079390&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=5079390]]|init's failure rate threshold is too high|3-Accepted|William Wahl |3-Medium|solaris|utility|smf|Defect
+118: |102|46|[[5079378&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=5079378]]|svcs -d should complain about missing dependencies|3-Accepted|William Wahl |3-Medium|solaris|utility|smf|Defect
+119: |103|47|[[5079373&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=5079373]]|svc:/system/svc/repository:default should be implemented|3-Accepted|William Wahl |3-Medium|solaris|utility|smf|Defect
+120: |104|48|[[5076771&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=5076771]]|svccfg should validate names in service descriptions|3-Accepted|William Wahl |3-Medium|solaris|utility|smf|Defect
+121: |105|49|[[5065780&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=5065780]]|getpwuid_r() can fail with undocumented ENOENT|3-Accepted|Peter Harvey |3-Medium|solaris|network|nsswitch|Defect
+122: |106|50|[[4968927&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4968927]]|errno.h comments should match strerror() results (libc/port/gen/errlist)|3-Accepted|Darrin Johnson |Lee Damico |4-Low|solaris|kernel|header|Defect
+123: |107|51|[[4867087&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4867087]]|wx pbchk should skip the RTI check for project gates|3-Accepted|Robert Porras |4-Low|solaris|consolidation|os-net-tools|RFE
+124: |108|52|[[4779167&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4779167]]|cscope can't find the definition of sess_t|3-Accepted|Robert Porras |5-Very Low|solaris|consolidation|os-net-tools|Defect
+125: |109|53|[[6411758&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6411758]]|in.dhcpd should shut up about clients releasing MANUAL addresses|3-Accepted|Victor Nelson |4-Low|solaris|network|dhcp_server|Defect
+126: |110|54|[[6409970&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6409970]]|Sometimes svc.startd laughs in SIGTERM's face|3-Accepted|William Wahl |Liane Praza |4-Low|solaris|utility|smf|Defect
+127: |111|55|[[6861335&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6861335]]|nfs_validate_caches() and brothers can be simplified|3-Accepted|Gerald Thornbrugh |4-Low|solaris|kernel|nfs|Defect
+128: |112|56|[[6507590&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6507590]]|svcadm restart doesn't warn about not starting disabled services|3-Accepted|William Wahl |4-Low|solaris|utility|smf|Defect
+129: |113|57|[[6578204&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6578204]]|centralise HMAC code into $SRC/common/crypto/ algorithm implementation|3-Accepted|Steven Detar |3-Medium|solaris|solaris-crypto|algorithms|RFE
+130: |114|58|[[6409458&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6409458]]|upgrade.app.* files should have an explanatory header comment|3-Accepted|William Wahl |4-Low|solaris|utility|smf|Defect
+131: |115|59|[[6266334&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6266334]]|dhcp tools do not properly handle 10.x.x.x networks with 255.255.255.0 netmask|3-Accepted|Victor Nelson |Dave Miner |3-Medium|solaris|network|dhcp_admin|Defect
+132: |116|60|[[4921649&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4921649]]|snoop -x output contains characters not converted to dots.|3-Accepted|Satish Murugesan |Bill Watson |4-Low|solaris|network|snoop|Defect
+133: |117|61|[[4783879&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4783879]]|libpkcs11: start up time can be saved in pkcs11_slot_mapping()|3-Accepted|Steven Detar |4-Low|solaris|solaris-crypto|pkcs11|RFE
+134: |118|62|[[4983618&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4983618]]|pkcs11_softtoken: Provide data objects support|3-Accepted|Steven Detar |4-Low|solaris|solaris-crypto|pkcs11_softtoken|RFE
+135: |119|63|[[6574457&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6574457]]|Add Indic locales|3-Accepted|Dolores Eccles |Yandong Yao |3-Medium|solaris|library|l10n-asia|RFE
+136: |120|64|[[4742920&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4742920]]|probe_sblsrvr should work 'grep Enabled' with non-English installation also|3-Accepted|Burt Clouse |3-Medium|suncluster|suncluster|ha-siebel|RFE
+137: |121|65|[[6350356&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6350356]]|HA-DNS validation not detecting the non-existence of value given for DIRECTORY in named.conf|3-Accepted|Burt Clouse |Harish Sundaram |3-Medium|suncluster|suncluster|ha-dns|RFE
+138: |122|66|[[6209631&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6209631]]|lift requirement to have rg_dependency set to rg holding network rs for scalable apache|3-Accepted|Burt Clouse |3-Medium|suncluster|suncluster|ha-apache|RFE
+139: |123|67|[[6262459&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6262459]]|Node agent resource creation should fail if resource_dependencies is not set|3-Accepted|Burt Clouse |Swathi Devulapalli |3-Medium|suncluster|suncluster|ha-s1as|RFE
+140: |124|68|[[5039470&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=5039470]]|Request to use LOFS on a Sun Cluster|3-Accepted|Burt Clouse |Harish Sundaram |3-Medium|suncluster|suncluster|ha-nfs|RFE
+141: |125|69|[[4912833&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4912833]]|probe should run hadbm commands using scds_timerun|3-Accepted|Burt Clouse |Harish Sundaram |3-Medium|suncluster|suncluster|ha-hadb|RFE
+142: |126|70|[[6200483&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6200483]]|One HA-NFS resource may affect the availabilty of other NFS resources with the current design|3-Accepted|Burt Clouse |Hemachandran Namachivayam |2-High|suncluster|suncluster|ha-nfs|RFE
+143: |127|71|[[6255954&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6255954]]|restart of NFS lock daemons on node with no HA-NFS RGs should be asynchronous|3-Accepted|Burt Clouse |Harish Sundaram |2-High|suncluster|suncluster|ha-nfs|RFE
+144: |128|72|[[6264831&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6264831]]|The canned WebLogic data service for Cluster 3.1 was built using GDS and &quot;does&quot; call PMF tags.|3-Accepted|Burt Clouse |Swathi Devulapalli |2-High|suncluster|suncluster|ha-wls|RFE
+145: |129|73|[[6523654&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6523654]]|tcp kstats inSegs and outSegs report incorrect values|3-Accepted|Sharon Liu |4-Low|solaris|kernel|tcp-ip|Defect
+146: |130|74|[[6402912&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6402912]]|nightly should be easy to kill|3-Accepted|Robert Porras |4-Low|solaris|consolidation|os-net-tools|RFE
+147: |131|75|[[6223224&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6223224]]|metaset &amp; metastat display long ctd names as fully qualified names|3-Accepted|John Harres |Steve Peng |3-Medium|solaris|utility|cmd-svm|Defect
+148: |132|76|[[6341292&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6341292]]|cleanup of hsfs warning messages required|3-Accepted|Lisa Chatham |3-Medium|solaris|kernel|hsfs|Defect
+149: |133|77|[[6851605&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6851605]]|lint complains about {ipsec_insert_always,ipsec_alg_fix_min_max} when run on non-DEBUG bits|3-Accepted|Steven Detar |5-Very Low|solaris|network|ipsec|Defect
+150: |134|78|[[6795242&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6795242]]|df -F ufs -o i through a pipe changes the whitespace formatting|3-Accepted|Lisa Chatham |4-Low|solaris|utility|filesystem|Defect
+151: |135|79|[[6677990&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6677990]]|rfe to dtrace stack() function to limit frames from other end of traceback - eg stack(-5)|3-Accepted|Michael Pogue |4-Low|solaris|kernel|dtrace|RFE
+152: |136|80|[[6625306&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6625306]]|rl_log_control() error handling is lame and error propagation is inconsistent|3-Accepted|Lisa Chatham |4-Low|solaris|utility|filesystem|Defect
+153: |137|81|[[6399137&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6399137]]|RFE: calls to zone_getattr should be turned into calls to nicer library routines|3-Accepted|Sridhar Yedunuthula |4-Low|solaris|utility|zones|RFE
+154: |138|82|[[4897801&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4897801]]|::fsinfo should provide filters|3-Accepted|Michael Pogue |5-Very Low|solaris|utility|mdb|RFE
+155: |139|83|[[6254183&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6254183]]|encrypt(1) should support blowfish|3-Accepted|Steven Detar |Bhargava Yenduri |3-Medium|solaris|solaris-crypto|tools|RFE
+156: |140|84|[[6613302&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6613302]]|svcadm uses emsg_nomem before it's defined!|3-Accepted|William Wahl |4-Low|solaris|utility|smf|Defect
+157: |141|85|[[6405594&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6405594]]|ksslcfg with -v needs better output|3-Accepted|Steven Detar |4-Low|solaris|kernel_ssl|admin|Defect
+158: |142|86|[[6792596&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6792596]]|UFS should not update ctime of source inode if link(2) fails|3-Accepted|Lisa Chatham |4-Low|solaris|kernel|ufs|Defect
+159: |143|87|[[4997928&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4997928]]|duplicate KLM function names confuse debugging tools|3-Accepted|Gerald Thornbrugh |4-Low|solaris|network|locking|Defect
+160: |144|88|[[4877705&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4877705]]|Solaris should ship empty hosts.allow &amp; hosts.deny files|3-Accepted|Sharon Liu |4-Low|solaris|netsec|tcp-wrappers|RFE
+161: |145|89|[[6565763&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6565763]]|method failure does not kill contract processes|3-Accepted|William Wahl |3-Medium|solaris|utility|smf|Defect
+162: |146|90|[[6341030&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6341030]]|zoneadm install fails if zonepath has extra &quot;/&quot;|3-Accepted|Joe G |Vineeth Pillai |3-Medium|solaris|utility|zones|Defect
+163: |147|91|[[6215819&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6215819]]|savecore should only pretty-print progress to a terminal|3-Accepted|Darrin Johnson |4-Low|solaris|utility|kernel|Defect
+164: |148|92|[[5103517&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=5103517]]|svcprop -p can produce better error messages for invalid arguments|3-Accepted|William Wahl |4-Low|solaris|utility|smf|Defect
+165: |149|93|[[6230193&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6230193]]|kmdb should warn user about rebooting after a panic|3-Accepted|Michael Pogue |3-Medium|solaris|kernel|kmdb|RFE
+166: |150|94|[[6619664&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6619664]]|cscope-fast core dumps without HOME|3-Accepted|Satish Murugesan |Jayakara Kini |5-Very Low|solaris|consolidation|os-net-tools|Defect
+167: |151|95|[[6399735&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6399735]]|shell, telnet, login, ftp and other S72inetsvc services need a multi-user-server dependent|3-Accepted|William Wahl |4-Low|solaris|utility|smf|Defect
+168: |152|96|[[6240573&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6240573]]|most file:// dependencies should really be scripted checks|3-Accepted|William Wahl |3-Medium|solaris|utility|smf|Defect
+169: |153|97|[[4975023&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4975023]]|missleading msg when upgrading resource to resource's current RT version|3-Accepted|Nancy Chow |4-Low|suncluster|suncluster|rgm|Defect
+170: |154|98|[[6669184&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6669184]]|backend_do_copy should emit clearer error message when it fail the copy operation|3-Accepted|William Wahl |4-Low|solaris|utility|smf|Defect
+171: |155|99|[[6450281&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6450281]]|core filename (coreadm) should allow %s to indicate what signal triggered a core|3-Accepted|Darrin Johnson |5-Very Low|solaris|utility|kernel|Defect
+172: |156|100|[[6424589&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6424589]]|cpr build with sgcc causing panic|3-Accepted|Narayana Kadoor |3-Medium|solaris|kernel|cpr|Defect
+173: |157|101|[[5079351&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=5079351]]|RFE: prstat should be able to monitor a service using contract ID|3-Accepted|Sridhar Yedunuthula |4-Low|solaris|utility|prstat|RFE
+174: |158|102|[[6611917&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6611917]]|FMRI with single character components not accepted / svccfg import fails|3-Accepted|William Wahl |3-Medium|solaris|library|libscf|Defect
+175: |159|103|[[6504439&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6504439]]|scf_scope_to_fmri produces invalid URI for local scope|3-Accepted|William Wahl |3-Medium|solaris|library|libscf|Defect
+176: |160|104|[[6503742&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6503742]]|Some European single byte codeset iconvs return non-identical conversions even there wasn't any|3-Accepted|Dolores Eccles |Jan Hnatek |3-Medium|solaris|library|l10n-europe|Defect
+177: |161|105|[[6503736&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6503736]]|European single byte codeset iconvs write to buffer before checking on the output buffer size|3-Accepted|Dolores Eccles |Jan Hnatek |3-Medium|solaris|library|l10n-europe|Defect
+178: |162|106|[[6318057&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6318057]]|share(1M) shouldn't break if the system time is wrong|3-Accepted|David Brittle |4-Low|solaris|kernel|fs|RFE
+179: |163|107|[[5103688&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=5103688]]|RFE: format(1M) command output can be more sensible.|3-Accepted|Grant Zhang |Brad Grissom |3-Medium|solaris|utility|diskformat|RFE
+180: |164|108|[[5069549&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=5069549]]|kcf_provider_desc dcmd doesn't walk logical providers|3-Accepted|Steven Detar |4-Low|solaris|solaris-crypto|kernel|RFE
+181: |165|109|[[6210336&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6210336]]|mechanism is needed to persistently disable ports|3-Accepted|Jane Zhang |4-Low|usb|usb_sw|hubd|RFE
+182: |166|110|[[5054946&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=5054946]]|timeouts not implemented|3-Accepted|Jane Zhang |Raymond Chen |3-Medium|solaris|library|libusb|RFE
+183: |167|111|[[5026165&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=5026165]]|ohci/ehci: internal USB driver functions should not return DDI_SUCCESS/FAILURE|3-Accepted|Jane Zhang |Zhigang Lu |4-Low|usb|usb_sw|ohci|Defect
+184: |168|112|[[4750743&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4750743]]|RFE: labelit_pcfs wanted|3-Accepted|Lisa Chatham |5-Very Low|solaris|utility|filesystem|RFE
+185: |169|113|[[6200333&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6200333]]|format and labelling EFI or VTOC is way too hard to discover|3-Accepted|Grant Zhang |Brad Grissom |3-Medium|solaris|utility|diskformat|RFE
+186: |170|114|[[4531063&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4531063]]|Add '-H' option to prtvtoc for human readable output|3-Accepted|Grant Zhang |Li He |4-Low|solaris|utility|diskformat|RFE
+187: |171|115|[[6256379&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6256379]]|[s]sd_max_xfer_size is too alluring a name|3-Accepted|Grant Zhang |Brad Grissom |3-Medium|solaris|kernel|driver-sd-fixed|RFE
+188: |172|116|[[4524105&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4524105]]|ufsdump/ufsrestore largefile cleanup|3-Accepted|Lisa Chatham |4-Low|solaris|sysadmin|dump_restore|Defect
+189: |173|117|[[4975819&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4975819]]|mkfs should not complain about obsolete rotational tables|3-Accepted|David Brittle |4-Low|solaris|utility|filesystem|RFE
+190: |174|118|[[6772937&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6772937]]|snoop ipnet verbose output should be human-friendly|3-Accepted|Victor Nelson |4-Low|solaris|network|snoop|Defect
+191: |175|119|[[6706642&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6706642]]|remove ufs_inode.h include from leaky_subr.c|3-Accepted|Michael Pogue |Jonathan Haslam |4-Low|solaris|utility|mdb|Defect
+192: |176|120|[[6706645&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6706645]]|remove ufs header file includes from diskread.c|3-Accepted|Michael Pogue |4-Low|solaris|kernel|boot|Defect
+193: |177|121|[[6607363&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6607363]]|nightly: remove references to ancient B flag|3-Accepted|Robert Porras |5-Very Low|solaris|consolidation|os-net-tools|RFE
+194: |178|122|[[6498683&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6498683]]|Clean out the weeds in ipsec_rl_strlog() and callers|3-Accepted|Steven Detar |5-Very Low|solaris|network|ipsec|Defect
+195: |179|123|[[6395260&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6395260]]|svc:/application/print/server:default/:properties/lpsched has wrong type|3-Accepted|Joe G |Peter Sear |4-Low|solaris|print|cmds|Defect
+196: |180|124|[[6215064&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6215064]]|svc-syseventd collects pids for no reason|3-Accepted|Sridhar Yedunuthula |5-Very Low|solaris|kernel|sysevent|Defect
+197: |181|125|[[6208836&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6208836]]|XXX above scf_handle_get_local_scope macro should go|3-Accepted|William Wahl |Truong Q Nguyen |4-Low|solaris|utility|smf|Defect
+198: |182|126|[[5085849&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=5085849]]|libsysevent aids and abets flawed consumers|3-Accepted|Sridhar Yedunuthula |4-Low|solaris|kernel|sysevent|Defect
+199: |183|127|[[6734639&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6734639]]|usr/src/lib/README.Makefiles: a sentence needs a completing.|3-Accepted|William Franklin |5-Very Low|solaris|consolidation|os-net-misc|Defect
+200: |184|128|[[6618043&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6618043]]|ufsdump and ufsrestore not lint clean|3-Accepted|Lisa Chatham |3-Medium|solaris|sysadmin|dump_restore|Defect
+201: |185|129|[[6654082&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6654082]]|::findleaks can't find leaked list pools|3-Accepted|William Wahl |4-Low|solaris|library|libuutil|Defect
+202: |186|130|[[6275859&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6275859]]|KSSL should use hardware aceleration of message digests when available|3-Accepted|Steven Detar |Bhargava Yenduri |3-Medium|solaris|kernel_ssl|api|RFE
+203: |187|131|[[6435328&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6435328]]|ufsvfs-&gt;vfs_dqrwlock is not handled via rw_init()/rw_destroy()|3-Accepted|Lisa Chatham |Viswanathan Kannappan |5-Very Low|solaris|kernel|ufs|Defect
+204: |188|132|[[5009996&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=5009996]]|poolstat shouldn't issue &lt;&gt;|3-Accepted|Sridhar Yedunuthula |4-Low|solaris|utility|pools|Defect
+205: |189|133|[[4989195&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4989195]]|::formats should have a by-size view|3-Accepted|Michael Pogue |5-Very Low|solaris|utility|mdb|Defect
+206: |190|134|[[6828718&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6828718]]|tninfo uses obsolete label translation interfaces|3-Accepted|Craig Payne |3-Medium|solaris|utility|sec_labeling|Defect
+207: |191|135|[[6828671&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6828671]]|libtsnet uses obsolete label translation interfaces|3-Accepted|Craig Payne |3-Medium|solaris|library|libtsnet|Defect
+208: |192|136|[[6828667&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6828667]]|tar uses obsolete label translation interfaces|3-Accepted|Craig Payne |3-Medium|solaris|utility|sec_labeling|Defect
+209: |193|137|[[6828663&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6828663]]|snoop uses obsolete label translation interfaces|3-Accepted|Craig Payne |3-Medium|solaris|utility|sec_labeling|Defect
+210: |194|138|[[4354606&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4354606]]|investigate whether we need to increase file descriptors for RPC in rgmd|3-Accepted|Nancy Chow |4-Low|suncluster|suncluster|rgm|Defect
+211: |195|139|[[6205202&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6205202]]|run_unode_fi -i  when specified, should use the file for all test entries.|3-Accepted|Burt Clouse |4-Low|suncluster|suncluster|unode|Defect
+212: |196|140|[[4927624&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4927624]]|remove #ifdef BUG_4763564 from the fix for bug 4763564|3-Accepted|Nancy Chow |Nicholas Solter |5-Very Low|suncluster|suncluster|crnp|Defect
+213: |197|141|[[4767987&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4767987]]|rpc.pmfd should return EPERM instead of EACCES|3-Accepted|Nancy Chow |5-Very Low|suncluster|suncluster|pmf|Defect
+214: |198|142|[[4767379&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4767379]]|rpc.pmfd suspend/resume need some cleaning and additional comments|3-Accepted|Nancy Chow |5-Very Low|suncluster|suncluster|pmf|Defect
+215: |199|143|[[4767331&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4767331]]|rpc.pmfd should check for valid pid|3-Accepted|Nancy Chow |5-Very Low|suncluster|suncluster|pmf|Defect
+216: |200|144|[[4767292&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4767292]]|rpc.pmfd has potential buffer overflow problems|3-Accepted|Nancy Chow |5-Very Low|suncluster|suncluster|pmf|Defect
+217: |201|145|[[4337997&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4337997]]|fault monitor does not remove file in /tmp upon exit|3-Accepted|Nancy Chow |5-Very Low|suncluster|suncluster|dssdk|Defect
+218: |202|146|[[6608193&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6608193]]|smf manifest should not depend on network/physical|3-Accepted|Burt Clouse |Detlef Ulherr |2-High|suncluster|suncluster|ha-sps|Defect
+219: |203|147|[[6608188&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6608188]]|smf manifest should not depend on network/physical|3-Accepted|Burt Clouse |Detlef Ulherr |2-High|suncluster|suncluster|ha-tomcat|Defect
+220: |204|148|[[6451148&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6451148]]|Install -T failure message needs update|3-Accepted|Robert Porras |4-Low|solaris|consolidation|os-net-tools|Defect
+221: |205|149|[[6365006&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6365006]]|Install -R should save the -o flag|3-Accepted|Robert Porras |5-Very Low|solaris|consolidation|os-net-tools|Defect
+222: |206|150|[[6366102&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6366102]]|cryptoadm provider= could do with some wild carding|3-Accepted|Steven Detar |3-Medium|solaris|solaris-crypto|cryptoadm|RFE
+223: |207|151|[[6300052&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6300052]]|PCFS, HSFS, fdformat duplicates endian conversion macros|3-Accepted|Lisa Chatham |4-Low|solaris|kernel|fs|Defect
+224: |
+225: |208|1|[[6398399&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6398399]]|Sort needs human readable order|4-Defer|Joe G |4-Low|solaris|utility|sort|RFE
+226: |209|2|[[6410961&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6410961]]|C_GenerateRandom fails when metaslot disabled on UltraSPARC T1|4-Defer|Steven Detar |4-Low|solaris|solaris-crypto|pkcs11_kernel|RFE
+227: |210|3|[[5085829&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=5085829]]|sulogin has bad interaction with bash; $TERM left set to 'dumb'|4-Defer|Joe G |4-Low|solaris|utility|security|Defect
+228: |211|4|[[6290457&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6290457]]|*syslogd* syslogd should detect loghost loop.|4-Defer|Joe G |4-Low|solaris|utility|logger|Defect
+229: |212|5|[[6625882&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6625882]]|out of memory messages need some bending in pam_framework|4-Defer|Craig Payne |4-Low|solaris|pam|framework|Defect
+230: |213|6|[[6656619&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6656619]]|path problem in clonebylabel demo script|4-Defer|Craig Payne |4-Low|solaris|utility|sec_labeling|Defect
+231: |214|7|[[6377136&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6377136]]|mdb needs a c2audit module|4-Defer|Anup Sekhar |5-Very Low|solaris|audit|kernel|RFE
+232: |215|8|[[6223306&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6223306]]|use of &quot;dsstat&quot; should be replaced with &quot;kstat -m sndr&quot;|4-Defer|Burt Clouse |Elaine Ding |2-High|suncluster-geo|suncluster-geo|data-replication-avs|RFE
+233: |216|9|[[6457020&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6457020]]|find should have user friendly error message for each option|4-Defer|Joe G |4-Low|solaris|utility|file|RFE
+234: |217|10|[[4813751&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4813751]]|*ed* wq should write and quit|4-Defer|Joe G |5-Very Low|solaris|utility|editor|RFE
+235: |218|11|[[4795906&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4795906]]|build tree should be separable|4-Defer|William Franklin |5-Very Low|solaris|consolidation|os-net-misc|RFE
+236: |219|12|[[4785282&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4785282]]|pkgmk(1) manpage breaks options|4-Defer|Joe G |4-Low|solaris|utility|formatter|Defect
+237: |220|13|[[4843344&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4843344]]|*grep* should have -q, -e, -f, -x, -E, and -F options|4-Defer|Joe G |4-Low|solaris|utility|file|Defect
+238: |221|14|[[4823933&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4823933]]|auditd has code to generate file tokens for different ISAs|4-Defer|Anup Sekhar |5-Very Low|solaris|audit|utility|Defect
+239: |222|15|[[4459451&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4459451]]|praudit treats the token id as a signed char but MAXTOKEN is 0xFF|4-Defer|Anup Sekhar |5-Very Low|solaris|audit|utility|Defect
+240: |223|16|[[6279389&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6279389]]|vfs_nolog_si not getting set in remount,logging path|4-Defer|Lisa Chatham |3-Medium|solaris|kernel|ufs|Defect
+241: |224|17|[[4865900&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4865900]]|*touch* does not behave as man page says. (a range of timestamp)|4-Defer|Joe G |Ankur Shah |5-Very Low|solaris|utility|other|Defect
+242: |225|18|[[4759474&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4759474]]|/var/adm/lastlogin should be created mode 644, not mode 444.|4-Defer|Joe G |4-Low|solaris|utility|security|Defect
+243: |226|19|[[1254702&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=1254702]]|*cron* doesn't eat \ when escaping % sign|4-Defer|Joe G |4-Low|solaris|utility|scheduling|Defect
+244: |227|20|[[6287718&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6287718]]|lm_get_vnode() in NLM/NLM4 should use vnode accessor func for v_filocks|4-Defer|Gerald Thornbrugh |4-Low|solaris|network|locking|Defect
+245: |228|21|[[6518692&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6518692]]|consider utftpd over in.tftpd|4-Defer|Peter Harvey |3-Medium|solaris|network|internet-utility|RFE
+246: |229|22|[[6183632&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6183632]]|*file* file(1)'s fortran detection is a bit overeager|4-Defer|Joe G |5-Very Low|solaris|utility|file|Defect
+247: |230|23|[[6303936&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6303936]]|RPCBPROC_GETADDR call does not return the same type of address that was used to initiate the call|4-Defer|Gerald Thornbrugh |3-Medium|solaris|network|rpc|Defect
+248: |231|24|[[6264667&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6264667]]|lockd/statd lock recovery algorithm does not scale well|4-Defer|Gerald Thornbrugh |3-Medium|solaris|network|locking|Defect
+249: |232|25|[[6200324&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6200324]]|svcs report nfs server online when nfsd is not available|4-Defer|Gerald Thornbrugh |4-Low|solaris|kernel|nfs|Defect
+250: |233|26|[[6503301&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6503301]]|cryptoadm silently ignores misspelling|4-Defer|Steven Detar |4-Low|solaris|solaris-crypto|cryptoadm|Defect
+251: |234|27|[[6249684&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6249684]]|xpg4 awk allocates a string buffer of the wrong size|4-Defer|Joe G |4-Low|solaris|utility|text|Defect
+252: |235|28|[[6249645&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6249645]]|spec2trace passes Meta_info structure by value|4-Defer|Joe G |4-Low|solaris|library|spec2trace|Defect
+253: |236|29|[[6836373&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6836373]]|boundary violations in xscreensaver hacks|4-Defer|Fred Thornborrow |5-Very Low|jds|gnome|screensaver|Defect
+254: |237|30|[[6780746&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6780746]]|allow setting random password for a user|4-Defer|Joe G |5-Very Low|solaris|utility|security|RFE
+255: |238|31|[[6664618&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6664618]]|Add &quot;amenable&quot; to /usr/dict/words|4-Defer|Joe G |5-Very Low|solaris|utility|text|RFE
+256: |239|32|[[6664121&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6664121]]|Add &quot;portable&quot; to /usr/dict/words|4-Defer|Joe G |4-Low|solaris|utility|text|RFE
+257: |240|33|[[4794078&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4794078]]|incorrect usage of i_blocks in ufs_log_amt()|4-Defer|Lisa Chatham |4-Low|solaris|kernel|ufs|Defect
+258: |241|34|[[4681096&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4681096]]|quotacheck shouldn't require &quot;-p&quot; option to avoid the check for UFS logging|4-Defer|David Brittle |4-Low|solaris|utility|filesystem|Defect
+259: |242|35|[[4714229&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4714229]]|umount -f may display misleading error message if file system returns EBUSY|4-Defer|David Brittle |3-Medium|solaris|utility|filesystem|Defect
+260: |243|36|[[4999292&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4999292]]|rotational delay calculation in newfs needs to be updated|4-Defer|Lisa Chatham |4-Low|solaris|utility|filesystem|Defect
+261: |244|37|[[4706178&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4706178]]|umount assumes basename argv[0] less than 12 chars|4-Defer|David Brittle |3-Medium|solaris|utility|filesystem|Defect
+262: |245|38|[[4834371&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4834371]]|vfs_bcount unused everywhere|4-Defer|David Brittle |5-Very Low|solaris|kernel|fs|Defect
+263: |246|39|[[5031560&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=5031560]]|ctime description comment wrong in vnode.h|4-Defer|David Brittle |5-Very Low|solaris|kernel|fs|Defect
+264: |247|40|[[6246741&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6246741]]|snmpdx annoying error message to the syslog/console at start|4-Defer|Joe G |4-Low|smart_agent|smart_agent|main_agent_relay|Defect
+265: |248|41|[[5054106&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=5054106]]|opendir_statat should be static, not use openat|4-Defer|Joe G |5-Very Low|solaris|library|libc|Defect
+266: |249|42|[[4506328&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4506328]]|initscr reinstalls signal handlers without regard for original delivery flags|4-Defer|Joe G |4-Low|solaris|library|libcurses|Defect
+267: |250|43|[[6550675&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6550675]]|*find* find should support maxdepth|4-Defer|Joe G |4-Low|solaris|utility|file|RFE
+268: |251|44|[[4765915&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4765915]]|fsdb_ufs logging support is complete rubbish|4-Defer|Lisa Chatham |4-Low|solaris|utility|filesystem|Defect
+269: |252|45|[[6291460&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6291460]]|too much pseudo-spelling in solaris (oss-bite-size)|4-Defer|William Franklin |5-Very Low|solaris|consolidation|os-net-misc|Defect
+270: |253|46|[[4754400&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4754400]]|exrecover SEGV's when faced with more than 50 preserved files|4-Defer|Joe G |4-Low|solaris|utility|editor|Defect
+271: |254|47|[[4237464&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4237464]]|metaparam should offer read policy on other sub mirrors as well as 'first'|4-Defer|John Harres |4-Low|solaris|utility|cmd-svm|RFE
+272: |255|48|[[4409576&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4409576]]|metattach command give a more descriptive error message|4-Defer|John Harres |4-Low|solaris|utility|cmd-svm|RFE
+273: |256|49|[[4735671&gt;&gt;http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=4735671]]|RFE: SVM should give warning if disk id can not be set|4-Defer|John Harres |4-Low|solaris|kernel|svm|RFE
+</textarea>
+</div>
+
+    <div class="clearfloats"></div>
+  </div>    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Main Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Main/AllDocs">Documents on this Wiki</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/Dashboard">Dashboard</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Main/Activity">Activity Stream</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/Spaces">Spaces</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Main/RssFeeds">RSS Feeds</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/Search">Search</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Main/DatabaseSearch">Database Search</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Main/Tags">Tags</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/about">About</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Main/contact">Contacts</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/faq">FAQs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/help">Help</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/no_source">Source Not Released</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/oracle_contributor_agreement">Oracle Contributor Agreement</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/roadmap">Roadmap 2011</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/values">Values</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Main/bug_reports">Sponsor Pgm Bug Activity</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Main/oss_bite_size">OSS Bite Size Bugs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/request_sponsor">Request&#45;Sponsor Table</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Main/collectives">OpenSolaris Collectives</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Main/copyrights">Copyright Policy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/discussions">Discussions</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Main/chat">IRC Chat</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Main/documentation">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/downloads">Downloads</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Main/arduino">Arduino</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Main/get">Get the Source</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/licensing">Licensing</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Main/opensolaris_binary_license">OpenSolaris Binary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/opensolaris_license">OpenSolaris License</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/pdl">Public Doc License</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Main/participate">How to Participate</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/site%2Dinfrastructure%2Dlifecycles">Site Infrastructure</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/site%2Dlocalization">Site Localization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/site%2Dmap">Site Map</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/site%2Droles%2Dcollectives">Site Roles & Collectives</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/site%2Duser%2Dguide">Site User Guide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/site_guidelines">Site Guidelines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/tou">Site Terms of Use</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Main/trademark">OpenSolaris Trademark</a></span></li>
+</ul>
+                    </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2012, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

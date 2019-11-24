@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Kernel Inititalization (Project ppc-dev.kern_init) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+ppc%2Ddev/kern_init" />
+                    <link rel="canonical" href="/bin/view/Project+ppc%2Ddev/kern_init" />
+                            <meta name="document" content="Project ppc-dev.kern_init"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Project ppc-dev"/>
+    <meta name="page" content="kern_init"/>
+    <meta name="version" content="1.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Project+ppc-dev/pages/kern_init"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Kernel Inititalization" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project ppc-dev";
+XWiki.currentPage = "kern_init";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Project+ppc%2Ddev/kern_init";
+window.docediturl = "/bin/edit/Project+ppc%2Ddev/kern_init";
+window.docsaveurl = "/bin/save/Project+ppc%2Ddev/kern_init";
+window.docgeturl = "/bin/get/Project+ppc%2Ddev/kern_init";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Project_ppc-dev viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bppc%252Ddev%2Fkern_init"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+ppc%2Ddev/"><strong>Project ppc-dev</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Project+ppc%2Ddev" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>
+            </td>
+            <td style="width: 99%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                              <a href='/bin/view/Project+ppc%2Ddev/task_map'>Project Task Map</a> <span class='separator'>&#187;</span> <span class='current'>Kernel Inititalization</span>
+                </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+ppc%2Ddev/kern_init?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+ppc%2Ddev/kern_init?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+ppc%2Ddev/kern_init?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+ppc%2Ddev/kern_init?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+ppc%2Ddev/kern_init?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+ppc%2Ddev/kern_init?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+ppc%2Ddev/kern_init?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+ppc%2Ddev/kern_init?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+ppc%2Ddev/kern_init?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+ppc%2Ddev/kern_init?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+ppc%2Ddev/kern_init?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          <span class="submenuitem "><a href="/bin/view/Project+ppc%2Ddev/kern_init?xpage=copy" id="tmActionCopy" class="tmActionCopy">Copy</a></span>
+      </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>Kernel Inititalization</h1></div>
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h2 id="HKernelInitialization"><span>Kernel Initialization</span></h2><h3 id="HStatus-102F132F07"><span>Status - 10/13/07</span></h3><p>We are executing userland code now. Still a ways to go to get a functional libc and rtld but it is close at hand. libc builds but there is a bug in the ld with relocations that prevent a successful link but it's being looked at now. The same status applies to rtld. The only supported platform at the moment is the ODW workstation.&nbsp;</p><h3 id="HStatus-062F152F07"><span>Status - 06/15/07</span></h3><p>More detailed content will be posted after the source release. We are well past &nbsp;startup() and into main. Currently we are at the point of vfs_mountroot(). We have the 2 drivers we need for the ODW platform, the Rhine driver and the console driver. The other targets will quickly run into a problem with a lack of appropriate drivers. In vfs_mountroot() until trying to send/receive the first ethernet packets through the vfe (Via Fast Ethernet) driver.&nbsp;</p><h3 id="HStatus-102F022F06"><span>Status - 10/02/06</span></h3><p>Much progress has been made towards a functional KRTLD but as of the code drop static linking is still the only option for unix/genunix on the ODW target. We have run into limitations on OF. The 1:1 VM mapping has been modified to now allow a kernel location @ 0xE000.0000 but exceptions result when we go into the 1st OF call from the kernel. We are working with the Genesi folks on this. The kernel initialization flow through the file structure remains the same.&nbsp;</p><h3 id="HResearchNotesfrom72F172F06"><span>Research Notes from 7/17/06</span></h3><p>We have 3 ways of booting the kernel, with OF directly, inetboot or with the Metrowerks tool. Either way you have to at least pass the CIF pointer correctly to have a chance to get past the 1st few instructions. KRTLD is not operational so we have been statically linking the kernel as a post-step to the make process and dealing with it that way. Look at your uts/chrp/conf/Mapfile to see where you are locating it (ie: 0x800000 was what I see it today but it will change). The code here builds but true functionality and actual debugging for much of this is pending. It is characterized at generally 3 levels - functional, coded but not tested, old code that just builds and is here mostly as a placeholder or reference awaiting the real development to start. The approach has been to engage code in the specific functions when we need to. The kernel init, exception table install and general level 0 exception handlers, and some timer calls have been directly worked on, other areas like interrupts, sys calls, level 1, 2 handlers still have the old 2.6 framework and need attention going forward. References to TRAPTRACE have been removed. KADB has been replaced by KMDB so much of the boot related KADB code has been removed, however some related items may be laying around. <br/> <br/>-<del>-</del></p><p>Kernel Initialization</p><p>We begin here leveraging the PPC/2.6 release work as templates to start with the boot of the kernel. Much of the architecture specific code appears to be useful to look at, the platform specific code is less so. We have transitioned to the GNU assembler and revised the assembly source syntax accordingly. One of the main issues appears to be the fact that the PPC port was little endian. The main portion of the code that puts the PPC into little endian mode (it defaults on power up to big endian mode) was implemented in VOF (Virtual Open Firmware). The kernel inits with this assumption.</p><p>usr/src/uts/prep/ml/locore.s<br/>&nbsp;&nbsp;&nbsp;_start()</p><ul><li>register loads for THREAD_REG, bopp, cif_handler</li><li>init thread 0 stack&nbsp;</li><li>clear bss (temporary for standalone since KRTLD really should do this but we don't have it yet)</li><li>check for CPU type</li><li>save PVR reg</li><li>now to mlsetup &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>&nbsp;lots of cpu/thread/proc/boot flags</em></li></ul><p>usr/src/uts/prep/os/mlsetup.c<br/>&nbsp;&nbsp;mlsetup()</p><ul><li>init thread 0</li><li>cpu_list_init() <em>inits CPU lists for the 1st CPU see --&gt;&gt; usr/src/uts/common/os/cpu.c</em></li><li>prom_init() <em>&nbsp;setup CIF see --&gt;&gt; usr/src/psm/promif/ieee1275/prep/prom_init.c</em></li><li>setcputype() &nbsp;<em>void function on PPC this is done in locore.s &nbsp;--&gt;&gt; function is in /usr/src/uts/prep/io/autoconf.c</em></li><li>fiximp_obp() <em>&nbsp;set the magic constants of the implementation ie: get dcache, icache, cache attributes, clock &amp; timebase freq, (embedded obp calls)</em></li><li>init_cpu_info() <em>&nbsp;not implemented - mostly for MP, uni sets clock freq value&nbsp;</em></li><li>map_wellknown_devices() <em>&nbsp;not implemented</em></li><li>copy_handlers() <em>&nbsp;set up exception table; calls back to locore for this<br/>now back to locore...</em></li></ul><ul><li>check_OF_revision <em>&nbsp;bypassed for now - checks the correct VOF version... but there is no VOF</em></li><li>ppcmmu_param_init() <em>&nbsp;inits kernel variables --&gt; /usr/src/uts/ppc/vm/mach_ppcmmu.c&nbsp;&nbsp;&nbsp;&nbsp;</em></li><li>va_to_pa() <em>&nbsp;simple --&gt; /usr/src/uts/ppc/vm/mach_ppcmmu.c</em></li><li>main() <em>&nbsp;we're here --&gt; /usr/src/uts/common/os/main.c<br/>leave locore not to return</em></li></ul><p>&nbsp;/usr/src/uts/common/os/main.c</p><p>main() (kernel's main) <em>/ Borrowed from Shudongs x86 list, still need to sync to PPC 2.6&nbsp;</em>/</p><ul><li>&nbsp;* startup() <em>&nbsp;See Guy's startup.c review below</em></li><li>&nbsp;* segkmem_gc()</li><li>&nbsp;* callb_init()</li><li>&nbsp;* callout_init()</li><li>&nbsp;* cbe_init()</li><li>&nbsp;* clock_init()</li><li>&nbsp;* call all init_tbl[]</li><li>&nbsp;* vm_init()</li><li>&nbsp;* physio_bufs_init()</li><li>&nbsp;* spl0() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>&nbsp;allow interrupts</em></li><li>&nbsp;* vfs_mountroot() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>&nbsp;can happen earlier?</em></li><li>&nbsp;* errorq_init()</li><li>&nbsp;* cpu_kstat_init()</li><li>&nbsp;* post_startup()</li><li>&nbsp;* strplumb()</li><li>&nbsp;* init_mstate()</li><li>&nbsp;* consconfig() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>&nbsp;XXX move to earlier...</em></li><li>&nbsp;* forceattach_drivers() &nbsp;&nbsp;<em>&nbsp;XXX still needed?</em></li><li>&nbsp;* process init</li><li>&nbsp;* exacct_init</li><li>&nbsp;* sysevent_evc_thrinit</li><li>&nbsp;* start_other_cpus() &nbsp;&nbsp;<em>&nbsp;do it earlier?</em></li><li>&nbsp;* lgrp_root_init()</li><li>&nbsp;* kmem_mp_init()</li><li>&nbsp;* vmem_update()</li><li>&nbsp;* run everything in mp_init_tbl[]</li><li>&nbsp;* create init process</li><li>&nbsp;* create pageout</li><li>&nbsp;* create fsflush</li><li>&nbsp;* cluster hooks</li><li>&nbsp;* ...</li><li>&nbsp;* sched()<br/> &nbsp;&nbsp;<em>&nbsp;switch root in init?</em></li></ul><p>STARTUP.C NOTES - Guy Shaw</p><div class="wikimodel-emptyline"></div><p>Solaris/PPC 2.5.1 usr/src/uts/prep/os/startup.c was derived from usr/src/uts/i86pc/os/startup.c. &nbsp;Although there are many lines of differences, the basic structure is the same, and there are no big surprises. &nbsp;For example, things having to do with 4MByte large pages and with MTTRs just do not apply to PowerPC, and things having to do with serial number and some firmware builtin language support and PROM CRCs were added to prep/os/startup.c, all of which is pretty obvious and has no<br/>counterpart in i86pc.</p><p>Where things really get interesting is when we look at the difference between 2.5.1 and 2.11. &nbsp;startup.c has been reorganized, radically.</p><p>For starters, 2.5.1 startup() was a sequence of straightline code, going on for page after page. &nbsp;I have attached a summary of the sequence with my own step numbers, which I use to track the new location of the same functionality in the 2.11 startup() scheme. &nbsp;2.11 has a top down structure; it is broken down into<br/>a few component functions. &nbsp;The body of the startup() function itself is so short and simple that it can be included here, in its entirety, without cluttering up this message with unwanted detail. &nbsp;Here it is:</p><pre>
+    {{{
+    void
+    startup(void)
+    {
+    extern void startup_bios_disk();
+   /// Make sure that nobody tries to use sekpm until we have initialized it  properly. ///
+    #if defined(__amd64)
+    kpm_desired = kpm_enable;
+    #endif
+         kpm_enable = 0;
+}}}
+
+{{{
+    progressbar_init();
+    startup_init();
+    startup_memlist();
+    startup_modules();
+    startup_bios_disk();
+    startup_bop_gone();
+    startup_vm();
+    startup_end();
+    progressbar_start();
+    }
+}}}
+
+{{{
+    }}}
+ 
+Now, all we have to do is descend down the 9 component functions.
+There must be at least vaguely corresponding functionality, but
+presented in a different order in the source code and possibly
+some things being executed in a different order.  But this
+reorganization is a welcome change, even if it does mean a bit more
+work to find the right places to put PowerPC startup code
+where it belongs in the new order.
+</pre><p>Each of the 9 startup() functions is, in turn, decomposed<br/>into functions that do a logical chunk of work. &nbsp;Each<br/>is instrumented with tracing at the function boundaries.<br/>I am sure this helps to know where you are when bringing up<br/>a new system and things die a horrible death.</p><p>The progress bar is new. &nbsp;I think we can skip it, at least at first.<br/>The whole file i86pc/os/graphics.c is new. &nbsp;Boot didn't used to do<br/>anything in graphics mode, if I recall correctly.</p><p>Here is a sort of top-level parts explosion of the remaining 7<br/>Solaris 2.11 startup() support functions, along with a list of</p><p>step numbers from the list of 2.5.1.steps.</p><p>startup_init<br/>-<del>-</del></p><pre>
+    startup_init()
+    cpuid_pass2()  [[ new, 02 ]]
+    check_boot_version(BOP_GETVERSION()) [[ 01 ]]
+    Set prom_debug  [[ new ]]
+    get_system_configuration() [[ new ]]
+</pre><p>Note: In 2.11, all code related to identifying CPU type, etc<br/>is kept together in i86pc/os/cpuid.c. &nbsp;Something similar can<br/>be done for PPC.</p><p>Note: In 2.11, per cpu information is kept in a table of<br/>cpuid_info structures. &nbsp;This is cleaner. &nbsp;It is worth while<br/>to take a look at the big commont at the top of cpuid.c.<br/>I would expect the situation for PowerPC to be much much MUCH<br/>simpler, because OpenFirmware would provide this kind of<br/>information in a standard way, instead of the 25 year<br/>history of ad hoc tests needed for x86. &nbsp;Still, keeping<br/>it separate is a good idea.</p><p>get_system_configuration() looks up all sorts of properties<br/>such as "nodes" and "cpus_pernode". &nbsp;On x86 boxes, these<br/>must come from the simulated PROM, which is just a file<br/>with these settings. &nbsp;I'm sure it is better on PowerPC,<br/>because it has real Open Frimware with real PROM, right?</p><div class="wikimodel-emptyline"></div><p>startup_memlist<br/>-<del>-<br/>startup_memlist() <span class="wikicreatelink"><a href="/bin/create/+03..07%2C+09./17+?parent=Project+ppc%2Ddev.kern_init"><span class="wikigeneratedlinkcontent">17 </span></a></span></del></p><p>Note: vmems have superceded all sorts of ad hoc resource<br/>allocators. &nbsp;It is cleaner. &nbsp;We want to adapt to the modern<br/>Solaris way.</p><p>Note: page coloring is new. &nbsp;I don't know if we have any reason<br/>to do page coloring on PPC.</p><p>Note: no kstat_init() in 2.11. &nbsp;Not needed?</p><p>startup_modules<br/>-<del>-<br/>startup_modules() <span class="wikicreatelink"><a href="/bin/create/+24%2C+25%2C+27%2C+28%2C+30%2C+32./37%2C+42+?parent=Project+ppc%2Ddev.kern_init"><span class="wikigeneratedlinkcontent">37, 42 </span></a></span></del></p><p>Note: modload of sysinit is new.</p><div class="wikimodel-emptyline"></div><p>startup_bios_disk<br/>-<del>-<br/>startup_bios_disk() is in separate file, i86pc/os/biosdisk.c &nbsp;<span class="wikicreatelink"><a href="/bin/create/Project+ppc%2Ddev/+new+?parent=Project+ppc%2Ddev.kern_init"><span class="wikigeneratedlinkcontent"> new </span></a></span></del></p><div class="wikimodel-emptyline"></div><p>startup_bop_gone<br/>-<del>-<br/>startup_bop_gone() <span class="wikicreatelink"><a href="/bin/create/Project+ppc%2Ddev/+29+?parent=Project+ppc%2Ddev.kern_init"><span class="wikigeneratedlinkcontent"> 29 </span></a></span></del></p><p>Note: call to hat_kern_alloc() is new.</p><div class="wikimodel-emptyline"></div><p>startup_vm<br/>-<del>-<br/>startup_vm() <span class="wikicreatelink"><a href="/bin/create/Project+ppc%2Ddev/+45%2C+46%2C+49%2C+50%2C+51+?parent=Project+ppc%2Ddev.kern_init"><span class="wikigeneratedlinkcontent"> 45, 46, 49, 50, 51 </span></a></span></del></p><div class="wikimodel-emptyline"></div><p>startup_end<br/>-<del>-<br/>startup_end() <span class="wikicreatelink"><a href="/bin/create/Project+ppc%2Ddev/+52%2C+54%2C+55+?parent=Project+ppc%2Ddev.kern_init"><span class="wikigeneratedlinkcontent"> 52, 54, 55 </span></a></span></del></p><p>Note: no reference to kmem_gc().</p><p>Note: kcpc_hw_init() is new.</p><pre>
+Solaris 2.5.1  i86pc/os/startup.c
+
+01 tstile_init()
+02 setcputype()
+03 Set valloc_base
+04 Set pmeminstall
+05 Get the list of physically available memory
+06 Set total_memory
+07 Set pagehash_sz
+08 mt_lock_init()
+09 Set memspace_sz
+10 Set npages
+11 Set pp_sz
+12 Allocate memspace
+13 Set page_hash
+14 Set kernelmap
+15 mapinit()
+16 kphysm_init()
+17 kmem_init()
+18 kstat_init()
+19 Display SunOS Release banner
+20 Display Copyright
+21 ? Display DEBUG enabled
+22 ? Display TRACE enabled
+23 ? Display GPROF enabled
+24 microfind()
+25 Read /etc/system
+26 Read /etc/rtc_config
+27 param_calc()
+28 mod_setup()
+29 setup_mttr()
+30 param_init()
+31 Allocate space for pagetables
+32 hat_init()
+33 seg_init()
+34 modload specfs
+35 modload swapgeneric
+36 dispinit()
+37 setup_ddi()
+38 get_font_ptrs()
+39 establish_console()
+40 ddi_load_driver("kd")
+41 loadrootmodules()
+42 psm_modload()
+43 BOP_QUIESCE_IO()
+44 copy_memlist()
+45 hat_kern_setup()
+46 kvm_init()
+47 lomem_init()
+48 setup_kvpm()
+49 Possibly shrink availrmem
+50 Set segkp
+51 Set segkmap
+52 kern_setup1()
+53 kmem_gc()
+54 configure()
+55 init_intr_threads(CPU)
+56 Free low pages
+
+locore.s is the one we have started to massage. The Metaware assembler has different assembly syntax then GCC. We are viewing code examples from DINK32, a debugger written to support the PowerPC arch from Freescale/Motorola to outline the mnemonic differences.
+
+The original [[2.6 memory map&gt;&gt;http://www.blastwave.org/dclarke/opensolaris/power_pc_memory_map.html]]</pre>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:17<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by admin on 2009/10/26 12:17
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Project ppc-dev Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/GetStarted">Getting Started</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/faq">FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/kickstart">Kickstarting OpenSolaris on PowerPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/status">Status</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/task_map">Project Task Map</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/atomic">Low Level Atomic Operations</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/bld_env">GNU Toolchain and Host Environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/boot_ldr">Bootloader &#45; Net/Disc</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/cache_behav">Cache Behavior</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/cbe">Cyclic Backend &#45; Timers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/chk_res">Checkpoint and Restore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/console">Console Items</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/ctf">CTF &#45; Compressed Text Format</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/ddi">DDI &#45; Device Driver Interface</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/dtrace">DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/hw_tools">Hardware Tools for the Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/inst">Installer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/ism">ISM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/kern_init">Kernel Inititalization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/kmdb_mdb">KMDB / MDB / PMDB</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/krn_swtch">Kernel  Context Switching</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/krtld">Kernel Runtime Loader</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/modstubs">Module Stubs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/mp">MP Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/openfirm">Openfirmware &#45; VOF</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/panic">Panic Handling</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/psm">Platform Specific Modules</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/root_nex">Root Nexus</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/rtld_ld">RTLD and ld</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/sys_calls">System Calls</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/traps">Exceptions, Traps and Interrupts</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/usr_libs">User Libraries</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/usr_swtch">User Context Switching</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/vm">Virtual Memory &#45; HAT</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/tools">Project Tools</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/proj_xtra">Project Extras</a></span></li>
+</ul></li>
+</ul>
+                    </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2011, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

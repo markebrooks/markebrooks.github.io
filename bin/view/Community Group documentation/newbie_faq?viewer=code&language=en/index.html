@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <title>
+                  New-to-Solaris FAQ (Community Group documentation.newbie_faq) - XWiki
+              </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="imagetoolbar" content="no"/>
+                <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Community+Group+documentation/newbie_faq" />
+                        <meta name="document" content="Community Group documentation.newbie_faq"/>
+    <meta name="space" content="Community Group documentation"/>
+    <meta name="page" content="newbie_faq"/>
+        <meta name="revisit-after" content="7 days" />
+<meta name="description" content="New-to-Solaris FAQ" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="alanm" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+
+        <!-- com.xpn.xwiki.plugin.skinx.LinkExtensionPlugin -->
+    <link href="/bin/skin/skins/oso/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/oso/os_base1.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/oso/print.css" rel="stylesheet" type="text/css" media="print" />
+        
+
+
+    
+
+    <link href="/resources/js/xwiki/fullscreenedit/fullscreenEdit.css" rel="stylesheet" type="text/css" />
+<link href="/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript">
+var script1 = document.createElement('script')
+script1.src = "/resources/js/prototype/prototype.js"
+var script2 = document.createElement('script')
+script2.src = "/bin/skin/resources/js/xwiki/xwiki.js"
+var script3 = document.createElement('script')
+script3.src = "/resources/js/xwiki/suggest/ajaxSuggest.js"
+document.getElementsByTagName('head')[0].appendChild(script1);
+document.getElementsByTagName('head')[0].appendChild(script2);
+document.getElementsByTagName('head')[0].appendChild(script3);
+</script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.editor = "";
+XWiki.viewer = "";
+// ]]>
+</script>
+
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js'></script><script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js'></script>
+
+  </head>
+    	<body id="body" class="xwiki viewbody hideright">
+  <!-- These elements will be closed in the footer vm file -->
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+
+  <br/>
+  <br/>
+  <div id="Masthead">
+    <h1><a href="/bin/view/Main/">OpenSolaris</a></h1>
+    <a href="/bin/view/Main/" id="MastheadLogo"></a>
+    <a href="/bin/view/Main/" title="Home" rel="home"></a>
+    <div id="Iconbar">
+	<a id="CollectivesIcon" href="/bin/view/Main/collectives">Collectives</a>
+	<a id="DiscussionsIcon" href="/bin/view/Main/discussions">Discussions</a>
+	<a id="DocumentationIcon" href="/bin/view/Main/documentation">Documentation</a>
+	<a id="DownloadIcon" href="/bin/view/Main/downloads">Download</a>
+	<a id="SourceBrowserIcon" href="http://src.opensolaris.org">Source Browser</a>
+	<a id="FreeCD" href="http://www.opensolaris.org/os/TryOpenSolaris/">Free CD</a>
+    </div>
+  </div>
+
+
+ <div class="layoutsection">
+<div class="minwidthb"></div>
+
+    <div style="text-align:right;">
+      <a class="glink" href="http://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FCommunity%2BGroup%2Bdocumentation%2Fnewbie_faq%3Fviewer%3Dcode%26%2338%3Blanguage%3Den" id="headerlogin">Log-in</a><span class="separator"> | </span>
+  <span class="glink" id="headerlanguages">
+  <a href="/bin/view/Community+Group+documentation/newbie_faq?language=en">en</a>
+    </span>
+    </div> 
+</div>
+
+ <div id="headerspace" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+  <div id="breadcrumbs">
+    <span class="breadcrumbspace"><a href="/bin/view/Community+Group+documentation/">Community Group documentation</a>: </span>
+<a href='/bin/view/Community+Group+documentation/newbie_faq'>New-to-Solaris FAQ</a>
+  </div>
+<hr/>
+</div>
+
+
+<div id="menuview"> 
+  <div id="actionmenu" class="layoutsubsection">
+<h3 id="xwikimenutitle" class="hidden">Top Menu</h3>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+<div class="topmenuentry" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmShow">
+<a class="tme"  href="/bin/view/Community+Group+documentation/newbie_faq?viewer=code&amp;language=en" ><strong>Show</strong></a><span class="hidden menucolon">: </span><span class="submenu hidden">
+<span class="submenuitem"><a href="/bin/view/Community+Group+documentation/newbie_faq?viewer=comments&amp;language=en" id="tmShowComments">Comments</a></span>
+<span class="submenuitem"><a href="/bin/view/Community+Group+documentation/newbie_faq?viewer=attachments&amp;language=en" id="tmShowAttachments">Attachments</a></span>
+<span class="submenuitem"><a href="/bin/view/Community+Group+documentation/newbie_faq?viewer=history&amp;language=en" id="tmShowHistory">History</a></span>
+<span class="submenuitem"><a href="/bin/view/Community+Group+documentation/newbie_faq?viewer=information&amp;language=en" id="tmShowInformation">Information</a></span>
+</span></div>
+ <div class="topmenuentry" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmPrint">
+<a class="tme"  href="javascript:window.print()" ><strong>Print</strong></a><span class="hidden menucolon">: </span><span class="submenu hidden">
+<span class="submenuitem"><a href="javascript:window.print()" id="tmPrintAction">Print</a></span>
+<span class="submenuitem"><a href="/bin/view/Community+Group+documentation/newbie_faq?xpage=print&amp;language=en" id="tmPrintPreview">Print preview</a></span>
+<span class="submenuseparator">&nbsp;</span>
+<span class="submenuitem"><a href="/bin/export/Community+Group+documentation/newbie_faq?format=pdf&amp;language=en" id="tmExportPdf">Export as PDF</a></span>
+<span class="submenuitem"><a href="/bin/export/Community+Group+documentation/newbie_faq?format=rtf&amp;language=en" id="tmExportRtf">Export as RTF</a></span>
+<span class="submenuitem"><a href="/bin/export/Community+Group+documentation/newbie_faq?format=html&amp;language=en" id="tmExportHtml">Export as HTML</a></span>
+<span class="submenuitem"><a href="/bin/export/Community+Group+documentation/newbie_faq?format=xar&amp;name=Community+Group+documentation.newbie_faq&amp;pages=Community+Group+documentation.newbie_faq&amp;language=en" id="tmExportXar">Export as XAR</a></span>
+</span></div>
+</div>
+</div>
+
+</div>
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+<div class="main layoutsubsection">
+<h1><span>Wiki code for <em>New-to-Solaris FAQ</em></span></h1>
+<a href="/bin/view/Community+Group+documentation/newbie_faq?viewer=code&showlinenumbers=0&language=en">Hide Line numbers</a>
+<br />
+<br />
+<textarea readonly="readonly" style="width: 100%; height: 300px;">
+1: == Newbie FAQ ==
+2: 
+3: This FAQ was originally authored and kindly contributed by Ben Rockwood, to read  more of his writing, visit &#60;http://cuddletech.com&#62;. 
+4: 
+5: Here are some questions and answers to frequent questions from folks coming from Linux or who haven&#8217;t played with Solaris in a long time:
+6: 
+7: == How do I find stuff?
+8:  
+9: When I think of the way SystemV should look, Solaris just seems to be the model. Some basic overview of filesystem layout: ==
+10: 
+11: * 
+12: ** /etc, /proc, /devices, /dev: Samo samo, you know what these are
+13: ** /export: More common on Solaris than Linux, typically this is where &#34;everything else&#34; goes. Some people even put local (non-automounted) home directories here.
+14: ** /opt: Applications, just like Linux this is where you&#8217;d typically find 3rd Party installed applications
+15: ** /usr/bin, /usr/sbin: Samo samo, user and admin apps
+16: ** /usr/sfw: You wanna look here! This is where the Sun FreeWare applications (GCC, GNU Tar, etc) tools are, including libs, headers, etc.
+17: ** /usr/ucb: UCB standing for University of California Berkeley, these are the BSD version of tools, mostly for compatablity. If you prefer the BSD version of ps (ie: ps aux) you can find it here.
+18: ** /kernel: This is where the modules and their associated configuration files are.
+19: ** /platform: This is where platform specific code is held, namely your kernel (the kernel is named &#34;unix&#34;, similar to the Linux &#34;vmunix&#34;)
+20: ** /cdrom: Automount point used by the volume management daemon (vold)
+21: ** /home: By default /home is an automount point! If you want to use it locally first comment out /home in /etc/auto_master and then restart the automounter (&#34;svcadm restart autofs&#34;) 
+22: 
+23: == How do I find out what I&#8217;ve got? ==
+24: 
+25: You can determine info about your system using &#34;prtconf&#34; (outputs the device tree, driver attachment information, etc) and &#34;prtdiag&#34; (found in /usr/platform/(platform)/sbin). Wanna check how much memory you have, or CPU, use these.
+26: 
+27: == How do I find out System Statistics? ==
+28: 
+29: Most Solaris sysadmins are content with vmstat and iostat for information, we then extend that with truss, lockstat, etc. In Solaris10 we can now go further with DTrace! (Previous to DTrace a lot of us used the SE Toolkit) You might be wondering where &#34;top&#34; is though, the Linux favorite... we don&#8217;t have it! Instead, Solaris has it&#8217;s own version: &#34;prstat&#34;. We have lots of other ptools that can give us information based on the /proc filesystem (you&#8217;ll notice that /proc on Solaris doesn&#8217;t have all the general data provided by Solaris, we get it in diffrent places like &#34;prtconf&#34;). We&#8217;ve got pgrep, pmap, pkill, pargs, and more. For info on the ptools check the &#34;proc&#34; man page.
+30: 
+31: == What about RC Init? ==
+32: 
+33: SMF: Ding dong the witch is dead!! The Service Management Facility is the first real replacement of the aging RC Init system used by everyone else. No more doppy scripts! SMF allows services to have dependancies to other service, so for instance if you stop your ethernet device it can also stop all the networking services dependant on it too, and stuff like that. &#34;svcs&#34; can report Service Status, &#34;svcadm&#34; can control services like enable (think start), disable (think stop), restart, put in maintance, etc, &#34;svcprop&#34; can manage service properties, and &#34;svccfg&#34; can configure services. Start out by just running &#34;svcs&#34; and looking at the list. Then try using &#34;svcadm&#34; to restart a couple things or enable and disable services.
+34: 
+35: == What about Apache? ==
+36: 
+37: Apache2: Solaris ships with a lot of goodies, including Apache2! Just edit the configuration (rename from sample) in /etc/apache2/, use svcadm to enable the service, and then drop your pages in the /var/apache2/htdocs directory! Apache2 provides a great test for Zones.
+38: 
+39: == What about Dev tools? ==
+40: 
+41: Dev Goodies: You can find the bulk of the standard dev tools (as, ld, ld, lex, make, etc) in /usr/ccs/bin. You can interface with the runtime linker by using the &#34;crle&#34; command (Configure Runtime Linking Environment), rather than edit a file like on Linux.
+42: 
+43: == How is the documentation? ==
+44: 
+45: This is just the beginning! You can find a ton of information in the docs found at docs.sun.com. Find information about Kernel Tunables, Security Services (IPfiler and IPsec goodies inside!), Solaris&#8217;s included Volume Manger, Zones and Resource Management, a complete set of development docs, and of course the DTrace guide. Solaris is chop full of goodies, you just need to know how to use them. 
+46: 
+47: == What about x86 Hardware support? ==
+48: 
+49: Just a little pointer for people coming across to Solaris from other platforms. If you are using it on an X86 platform when you find that you have unsupported hardware (you will) don’t just b*tch &#38; moan. Go to the manufacturers website find an email address and express to them how disappointed you are that they do not support Solaris. 
+50: 
+51: == What about /home? ==
+52: 
+53: home: By default /home is an automount point! If you want to use it locally first comment out /home in /etc/auto_master and then restart the automounter (“svcadm restart autofs”)
+54: 
+55: == What do you mean by if I want to use it locally? ==
+56: 
+57: For example, I plan on using my Solaris box for nothing but personal things, so I’m the only user.
+58: 
+59: I don’t quite yet understand what the difference between /export/home and /home is and why if it’s automount makes a difference.
+60: 
+61: Also, something that was rather jarring to me coming from FreeBSD / Linux systems is that root usually has it’s own home directory ”/root” on the filesystem.
+62: 
+63: Why does the root user not have it’s own home directory? I really don’t like the idea of programs that I run as root, that like to store things in ”.whatever” directories littering themselves all over ”/”.
+64: 
+65: It’s really lame to have used Linux or FreeBSD for years and years only to feel like an idiot when you try a new platform. It’s not your fault, it’s just diffrent, so no worries! :)
+66: 
+67: The automounter (autofs) on Solaris is configured by default to manage 2 directories: /home and /net. In a “proper” Solaris enviroment this works out well because NIS will tell the automounter were to find the home directories (NFS mount) and you can connect to network shares via more NIS supplied automount maps. However, if you&#8217;re just a normal schmoo at home (ie: us) without all these network resources set up this automounter crap just gets in the way. When the automounter is controlling a mount point you can not use it, and you’ll get odd errors that don’t make sense at first, just like if you entered a directory and then NFS mounted to that directory, you’d get a “Mount point Busy” or “Permission Denied” or something. Thus, if you use “useradd” to create an account by default it will try to point to /export/home/(user). Again, in a “proper” network your shared network home directory would be on an NFS server and automounted to /home, and any local (non-NFS mounted) home directories would go into /export. This also explains why when you partition a disk by default the installer wants to put 4G in / (root) and the rest of the disk in /export. You can do one of the following to use /home like you expect to:
+68: 
+69: 1) Simply stop the automounter! You can tell SMF to disable the automounter completely using “svcadm disable autofs”. And, thankfully, unlike the old ”/etc/init.d/autofs stop”, when a service is disabled with SMF it will NOT restart when rebooted! Nice indeed.
+70: 
+71: 2) The proper way is to edit the master automounter map file (/etc/auto_master) and comment out the entry for /home. Once that line is commented out (using a #) you can just restart the automounter (svcadm restart autofs) and you&#8217;re good to go. Test it by touching a file in /home.
+72: 
+73: Almost every new Solaris user has been bitten by this one, and it&#8217;s really confusing if your not familiar with the automounter itself. While almost everyone has heard of automounters, its more and more rare to see them actually used.
+74: 
+75: As for the root user home directory, ya, it’s kinda lame, but the root user shouldn’t be running things that plop hidden directories into their home directories. Some admins even object to /.profile for the root user. You naturally could create /home/root or even /root yourself and then update the /etc/passwd entry, but I’ve never seen someone do it. On most non-open source UNIX’ it’s uncommon to create a home directory for root.
+76: 
+77: == Where do I get pre-built and easily installable opensource packages? ==
+78: 
+79: Go and check out [[http://www.blastwave.org]] for most of the opensource packages prebuilt and easily installable via “pkg-add -i packagename”. Over the Internet. Still blows my mind after a year of using it. Blastwave guys are AMAZING!!!! [1000 Software Packages on Wed Mar 30 09:12 EST 2005 !!!]
+80: 
+81: == How do I observe a program from start to finish? ==
+82: 
+83: DTrace Tip: -c option
+84: 
+85: To observe a program from start to finish, use “-c cmd”.
+86: 
+87: ● $target is set to target process ID
+88: 
+89: ● dtrace exits when command exits
+90: 
+91: dtrace -q -c date
+92: -n &#8217;pid$target::malloc:entry{@ = sum(arg0)}&#8217;
+93: -n &#8217;END{printa(“allocated %@d bytes\n”, @)}&#8217;
+94: Fri Feb 11 09:09:30 PST 2007
+95: allocated 10700 bytes
+96: 
+97: == How do I get KDE installed? ==
+98: 
+99: For those who prefer KDE you can run it easily on Solaris x86. Just install KDE from the Software Companion:
+100: 
+101: http://www.sun.com/software/solaris/freeware/index.html
+102: 
+103: Then, as root, go to /opt/sfw/kde/dtlogin and run install-dtlogin. Next time you try to login you&#8217;ll find that KDE is one of the session types you can choose.
+104: 
+105: == How do I print in Solaris x86? ==
+106: 
+107: For those who are wondering how to print in Solaris x86, I find the easiest is to simply use cups. Cups can be found on the Solaris software companion (see above link). Then simply copy the startup scripts into the correct directory, as root:
+108: 
+109: (cd /opt//sfw/cups/etc;tar cvf - .)|(cd /etc;tar xvf -)//
+110: 
+111: Then just run the startup script to start the daemon (to save a reboot):
+112: 
+113: /etc/init.d/cups start
+114: 
+115: Then go to your browser and go to http://localhost:631 and your at the admin page for cups. You add a printer there and from then on use the lpr/lp/lpstat commands in /opt/sfw/bin instead of the normal Solaris commands and printing will work as expected. Cups drivers for various printers can be normally found, just search via google.
+116: 
+117: Of course I use Cups simply because I&#8217;m used to it. The other way to print is simply go to the Launch bar in JDS, then Preferences -&#62; Printer Preferences and you have a simple GUI to add a printer (far easier then in previous versions of Solaris.)  
+118: 
+119: == What is an smf(5) milestone? ==
+120: 
+121: An smf(5) milestone is really nothing more than a service which aggregates a bunch of service dependencies. Usually, a milestone does nothing useful itself, but declares a specific state of system-readiness which other services can depend upon. One example is the name-services milestone. It simply depends upon the possible name services you might be running:
+122: 
+123:    $ svcs -d name-services
+124:    STATE          STIME    FMRI
+125:    disabled       Jan_04   svc:/network/rpc/nisplus:default
+126:    disabled       Jan_04   svc:/network/dns/client:default
+127:    disabled       Jan_04   svc:/network/ldap/client:default
+128:    online         Jan_04   svc:/network/nis/client:default
+129: 
+130: and has no useful actions to perform during the start or stop method:
+131: 
+132:    $ svcprop -p start name-services
+133:    start/exec astring :true
+134:    start/timeout_seconds count 3
+135:    start/type astring method
+136: 
+137:    $ svcprop -p stop name-services 
+138:    stop/exec astring :true
+139:    stop/timeout_seconds count 3
+140:    stop/type astring method
+141: 
+142: The name-services milestone is considered online as long as any name services which are enabled are running. There&#8217;s also nothing different about these milestones to smf(5), it just sees them as yet-another-service.
+143: 
+144: We&#8217;ve implemented standard Unix system run-levels in smf(5) using milestones. The single-user, multi-user, and multi-user-server milestones correspond to run-levels S, 2, and 3, respectively. In addition to the runlevel milestones, there are the all and none keywords. These aren&#8217;t actual services, but shorthand for either the graph with no services, or the graph with all services. This set of five special milestones can either be booted directly to (boot -m milestone=) or reached by running svcadm milestone. The way we reach a limited milestone (any special milestone but all) is to temporarily disable all services which aren&#8217;t part of the milestone&#8217;s subgraph.
+145: 
+146: == Why is the console-login service disabled if you boot to a milestone that isn&#8217;t all? ==
+147: 
+148: This can easily be determined by looking at console-login&#8217;s dependents.
+149: 
+150:    $ svcs -D console-login
+151:    STATE          STIME    FMRI
+152: 
+153: As there are no milestones which have console-login as one of their dependencies, it won&#8217;t be started as part of any milestone but all. Fortunately, we&#8217;ll always start an sulogin(1M) prompt if a login service can&#8217;t be reached.
+154: 
+155: == So, why are milestones useful then? ==
+156: 
+157: The most useful milestone is none, for the recovery/exploration scenario I described here. The other use is when doing service development. You can use svcadm milestone to transition to limited milestones then back up without rebooting the system.
+158: 
+159: There&#8217;s a large omission in my description of milestone use above. I don&#8217;t mention system maintenance or patching anywhere. 
+160: 
+161: == Should I stop using init s, boot -s, and my other standard procedures to change runlevels and perform standard system maintenance? ==
+162: 
+163: Emphatically, no! Your old favorite commands continue to work as they always have. There&#8217;s no need to change procedures. There&#8217;s no reason to retrain your fingers with a much longer-to-type command when init s works just fine. The init invocations will work just like they always have, where svcadm milestone won&#8217;t. For example, running svcadm milestone svc:/milestone/single-user:default won&#8217;t change the run-level of the system (as described by who -r). Running init s will.
+164: 
+165: This is kool, more more more tips guys! Lots of new folks, lets help them all out with all the tips we can cough up.
+166: 
+167: == What about a new window manager? ==
+168: 
+169: For starters, if you&#8217;d like to try out a real new window manager, check out my Enlightenment DR16.7.1 packages! There are 4 of them, download each, install, update the runtime linker paths via crle, then reset dtlogin (the login screen, &#34;/etc/init.d/dtlogin reset&#34;), and off you go. Enlightenment isn&#8217;t for everyone, but if your a hardcore ol&#8217; school geek at heart who doesn&#8217;t like crap all over your desktop but you also want a huge feature set with pretty graphics and lots of eyecandy, then E is for you! Find screenshots of E in action on the Enlightenment website.
+170: 
+171: == Speaking of packages... how do you install them? ==
+172: 
+173: Easy, you use the &#34;pkgadd&#34; command. Say you download a package from SunFreeware.com or my Enlightenment packages, you&#8217;ll generally download a compressed package. //.gz is GNU Zip (use &#34;gunzip&#34;), //.bz2 is BZip2 (use &#34;bunzip2&#34;), and *.Z is Compress (use &#34;uncompress&#34;). Then use the &#34;pkgadd&#34; command, like this: pkgadd -d ./CUDLsomething.pkg. The -d points to the package, but watch out because you must prefix the pkg with a path, relative or absolute! If you say &#34;pkgadd -d CUDLsomething.pkg&#34; the command will fail saying that it wasn&#8217;t found, but &#34;pkgadd -d ./CUDLsomething.pkg&#34; will work fine. 
+174: 
+175: == Why? ==
+176: 
+177: The reasons for this are more than most people would care about. Please note however that you must add each package one by one!
+178: 
+179: == Why? ==
+180: 
+181: Again, the reasons for this are more than you probly want to hear, namely that there are 2 ways to create packages, one is as a directory structure where you can easily add multiple packages at a time or alternately as a single file which is more portable but not as easy to install.
+182: 
+183: == How do I manage or remove packages? ==
+184: 
+185: To manage or remove packages you can use &#34;pkginfo&#34;, which will, by default, list every package on the system. If you want to learn more about a package, such as SUNWogg-vorbis, you can get the long pkginfo output via &#34;pkginfo -l SUNWogg-vorbis&#34;. If you wanted to remove this package, you could use pkgrm, such as &#34;pkgrm SUNWogg-vorbis&#34;. With pkgrm you actually can remove multiple packages at one time, just list one after another. If your interested in learning more about Solaris Packaging take a look at the Application Packaging Developer&#8217;s Guide.
+186: 
+187: == But what about patches? ==
+188: 
+189: You can look at patches in several ways, but the most straight forward is to use the command &#34;showrev -p&#34;. The &#34;showrev&#34; command can show you all sorts of information but with the -p flag it outputs a list of all installed patches. You can download patches on Sun&#8217;s support site SunSolve. On SunSolve you can download patches individually, in a recommended patch cluster (download &#8217;em all and install with one command), sign up for the &#34;Patch Club&#34; or request notifications for critical or security patches, and you can also download (all for free) diffrent patching tools that can automate and simplify the proccess of checking your current patch set, download the new patches, and install them. 
+190: 
+191: == Why? ==
+192: 
+193: Using tools like &#34;Patch Manager&#34; can really simplify your life because some patches have various dependancies and restrictions which have to be figured out one by one normally, but are all handled seemlessly by Patch Manager. Even better than that, Patch Manager is included in Solariis10 out of the box (well, ISO for now)! 
+194: 
+195: == How do I check for any new patches that I need? ==
+196: 
+197: Just run &#34;smpatch analyze&#34; (smpatch is the Patch Manager binary) and it will check for patches and tell you what needs to be installed, then you can use smpatch again to download and install them. Easy as can be. Check out the smpatch(1m) man page for all the details on what Patch Manager can do for you. You can read more about patching in the Solaris10 Basic System Administration Guide.
+198: 
+199: == Why can&#8217;t I get DNS configured? I forgot to enable DNS during the installation and now that it&#8217;s running I&#8217;m screwed? ==
+200: 
+201: Don&#8217;t worry, you need to edit &#34;/etc/nsswitch.conf&#34;. There are two easy ways to do this: 1) edit /etc/nsswitch.conf and add &#34;dns&#34; to the &#34;hosts&#34; line, or 2) Even easier is to just use the template by copying &#34;/etc/nsswitch.dns&#34; to &#34;/etc/nsswitch.conf&#34;. Once you&#8217;ve got nsswitch.conf set properly just go ahead and edit /etc/resolv.conf like you would on any other system and DNS should work. The nsswitch.conf file on Solaris tells each name service where to look for information. By default all the name services look in &#34;files&#34; (the normal files in /etc), but you could also specify that Solaris should check nis, or nis+, or dns, or ldap in this file.
+202: 
+203: == How do I export NFS filesystems? ==
+204: 
+205: There isn&#8217;t an /etc/exports, so you might wonder just where the thing is... You want to edit /etc/dfs/dfstab. In the header of the file are instructions on how to get things working. To export filesystems we use the &#34;share&#34; command instead of &#34;exportfs&#34; in most cases although the &#34;exportfs&#34; command is avaible on Solaris just like your used to but all it really does is translate normal exportfs arguments into &#34;share&#34;/&#34;unshare&#34; arguments. If you couldn&#8217;t guess, &#34;share&#34; will share a filesystem via NFS, &#34;unshare&#34; unshares it.
+206: 
+207: More tips to come. Add your own tips for all our new friends. We all had questions once, lets save them the trouble!
+208: 
+209: By popular demand we&#8217;re going to take a whirl-wind tour of Solaris networking and configuration.
+210: 
+211: == Why is it that I&#8217;ve almost just reinstalled Solaris to get the network settings fixed?! ==
+212: 
+213: Ya, sometimes you can get a little confused and irritated. Whether it&#8217;s a new Linux distro, or diffrent UNIX OS, everyone puts their network configuration in diffrent places and learning each systems setup can be a pita. 
+214: 
+215: == What if I don&#8217;t even wanna bother learning all the network configuration stuff and what file does what? Can I just re-run the networking configuration and have it all sorted out? ==
+216: 
+217: You can! Solaris has a nifty command that can reset the base networking and configuration to a clean system: &#34;sys-unconfig&#34;. If you buy a pre-installed system from Sun or a VAR, what they will generally do is install Solaris, customize the install as need be and then run &#34;sys-unconfig&#34; before putting the system in the box and shipping it out. The command will scratch the networking configuration (most of it anyway), the root password, time zone, etc. Once sys-unconfig finished cleaning out the files it will immediately halt the system (shut it down). Next time you boot the system it will prompt you for all the networking information, time zone, locale and a new root password. This is the &#34;quick-no-hassle&#34; reconfiguration method. Generally we do not recommend this as ideal, but it will do the trick. If you plan on selling a pre-installed system or you are moving your system to a new network where all the info is changing, this is the command to use. Just use it carefully.
+218: 
+219: == I know root shouldn&#8217;t login remotely, but what if I really want to? ==
+220: 
+221: Logging into a system via telnet, ftp, or ssh is just bad... very bad. However, some times people think they need to do this or they simply don&#8217;t care about security. If you really wanna drop your pants like this, edit: /etc/default/login. In this file, you&#8217;ll see a line for CONSOLE. To allow root to log in via telnet or ftp just comment out this line and you&#8217;re done. To allow root login via SSH you need to edit a different file: /etc/ssh/sshd_config. Change the value of PermitRootLogin from &#34;no&#34; to &#34;yes&#34; and restart SSH via &#34;svcadm restart ssh&#34;. The SSH configuration file is just the same as Linux since Solaris uses OpenSSH. Please note, that allowing root to log in remotely is a massive security risk and needlessly stupid, don&#8217;t do this unless you absolutely must.
+222: 
+223: == How do I set and make the default gateway persistant across reboots? ==
+224: 
+225: The default gateway is easy to configure, just put the IP address of the default gateway in /etc/defaultrouter. If this file doesn&#8217;t exist just create it and add the IP. The IP address of the gateway should be the ONLY thing in this file, nothing else. Typically you should just use echo, like this: &#34;echo 10.0.0.255 &#62; /etc/defaultrouter&#34;. Once you&#8217;ve changed the file you can restart the physical network interfaces to make the changes effective without a reboot (&#34;svcadm restart physical&#34;).
+226: 
+227: == How do I set or change my IP address? ==
+228: 
+229: Setting and changing IP addresses on Solaris is a snap. Just add the IP and hostname that you wish to use to /etc/hosts. Then put the hostname (by itself) in the /etc/hostname.(interface) file. Then just restart the physical networking via SMF (&#34;svcadm restart phsyical&#34;) and your done! 
+230: 
+231: Example: &#34;echo &#8217;10.0.0.25 solarisrox&#8217; &#62;&#62; /etc/hosts; echo &#8217;solarisrox&#8217; &#62; /etc/hostname.hme0&#34; assuming that hme0 was the interface you wanted to use. 
+232: 
+233: == Will this change the hostname for the whole workstation? ==
+234: 
+235: Don&#8217;t worry about this changing the hostname for the whole workstation, the hostname for the system is kept in /etc/nodename. You can add the default gateway as we discussed just above. If you need to specify a non-standard subnet netmask you can add it to /etc/netmasks. You can have as many subnet masks in the /etc/netmasks file as you like, one per line, just follow the instructions at the top of the file.
+236: 
+237: == How do I configure DHCP? ==
+238: 
+239: DHCP is pretty easy to configure, just create 2 empty files: /etc/hostname.(interface) and /etc/dhcp.(interface). If you are using HME0 you could do this: &#34;echo &#34;&#34; &#62; /etc/hostname.hme0 &#62; /etc/dhcp.hme0&#34;. You might want to wipe out information that might conflict like the /etc/defaultrouter file if you created one. Once you&#8217;ve got these two empty files ready just restart the physical network to make the changes effective without a reboot (&#34;svcadm restart physical&#34;). If you want to customize the properties of the DHCP agent you can check out the &#34;System Administration Guide: IP Services&#34; manual. Remember that DHCP settings take a couple seconds to be retrieved from the server so if you reset the physical interfaces as mentioned above and you notice that nothing happened, just wait a couple seconds (30 secs is the default timeout).
+240: 
+241: == How do I figure out what the network interface is called? ==
+242: 
+243: Linux sort of makes network interface naming easy because typically interfaces are named &#34;eth0&#34;, &#34;eth1&#34;, so on and so forth. In Solaris, however, the name of the interface is decided by the interface driver. For instance, the onboard ethernet of a Sun Ultra workstation uses the HME (Happy Meal Ethernet, also more boringly called Hundred Meg Ethernet) driver and so the first instance is &#34;hme0&#34;. You can look at the device mappings to driver names using &#34;prtconf -D&#34;. In general, Solaris will find your network device and try to configure it so generally just checking &#34;ifconfig -a&#34; is enough to find it.
+244: 
+245: == Why isn&#8217;t my l337 workstation&#8217;s network device frickin&#8217; supported!?! ==
+246: 
+247: Sadly there are lots of networking devices that aren&#8217;t officially supported (right now anyway, OpenSolaris hopes to change this). Thankfully there are tons of really kool Solaris developers that have been creating open source drivers! Check out these free NIC drivers by Masayuki Murayama! Grok google for drivers, you just might find your l337 gear really does have drivers avalible, they just aren&#8217;t in Solaris right now.
+248: 
+249: There ya go.. some quick Solaris networking tips. As always, check out docs.sun.com&#8217;s Solaris10 manuals for help and details.
+250: 
+251: == Is there any reason why I shouldn’t change root’s default shell to bash from the default sh? ==
+252: 
+253: Regarding the root shell… well, there are differing schools of thought. In an ideal world it doesn’t matter what roots default shell is because any shell script should be written properly to not depend on the default shell. Furthermore, most modern shells (BASH and ZSH, both included by default in Solaris since Solaris9) can handle plain ol’ Borne just fine anyway, which is the default shell for root. So, if we’re talking about your workstation and your just tired of su’ing to root and then immediately starting bash, over and over and over, then sure, have at it. However, on most servers you shouldn’t change the default shell, if for no other reason than in any server enviroment you want to, ideally, change the system as little as possible.
+254: 
+255: == The dhcp default timeout is 30secs. Any hint where to change the timeout? ==
+256: 
+257: If you have a laptop/machine that you use dhcp on you can set the dhcp timeout with something similar to
+258: {{code width=&#34;90%&#34;}}echo &#34;wait 30&#34; &#62;&#62; /etc/dhcp.INTERFACE{{/code}}
+259: 
+260: i.e. on my laptop the interface is an iprb, and I&#8217;m impatient, so its
+261: 
+262: {{code width=&#34;90%&#34;}}echo &#34;wait 15&#34; &#62;&#62; /etc/dhcp.iprb0{{/code}}
+263: 
+264: It&#8217;s all documented in the ifconfig manpage.
+265:  
+266: 
+267: == MY REALTEK 8139 pci NOT IS RECOGNISED IN soL 10 . AND DRIVERS SAID . NOT COMPATIBLE VERSION . DAMN IT . ==
+268: 
+269: IT LOOKS LIKE YOUR CAPS LOCK KEY IS FUBAR AS WELL. DAMN THOSE SOLARIS 10 DRIVERS!
+</textarea>
+
+<div class="clearfloats">
+</div>
+</div>    </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded Search">
+<h5 class="xwikipaneltitle hidden" onclick="togglePanelVisibility(this.parentNode);">Search</h5>
+<div class="xwikipanelcontents">
+  <form action="/bin/view/Main/WebSearch">
+    <div id="globalsearch">
+      <input id="globalsearchinput" type="text" name="text" value="search..." size="15" onfocus="if (this.value == 'search...') value=''; this.select();" onblur="if (this.value == '') value='search...'; this.blur()"/>
+&nbsp;
+      <input class="button" value="Go" type="image" src="/skins/oso/go.png"/>
+    </div>
+  </form>
+</div>
+</div>
+                        <div class="panel expanded OSNav">
+<h5 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSNav','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSNav'); togglePanelVisibility(this.parentNode);">Collectives</h5>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavCommunity Group">
+            <div id="xwikinavCommunity GroupHeader" class="accordionTabTitleBar"><h6>Community Group</h6>
+            </div>
+            <div id="xwikinavCommunity GroupContent" class="accordionTabContentBox">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+edu/">Academic and Research</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+accessibility/">Accessibility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+advocacy/">Advocacy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+appliances/">Appliances</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+approachability/">Approachability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/">Architecture Process and Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+brandz/">BrandZ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+chinese_users/">Chinese Users</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/">Community Advisory Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+databases/">Databases</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+desktop/">Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/">Device Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+distribution/">Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+dtrace/">DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+emerging_platforms/">Emerging Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+fm/">Fault Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+games/">Games on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ha%2Dclusters/">HA Clusters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+hpcdev/">HPC Developer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+install/">Installation and Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+int_localization/">Internationalization and Localization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+laptop/">Laptop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ldoms/">Logical Domains</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+mdb/">Modular Debugger (MDB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/">Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+nfs/">NFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+observability/">Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ogb/">OpenSolaris Governing Board (OGB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+printing/">OpenSolaris Printing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/">OS/Net (ON)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/">Performance</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+pm/">Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+power_pc/">PowerPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/">Security</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+smf/">Service Management Facility (smf(5))</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sw%2Dporters/">Software Porters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+volume_manager/">Solaris Volume Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+storage/">Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sysadmin/">Systems Administration Community Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+testing/">Testing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/">Tools Home</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ufs/">Unix File Systems (UFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+web/">Website Community</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+x_win/">X Window System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+xen/">Xen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/">ZFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/">Zones</a></span></li>
+</ul>
+                                        </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavProject">
+            <div id="xwikinavProjectHeader" class="accordionTabTitleBar"><h6>Project</h6>
+            </div>
+            <div id="xwikinavProjectContent" class="accordionTabContentBox">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+adsl/">ADSL Modem Enhancement</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+arc%2Dprocess/">ARC Process Definition</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osarm/">ARM Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+adm/">Automatic Data Migration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bind/">BIND Update</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bluetooth/">Bluetooth Stack & Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dinitiator/">Brocade FC HBA &#45; Initiator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dtarget/">Brocade FC HBA &#45; Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brussels/">Brussels &#45; unified network link configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/">Caiman, Solaris Install Revisited</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+celeste/">Celeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cz/">Český portál</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/">Chime Visualization Tool for DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smbfs/">CIFS client for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cifs%2Dserver/">CIFS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+clearview/">Clearview: Network Interface Coherence</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dinformix/">Cluster Agent: Informix Dynamic Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dcontainer/">Cluster Agent: OpenSolaris Container</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dxvm/">Cluster Agent: OpenSolaris xVM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Debs/">Cluster Agent: Oracle E&#45;Business Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dpostgresql/">Cluster agent: PostgreSQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dsmb/">Cluster Agent: Samba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dtomcat/">Cluster Agent: Tomcat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cmt/">CMT</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+data%2Dflow/">Coarse Data Flow Parallelism</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+colorado/">Colorado: Open HA Cluster on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+commandassist/">Command Assistant</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cam/">Common Array Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+companion/">Companion &#45; /opt/sfw: Free and Open Source software</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/">COMSTAR: Common Multiprotocol SCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+content/">Content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+contest/">Contest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpufs/">CPU Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpg/">Credentials Process Groups</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crossbow/">Crossbow: Network Virtualization and Resource Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmsagenttoolkit/">Crypto KMS Agent Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/">Cryptographic Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dmm/">Data Migration Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+datatethers/">Data Tethers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+de/">Deutsches Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ddtool/">Device Detection Tool</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+driver%2Dutility/">Device Driver Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devicemgr/">Device Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devmapper/">Device Mapper</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dri/">Direct Rendering Infrastructure & 3D drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Ddoc/">DTrace Guide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/">Duckwater: Simplified name services management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+phpEasyTools/">Easy Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emancipation/">Emancipation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex/">Emulex Fibre Channel Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex-cna/">Emulex Advanced Ethernet Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+intel%2Dplatform/">Enable/Enhance Solaris support for Intel Platform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webcams/">Enhance the support of USB webcams</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Dprofiles/">Enhanced SMF Profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+amd/">Enhancements for AMD&#45;based Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+erlang%2Ddtrace/">Erlang DTrace Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ethbridge/">Ethernet bridge module for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+conary%2Deval/">Evaluate Conary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+events%2Dregistry/">Events Registry</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ext3/">Ext3 file system support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkgbase/">F/OSS Package Base</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+facilitation/">Facilitation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fcoe/">Fibre Channel over Ethernet</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fgap/">Fine Grained Access Policy (FGAP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fingerprint%2Dauthentication/">Fingerprint Authentication</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fmac/">Flexible Mandatory Access Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+forensics/">Forensic Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fox/">Fully Open X Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fuse/">Fuse on Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gcore/">gcore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+generic%2Dmca/">Generic Machine Check Architecture Improvements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+summerofcode/">Google SOC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Djboss/">HA&#45;JBoss</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dmysql/">HA&#45;MySQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livehadoop/">Hadoop Live CD</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hitachi/">Hitachi</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+honeycomb/">HoneyComb Fixed Content Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hpc%2Dstack/">HPC Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/">Image Packaging System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+perfmib/">Improved Performance MIB</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/">Indiana</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+awards/">Innovation Awards</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/">Input Method</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+intelgraphics/">Intel Graphics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ikev2/">Internet Key Exchange, version 2</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+irm/">Interrupt Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ip%2Drefactor/">IP Datapath Refactoring</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ipoib/">IP over Infiniband</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tref/">IPsec Tunnel Reform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iser/">iSCSI Extensions for Remote DMA (iSER)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isns/">iSNS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jeos/">JeOS &#45; Just enough Operating System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jkstat/">JKstat &#45; a java binding for libkstat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jfs/">Journaled File System (JFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kde/">K Desktop Environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kerberos/">Kerberos</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kernel%2Dsockets/">Kernel Sockets</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kssl/">Kernel SSL Enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmf/">Key Management Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ksh93%2Dintegration/">Korn Shell 93 integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+txipsec/">Labeled IPsec</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+latencytop/">LatencyTOP</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+l2filter/">Layer 2 Filtering</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ldoms%2Dmgr/">LDoms Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lending/">Lending</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+libmicro/">libMicro &#45; portable microbenchmarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lld/">Link Layer Discovery</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livemedia/">Live Media: Technologies for distributions running from CD and other media</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+localedata/">Locale Data</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+loficc/">lofi compression and cryptography support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lx64/">lx64 brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mms/">Media Management System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mega_sas/">Mega_sas</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mx/">Mexico</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+milax/">MilaX minimal Live Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mips/">MIPS Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mozilla%2Ddtrace/">Mozilla DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohac%2Davs/">MRSL.NONsharedDevice</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+glossary/">Multi&#45;lingual Glossary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mpxio/">Multi&#45;pathing software (MPxIO)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+large%2Dsector/">Multiple disk sector size support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+multiple%2Ddoi/">Multiple DOI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+muskoka/">Muskoka: An open repository for OpenSolaris technical content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+navigator/">Navigator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nemo/">Nemo: A Framework for High&#45;Performance Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/">Network Auto&#45;Magic</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ndmp/">Network Data Management Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+net%2Dmib/">Network MIBs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npp/">Network Performance Projects</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nws/">Network Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ntp/">Network Time Protocol (NTP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nv%2Dg11n/">Nevada Globalization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+4over6/">New Design of 4over6 Mechanism Based on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsrdma/">NFS RDMA transport update and performance analysis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dzones/">NFS Server in non&#45;Global Zones</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsv41/">NFS version 4.1 pNFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dnamespace/">NFSv4 namespace extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nightingale/">Nightingale: Port Songbird to OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npiv/">NPort ID Virtualization (NPIV)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+numa/">NUMA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osd/">Object Storage Device (OSD) support for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohacge%2Dsbp/">OHACGE Script Based Plug&#45;in</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+onnv/">ON/Nevada (ONNV) Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opendev/">Open Development Infrastructure</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dutilities/">Open HA Cluster Utilities</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opensound/">Open Sound System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/">OpenGrok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cim%2Dserver/">OpenPegasus CIM Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+openrti/">OpenRTI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+busybox/">OpenSolaris Busybox</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/">OpenSolaris Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+es/">OpenSolaris Hispano</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+audit/">OpenSolaris Security Audit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/">OpenSolaris support for the QEMU processor emulator: host and guest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pef/">PEF: Packet Event Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+performance%2Dwrappers/">Performance Wrappers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkgfactory/">Pkgfactory</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pl/">Polski Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fr/">Portail Francophone</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+br/">Portal Brasil</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+portals/">Portals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmui/">Power Management Usability Interfaces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+presto/">Presto: Automatic Printing Configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmpsm/">Printable Many Page Solaris Manuals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+promise%2Dstorage/">Promise SuperTrak RAID HBA Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qlogic-cna/">QLogic Converged Network Adapter GLDv3 NIC Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+quagga/">Quagga Routing Protocol Suite Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+raidcfg/">RAID Configuration Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rbridges/">RBridge (IETF TRILL) support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rof/">RDMA Offload Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+reno/">Reno: Login Process Enhancements for Interop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/">Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+s10brand/">s10brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+samqfs/">SAM/QFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+scm%2Dmigration/">SCM Migration Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+srp/">SCSI RDMA Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sdcard%2Ddrivers/">SDcard Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sensors/">Sensor Abstraction Layer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dsip/">Session Initiation Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sfwnv/">SFW</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+shell/">Shell: bourne shell, korn shell, C shell, etc.</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sierra/">Sierra: Intel WiFi Chipsets Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+simplepanels/">Simple Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sm%2Dhba/">SM&#45;HBA Based SAS HBA Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Ddoc/">SMF Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iscsitgt/">Solaris iSCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/">Solaris PowerPC Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sourcejuicer/">SourceJuicer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/">Sparks: name service switch/nscd enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+squashfs/">Squashfs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+star/">Star integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starfish/">Starfish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starterkit/">Starter Kit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+storagepm/">Storage Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sst/">Sun Security Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+avs/">Sun StorageTek Availability Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ofuv/">Support for OpenFabrics User Verbs / API on OpenSolaris OS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/">Support gcc4/GCCfss in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+suspend%2Dresume/">Suspend/Resume</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+svr4_packaging/">SVR4 Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+systemz/">Systemz</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tamarack/">Tamarack: Removable Media Enhancements in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tesla/">Tesla: OpenSolaris Enhanced Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+test%2Ddev/">Test Development</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/">Tickless Kernel Architecture</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tipc/">TIPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+branding/">Trademarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tnipdb/">Trusted networking interface policy database for Trusted Extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tpm/">Trusted Platform Module support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+usecase/">Use Case</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+valex/">Validated Execution Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vconsole/">Virtual Console</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vnm/">Virtual Network Machines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/">Visual Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+visualization%2Dhpc/">Visualization for HPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+volo/">Volo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vrrp/">VRRP: Virtual Router Redundancy Protocol Implementation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vscan/">VSCAN service</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/">Web Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+website/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+winchester/">Winchester: Schema mapping and ID mapping for AD Interoperability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wusb/">Wireless USB Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wwan/">Wireless Wide Area Network</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x%2Dcons/">X Consolidation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x86gentopo/">x86 Generic FMA Topology Enumerator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xen%2Dgate/">Xen Gate</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xfce/">Xfce: A lightweight desktop environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfsboot/">ZFS Boot and Install</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfs%2Dcrypto/">ZFS on disk encryption support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonemgr/">Zone Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonestat/">Zone Statistics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ru/">Русский портал</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ar/">البوابة العربية</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+in/">भारतीय पोर्टल</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cn/">中国门户</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/">日本ポータル</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kr/">한국 포탈</a></span></li>
+</ul>
+                                        </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavUser Group">
+            <div id="xwikinavUser GroupHeader" class="accordionTabTitleBar"><h6>User Group</h6>
+            </div>
+            <div id="xwikinavUser GroupContent" class="accordionTabContentBox">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/User+Group+adl%2Dauosug/">Adelaide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+aosug/">Argentina</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+azosug/">Arizona</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+atl%2Dosug/">Atlanta</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bwosug/">Baltimore&#45;Washington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bosug/">Bangalore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bkkosug/">Bangkok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bdosug/">Bangladesh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfosug/">Brasilia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bjosug/">Beijing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+blmosug/">Bélem</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+brosug/">Berlin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bvrm%2Dosug/">Bhimavaram</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+btn%2Dosug/">Bloomington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+os_user_groups_amb/">Campus Ambassadors</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+crosug/">Capital Region</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cfosug/">Cardiff</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ceosug/">Ceara</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cltosug/">Charlotte</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cdosug/">Chengdu</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chennai/">Chennai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chmxosug/">Chihuahua</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+closug/">Chile</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cle%2Dosug/">Cleveland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+colosug/">Colombia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cmh%2Dosug/">Columbus</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ctosug/">Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+knp%2Duek/">Cracow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+czosug/">Czech</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfw%2Dosug/">Dallas/Ft. Worth</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dosug/">Danish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+deosug/">Delaware</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+eduosug/">Edinburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+egosug/">Egypt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fiosug/">Finland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+flosug/">Florida</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+frosug/">Front Range</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fzosug/">FuZhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+glug/">Great Lakes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+grosug/">Greece</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hzosug/">Hangzhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hi%2Dosug/">Hawaii</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hfosug/">HeFei</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hugs/">Houston</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hkosug/">Hong Kong</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hosug/">Hyderabad</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+idosug/">Indonesia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ie%2Dosug/">Irish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+iosug/">Israel</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+itl%2Dosug/">Italian</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jnosug/">Jinan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jogja-osug/">Jogja</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kbosug/">Kabul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kc%2Dosug/">Kansas City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+lavosug/">Latvia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+losug/">London</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madosug/">Madurai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mansug/">Manchester</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mssosug/">Mato Grosso</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+msosug/">Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mgosug/">Minas Gerais</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mnosug/">Minnesota</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mtlosug/">Montreal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mosug/">Moscow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mmosug/">Mumbai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mucosug/">Munich</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+neaosug/">NEA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nlosug/">Netherlands</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ne%2Dosug/">New England</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nycosug/">New York City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nzosug/">New Zealand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nit%2Dhamirpur%2Dosug/">NIT Hamirpur</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+norosug/">Noroeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nerosug/">Nuremberg-Erlangen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+okcosug/">Oklahoma City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ososug/">Osnabrück</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+peosug/">Peru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+paosug/">Philadelphia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+piaski%2Dosug/">Piaski</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ptosug/">Pittsburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+poaosug/">Porto Alegre</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+psosug/">Puget Sound</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+posug/">Pune</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+qosug/">Queensland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+riosug/">Rio de Janeiro</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rtp%2Dosug/">Research Triangle Park</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ro%2Dosug/">Romania</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ruosug/">Russia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+alamo%2Dosug/">San Antonio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sdosug/">San Diego</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sfosug/">San Francisco</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sampaosug/">São Paulo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+scosug/">Scottish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rs%2Dosug/">Serbia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+shosug/">Shanghai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szosug/">Shenzhen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svosug/">Silicon Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sgosug/">Singapore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+skosug/">Slovak</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+saosug/">South African</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+soctosug/">Southern Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+stl%2Dosug/">St. Louis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svgosug/">Stavanger</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+swosug/">Sweden</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chosug/">Switzerland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sosug/">Sydney</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szc%2Dosug/">Szczecin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+twosug/">Taiwan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ostug/">Tecum</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tvosug/">Thames Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tsug/">Tokyo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+torosug/">Toronto</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+trosug/">Trondheim</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+toss/">Tulsa</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tosug/">Turkey</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ufaosug/">Ufa</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+uaosug/">Ukraine</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+unimelb%2Dosug/">University of Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+valeosug/">Vale do Paraíba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vanosug/">Vancouver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vosug/">Venezuela</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wosug/">Welsh &#45; Cymru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wiosug/">Wisconsin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+xaosug/">Xi'an</a></span></li>
+</ul>
+                                        </div>
+        </div>
+    </div>
+</div><p/><p/>
+<script type="text/javascript">
+var obj = {div:'xwikinav',no:-1,height:250};
+var acc = createAccordion(obj);
+</script>
+</div>
+</div>
+                        <div class="panel expanded Subsites">
+<h5 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.Subsites','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.Subsites'); togglePanelVisibility(this.parentNode);">Subsites</h5>
+<div class="xwikipanelcontents">
+<span class="wikiexternallink"><a href="http://cr.opensolaris.org">Code Reviews</a></span><br/>
+<span class="wikiexternallink"><a href="http://repo.opensolaris.org">Code Repositories</a></span><br/>
+<span class="wikiexternallink"><a href="http://pkg.opensolaris.org">Package Search</a></span><br/>
+<span class="wikiexternallink"><a href="http://bugs.opensolaris.org">Bugster</a></span><br/>
+<span class="wikiexternallink"><a href="http://defect.opensolaris.org">Bugzilla</a></span><br/>
+<span class="wikiexternallink"><a href="http://test.opensolaris.org">Test Machines</a></span><br/>
+<span class="wikiexternallink"><a href="http://planet.opensolaris.org">Planet</a></span><br/>
+<span class="wikiexternallink"><a href="http://mail.opensolaris.org">Mailing Lists</a></span><br/>
+<span class="wikiexternallink"><a href="http://poll.opensolaris.org">Elections & Polls</a></span><br/>
+<span class="wikiexternallink"><a href="http://arc.opensolaris.org">ARC Case Logs</a></span><br/>
+<span class="wikiexternallink"><a href="http://jucr.opensolaris.org">Source Juicer</a></span><br/>
+<span class="wikiexternallink"><a href="http://pkgfactory.opensolaris.org">Package Factory</a></span><br/>
+<span class="wikiexternallink"><a href="http://auth.opensolaris.org">User Authentication</a></span><br/>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h5 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSDocs','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSDocs'); togglePanelVisibility(this.parentNode);">Community Group documentation Pages</h5>
+<div class="xwikipanelcontents"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/dev">Developer Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/doc_collab">Contributor Resources</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/docs+wiki+collaboration+space">Docs Wiki</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/feature_docs">How To Participate</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/manpageguide">Man Page Guidelines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/persist_links">Persistent Links to Man Pages</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/style_guide">Documentation Style Resources for OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/tools">Documentation Tools</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/docprojects">OpenSolaris: Documentation Projects</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/opensolaris_guide">OpenSolaris Primer</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/examples">Examples</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/hw">Hardware Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/install">Build, Install, Patch, and Upgrade Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/newbie_faq">New&#45;to&#45;Solaris FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/reviews">Doc Reviews</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/Dual_Boot_Install_Doc_Plan">Doc Plan: Dual&#45;Boot OpenSolaris DP2 with a Second Operating System</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/sysadmin">System Administration Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/tmp">Doc Downloads</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/docs%2Dindex">Current Open Source Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/license">OpenSolaris Documentation License Information</a></span></li>
+</ul></li>
+</ul>
+                            </div>
+</div>
+                        
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+  <div id="xwikilicence">&copy; Sun Microsystems Inc. 2009</div>
+          <div id="xwikiplatformversion">XWiki Enterprise 1.8.2.19075 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div> 
+    <div><a href="/bin/view/Main/tou">Terms Of Use</a> |
+         <a href="http://www.sun.com/privacy/">Privacy</a> | 
+         <a href="/bin/view/Main/trademark">Trademarks</a> |
+         <a href="/bin/view/Main/copyrights">Copyright Policy</a> |
+         <a href="/bin/view/Main/site_guidelines">Site Guidelines</a> |
+         <a href="/bin/view/Main/site%2Dmap">Site map</a> |
+         <a href="/bin/view/Main/help">Help</a></div>
+    <div>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.</div>
+<hr/>
+</div>
+
+</div></div></body>
+</html>

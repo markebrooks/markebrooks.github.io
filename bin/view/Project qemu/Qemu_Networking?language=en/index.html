@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Understanding Networking in QEMU Guests (Project qemu.Qemu_Networking) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+qemu/Qemu_Networking" />
+                    <link rel="canonical" href="/bin/view/Project+qemu/Qemu_Networking" />
+                            <meta name="document" content="Project qemu.Qemu_Networking"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Project qemu"/>
+    <meta name="page" content="Qemu_Networking"/>
+    <meta name="version" content="1.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Project+qemu/pages/Qemu_Networking"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Understanding Networking in QEMU Guests" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project qemu";
+XWiki.currentPage = "Qemu_Networking";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Project+qemu/Qemu_Networking";
+window.docediturl = "/bin/edit/Project+qemu/Qemu_Networking";
+window.docsaveurl = "/bin/save/Project+qemu/Qemu_Networking";
+window.docgeturl = "/bin/get/Project+qemu/Qemu_Networking";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Project_qemu viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bqemu%2FQemu_Networking%3Flanguage%3Den"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+qemu/"><strong>Project qemu</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Project+qemu" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>
+            </td>
+            <td style="width: 99%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                  <span class='current'>Understanding Networking in QEMU Guests</span>
+          </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+qemu/Qemu_Networking?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+qemu/Qemu_Networking?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+qemu/Qemu_Networking?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+qemu/Qemu_Networking?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+qemu/Qemu_Networking?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+qemu/Qemu_Networking?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+qemu/Qemu_Networking?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+qemu/Qemu_Networking?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+qemu/Qemu_Networking?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+qemu/Qemu_Networking?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+qemu/Qemu_Networking?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          <span class="submenuitem "><a href="/bin/view/Project+qemu/Qemu_Networking?xpage=copy" id="tmActionCopy" class="tmActionCopy">Copy</a></span>
+      </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>Understanding Networking in QEMU Guests</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h1 id="HUnderstandingnetworkinginQEMUGuests"><span>Understanding networking in QEMU Guests</span></h1><h3 id="HTheQEMUVM27sbasicnetworkmodel-22Usernet22"><span>The QEMU VM's basic network model - "<strong>User net</strong>"</span></h3><p>&nbsp;The QEMU VM is capable of presenting different "emulated" network cards to a guest. Through the emulated NIC, the guest can communicate to the host and out to the local network, using the QEMU VM process as the firewall. Packets coming from the QEMU Guest will appear to come from the QEMU Host once they exit the Host. This is the feature of the old networking protocol called "slirp", which was designed when dialup meant you logged into a server and did things. Slirp allowed you to have "emulated" networking between your dialup client, and dialup host, allowing things like telnet, ftp, http concurrently.</p><p>&nbsp;When QEMU is started without defaults, it will present an NE2000 NIC to the guest. However, getting drivers for that card is harder, and the Realtek 8139 is a preferred NIC for most X86 emulated systems.</p><p>&nbsp;Besides the routing and firewall features of the QEMU VM process, it also can provide DHCP addressing, DNS and SAMBA services to the QEMU Guest. The basic setup of a QEMU Guest is to setup for DHCP client, and unless you change the defaults, <strong>your QEMU Guest's IP will always be 10.0.2.15.</strong> Because this address is never seen outside of the QEMU VM, there is no worry unless your QEMU Host's network is also in the 10.0.2.0 network, or if you're VLAN'ing QEMU Guests together. (However, that is an advance topic and will not be covered here)</p><p>&nbsp;From the QEMU Guest, you can typically test connectivity via telnet or ssh to either 10.0.2.2 (the QEMU VM's address for the Host), or the IP Address of the Host.</p><p><strong>Note: Ping from the QEMU Guest is unreliable. Do not use ping to test connectivity from a QEMU Guest when the network model is "User Net".</strong></p><pre>
+
+                       QEMU VLAN        QEMU Process Provides
+                                   +~----------------------------+
+         QEMU Guest    &lt;~-------&gt;   |  Firewall/DHCP/TFTP server |   &lt;~-----&gt; Internet
+         (10.0.2.15)       |       |          (10.0.2.2)        |
+                           |       |                            |
+                           ~----&gt;   |  DNS server (10.0.2.3)     |
+                           |       |                            |
+                           ~----&gt;   |  SMB server (10.0.2.4)     |
+                                   +~----------------------------+
+
+</pre><p>&nbsp;Standard TCP and UDP protocols automatically pass through the QEMU firewall, although some protocols (like FTP) may not work without a little help with the "-redir" parameter, because access back into the QEMU guest by default is blocked by the firewall.</p><p>&nbsp;When qemu is started like:</p><p>./qemu -k en-us -localtime -hda winxp.img</p><p>&nbsp;the implied parameters to this command line are "-net user -net nic"</p><h3 id="HDefiningtheinterfacethattheQEMUVMpresentstotheguest"><span>Defining the interface that the QEMU VM presents to the guest</span></h3><p>&nbsp;Often, it's easier to tell the QEMU VM to present a different NIC to the QEMU guest. In the case of installing Solaris into a QEMU guest, we would prefer to use an interface that Solaris recognizes (rtls) as opposed to having to load a special driver (Juergen Kiel's modified version of Masayuki Murayama's ne2000 ni driver). To define a different interface, use the following parameters: <strong>-net user -net nic,model=rtl8139</strong> like:</p><p><strong>./qemu -m 384 -k en-us -localtime -hda sol11.img -cdrom sol11.iso -boot d -net user -net nic,model=rtl8139</strong></p><p>which tells qemu to start a virtual machine with 384MB of memory, use a keymap of "en-us", a virtual hard disk called sol11.img (created by qemu-img), a CD/DVD image file with Solaris 11, to boot from the DVD, and to present a Realtek 8139 NIC to the QEMU guest (instead of an NE2000 which is the default)</p><h3 id="HAllowingaccessfromtheQEMUHosttotheQEMUGuest"><span>Allowing access from the QEMU Host to the QEMU Guest</span></h3><p>&nbsp;In the previous example, a QEMU virtual machine was started, to perform an Solaris 11 install from the DVD image, to the virtual hard disk. QEMU presents a Realtek 8139 to the Solaris install, and for the purpose of the example, will assume that the installer selected the Realtek 8139 (rtls) interface to be DHCP and the Solaris 11 install completed successfully.</p><p>As with any system, having more than one way to log into a system is probably a wise idea. I know that occassionally, QEMU locks up the graphics screen, and being able to login to it via SSH and shut it down is less harsh than just shutting down the QEMU VM (either via kill, or if you can quit the VM from the QEMU monitor). This example extends the previous example on how to use the <strong>"-redir"</strong> parameter to allow access from the Host (and outside the Host). In this example, the port <strong>5022</strong> will have a port listener by the QEMU VM, and forward packets to port <strong>22</strong> in the QEMU Guest.</p><p><strong>./qemu -m 384 -k en-us -localtime -hda sol11.img -net user -net nic,model=rtl8139 -redir tcp:5022::22</strong></p><p>Using this startup of QEMU, assuming a valid login in the virtual Solaris 11 session, the command:</p><p><strong>ssh ip.address.of.host -p 5022 -l mylogin</strong></p><p>should get you a login prompt into the QEMU Guest.</p><h1 id="HWarning"><span>Warning</span></h1><p>The files used in the next two sections are working proof of concepts that have been in use for several months, but no guarantee of security, or suitability is implied or stated. These scripts merely show off the capbilities of the TAP and BRIDGE features in QEMU and how users with Solaris Hosts can use them to improved network connectivity to the QEMU Guests they use. Please take some time and review the following modules before using them. 1) <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Project+qemu/downloads/solqemutap.tar">sol_qemu_tap.tar</a></span>, 2) <span class="wikicreatelink"><a href="/bin/create/Project+qemu/qemu%2Difup?parent=Project+qemu.Qemu_Networking">qemu-ifup</a></span>, 3) <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Project+qemu/downloads/dsl.sh">dsl.sh</a></span>, and 4) <span class="wikicreatelink"><a href="/bin/create/Project+qemu/qemu%2Dbridge?parent=Project+qemu.Qemu_Networking">qemu-bridge</a></span>.</p><p>Each of the shell script may require your customizations for your envrionment, such as private network addresses to use in /etc/qemu-ifup, which version of sudo you're using for qemu-bridge, and general customization in dsl.sh.</p><p>Make sure to do the following: <strong>chown root sol_qemu_tap; chmod 4755 sol_qemu_tap</strong></p><p>The "C" file qemu_sol_tap.c is probably in need of using <strong>RBAC</strong> privileges as opposed to <strong>setuid root</strong>, so complaints will be sent to /dev/null. Improvements to the code are happily accepted and attributed.</p><h6 id="H20072F062F05"><span>2007/06/05</span></h6><p>There are reports of consistent kernel panics using the tun/tap module on x86-64 hosts. Please take this into consideration when attempting to use the tun/tap and bridge modules on an x86-64 Solaris system. The updated version of the tap/bridge drivers does appear to have this problem</p><h3 id="HUnrestrictednetworkaccessbetweentheQEMUHostandQEMUGuest."><span>Unrestricted network access between the QEMU Host and QEMU Guest.</span></h3><p>Because the QEMU VM acts as a firewall between the network/QEMU Host and the QEMU Guest, it can be really tedious if you want to have less restricted network access from the QEMU Host to the QEMU guest without having to code up a bunch of <strong>-redir tcp:VMHOST_PORT::GUEST_PORT</strong> parameters when starting QEMU.</p><p>QEMU on Solaris can now use a TAP interface (it's a virtual interface that has network interface properties), which allows the QEMU Host unrestricted access to the QEMU Guest. The downside of this is that some "root'ish" access is required to create the TAP. Because QEMU is pretty powerful, the last thing you want to do is run QEMU as root, which necessitated the need for a setuid binary to create the TAP, drop the privileges back to the calling user and then pass the TAP file handle to QEMU via a wrapper script.</p><p>&nbsp;The <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Project+qemu/downloads/solqemutap.tar">&nbsp;source</a></span> for the TAP wrapper should be compiled and <strong>setuid root</strong>. The wrapper is a simple program which uses the setuid root permissions to create the TAP device, and initialize it using the <span class="wikicreatelink"><a href="/bin/create/Project+qemu/qemu%2Difup?parent=Project+qemu.Qemu_Networking">/etc/qemu-ifup</a></span> script. Once the TAP is created, permissions are dropped back to the calling user and the script that starts QEMU with user configuration (<span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Project+qemu/downloads/dsl.sh">dsl.sh</a></span> script in this example) is called with "-t (file descriptor of the TAP)".The shell script extracts the file descriptor and adds it to the network parameters when QEMU is started. This is an example of how sol_qemu_tap is used with the dsl.sh script to start <span class="wikiexternallink"><a href="http://www.damnsmalllinux.org">DamnSmallLinux</a></span>.</p><p>While this may be an OpenSolaris page, the fact is that DamnSmallLinux is only a 50MB ISO live CD with practically all the functionality needed to fully test QEMU. It has a X environment, sound, network, an ssh-server that can be enabled, and the very small footprint makes it a really useful and inexpensive test image.</p><p><strong>./sol_qemu_tap dsl.sh</strong></p><p>What happens behind the scenes is that sol_qemu_tap invokes root privileges, creates the TAP device, and calls /etc/qemu-ifup with the name of the TAP device, which sets the network properties of the TAP. When that is complete, sol_qemu_tap drops the permissions to the calling user and invokes the shell script passed in via the first parameter. An ifconfig of the tap device created shows:</p><pre>
+
+tap0: flags=1000851 mtu 1500 index 19
+        inet 192.168.1.250 ~--&gt; 192.168.1.10 netmask ffffff00
+
+</pre><p>&nbsp;where 192.168.1.250 is the address of the QEMU Host and 192.168.1.10 is the address assigned to the QEMU Guest. However, the networking is not yet complete on the QEMU Guest side. Once DamnSmallLinux boots, open a terminal window, and type</p><p><strong>sudo ifconfig eth0 192.168.1.10 up</strong></p><p>Verify the configuration settings with <strong>ifconfig eth0</strong>. The settings should now match the target of the TAP, and network connectivity between the QEMU Host and Guest should be active. If you have an ftp server running on the QEMU Host, you can test with ftp as this is one of the services that requires help if you are using "User Net". If you want to test access back to the guest, use the <strong>DSLPanel</strong> on the mainscreen to start the ssh-server. Then set the dsl user password using <strong>sudo passwd dsl</strong> and you should be able to ssh to the DamnSmallLinux QEMU Guest as dsl using <strong>ssh -l dsl 192.168.1.10</strong> from the QEMU Host.</p><h3 id="HUnrestrictednetworkaccessbetweentheQEMUGuestandtheQEMUHost27sNetwork."><span>Unrestricted network access between the QEMU Guest and the QEMU Host's Network.</span></h3><p>If you have compiled the tun/tap and bridge packages and installed them, this next section makes QEMU Guests quite interesting because they have unfettered access to the local network (and the security problems that go with that as well). The bridge module is a specialized driver which allows a TAP device and an existing Network Card (<strong>except WIFI cards</strong>) to be bridged together. Because the TAP can have a MAC address tied to it, once the QEMU Guest starts, it will appear to the network as that QEMU Guest is on the network. The advantage of this configuration is that a QEMU Guest can request a DHCP address from the Host NIC's networks DHCP server. If the Host's NIC network does not have a DHCP server, then the user can set the QEMU's Guest NIC to an IP address in the same network as the Host NIC's IP address is in.</p><p>To use the bridge feature with QEMU, you will need to download the <span class="wikicreatelink"><a href="/bin/create/Project+qemu/qemu%2Dbridge?parent=Project+qemu.Qemu_Networking">qemu-bridge</a></span> script and put it in /etc. The script has some customizations which you will need to fix for your site. The script uses sudo, and this example uses the version provided by blastwave.org (/opt/csw/bin/sudo) and the comments in the qemu-bridge script tell you how to modify the sudoers file to allow this script the access to create and destroy the bridge.</p><p>As with the previous example using DamnSmallLinux and qemu_sol_tap, the startup of qemu with bridging enabled is very similar. The difference in the startup is to add <strong>-b NETWORK_INTERFACE</strong> along with the shell script to start QEMU. The initialization of the script looks like:</p><p><strong>./sol_qemu_tap -b e1000g dsl.sh</strong></p><h4 id="HNote:Whenyoubridgeaclienttothehosts27network2CthehostcannotseetheQEMUguest2Candviceversa"><span>Note: When you bridge a client to the hosts' network, the host cannot see the QEMU guest, and vice versa</span></h4><p>If you need to have unfettered network access between the QEMU guest and it's host, and, use a second network interface using <strong>-net user</strong> or another TAP (non-bridged) device. A TAP is probably preferred, since it is likely that your bridge device is DHCP'd, and <strong>-user net</strong> will also be using DHCP as well.</p><p>Again, the sol_qemu_tap program aquires root privileges from setuid to create the TAP, and then calls /etc/qemu-bridge with the name of the TAP and the name of the Network Interface that the TAP should be bridge to. If that succeeds, then sol_qemu_tap drops the root privileges, and calls the shell script (to start QEMU) with the "-t (file descriptor of the TAP)". An ifconfig on the QEMU Host of the tap0 interface should show this output</p><pre>
+
+tap0: flags=1000842 mtu 1500 index 13
+        inet 0.0.0.0 netmask 0
+
+</pre><p>&nbsp;To be sure that the tap0 is bridged to e1000g0, use <strong>sudo /usr/local/bin/brdgadm -l</strong> to view how the bridge is configured. If it looks like this:</p><pre>
+
+List of the interfaces
+~----------
+e1000g0
+tap0
+
+</pre><p>&nbsp;then everything should be configured properly. As noted above, if the network that the NIC the TAP has bridged to has a DHCP server, and the client automatically does DHCP Client, the client should have already acquired an IP address from that DHCP server. In the case where the network does not have a DHCP server, then the QEMU Guest will have to have it's network set manually. In our example using DamnSmallLinux with the Bridge, we open ATerminal from the DSL main screen. Using <strong>ifconfig eth0</strong>, we should see the output:</p><pre>
+
+eth0      Link encap:Ethernet  HWaddr 52:54:00:12:34:56
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:1 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:6 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:64 (64.0 B)  TX bytes:2052 (2.0 KiB)
+          Interrupt:11 Base address:0x8000
+
+</pre><p>&nbsp;To configure the eth0 interface, simply use the command:</p><p><strong>sudo ifconfig eth0 192.168.0.176 netmask 255.255.255.0 broadcast 192.168.0.255 up</strong>, replacing the network parameters with ones more appropriate for your local network. Then validate the output of <strong>ifconfig eth0</strong> to show</p><pre>
+
+eth0      Link encap:Ethernet  HWaddr 52:54:00:12:34:56
+          inet addr:192.168.0.176  Bcast:192.168.0.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:6 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:64 (64.0 B)  TX bytes:2052 (2.0 KiB)
+          Interrupt:11 Base address:0x8000
+
+</pre><p>&nbsp;Be aware that the tap0 interface in the QEMU Host will not change parameters as the QEMU Guest's NIC does acquire an IP address.</p>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:17<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by admin on 2009/10/26 12:17
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Project qemu Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/QEMUGuests">Configuring Various QEMU Guests</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/Ubuntu">Ubuntu Linux</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/Win98SE">Windows 98 SE</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/guest">Open Solaris Guest</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/Qemu_Networking">Understanding Networking in QEMU Guests</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/downloads">QEMU Downloads</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/host">Building QEMU</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/BuildingOnOS200805">Building and Installing QEMU on OpenSolaris nee OS200805</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/Dependencies">Dependencies for Building QEMU on Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/QEMU_On_Solaris10_or_SXCE">Building and Installing QEMU on Solaris 10 or SXCE (Updated Jun 22, 2008)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/gcc%2Dfailures">Which gcc on Solaris cannot compile QEMU?</a></span></li>
+</ul></li>
+</ul>
+                    </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2011, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

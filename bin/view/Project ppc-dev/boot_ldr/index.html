@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Bootloader - Net/Disc (Project ppc-dev.boot_ldr) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+ppc%2Ddev/boot_ldr" />
+                    <link rel="canonical" href="/bin/view/Project+ppc%2Ddev/boot_ldr" />
+                            <meta name="document" content="Project ppc-dev.boot_ldr"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Project ppc-dev"/>
+    <meta name="page" content="boot_ldr"/>
+    <meta name="version" content="1.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Project+ppc-dev/pages/boot_ldr"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Bootloader - Net/Disc" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project ppc-dev";
+XWiki.currentPage = "boot_ldr";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Project+ppc%2Ddev/boot_ldr";
+window.docediturl = "/bin/edit/Project+ppc%2Ddev/boot_ldr";
+window.docsaveurl = "/bin/save/Project+ppc%2Ddev/boot_ldr";
+window.docgeturl = "/bin/get/Project+ppc%2Ddev/boot_ldr";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Project_ppc-dev viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bppc%252Ddev%2Fboot_ldr"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+ppc%2Ddev/"><strong>Project ppc-dev</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Project+ppc%2Ddev" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>
+            </td>
+            <td style="width: 99%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                              <a href='/bin/view/Project+ppc%2Ddev/task_map'>Project Task Map</a> <span class='separator'>&#187;</span> <span class='current'>Bootloader - Net/Disc</span>
+                </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+ppc%2Ddev/boot_ldr?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+ppc%2Ddev/boot_ldr?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+ppc%2Ddev/boot_ldr?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+ppc%2Ddev/boot_ldr?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+ppc%2Ddev/boot_ldr?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+ppc%2Ddev/boot_ldr?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+ppc%2Ddev/boot_ldr?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+ppc%2Ddev/boot_ldr?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+ppc%2Ddev/boot_ldr?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+ppc%2Ddev/boot_ldr?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+ppc%2Ddev/boot_ldr?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          <span class="submenuitem "><a href="/bin/view/Project+ppc%2Ddev/boot_ldr?xpage=copy" id="tmActionCopy" class="tmActionCopy">Copy</a></span>
+      </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>Bootloader - Net/Disc</h1></div>
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h2 id="HBootstrapOptions"><span>Bootstrap Options</span></h2><h3 id="HNoteableBug"><span>Noteable Bug</span></h3><p>Currently there is inetboot as the only bootloader that is functional on the ODW, Mac and EFIKA targets. Make sure your nfs server is set to nfs 3. Edit the file</p><pre>
+    /etc/default/nfs 
+</pre><p>uncomment the following line and set NFS_SERVER_VESMAX=3</p><p>We haven't yet debugged why the target will hang if using NFS 4, but it does.</p><div class="wikimodel-emptyline"></div><h3 id="HDevelopmentNotes"><span>Development Notes</span></h3><p>Changes to inetboot so that it functions without issue. &nbsp;Biggest problem was the 32KB I/Os that inetboot was doing what the ODW OF couldn't handle due to its lack of more than one receive buffer causing back-to-back packets to be dropped. &nbsp;With the addition of VOF this is no longer an issue. &nbsp;NFS3 works, NFS4 probably is ok too now.&nbsp;</p><h3 id="HNFSDisklessBoot"><span>NFS Diskless Boot</span></h3><p>NFS diskless boot (the inetboot) has been ported and currently functional with all three targets. No modifications to the source are required to support them. Codes (mainly src/psm and src/stand) are checked in. For an overview on the client -- server boot process see &nbsp;<span class="wikiexternallink"><a href="http://blogs.sun.com/roller/resources/sameers/boot_net.pdf">Sameer Seth's Weblog</a></span> Boot-net with BOOTPARAMS/RARP in Solaris for details of how inetboot works. The minimal services that need to be run at the server are</p><ol><li>tftpd: this is the tftp server that serves TFTP request by the client to download inetboot image.</li><li>in.rarpd: this is RARP daemon to server RARP request by the client.</li><li>rpc.bootparamd: this daemon serves various RPC requests like WHOAMI, GETFILE by the client.</li><li>mountd: this daemon is required to serve client request to mount install image root directory.</li><li>nfs services: this serves NFS read request by the client to serve the miniroot.</li></ol><p>In Solaris 10 OS, services for tftp, rarp(in.rarpd), and bootparamd(rcp.bootparamd), are now managed by parts of the new Service Management Facility(SMF), rather than started by rc scripts.</p><h3 id="HBuildinginetboot"><span>Building inetboot</span></h3><ol><li>setup the build environment as outlined in <span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/bld_env">GNU Toolchain and Host Environment</a></span>&nbsp;</li><li>build header in src/head (mainly for rpcsvc/*.h of nfs) (only need to build once), <span class="box code">make</span>. Headers are installed in <span class="box code"><span style="color: #BC7A00; ">${</span>CODEMGR<span style="color: #666666; ">~</span>_WS<span style="color: #BC7A00; ">}</span>/{GATE}/proto/root~_ppc/usr/include</span>, but actually there is no need to install them, and later building will pick up them from src/head.&nbsp;</li><li>build rpc header for nfs in src/uts/common/rpc (only need to build once), <span class="box code">make</span></li><li>build and install stand lib in src/stand, <span class="box code">make</span>, and <span class="box code">make install</span>. (llib-xx.ln are created to <span class="box code">make install</span> success). Libs are installed in <span class="box code"><span style="color: #BC7A00; ">${</span>CODEMGR<span style="color: #666666; ">~</span>_WS<span style="color: #BC7A00; ">}</span>/{GATE}/proto/root~_ppc/stand/lib</span></li><li>build inetboot and ufsboot in src/psm/, <span class="box code">make install</span></li><li>copy up your inetboot from src/psm/stand/boot/ppc/chrp to your /bootserv/tftpboot dir</li></ol><p>Notes: For changes that may cause the rebuilding of stand, you have to rebuild it by yourself and install them. inetboot make does not check dependencies for it&nbsp;</p><h3 id="HSetupbootserver"><span>Setup boot server</span></h3><ol><li>copy the inetboot.elf (or inetboot) built before to the tftp server root, and start tftpd by /etc/init.d/inetd stop then /etc/init.d/inetd start. Your tftpd must have the tftp entry activated so uncomment it in /etc/inetd.conf | grep tftp. Remember processes started out of inetd.conf are only started when there is a request for them (they are not running daemons). So a ps -ef | grep tftpd will not show the active process.<br/>To activate a new entry in inetd.conf, you must 'pkill -HUP inetd'</li><li>create file /etc/ethers with an entry "<span class="box code"><span style="color: #666666; ">&lt;</span>client mac address<span style="color: #666666; ">&gt;</span> clienthostname.domainname</span>" and start rarpd by command "<span class="box code"><span style="color: #666666; ">/</span>usr<span style="color: #666666; ">/</span>sbin<span style="color: #666666; ">/</span>in.rarpd <span style="color: #666666; ">-</span>ad&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>" as root (make sure rarpd is stopped in svcs)</li><li>create file /etc/bootparams with an entry "<span class="box code">clienthostname.domainname root=<span style="color: #666666; ">&lt;</span>nfs server ip<span style="color: #666666; ">&gt;</span>:<span style="color: #666666; ">&lt;</span>nfsroot<span style="color: #666666; ">&gt;</span> domain=domainname</span>" and start bootparamd by command "<span class="box code"><span style="color: #666666; ">/</span>usr<span style="color: #666666; ">/</span>sbin<span style="color: #666666; ">/</span>rpc.bootparamd <span style="color: #666666; ">-</span>d</span>" as root&nbsp;</li><li>export nfs root and start nfsd. in nfsroot/ppc/, put a PowerPC bootstrap binary, such as a kernel or just the inetboot.elf itself.&nbsp;</li></ol><h3 id="HBootupdisklessclient"><span>Boot up diskless client</span></h3><ol><li>start system into openfirmware prompt</li><li>create a devalias by command "<span class="box code">devalias ethernet <span style="color: #666666; ">/</span>pci@f4000000<span style="color: #666666; ">/</span>ethernet</span>" or use the appropriate address for the platform you are on.</li><li>If on an ODW load vof with 'load ethernet:&lt;tftpserverIP&gt;,openfirmware'. The implementation of "load" word in machine open firmware needs to get an IP via dhcp, so a dhcp service should be available. When the ok prompt comes up again enter ok&gt; boot net. If on a mac skip #3.</li><li>'load ethernet:&lt;tftpserverIP&gt;,inetboot.elf'. The implementation of "load" word in machine open firmware needs to get an IP via dhcp, so a dhcp service should be available.&nbsp;</li><li>after the inetboot.elf is loaded, let it <span class="box code">go</span> on firmware prompt to enter into inetboot bootstrap</li><li>the bootstrap prints out memlists info, boot device, files and parameters info and then asks for a boot file. Enter the file name that is in the nfsroot, such as <span class="box code"><span style="color: #666666; ">/</span>ppc<span style="color: #666666; ">/</span>unix</span></li><li>bootstrap prints out file ELF header info and transfers control to it.&nbsp;</li></ol><p>Very early on the community hads a conf call to discuss the bootstrap topic <span class="wikiexternallink"><a href="http://www.opensolaris.org/jive/thread.jspa?threadID=4992&amp;tstart=15">bootstrap conf call</a></span> and other threads and came down the following choices:&nbsp;</p><ol><li>Use a TFTP boot to load a simplified PPC flavored multiboot and the boot_archive. this is the most straightforward approach and least code intensive, small changes to current multiboot to remove BIOS calls. Not the best longterm solution.</li><li>Enhance OF to enable loading multiple files, a simplified PPC flavored multiboot and the boot_archive. requires some modification of OF to allow loading of multiple files. Need to clarify UFS support in OF?</li><li>Use OF to load GRUB2 and then it loads a simplified PPC flavored multiboot and the boot_archive. OF provides the same functionality and why layer this with GRUB, OF has a menu system already and we have the right people to enhance OF. GRUB knows the Free&lt;nop&gt;BSD variant of UFS, so it'll need to be changed to also support the Solaris variant of it. This is a solution to support booting into multiple OS in the long term.&nbsp;</li><li>NFS boot, load bootstrap binary and the bootstrap loads kernel and nfs-mounts root file system. NFS diskless boot has been used in Solaris Xen bringup (see Tim's blog below) and proved to be the best choice for earlier kernel development.&nbsp;</li></ol><h3 id="HGRUB"><span>GRUB</span></h3><p>Grub patched to support multiboot on PPC tested on ODW, and Noah's <span class="wikiexternallink"><a href="http://svn.genunix.org/repos/polaris/branches/yanyh/ws">PowerMac G4</a></span> Thanks to Noah Yan for this initial work.</p><div class="wikimodel-emptyline"></div><h3 id="HBootloader-ShudongZhou2FJanSetje-Eilers"><span>Bootloader - Shudong Zhou / Jan Setje-Eilers</span></h3><p>Much of this below is not applicable at the moment but just informational to know where we started from.</p><p>GRUB2 had been chosen by the community as the bootloader. It functions on PPC and the Genesi ODW. The NewBoot project here at Sun has used GRUB as a base. The changes for solaris support in GRUB are put back, they will need to be merged into GRUB2, Sun's team as no solid timeline yet to do this and expect the community to assist. Fortunately we do not need a bootloader to start with the low level kernel work. Why? Our JTAG tools can directly download the bin files into DRAM and jump to the start address ie: <em>start and begin stepping.</em></p><p>sparc: The approach is similar for PPC. In the case of a local ufs root file system, the secondary boot loader is the file /platform/<span class="box code">uname <span style="color: #666666; ">-</span>m</span>/ufsboot. &nbsp;The primary boot loader knows just enough about how to interpret the ufs on-disk format to find the secondary boot loader in the root file system. &nbsp;The device containing the root file system is the same as the boot device.</p><ul><li>PPC Note: We skipped ufsboot and implemented inetboot instead.</li></ul><p>Loading the core kernel modules and starting Solaris</p><p>This stage is the process of loading kernel/unix and krtld and then starting Solaris.</p><p>Sparc:<br/>&nbsp;&nbsp;&nbsp;On sparc, the boot archive is not being used yet for booting. Instead, the secondary boot loader reads the kernel modules from the root file system.</p><p>&nbsp;&nbsp;&nbsp;The secondary boot loader knows enough about ufs to find and read the /platform/<span class="box code">uname <span style="color: #666666; ">-</span><span style="color: #008000; ">i</span></span>/kernel/unix and krtld modules. &nbsp;After loading &nbsp;them, jump to "main" and start executing. &nbsp;Solaris is now running, though without a root file system. &nbsp;File accesses are accomplished by the kobj<em>&nbsp;interfaces, which in turn use the boot ops provided by the boot loader, since the vn* operations aren't available yet, (since the root isn't mounted and so there is no file system that can be accessed).</em></p><p>At the end of this file there are details in Shudongs analysis and they have been posted to the PPC Forum.</p><p>The boot environment need to load the ramdisk and the multiboot program. multiboot loads unix.</p><ul><li>OF--&gt;GRUB2-&gt;multiboot + boot_archive -&gt; unix/krtld -&gt; kmdb ...</li></ul><h3 id="HUsefulLinksonthisTopic"><span>Useful Links on this Topic</span></h3><p><span class="wikiexternallink"><a href="http://www.opensolaris.org/jive/thread.jspa?threadID=4992&amp;tstart=15">Community Boot Conf Call Notes</a></span></p><p><span class="wikiexternallink"><a href="http://blogs.sun.com/roller/page/setje?entry=a_new_boot_architecture">A new boot architecture</a></span></p><p><span class="wikiexternallink"><a href="http://blogs.sun.com/roller/page/setje?entry=post_new_boot_solaris_on">Post new-boot Solaris on 128Mb systems</a></span></p><p><span class="wikiexternallink"><a href="http://www.sun.com/bigadmin/features/articles/grub_boot_solaris.html">The New Bootloader for x86 Platforms</a></span></p><p><span class="wikiexternallink"><a href="http://blogs.sun.com/roller/page/tpm?entry=solaris_deployment_and_kernel_development">Solaris Deployment and Kernel Development with Diskless Clients</a></span></p><p><span class="wikiexternallink"><a href="http://blogs.sun.com/roller/page/JoeBonasera">Solaris Bootup on Xen</a></span></p><p><span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/817-1985/6mhm8o5ma?a=view">Managing Diskless Clients</a></span></p><p><span class="wikicreatelink"><a href="/bin/create/Community+Group+xen+%22Xen+Community%22/WebHome?parent=Project+ppc%2Ddev.boot_ldr">OpenSolaris Xen Community (OpenSolaris</a></span></p><p><span class="wikiexternallink"><a href="http://www.netbsd.org/Documentation/network/netboot/intro.macppc.html">Open Firmware Network Boot and Diskless Client</a></span></p><p><span class="wikiexternallink"><a href="http://playground.sun.com/1275/practice/obp-tftp/tftp1_0.pdf">IEEE 1275 Open Firmware</a></span></p><p><span class="wikiexternallink"><a href="http://www.gnu.org/software/grub/manual/multiboot">IEEE 1275 Open Firmware Multiboot Specification</a></span></p><p><span class="wikiexternallink"><a href="http://www.blastware.org/grub2/index.html">GRUB2 for Genesi ODW PowerPC Development Server</a></span></p><p><span class="wikiexternallink"><a href="http://grub.enbug.org">The GNU GRUB Wiki</a></span></p>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:17<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by admin on 2009/10/26 12:17
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Project ppc-dev Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/GetStarted">Getting Started</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/faq">FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/kickstart">Kickstarting OpenSolaris on PowerPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/status">Status</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/task_map">Project Task Map</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/atomic">Low Level Atomic Operations</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/bld_env">GNU Toolchain and Host Environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/boot_ldr">Bootloader &#45; Net/Disc</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/cache_behav">Cache Behavior</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/cbe">Cyclic Backend &#45; Timers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/chk_res">Checkpoint and Restore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/console">Console Items</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/ctf">CTF &#45; Compressed Text Format</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/ddi">DDI &#45; Device Driver Interface</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/dtrace">DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/hw_tools">Hardware Tools for the Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/inst">Installer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/ism">ISM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/kern_init">Kernel Inititalization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/kmdb_mdb">KMDB / MDB / PMDB</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/krn_swtch">Kernel  Context Switching</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/krtld">Kernel Runtime Loader</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/modstubs">Module Stubs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/mp">MP Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/openfirm">Openfirmware &#45; VOF</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/panic">Panic Handling</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/psm">Platform Specific Modules</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/root_nex">Root Nexus</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/rtld_ld">RTLD and ld</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/sys_calls">System Calls</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/traps">Exceptions, Traps and Interrupts</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/usr_libs">User Libraries</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/usr_swtch">User Context Switching</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/vm">Virtual Memory &#45; HAT</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/tools">Project Tools</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/proj_xtra">Project Extras</a></span></li>
+</ul></li>
+</ul>
+                    </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2011, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

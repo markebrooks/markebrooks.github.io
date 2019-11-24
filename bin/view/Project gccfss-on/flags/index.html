@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>GCCFSS command line options (Project gccfss-on.flags) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+gccfss%2Don/flags" />
+                                <meta name="document" content="Project gccfss-on.flags"/>
+    <meta name="space" content="Project gccfss-on"/>
+    <meta name="page" content="flags"/>
+    <meta name="version" content="1.1"/>
+                    <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="GCCFSS command line options" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                <!-- com.xpn.xwiki.plugin.skinx.LinkExtensionPlugin -->
+    <link href="/bin/skin/skins/colibri/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript" src="/resources/js/xwiki/suggest/ajaxSuggest.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project gccfss-on";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes" ];
+window.docviewurl = "/bin/view/Project+gccfss%2Don/flags";
+window.docediturl = "/bin/edit/Project+gccfss%2Don/flags";
+window.docsaveurl = "/bin/save/Project+gccfss%2Don/flags";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js'></script><script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js'></script><script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js'></script><script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js'></script><script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js'></script><script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js'></script>
+
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/compatibility.js"></script>
+
+  </head>
+        <body id="body" class="xwiki viewbody hideright">
+  <div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+<div id="menuview">
+  <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div class="topmenuentry " id="tmLogin"><a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bgccfss%252Don%2Fflags"><strong>Log-in</strong></a></div>
+  </div>
+<div class="leftmenu">
+  <div class="topmenuentry hasIcon" id="tmWiki"><a class="tme" href="/bin/view/Main/"><strong>xwiki</strong></a></div>
+  <div class="topmenuentry hasIcon" id="tmSpace"><a class="tme" href="/bin/view/Project+gccfss%2Don/"><strong>Project gccfss-on</strong></a></div>
+
+<div class="topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmSubSites">
+<span class="tme-extensible"><a class="tme"><strong>Subsites</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="http://cr.opensolaris.org/" id="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth">Auth</a></span>
+</span></div>
+
+
+</div>
+</div>
+
+</div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+
+  <div id="company">
+  <div id="companylogo">
+    <a href="/bin/view/Main/" title="Home" rel="home">
+    <img src="/skins/colibri/logo.png" alt="Wiki Logo"/>
+    </a>
+  </div>   </div> 
+  <div id="Iconbar">
+    <a id="CollectivesIcon" href="/bin/view/Main/collectives">Collectives</a>
+    <a id="DiscussionsIcon" href="/bin/view/Main/discussions">Discussions</a>
+    <a id="DocumentationIcon" href="/bin/view/Main/documentation">Documentation</a>
+    <a id="DownloadIcon" href="/bin/view/Main/downloads">Download</a>
+    <a id="SourceBrowserIcon" href="http://src.opensolaris.org">Source Browser</a>
+  </div>
+  <div class="clearfloats"></div>
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/WebSearch">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+   <div id="hierarchy">
+          <a href='/bin/view/Project+gccfss%2Don/flags'>GCCFSS command line options</a>
+    </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+gccfss%2Don/flags?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+  <div id="contentmenu" class="actionmenu">
+  <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div class="topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmExport">
+<span class="tme-extensible"><a class="tme"><strong>Export</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+gccfss%2Don/flags?format=pdf&amp;language=en" id="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+gccfss%2Don/flags?format=rtf&amp;language=en" id="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+gccfss%2Don/flags?format=html&amp;language=en" id="tmExportHtml">Export as HTML</a></span>
+  </span></div>
+
+<div class="topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmShow">
+<span class="tme-extensible"><a class="tme" href="/bin/view/Project+gccfss%2Don/flags?viewer=code&amp;language=en"><strong>View</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+gccfss%2Don/flags?viewer=comments&amp;language=en" id="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+gccfss%2Don/flags?viewer=attachments&amp;language=en" id="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+gccfss%2Don/flags?viewer=history&amp;language=en" id="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+gccfss%2Don/flags?viewer=information&amp;language=en" id="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+gccfss%2Don/flags?viewer=code&amp;language=en" id="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div class="topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmMoreActions">
+<span class="tme-extensible"><a class="tme"><strong>More actions</strong></a><span class="hidden menucolon">: </span></span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+gccfss%2Don/flags?xpage=print&amp;language=en" id="tmPrintPreview">Print preview</a></span>
+    </span></div>
+  </div>
+
+
+  </div>
+  <div id="mainContentArea">
+      
+
+
+  
+<div id="document-title"><h1>GCCFSS command line options</h1></div>
+                            <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<table><tr><td></td></tr></table><h1 id="HGCCforSPARCSystems"><span>GCC for SPARC&#174; Systems</span></h1><h2 id="HAdditionalcommandlineoptionflags"><span>Additional command line option flags</span></h2><dl><dt>-dalign</dt><dd>Equivalent to -xmemalign=8s.</dd><dt>-fast</dt><dd>Is a macro that can be used as a starting point for turning an executable for maximum runtime performance.<br/>Modules that are compiled with -fast must also be linked with -fast.<br/>The -fast option is unsuitable for programs intended to run on a different target than the compilation machine. In such cases, follow -fast with the appropriate -xtarget option. For example:<br/>% gcc -fast -xtarget=ultra ...<br/>With -xlibmil, exceptions cannot be noted by setting errno or calling matherr(3m).<br/>The -fast option is unsuitable for programs that require strict conformance to the IEEE 754 Standard.<br/>-fast expands to: -fns -fsimple=2 -xalias_level=basic -xbuiltin=%all -xlibmill -xlibmopt -exprefetch=auto,explicit -xtarget=native<br/>Note - Some optimizations make certain assumptions about program behavior. If the program does not conform to these assumptions, the application may crash or produce incorrect results. Please refer to the description of the individual options to determine if your program is suitable for compilation with -fast.<br/>The optimizations performed by these options may alter the behavior of programs from that defined by the ISO C and IEEE standards. See the description of the specific option for details.<br/>-fast acts like a macro expansion on the command line. Therefore, you can override the optimization level and code generation option aspects by following -fast with the desired optimization level or code generation option. Compiling with the -fast -O2 pair is like compiling with the -O3 -O2 pair. The latter specification takes precedence.<br/>Do not use this option for programs that depend on IEEE standard exception handling; you can get different numerical results, premature program termination, or unexpected SIGFPE signals.</dd><dt>-fnonstd</dt><dd>This option is a macro for -fns and -ftrap=common.</dd><dt>-fns[={no|yes}]</dt><dd>Turns on the SPARC nonstandard floating-point mode.<br/>The default is -fns=no, the SPARC standard floating-point mode. -fns is the same as -fns=yes.<br/>Optional use of =yes or =no provides a way of toggling the -fns flag following some other macro flag that includes -fns, such as -fast.<br/>On some SPARC systems, the nonstandard floating point mode disables "gradual underflow," causing tiny results to be flushed to zero rather than producing subnormal numbers. It also causes subnormal operands to be replaced silently by zero. On those SPARC systems that do not support gradual underflow and subnormal numbers in hardware, use of this option can significantly improve the performance of some programs.<br/>When nonstandard mode is enabled, floating point arithmetic may produce results that do not conform to the requirements of the IEEE 754 standard.<br/>This option is effective only f used when compiling the main program.</dd><dt>-fsimple[=<em>n</em>]</dt><dd>Allows the optimizer to make simplifying assumptions concerning floating-point arithmetic.<br/>The compiler defaults to -fsimple=0. Specifying -fsimple, is equivalent to -fsimple=1.<br/>If <em>n</em> is present, it must be 0, 1, or 2.</dd></dl><ul><li><strong>-fsimple=0</strong> Permits no simplifying assumptions. Preserve strict IEEE 754 conformance.</li><li><strong>-fsimple=1</strong> Allows conservative simplifications. The resulting code does not strictly conform to IEEE 754, but numeric results of most programs are unchanged.<br/>With -fsimple=1, the optimizer can assume the following:<ul><li>IEEE 754 default rounding/trapping modes do not change after process initialization.</li><li>Computations producing no visible result other than potential floating point exceptions may be deleted.</li><li>Computations with Infinity or NaNs as operands need not propagate NaNs to their results; for example, x*0 may be replaced by 0.</li><li>Computations do not depend on sign of zero.<br/>&nbsp;With -fsimple=1, the optimizer is <em>not</em> allowed to optimize completely without regard to roundoff or exceptions. In particular, a floating-point computation cannot be replaced by one that produces different results with rounding modes held constant at runtime.</li></ul></li><li><strong>-fsimple=2</strong> The compiler attempts aggressive floating point optimizations that may cause many programs to produce different numeric results due to changes in rounding. For example, -fsimple=2 permits the optimizer to replace all computations of x/y in a given loop with x*z, where x/y is guaranteed to be evaluated at least once in the loop, z=1/y, and the values of y and z are known to have constant values during execution of the loop.<br/>Even with -fsimple=2, the optimizer is not permitted to introduce a floating point exception in a program that otherwise produces none.</li></ul><dl><dt>-KPIC</dt><dd>Same as -xcode=pic32.</dd><dt>-Kpic</dt><dd>Same as -xcode=pic13.</dd><dt>-mt</dt><dd>Macro option that expands to -D_REENTRANT -lthread.</dd><dt>-native</dt><dd>Same as -xtargset=native.</dd><dt>-Xc -xc99</dt><dt>-Xc -xc99=all</dt><dd>Same as the GCC option -std=c99.</dd><dt>-Xc -xc99=none</dt><dt>-Xc</dt><dd>Same as the GCC option -std=iso9899:199409</dd><dt>-xalias_level[=<em>l</em>]</dt><dd>The compiler uses the -xalias_level option to determine what assumptions it can make in order to perform optimizations using type-based alias-analysis. This option places the indicated alias level into effect for the translation units being compiled.<br/>If you do not specify the -xalias_level command, the compiler assumes -xalias_level=any. If you specify -xalias_level without a value, the default is -xalias_level=layout.<br/>Remember that if you issue the -xalias_level option but you fail to adhere to all of the assumptions and restrictions about aliasing described for any of the alias levels, the behavior of your program is undefined.<br/>The value of <em>l</em> is one of the following:</dd></dl><ul><li><strong>any</strong> The compiler assumes that all memory references can alias at this level. There is no type-based alias analysis at the level of -xalias_level=any.</li><li><strong>basic</strong> If you use the -xalias_level=basic option, the compiler assumes that memory references that involve different C basic types do not alias each other. The compiler also assumes that references to all other types can alias each other as well as any C basic type. The compiler assumes that references using char * can alias any other type.<br/>For example, at the -xalias_level=basic level, the compiler assumes that a pointer variable of type int * is not going to access a float object. Therefore it is safe for the compiler to perform optimizations that assume a pointer of type float * will not alias the same memory that is referenced with a pointer of type int *.</li><li><strong>weak</strong> If you use the -xalias_level=weak option, the compiler assumes that any structure pointer can point to any structure type.<br/>Any structure or union type that contains a reference to any type that is either referenced in an expression in the source being compiled or is referenced from outside the source being compiled, must be declared prior to the expression in the source being compiled.<br/>You can satisfy this restriction by including all the header files of a program that contain types that reference any of the types of the objects referenced in any expression of the source being compiled.<br/>At the level of -xalias_level=weak, the compiler assumes that memory references that involve different C basic types do not alias each other. The compiler assumes that references using char * alias memory references that involve any other type.</li><li><strong>layout</strong> If you use the -xalias_level=layout option, the compiler assumes that memory references that involve types with the same sequence of types in memory can alias each other.<br/>The compiler assumes that two references with types that do not look the same in memory do not alias each other. The compiler assumes that any two memory accesses through different struct types alias if the initial members of the structures look the same in memory. However, at this level, you should not use a pointer to a struct to access some field of a dissimilar struct object that is beyond any of the common initial sequence of members that look the same in memory between the two structs. This is because the compiler assumes that such references do not alias each other.<br/>At the level of -xalias_level=layout the compiler assumes that memory references that involve different C basic types do not alias each other. The compiler assumes that references using char * can alias memory references involving any other type.</li><li><strong>strict</strong> If you use the -xalias_level=strict option, the compiler assumes that memory references, that involve types such as structs or unions, that are the same when tags are removed, can alias each other. Conversely, the compiler assumes that memory references involving types that are not the same even after tags are removed do not alias each other.<br/>However, any structure or union type that contains a reference to any type that is part of any object referenced in an expression in the source being compiled, or is referenced from outside the source being compiled, must be declared prior to the expression in the source being compiled.<br/>You can satisfy this restriction by including all the header files of a program that contain types that reference any of the types of the objects referenced in any expression of the source being compiled. At the level of -xalias_level=strict the compiler assumes that memory references that involve different C basic types do not alias each other. The compiler assumes that references using char * can alias any other type.</li><li><strong>std</strong> If you use the -xalias_level=std option, the compiler assumes that types and tags need to be the same to alias, however, references using char * can alias any other type. This rule is the same as the restrictions on the dereferencing of pointers that are found in the 1999 ISO C standard. Programs that properly use this rule will be very portable and should see good performance gains under optimization.</li><li><strong>strong</strong> If you use the -xalias_level=strong option, the same restrictions apply as at the std level, but additionally, the compiler assumes that pointers of type char * are used only to access an object of type char. Also, the compiler assumes that there are no interior pointers. An interior pointer is defined as a pointer that points to a member of a struct.</li></ul><dl><dt>-xarch=<em>isa</em></dt><dd>Specify instruction set architecture (ISA).<br/>The default architecture for which the GCC for SPARC Systems compilers produce code is v8plus (for the UltraSPARC &#174; processor).<br/>If you compile and link in separate steps, make sure you specify the same value for -xarch in both steps.<br/>Architectures that are accepted by -xarch keyword <em>isa</em> are generic, generic64, native, native64, v8plus, v8plusa, v8plusb, v9, v9a, v9b<br/>Note that although -xarch can be used alone, it is part of the expansion of the -xtarget option and may be used to override the -xarch value that is set by a specific -xtarget option.<br/>The possible values of the keyword <em>isa</em> are</dd></dl><ul><li><strong>generic</strong> Compile for good performance on most 32-bit systems. This option uses the best instruction set for good performance on most processors without major performance degradation on any of them. With each new release, the definition of "best" instruction set may be adjusted, if appropriate.</li><li><strong>generic64</strong> Compile 64-bit object binaries for good performance on most 64-bit platform architectures. This option uses the best instruction set for good performance on SolarisTM operating systems with 64-bit kernels, without major performance degradation on any of them. With each new release, the definition of best instruction set may be adjusted, if appropriate. Currently, this is equivalent to -xarch=v9.</li><li><strong>native</strong> Compile for good performance on this system. The compiler chooses the appropriate setting for producing 32-bit binaries for the current system on which the processor is running.</li><li><strong>native64</strong> Compile 64-bit object binaries for good performance on this system. The compiler chooses the appropriate setting for producing 64-bit binaries for the system on which the processor is running.</li><li><strong>v8a</strong> Compile for the V8a version of the SPARC-V8 ISA.<br/>By definition, V8a means the V8 ISA, but without the fsmuld instruction.<br/>This option enables the compiler to generate code for good performance on the V8a ISA.</li><li><strong>v8plus</strong> Compile for the V8plus version of the SPARC-V9 ISA.<br/>This is the default. By definition, V8plus means the V9 ISA, but limited to the 32-bit subset defined by the V8plus ISA specification, without the Visual Instruction Set (VIS), and without other implementation-specific ISA extensions.<br/>This option enables the compiler to generate code for good performance on the V8plus ISA. The resulting object code is in SPARC-V8+ ELF32 format and only executes in a Solaris UltraSPARC processor environment--it does not run on a V7 or V8 processor.</li><li><strong>v8plusa</strong> Compile for the V8plusa version of the SPARC-V9 ISA.<br/>By definition, V8plusa means the V8plus architecture, plus the Visual Instruction Set (VIS) version 1.0, and with UltraSPARC extensions.<br/>This option enables the compiler to generate code for good performance on the UltraSPARC architecture, but limited to the 32-bit subset defined by the V8plus specification. The resulting object code is in SPARC-V8+ ELF32 format and only executes in a Solaris UltraSPARC processor environment--it does not run on a V8 processor.</li><li><strong>v8plusb</strong> Compile for the V8plusb version of the SPARC-V8plus ISA with UltraSPARC III extensions.<br/>Enables the compiler to generate object code for the UltraSPARC architecture, plus the Visual Instruction Set (VIS) version 2.0, and with UltraSPARC III extensions.<br/>The resulting object code is in SPARC-V8+ ELF32 format and executes only in a Solaris UltraSPARC III processor environment. Compiling with this option uses the best instruction set for good performance on the UltraSPARC III architecture.</li><li><strong>v9</strong> Compile for the SPARC-V9 ISA.<br/>Enables the compiler to generate code for good performance on the V9 SPARC architecture.<br/>The resulting .o object files are in ELF64 format and can only be linked with other SPARC-V9 object files in the same format. The resulting executable can only be run on an UltraSPARC processor running a 64-bit enabled Solaris operating system with the 64-bit kernel. -xarch=v9 is only available when compiling in a 64-bit enabled Solaris environment.</li><li><strong>v9a</strong> Compile for the SPARC-V9 ISA with UltraSPARC extensions.<br/>Adds to the SPARC-V9 ISA the Visual Instruction Set (VIS) and extensions specific to UltraSPARC processors, and enables the compiler to generate code for good performance on the V9 SPARC architecture.<br/>The resulting .o object files are in ELF64 format and can only be linked with other SPARC-V9 object files in the same format. The resulting executable can only be run on an UltraSPARC processor running a 64-bit enabled Solaris operating system with the 64-bit kernel. -xarch=v9a is only available when compiling in a 64-bit enabled Solaris operating system.</li><li><strong>v9b</strong> Compile for the SPARC-V9 ISA with UltraSPARC III extensions.<br/>Adds UltraSPARC III extensions and VIS version 2.0 to the V9a version of the SPARC-V9 ISA. Compiling with this option uses the best instruction set for good performance in a Solaris UltraSPARC III processor environment.<br/>The resulting object code is in SPARC-V9 ELF64 format and can only be linked with other SPARC-V9 object files in the same format. The resulting executable can only be run on an UltraSPARC III processor running a 64-bit enabled Solaris operating system with the 64-bit kernel. -xarch=v9b is only available when compiling in a 64-bit enabled Solaris operating system.</li></ul><dl><dt>-xautopar</dt><dd>Turns on automatic parallelization for multiple processors. Does dependence analysis (analyze loops for inter-iteration data dependence) and loop restructuring. If optimization is not at -O2 or higher, optimization is raised to -O2 and a warning is emitted.<br/>Avoid -xautopar if you do your own thread management.<br/>To achieve faster execution, this option requires a multiple processor system. On a single-processor system, the resulting binary usually runs slower.<br/>To request a number of processors, set the PARALLEL environment variable. The default is 1.</dd></dl><ul><li>Do not request more processors than are available.</li><li>If N is the number of processors on the machine, then for a one-user, multiprocessor system, try PARALLEL=N-1.<br/>&nbsp;If you use -xautopar and compile and link in <em>one</em> step, then linking automatically includes the microtasking library and the threads-safe C runtime library. If you use -xautopar and compile and link in <em>separate</em> steps, then you must also link with -xautopar.</li></ul><dl><dt>-xbuiltin[=(%all|%none)]</dt><dd>Use the -xbuiltin[=(%all|%none)] command when you want to improve the optimization of code that calls standard library functions. Many standard library functions, such as the ones defined in math.h and stdio.h, are commonly used by various programs. This command lets the compiler substitute intrinsic functions or inline system functions where profitable for performance. See the er_src(1) man page for an explanation of how to read compiler commentary in object files to determine for which functions the compiler actually makes a substitution.<br/>However, these substitutions can cause the setting of errno to become unreliable. If your program depends on the value of errno, avoid this option.<br/>If you do not specify -xbuiltin, the default is -xbuiltin=%none, which means no functions from the standard libraries are substituted or inlined. If you specify -xbuiltin, but do not provide any argument, the default is -xbuiltin%all, which means the compiler substitutes intrinsics or inlines standard library functions as it determines the optimization benefit.<br/>If you compile with -fast, then -xbuiltin is set to %all.<br/>Note - -xbuiltin only inlines global functions defined in system header files, never static functions defined by the user.</dd><dt>-xcache[=<em>c</em>]</dt><dd>Defines the cache properties for use by the optimizer. <em>c</em> must be one of the following:</dd></dl><ul><li><strong>generic</strong></li><li><strong><em>s1/l1/a1</em></strong></li><li><strong><em>s1/l1/a1</em>:<em>s2/l2/a2</em></strong></li><li><strong><em>s1/l1/a1</em>:<em>s2/l2/a2</em>:<em>s3/l3/a3</em></strong><br/>&nbsp;The <em>si</em>, <em>li</em>, <em>ai</em> are defined as follows:</li><li><strong><em>si</em></strong> The size of the data cache at level <em>i</em>, in kilobytes</li><li><strong><em>li</em></strong> The line size of the data cache at level <em>i</em>, in bytes</li><li><strong><em>ai</em></strong> The associativity of the data cache at level <em>i</em><br/>&nbsp;Although this option can be used alone, it is part of the expansion of the -xtarget option; its <em>primary</em> use is to override a value supplied by the -xtarget option.<br/>This option specifies the cache properties that the optimizer can use. It does not guarantee that any particular cache property is used. The following lists the -xcache values.</li><li><strong>generic</strong> This is the default value which directs the compiler to use cache properties for good performance on most x86 and SPARC processors, without major performance degradation on any of them.<br/>With each new release, these best timing properties will be adjusted, if appropriate.</li><li><strong>native</strong> Set the parameters for the best performance on the host environment.</li><li><strong><em>s1/l1/a1</em></strong> Define level 1 cache properties.</li><li><strong><em>s1/l1/a1</em>:<em>s2/l2/a2</em></strong> Define levels 1 and 2 cache properties.</li><li><strong><em>s1/l1/a1</em>:<em>s2/l2/a2</em>:<em>s3/l3/a3</em></strong> Define levels 1, 2, and 3 cache properties.<br/>&nbsp;Example: -xcache=16/32/4:1024/32/1 specifies the following:<br/>Level 1 cache has:</li><li>16K bytes</li><li>32 bytes line size</li><li>4-way associativity &nbsp;Level 2 cache has:</li><li>1024K bytes</li><li>32 bytes line size</li><li>Direct mapping associativity</li></ul><dl><dt>-xchip[=<em>c</em>]</dt><dd>Specifies the target processor for use by the optimizer.<br/><em>c</em> must be one of the following: generic, ultra, ultra2, ultra2e, ultra2i, ultra3, ultra3cu, ultra4.<br/>Although this option can be used alone, it is part of the expansion of the -xtarget option; its /primary /use is to override a value supplied by the -xtarget option.<br/>This option specifies timing properties by specifying the target processor.<br/>Some effects are:</dd></dl><ul><li>The ordering of instructions, that is, scheduling</li><li>The way the compiler uses branches</li><li>The instructions to use in cases where semantically equivalent alternatives are available<br/>&nbsp;The following lists the -xchip values for SPARC platforms:</li><li><strong>generic</strong> Use timing properties for good performance on most SPARC architectures.<br/>This is the default value that directs the compiler to use the best timing properties for good performance on most processors, without major performance degradation on any of them.</li><li><strong>native</strong> Set the parameters for the best performance on the host environment.</li><li><strong>ultra</strong> Uses timing properties of the UltraSPARC processors.</li><li><strong>ultra2</strong> Uses timing properties of the UltraSPARC II processors.</li><li><strong>ultra2e</strong> Uses timing properties of the UltraSPARC IIe processors.</li><li><strong>ultra2i</strong> Uses timing properties of the UltraSPARC IIi processors.</li><li><strong>ultra3</strong> Uses timing properties of the UltraSPARC III processors.</li><li><strong>ultra3cu</strong> Uses timing properties of the UltraSPARC III Cu processors.</li><li><strong>ultra3i</strong> Uses the timing properties of the UltraSPARC IIIi processors.</li><li><strong>ultra4</strong> Uses timing properties of the UltraSPARC IV processors.</li></ul><dl><dt>-xcode[=<em>v</em>]</dt><dd>Specify code address space. <em>v</em> must be one of:</dd></dl><ul><li><strong>abs32</strong> Generate 32-bit absolute addresses. Code + data + bss size is limited to 2<strong>32 bytes. This is the default on 32-bit architectures: -xarch=(generic|v8a|v8plus|v8plusa|v8plusb)</strong></li><li><strong>abs44</strong> Generate 44-bit absolute addresses. Code + data + bss size is limited to 2<strong>44 bytes. This is the default on 64-bit architectures: -xarch=(v9|v9a|v9b)</strong></li><li><strong>abs64</strong> Generate 64-bit absolute addresses. Available only on 64-bit architectures: -xarch=(v9|v9a|v9b)</li><li><strong>pic13</strong> Generate position-independent code for use in shared libraries (small model). Equivalent to -Kpic. Permits references to at most 2<strong>11 unique external symbols on 32-bit architectures, 2</strong>10 on 64-bit architectures.<br/>The -xcode=pic13 command is similar to -xcode=pic32, except that the size of the global offset table is limited to 8 Kbytes.</li><li><strong>pic32</strong> Generate position-independent code for use in shared libraries (large model). Equivalent to -KPIC. Permits references to at most 2<strong>30 unique external symbols on 32-bit architectures, 2</strong>29 on 64-bit architectures.<br/>Each reference to a global datum is generated as a dereference of a pointer in the global offset table. Each function call is generated in pc-relative addressing mode through a procedure linkage table. With this option, the global offset table spans the range of 32-bit addresses in those rare cases where there are too many global data objects for -xcode=pic32.<br/>&nbsp;The default for SPARC and UltraSPARC V9 (with -xarch=v9|v9a|v9b) is -xcode=abs44.<br/>When building shared dynamic libraries, the default -xcode values of abs44 and abs32 will not work with -xarch=v9 or v9a or v9b, so a -xcode value must be given. Specify -xcode=pic13 or -xcode=pic32. There are two nominal performance costs with -xcode=pic13 and -xcode=pic32 on SPARC:</li><li>A routine compiled with either -xcode=pic13 or -xcode=pic32 executes a few extra instructions upon entry to set a register to point at a table (_GLOBAL_OFFSET_TABLE_) used for accessing a shared library's global or static variables.</li><li>Each access to a global or static variable involves an extra indirect memory reference through _GLOBAL_OFFSET_TABLE_. If the compile is done with -xcode=pic32, there are two additional instructions per global and static memory reference.<br/>&nbsp;When considering the above costs, remember that the use of -xcode=pic13 and -xcode=pic32 can significantly reduce system memory requirements, due to the effect of library code sharing. Every page of code in a shared library compiled -xcode=pic13 or -xcode=pic32 can be shared by every process that uses the library. If a page of code in a shared library contains even a single non-pic (that is, absolute) memory reference, the page becomes nonsharable, and a copy of the page must be created each time a program using the library is executed.<br/>The easiest way to tell whether or not a .o file has been compiled with -xcode=pic13 or -xcode=pic32 is with the nm command:<br/>&nbsp;% nm <em>file</em>.o | grep _GLOBAL_OFFSET_TABLE_ U _GLOBAL_OFFSET_TABLE_<br/>A .o file containing position-independent code contains an unresolved external reference to _GLOBAL_OFFSET_TABLE_, as indicated by the letter U.<br/>To determine whether to use -xcode=pic13 or -xcode=pic32, check the size of the Global Offset Table (GOT) by using elfdump -c (see the elfdump(1) man page for more information) and to look for the section header, sh_name: .got. The sh_size value is the size of the GOT. If the GOT is less than 8,192 bytes, specify -xcode=pic13, otherwise specify -xcode=pic32.<br/>In general, use the following guidelines to determine how you should use -xcode:</li><li>If you are building an executable you should not use -xcode=pic13 or -xcode=pic32.</li><li>If you are building an archive library only for linking into executables you should not use -xcode=pic13 or -xcode=pic32.</li><li>If you are building a shared library, start with -xcode=pic13 and once the GOT size exceeds 8,192 bytes, use -xcode=pic32.</li><li>If you are building an archive library for linking into shared libraries you should just use -xcode=pic32.</li></ul><dl><dt>-xdebugformat=dwarf</dt><dd>Same as the GCC option -gdwarf-2</dd><dt>-xdepend=[yes|no]</dt><dd>Analyzes loops for inter-iteration data dependencies and does loop restructuring.<br/>Loop restructuring includes loop interchange, loop fusion, scalar replacement, and elimination of "dead" array assignments.<br/>If you do not specify -xdepend, the default is -xdepend=no which means the compiler does not analyze loops for data dependencies. If you specify -xdepend, but do not specify an argument, the compiler sets the option to -xdepend=yes which means the compiler analyzes loops for data dependencies.<br/>Dependency analysis is also included with -xautopar or -xparallel. The dependency analysis is done at compile time.<br/>Dependency analysis may help on single-processor systems. However, if you try -xdepend on single-processor systems, you should not use either -xautopar or -xexplicitpar. If either of them is on, then the -xdepend optimization is done for multiple-processor systems.</dd><dt>-xhwcprof</dt><dd>Enables compiler support for hardware counter-based profiling.<br/>When -xhwcprof=[enable|disable] is enabled, the compiler generates information that helps tools match hardware-counter data reference and miss events with associated instructions. Corresponding data-types and structure-members may also be identified in conjunction with symbolic information (produced with -g). This information can be useful in performance analysis and it is not easily identified from profiles based on code addresses, source statements, or routines.<br/>You can compile a specified set of object files with -xhwcprof. However, -xhwcprof is most useful when applied to all object files in the application. This will provide coverage to identify and correlate all memory references distributed in the application's object files.<br/>If you are compiling and linking in separate steps, use -xhwcprof at link time as well. Future extensions to -xhwcprof may require its use at link time.<br/>An instance of -xhwcprof=enable or -xhwcprof=disable overrides all previous instances of -xhwcprof in the same command line.<br/>-xhwcprof is disabled by default. Specifying -xhwcprof without any arguments is the equivalent to -xhwcprof=enable.<br/>-xhwcprof requires that optimization be turned on and that the debug data format be set to DWARF (-xdebugformat=dwarf).<br/>The combination of -xhwcprof and -g increases compiler temporary file storage requirements by more than the sum of the increases due to -xhwcprof and -g specified alone.<br/>The following command compiles example.c and specifies support for hardware counter profiling and symbolic analysis of data types and structure members using DWARF symbols:<br/>example% gcc -c -O -xhwcprof -g -xdebugformat=dwarf example.c</dd><dt>-xinline=<em>list</em></dt><dd>The format of the <em>list</em> for -xinline is as follows: [{%auto,<em>func_name</em>,no%<em>func_name</em>}[,{%auto,<em>func_name</em>,no%<em>func_name</em>}]...]<br/>&nbsp;-xinline tries to inline only those functions specified in the optional list. The list is either empty, or comprised of a comma-separated list of func_name, no%func_name, or %auto, where <em>func_name</em> is a function name. -xinline only has an effect at -O2 or higher.</dd></dl><ul><li>%auto Specifies that the compiler is to attempt to automatically inline all functions in the source file. %auto only takes effect at -xO4 or higher optimization levels. %auto is silently ignored at -xO3 or lower optimization levels.</li><li>func_name Specifies that the compiler is to attempt to inline the named function.</li><li>no%func_name Specifies that the compiler is not to inline the named function.</li><li>no value Specifies that the compiler is not to attempt to inline any functions in the source files.<br/>&nbsp;The list of values accumulates from left to right. So for a specification of -xinline=%auto,no%foo the compiler attempts to inline all functions except foo. For a specification of -xinline=%bar,%myfunc,no%bar the compiler only tries to inline myfunc.<br/>A function is not inlined if any of the following conditions apply. No warning is issued.</li><li>Optimization is less than -O2.</li><li>The routine cannot be found.</li><li>Inlining the routine does not look practicable to the optimizer.</li><li>The source for the routine is not in the file being compiled.<br/>&nbsp;If you specify multiple -xinline options on the command line, they do not accumulate. The last -xinline on the command line specifies what functions the compiler attempts to inline.</li></ul><dl><dt>-xipo[=<em>a</em>]</dt><dd>Replace <em>a</em> with 0, 1, or 2. -xipo without any arguments is equivalent -xipo=1. -xipo=0 is the default setting and turns off -xipo. With -xipo=1, the compiler performs inlining across all source files.<br/>With -xipo=2, the compiler performs interprocedural aliasing analysis as well as optimizations of memory allocation and layout to improve cache performance.<br/>The compiler performs whole-program optimizations by invoking an interprocedural analysis component. Unlike -xcrossfile, -xipo performs optimizations across all object files in the link step, and is not limited to just the source files of the compile command. However whole-program optimizations performed with -xipo do not include assembly (.s) source files.<br/>You must specify -xipo both at compile time and at link time.<br/>The -xipo option generates significantly larger object files due to the additional information needed to perform optimizations across files. However, this additional information does not become part of the final executable binary file. Any increase in the size of the executable program is due to the additional optimizations performed. The object files created in the compilation steps have additional analysis information compiled within them to permit crossfile optimizations to take place at the link step.<br/>-xipo is particularly useful when compiling and linking large multi-file applications. Object files compiled with this flag have analysis information compiled within them that enables interprocedural analysis across source and pre-compiled program files.<br/>However, analysis and optimization is limited to the object files compiled with -xipo, and does not extend to object files in the libraries.<br/>-xipo is multiphased, so you need to specify -xipo for each step if you compile and link in separate steps.<br/>Other important information about -xipo:</dd></dl><ul><li>It requires an optimization level of at least -O3.</li><li>Objects that are compiled without -xipo can be linked freely with objects that are compiled with -xipo.</li></ul><dl><dt>-xipo_archive=[<em>a</em>]</dt><dd>The -xipo_archive option enables the compiler to optimize object files that are passed to the linker with object files that were compiled with -xipo and that reside in the archive library (.a) before producing an executable. Any object files contained in the library that were optimized during the compilation are replaced with their optimized version.<br/><em>a</em> is one of the following:</dd></dl><ul><li><strong>writeback</strong> The compiler optimizes object files passed to the linker with object files compiled with -xipo that reside in the archive library (.a) before producing an executable. Any object files contained in the library that were optimized during the compilation are replaced with an optimized version.</li><li><strong>readonly</strong> The compiler optimizes object files passed to the linker with object files compiled with -xipo that reside in the archive library (.a) before producing an executable.</li><li><strong>none</strong> There is no processing of archive files.<br/>&nbsp;If you do not specify a setting for -xipo_archive, the compiler sets it to -xipo_archive=none.</li></ul><dl><dt>-xlibmil</dt><dd>Inlines some library routines for faster execution. This option selects the appropriate assembly language inline templates for the floating-point option and platform for your system.<br/>-xlibmil inlines a function regardless of any specification of the function as part of the -xinline flag.<br/>However, these substitutions can cause the setting of errno to become unreliable. If your program depends on the value of errno, avoid this option.</dd><dt>-xlibmopt</dt><dd>Enables the compiler to use a library of optimized math routines.<br/>The math routine library is optimized for performance and usually generates faster code. The results may be slightly different from those produced by the normal math library. If so, they usually differ in the last bit.<br/>However, these substitutions can cause the setting of errno to become unreliable. If your program depends on the value of errno, avoid this option.<br/>The order on the command line for this library option is not significant.<br/>This option is set by the -fast option.</dd><dt>-xlinkopt[=<em>level</em>]</dt><dd>Instructs the compiler to perform link-time optimizations on relocatable object files. These optimizations are performed at link time by analyzing the object binary code. The object files are not rewritten but the resulting executable code may differ from the original object codes.<br/>You must use -xlinkopt on at least some of the compilation commands for -xlinkopt to be useful at link time. The optimizer can still perform some limited optimizations on object binaries that are not compiled with -xlinkopt.<br/>-xlinkopt optimizes code coming from static libraries that appear on the compiler command line, but it skips and does not optimize code coming from shared (dynamic) libraries that appear on the command line. You can also use -xlinkopt when you build shared libraries (compiling with -G ).<br/><em>level</em> sets the level of optimizations performed, and must be 0, 1, or 2. The optimization levels are:</dd></dl><ul><li><strong>0</strong> The post-optimizer is disabled. (This is the default.)</li><li><strong>1</strong> Perform optimizations based on control flow analysis, including instruction cache coloring and branch optimizations, at link time.</li><li><strong>2</strong> Perform additional data flow analysis, including dead-code elimination and address computation simplification, at link time.<br/>&nbsp;If you compile in separate steps, -xlinkopt must appear on both compile and link steps:<br/>example% gcc -c -xlinkopt a.c b.c<br/>example% gcc -o myprog -xlinkopt=2 a.o<br/>Note that the level parameter is only used when the compiler is linking. In the example above, the post- optimization level used is 2 even though the object binaries were compiled with an implied level of 1.<br/>Specifying -xlinkopt without a level parameter implies -xlinkopt=1.<br/>This option is most effective when you use it to compile the whole program, and with profile feedback. Profiling reveals the most and least used parts of the code and building directs the optimizer to focus its effort accordingly. This is particularly important with large applications where optimal placement of code performed at link time can reduce instruction cache misses. Typically, this compiles as follows:<br/>example% gcc -o progt -O3 -xprofile=collect:prog file.c<br/>example% progt<br/>example% gcc -o prog -O3 -xprofile=use:prog -xlinkopt file.c<br/>For details on using profile feedback, see -xprofile=p<br/>You cannot use the link-time post-optimizer with the incremental linker, ild. -xlinkopt sets the default linker to be ld. If you enable the incremental linker explicitly with -xildon and also specify -xlinkopt, -xlinkopt is disabled.<br/>Note that compiling with this option increases link time slightly. Object file sizes also increase, but the size of the executable remains the same. Compiling with -xlinkopt and -g increases the size of the executable by including debugging information.</li></ul><dl><dt>-xloopinfo</dt><dd>Shows which loops are parallelized and which are not. Gives a short reason for not parallelizing a loop. The -xloopinfo option is valid only if -xautopar or -xparallel is specified; otherwise, the compiler issues a warning.<br/>To achieve faster execution, this option requires a multiprocessor system. On a single-processor system, the generated code usually runs slower.</dd><dt>-xmemalign=<em>ab</em></dt><dd>Specify maximum assumed memory alignment and behavior of misaligned data accesses. There must be a value for both <em>a</em> (alignment) and <em>b</em> (behavior). <em>a</em> specifies the maximum assumed memory alignment and <em>b</em> specifies the behavior for misaligned memory accesses. The following lists the alignment and behavior values for -xmemalign</dd></dl><ul><li><strong>1</strong> Assume at most 1 byte alignment.</li><li><strong>i</strong> Interpret access and continue execution.</li><li><strong>2</strong> Assume at most 2 byte alignment.</li><li><strong>s</strong> Raise signal SIGBUS.</li><li><strong>4</strong> Assume at most 4 byte alignment.</li><li><strong>f</strong> Raise signal SIGBUS for alignments less or equal to 4,otherwise interpret access and continue execution.</li><li><strong>8</strong> Assume at most 8 byte alignment.</li><li><strong>16</strong> Assume at most 16 byte alignment<br/>&nbsp;You must specify -xmemalign whenever you want to link to an object file that was compiled with the value of /b/ set to either i or f.<br/>For memory accesses where the alignment is determinable at compile time, the compiler generates the appropriate load/store instruction sequence for that alignment of data.<br/>For memory accesses where the alignment cannot be determined at compile time, the compiler must assume an alignment to generate the needed load/store sequence.<br/>The -xmemalign option allows you to specify the maximum memory alignment of data to be assumed by the compiler in these indeterminable situations. It also specifies the error behavior to be followed at run time when a misaligned memory access does take place.<br/>The following default values only apply when no -xmemalign option is present:</li><li>-xmemalgin=8i for all v8 architectures.</li><li>-xmemalign=8s for all v9 architrectures.<br/>&nbsp;The default when -xmemalign option is present but no value is given is -xmemalign=1i for all -xarch values.<br/>The following list shows how you can use -xmemalign to handle different alignment situations.</li><li><strong>-xmemalign=1s</strong> There are many misaligned accesses so trap handling is too slow.</li><li><strong>-xmemalign=8i</strong> There are occasional, intentional, misaligned accesses in code that is otherwise correct.</li><li><strong>-xmemalign=8s</strong> There should be no misaligned accesses in the program.</li><li><strong>-xmemalign=2s</strong> You want to check for possible odd-byte accesses.</li><li><strong>-xmemalign=2i</strong> You want to check for possible odd-byte access and you want the program to work.</li></ul><dl><dt>-xpagesize=<em>n</em></dt><dd>Sets the preferred page size for the stack and the heap.<br/>The <em>n</em> value must be one of the following: 8K, 64K, 512K, 4M, 32M, 256M, 2G, 16G, or default.<br/>You must specify a valid page size for the Solaris operating system on the target platform, as returned by getpagesize(3C). If you do not specify a valid pagesize, the request is silently ignored at run-time. The Solaris operating system offers no guarantee that the page size request will be honored.<br/>You can use pmap(1) or meminfo(2) to determine page size of the target platform.<br/>The -xpagesize option has no effect unless you use it at compile time and at link time.<br/>If you specify -xpagesize=default, the Solaris operating system sets the page size.<br/>Compiling with this option has the same effect as setting the LD_PRELOAD environment variable to mpss.so.1 with the equivalent options, or running the Solaris 9 command ppgsz(1) with the equivalent options before running the program. See the Solaris 9 man pages for details.<br/>This option is a macro for -xpagesize_heap and -xpagesize_stack. These two options accept the same arguments as -xpagesize: 8K, 64K, 512K, 4M, 32M, 256M, 2G, 16G, or default. You can set them both with the same value by specifying -xpagesize or you can specify them individually with different values.</dd><dt>-xpagesize_heap=<em>n</em></dt><dd>Set the page size in memory for the heap.<br/>The value for <em>n</em> must be one of the following: 8K, 64K, 512K, 4M, 32M, 256M, 2G, 16G, or default. You must specify a valid page size for the Solaris operating system on the target platform, as returned by getpagesize(3C). If you do not specify a valid page size, the request is silently ignored at run-time.<br/>You can use pmap(1) or meminfo(2) to determine page size at the target platform.<br/>If you specify -xpagesize_heap=default, the Solaris operating system sets the page size.<br/>Compiling with this option has the same effect as setting the LD_PRELOAD environment variable to mpss.so.1 with the equivalent options, or running the Solaris 9 command ppgsz(1) with the equivalent options before running the program. See the Solaris 9 man pages for details.<br/>The -xpagesize_heap option has no effect unless you use it at compile time and at link time.</dd><dt>-xpagesize_stack=<em>n</em></dt><dd>Set the page size in memory for the stack.<br/>The value for <em>n</em> must be one of the following: 8K, 64K, 512K, 4M, 32M, 256M, 2G, 16G, or default. You must specify a valid page size for the Solaris operating system on the target platform, as returned by getpagesize(3C). If you do not specify a valid page size, the request is silently ignored at run-time. You can use pmap(1) or meminfo(2) to determine page size at the target platform.<br/>If you specify -xpagesize_stack=default, the Solaris operating system sets the page size.<br/>Compiling with this option has the same effect as setting the LD_PRELOAD environment variable to mpss.so.1 with the equivalent options, or running the Solaris 9 command ppgsz(1) with the equivalent options before running the program. See the Solaris 9 man pages for details.<br/>The -xpagesize_stack option has no effect unless you use it at compile time and at link time.</dd><dt>-xparallel</dt><dd>Parallelizes loops both automatically by the compiler and explicitly specified by the programmer. The -xparallel option is a macro, and is equivalent to specifying all three of -xautopar, -xdepend, and -xexplicitpar. With explicit parallelization of loops, there is a risk of producing incorrect results. If optimization is not at -O3 or higher, optimization is raised to -O3 and a warning is issued.<br/>Avoid -xparallel if you do your own thread management.<br/>To get faster code, this option requires a multiprocessor system. On a single-processor system, the generated code usually runs slower.<br/>If you compile and link in one step, -xparallel links with the microtasking library and the threads-safe C runtime library. If you compile and link in separate steps, and you compile with -xparallel, then link with -xparallel.</dd><dt>-xprefetch[=<em>val</em>[,<em>val</em>]]</dt><dd>Enable prefetch instructions on those architectures that support prefetch, such as the UltraSPARC II processor environment. (-xarch=v8plus, v9plusa, v9, or v9a)<br/>Explicit prefetching should only be used under special circumstances that are supported by measurements.<br/><em>val</em> must be one of the following:</dd></dl><ul><li><strong>latx:factor</strong> Adjust the compiler's assumed prefetch-to-load and prefetch-to-store latencies by the specified factor. You can only combine this flag with -xprefetch=auto.</li><li><strong>[no%]auto</strong> [Disable] Enable automatic generation of prefetch instructions</li><li><strong>[no%]explicit</strong> [Disable] Enable explicit prefetch macros</li><li><strong>yes</strong> Obsolete - do not use. Use -xprefetch=auto,explicit instead.<br/>&nbsp;The default for -xprefetch is -xprefetch=auto,explicit.<br/>The sun_prefetch.h header file provides the macros that you can use to specify explicit prefetch instructions. The prefetches are approximately at the place in the executable that corresponds to where the macros appear.<br/>Prefetch Latency Ratio<br/>The prefetch latency is the hardware delay between the execution of a prefetch instruction and the time the data being prefetched is available in the cache.<br/>The factor must be a positive number of the form <em>n.n</em>.<br/>The compiler assumes a prefetch latency value when determining how far apart to place a prefetch instruction and the load or store instruction that uses the prefetched data. The assumed latency between a prefetch and a load may not be the same as the assumed latency between a prefetch and a store.<br/>The compiler tunes the prefetch mechanism for optimal performance across a wide range of machines and applications. This tuning may not always be optimal. For memory-intensive applications, especially applications intended to run on large multiprocessors, you may be able to obtain better performance by increasing the prefetch latency values. To increase the values, use a factor that is greater than 1 (one). A value between .5 and 2.0 will most likely pro vide the maximum performance.<br/>For applications with datasets that reside entirely within the external cache, you may be able to obtain better performance by decreasing the prefetch latency values. To decrease the values, use a factor that is less than one.<br/>To use the latx:factor suboption, start with a factor value near 1.0 and run performance tests against the application. Then increase or decrease the factor, as appropriate, and run the performance tests again. Continue adjusting the factor and running the performance tests until you achieve optimum performance. When you increase or decrease the factor in small steps, you will see no performance difference for a few steps, then a sudden difference, then it will level off again.</li></ul><dl><dt>-xprefetch_level=<em>l</em></dt><dd>Use the -xprefetch_level option to control the aggressiveness of automatic insertion of prefetch instructions as determined with -xprefetch=auto. <em>l</em> must be 1, 2, or 3. The compiler becomes more aggressive, or in other words, introduces more prefetches with each, higher, level of -xprefetch_level.<br/>The appropriate value for the -xprefetch_level depends on the number of cache misses the application may have. Higher -xprefetch_level values have the potential to improve the performance of applications.<br/>This option is effective only when it is compiled with -xprefetch=auto, with optimization level 3 or greater, and generate code for a platform that supports prefetch (v8plus, v8plusa, v9, v9a, v9b, generic64, native64).<br/>-xprefetch_level=1 enables automatic generation of prefetch instructions. -xprefetch_level=2 enables additional generation beyond level 1 and -xprefetch_level=3 enables additional generation beyond level 2.<br/>The default is -xprefetch_level=1 when you specify -xprefetch=auto.</dd><dt>-xprofile=<em>p</em></dt><dd>Use this option to collect and save execution-frequency data so you can then use the data in subsequent runs to improve performance.<br/>You must specify -xprofile at compile time as well as link time.<br/>Compiling with high optimization levels (for example -O3) is enhanced by providing the compiler with runtime-performance feedback. In order to produce runtime-performance feedback, you must compile with -xprofile=collect, run the executable against a typical data set, and then recompile at the highest optimization level and with -xprofile=use.<br/>Profile collection is safe for multithreaded applications. That is, profiling a program that does its own multitasking ( -mt ) produces accurate results.<br/><em>p</em> must be collect[:<em>name</em>] or use[:<em>name</em>].</dd></dl><ul><li><strong>collect[:<em>name</em>]</strong> Collects and saves execution-frequency data for later use by the optimizer with -xprofile=use. The compiler generates code to measure statement execution-frequency.<br/>The <em>name</em> is the name of the program that is being analyzed. This name is optional. If <em>name</em> is not specified, a.out is assumed to be the name of the executable.<br/>You can set the environment variables SUN_PROFDATA and SUN_PROFDATA_DIR to control where a program compiled with -xprofile=collect stores the profile data. If set, the -xprofile=collect data is written to SUN_PROFDATA_DIR/SUN_PROFDATA.<br/>If these environment variables are not set, the profile data is written to <em>name</em>.profile/feedback in the current directory, where <em>name</em> is the name of the executable or the name specified in the -xprofile=<span class="wikiexternallink"><a class="wikimodel-freestanding" href="collect://name//"><span class="wikigeneratedlinkcontent">collect://name//</span></a></span> flag. -xprofile does not append .profile to <em>name</em> if <em>name</em> already ends in .profile. If you run the program several times, the executions-frequency data accumulates in the feedback file; that is, output from prior executions is not lost.<br/>If you are compiling and linking in separate steps, make sure that any object files compiled with -xprofile=collect are also linked with -xprofile=collect.</li><li><strong>use[:<em>name</em>]</strong> The program is optimized by using the execution-frequency data generated and saved in the feedback files from a previous execution of the program that was compiled with -xprofile=collect.<br/>The <em>name</em> is the name of the program that is being analyzed. This name is optional. If <em>name</em> is not specified, a.out is assumed to be the name of the executable.<br/>Except for the -xprofile option which changes from -xprofile=collect to -xprofile=use, the source files and other compiler options must be exactly the same as those used for the compilation that created the compiled program which in turn generated the feedback file. The same version of the compiler must be used for both the collect build and the use build as well. If compiled with -xprofile=<span class="wikiexternallink"><a class="wikimodel-freestanding" href="collect://name//"><span class="wikigeneratedlinkcontent">collect://name//</span></a></span>, the same program name <em>name</em> must appear in the optimizing compilation: -xprofile=<span class="wikiexternallink"><a class="wikimodel-freestanding" href="use://name//."><span class="wikigeneratedlinkcontent">use://name//.</span></a></span><br/>The association between an object file and its profile data is based on the UNIX pathname of the object file when it is compiled with -xprofile=collect. In some circumstances, the compiler will not associate an object file with its profile data: the object file has no profile data because it was not previously compiled with -xprofile=collect, the object file is not linked in a program with -xprofile=collect, the program has never been executed.<br/>The compiler can also become confused if an object file was previously compiled in a different directory with -xprofile=collect and this object file shares a common basename with other object files compiled with -xprofile=collect but they cannot be uniquely identified by the names of their containing directories. In this case, even if the object file has profile data, the compiler will not be able to find it in the feedback directory when the object file is recompiled with -xprofile=use.<br/>All of these situations cause the compiler to lose the association between an object file and its profile data.</li></ul><dl><dt>-xreduction</dt><dd>Turns on reduction recognition during automatic parallelization. -xreduction must be specified with -xautopar, or -xparallel otherwise the compiler issues a warning.<br/>When reduction recognition is enabled, the compiler parallelizes reductions such as <em>dot</em> products, maximum and minimum finding. These reductions yield different roundoffs than obtained by unparallelized code.</dd><dt>-xregs=<em>r</em>[,<em>r</em>...]</dt><dd>Specifies the usage of registers for the generated code.<br/><em>r</em> is a comma-separated list that consists of one or more of the following: [no%]appl, [no%]float.<br/>Example: -xregs=appl,no%float<br/>The meaning of the values are:</dd></dl><ul><li><strong>[no%]appl</strong> [Does not] Allow the compiler to generate code using the application registers as scratch registers. The application registers are:<br/>g2, g3, g4 (v8a, v8, v8plus, v8plusa, v8plusb)<br/>g2, g3 (v9, v9a, v9b)<br/>It is strongly recommended that all system software and libraries be compiled using -xreg=no%appl. System software (including shared libraries) must preserve these registers' values for the application. Their use is intended to be controlled by the compilation system and must be consistent throughout the application.<br/>In the SPARC ABI, these registers are described as /application/ registers. Using these registers can increase performance because fewer load and store instructions are needed. However, such use can conflict with some old library programs written in assembly code.</li><li><strong>[no%]float</strong> [Does not] Allow the compiler to generate code by using the floating-point registers as scratch registers for integer values. Use of floating-point values may use these registers regardless of this option. If you want your code to be free of all references to floating point registers, you need to use -xregs=no%float and also make sure your code does not use floating point types in any way.<br/>The default is -xregs=appl,float.<br/>It is strongly recommended that you compile code intended for shared libraries that will link with applications, with -xregs=no%appl,float. At the very least, the shared library should explicitly document how it uses the application registers so that applications linking with those libraries know how to cope with the issue.<br/>For example, an application using the registers in some global sense (such as using a register to point to some critical data structure) would need to know exactly how a library with code compiled without -xregs=no%appl is using the application registers in order to safely link with that library.</li></ul><dl><dt>-xrestrict</dt><dd>Treats pointer-valued function parameters as restricted pointers.<br/>&nbsp;if -xrestrict is specified, all pointer parameters in the entire C file are treated as restricted.<br/>This command-line option can be used on its own, but it is best used with optimization. For example, the command:<br/>%gcc -O3 -xrestrict prog.c<br/>treats all pointer parameters in the file prog.c as restricted pointers.<br/>This option is off by default.</dd><dt>-xsafe=mem</dt><dd>Allows the compiler to assume no memory-based traps occur.<br/>This option grants permission to use the speculative load instruction on V9 machines. It is only effective when you specify -O3 optimization and -xarch=v8plus|v8plusa|v9|v9a.<br/>Note - Because non-faulting loads do not cause a trap when a fault such as address misalignment or segmentation violation occurs, you should use this option only for programs in which such faults cannot occur. Because few programs incur memory-based traps, you can safely use this option for most programs. Do not use this option for programs that explicitly depend on memory-based traps to handle exceptional conditions.</dd><dt>-xspace</dt><dd>Does no optimizations or parallelization of loops that increase code size.<br/>Example: The compiler will not unroll loops or parallelize loops if it increases code size.</dd><dt>-xtarget=<em>t</em></dt><dd>Specifies the target system for instruction set and optimization.<br/>The value of <em>t</em> must be one of the following: native, generic, <em>system-name</em>.<br/>The -xtarget option is a macro that permits a quick and easy specification of the -xarch, -xchip, and -xcache combinations that occur on real systems. The only meaning of -xtarget is in its expansion.</dd></dl><ul><li><strong>native</strong> Gets the best performance on the host system.<br/>The compiler generates code for the best performance on the host system. It determines the available architecture, chip, and cache properties of the machine on which the compiler is running.</li><li><strong>generic</strong> Gets the best performance for generic architecture, chip, and cache.</li></ul><blockquote><p>&nbsp;The compiler expands -xtarget=generic to:<br/>&nbsp;-xarch=generic -xchip=generic -xcache=generic</p></blockquote><p>This is the default value.</p><ul><li><strong><em>system-name</em></strong> Gets the best performance for the specified system.<br/>&nbsp;The performance of some programs may benefit by providing the compiler with an accurate description of the target computer hardware. When program performance is critical, the proper specification of the target hardware could be very important. This is especially true when running on the newer SPARC processors. However, for most programs and older SPARC processors, the performance gain is negligible and a generic specification is sufficient.<br/>Each specific value for -xtarget expands into a specific set of values for the -xarch, -xchip, and -xcache options.</li></ul><dl><dt>-xunroll=<em>n</em></dt><dd>Suggests to the optimizer to unroll loops <em>n</em> times. <em>n</em> is a positive integer. When <em>n</em> is 1, it is a command, and the compiler unrolls no loops. When <em>n</em> is greater than 1, the -xunroll=<em>n</em> merely suggests to the compiler that it unroll loops <em>n</em> times.</dd><dt>-xvector[={yes|no}]</dt><dd>Enable automatic generation of calls to the vector library functions. You must use default rounding mode by specifying -fround=nearest when you use this option.<br/>-xvector=yes permits the compiler to transform math library calls within loops into single calls to the equivalent vector math routines when such transformations are possible. Such transformations could result in a performance improvement for loops with large loop counts.<br/>If you do not specify -xvector, the default is -xvector=no. -xvector=no undoes a previously specified -xvector=yes. If you specify -xvector but do not supply a value, the default is -xvector=yes.<br/>If you use -xvector on the command line without previously specifying -xdepend, -xvector triggers -xdepend.<br/>The compiler includes the libmvec libraries in the load step.<br/>If you compile and link with separate commands, be sure to use -xvector in the linking gcc command.</dd></dl>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:13<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by admin on 2009/10/26 12:13
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+                </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSNav','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSNav'); togglePanelVisibility(this.parentNode);">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavCommunity Group">
+            <div id="xwikinavCommunity GroupHeader" class="accordionTabTitleBar"><h6>Community Group</h6>
+            </div>
+            <div id="xwikinavCommunity GroupContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+edu/">Academic and Research</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+accessibility/">Accessibility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+advocacy/">Advocacy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+appliances/">Appliances</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+approachability/">Approachability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/">Architecture Process and Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+brandz/">BrandZ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+chinese_users/">Chinese Users</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/">Community Advisory Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+dtrace/">DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+databases/">Databases</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+desktop/">Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/">Device Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+distribution/">Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+emerging_platforms/">Emerging Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+fm/">Fault Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+games/">Games on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ha%2Dclusters/">HA Clusters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+hpcdev/">HPC Developer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+int_localization/">Internationalization and Localization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+laptop/">Laptop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ldoms/">Logical Domains</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+mdb/">Modular Debugger (MDB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+nfs/">NFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/">Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/">OS/Net (ON)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+observability/">Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ogb/">OpenSolaris Governing Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+printing/">OpenSolaris Printing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/">Performance</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+pm/">Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+power_pc/">PowerPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/">Security</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+smf/">Service Management Facility (smf(5))</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sw%2Dporters/">Software Porters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+volume_manager/">Solaris Volume Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+storage/">Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sysadmin/">Systems Administration Community Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+testing/">Testing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/">Tools Home</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ufs/">Unix File Systems (UFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+web/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+x_win/">X Window System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+xen/">Xen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/">ZFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/">Zones</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavProject">
+            <div id="xwikinavProjectHeader" class="accordionTabTitleBar"><h6>Project</h6>
+            </div>
+            <div id="xwikinavProjectContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/"></a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+adsl/">ADSL Modem Enhancement</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+arc%2Dprocess/">ARC Process Definition</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osarm/">ARM Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bind/">BIND Update</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bluetooth/">Bluetooth Stack & Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dinitiator/">Brocade FC HBA &#45; Initiator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dtarget/">Brocade FC HBA &#45; Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brussels/">Brussels &#45; unified network link configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cifs%2Dserver/">CIFS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smbfs/">CIFS client for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cmt/">CMT</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/">COMSTAR: Common Multiprotocol SCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpufs/">CPU Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/">Caiman, Solaris Install Revisited</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+celeste/">Celeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/">Chime Visualization Tool for DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+clearview/">Clearview: Network Interface Coherence</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dinformix/">Cluster Agent: Informix Dynamic Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dcontainer/">Cluster Agent: OpenSolaris Container</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dxvm/">Cluster Agent: OpenSolaris xVM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Debs/">Cluster Agent: Oracle E&#45;Business Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dsmb/">Cluster Agent: Samba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dtomcat/">Cluster Agent: Tomcat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dpostgresql/">Cluster agent: PostgreSQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+data%2Dflow/">Coarse Data Flow Parallelism</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+colorado/">Colorado: Open HA Cluster on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+commandassist/">Command Assistant</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cam/">Common Array Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+companion/">Companion &#45; /opt/sfw: Free and Open Source software</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+content/">Content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+contest/">Contest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpg/">Credentials Process Groups</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crossbow/">Crossbow: Network Virtualization and Resource Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmsagenttoolkit/">Crypto KMS Agent Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/">Cryptographic Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Ddoc/">DTrace Guide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dmm/">Data Migration Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+datatethers/">Data Tethers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+de/">Deutsches Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ddtool/">Device Detection Tool</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+driver%2Dutility/">Device Driver Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devicemgr/">Device Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devmapper/">Device Mapper</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dri/">Direct Rendering Infrastructure & 3D drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/">Duckwater: Simplified name services management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+phpEasyTools/">Easy Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emancipation/">Emancipation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex%2Dcna/">Emulex Advanced Ethernet Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex/">Emulex Fibre Channel Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webcams/">Enhance the support of USB webcams</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Dprofiles/">Enhanced SMF Profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+amd/">Enhancements for AMD&#45;based Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+erlang%2Ddtrace/">Erlang DTrace Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ethbridge/">Ethernet bridge module for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+conary%2Deval/">Evaluate Conary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+events%2Dregistry/">Events Registry</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ext3/">Ext3 file system support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+facilitation/">Facilitation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fcoe/">Fibre Channel over Ethernet</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fgap/">Fine Grained Access Policy (FGAP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fingerprint%2Dauthentication/">Fingerprint Authentication</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fmac/">Flexible Mandatory Access Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+forensics/">Forensic Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fox/">Fully Open X Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fuse/">Fuse on Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+generic%2Dmca/">Generic Machine Check Architecture Improvements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+raidcfg/">Generic RAID Configuration Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+summerofcode/">Google SOC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Djboss/">HA&#45;JBoss</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dmysql/">HA&#45;MySQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hpc%2Dstack/">HPC Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livehadoop/">Hadoop Live CD</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hitachi/">Hitachi</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+honeycomb/">HoneyComb Fixed Content Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hotplug/">Hotplug Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ip%2Drefactor/">IP Datapath Refactoring</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ipoib/">IP over Infiniband</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tref/">IPsec Tunnel Reform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/">Image Packaging System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isc/">Immutable Service Containers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+perfmib/">Improved Performance MIB</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/">Indiana</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+awards/">Innovation Awards</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ikev2/">Internet Key Exchange, version 2 (IKEv2)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+irm/">Interrupt Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jkstat/">JKstat &#45; a java binding for libkstat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jeos/">JeOS &#45; Just enough Operating System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jfs/">Journaled File System (JFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kde/">K Desktop Environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kerberos/">Kerberos</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kssl/">Kernel SSL Enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kernel%2Dsockets/">Kernel Sockets</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmf/">Key Management Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ksh93%2Dintegration/">Korn Shell 93 integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ldoms%2Dmgr/">LDoms Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+txipsec/">Labeled IPsec</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+l2filter/">Layer 2 Filtering</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lending/">Lending</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lld/">Link Layer Discovery</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livemedia/">Live Media: Technologies for distributions running from CD and other media</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+localedata/">Locale Data</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mips/">MIPS Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohac%2Davs/">MRSL.NONsharedDevice</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mega_sas/">Mega_sas</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mx/">Mexico</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+milax/">MilaX minimal Live Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mozilla%2Ddtrace/">Mozilla DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+glossary/">Multi&#45;lingual Glossary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mpxio/">Multi&#45;pathing software (MPxIO)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+multiple%2Ddoi/">Multiple DOI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+muskoka/">Muskoka: An open repository for OpenSolaris technical content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsrdma/">NFS RDMA transport update and performance analysis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dzones/">NFS Server in non&#45;Global Zones</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsv41/">NFS version 4.1 pNFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dnamespace/">NFSv4 namespace extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npiv/">NPort ID Virtualization (NPIV)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+navigator/">Navigator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nemo/">Nemo: A Framework for High&#45;Performance Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/">Network Auto&#45;Magic</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ndmp/">Network Data Management Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+net%2Dmib/">Network MIBs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npp/">Network Performance Projects</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dpm/">Network Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nws/">Network Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nv%2Dg11n/">Nevada Globalization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+4over6/">New Design of 4over6 Mechanism Based on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nightingale/">Nightingale: Port Songbird to OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+onnv/">ON/Nevada (ONNV) Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osd/">Object Storage Device (OSD) support for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opendev/">Open Development Infrastructure</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dutilities/">Open HA Cluster Utilities</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opensound/">Open Sound System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/">OpenGrok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cim%2Dserver/">OpenPegasus CIM Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+openrti/">OpenRTI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+busybox/">OpenSolaris Busybox</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/">OpenSolaris Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+es/">OpenSolaris Hispano</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+audit/">OpenSolaris Security Audit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/">OpenSolaris support for the QEMU processor emulator: host and guest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pef/">PEF: Packet Event Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+performance%2Dwrappers/">Performance Wrappers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkgfactory/">Pkgfactory</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pl/">Polski Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fr/">Portail Francophone</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+br/">Portal Brasileiro de OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+portals/">Portals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmui/">Power Management Usability Interfaces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+presto/">Presto: Automatic Printing Configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmpsm/">Printable Many Page Solaris Manuals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+promise%2Dstorage/">Promise SuperTrak RAID HBA Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qlogic%2Dcna/">QLogic Converged Network Adapter GLDv3 NIC Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+quagga/">Quagga Routing Protocol Suite Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rbridges/">RBridge (IETF TRILL) support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rof/">RDMA Offload Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+releasenotes/">Release Notes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+reno/">Reno: Login Process Enhancements for Interop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/">Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+samqfs/">SAM/QFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+scm%2Dmigration/">SCM Migration Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+srp/">SCSI RDMA Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sdcard%2Ddrivers/">SDcard Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sfwnv/">SFW</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sm%2Dhba/">SM&#45;HBA Based SAS HBA Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Ddoc/">SMF Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+svr4_packaging/">SVR4 Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sensors/">Sensor Abstraction Layer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dsip/">Session Initiation Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+simplepanels/">Simple Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/">Solaris PowerPC Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iscsitgt/">Solaris iSCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sourcejuicer/">SourceJuicer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/">Sparks: name service switch/nscd enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+squashfs/">Squashfs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+star/">Star integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starfish/">Starfish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starterkit/">Starter Kit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+storagepm/">Storage Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sst/">Sun Security Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+avs/">Sun StorageTek Availability Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ofuv/">Support for OpenFabrics User Verbs / API on OpenSolaris OS</a></span></li>
+<li><em class="underline"><em><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/">Support gcc4/GCCfss in Solaris</a></span></em></em></li>
+<li><span class="wikilink"><a href="/bin/view/Project+suspend%2Dresume/">Suspend/Resume</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+systemz/">Systemz</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tipc/">TIPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+branding/">Trademarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tpm/">Trusted Platform Module support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tnipdb/">Trusted networking interface policy database for Trusted Extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+usecase/">Use Case</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+userland/">Userland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vrrp/">VRRP: Virtual Router Redundancy Protocol Implementation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vscan/">VSCAN service</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+valex/">Validated Execution Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vconsole/">Virtual Console</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vnm/">Virtual Network Machines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/">Visual Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+visualization%2Dhpc/">Visualization for HPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+volo/">Volo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/">Web Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+website/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+winchester/">Winchester: Schema mapping and ID mapping for AD Interoperability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wusb/">Wireless USB Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wwan/">Wireless Wide Area Network</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x%2Dcons/">X Consolidation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xkblayout/">X Keyboard Layout</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xen%2Dgate/">Xen Gate</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xfce/">Xfce: A lightweight desktop environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfsboot/">ZFS Boot and Install</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfs%2Dcrypto/">ZFS on disk encryption support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonemgr/">Zone Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonestat/">Zone Statistics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gcore/">gcore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iser/">iSCSI Extensions for Remote DMA (iSER)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isns/">iSNS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+libmicro/">libMicro &#45; portable microbenchmarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+loficc/">lofi compression and cryptography support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lx64/">lx64 brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+s10brand/">s10brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x86gentopo/">x86 Generic FMA Topology Enumerator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cz/">Český portál</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ru/">Русский портал</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ar/">البوابة العربية</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+in/">भारतीय पोर्टल</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cn/">中国门户</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/">日本ポータル</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kr/">한국 포탈</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavUser Group">
+            <div id="xwikinavUser GroupHeader" class="accordionTabTitleBar"><h6>User Group</h6>
+            </div>
+            <div id="xwikinavUser GroupContent" class="accordionTabContentBox"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+kr/"></a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+adl%2Dauosug/">Adelaide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+aosug/">Argentina</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+azosug/">Arizona</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+atl%2Dosug/">Atlanta OpenSolaris Users Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bwosug/">Baltimore&#45;Washington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bosug/">Bangalore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bkkosug/">Bangkok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bdosug/">Bangladesh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bjosug/">Beijing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+brosug/">Berlin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bvrm%2Dosug/">Bhimavaram</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+btn%2Dosug/">Bloomington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfosug/">Brasilia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+blmosug/">Bélem</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+crosug/">Capital Region</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cfosug/">Cardiff</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ccosug/">Caribbean OSUG</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ceosug/">Ceara</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cltosug/">Charlotte</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chennai/">Chennai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chmxosug/">Chihuahua</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+closug/">Chile</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cle%2Dosug/">Cleveland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+colosug/">Colombia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cmh%2Dosug/">Columbus</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ctosug/">Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+knp%2Duek/">Cracow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+czosug/">Czech</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfw%2Dosug/">Dallas/Ft. Worth</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dosug/">Danish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+deosug/">Delaware</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+eduosug/">Edinburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+egosug/">Egypt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fiosug/">Finland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+flosug/">Florida</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fraosug/">Frankfurt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+frosug/">Front Range</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+glug/">Great Lakes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+grosug/">Greece</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hzosug/">Hangzhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hi%2Dosug/">Hawaii</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hkosug/">Hong Kong</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hugs/">Houston</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hosug/">Hyderabad</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+idosug/">Indonesia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madridosug/">Inicio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ie%2Dosug/">Irish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+iosug/">Israel</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+istosug/">Istanbul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+itl%2Dosug/">Italian</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jnosug/">Jinan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jogja%2Dosug/">Jogja</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kbosug/">Kabul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kc%2Dosug/">Kansas City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+lavosug/">Latvia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+losug/">London</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madosug/">Madurai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mansug/">Manchester</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mssosug/">Mato Grosso</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+msosug/">Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mgosug/">Minas Gerais</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mnosug/">Minnesota</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mtlosug/">Montreal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mosug/">Moscow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mmosug/">Mumbai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mucosug/">Munich</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+neaosug/">NEA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nlosug/">Netherlands</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ne%2Dosug/">New England</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nycosug/">New York City OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nzosug/">New Zealand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+norosug/">Noroeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nerosug/">Nuremberg&#45;Erlangen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+okcosug/">Oklahoma City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ososug/">Osnabrück</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+peosug/">Peru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+paosug/">Philadelphia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+piaski%2Dosug/">Piaski</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ptosug/">Pittsburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+poaosug/">Porto Alegre</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+psosug/">Puget Sound</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+posug/">Pune</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+qosug/">Queensland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rtp%2Dosug/">Research Triangle Park</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+riosug/">Rio de Janeiro</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ro%2Dosug/">Romania</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ruosug/">Russia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+alamo%2Dosug/">San Antonio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sdosug/">San Diego</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sfosug/">San Francisco</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+scosug/">Scottish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rs%2Dosug/">Serbia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szosug/">Shenzhen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svosug/">Silicon Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sgosug/">Singapore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+skosug/">Slovak</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+saosug/">South African</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+soctosug/">Southern Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+stl%2Dosug/">St. Louis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svgosug/">Stavanger</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+swosug/">Sweden</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chosug/">Switzerland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sosug/">Sydney</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szc%2Dosug/">Szczecin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sampaosug/">São Paulo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+twosug/">Taiwan OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ostug/">Tecum</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tvosug/">Thames Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tsug/">Tokyo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+torosug/">Toronto</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+trosug/">Trondheim</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+toss/">Tulsa</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tosug/">Turkey</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ufaosug/">Ufa OSUG</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+uaosug/">Ukraine OpenSolaris User Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+unimelb%2Dosug/">University of Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+valeosug/">Vale do Paraíba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vanosug/">Vancouver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vosug/">Venezuela &#45; Pagina de incio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vvoosug/">Vladivostok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wosug/">Welsh &#45; Cymru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wiosug/">Wisconsin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+xaosug/">Xi'an</a></span></li>
+</ul>
+                                                            </div>
+        </div>
+    </div>
+</div><p/>
+<script type="text/javascript">
+var obj = {div:'xwikinav',no:1,height:250};
+var acc = createAccordion(obj);
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSDocs','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSDocs'); togglePanelVisibility(this.parentNode);">Project gccfss-on Pages</h1>
+<div class="xwikipanelcontents"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/ReleaseNotes">Release Notes for GCCFSS 4.0.4</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/bestoptions">Choosing the best options for performance</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/faq">Frequently Asked Questions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/flags">GCCFSS command line options</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/install">Install GCCFSS 4.0.4</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/mcpu">GCCFSS &#45;mcpu/&#45;mtune and &#45;xtarget/&#45;xarch command line options</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/porting">Porting Guide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/xbinopt">&#45;xbinopt=prepare command line option</a></span></li>
+</ul>
+                        </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div>  <div id="footerglobal" class="layoutsection">
+  <div class="minwidth"></div>
+
+  <script language="JavaScript" src="/resources/js/s_code_remote.js"></script>
+
+
+          <div id="xwikiplatformversion">XWiki Enterprise 2.1.1.25889 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+  <br/>
+
+
+    <hr/>
+    <div><a href="/bin/view/Main/tou">Terms Of Use</a> |
+         <a href="http://www.sun.com/privacy/">Privacy</a> | 
+         <a href="/bin/view/Main/trademark">Trademarks</a> |
+         <a href="/bin/view/Main/copyrights">Copyright Policy</a> |
+         <a href="/bin/view/Main/site_guidelines">Site Guidelines</a> |
+         <a href="/bin/view/Main/site%2Dmap">Site map</a> |
+         <a href="/bin/view/Main/help">Help</a></div>
+    <div>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.</div>
+    <div id="xwikilicence">© 2010, Oracle Corporation and/or its affiliates</div>
+    <img src="http://opensolaris.org/oracle/logo_oracle_footer.gif")" alt="Oracle"/>
+  <hr/>
+  
+  </div>
+
+
+</div></div></body>
+</html>

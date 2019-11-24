@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Using the mptt SAS target driver in COMSTAR (Project comstar.mptt) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+comstar/mptt" />
+                    <link rel="canonical" href="/bin/view/Project+comstar/mptt" />
+                            <meta name="document" content="Project comstar.mptt"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Project comstar"/>
+    <meta name="page" content="mptt"/>
+    <meta name="version" content="1.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Project+comstar/pages/mptt"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Using the mptt SAS target driver in COMSTAR" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project comstar";
+XWiki.currentPage = "mptt";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Project+comstar/mptt";
+window.docediturl = "/bin/edit/Project+comstar/mptt";
+window.docsaveurl = "/bin/save/Project+comstar/mptt";
+window.docgeturl = "/bin/get/Project+comstar/mptt";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Project_comstar viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bcomstar%2Fmptt"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+comstar/"><strong>Project comstar</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Project+comstar" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+            </td>
+            <td id="logo-text" style="width: 1%;">
+                Solaris
+            </td>         
+            <td style="width: 98%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                  <span class='current'>Using the mptt SAS target driver in COMSTAR</span>
+          </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+comstar/mptt?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+comstar/mptt?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+comstar/mptt?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+comstar/mptt?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+comstar/mptt?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+comstar/mptt?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+comstar/mptt?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+comstar/mptt?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+comstar/mptt?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+comstar/mptt?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+comstar/mptt?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          <span class="submenuitem "><a href="/bin/view/Project+comstar/mptt?xpage=copy" id="tmActionCopy" class="tmActionCopy">Copy</a></span>
+      </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>Using the mptt SAS target driver in COMSTAR</h1></div>
+
+
+
+    <strong>NOTE: The
+ comstar project
+ is no longer active on this website so information here may be out of date. Current Oracle Solaris 11 product documentation can be found </strong>
+  <strong><a href="http://www.oracle.com/technetwork/server-storage/solaris11/documentation/index.html">here</a>.</strong>
+  <strong>Information about downloading Oracle Solaris 11 can be found <a href="http://www.oracle.com/technetwork/server-storage/solaris11/downloads/index.html">here</a>.</strong>
+<hr>
+  
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h1 id="HUsingthempttSAStarget-modedriverinCOMSTAR"><span>Using the mptt SAS target-mode driver in COMSTAR</span></h1><h3 id="HBackground"><span>Background</span></h3><p>&nbsp;The COMSTAR mptt driver provides the capability of using the following Sun SAS HBAs in target-mode within COMSTAR:</p><blockquote><p></p></blockquote><pre>
+Marketing P/N		Sun P/N	    Chipset		Form factor
+~----------------	~--------    ~-------		~-----------
+SG-XPCIE8SAS-E-Z	375-3487    1068e		PCIe
+SG-XPCI8SAS-E-Z		375-3488    1068		PCI-X
+</pre><h3 id="HDriver"><span>Driver</span></h3><p>&nbsp;The mptt driver is a COMSTAR target-mode driver loosely based on the "mpt" initiator driver that is currently part of the ON consolidation. It has been extensively modified to fit in the COMSTAR framework and to provide target-mode capability for SAS connectivity.</p><p>&nbsp;This driver is not part of any Solaris release and is provided on an as-is basis. However, most of the necessary functionality is in place. This driver should operate well in standard SAS environments. Development was more or less complete in August, 2008, although a quick sanity check on build 107 indicates that the driver is still functional.</p><h3 id="HCaveats"><span>Caveats</span></h3><p>&nbsp;The mptt driver does not support DDI suspend/resume, nor does it implement power management. This driver is designed to operate in wide- port configurations only.</p><h3 id="HGeneralUsage"><span>General Usage</span></h3><p>&nbsp;Usage of the mptt driver is similar to that of the qlt driver. See the existing COMSTAR documentation for details on creating and maintaining view entries (for zoning) and for details on enabling or disabling the COMSTAR service.</p><p>&nbsp;The details provided here are intended for users that are already familiar with how to use COMSTAR and will aid in explaining how the various administrative actions (e.g. stmfadm) alter the behavior of the mptt driver.</p><h3 id="HInstallation"><span>Installation</span></h3><p>&nbsp;The mptt driver was originally developed with the intent to have it installed as part of the SUNWstmf packages. Since it is not integrated into Solaris and the packaging has not been updated, there are no standalone packages for mptt.</p><ol><li>Download the "mptt.tar.gz" file from the Files link. It contains the following files:</li></ol><blockquote><p></p></blockquote><pre>
+./root_i386-debug/usr/lib/mdb/kvm/amd64/mptt.so
+./root_i386-debug/usr/lib/mdb/kvm/mptt.so
+./root_i386-debug/kernel/drv/mptt.conf
+./root_i386-debug/kernel/drv/amd64/mptt
+./root_i386-debug/kernel/drv/mptt
+./root_sparc-debug/usr/lib/mdb/kvm/mptt.so
+./root_sparc-debug/usr/lib/mdb/kvm/sparcv9/mptt.so
+./root_sparc-debug/kernel/drv/mptt.conf
+./root_sparc-debug/kernel/drv/sparcv9/mptt
+./root_sparc-nondebug/kernel/drv/mptt.conf
+./root_sparc-nondebug/kernel/drv/sparcv9/mptt
+./root_sparc-nondebug/usr/lib/mdb/kvm/mptt.so
+./root_sparc-nondebug/usr/lib/mdb/kvm/sparcv9/mptt.so
+./root_i386-nondebug/kernel/drv/amd64/mptt
+./root_i386-nondebug/kernel/drv/mptt
+./root_i386-nondebug/kernel/drv/mptt.conf
+./root_i386-nondebug/usr/lib/mdb/kvm/amd64/mptt.so
+./root_i386-nondebug/usr/lib/mdb/kvm/mptt.so
+</pre><p>&nbsp;Pick the set of files for your system type and whether or not you want DEBUG drivers. That is, for x64 non-DEBUG, you want the files in the root_i386-nondebug directory. Or, for SPARC DEBUG, you'd want the files in the root_sparc-debug directory.<br/>&nbsp;The rest of the path indicates where the files need to be installed (you can just copy them with cp) relative to the root directory. The driver binaries and mdb library (mptt.so) should be "chown"ed to root:sys and "chmod"ed to 755 for the driver and 555 for the shared library. The mptt.conf file can also be "chown"ed similarly and "chmod"ed to 644.</p><ol><li>Modify driver bindings for a specific card type<br/>&nbsp;If you wish to run mptt on the PCIe (375-3487) card, remove the existing binding (likely to the "mpt" driver):</li></ol><blockquote><p></p></blockquote><pre>
+update_drv -d -i '"pciex1000,58"' mpt
+</pre><p>&nbsp;and add a binding for mptt</p><blockquote><p></p></blockquote><pre>
+update_drv -a -i '"pciex1000,58"' mptt
+</pre><p>&nbsp;NOTE: If another driver is currently running on the card, a reboot will be required.</p><ol><li>Another possibility with later builds is to add a path-based binding for the specific instance of the card you wish to use. The device path can be found either from 'dmesg' output, or from 'prtconf -v' output. For example, the PCI-X HBA (375-3488) has a device ID of 0x3160. The device path can be found by doing:</li></ol><blockquote><p></p></blockquote><pre>
+-bash-3.2# prtconf -v|egrep 'dev_path.*3160'
+dev_path=/pci@1d,0/pci1022,7450@1/pci1000,3160@1:mptt1
+</pre><p>&nbsp;The above controller is already being managed by the mptt driver, and there may be multiple lines of output depending on your system configuration, but the device path should be consistent per-HBA.<br/>&nbsp;You can add a binding for mptt to that specific instance by doing the following:</p><blockquote><p></p></blockquote><pre>
+update_drv -a -i '"/pci@1d,0/pci1022,7450@1/pci1000,3160@1"' mptt
+</pre><ol><li>Reboot the system if required.</li></ol><p>&nbsp;The mptt driver will now be attached and ready to run.</p><h3 id="HUsingmptt"><span>Using mptt</span></h3><p>&nbsp;The svcadm(1M) command is used, among other things, to disable or enable the stmf service. When the stmf service is disabled, the mptt driver is taken off-line by means of resetting the IOC and releasing many of the driver's resources. When the stmf service is enabled, the IOC is configured and communication is enabled.</p><p>&nbsp;Although these cards are single-function cards, there are actually two physical ports. Thus, the mptt driver will register two target ports with the COMSTAR framework; one for each connector.</p><p>&nbsp;For example, running "stmfadm list-target" will result in output similar to this:</p><blockquote><p></p></blockquote><pre>
+-bash-3.2# stmfadm list-target
+Target: wwn.500605B0000D9324
+Target: wwn.500605B0000D9320
+</pre><p>&nbsp;Each target represents one physical connector on the HBA. This isn't strictly necessary, but does allow for ease of administration specifically with respect to zoning. Logical units can be assigned/zoned to one individual port if desired.</p><h3 id="Hmptt.conf"><span>mptt.conf</span></h3><p>&nbsp;The mptt.conf file currently contains three entries. These are:</p><blockquote><p>&nbsp;&nbsp;ddi-forceattach</p></blockquote><p>&nbsp;force-target-mode<br/>&nbsp;force-initiator-mode</p><p>&nbsp;The ddi-forceattach entry is required and must not be modified.</p><p>&nbsp;The force-target-mode and force-initiator-mode entries are used to tell mptt how to program the HBA. These parameters allow the user to ensure that the HBA is capable of operating either as a target or an initiator. This is required because these HBAs, by default, act only as an initiator. There is no way to allow the HBA to operate in both modes simultaneously.</p><p>&nbsp;In order to allow the HBA to function as a target, the force-target-mode parameter must be set to "1". Similarly, to revert back to the original HBA behavior (i.e. "Initiator"), the force-initiator-mode value must be set to a "1".</p><p>&nbsp;If both of these parameters are set to 0, no changes will be made to the current operating parameters of the HBA. If both are set to "1", target mode will take precedence and the HBA will be programmed to act in target mode (if it isn't already doing so).</p><p><strong>NOTE</strong>: The information below only pertains to versions of opensolaris prior to build 83. As of snv_83, <span class="wikiexternallink"><a href="http://bugs.opensolaris.org/view_bug.do?bug_id=6638102">this CR</a></span> will allow the mpt driver to put an HBA back into initiator mode if it is currently in target mode.</p><p>&nbsp;If you wish to re-program an HBA that is currently being controlled by mptt in target mode back into initiator mode, you must perform the following steps:</p><blockquote><p>1. svcadm disable stmf -- Offline the HBA port</p></blockquote><ol><li>modunload -i &nbsp;-- Use modinfo to determine the module ID.</li><li>Edit /kernel/drv/mptt.conf. Set force-target-mode to 0 and force-initiator-mode to 1.</li><li>update_drv mptt -- This will reload mptt. The driver will re-program the HBA to operate as an initiator. After that occurs, mptt will no longer be able to use this HBA.</li><li>rem_drv mptt -- This will uninstall the mptt driver (Optional)</li><li>Use 'update_drv' to modify the driver bindings as required.</li><li>Reboot the system to allow mpt to reclaim that HBA.</li></ol>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:12<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by admin on 2009/10/26 12:12
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Project comstar Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/Documentation">Documentation</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/AdminGuide">COMSTAR Admin Guide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/FAQs">COMSTAR FAQs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/ManPages">Specs and Man Pages</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/ReleaseNotes">Release Notes</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/DownloadSource">Source Code</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/LinuxMultipathing">COMSTAR and Linux Multipathing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/SPD_PASS">SCSI Block Device Pass Through Provider</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/mptt">Using the mptt SAS target driver in COMSTAR</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/video">Demos and Videos</a></span></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2012, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

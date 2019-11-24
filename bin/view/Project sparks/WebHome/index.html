@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Sparks: name service switch/nscd enhancements (Project sparks.WebHome) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+sparks/WebHome" />
+                    <link rel="canonical" href="/bin/view/Project+sparks/" />
+                            <meta name="document" content="Project sparks.WebHome"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Project sparks"/>
+    <meta name="page" content="WebHome"/>
+    <meta name="version" content="4.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Project+sparks/pages/WebHome"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Sparks: name service switch/nscd enhancements" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project sparks";
+XWiki.currentPage = "WebHome";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Project+sparks/";
+window.docediturl = "/bin/edit/Project+sparks/WebHome";
+window.docsaveurl = "/bin/save/Project+sparks/WebHome";
+window.docgeturl = "/bin/get/Project+sparks/WebHome";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Project_sparks viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bsparks%2FWebHome"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+sparks/"><strong>Project sparks</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Project+sparks" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>
+            </td>
+            <td style="width: 99%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                  <span class='current'>Sparks: name service switch/nscd enhancements</span>
+          </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+            <a href="/bin/view/Project+sparks/?language=" class="language-default language-current"></a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+sparks/WebHome?format=pdf" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+sparks/WebHome?format=rtf" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+sparks/WebHome?format=html" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+sparks/?viewer=code"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+sparks/?viewer=comments" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+sparks/?viewer=attachments" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+sparks/?viewer=history" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+sparks/?viewer=information" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+sparks/?viewer=code" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+sparks/?xpage=print" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          <span class="submenuitem "><a href="/bin/view/Project+sparks/?xpage=copy" id="tmActionCopy" class="tmActionCopy">Copy</a></span>
+      </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>Sparks: name service switch/nscd enhancements</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h2 id="HSparksStatus"><span>Sparks Status</span></h2><h2 id="HRecentNews"><span>Recent News</span></h2><h3 id="HDocumentationpageupdatedwithpermanentlinkstobothsections."><span>Documentation page updated with permanent links to both sections.</span></h3><h3 id="HSettingUpOpenDS1.0.0asaNamingServicefortheOpenSolarisOS2CPart2of2:AdvancedConfigurations"><span>Setting Up OpenDS 1.0.0 as a Naming Service for the OpenSolaris OS, Part 2 of 2: Advanced Configurations</span></h3><p>The following is the second part of an excellent two part blog entry,<br/>from the OpenDS team, detailing<br/>the steps to setting up an OpenDS server on OpenSolaris.</p><p><span class="wikiexternallink"><a href="http://developers.sun.com/identity/reference/techart/opends-namesvcs2.html"><span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://developers.sun.com/identity/reference/techart/opends-namesvcs2.html"><span class="wikigeneratedlinkcontent">http://developers.sun.com/identity/reference/techart/opends-namesvcs2.html</span></a></span></a></span></p><h3 id="HSettingUpOpenDS1.0.0asaNamingServicefortheOpenSolarisOS2CPart1of2:BasicSteps"><span>Setting Up OpenDS 1.0.0 as a Naming Service for the OpenSolaris OS, Part 1 of 2: Basic Steps</span></h3><p>The following is an excellent blog entry from the OpenDS team detailing<br/>the steps to setting up an OpenDS server on OpenSolaris.</p><p><span class="wikiexternallink"><a href="http://developers.sun.com/identity/reference/techart/opends-namesvcs.html"><span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://developers.sun.com/identity/reference/techart/opends-namesvcs.html"><span class="wikigeneratedlinkcontent">http://developers.sun.com/identity/reference/techart/opends-namesvcs.html</span></a></span></a></span></p><p>We're looking forward to part 2!</p><h3 id="HDuckwaterStandaloneEnhancementsinsnv_93"><span>Duckwater Standalone Enhancements in snv_93</span></h3><p>The Duckwater (phase 0) standalone tools improvements, as well as a<br/>number of improvements in connection management were delivered in snv_93.</p><p>Details on the Duckwater standalone changes can be found here:<br/><span class="wikilink"><a href="/bin/view/Project+duckwater/duckwater_phase0"><span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://www.opensolaris.org/os/project/duckwater/duckwater_phase0/"><span class="wikigeneratedlinkcontent">http://www.opensolaris.org/os/project/duckwater/duckwater_phase0/</span></a></span></a></span></p><h3 id="HBigAdminSolarisLDAP2FActiveDirectoryDocumentNowAvailable"><span>BigAdmin Solaris LDAP/Active Directory Document Now Available</span></h3><p>The document<br/> <span class="wikiexternallink"><a href="http://www.sun.com/bigadmin/features/articles/kerberos_s10.jsp">Using Kerberos to Authenticate a Solaris 10 OS LDAP Client With Microsoft Active Directory</a></span><br/>is now available on BigAdmin at:</p><p><span class="wikiexternallink"><a href="http://www.sun.com/bigadmin/features/articles/kerberos_s10.jsp"><span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://www.sun.com/bigadmin/features/articles/kerberos_s10.jsp"><span class="wikigeneratedlinkcontent">http://www.sun.com/bigadmin/features/articles/kerberos_s10.jsp</span></a></span></a></span></p><p>This document describes step by step, how to setup Active Directory, Kerberos<br/>and per-user (self) authentication from Sparks, so that a Solaris machine can<br/>run natively in an Active Directory Environment using Active Directory style<br/>secure authentication (Kerberos).<br/>The document is written from the point of view of a Solaris 10 deployment,<br/>but it applies equally to Nevada as well.<br/>This is a great paper to read.</p><h2 id="HOlderNews"><span>Older News</span></h2><h3 id="HSparksphase1wasdeliveredintosnv_50ands10u4"><span>Sparks phase 1 was delivered into snv_50 and s10u4</span></h3><p>The first sparks delivery has been integrated into the 50th build<br/>of Solaris Nevada.</p><p>It was also back ported and delivered into Solaris 10 update 4.</p><p>Sparks in it's current form is part of the current ON (OS/Net) Consolidation <span class="wikiexternallink"><a href="http://dlc.sun.com/osol/on/downloads/current">found here</a></span></p><h2 id="HIntroduction"><span>Introduction</span></h2><p>The Sparks project plans to make upward compatible changes to the name<br/>service switch and to nscd(1M) in order to deliver new functionality including:</p><div class="wikimodel-emptyline"></div><ul><li>Better caching in nscd(1M) and management of connections within the<br/>updated framework.</li><li>Name service lookups that are access controlled at the naming service on a per-user basis. The updated the switch framework will add support for this style of lookups using SASL/GSS/Kerberos in a manner that is compatible with the authentication model used in MS Active Directory.</li><li>A framework for the future addition of putXbyY interfaces.</li></ul><p>This project also plans to fix many of the outstanding approachability bugs,<br/>RFEs and known problems in the existing switch code including the hard coded<br/>internal buffer length limitations, such as hosts and groups, the multithreading performance issues, etc.</p><p>Why Sparks? <span class="wikiexternallink"><a href="http://www.nevadaweb.com/cnt/r-t/sparks/index.html">1</a></span> <span class="wikiexternallink"><a href="http://cprr.org/Museum/Unknowns/Sparks_NE_Roundhouse.html">2</a></span></p><h2 id="HNsswitchApproachabilityIssues"><span>Nsswitch Approachability Issues</span></h2><p>The impetus for the sparks project stems from a review, about a year ago,<br/>of the hundreds of outstanding bugs and RFE requests from customers that<br/>have accumulated over the last 10-15 years, input we were receiving from<br/>internal and customer deployments of LDAP naming services, the announcement<br/>that we made to EOL NIS+ and an analysis of Active Directory features.</p><p>From this we assembled a list of high level approachability issues that include:</p><ul><li>Security - The switch is not secure by default, and not very secure in general.</li><li>Caching - nscd caches a subset of {pw,gr,host,attr} only</li><li>Scalable buffering - Internal fixed sized buffers cause scalability issues</li><li>MT Scalability - The nsswitch is not MT hot and has fixed operational limits</li><li>Write Capability - There is no write capability, password changing is ad-hoc</li><li>Interoperability - &nbsp;We need to extend beyond basic “UNIX/Linux” interop</li><li>Auto-configuration - is needed including DNS SRV and NWAM support</li><li>Start addressing the RFEs - There are about 150 active RFEs... +bugs</li></ul><p>We translated this into the following high level naming service requirements.<br/>Naming services needs to:</p><ul><li>Respond to system changes w/o requiring reboot, and be able to work properly with smf, nwam, etc.</li><li>Improve Security/Interoperability</li><li>Use Kerberos {SASL/GSS}</li><li>Enable secure User &amp; Host credentialed authentication to DS</li><li>Support Active Directory Schema {as applicable}</li><li>Work on Approachability</li><li>Fix/obsolete the {plethora of} divergent tools story {ypinit, nisinit, ldapclient versus one tool, ypmake, nisaddent, ldapaddnet versus one tool, etc.}</li><li>Move towards obsoleting older APIs {IE embrace smf, move away from vi'ing nsswitch.conf}</li><li>Fix or address all the RFEs and the bugs.</li><li>Document the switch, and expose the APIs to 3rd parties.</li></ul><h2 id="HNsswitchAsItExistsToday"><span>Nsswitch As It Exists Today</span></h2><p>The design of the name service switch, sometimes known as nsswitch or just "the switch", is based on early 90's technology <br/>(It was the 18th ARC case {PSARC/1991/018} with nscd being added<br/>in 1994 {PSARC/1994/391}.<br/>It has had modifications to, but no significant retooling “of” since<br/>that time. The initial design was geared towards single cpu, workstations<br/>that people today would generally consider today as being low memory<br/>configurations. &nbsp;Those systems with 16MB, 32MB, or a whopping 64MB RAM.<br/>The nsswitch is not MT hot, or secure by todays standards.<br/>The nsswitch is not smf, boot, install, user, administrator or configuration<br/>friendly. &nbsp;There is very little internal or external documentation, the only public documentation being the various manual pages and administrator guide sections.</p><p>And finally, all the switch interfaces below the public getXbyY APIs, including all the backend interfaces have always been considered by Sun to be project private or at best consolidation private interfaces. &nbsp;This means that Sun has never guaranteed, although it has practiced, nsswitch backend compatbility between any release. And Sun has never guaranteed support for 3rd party or Open Source products written to these interfaces.</p><p>This OpenSolaris project plans to change all that.</p><p>The following is an overview diagram of the nsswitch, as it exists in Solaris 10 and earlier.</p><p><img src="https://markebrooks.github.io/bin/download/Project+sparks/WebHome/nsswitchs10.png" alt="Nsswitch as it exists in Solaris 10 and earlier"/></p><p>Every application that links with libc, and/or uses a getXbyY API<br/>will have an instance of the switch activated. &nbsp;A small set of getXbyY<br/>APIs make requests of NSCD, which uses it's instance of the switch<br/>to fetch results, populate caches and then NSCD returns results.</p><p>The remaining getXbyY APIs are processed locally in each and every applications nsswitch policy engine. &nbsp;More on this later.</p><h2 id="HNsswitchAsViewedbySparks"><span>Nsswitch As Viewed by Sparks</span></h2><p>The Key changes to the switch planned by the Sparks project are as follows:</p><ul><li>All XbyYs performed by centralized nscd switch</li><li>Nscd switch is MT hot</li><li>More robust caching and Caching of all DBs</li><li>Managed Connections</li><li>PutXbyY framework &nbsp;using a new, generic, app&lt;-&gt;nscd door interface</li><li>Holistic config, no more reboots, smf integrated</li><li>Nscd manages per-user lookups (if enabled)</li><li>Manages user/host principles uses forker &amp; sub procs for actual per-user separation of work</li><li>Supports nss_ad backend when delivered</li></ul><p>The following is an overview diagram of "Sparks" nsswitch as we see the design at this point in time:</p><p><img src="https://markebrooks.github.io/bin/download/Project+sparks/WebHome/nsswitchsparks.png" alt="Nsswitch w/Sparks"/></p>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by  on 2009/10/26 11:41<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by admin on 2009/10/26 13:09
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Project sparks Pages</h1>
+<div class="xwikipanelcontents">
+                                 <span class="wikilink"><a href="#">Sparks: name service switch/nscd enhancements</a></span>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/BuildSCM">Build Status & Gate Information</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/Documentation">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/architecture">Sparks Architecture</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/dtrace">Sparks Dtrace Scripts</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/install">Sparks Installation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/issues">Sparks Issues</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/overview">Sparks/Reno/Duckwater/Winchester Overview</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/version_nscd">Nscd with versioning</a></span></li>
+</ul>
+                    </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2011, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

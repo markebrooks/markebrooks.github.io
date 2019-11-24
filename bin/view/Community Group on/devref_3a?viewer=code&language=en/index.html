@@ -1,0 +1,1315 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>The Source Tree, part 1 (Community Group on.devref_3a) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Community+Group+on/devref_3a" />
+                    <link rel="canonical" href="/bin/view/Community+Group+on/devref_3a" />
+                            <meta name="document" content="Community Group on.devref_3a"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Community Group on"/>
+    <meta name="page" content="devref_3a"/>
+    <meta name="version" content="9.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Community+Group+on/pages/devref_3a"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="The Source Tree, part 1" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="Mike Kupfer" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/fullScreen.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Community Group on";
+XWiki.currentPage = "devref_3a";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Community+Group+on/devref_3a";
+window.docediturl = "/bin/edit/Community+Group+on/devref_3a";
+window.docsaveurl = "/bin/save/Community+Group+on/devref_3a";
+window.docgeturl = "/bin/get/Community+Group+on/devref_3a";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/viewers/code.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/fullScreen.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Community_Group_on viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FCommunity%2BGroup%2Bon%2Fdevref_3a%3Fviewer%3Dcode%26%2338%3Blanguage%3Den"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+on/"><strong>Community Group on</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Community+Group+on" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>
+            </td>
+            <td style="width: 99%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                              <a href='/bin/view/Community+Group+on/devref_toc'>Developer’s Reference</a> <span class='separator'>&#187;</span> <span class='current'>The Source Tree, part 1</span>
+                </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Community+Group+on/devref_3a?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+        <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Community+Group+on/devref_3a?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+on/devref_3a?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+on/devref_3a?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+on/devref_3a?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Community+Group+on/devref_3a?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+on/devref_3a?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+on/devref_3a?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+on/devref_3a?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+on/devref_3a?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Community+Group+on/devref_3a?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          <span class="submenuitem "><a href="/bin/view/Community+Group+on/devref_3a?xpage=copy" id="tmActionCopy" class="tmActionCopy">Copy</a></span>
+      </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+<div id="document-title"><h1>Wiki source code of <a href="/bin/view/Community+Group+on/devref_3a">The Source Tree, part 1</a></h1></div>
+                <div id="document-info">
+    <div>
+                      <span id="contentshortcut"><a href="/bin/view/Community+Group+on/devref_3a?viewer=content">Content</a></span>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+
+
+
+
+
+
+<div>
+  <a href="/bin/view/Community+Group+on/devref_3a?viewer=code&amp;showlinenumbers=0&amp;language=en" id="toggleLineNumbers">Hide line numbers</a>
+                                  <textarea readonly="readonly" class="wiki-code" rows="25" cols="80">
+  1: = Chapter 3. The Source Tree =
+  2: 
+  3:  This chapter discusses obtaining, managing, and modifying ON source code.
+  4: 
+  5: {{toc start=&quot;2&quot; depth=&quot;6&quot; numbered=&quot;false&quot; scope=&quot;page&quot;/}}
+  6: 
+  7: == 3.1 Retrieving the Sources ==
+  8: 
+  9:  A snapshot tarball of ON is posted for each biweekly build. Sources are also available via a [[Mercurial&gt;&gt;devref_glossary#HMercurial]] repository, which is updated in real time. If you plan to build ON source, you will also need the ON closed binaries and signed crypto, as described in [[Section 1.3.3&gt;&gt;devref_1]].
+ 10: 
+ 11:  There are two advantages to using source tarballs. First, the sources have gone through [[PIT&gt;&gt;devref_glossary#HPIT]] tests and are known to be reasonably sane. Second, the sources are delivered with binaries that match the sources. The disadvantage is that they are inconvenient to work with over time: updates require downloading the entire source tree, and there is no automation to help you merge any changes that you have made.
+ 12: 
+ 13:  The advantage of using a Mercurial repository is that it is easier to use over time. Updates only require pulling down the files that changed since last time, and there are facilities to help you merge your local changes with changes in the [[gate&gt;&gt;devref_glossary#Hgate]]. The disadvantage is that there is some risk of pulling down unstable changes. ON only publishes new closed binaries once a day, so there is a slight chance that the source changes you pull down are incompatible with your closed binaries.  The same holds true for the signed crypto binaries. And while the gate has a [[tag&gt;&gt;http://www.selenic.com/mercurial/wiki/Tag]] for each biweekly build, the tag simply indicates the cutoff for that build. Critical fixes which were integrated after the cutoff are not covered by the tag, although they will be present in the corresponding source tarball.
+ 14: 
+ 15:  See also [[3.4 Keeping Your Workspace in Sync&gt;&gt;Community Group on.devref_3b]] for details of how to keep your workspace up-to-date once you have set it up.
+ 16: 
+ 17: === 3.1.1 Obtaining Sources via Tarball ===
+ 18: 
+ 19:  You can obtain the tarballs for ON (or any other released consolidation) at [[ https://markebrooks.github.io/bin/view/Main/downloads&gt;&gt;Main.downloads]]. You can obtain the closed binaries and signed crypto from the same location. Be sure to obtain the appropriate binaries for your platform. Once you have done so, create your [[workspace&gt;&gt;devref_glossary#Hworkspace]] as follows:
+ 20: 
+ 21: {{{
+ 22: 
+ 23: $ mkdir /path/to/workspace
+ 24: $ cd /path/to/workspace
+ 25: $ bzip2 -dc /path/to/tarball/on-src-&lt;ver&gt;.tar.bz2 | tar xf -
+ 26: $ bzip2 -dc /path/to/tarball/on-closed-bins-&lt;ver&gt;.{x86,sparc}.tar.bz2 | tar xf -
+ 27: 
+ 28: }}}
+ 29: 
+ 30:  Note that you do not need to unpack the signed crypto.
+ 31: 
+ 32: === 3.1.2 Obtaining Sources via Mercurial ===
+ 33: 
+ 34:  You can download the closed binaries and signed crypto from [[ http://dlc.sun.com/osol/on/downloads/nightly-bins/&gt;&gt;http://dlc.sun.com/osol/on/downloads/nightly-bins/]]. The hex numbers that you'll see on that page indicate the Mercurial [[changeset ID&gt;&gt;http://www.selenic.com/mercurial/wiki/ChangeSetID]] (from the source tree) that the binaries should be compatible with.
+ 35: 
+ 36:  To get a copy of the Mercurial repository that matches your binaries, use:
+ 37: 
+ 38: {{{
+ 39: 
+ 40: $ hg clone -r changeset_ID ssh://anon@hg.opensolaris.org/hg/onnv/onnv-gate /path/to/workspace
+ 41: 
+ 42: }}}
+ 43: 
+ 44: For the biweekly builds, the Mercurial repo is tagged at the build cutoff.  For example, at the cutoff for Nevada build 140, the repo was tagged with &quot;onnv_140&quot;.  Please note, though, that this does not reflect any backouts or stopper fixes that happened after the cutoff.
+ 45: 
+ 46: Thus to recreate a biweekly build, start with the tag, then review the on-discuss archives for respin announcements (e.g., http://mail.opensolaris.org/pipermail/on-discuss/2010-March/001663.html ), which list the additional changesets that went into the build.
+ 47: 
+ 48: == 3.2 Tour of Your ON Workspace ==
+ 49: 
+ 50:  After creating and populating your [[workspace&gt;&gt;devref_glossary#Hworkspace]], you can begin to investigate the contents of the source tree. This section describes the layout and contents of your [[ON&gt;&gt;devref_glossary#HON]] workspace.
+ 51: 
+ 52: === 3.2.1 Organization ===
+ 53: 
+ 54:  Initially, your [[workspace&gt;&gt;devref_glossary#Hworkspace]] will have only one directory: usr. Once you have completed a build, you may have several additional directories, including archives, log, packages, and proto. We include here a diagram showing all these directories and their subdirectories. We also include the build subdirectories, which contain object files and are described in greater detail in subsections 2-4 below.
+ 55: 
+ 56:  If you have done a nightly(1) build, you will also have a log directory at the top level. It will contain the complete output from the nightly(1) build process. See [[Section 4.2 Using nightly and bldenv&gt;&gt;devref_4]] for more information on nightly(1) and the log files it generates.
+ 57: 
+ 58:  All sources are found under usr/src. This includes both the sources used to build the [[ON&gt;&gt;devref_glossary#HON]] consolidation and sources for tools and other peripheral utilities needed to build but not shipped as part of Solaris. Because it includes only ON sources, it does not contain Java, the windowing system, or packaging and installation tools. Because of contractual obligations, it may not include all code from third-party hardware vendors. The usr/src directory has several subdirectories which are described here.
+ 59: 
+ 60: * cmd
+ 61:  This directory contains sources for the executable programs and scripts that are part of ON. It includes all the basic commands, daemons, startup scripts, and related data. Most subdirectories are named for the command or commands they provide; however, there are some exceptions listed here.
+ 62: * cmd/Adm
+ 63:  Miscellaneous key system files, such as crontabs and data installed in /etc.
+ 64: * cmd/cmd-crypto
+ 65:  Basic cryptographic utilities, such as elfsign and kcfd.
+ 66: * cmd/cmd-inet
+ 67:  Network commands and daemons, including the Berkeley r-commands, PPP, telnet, the inetd super-server, and other network-related utilities.
+ 68: * cmd/fs.d
+ 69:  Utilities for checking, mounting, unmounting, and analyzing filesystems.
+ 70: * cmd/netfiles
+ 71:  IP port definitions and name service switch configuration files installed into /etc.
+ 72: * cmd/ptools
+ 73:  Utilities for manipulating and observing processes; these are based on proc(4) and libproc interfaces.
+ 74: * cmd/sgs
+ 75:  Software Generation System. This directory contains binary utilities, such as ld(1), ar(1), and mcs(1), and development tools such as lex(1), yacc(1), and m4(1). Note that this directory also includes several libraries and headers used by these tools.
+ 76: * common
+ 77:  Files which are common among cmd, lib, stand, and uts. These typically include headers and sources to basic libraries used by both the kernel and user programs.
+ 78: * head
+ 79:  Userland header files (kernel headers are in uts/). Note that only libc headers should be stored here; other libraries should have their headers in their own subdirectories under lib/.
+ 80: * lib
+ 81:  Libraries. Most subdirectories are named for the library whose sources they contain or are otherwise self-explanatory.
+ 82: * pkg
+ 83:  Contains a manifests subdirectory with one manifest file for each package generated from the ON sources. The rest of the files here are used to drive package publication based on those manifests.  See pkg/README.pkg for more information.
+ 84: * prototypes
+ 85:  Sample files showing format and copyright notices.
+ 86: * psm
+ 87:  Platform-specific modules. Currently this contains only OBP and most of the boot code.
+ 88: * stand
+ 89:  Standalone environment code. This is used for booting; for example, code for reading from UFS and the network is here.
+ 90: * tools
+ 91:  Development tools and sources. See README.tools for more information about each tool; the file should be updated as tools are added or removed.
+ 92: * ucbcmd
+ 93:  Commands and daemons installed into /usr/ucb (for SunOS 4.x compatibility).
+ 94: * ucbhead
+ 95:  Header files installed into /usr/ucb (for SunOS 4.x compatibility).
+ 96: * ucblib
+ 97:  Libraries installed into /usr/ucb (for SunOS 4.x compatibility).
+ 98: * uts
+ 99:  Kernel sources are here (UTS == UNIX Time Sharing). There are numerous subdirectories of uts which are of interest:
+100: * uts/adb
+101:  adb contained the obsolete kernel debugger macros; it is no longer supported, and this directory is now empty. Use mdb(1) instead, and write mdb dcmds instead of adb macros.
+102: * uts/common
+103:  All platform-independent kernel sources. Nearly all of the Solaris kernel is here; only a few small parts are architecture-dependent.
+104: * uts/common/c2
+105:  Auditing code to support the C2 U.S. government security standard.
+106: * uts/common/conf
+107:  System configuration parameters.
+108: * uts/common/contract
+109:  Code to support process contracts. See contract(4) and libcontract(3LIB) for more information on process contracts.
+110: * uts/common/cpr
+111:  CheckPoint-and-Resume support. This implements suspend and resume functionality.
+112: * uts/common/crypto
+113:  Kernel cryptographic framework. See kcfd(1M) and cryptoadm(1M) for more information.
+114: * uts/common/ctf
+115:  Code for handling Compact C Type Format data.
+116: * uts/common/des
+117:  Implements the old Data Encryption Standard. This is used by KCF.
+118: * uts/common/disp
+119:  Dispatcher, thread handling, and scheduling classes.
+120: * uts/common/dtrace
+121:  CPU-independent dtrace(7D) kernel support.
+122: * uts/common/exec
+123:  Code for handling userland binary executable types (a.out, ELF, etc).
+124: * uts/common/fs
+125:  Filesystems.
+126: * uts/common/gssapi
+127:  Generic Security Services API.
+128: * uts/common/inet
+129:  IP networking subsystem, including IPv6.
+130: * uts/common/io
+131:  I/O subsystem. Most of the code in this directory is device drivers (and pseudo-device drivers).
+132: * uts/common/ipp
+133:  IP policy framework; includes QoS and other traffic management.
+134: * uts/common/kmdb
+135:  Kernel modular debugger. See kmdb(1).
+136: * uts/common/krtld
+137:  Kernel runtime linker/loader. This is responsible for handling loadable modules and symbol resolution; it is analogous to ld.so.1, and shares code with it.
+138: * uts/common/ktli
+139:  Kernel TLI (Transport Layer Interface).
+140: * uts/common/net
+141:  Header files; most are shipped in /usr/include/net.
+142: * uts/common/netinet
+143:  Header files; most are shipped in /usr/include/netinet.
+144: * uts/common/nfs
+145:  Network File System headers shipped in /usr/include/nfs.
+146: * uts/common/os
+147:  Core operating system implementation. This includes such varied aspects as privileges, zones, timers, the DDI/DKI interfaces, and high-level locking mechanisms.
+148: * uts/common/pcmcia
+149:  PCMCIA I/O subsystem and drivers.
+150: * uts/common/rpc
+151:  Remote Procedure Call subsystem used by services such as NFS and NIS.
+152: * uts/common/rpcsvc
+153:  Generated RPC header files shipped in /usr/include/rpcsvc.
+154: * uts/common/sys
+155:  Header files shipped in /usr/include/sys. These same headers are used to build the kernel as well (if the _KERNEL preprocessor symbol is defined).
+156: * uts/common/syscall
+157:  System call implementations. Most syscalls are implemented in files matching their names. Note that some system calls are implemented in os/ or other subdirectories instead.
+158: * uts/common/tnf
+159:  Old tracing subsystem, not related to dtrace(7D).
+160: * uts/common/vm
+161:  Virtual memory subsystem.
+162: * uts/common/zmod
+163:  Compression/decompression library.
+164: * uts/i86pc
+165:  Architecture-dependent files for x86 machines. The architecture-dependent directories (i86pc, sun, sun4, sun4u) all have a set of subdirectories similar to common/ above.
+166: * uts/intel
+167:  ISA-dependent, architecture-independent files for x86 machines. Note that all architecture-independent source files are built into objects in this hierarchy.
+168: * uts/sfmmu
+169:  Code specific to the SpitFire memory management unit (UltraSPARC).
+170: * uts/sparc
+171:  ISA-dependent, architecture-independent files for SPARC machines. Note that all architecture-independent source files are built into objects in this hierarchy.
+172: * uts/sun
+173:  Sources common to all Sun implementations. Currently this contains a small number of device drivers and some headers shipped in /usr/include/sys.
+174: * uts/sun4
+175:  Sources common to all sun4* machine architectures.
+176: * uts/sun4u
+177:  Architecture-dependent sources for the sun4u architecture. Each system implementation has a subdirectory here:
+178: 
+179: {{{
+180: * blade		Serverblade1
+181: * chalupa		Sun-Fire-V440
+182: * cherrystone		Sun-Fire-480R
+183: * daktari		Sun-Fire-880
+184: * darwin		Ultra-5_10
+185: * enchilada		Sun-Blade-2500
+186: * ents		Sun-Fire-V250
+187: * excalibur		Sun-Blade-1000
+188: * fjlite		UltraAX-i2
+189: * grover		Sun-Blade-100
+190: * javelin		Ultra-250
+191: * littleneck		Sun-Fire-280R
+192: * lw2plus		Netra-T4
+193: * lw8			Netra-T12
+194: * makaha		UltraSPARC IIe-NetraCT-40, UltraSPARC IIe-NetraCT-60
+195: * montecarlo		UltraSPARC IIi-NetraCT
+196: * mpxu		Sun-Fire-V240
+197: * quasar		Ultra-80
+198: * serengeti		Sun-Fire
+199: * snowbird		Netra-CP2300
+200: * starcat		Sun-Fire-15000
+201: * starfire		Ultra-Enterprise-10000
+202: * sunfire		Ultra-Enterprise
+203: * taco		Sun-Blade-1500
+204: * tazmo		Ultra-4
+205: }}}
+206: 
+207: === 3.2.2 Object Directories ===
+208: 
+209:  There are two basic strategies that can be used in the creation of object files and finished binaries (executables and libraries):
+210: 
+211:  (a) place objects in a dedicated directory hierarchy parallel to the sources
+212: 
+213:  (b) place objects in the same directories as the sources they are built from
+214: 
+215:  ON actually uses each of these approaches in different parts of the tree. Strategy (a) must be used for all kernel code and many libraries, is preferred for new code, and will be described in detail here. There are several legacy variations on strategy (a) as well as instances in which strategy (b) is still used; the majority of these are in the cmd hierarchy. The entire uts hierarchy has been converted to strategy (a) as described below, and you will see this same approach used throughout much of the rest of the tree.
+216: 
+217: ==== 3.2.2.1 General Strategy for Kernel Objects ====
+218: 
+219:  First, each platform-independent module has zero or one build directory per architecture. An architecture in this case can be a machine (sun4u, i86pc) or a processor architecture (intel, sparc). The path to this location is always usr/src/uts/&lt;platform&gt;/&lt;module&gt;. The module name in this case is what's found in /kernel/drv or a similar location, and in the case of device drivers or STREAMS modules should always match the name of the man page describing that driver or module.
+220: 
+221:  The only files normally present in this directory for a clean tree are makefiles. After a build, these directories contain one or more of obj32, obj64, debug32, and debug64 directories. These directories contain the object files and finally linked modules that are later installed into the kernel directory and other locations in the prototype.
+222: 
+223:  &quot;Implementation architecture&quot;-independent modules are produced in individual directories (one per module) under the &quot;instruction-set architecture&quot; directory (i.e.: sparc). Similarly, &quot;implementation architecture&quot;-dependent modules are produced in individual directories under the &quot;implementation architecture&quot; directory (i.e.: sun4, sun4u, i86pc).
+224: 
+225:  Platform-dependent modules (including &quot;unix&quot;) may be built more than once in different locations. Platform-dependent modules are discussed in greater detail in &lt;section&gt;.
+226: 
+227:  The sources are not contained in these build directories.
+228: 
+229: ==== 3.2.2.2 General Strategy for Command/Library Objects ====
+230: 
+231:  Most libraries and some commands and daemons are built using makefiles very similar to those used to build the kernel. Accordingly, intermediate objects, shared objects, libraries, and executables are built by small makefile fragments and placed in dedicated ISA-specific subdirectories.
+232: 
+233:  Other commands' build systems place objects in the same directories as the sources. See sections 3.2.2.3, 3.2.3.2, and 3.2.5 for more information on how commands are built.
+234: 
+235: ==== 3.2.2.3 Exceptions in cmd and lib ====
+236: 
+237:  Most of the cmd tree is directly based on the original System V Release 4 source, which uses strategy (b) described above. Since most commands and daemons do not need to provide both 32- and 64-bit versions, or do anything special when building for different architectures, this strategy is adequate and appropriate for most commands and has been applied even to new subdirectories. In situations in which architecture-dependent build options are needed or multiple ISA versions of a program must be delivered, this strategy is unworkable and the more general approach of multiple per-ISA object directories must be used instead. This latter approach is similar to the approach used for kernel modules.
+238: 
+239:  The lib hierarchy is somewhat simpler; nearly all subdirectories must use per-ISA object file locations and makefiles.
+240: 
+241:  A few directories do not appear to follow any rule or pattern, such as cmd/cmd-inet and cmd/agents. These are primarily historical artifacts of Sun's internal project organization.
+242: 
+243: === 3.2.3 Makefile Layout ===
+244: 
+245:  This discussion is intended to provide a step-by-step explanation of what targets exist and how they are built by the makefiles. I ignore the platform-specific module architecture because it is unlikely to be of significant interest except to hardware support engineers. The three main subtrees of interest are the kernel (uts), commands and daemons (cmd), and libraries (lib). The next three subsections cover these three subtrees in turn. There are also a handful of makefiles which apply to all builds:
+246: 
+247: * usr/src/Makefile
+248:  This is the top-level makefile. It drives builds for various targets in each subdirectory. It is aware of the specific targets that need to be built in each subdirectory in order to perform a complete build, and itself knows how to create a skeleton proto area for later use by install and install_h targets.
+249: * usr/src/Makefile.lint
+250:  All linting from the top level is driven by this makefile. It contains long lists of directories known to be [[lint&gt;&gt;devref_glossary#Hlint]]-clean and contains simple recursive rules for rebuilding each subdirectory's lint target. The actual linting is driven by the lower-level makefiles.
+251: * usr/src/Makefile.master
+252: * usr/src/Makefile.master.64
+253:  These two makefiles contain generic definitions, such as build and installation tools locations, template macros for compilers, linkers, and other tools to be used by other makefiles in defining rules, and global definitions such as the ISA and machine names that apply to this build. Makefile.master.64 contains definitions specific to 64-bit builds that override the generic definitions.
+254: * usr/src/Makefile.msg.targ
+255:  Common targets for building message catalogues are defined here. Message catalogues provide translations of messages for g11n purposes.
+256: * usr/src/Makefile.psm
+257:  This makefile defines the installation locations for platform-specific modules. These are analogous to the other kernel module install locations /kernel and /usr/kernel (see section 3.2.6 below for more information on kernel module installation).
+258: * usr/src/Makefile.psm.targ
+259:  Installation target definitions for platform-specific modules are defined here. This instructs the build system how to install files into the directories defined by Makefile.psm.
+260: * usr/src/Targetdirs
+261:  This is a set of definitions for the owner, group, and permissions of each directory that will be created by the installation process. It also contains information about special symbolic links to be installed for some 64-bit library versions.
+262: 
+263: ==== 3.2.3.1 Kernel Makefile Layout ====
+264: 
+265:  The driving makefile for any module is located in the leaf directory (build directory) where the module and its component objects are built. After a 'make clobber' operation, the makefile should be the only file remaining in that directory. There are two other types of makefiles in the tree: suffixed and non-suffixed. Common definitions and rules needed by all leaf makefiles are contained in the suffixed makefiles; these are included by leaf makefiles. Non-suffixed makefiles generally invoke multiple lower-level makefiles with the same target so that many modules can be built with a single make invocation.
+266: 
+267: * uts/Makefile
+268: * uts/sparc/Makefile
+269: * uts/sun4u/Makefile
+270: * uts/intel/Makefile
+271: * uts/intel/ia32/Makefile
+272: * uts/i86pc/Makefile
+273:  These makefiles generally are cognizant of the components made in subdirectories and invoke makefiles in those sub- directories to perform the actual build. Some targets (or pseudo-targets) may be directly built at this level (such as the cscope databases).
+274: * uts/Makefile.uts
+275:  Contains common definitions for all possible architectures.
+276: * uts/Makefile.targ
+277:  Contains common targets for all possible architectures.
+278: * uts/common/Makefile.files
+279: * uts/sun/Makefile.files
+280: * uts/sparc/Makefile.files
+281: * uts/sun4/Makefile.files
+282: * uts/sun4u/Makefile.files
+283: * uts/intel/Makefile.files
+284: * uts/intel/ia32/Makefile.files
+285: * uts/i86pc/Makefile.files
+286:  These makefiles are divided into two sections. The first section defines the object lists which comprise each module. The second section defines the appropriate header search paths and other machine-specific global build parameters.
+287: * uts/common/Makefile.rules
+288: * uts/sun/Makefile.rules
+289: * uts/sparc/Makefile.rules
+290: * uts/sun4/Makefile.rules
+291: * uts/sun4u/Makefile.rules
+292: * uts/intel/Makefile.rules
+293: * uts/intel/ia32/Makefile.rules
+294: * uts/intel/amd64/Makefile.rules
+295: * uts/i86pc/Makefile.rules
+296:  The files provide build rules (targets) which allow make to function in a multiple directory environment. Each source tree below the directory containing the makefile has a build rule in the file.
+297: * uts/sun4/Makefile.sun4
+298: * uts/sun4u/Makefile.sun4u
+299: * uts/intel/Makefile.intel
+300: * uts/intel/ia32/Makefile.ia32
+301: * uts/i86pc/Makefile.i86pc
+302:  These makefiles contain the definitions specific (defaults) to the obvious &quot;implementation architecture&quot;. These rules can be overridden in specific leaf node makefiles if necessary.
+303: * Makefile.*.shared
+304:  These makefiles provide settings that are shared between the open-source makefiles and the closed-source makefiles that are internal to Sun. See Section 3.2.8 Source Files not Included for more details.
+305: * uts/sun4u/unix/Makefile
+306: * uts/i86pc/unix/Makefile
+307:  Main driving makefile for building unix.
+308: * uts/sun4u/MODULE/Makefile (for MODULE in cgsix, cpu, kb, ...)
+309:  Main driving makefile for building MODULE.
+310: * uts/sun4u/genunix/Makefile
+311: * uts/i86pc/genunix/Makefile
+312:  Main driving makefile for building genunix.
+313: 
+314:  Issuing the command 'make' in the uts directory will cause all supported, modularized kernels and modules to be built.
+315: 
+316:  Issuing the command 'make' in a uts/ARCHITECTURE directory (i.e.: uts/sparc) will cause all supported, &quot;implementation architecture&quot;-independent modules for ARCHITECTURE to be built.
+317: 
+318:  Issuing the command 'make' in a uts/MACHINE directory (i.e.: uts/sun4u) will cause that kernel and all supported, &quot;implementation architecture&quot;- dependent modules for MACHINE to be built.
+319: 
+320:  The makefiles are verbosely commented. It is desired that they should stay this way.
+321: 
+322: ==== 3.2.3.2 Command Makefile Layout ====
+323: 
+324:  Most command and daemon subdirectories follow one of two general layout rules, depending on where object files will be located (see sections 3.2.2.2 and 3.2.2.3). For ISA-dependent programs, the layout is similar to that used by the kernel. Programs which do not need ISA-dependent build behavior use a simplified makefile layout. In the description here, we use the example of a generic command called &quot;foocmd&quot; whose sources are located in usr/src/cmd/foocmd. The makefiles relevant to building foocmd are:
+325: 
+326: * usr/src/cmd/Makefile
+327:  Top-level driving makefile for all commands/daemons. This is a simple recursive makefile which is aware of which subdirectories should be built and will cause the given target to be rebuilt in each of them.
+328: * usr/src/cmd/Makefile.cmd
+329:  This makefile defines the installation directories and rules for installing executables into them.
+330: * usr/src/cmd/Makefile.cmd.64
+331:  Additional definitions specific to 64-bit builds are provided here.
+332: * usr/src/cmd/Makefile.cmd.bsm
+333:  This specialty makefile is used only by auditstat and dminfo. It provides some generic boilerplate rules.
+334: * usr/src/cmd/Makefile.targ
+335:  Basic target definitions for clobber, lint, and installation.
+336: * usr/src/cmd/foocmd/Makefile
+337:  Driving makefile for foocmd. Normally defines PROG but otherwise contains only boilerplate definitions and targets. This is almost always copied from another similar makefile. If foocmd does not require ISA-dependent build behavior, rules will normally be specified directly, including those for the install target. If foocmd does require ISA-dependent build behavior, this makefile will instead define SUBDIRS to include the ISA-specific versions that must be built, and define targets recursively. This will usually leave the install target definition for each ISA makefile and cause a link to $(ISAEXEC) to be created. See section 3.2.5 for more information on platform dependencies and $(ISAEXEC).
+338: * usr/src/cmd/foocmd/Makefile.com
+339:  Defines PROG, OBJS, SRCS, and includes Makefile.cmd. May also contain additional flags for compilation or linking. This makefile normally defines targets for all, $(PROG), clean, and lint; this portion is usually generic and would be copied from another similar makefile.
+340: * usr/src/cmd/foocmd/*/Makefile
+341:  ISA-specific makefiles, which may define additional ISA-specific flags or targets, and will generally include its own install target to install the ISA-specific program(s) it builds.
+342: 
+343: ==== 3.2.3.3 Library Makefile Layout ====
+344: 
+345:  Most library subdirectories follow the same general layout, which is similar to the command layout. Unlike commands, most libraries are built for both 32- and 64-bit architecture variants, so ISA-specific directories will almost always be present. Therefore, the overall build structure for each library is similar to that of the kernel. See [[Section 3.3.3.3 Adding New Libraries&gt;&gt;devref_3b]] for more detailed information on library makefiles.
+346: 
+347: === 3.2.4 Makefile Operation ===
+348: 
+349:  This section describes in detail how make dependencies and rules are built up, and how each individual makefile contributes to the build process. Once you understand how the makefiles work, modifying existing build rules and creating new ones are mainly an exercise in copying existing files and making minor modifications to them. We begin with the kernel makefiles, then address the very similar command and library makefiles.
+350: 
+351: ==== 3.2.4.1 Kernel Makefile Operation ====
+352: 
+353:  There are two parts to the make dependencies: a set of targets and a set of rules.
+354: 
+355:  The rules are contained in the Makefile.rules files in each directory under uts. They cover how to compile a source file in some other directory (common/io for example) into an object file in the build directory described above. They also describe which sources are needed to build a given object file. The order in which they are specified determines which source file is needed if there are multiple source files matching the same basename. The key to all this is understanding that all rules and targets are static and module-independent, but variables set in each module's build directory (leaf) makefile define the module-specific build information.
+356: 
+357:  The targets are of two kinds: the first are &quot;make targets,&quot; generic directives you can give make like &quot;all&quot; or &quot;install&quot; which are executed in each build directory. The build directory makefiles in turn include other makefiles that contain rules for building objects and modules. The second type of target is more interesting - they are the actual module names (directories, in fact) that must be built. These variables are called KMODS and XMODS.
+358: 
+359:  If KMODS contains, for example, &quot;aac ata asy&quot;, then for each of the aac, ata, and asy build directories, the make system will cd to that directory and rerun make with whatever target (all, install, etc) is given. The rules for that module are derived from all the included makefiles; the crucial variables to look for are of the form XXX_OBJS, where XXX is the module name. More than one makefile may contain definitions adding to each of these object lists, because building a module may require different objects on each platform.
+360: 
+361:  XMODS is used only for building export versions of the commercial Solaris product; it is not used in building ON.
+362: 
+363:  So for example we see:
+364: 
+365: {{{
+366: 
+367: common/Makefile.files:ASY_OBJS +=      asy.o
+368: 
+369: }}}
+370: 
+371:  This indicates that the asy.o object is needed to build the ASY module. The makefile in the &lt;platform&gt;/asy directory will reference ASY_OBJS and thus know what to build. So in intel/asy/Makefile we see:
+372: 
+373: {{{
+374: 
+375: MODULE          = asy
+376: OBJECTS         = $(ASY_OBJS:%=$(OBJS_DIR)/%)
+377: 
+378: }}}
+379: 
+380:  So, what good is this? Plenty. Because our ALL_TARGET is also defined:
+381: 
+382: {{{
+383: 
+384: ALL_TARGET      = $(BINARY) $(SRC_CONFILE)
+385: 
+386: }}}
+387: 
+388:  Makefile.uts defines BINARY as follows:
+389: 
+390: {{{
+391: 
+392: BINARY             = $(OBJS_DIR)/$(MODULE)
+393: 
+394: }}}
+395: 
+396:  And OBJS_DIR is the individual module build directory I described at the beginning. So, make knows we need to build usr/src/uts/intel/asy/obj32/asy. Makefile.targ defines the rules for doing so, too:
+397: 
+398: {{{
+399: 
+400: $(BINARY):              $(OBJECTS)
+401: 	$(LD) -r $(LDFLAGS) -o $@ $(OBJECTS)
+402: 	$(CTFMERGE_UNIQUIFY_AGAINST_GENUNIX)
+403: 	$(POST_PROCESS)
+404: 	$(ELFSIGN_MOD)
+405: 
+406: }}}
+407: 
+408:  We're almost there - OBJECTS have to come from somewhere. We find this defined in intel/asy/Makefile:
+409: 
+410: {{{
+411: 
+412: OBJECTS         = $(ASY_OBJS:%=$(OBJS_DIR)/%)
+413: 
+414: }}}
+415: 
+416:  And that's that. We have a module (asy) that has a BINARY (obj32/asy) which depends on OBJECTS made from ASY_OBJS. The rules for each entry in ASY_OBJS is in one of the Makefile.rules files; they look something like this:
+417: 
+418: {{{
+419: 
+420: $(OBJS_DIR)/%.o:                $(UTSBASE)/common/io/%.c
+421: 	$(COMPILE.c) -o $@ $&lt;
+422: 	$(CTFCONVERT_O)
+423: 
+424: }}}
+425: 
+426:  Each object is built in accordance with these rules. The rule for $(BINARY) then links them into the module.
+427: 
+428:  We can now put it all together. The extensive use of macros and local per-module definitions provides much greater flexibility, but in the example given, the equivalent makefile fragment would look very familiar:
+429: 
+430: {{{
+431: 
+432: KMODS +=	asy
+433: 
+434: }}}
+435: 
+436: {{{
+437: 
+438: all:	$(KMODS)
+439: 
+440: }}}
+441: 
+442: {{{
+443: 
+444: asy:	obj32/asy.o
+445: 	$(LD) -r $(LDFLAGS) -o $@ obj32/asy.o
+446: 	...
+447: 
+448: }}}
+449: 
+450: {{{
+451: 
+452: obj32/asy.o:	../../common/io/asy.c
+453: 	$(CC) $(CFLAGS) $(CPPFLAGS) -c $&lt; -o $@
+454: 	...
+455: 
+456: }}}
+457: 
+458: ==== 3.2.4.2 Command Makefile Operation ====
+459: 
+460:  Command makefiles vary widely, as described above. Therefore it is impossible to provide a &quot;representative example&quot; of a command makefile. However, understanding the material in sections 3.2.4.1 and 3.3.3.3 will provide you with the necessary knowledge to work with command makefiles. As always, if you are looking for information about a specific command, it is usually best to use the mailing lists and other community resources.
+461: 
+462: ==== 3.2.4.3 Library Makefile Operation ====
+463: 
+464:  Section 3.3.3.3 describes library makefile operation in detail.
+465: 
+466: === 3.2.5 ISA Dependencies ===
+467: 
+468:  Most code in OpenSolaris is generic and platform- and ISA-independent; that is, it is portable code that can be compiled and run on any system for which a suitable compiler is available. However, even portable code must sometimes deal with specific attributes of the system on which it runs, or must be provided compiled for multiple supported architectures so that users can run or link with the architecture-specific version of their choosing.
+469: 
+470:  There are two distinct situations in which multiple architecture-specific builds must be shipped: commands that, by their nature, must have visibility into the system's hardware characteristics, and libraries, which must be built separately for each architecture a developer may wish to target. Each case is discussed in its own subsection below.
+471: 
+472: ==== 3.2.5.1 ISA-Dependent Commands ====
+473: 
+474:  Commands (normally executable programs or daemons) usually do not depend on the ISA on which they are executed; that is, they will be built and installed in the same way regardless of the ISA they are built for. Some commands, however, mainly those which operate on other processes or manipulate binary objects, must behave differently depending on the ISA(s) supported by the system and/or their targets. The /usr/lib/isaexec wrapper program provides this behavior in the following way:
+475: 
+476:  First, one or more ISA-specific programs are installed into ISA-specific directories in the system. These are subdirectories of those directories which ordinarily contain executable programs, such as /usr/bin. On SPARC systems, ISA subdirectories might include /usr/bin/sparcv7 and /usr/bin/sparcv9 to contain 32- and 64-bit binaries, respectively. Other ISAs may be supported by other systems; you can find out which your system supports by using isalist(1).
+477: 
+478:  Next, a hard link is installed into the ordinary binary directory (in the example above, /usr/bin) targeting /usr/lib/isaexec. This will cause isaexec to be invoked with the name of the ISA-dependent program the user has executed.
+479: 
+480:  When this happens, isaexec will select the most appropriate ISA-specific program installed in the first step and exec(2) it. This is transparent, so a user will not notice that a separate program has been invoked.
+481: 
+482:  A similar mechanism (/usr/lib/platexec) exists for platform-specific programs; these are much less common even than ISA-specific programs.
+483: 
+484:  Because it needs to interact both with user processes and kernel data structures, dtrace(1) is an example of a command that must provide multiple ISA-specific versions.
+485: 
+486:  cmd/dtrace contains two makefiles: Makefile and Makefile.com. It also contains a single source file, dtrace.c, and four ISA directories: amd64, i386, sparc, and sparcv9. Each contains a single makefile. The top-level makefiles should look very familiar after our tour of the uts makefiles; Makefile is mainly boilerplate, customized only to specify that the program produced is ISA- specific and therefore a link to the isaexec program needs to be installed into /usr/sbin in the proto area:
+487: 
+488: {{{
+489: 
+490: install:        $(SUBDIRS)
+491: 	-$(RM) $(ROOTUSRSBINPROG)
+492: 	-$(LN) $(ISAEXEC) $(ROOTUSRSBINPROG)
+493: 
+494: }}}
+495: 
+496:  Otherwise, it simply leaves all building and installation to the makefiles in the ISA subdirectories. Makefile.com is also boilerplate; it specifies the name of the program to build and the objects from which it must be built:
+497: 
+498: {{{
+499: 
+500: PROG = dtrace
+501: OBJS = dtrace.o
+502: 
+503: }}}
+504: 
+505:  It then transforms the objects into sources:
+506: 
+507: {{{
+508: 
+509: SRCS = $(OBJS:%.o=../%.c)
+510: 
+511: }}}
+512: 
+513:  and includes the generic top-level Makefile.cmd fragment to pick up build rules.
+514: 
+515:  Compilation and linkage flags are specified:
+516: 
+517: {{{
+518: 
+519: CFLAGS += $(CCVERBOSE)
+520: CFLAGS64 += $(CCVERBOSE)
+521: LDLIBS += -ldtrace -lproc
+522: 
+523: }}}
+524: 
+525:  and the remainder consists of a handful of generic build rules. One feature is noteworthy: an extra ../ is prepended to all paths in this fragment. This is because it is always included by makefiles interpreted from the ISA-specific build directory, which is one level deeper than Makefile.com itself.
+526: 
+527:  The makefiles in the ISA-specific build directories are even simpler; they each consist of only two lines:
+528: 
+529: {{{
+530: 
+531: include ../Makefile.com
+532: 
+533: }}}
+534: 
+535: {{{
+536: 
+537: install: all $(ROOTUSRSBINPROG32)
+538: 
+539: }}}
+540: 
+541:  The first line picks up all common definitions in the makefile we just examined, and the second specifies (indirectly) the location in which the program is to be installed. To complete the picture, we need to briefly examine usr/src/cmd/Makefile.cmd, which defines the various locations in which programs can be installed. Since we have not defined ROOTUSRSBINPROG32, it must be defined there, and indeed it is:
+542: 
+543: {{{
+544: 
+545: ROOTUSRSBIN=    $(ROOT)/usr/sbin
+546: ROOTUSRSBINPROG=$(PROG:%=$(ROOTUSRSBIN)/%)
+547: ROOTUSRSBIN32=  $(ROOTUSRSBIN)/$(MACH32)
+548: ROOTUSRSBINPROG32=      $(PROG:%=$(ROOTUSRSBIN32)/%)
+549: 
+550: }}}
+551: 
+552:  Note that the program is actually installed in /usr/sbin/$(MACH32), which is not normally in a user's search path. But remember that we also created a link from $(ROOTUSRSBINPROG) to $(ISAEXEC); expanding these variables shows that we will actually install two separate files:
+553: 
+554: {{{
+555: 
+556: $(ROOT)/usr/sbin/dtrace		-&gt; $(ROOT)/usr/lib/isaexec
+557: $(ROOT)/usr/sbin/$(MACH32)/dtrace	(our executable program)
+558: 
+559: }}}
+560: 
+561:  Since the isaexec program is responsible for selecting an ISA-specific program from among several options depending on the system's supported instruction sets, we can see that a typical system will have one or more dtrace(1) binaries installed and that when dtrace(1) is run by the user, isaexec will select the appropriate one from those installed in the ISA-specific subdirectories of /usr/sbin. As we might expect, other ISA-specific makefiles under cmd/dtrace install their binaries into ROOTUSRSBIN64, also defined in usr/src/cmd/Makefile.cmd.
+562: 
+563: ==== 3.2.5.2 ISA-Dependent Libraries ====
+564: 
+565:  Libraries, unlike commands, must almost always be built for all supported ISAs and have separate ISA-specific versions installed on, at minimum, every system that supports that ISA. In practice, libraries for each ISA in the system's processor family are installed. This allows developers on that system to write programs using any supported ISA and link them with the appropriate system libraries (it is not possible, for example, to link 32-bit object files and 64-bit libraries, nor vice versa).
+566: 
+567:  Libraries use a build system very similar to that used by commands which must provide multiple ISA-specific executable programs. We examine here the makefiles used by dtrace(1)'s library counterpart libdtrace(3LIB) and how they support building and installing multiple ISA-specific versions of the dtrace library.
+568: 
+569:  lib/libdtrace contains two makefiles: Makefile and Makefile.com. It also contains a directory for common code and four ISA directories: amd64, i386, sparc, and sparcv9. Each ISA directory contains a single makefile and in some cases some ISA-specific sources. The top-level Makefile should once again look very familiar; is very similar to the uts and cmd makefiles and is mainly boilerplate. There are a few customizations to add a yydebug target and to tell top-level makefiles that lex and yacc generated files should not have cross-references built against them.
+570: 
+571: {{{
+572: 
+573: yydebug := TARGET = yydebug
+574: ...
+575: lint yydebug: $(SUBDIRS)
+576: 
+577: }}}
+578: 
+579:  and
+580: 
+581: {{{
+582: 
+583: XRDIRS = common i386 sparc sparcv9
+584: XRDEL = dt_lex.c dt_grammar.c Makefile*
+585: 
+586: }}}
+587: 
+588:  Otherwise, it simply leaves all building and installation to the makefiles in the ISA subdirectories. Makefile.com is somewhat more interesting. It first specifies the name of the library to build (in static format; shared library names are translated as we shall see below), and the library version. These are common to all library makefiles. Next, we see long lists of source files used to build the library, and an OBJECTS specification. This particular library also has some unique characteristics, including the D runtime init code, built as a separate object file (drti.o), and a number of D &quot;header&quot; files which are installed into a separate directory /usr/lib/dtrace. You can see these unique features here:
+589: 
+590: {{{
+591: 
+592: DRTISRC = drti.c
+593: DRTIOBJ = $(DRTISRC:%.c=%.o)
+594: 
+595: }}}
+596: 
+597: {{{
+598: 
+599: DLIBSRCS += \
+600: 	errno.d \
+601: 	io.d \
+602: 	procfs.d \
+603: 	regs.d \
+604: 	sched.d \
+605: 	signal.d \
+606: 	unistd.d
+607: ...
+608: ROOTDLIBDIR = $(ROOT)/usr/lib/dtrace
+609: ROOTDLIBDIR64 = $(ROOT)/usr/lib/dtrace/64
+610: ...
+611: $(ROOTDLIBDIR):
+612: 	$(INS.dir)
+613: 
+614: }}}
+615: 
+616: {{{
+617: 
+618: $(ROOTDLIBDIR64): $(ROOTDLIBDIR)
+619: 	$(INS.dir)
+620: 
+621: }}}
+622: 
+623: {{{
+624: 
+625: $(ROOTDLIBDIR)/%.d: ../common/%.d
+626: 	$(INS.file)
+627: 
+628: }}}
+629: 
+630: {{{
+631: 
+632: $(ROOTDLIBDIR)/%.d: ../$(MACH)/%.d
+633: 	$(INS.file)
+634: 
+635: }}}
+636: 
+637: {{{
+638: 
+639: $(ROOTDLIBDIR)/%.d: %.d
+640: 	$(INS.file)
+641: 
+642: }}}
+643: 
+644:  Note that some of the D &quot;headers&quot; are in turn generated from other files; this makefile includes rules for performing these transformations.
+645: 
+646:  Once the LIBSRCS and OBJECTS have been defined, the generic library makefile fragment Makefile.lib is included to provide target and directory definitions.
+647: 
+648:  Binary objects are built in the pics/ subdirectory. pics stands for position- independent code(s), referring to the fact that dynamic shared libraries are built in such a way as to be loaded at any address. This is an historical artifact; static linking of system libraries is not supported by OpenSolaris-based distributions, so the non-PIC objects which would have been used to build an archive-style library are not built. The rules for building are given as:
+649: 
+650: {{{
+651: 
+652: pics/%.o: ../$(MACH)/%.c 
+653: 	$(COMPILE.c) -o $@ $&lt;
+654: 	$(POST_PROCESS_O)
+655: 
+656: }}}
+657: 
+658: {{{
+659: 
+660: pics/%.o: ../$(MACH)/%.s
+661: 	$(COMPILE.s) -o $@ $&lt;
+662: 	$(POST_PROCESS_O)
+663: 
+664: }}}
+665: 
+666: {{{
+667: 
+668: %.o: ../common/%.c
+669: 	$(COMPILE.c) -o $@ $&lt;
+670: 	$(POST_PROCESS_O)
+671: 
+672: }}}
+673: 
+674:  Note that because this makefile fragment is included by each ISA's makefile, the objects produced will be placed relative to that makefile, in each ISA directory. Once again, this also means that included makefile fragments include an additional ../ component.
+675: 
+676:  The libdtrace Makefile.com also contains a large number of custom rules to accommodate building a lexer and parser from lex(1) and yacc(1) definitions; these sources are then compiled specially using the custom rules and are removed when the clean or clobber target is executed.
+677: 
+678:  The makefiles in the ISA-specific build directories are once again very simple. The SPARC-specific makefile, for example, defines additional assembler flags, specifies the directory where the library interface map is located, and then includes the common makefile:
+679: 
+680: {{{
+681: 
+682: ASFLAGS += -D_ASM -K PIC -P
+683: 
+684: }}}
+685: 
+686: {{{
+687: 
+688: MAPDIR = ../spec/sparc
+689: include ../Makefile.com
+690: 
+691: }}}
+692: 
+693:  The makefile may also add a few ISA-specific sources to the build list; for example, sparc/Makefile includes:
+694: 
+695: {{{
+696: 
+697: SRCS += dt_asmsubr.s
+698: OBJECTS += dt_asmsubr.o
+699: 
+700: }}}
+701: 
+702:  And once again, a separate install target is provided to indicate the directories where these specific libraries and headers should be installed:
+703: 
+704: {{{
+705: 
+706: install yydebug: all $(ROOTLIBS) $(ROOTLINKS) $(ROOTLINT) \
+707: 	$(ROOTDLIBS) $(ROOTDOBJS)
+708: 
+709: }}}
+710: 
+711:  To support building a separate set of 64-bit objects, sparcv9/Makefile includes slightly different definitions and a different install target:
+712: 
+713: {{{
+714: 
+715: MAPDIR = ../spec/sparcv9
+716: include ../Makefile.com
+717: include ../../Makefile.lib.64
+718: 
+719: }}}
+720: 
+721: {{{
+722: 
+723: CPPFLAGS += -D_ELF64
+724: ...
+725: install yydebug: all $(ROOTLIBS64) $(ROOTLINKS64) $(ROOTLINT64) \
+726: 	$(ROOTDLIBS) $(ROOTDOBJS64)
+727: 
+728: }}}
+729: 
+730:  Note the additional inclusion of Makefile.lib.64 and the additional flag for 64-bit ELF targets. Also, the 64-bit-specific versions of the installation files are used, which as we can see in Makefile.lib cause them to be installed into /usr/lib/sparcv9:
+731: 
+732: {{{
+733: 
+734: ROOTLIBDIR=     $(ROOT)/usr/lib
+735: ROOTLIBDIR64=   $(ROOT)/usr/lib/$(MACH64)
+736: ...
+737: ROOTLIBS=       $(LIBS:%=$(ROOTLIBDIR)/%)
+738: ROOTLIBS64=     $(LIBS:%=$(ROOTLIBDIR64)/%)
+739: 
+740: }}}
+741: 
+742:  The linker (ld(1)) and runtime loader (ld.so.1(1)) know which of these directories to search for libraries depending on the bitness of the objects being linked or the program being run, respectively. For more information about 32- versus 64-bit linking, consult the Solaris Linkers and Libraries Guide, which can be found at http://docs.sun.com/app/docs/doc/819-0690 .
+743: 
+744: === 3.2.6 Understanding Kernel Module Installation ===
+745: 
+746:  The install target causes binaries and headers to be installed into a hierarchy called the prototype or proto area (see section 4.4.1 for more information on the prototype area's contents and purpose). The root of the proto area is defined by the environment variable ROOT. This variable is used in defining ROOT_MOD_DIR and USR_MOD_DIR in usr/src/uts/Makefile.uts:
+747: 
+748: {{{
+749: 
+750: ROOT_MOD_DIR               = $(ROOT)/kernel
+751: USR_MOD_DIR                = $(ROOT)/usr/kernel
+752: 
+753: }}}
+754: 
+755:  All modules are installed below one of these directories. The exact subdirectory used depends on the definition of ROOTMODULE in the module build directory, which is discussed below.
+756: 
+757:  Additional files to be installed may be given by the INSTALL_TARGET definition in this makefile. For example, the asy makefile (usr/src/uts/intel/asy/Makefile) specifies:
+758: 
+759: {{{
+760: 
+761: INSTALL_TARGET  = $(BINARY) $(ROOTMODULE) $(ROOT_CONFFILE)
+762: 
+763: }}}
+764: 
+765:  Since this is a common set of installation targets, let's look at how each component is derived.
+766: 
+767:  $(BINARY) is simply the module itself; we've discussed its dependencies and rules in detail above. Including it here requires it to be fully built before any installation is attempted.
+768: 
+769:  $(ROOTMODULE) is a name transform on the name of the module, relocating it into the prototype area. For example, usr/src/uts/intel/asy/Makefile defines:
+770: 
+771: {{{
+772: 
+773: ROOTMODULE      = $(ROOT_DRV_DIR)/$(MODULE)
+774: 
+775: }}}
+776: 
+777:  ROOT_DRV_DIR requires a bit of additional explanation; it is one of many module installation subdirectories defined in Makefile.uts. Because the ending location of binary kernel modules depends on the machine type, specifically its 32 versus 64 bitness, there are really several definitions. First, the subdirectory definition for each 64-bit machine type:
+778: 
+779: {{{
+780: 
+781: SUBDIR64_sparc          = sparcv9
+782: SUBDIR64_i386           = amd64
+783: SUBDIR64                = $(SUBDIR64_$(MACH))
+784: 
+785: }}}
+786: 
+787:  Next, the 32- and 64-bit installation directories for each type of module:
+788: 
+789: {{{
+790: 
+791: ROOT_KERN_DIR_32        = $(ROOT_MOD_DIR)
+792: ROOT_DRV_DIR_32         = $(ROOT_MOD_DIR)/drv
+793: ROOT_DTRACE_DIR_32      = $(ROOT_MOD_DIR)/dtrace
+794: ROOT_EXEC_DIR_32        = $(ROOT_MOD_DIR)/exec
+795: ...
+796: 
+797: }}}
+798: 
+799: {{{
+800: 
+801: ROOT_KERN_DIR_64        = $(ROOT_MOD_DIR)/$(SUBDIR64)
+802: ROOT_DRV_DIR_64         = $(ROOT_MOD_DIR)/drv/$(SUBDIR64)
+803: ROOT_DTRACE_DIR_64      = $(ROOT_MOD_DIR)/dtrace/$(SUBDIR64)
+804: ROOT_EXEC_DIR_64        = $(ROOT_MOD_DIR)/exec/$(SUBDIR64)
+805: ...
+806: 
+807: }}}
+808: 
+809:  And finally the selection of either the 32- or 64-bit directory based on the actual bitness of this build:
+810: 
+811: {{{
+812: 
+813: ROOT_KERN_DIR           = $(ROOT_KERN_DIR_$(CLASS))
+814: ROOT_DRV_DIR            = $(ROOT_DRV_DIR_$(CLASS))
+815: ROOT_DTRACE_DIR         = $(ROOT_DTRACE_DIR_$(CLASS))
+816: ROOT_EXEC_DIR           = $(ROOT_EXEC_DIR_$(CLASS))
+817: ...
+818: 
+819: }}}
+820: 
+821:  There are similar definitions for USR_XXX_DIR based in $(ROOT)/usr/kernel. See usr/src/uts/Makefile.uts for the complete list of possible ROOT_ and USR_ installation directories.
+822: 
+823:  The rules for installing files into each of these directories are given in usr/src/uts/Makefile.targ:
+824: 
+825: {{{
+826: 
+827: $(ROOT_MOD_DIR)/%:      $(OBJS_DIR)/% $(ROOT_MOD_DIR) FRC
+828: 	$(INS.file)
+829: 
+830: }}}
+831: 
+832: {{{
+833: 
+834: $(ROOT_DRV_DIR)/%:      $(OBJS_DIR)/% $(ROOT_DRV_DIR) FRC
+835: 	$(INS.file)
+836: ...
+837: 
+838: }}}
+839: 
+840:  These rules install the file currently located in $(OBJS_DIR), described in detail above, into the appropriate directory in the proto area.
+841: 
+842:  $(ROOT_CONFFILE) is the module's configuration file (most commonly used for drivers), transformed into the proto area. The CONFFILE variables are defined in usr/src/uts/Makefile.uts:
+843: 
+844: {{{
+845: 
+846: CONFFILE                = $(MODULE).conf
+847: SRC_CONFFILE            = $(CONF_SRCDIR)/$(CONFFILE)
+848: ROOT_CONFFILE_32        = $(ROOTMODULE).conf
+849: ROOT_CONFFILE_64        = $(ROOTMODULE:%/$(SUBDIR64)/$(MODULE)=%/$(MODULE)).conf
+850: ROOT_CONFFILE           = $(ROOT_CONFFILE_$(CLASS))
+851: 
+852: }}}
+853: 
+854:  Each module's Makefile defines CONF_SRCDIR to specify the location of the configuration file that should be installed on this platform. The asy makefile defines:
+855: 
+856: {{{
+857: 
+858: CONF_SRCDIR     = $(UTSBASE)/common/io
+859: 
+860: }}}
+861: 
+862:  which causes usr/src/uts/common/io/asy.conf to be installed in the proto area as /kernel/drv/asy.conf. Note that the configuration file installation directory does not depend on whether this is a 32- or 64-bit build.
+863: 
+864:  Note that although it is confusing, installation targets are always named ROOTMODULE, ROOT_CONFFILE, and so on, even if they are actually installed into one of the USR_ directories. This simplifies the higher-level makefiles.
+865: 
+866: === 3.2.7 Finding Sources for a Module ===
+867: 
+868:  As we've seen, the sources are derived from $(XXX_OBJS) and the included rules. Now, here's the tricky part - finding where those sources are. The easiest way by far is to run make from the module's object directory and observe the compilation commands that are run. The path to each source file will be included in the output. This is the simplest and recommended way to find which source files are needed to build a module. However, if this does not work (perhaps the makefile itself is buggy) or if you want to gain greater understanding, the rest of this section describes logical processes for finding source files.
+869: 
+870:  Since you know the basenames (they are simply the XXX_OBJS entries with .o replaced by .c) you can use a simple
+871: 
+872: {{{
+873: 
+874: $ find usr/src/uts -name asy.c
+875: 
+876: }}}
+877: 
+878:  Suppose you find two source files with the same name - which is actually used? There are two ways to figure this out. The lazy way is to use make -d to show you the exact dependencies being used. Alternatively, you could reason it out, starting with the fact that not all source files are used on your platform (i.e., usr/src/uts/sparc/* is not used by x86 builds), and then looking at the specific order of the rules in each Makefile.rules. The more specific rules are listed first and take precedence over later rules (in fact they all add a dependency to the specific object file in question, but since the rules all use $&lt;, only the first dependency is actually used).
+879: 
+880:  Non-kernel source files are easier to locate, since the cmd and lib directories are generally organized with one subdirectory for each library or command, named accordingly. The major exceptions are cmd/sgs, which contains the entire binary tools subsystem, and cmd/cmd-inet, which contains most of the Berkeley networking commands and daemons as well as some additional network-related utilities, laid out in a BSD-style directory structure.
+881: 
+882: === 3.2.8 Source Files not Included ===
+883: 
+884:  Some sources used to build the branded Solaris product are not included in OpenSolaris. There are two main reasons for this:
+885: 
+886: * The source could be subject to third-party rights.
+887:  Sun's lawyers won't let anyone talk about this. Not even a little bit. They do love explaining it themselves, though, so you should contact Sun's legal department and ask there. We can't help you. Sorry.
+888: * The consolidation may not yet have been released.
+889:  The OpenSolaris code base does not yet include all consolidations in Solaris, and some consolidations are still incomplete. See the program roadmap at [[https://markebrooks.github.io/bin/view/Main/roadmap&gt;&gt;Main.roadmap]] and the downloads page at [[https://markebrooks.github.io/bin/view/Main/downloads&gt;&gt;Main.downloads]] for information on the consolidations that interest you.
+890: 
+891:  To accommodate fully functional builds for ON, even though some sources are missing, a set of closed binaries are available, and the build system has been modified to make use of them. The makefile variable CLOSED_BUILD controls whether the build system will use the prebuilt closed binaries or look for the closed sources.
+892: 
+893:  CLOSED_BUILD is typically used in makefile lines that build up the list of modules or subdirectories that are to be built. Makefile lines that start with CLOSED_BUILD, e.g.,
+894: 
+895: {{{
+896: 
+897: $(CLOSED_BUILD)DCSUBDIRS += \
+898: 	$(CLOSED)/cmd/pax
+899: 
+900: }}}
+901: 
+902:  are for use only when the closed sources are present.
+903: 
+904:  Sometimes a separate closed module list is built up, rather than adding to the open module list. This approach is used extensively in the kernel, as in
+905: 
+906: {{{
+907: 
+908: $(CLOSED_BUILD)CLOSED_DRV_KMODS	+= chxge
+909: 
+910: }}}
+911: 
+912:  Because this approach requires additional variables, the first approach is usually preferred. The second approach is used when the list needs to contain individual component names, rather than paths. For example, the kernel makefiles use the module names to construct a series of &quot;-l&quot; clauses for linting; that would be a lot messier if paths were used instead of module names.
+913: 
+914:  You shouldn't normally need to set CLOSED_BUILD. Instead, bldenv(1) and nightly(1) set the environment variable CLOSED_IS_PRESENT, and the ON makefiles use this to set CLOSED_BUILD.
+915: 
+916:  The kernel provides an additional challenge, which is that many makefile rules and declarations are practically the same for both the open and closed source trees. To avoid duplication of code, the common text was put in shared makefiles (e.g., Makefile.sun4u.shared). When used for open code, the makefile variable $(UTSTREE) is set to $(UTSBASE). For closed code, it is set to $(UTSCLOSED).
+</textarea>
+</div>
+
+    <div class="clearfloats"></div>
+  </div>    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Community Group on Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/ON+IPS+FAQ">ON IPS FAQ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/crt">CRT</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/advocates">Advocates & Sponsors</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/becoming%2Da%2Dsponsor">Becoming a Sponsor</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/becoming%2Dan%2Dadvocate">Becoming a CRT Advocate</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/charter">Charter</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/rti%2Dnits">RTI nits to avoid</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/sponsor%2Dtasks">Sponsor Tasks</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/dev_solaris">Developing Solaris</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/qual_death_spiral">Quality Death Spiral</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/devref_toc">Developer’s Reference</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/devref_1">Introduction</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/devref_2">Prerequisites</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/devref_3a">The Source Tree, part 1</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/devref_3b">The Source Tree, part 2</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/devref_4">Building OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/devref_5">Installing and Testing OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/devref_6">Integration Procedure</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/devref_7">Best Practices and Requirements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/devref_glossary">Glossary</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/findunref">findunref and unreferenced files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/flag%2Ddays">ONNV Flag Days, Heads Ups, and Project Integration History</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/101%2D105">Builds 101&#45;105</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/106%2D110">Builds 106&#45;110</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/111%2D115">Builds 111&#45;115</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/116%2D120">Builds 116&#45;120</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/121%2D125">Builds 121&#45;125</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/126%2D130">Builds 126&#45;130</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/21%2D25">Builds 21&#45;25</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/26%2D30">Builds 26&#45;30</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/31%2D35">Builds 31&#45;35</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/36%2D40">Builds 36&#45;40</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/41%2D45">Builds 41&#45;45</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/46%2D50">Builds 46&#45;50</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/51%2D55">Builds 51&#45;55</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/56%2D60">Builds 56&#45;60</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/61%2D65">Builds 61&#45;65</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/66%2D70">Builds 66&#45;70</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/71%2D75">Builds 71&#45;75</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/76%2D80">Builds 76&#45;80</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/81%2D85">Builds 81&#45;85</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/86%2D90">Builds 86&#45;90</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/91%2D95">Builds 91&#45;95</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/96%2D100">Builds 96&#45;100</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/install_quickstart">Installation (from source) Quickstart</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/example_nightly">Annotated nightly(1) Mail Example</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/known_issues">Currently Known Issues</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/onnv_putback_logs">Putback Logs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/os_dev_process">Development Process</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/schedule">Schedule</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/shellstyle">Bourne/Korn Shell Coding Conventions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/wx">wx</a></span></li>
+</ul>
+                    </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2011, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

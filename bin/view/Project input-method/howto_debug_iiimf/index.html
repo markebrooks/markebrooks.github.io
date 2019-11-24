@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>How to debug IIIM related problems (Project input-method.howto_debug_iiimf) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+input%2Dmethod/howto_debug_iiimf" />
+                    <link rel="canonical" href="/bin/view/Project+input%2Dmethod/howto_debug_iiimf" />
+                            <meta name="document" content="Project input-method.howto_debug_iiimf"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Project input-method"/>
+    <meta name="page" content="howto_debug_iiimf"/>
+    <meta name="version" content="10.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Project+input-method/pages/howto_debug_iiimf"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="How to debug IIIM related problems" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="Osamu Sayama" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project input-method";
+XWiki.currentPage = "howto_debug_iiimf";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Project+input%2Dmethod/howto_debug_iiimf";
+window.docediturl = "/bin/edit/Project+input%2Dmethod/howto_debug_iiimf";
+window.docsaveurl = "/bin/save/Project+input%2Dmethod/howto_debug_iiimf";
+window.docgeturl = "/bin/get/Project+input%2Dmethod/howto_debug_iiimf";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Project_input-method viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Binput-method%2Fhowto_debug_iiimf"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+input%2Dmethod/"><strong>Project input-method</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Project+input%2Dmethod" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+            </td>
+            <td id="logo-text" style="width: 1%;">
+                Solaris
+            </td>         
+            <td style="width: 98%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                              <a href='/bin/view/Project+input%2Dmethod/documents'>Documents</a> <span class='separator'>&#187;</span> <span class='current'>How to debug IIIM related problems</span>
+                </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+input%2Dmethod/howto_debug_iiimf?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+input%2Dmethod/howto_debug_iiimf?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+input%2Dmethod/howto_debug_iiimf?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+input%2Dmethod/howto_debug_iiimf?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+input%2Dmethod/howto_debug_iiimf?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+input%2Dmethod/howto_debug_iiimf?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+input%2Dmethod/howto_debug_iiimf?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+input%2Dmethod/howto_debug_iiimf?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+input%2Dmethod/howto_debug_iiimf?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+input%2Dmethod/howto_debug_iiimf?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+input%2Dmethod/howto_debug_iiimf?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>How to debug IIIM related problems</h1></div>
+
+
+
+    <strong>NOTE: The
+ input-method project
+ is no longer active on this website so information here may be out of date. Current Oracle Solaris 11 product documentation can be found </strong>
+  <strong><a href="http://www.oracle.com/technetwork/server-storage/solaris11/documentation/index.html">here</a>.</strong>
+  <strong>Information about downloading Oracle Solaris 11 can be found <a href="http://www.oracle.com/technetwork/server-storage/solaris11/downloads/index.html">here</a>.</strong>
+<hr>
+  
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<p>IIIM is a Input Method framework mainly used in Asian locales. This is a memo how to debug iiim related problems.</p><div class="wikimodel-emptyline"></div><h1 id="HServermodules2Ciiimx2Ciiimdandiiim-xbe"><span><strong>&nbsp;Server modules, iiimx, iiimd and iiim-xbe&nbsp;</strong></span></h1><p>When starting up, iiimx is invoked by IM script. Then it invokes three daemons, iiim-xbe, iiimd and iiim-panel.<br/><tt class="wikimodel-verbatim">
+/usr/bin/iiimx -iiimd
+  iiimd -nodaemon -desktop ...
+  iiim-panel --disable-crash-dialog
+  iiim-xbe
+</tt><br/>iiim-xbe is mainly used in non UTF-8 locales and responsible to work as XIM and XIMP server. iiim-xbe is also used in UTF-8 locales as a starter of IIIM AUX services. iiimd is used as IIIM server. iiim-panel is used mainly as Input method switcher. So when debungging iiim related problems, you will need to check iiim-xbe and iiimd behavior as a server module.</p><div class="wikimodel-emptyline"></div><h1 id="HClientmodules2Cim-iiim.so2Cxiiimp.so.22Cximp40.so.2andximcp.so.2"><span><strong>&nbsp;Client modules, im-iiim.so, xiiimp.so.2, ximp40.so.2 and ximcp.so.2&nbsp;</strong></span></h1><p>&nbsp;&nbsp;When GTK application is invoked, im-iiim.so is loaded for connecting IIIM server because GTK_IM_MODULE=iiim is set in start up script.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o GTK app -&gt; GTK API -&gt; im-iiim.so -&gt; libiiim*.so -&gt; [IIIM protocol] -&gt; iiimd<br/>&nbsp;&nbsp;When Java/X application is invoked on UTF-8 locales, xiiimp.so.2 is loaded for connecting IIIM server.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o X app (UTF-8) -&gt; X API -&gt; xiiimp.so.2 -&gt; libiiimc*.so -&gt; [IIIM protocol] -&gt; iiimd<br/>&nbsp;&nbsp;When Java/X application is invoked on non UTF-8 locales in s10, ximp40.so.2 is loaded for connecting to XIMP server.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o X app (non UTF-8) -&gt; X API -&gt; ximp40.so.2 -&gt; [XIMP protocol] -&gt; iiim-xbe -&gt; libiiim*.so -&gt; [IIIM protocol] -&gt; iiimd<br/>&nbsp;&nbsp;When Java/X application is invoked on non UTF-8 locales in s11, ximcp.so.2 is loaded for connecting to XIM server.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o X app (non UTF-8) -&gt; X API -&gt; ximcp.so.2 -&gt; [XIM protocol] -&gt; iiim-xbe -&gt; libiiim*.so -&gt; [IIIM protocol] -&gt; iiimd</p><p>&nbsp;&nbsp;So when debugging a client application for Input method, you will need to check im-iiim.so, xiiimp.so.2, ximp40.so.2 and ximcp.so.2 behavior based on the application framwork. For example, the following tables shows used modules for Japanese locales.</p><table><tr><th scope="col"></th><th scope="col">ja/ja_JP.eucJP/ja_JP.PCK</th><th scope="col">&nbsp;</th><th scope="col">ja_JP.UTF-8</th><th scope="col">&nbsp;</th><td><br/></td></tr><tr><td></td><td>server</td><td>client</td><td>server</td><td>client</td><td><br/></td></tr><tr><td>GTK+ application</td><td>iiimd</td><td>im-iiim.so</td><td>iiimd</td><td>im-iiim.so</td><td><br/></td></tr><tr><td>Java/X application</td><td>iiim-xbe/iiimd</td><td>ximp40.so.2(s10)/ximcp.so.2(s11)</td><td>iiimd</td><td>xiiimp.so.2</td><td></td></tr></table><h1 id="HDebuggingonIIIMserverside"><span><strong>&nbsp;Debugging on IIIM server side&nbsp;</strong></span></h1><p>&nbsp;&nbsp;Some dtrace scripts for debugging iiim modules are available. You can download <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Project+input%2Dmethod/files/iiim%2Ddtrace%2Ddebug.zip">iiim-dtrace-debug.zip</a></span>. If you don't have iiimf source files, you can take it's copy from <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Project+input%2Dmethod/files/im%2Dsdk%2Dinclude.zip">im-sdk-include.zip</a></span> (This zip file includes only needed header files). Once these are downloaded, unzip these files.<br/><tt class="wikimodel-verbatim">
+       # unzip iiim-dtrace-debug.zip
+       # cd iiim-dtrace-debug
+       # unzip ../im-sdk-include.zip
+</tt></p><h3 id="Hiiimd"><span><strong>&nbsp;iiimd&nbsp;</strong></span></h3><p>&nbsp;&nbsp;iiimd-debug is a dtrace script and can be used to trace IIIM protocol. If you encounter a problem related IIIM, it may be useful whether iiimd is working fine to look this output with comparing normal behavior.<br/><tt class="wikimodel-verbatim">
+# ./iiimd-debug -h
+./iiimd-debug: getopts: h bad option(s)
+Usage:  iiimd-debug -p &lt;uid&gt; [-t &lt;num&gt;]
+-u &lt;uid&gt;        # User ID for iiimd
+-t &lt;num&gt;        # num bytes used by tracemem output
+# ./iiimd-debug -u jdstest
+uid=jdstest
+iiimd_pid=22280
+tracemem=0
+S-&gt;C:1:1 IM_AUX_GETVALUES_REPLY (opcode=63,size=108)
+S-&gt;C:1:2 IM_AUX_DRAW (opcode=5c,size=108)
+S-&gt;C:1:2 IM_HOTKEY_STATE_NOTIFY (opcode=22,size=8)
+C-&gt;S:1:2 IM_AUX_DRAW_REPLY (opcode=5d,size=76)
+:
+
+If -t option is specified (like -t 128), you can dump first 128bytes
+of the payload.
+
+S-&gt;C:1:1 IM_STATUS_DRAW (opcode=34,size=64)
+             0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f  0123456789abcdef
+         0: 01 00 01 00 01 00 00 00 30 00 00 00 21 ff 08 00  ........0...!...
+        10: 00 00 00 00 00 00 00 00 34 ff 08 00 00 00 00 00  ........4.......
+        20: 00 00 00 00 2f ff 08 00 00 00 00 00 00 00 00 00  ..../...........
+        30: 2b ff 08 00 00 00 00 00 00 00 00 00 00 00 00 00  +...............
+        40: fc fb 13 08 70 21 00 00 ac b5 c4 fe 00 00 00 00  ....p!..........
+        50: 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+        60: 05 00 00 00 00 00 00 00 90 99 58 08 00 81 58 08  ..........X...X.
+        70: 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00  ................
+</tt><br/>You can understand IIIM protocol by iiimp_spec.html.</p><h3 id="Hiiim-xbe"><span><strong>&nbsp;iiim-xbe&nbsp;</strong></span></h3><p>&nbsp;&nbsp;iiim-xbe-debug is a dtrace script and can be used to trace XIMP protocol and XIM protocol (X client message only). If your application is Java/X and it is running under non UTF-8 locales, you should check this output and compare output with normal behavior.<br/><tt class="wikimodel-verbatim">
+# ./iiim-xbe-debug -h        
+./iiim-xbe-debug[14]: getopts: h bad option(s)
+Usage:  iiim-xbe-debug -u &lt;uid&gt;
+-u &lt;uid&gt;        # User ID for iiim-xbe
+# ./iiim-xbe-debug -u jdstest
+uid=jdstest
+iiim_xbe_pid=22285
+C-&gt;S:* XIMProtocol:XIMP_CREATE
+        Client Window ID=54526053, InputStyle=1026, mask=800001
+S-&gt;C:5 XIMProtocol::XIMP_CREATE_RETURN 
+        ICID=5
+C-&gt;S:5 XIMProtocol:XIMP_CLIENT_WINDOW
+        ICID=5, Client Window ID=54526053
+S-&gt;C:5 XIMProtocol::XIMP_CLIENT_WINDOW_RETURN 
+        ICID=5
+C-&gt;S:5 XIMProtocol:XIMP_SETFOCUS
+        ICID=5
+         7 IIIMCF_EVENT_TYPE_AUX_GETVALUES
+         8 IIIMCF_EVENT_TYPE_AUX_GETVALUES
+:
+</tt></p><div class="wikimodel-emptyline"></div><h1 id="HDebuggingonclientside"><span><strong>&nbsp;Debugging on client side&nbsp;</strong></span></h1><h3 id="HGTK2Bapplication"><span><strong>&nbsp;GTK+ application&nbsp;</strong></span></h3><p>&nbsp;&nbsp;gtk-client-trace is dtrace script which traces the function calls in im-iiim.so and gtk_im_* functions in libgtk-x11-2.0.so.0.<br/><tt class="wikimodel-verbatim">
+# ./gtk-client-trace -h              
+./gtk-client-trace[14]: getopts: h bad option(s)
+Usage:  gtk-client-trace -c &lt;GTK program&gt; | -p &lt;pid&gt;
+-c &lt;GTK program&gt; # GTK program path to be invoked.
+-p &lt;pid&gt;         # PID for GTK program running.
+</tt><br/>If you want trace each functions, it may be useful.<br/><tt class="wikimodel-verbatim">
+# ./gtk-client-trace -p `pgrep gedit`        
+program=
+pid=24832
+dtrace: script '/dev/fd/11' matched 424 probes
+CPU FUNCTION                                 
+  2  -&gt; gtk_im_context_set_cursor_location    (840afc8,8046b30,fe56e9bb,2)
+  2    -&gt; gtk_im_context_get_type             (8404728,8046b30,fe4d430f,8046b30)
+  2    &lt;- gtk_im_context_get_type             = 840ab10
+  2    -&gt; gtk_im_multicontext_set_cursor_location (840afc8,8046b30,fe4d430f,8046b30)
+  2      -&gt; gtk_im_multicontext_get_slave     (840afc8,2f87395d,fe4d6206,8405f08)
+  2      &lt;- gtk_im_multicontext_get_slave     = 840fdf0
+  2      -&gt; gtk_im_context_set_cursor_location (840fdf0,8046b30,fe4d6206,8405f08)
+</tt></p><h3 id="HJava2FXapplication"><span><strong>&nbsp;Java/X application&nbsp;</strong></span></h3><p>&nbsp;&nbsp;x-client-trace is dtrace script which traces the function calls in ximp40.so.2, xiiimp.so.2 and ximcp.so.2.<br/><tt class="wikimodel-verbatim">
+# ./x-client-trace -h
+./x-client-trace[16]: getopts: h bad option(s)
+Usage:  ximp-client-trace -c &lt;X program&gt; | -p &lt;pid&gt;
+-c &lt;X program&gt;  # X program path to be invoked.
+-p &lt;pid&gt;        # PID for X program running.
+</tt><br/>If you want trace each functions, it may be useful.<br/><tt class="wikimodel-verbatim">
+# ./x-client-trace -c /usr/bin/xterm
+:
+CPU FUNCTION                                 
+  1  -&gt; XOpenIM                               (80905a8,0,0,0)
+  2  -&gt; _Ximp_OpenIM                          (80a3ca0,80905a8,0,0)
+  2    -&gt; _Ximp_OpenIM_Resource               (80c74e8,2,809c74c,fee3c000)
+  2      -&gt; _Ximp_Environ                     (0,fef9f560,feff0400,0)
+  2      &lt;- _Ximp_Environ                     = 5
+  2      -&gt; _Ximp_InputServerMode             (80c74e8,0,fef9f560,feff0400)
+</tt></p><div class="wikimodel-emptyline"></div><h1 id="HTipsforcollectingneededdata"><span><strong>&nbsp;Tips for collecting needed data&nbsp;</strong></span></h1><h3 id="HTodofirst"><span><strong>&nbsp;To do first&nbsp;</strong></span></h3><p>&nbsp;&nbsp;If you encounter a problem, you should provide not only your problem description but also the following your environment information.</p><ol><li>Solaris version, platform, iiimf patch level.</li><li>Login locale</li><li>Login session, CDE or JDS&nbsp;</li><li>Input method frame work and Language Engine (like iiimf/atok)</li><li>Application name you encountered the problem.</li><li>Are you using dictionary setting by default? If you customized, please provide how to customize.</li></ol><h3 id="HAGTK2FXapplicationhangsafterinputmethodturnson"><span><strong>&nbsp;A GTK/X application hangs after input method turns on&nbsp;</strong></span></h3><p>&nbsp;&nbsp;This situation is often reported. For many cases, the problem is in iiimd or iiim-xbe that are stopping or waiting something. <br/>So first of all, you should try <br/><tt class="wikimodel-verbatim">
+	% gcore `pgrep iiimd`
+	% gcore `pgrep iiim-xbe`
+	% gcore &lt;application pid&gt;
+</tt><br/>And check each stack trace whether it is normal or not.</p><p>&nbsp;&nbsp;If iiimd is working fine, the following stack trace will be displayed <br/>when waiting a connection.<br/><tt class="wikimodel-verbatim">
+	one IMSocketTrans*IMSocketListen::accept()/poll
+	one void*parent_watchdog/sleep
+	many  IMSocketTrans::recv/recv
+</tt><br/><tt class="wikimodel-verbatim">
+% pstack core.9470 | c++filt
+9470:   iiimd -nodaemon -desktop -udsfile /tmp/.iiim-sayama/:11.0 -vardir /exp
+-----------------  lwp# 1 / thread# 1  --------------------
+ feef1eb7 pollsys  (9118288, 1, 0, 0)
+ fee96df6 poll     (9118288, 1, ffffffff, feeeb1f4) + 4c
+ 080af145 IMSocketTrans*IMSocketListen::accept() (80f4f38, 8047828, 8047838, 80a
+10eb) + a1
+ 080948c7 IMState*IIIMProtocol::accept(int) (8123480, 0, 4, 8230c28) + 23
+ 080a3cc4 int IMSvr::start() (80478e0, feffb8f4, 8047978, 80bf371) + 40
+ 080bf388 main     (9, 80479a4, 80479cc, 807cfb0) + b0
+ 0807d04d _start   (9, 8047ad8, 8047ade, 8047ae8, 8047af1, 8047afa) + 7d
+-----------------  lwp# 2 / thread# 2  --------------------
+ feef1877 nanosleep (fbb0ef90, fbb0ef98)
+ feedd709 sleep    (a, 200, 8, 80bf242) + 31
+ 080bf23a void*parent_watchdog(void*) (0, fef70000, fbb0efe8, feeed60e) + 1a
+ feeed663 _thrp_setup (fba00240) + 9b
+ feeed910 _lwp_start (fba00240, 0, 0, 0, 0, 0)
+-----------------  lwp# 9 / thread# 9  --------------------
+ feef1a07 recv     (c, fb9fef18, 8, 0)
+ fed9ca72 recv     (c, fb9fef18, 8, 0, fef71008, 0) + 2a
+ 080aef71 int IMSocketTrans::recv(void*,unsigned) (80f98e8, fb9fef18, 8, feee5f3
+1) + 19
+ 0809322e IIIMPTrans_read (8307d10, fb9fef18, 8, fc2cea66) + 26
+ fc2cea89 iiimf_stream_receive (8307b90, 8231728, fb9fef5c, fc2c9813) + 31
+ 08093178 IIIMP_message*IIIMPTrans::receive() (8307d10, 8379190, 1, 8379190) + 1
+8
+ 08094830 bool IIIMProtocol::receive_and_dispatch(IMState*,int) (8123480, 821ef9
+0, 0, feeec906) + 14
+ 080a1090 IMScheduler_MTPC_thread_entry (82d5c08, fef70000, fb9fefe8, feeed60e) 
++ 44
+ feeed663 _thrp_setup (fba00a40) + 9b
+ feeed910 _lwp_start (fba00a40, 0, 0, 0, 0, 0)
+</tt><br/>&nbsp;&nbsp;If iiim-xbe is working fine, the following stack trace will be displayed when waiting a connection.<br/><tt class="wikimodel-verbatim">
+% pstack core.9475 | c++filt
+core 'core.9475' of 9475:	iiim-xbe
+-----------------  lwp# 1 / thread# 1  --------------------
+ feef1877 nanosleep (80479c0, 80479c8)
+ feedd709 sleep    (989680, 8047a28, 80479f8, 805e074) + 31
+ 0805e081 main     (1, 8047a28, 8047a30, 805d8fd) + 29
+ 0805d93d _start   (1, 8047b3c, 0, 80a3254, 8047b78, 8047b8e) + 7d
+-----------------  lwp# 2 / thread# 2  --------------------
+ feef1eb7 pollsys  (8093128, 1, 0, 0)
+ fee96df6 poll     (8093128, 1, ffffffff, fec949ae) + 4c
+ fec94a88 _XWaitForReadable (80961e0, fed9c000, fe40e6d8, fec9484c) + e8
+ fec9487d _XRead   (80961e0, fe40e710, 20, fecc744d) + a9
+ fecc7682 _XReadEvents (80961e0, fe40ef60, 80dace8, fec9ddf6) + 246
+ fec9de36 XNextEvent (80961e0, fe40ef60, 4e0006c, 805fd0d) + 4a
+ 0805fd29 void*XIMProtocol::xevent_loop(void*) (808bcc0, fef70000, fe40efe8, feeed60e) + 29
+ feeed663 _thrp_setup (fe300240) + 9b
+ feeed910 _lwp_start (fe300240, 0, 0, 0, 0, 0)
+-----------------  lwp# 3 / thread# 3  --------------------
+ feef1eb7 pollsys  (809c210, 1, 0, 0)
+ fee96df6 poll     (809c210, 1, ffffffff, fec949ae) + 4c
+ fec94a88 _XWaitForReadable (809b8b8, fed9c000, fe2fe6d8, fec9484c) + e8
+ fec9487d _XRead   (809b8b8, fe2fe710, 20, fecc744d) + a9
+ fecc7682 _XReadEvents (809b8b8, fef70000, fe2fef68, fec9ddf6) + 246
+ fec9de36 XNextEvent (809b8b8, fe2fef60) + 4a
+ 08068a38 void*R6IMProtocol::xevent_loop(void*) (808c280, fef70000, fe2fefe8, feeed60e) + 28
+ feeed663 _thrp_setup (fe300a40) + 9b
+ feeed910 _lwp_start (fe300a40, 0, 0, 0, 0, 0)
+</tt><br/>You should also try gtk-client-trace, x-client-trace dtrace script to check where application is hanging.<br/>After you understood where application is hanging, you will check source files and would try more specialized dtrace or debug binary as a next step.</p><h3 id="Hjservercrashproblem."><span><strong>&nbsp;jserver crash problem.</strong></span></h3><p>&nbsp;&nbsp;jserver crash is often reported. If crash occured, core file is very useful. So please investigate this first. Also it is nice to provide the following information if crash problem can be reproducible.</p><ol><li>Please provide the output of wnnstat、wnnstat -D、wnnstat -F for both before crash and after crash.</li><li>-s option of jserver can save the log file. So please modify<br/><tt class="wikimodel-verbatim">
+   /lib/svc/method/wnn8-server 
+	${JSERVER} ${JSERVER_OPT} &amp;
+   to
+	${JSERVER} -s /var/tmp/log ${JSERVER_OPT} &amp;
+</tt><br/>and save /var/tmp/log when crash occured.</li></ol>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by Osamu Sayama on 2010/12/17 08:00<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by Osamu Sayama on 2010/12/17 11:48
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Project input-method Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/documents">Documents</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/building_ibus">Build and use iBus</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/building_iiimf">Build IIIMF</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/building_scim">Build SCIM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/building_sunpinyin">Build SunPinyin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/building_uim">Build UIM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/howtos">Howtos</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_ime">SunPinyin代码导读&#45;IME部分</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_slm">SunPinyin代码导读&#45;SLM部分</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_slm_en">SunPinyin Code Tour &#45; SLM</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/repository">Repository</a></span></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2012, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

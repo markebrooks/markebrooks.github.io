@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Solaris Packet Filtering Hooks (Community Group networking.pfhooks) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Community+Group+networking/pfhooks" />
+                    <link rel="canonical" href="/bin/view/Community+Group+networking/pfhooks" />
+                            <meta name="document" content="Community Group networking.pfhooks"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Community Group networking"/>
+    <meta name="page" content="pfhooks"/>
+    <meta name="version" content="1.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Community+Group+networking/pages/pfhooks"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Solaris Packet Filtering Hooks" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/fullScreen.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Community Group networking";
+XWiki.currentPage = "pfhooks";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Community+Group+networking/pfhooks";
+window.docediturl = "/bin/edit/Community+Group+networking/pfhooks";
+window.docsaveurl = "/bin/save/Community+Group+networking/pfhooks";
+window.docgeturl = "/bin/get/Community+Group+networking/pfhooks";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/viewers/code.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/fullScreen.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Community_Group_networking viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FCommunity%2BGroup%2Bnetworking%2Fpfhooks%3Fviewer%3Dcode%26%2338%3Blanguage%3Den"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+networking/"><strong>Community Group networking</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Community+Group+networking" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+            </td>
+            <td id="logo-text" style="width: 1%;">
+                Solaris
+            </td>         
+            <td style="width: 98%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                              <a href='/bin/view/Community+Group+networking/docs'>Documentation</a> <span class='separator'>&#187;</span> <span class='current'>Solaris Packet Filtering Hooks</span>
+                </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Community+Group+networking/pfhooks?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+        <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Community+Group+networking/pfhooks?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+networking/pfhooks?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+networking/pfhooks?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+networking/pfhooks?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Community+Group+networking/pfhooks?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+networking/pfhooks?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+networking/pfhooks?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+networking/pfhooks?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+networking/pfhooks?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Community+Group+networking/pfhooks?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          <span class="submenuitem "><a href="/bin/view/Community+Group+networking/pfhooks?xpage=copy" id="tmActionCopy" class="tmActionCopy">Copy</a></span>
+      </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+<div id="document-title"><h1>Wiki source code of <a href="/bin/view/Community+Group+networking/pfhooks">Solaris Packet Filtering Hooks</a></h1></div>
+                <div id="document-info">
+    <div>
+                      <span id="contentshortcut"><a href="/bin/view/Community+Group+networking/pfhooks?viewer=content">Content</a></span>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+
+
+
+
+
+
+<div>
+  <a href="/bin/view/Community+Group+networking/pfhooks?viewer=code&amp;showlinenumbers=0&amp;language=en" id="toggleLineNumbers">Hide line numbers</a>
+                                  <textarea readonly="readonly" class="wiki-code" rows="25" cols="80">
+  1: = Solaris Packet Filtering Hooks
+  2: 
+  3: //Author: Darren Reed, March 2009//
+  4: 
+  5: == Introduction
+  6: 
+  7:  Starting with the release of Solaris 10, networking inside the Solaris kernel has evolved away from being centered on the SVR4 STREAMS approach to a newer design that supports better performance. Whilst the system has continued to support the old interfaces, using them has often meant there is a performance cost.
+  8: 
+  9:  A classic example of this is the use of STREAMS modules between TCP/IP and network interface drivers, typically used by firewalls and other software packages to inspect all of the packets.
+ 10: 
+ 11:  To bring filtering of packets into line with the developments in other parts of Solaris, we've developed a new interface, known as the Packet Filtering Hooks. In addition to providing the means to be notified each time a packet appears at one of the hook points, this new interface also provides the developer with kernel access to other basic network interface information, such as their names and addresses associated with them.
+ 12: 
+ 13:  Callbacks and notifications are available to the programmer to provide them with information about when a new instance of IP is created to support a new Zone booting that requries an exclusive instance of IP. Finally, for the first time on Solaris, it is possible to intercept packets on the loopback interface. The loopback packet interception also provides the developer with access to packets as they move between zones that are using a shared instance of IP, the default model.
+ 14: 
+ 15:  In summary, the introduction of Packet Filtering Hooks into Solaris brings into line with the needs and expectations of developers who are looking to develop value added network solutions at the kernel level, be they for security (packet filtering/firewall), network address translation (NAT) or other purposes. For Solaris users, these interfaces are available in Solaris 10 Update 7 and later. For OpenSolaris users, these interfaces are available in OpenSolaris 2009.06 and later.
+ 16: 
+ 17: == The API
+ 18: 
+ 19: === Kernel functions
+ 20: 
+ 21:  The folliowing functions are exported from the misc/neti and misc/hook kernel modules to support packet filtering. Developers writing code to interface with these functions will need to link their kernel module(s) with -Nmisc/neti and -Nmisc/hook in order to be correctly loaded by the kernel.
+ 22: 
+ 23: * [[hook_alloc&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/hook-alloc-9f?a=view]]
+ 24: * [[hook_free&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/hook-free-9f?a=view]]
+ 25: * [[net_event_notify_register&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-event-notify-register-9f?a=view]]
+ 26: * [[net_event_notify_unregister&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-event-notify-unregister-9f?a=view]]
+ 27: * [[net_getifname&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-getifname-9f?a=view]]
+ 28: * [[net_getlifaddr&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-getlifaddr-9f?a=view]]
+ 29: * [[net_getmtu&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-getmtu-9f?a=view]]
+ 30: * [[net_getpmtuenabled&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-getpmtuenabled-9f?a=view]]
+ 31: * [[net_hook_register&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-hook-reguster-9f?a=view]]
+ 32: * [[net_hook_unregister&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-hook-unregister-9f?a=view]]
+ 33: * [[net_inject&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-inject-9f?a=view]]
+ 34: * [[net_inject_alloc&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-inject-alloc-9f?a=view]]
+ 35: * [[net_inject_free&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-inject-free-9f?a=view]]
+ 36: * [[net_instance_alloc&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-instance-alloc-9f?a=view]]
+ 37: * [[net_instance_free&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-instance-free-9f?a=view]]
+ 38: * [[net_instance_notify_register&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-instance-notify-register-9f?a=view]]
+ 39: * [[net_instance_notify_unregister&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-instance-notify-unregister-9f?a=view]]
+ 40: * [[net_instance_register&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-instance-register-9f?a=view]]
+ 41: * [[net_instance_unregister&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-instance-unregister-9f?a=view]]
+ 42: * [[net_ispartialchecksum&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-ispartialchecksum-9f?a=view]]
+ 43: * [[net_isvalidchecksum&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-isvalidchecksum-9f?a=view]]
+ 44: * [[net_kstat_create&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-kstat-create-9f?a=view]]
+ 45: * [[net_kstat_delete&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-kstat-delete-9f?a=view]]
+ 46: * [[net_lifgetnext&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-lifgetnext-9f?a=view]]
+ 47: * [[net_phygetnext&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-phygetnext-9f?a=view]]
+ 48: * [[net_phylookup&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-phylookup-9f?a=view]]
+ 49: * [[net_protocol_lookup&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-protocol-lookup-9f?a=view]]
+ 50: * [[net_protocol_notify_register&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-protocol-notify-registern-9f?a=view]]
+ 51: * [[net_protocol_notify_unregister&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-protocol-notify-unregistern-9f?a=view]]
+ 52: * [[net_protocol_release&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-protocol-release-9f?a=view]]
+ 53: * [[net_routeto&gt;&gt;http://docs.sun.com/app/docs/doc/819-2256/net-routeto-9f?a=view]]
+ 54: 
+ 55: === Types
+ 56: 
+ 57:  The following types have been introduced as part of this API to support the functions above.
+ 58: 
+ 59: * [[hook_t&gt;&gt;http://docs.sun.com/app/docs/doc/819-2257/hook-t-9s?a=view]]
+ 60: * [[hook_nic_event_t&gt;&gt;http://docs.sun.com/app/docs/doc/819-2257/hook-nic-event-t-9s?a=view]]
+ 61: * [[hook_pkt_event_t&gt;&gt;http://docs.sun.com/app/docs/doc/819-2257/hook-pkt-event-t-9s?a=view]]
+ 62: * [[net_inject_t&gt;&gt;http://docs.sun.com/app/docs/doc/819-2257/net-inject-t-9s?a=view]]
+ 63: * [[net_instance_t&gt;&gt;http://docs.sun.com/app/docs/doc/819-2257/net-instance-t-9s?a=view]]
+ 64: 
+ 65: == Using the API
+ 66: 
+ 67: === Introduction
+ 68: 
+ 69:  There is a substantial amount of programming required to properly setup working with this API as it supports multiple instances of the IP stack running concurrently in the same kernel. When the IP stack was extended to allow multiple instances of itself for zones, it was also deemed necessary to have multiple instances of the framework supporting packet interception in IP. This section of the document will explore what's necessary to use this API to receive inbound IPv4 packets.
+ 70: 
+ 71: === Starting out
+ 72: 
+ 73:  To start out using the API, it is first necessary to decide whether or not to cater to multiple instances of IP running in the kernel or to only interact with the global zone. This document will focus on what is necessary to set up code to get running. It will not go into any depth on shutdown/destroy, that is left as an exercise for the reader.
+ 74: 
+ 75: === Being Instance Aware
+ 76: 
+ 77:  To be aware of the presence of IP instances, it is necessary to register callback functions that get activated when an instance is created, shutdown and destroyed. The structure used to store these three function pointers in should be allocated through a call to **net_instance_alloc**) and later free'd when it is no longer required by calling **net_instance_free**. The programmer is expected to give the instance a name, through setting nin_name and specify at least the create (**nin_create**) and destroy (**nin_destroy**) callbacks. Modifying **nin_version** is prohibited. Setting **nin_shutdown** is optional unless the code will be exporting information to kstats. To use kstats on a per-instance basis, it is necessary to use the function **net_kstat_create** as part of your work during the create callback. Cleanup of the kstat information must happen during the shutdown callback, **not** the destroy callback and is done by calling **net_kstat_delete**.
+ 78: 
+ 79: {{{
+ 80: 
+ 81: extern void *mycreate(const netid_t);
+ 82: 
+ 83: net_instance_t *n;
+ 84: 
+ 85: n = net_instance_alloc(NETINFO_VERSION);
+ 86: if (n != NULL) {
+ 87: 	n-&gt;nin_create = mycreate;
+ 88: 	n-&gt;nin_destroy = mydestroy;
+ 89: 	n-&gt;nin_name = &quot;my module&quot;;
+ 90: 	if (net_instance_register(n) != 0)
+ 91: 		net_instance_free(n);
+ 92: }
+ 93: 
+ 94: }}}
+ 95: 
+ 96:  If there is already 1 or more instances present when this function call is made, the create callback will be called for each currently active instance of IP. The framework that supports the callbacks being made will ensure that only one of the create/destroy/shutdown functions is active at any one time for a given instance and that once created has been called, shutdown will only be called after create has been completed and similarly destroy does not start until shutdown is complete.
+ 97: 
+ 98:  The function below, //mycreate//, is a simple example of what might be used as the callback when an instance is created. All that this function does is record the network instance identifier in its own private context structure and register a new callback to be called when a new protocol (such as IPv4 or IPv6) is registered with this framework.
+ 99: 
+100:  Remember that even if there are no zones running (and therefore no instances other than the global zone), calling **net_instance_register** will always result in the **nin_create** being exercised for the global zone. As part of the programming to use this interface, it is always necessary to supply the destroy callback so that **net_instance_unregister** can be later called. Attempts to call **net_instance_register** with either the **nin_create** or **nin_destroy** fields set to NULL will fail.
+101: 
+102: {{{
+103: 
+104: void *
+105: mycreate(const netid_t id)
+106: {
+107: 	mytype_t *ctx;
+108: 
+109: 	ctx = kmem_alloc(sizeof(*ctx), KM_SLEEP);
+110: 	ctx-&gt;instance_id = id;
+111: 	net_instance_notify_register(id, mynewproto, ctx);
+112: 	return (ctx);
+113: }
+114: 
+115: }}}
+116: 
+117:  The function //mynewproto// should expect to be called each time a network protocol is either added to or removed from a networking instance. If there already registered network protocols operating within the given instance, then the create callback will be called for each one that already exists.
+118: 
+119: === Protocol Registration
+120: 
+121:  For this callback, only the proto argument is filled in by the caller - there is neither an event nor hook name that can be meaningfully supplied at this point. In this example function, only events that announce the registration of the IPv4 protocol are being looked for.
+122: 
+123:  The next step, in this function, is to discover when events are added to the IPv4 protocol by registering the function //mynewevent// using the **net_protocol_notify_register** interface.
+124: 
+125: {{{
+126: 
+127: static int
+128: mynewproto(hook_notify_cmd_t cmd, void *arg, const char *proto,
+129:     const char *event, const char *hook)
+130: {
+131:         mytype_t *ctx = arg;
+132: 
+133: 	if (strcmp(proto, NHF_INET) != 0)
+134: 		return (0);
+135: 
+136: 	switch (cmd) {
+137: 	case HN_REGISTER :
+138: 		ctx-&gt;inet = net_protocol_lookup(s-&gt;id, proto);
+139: 		net_protocol_notify_register(s-&gt;inet, mynewevent, ctx);
+140: 		break;
+141: 
+142: 	case HN_UNREGISTER :
+143: 	case HN_NONE :
+144:        		break;
+145: 	}
+146: 
+147: 	return (0);
+148: }
+149: 
+150: }}}
+151: 
+152:  The table below lists all three protocols that could be expected to be seen with the //mynewproto// callback. In time new protocols may be added, so it is important to safely fail (return the value 0) any unknown protocols.
+153: 
+154: |Programming symbol|Protocol
+155: |NHF_INET|IPv4
+156: |NHF_INET6|IPv6
+157: |NHF_ARP|ARP
+158: 
+159: === Event Registration
+160: 
+161:  Just as the handling of instances and protocols is dynamic, so too is that of the events which live under each protocol. At present there are two types of events supported by this API: network interface events and packet events.
+162: 
+163:  In the function below, the announcement for the presence of the event for inbound packets for IPv4 is being checked for. When that is seen, a **hook_t** structure is allocated, describing the function to be called for each inbound IPv4 packet.
+164: 
+165: {{{
+166: 
+167: static int
+168: mynewevent(hook_notify_cmd_t cmd, void *arg, const char *parent,
+169:     const char *event, const char *hook)
+170: {
+171: 	mytype_t *ctx = arg;
+172: 	char buffer[32];
+173: 	hook_t *h;
+174: 
+175: 	if ((strcmp(event, NH_PHYSICAL_IN) == 0) &amp;&amp;
+176: 	    (strcmp(parent, NHF_INET) == 0)) {
+177: 		sprintf(buffer, &quot;mypkthook_%s_%s&quot;, parent, event);
+178: 		h = hook_alloc(HOOK_VERSION);
+179: 		h-&gt;h_hint = HH_NONE;
+180: 		h-&gt;h_arg = s;
+181: 		h-&gt;h_name = strdup(buffer);
+182: 		h-&gt;h_func = mypkthook;
+183: 		s-&gt;hook_in = h;
+184: 		net_hook_register(ctx-&gt;inet, (char *)event, h);
+185: 	} else {
+186: 		h = NULL;
+187: 	}
+188: 	return (0);
+189: }
+190: 
+191: }}}
+192: 
+193:  The function //mynewevent// will be called for each event that is added and removed.
+194: 
+195: The following list of events are available for use today:
+196: 
+197: |Event Name|Data structure|Comment
+198: |NH_PHYSICAL_IN|hook_pkt_event_t|This event is generated for every packet that arrives at the network protocol and has been received from a network interface driver.
+199: |NH_PHYSICAL_OUT|hook_pkt_event_t| This event is generated for every packet prior to delivery to the network interface driver for sending from the network protocol layer.
+200: |NH_FORWARDING|hook_pkt_event_t|This is for all packets that have been received by the system and will be sent out another network interface. It happens after NH_PHYSICAL_IN and before NH_PHYSICAL_OUT
+201: |NH_LOOPBACK_IN|hook_pkt_event_t| This event is generated for packets that are //received// on the loopback interface or that are received by a zone that is sharing its network instance with the global zone.
+202: |NH_LOOPBACK_OUT|hook_pkt_event_t| This event is generated for packets that are //sent// on of the loopback interface or that are being sent by a zone that is sharing its network instance with the global zone.
+203: |NH_NIC_EVENTS|hook_nic_event_t|This event is generated for specific changes of state for network interfaces.
+204: 
+205: ==== Network Interface Events
+206: 
+207:  For packet events, there is one specific event for each particular point in the IP stack. This is to enable the developer to be selective about exactly where in the flow of the packets they wish to intercept packets, without having to be overburdened by examining every packet event that happens inside the kernel. For network interface events, the model is different, in part because the events are much lower in volume and because it is more likely that the developer will be interested in several of them, not just one.
+208: 
+209:  The network interface event announces when interfaces...
+210: 
+211: * ... are created (**NE_PLUMB**) or destroyed (**NE_UNPLUMB**).
+212: * ... change state to up (**NE_UP**) or down (**NE_DOWN**).
+213: * ... have an address change (**NE_ADDRESS_CHANGE**).
+214: 
+215:  Over time new network interface events may be added so it is important to always return 0 for any unknown or unrecognised event that the callback function receives.
+216: 
+217: === The Packet Hook
+218: 
+219:  Finally, we have arrived in the function that is called when a packet is received. In this case the function //mypkthook// should expect to be called for each inbound packet that arrives in the kernel from a physical network interface. Packets generated internally, that flow between zones using the shared IP instance model or over the loopback interface, will not be seen.
+220: 
+221:  To illustrate the difference between accepting a packet and allowing it to return normally with what's required to drop a packet, the code below prints out the source and destination address of every 100th packet and then drops it, introducing a packet loss of 1%.
+222: 
+223: {{{
+224: 
+225: static int
+226: mypkthook(hook_event_token_t tok, hook_data_t data, void *arg)
+227: {
+228: 	static int counter = 0;
+229: 	mytupe_t *ctx = arg;
+230: 	hook_pkt_event_t *pkt = (hook_pkt_event_t)data;
+231: 	struct ip *ip;
+232: 	size_t bytes;
+233: 
+234: 	bytes = msgdsize(pkt-&gt;hpe_mb);
+235: 
+236: 	ip = (struct ip *)pkt-&gt;hpe_hdr;
+237: 
+238: 	counter++;
+239: 	if (counter == 100) {
+240: 		printf(&quot;drop %d bytes received from %x to %x\n&quot;, bytes,
+241: 		    ntohl(ip-&gt;ip_src.s_addr), ntohl(ip-&gt;ip_dst.s_addr));
+242: 		counter = 0;
+243: 
+244: 		freemsg(*pkt-&gt;hpe_mp);
+245: 		*pkt-&gt;hpe_mp = NULL;
+246: 		pkt-&gt;hpe_mb = NULL;
+247: 		pkt-&gt;hpe_hdr = NULL;
+248: 
+249: 		return (1);
+250: 	}
+251: 
+252: 	return (0);
+253: }
+254: 
+255: }}}
+256: 
+257:  Packets received by this function, and all others that are called as a callback from a packet event, are done so one at a time. There is no chaning together of packets with this interface, so the developer should expect there to be only one packet per call and for b_next to always be NULL. It is important to remember that whilst there is no other packet, a single packet may be comprised of several mblk_t's chained together with b_cont.
+258: 
+259: === A Fully Worked Example
+260: 
+261:  For a fully worked example that can be compiled and loaded into the kernel, please look at [[full.c&gt;&gt;attach:Community Group networking.files@full.c.gz]].
+262: 
+263:  To compile this code into a working kernel module, on a 64bit system the following should be sufficient:
+264: 
+265: {{{
+266: 
+267: gcc -D_KERNEL -m64 -c full.c
+268: ld -dy -Nmisc/neti -Nmisc/hook -r full.o -o full
+269: 
+270: }}}
+</textarea>
+</div>
+
+    <div class="clearfloats"></div>
+  </div>    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Community Group networking Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/docs">Documentation</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/dtrace_networking_cookbook">DTrace Networking Cookbook</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/pfhooks">Solaris Packet Filtering Hooks</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/projects">Networking Projects</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/emulex%2Dcna">Emulex Advanced Ethernet Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/qlogic%2Dcna">QLogic CNA GLDv3 Driver</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/tests">Network Tests</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/nc">Netcat Test Suite</a></span></li>
+</ul></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2012, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

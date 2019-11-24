@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>New Trace Wizard (Project dtrace-chime.wizard) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+dtrace%2Dchime/wizard" />
+                    <link rel="canonical" href="/bin/view/Project+dtrace%2Dchime/wizard" />
+                            <meta name="document" content="Project dtrace-chime.wizard"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Project dtrace-chime"/>
+    <meta name="page" content="wizard"/>
+    <meta name="version" content="42.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Project+dtrace-chime/pages/wizard"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="New Trace Wizard" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="Tom Erickson" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project dtrace-chime";
+XWiki.currentPage = "wizard";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Project+dtrace%2Dchime/wizard";
+window.docediturl = "/bin/edit/Project+dtrace%2Dchime/wizard";
+window.docsaveurl = "/bin/save/Project+dtrace%2Dchime/wizard";
+window.docgeturl = "/bin/get/Project+dtrace%2Dchime/wizard";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Project_dtrace-chime viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bdtrace-chime%2Fwizard"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+dtrace%2Dchime/"><strong>Project dtrace-chime</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Project+dtrace%2Dchime" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+            </td>
+            <td id="logo-text" style="width: 1%;">
+                Solaris
+            </td>         
+            <td style="width: 98%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                              <a href='/bin/view/Project+dtrace%2Dchime/new_displays'>Adding New Traces</a> <span class='separator'>&#187;</span> <span class='current'>New Trace Wizard</span>
+                </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+dtrace%2Dchime/wizard?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+dtrace%2Dchime/wizard?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+dtrace%2Dchime/wizard?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+dtrace%2Dchime/wizard?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+dtrace%2Dchime/wizard?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+dtrace%2Dchime/wizard?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+dtrace%2Dchime/wizard?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+dtrace%2Dchime/wizard?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+dtrace%2Dchime/wizard?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+dtrace%2Dchime/wizard?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+dtrace%2Dchime/wizard?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>New Trace Wizard</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h2 id="HNewTraceWizard"><span>New Trace Wizard&nbsp;&nbsp;</span></h2><p>Chime traces are described in XML (see <span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/new_displays">Adding New Traces</a></span>), and a wizard is provided to generate that XML for you. &nbsp;You can access the wizard from the menu (<strong>File | New Trace ...</strong>) or directly from the command line with the <span class="box code"><span style="color: #666666; ">-</span>W</span> option. &nbsp;Use the wizard to create new traces or edit existing ones.&nbsp;&nbsp;</p><div class="wikimodel-emptyline"></div><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/wizard/mainmenuwizard.png" alt="Wizard Menu Access"/>&nbsp;&nbsp;</p><div class="wikimodel-emptyline"></div><p>Let's say you want a trace to monitor <strong>system calls per second</strong> made by each executable on the system. &nbsp;The following walks you through the steps of creating such a trace:&nbsp;&nbsp;</p><h4 id="HWalk-Through28SystemCallsExample29"><span>Walk-Through (System Calls Example)&nbsp;&nbsp;</span></h4><ul><li><span class="wikilink"><a href="#HSetTitleandOutputFile">Set Title and Output File</a></span>&nbsp;&nbsp;</li><li><span class="wikilink"><a href="#HSetDTraceProgram">Set DTrace Program</a></span>&nbsp;&nbsp;</li><li><span class="wikilink"><a href="#HSetClearedAggregations">Set Cleared Aggregations</a></span>&nbsp;&nbsp;</li><li><span class="wikilink"><a href="#HSpecifyColumns">Specify Columns</a></span> &nbsp;<ul><li><span class="wikilink"><a href="#HFirstUnspecifiedColumn">First Unspecified Column</a></span> &nbsp;<ul><li><span class="wikilink"><a href="#HSpecifyColumnData">Specify Column Data</a></span>&nbsp;&nbsp;</li><li><span class="wikilink"><a href="#HSetColumnProperties">Set Column Properties</a></span>&nbsp;&nbsp;</li></ul></li><li><span class="wikilink"><a href="#HNextUnspecifiedColumn">Next Unspecified Column</a></span>&nbsp;&nbsp;&nbsp;&nbsp;</li><li><span class="wikilink"><a href="#HAggregationValueColumn">Aggregation Value Column</a></span>&nbsp;&nbsp;</li></ul></li><li><span class="wikilink"><a href="#HTestRuntheTrace">Test Run the Trace</a></span>&nbsp;&nbsp;</li><li><span class="wikilink"><a href="#HProvideaDescription">Provide a Description</a></span>&nbsp;&nbsp;</li><li><span class="wikilink"><a href="#HFinishCreatingtheTrace">Finish Creating the Trace</a></span>&nbsp;&nbsp;</li><li><span class="wikilink"><a href="#HAddDrilldown">Add Drilldown</a></span></li></ul><h3 id="HSetTitleandOutputFile"><span>Set Title and Output File&nbsp;&nbsp;</span></h3><p>When the wizard appears, you will see the default title "Trace" highlighted in the <strong>Title</strong> field.&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/wizard/wizardtitleinit.gif" alt="Wizard Initial Screen"/>&nbsp;</p><p>Type "System Calls" and press <span class="box code">Enter</span> to proceed to the next step. &nbsp;<br/> &nbsp;<br/><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/wizard/wizardtitle.gif" alt="Wizard Set Title Step"/>&nbsp;&nbsp;</p><h3 id="HSetDTraceProgram"><span>Set DTrace Program&nbsp;&nbsp;</span></h3><p>Click in the text pane under the <strong>Program String</strong> radio button and enter<br/>the following DTrace program:&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/wizard/wizardprogram.gif" alt="Wizard Set Program Step"/>&nbsp;&nbsp;</p><p>You can click the <strong>Check Compile</strong> button to make sure you typed the program correctly. &nbsp;If there is a syntax error, you will see a red 'X' instead of a green check mark, and there will be a hyperlink to view details about the error. &nbsp;For help adapting DTrace programs to Chime, click on the <strong>Help</strong> button. &nbsp;To learn about writing DTrace programs with aggregations displayable in Chime, a good place to start is the <span class="wikiexternallink"><a href="http://docs.sun.com/app/docs/doc/817-6223/chp-aggs?q=trunc&amp;a=view">Aggregations</a></span> chapter of the <em>Solaris Dynamic Tracing Guide</em>.&nbsp;&nbsp;</p><p>Press <span class="box code">Alt<span style="color: #666666; ">-</span>N</span> (or click the <strong>Next</strong> button) to proceed to the next step:&nbsp;&nbsp;</p><h3 id="HSetClearedAggregations"><span>Set Cleared Aggregations&nbsp;&nbsp;</span></h3><p>In this step you specify whether or not you want running totals. &nbsp;By default, Chime clears all aggregations, resetting their values to zero, each time it gets the latest snapshot of aggregate data. &nbsp;Since we want to display system calls per second, the default behavior (no running totals) is the right choice. &nbsp;Simply proceed to the next step.&nbsp;&nbsp;</p><p>Note that if your program included other aggregations, they would show up here, each with its own check box. &nbsp;For example, if your program included the statement <span class="box code">@counts[execname] = count();</span> then "counts" would also appear in the &nbsp;list of individually clearable aggregations.&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/wizard/wizardaggs.gif" alt="Wizard Clear Aggregations Step"/>&nbsp;&nbsp;</p><h3 id="HSpecifyColumns"><span>Specify Columns&nbsp;&nbsp;</span></h3><p>Here we list all the columns by name as they will appear in the trace's column header from left to right. &nbsp;It helps to picture the table you want to display. &nbsp;In this case, we want a trace similar to the "System Calls" trace installed with Chime:&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/wizard/syscalls.gif" alt="System Calls"/>&nbsp;</p><ul><li>An "Executable" column, right aligned&nbsp;&nbsp;</li><li>A "History" column with a sparkline&nbsp;&nbsp;</li><li>A renamed "Calls Per Second" column, left aligned&nbsp;&nbsp;</li></ul><p>The basic idea is to include one column for each element of the aggregation key followed by a column for the aggregation values. &nbsp;Since we are aggregating <span class="box code">@[execname] = count();</span> we need one column for the <span class="box code">execname</span> key followed by one column for the <span class="box code">count()</span> values. &nbsp;If we were instead aggregating <span class="box code">@[execname, probefunc] = count();</span> we would need two key columns, one for <span class="box code">execname</span> and one for <span class="box code">probefunc</span>, followed by one value column for <span class="box code">count()</span>. &nbsp;In this case, we only need two columns: "Executable" for the <span class="box code">execname</span> key and "Calls Per Second" for the <span class="box code">count()</span> values. &nbsp;However, we insert an additional "History" column to provide a sparkline view of the data in the "Calls Per Second" column over time.&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/wizard/wizardcols.gif" alt="Wizard Specify Columns Step"/>&nbsp;&nbsp;</p><p>Type "Executable" and press <span class="box code">Enter</span> to add a new empty row. &nbsp;Type "History" and press <span class="box code">Enter</span> again. &nbsp;When you finish typing "Calls Per Second" (with or without pressing <span class="box code">Enter</span>) you can click <strong>Next</strong> to proceed to the next step.&nbsp;&nbsp;</p><h3 id="HFirstUnspecifiedColumn"><span>First Unspecified Column&nbsp;&nbsp;</span></h3><h4 id="HSpecifyColumnData"><span>Specify Column Data&nbsp;&nbsp;</span></h4><p>Here we specify the first unspecified column, "Executable". &nbsp;To start, we simply need to indicate whether the column displays an aggregation key (such as <span class="box code">execname</span> in <span class="box code">@[execname] = count();</span>) or an aggregation value (such as <span class="box code">count()</span> in <span class="box code">@[execname] = count();</span>). &nbsp;A third type of column, the <strong>Alternate View</strong> (see below) is special: it takes source data from another column (or columns) and presents that data differently. &nbsp;The "History" column is an example of an alternate view.&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/wizard/wizardcol1a.gif" alt="Specify Executable Column Data"/>&nbsp;</p><p>In this case our job is easy. &nbsp;The screen already indicates <strong>Tuple Member</strong> (a member of an aggregation key) with <strong>Tuple Index</strong> 0 (the first element in square brackets). &nbsp;That corresponds to <span class="box code">execname</span> in <span class="box code">@[execname] = count();</span> exactly what we intend. &nbsp;Simply click <strong>Next</strong>.&nbsp;&nbsp;</p><h4 id="HSetColumnProperties"><span>Set Column Properties&nbsp;&nbsp;</span></h4><p>This step allows us to set properties appropriate for a column that displays part of an aggregation key.</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/wizard/wizardcol1b.gif" alt="Set Executable Column Properties"/></p><p>As before, we could simply click <strong>Next</strong>. &nbsp;However, a totals row would be nice, and it's not much trouble. &nbsp;Choose "Count" from the <strong>Total</strong> pulldown and specify the singular and plural forms of the units label. &nbsp;Type "executable" in the <strong>Singular Total Label</strong> field. &nbsp;What you type is echoed in the <strong>Plural Total Label</strong> field, so all you need to do is press <span class="box code">Tab</span> followed by <span class="box code">s</span> to complete the plural form. &nbsp;If, instead of <span class="box code">@[execname] = count();</span> we were aggregating <span class="box code">@[execname, probefunc] = count();</span>, then the "Executable" values would repeat within the column, so we would need to choose "Unique Count" rather than "Count" to display the number of unique executables.&nbsp;&nbsp;</p><p>We also want to right-align the executable names so they are easier to associate visually with their <span class="box code">count()</span> values in the columns to the right. &nbsp;Choose "right" from the <strong>Alignment</strong> pulldown.&nbsp;&nbsp;</p><p>Now click <strong>Next</strong>.&nbsp;&nbsp;</p><h3 id="HNextUnspecifiedColumn"><span>Next Unspecified Column&nbsp;&nbsp;</span></h3><p>Now we repeat steps <strong>4a. Specify Column Data</strong> and <strong>4b. Set Column Properties</strong> for the "History" column. &nbsp;The green check at the top of the screen indicates that we have successfully specified the previous "Executable" column.&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/wizard/wizardcol2a.gif" alt="Specify History Column Data"/>&nbsp;&nbsp;</p><p>This time, the screen initially indicates <strong>Tuple Member</strong> with a <strong>Tuple Index</strong> of 1 (auto-incremented from the tuple index of the previous "Executable" column). &nbsp;This does not correctly indicate the purpose of the "History" column. &nbsp;Choose "Calls Per Second" from the <strong>Source Columns</strong> pulldown. &nbsp;This automatically selects the <strong>Alternate View</strong> radio button.&nbsp;&nbsp;</p><p>Click <strong>Next</strong>.&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/wizard/wizardcol2b.gif" alt="Set History Column Properties"/></p><p><strong>Sparkline</strong> is already selected. &nbsp;The "History" column will present an alternate view (over time) of the <span class="box code">count()</span> data from the "Calls Per Second" column using a sparkline graph (see Edward Tufte's <span class="wikiexternallink"><a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR&amp;topic_id=1">Sparklines</a></span> page.)&nbsp;&nbsp;</p><p>Click <strong>Next</strong> and proceed to the last unspecified column.&nbsp;&nbsp;</p><h3 id="HAggregationValueColumn"><span>Aggregation Value Column&nbsp;&nbsp;</span></h3><p>The last column, "Calls Per Second", displays the values of the <span class="box code">count()</span> aggregating action. &nbsp;As before, the initial selection in this screen is <strong>Tuple Member</strong>, which we need to change, since this column does not display part of the aggregation key.&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/wizard/wizardcol3a.gif" alt="Specify Calls Per Second Column Data"/>&nbsp;</p><p>Select <strong>Aggregation Value</strong> and leave the <strong>Aggregation Name</strong> field empty since the aggregation in our DTrace program is unnamed: <span class="box code">@[execname] = count();</span> (<span class="box code">@</span> is the anonymous aggregation).&nbsp;&nbsp;</p><p>Click <strong>Next</strong>.&nbsp;&nbsp;</p><p>Columns that display aggregation values have more properties to specify than columns that display aggregation keys:&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/wizard/wizardcol3b.gif" alt="Set Calls Per Second Column Properties"/></p><p>Check <strong>Value Per Second</strong>. &nbsp;<br/>Choose "left" in the <strong>Alignment</strong> pulldown. &nbsp;<br/>Choose "#,==0" in the <strong>Format</strong> pulldown, indicating thousands separators.&nbsp;&nbsp;</p><p>Scroll down ...&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/wizard/wizardcol3bscroll.gif" alt="Scroll Down Calls Per Second Properties"/>&nbsp;</p><p>Choose "Sum" from the <strong>Total</strong> pulldown.&nbsp;&nbsp;</p><p>Click <strong>Next</strong>.&nbsp;&nbsp;</p><p>Once all the columns have been specified, we return to step <strong>4. Specify Columns</strong> to confirm the intended list of columns before moving on.&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/wizard/wizardcolsconfirm.gif" alt="Confirm Columns"/></p><p>The green check marks indicate which columns have been specified (all of them). &nbsp;Again, the columns are listed in the order they will appear from left to right in the trace. &nbsp;We also see some new indicators: "[0]" after "Executable" is like an array index indicating that the column displays the first member of the aggregation key. &nbsp;"( Calls Per Second )" indicates that the "History" column presents an alternate view of data from the "Calls Per Second" column. &nbsp;"@" indicates that the "Calls Per Second" column displays aggregation values from the anonymous aggregation. &nbsp;If the aggregation had instead been named <span class="box code">@counts</span> in our DTrace program, we would see "@counts" here instead.&nbsp;&nbsp;</p><p>If you want to make any corrections, you can select any of the listed column names and click the <strong>Specify &gt;</strong> button to redo steps <strong>4a</strong> and <strong>4b</strong> for that column, or click <strong>Specify &gt;&gt;</strong> to redo only step <strong>4b</strong>. &nbsp;Afterwards you will again return to the column list (above) to confirm your specifications before moving on.&nbsp;&nbsp;&nbsp;</p><p>Click <strong>Next</strong>.&nbsp;&nbsp;</p><h3 id="HTestRuntheTrace"><span>Test Run the Trace&nbsp;&nbsp;</span></h3><p>Having all the columns specified, we could have clicked <strong>Finish</strong> instead, but why not test the trace first to see if does what we intended? &nbsp;This step lets us do just that:&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/wizard/wizard%2Ftestrun.gif" alt="Test Run the Trace"/></p><p>Click the <strong>Run Trace</strong> button. &nbsp;Another window will appear with a display that should look something like this:&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/wizard/wizarddisplay.gif" alt="Resulting Trace"/></p><p>By default, the trace is sorted in ascending order by the aggregation key. &nbsp;Click on the "Calls Per Second" column header to sort by value descending. &nbsp;How you set the sort during the test run determines the initial sort of the created trace. &nbsp;We could also change the initial window size, but the default seems like a good size.&nbsp;&nbsp;</p><p>If you find that you need to make some corrections, click on the <strong>Back</strong> button to revisit any of the previous steps. &nbsp;You can leave the test trace running so that it is available for side-by-side comparison when you return to this screen for an updated test run.&nbsp;&nbsp;</p><p>This test trace improves on the installed "System Calls" trace by adding a totals row and a better initial sort. &nbsp;You can close it and click <strong>Next</strong> in the wizard to provide a description.&nbsp;&nbsp;</p><h3 id="HProvideaDescription"><span>Provide a Description&nbsp;&nbsp;</span></h3><p>Whatever text you enter to describe the trace appears in the <strong>Description</strong> pane in the main Chime window when the new trace is selected in the <strong>Traces</strong> list. &nbsp;You can use HTML to specify things like bold, italic, underline, font, and numbered or bulleted lists.&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/wizard/wizarddesc.gif" alt="Wizard Provide a Description Step"/></p><p>Above is a fancifully obtuse description that serves to illustrate the formatting possibilities just listed (although the point about the cyan scale indicator might actually be helpful). &nbsp;Here is the resulting description as it will appear when the trace is selected in the main Chime window:&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/wizard/wizarddescresult.gif" alt="Resulting Description"/></p><p>Click <strong>Next</strong>.</p><h3 id="HFinishCreatingtheTrace"><span>Finish Creating the Trace&nbsp;&nbsp;</span></h3><p>The next step adds drilldown support. &nbsp;It is evidently disabled, and the explanatory paragraph is intended to make clear that our DTrace program is not written in the way required to support drilldown.&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/wizard/wizarddrilldowndisabled.gif" alt="Wizard Drilldown Disabled"/></p><p>We could use the <strong>Back</strong> button to remedy this, but that's a long way to back up, so it's probably easier to finish what we have and reopen it later at step 1, only one step away from our DTrace program.&nbsp;&nbsp;</p><p>Click <strong>Finish</strong>. &nbsp;You should see the following console output:&nbsp;&nbsp;</p><pre>
+    Wrote /opt/OSOL0chime/displays/new/system_calls.xml
+    To run, enter "/opt/OSOL0chime/bin/chime -C /opt/OSOL0chime/displays/new/system_calls.xml".  
+</pre><p>Besides running the trace directly from the command line, you can also load newly created traces from the <strong>Categories</strong> pulldown of the main Chime window:&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/wizard/loadnewdisplays.gif" alt="Load New Traces"/></p><p>New traces are put in <span class="box code"><span style="color: #666666; ">/</span>opt<span style="color: #666666; ">/</span>OSOL0chime<span style="color: #666666; ">/</span>displays<span style="color: #666666; ">/</span>new</span> by default, where they are accessed by the menu item pictured above. &nbsp;If this is the first time you have created a new trace, congratulations! &nbsp;You will see the following list with your one new trace:&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/wizard/newdisplays.gif" alt="New Traces"/></p><p>You can move the <span class="xwikirenderingerror">Failed to execute the [code] macro</span><span class="xwikirenderingerrordescription hidden"><tt class="wikimodel-verbatim">org.xwiki.rendering.macro.MacroExecutionException: Failed to highlight content
+	at org.xwiki.rendering.internal.macro.code.CodeMacro.parseContent(CodeMacro.java:108)
+	at org.xwiki.rendering.internal.macro.code.CodeMacro.parseContent(CodeMacro.java:48)
+	at org.xwiki.rendering.macro.box.AbstractBoxMacro.execute(AbstractBoxMacro.java:125)
+	at org.xwiki.rendering.macro.box.AbstractBoxMacro.execute(AbstractBoxMacro.java:51)
+	at org.xwiki.rendering.internal.transformation.macro.MacroTransformation.transformOnce(MacroTransformation.java:184)
+	at org.xwiki.rendering.internal.transformation.macro.MacroTransformation.transform(MacroTransformation.java:129)
+	at org.xwiki.rendering.internal.transformation.DefaultTransformationManager.performTransformations(DefaultTransformationManager.java:72)
+	at com.xpn.xwiki.doc.XWikiDocument.performSyntaxConversion(XWikiDocument.java:7483)
+	at com.xpn.xwiki.doc.XWikiDocument.performSyntaxConversion(XWikiDocument.java:7432)
+	at com.xpn.xwiki.doc.XWikiDocument.getRenderedContent(XWikiDocument.java:835)
+	at com.xpn.xwiki.doc.XWikiDocument.getRenderedContent(XWikiDocument.java:783)
+	at com.xpn.xwiki.doc.XWikiDocument.getRenderedContent(XWikiDocument.java:878)
+	at com.xpn.xwiki.api.Document.getRenderedContent(Document.java:545)
+	at sun.reflect.GeneratedMethodAccessor325.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.velocity.util.introspection.UberspectImpl$VelMethodImpl.doInvoke(UberspectImpl.java:389)
+	at org.apache.velocity.util.introspection.UberspectImpl$VelMethodImpl.invoke(UberspectImpl.java:378)
+	at org.apache.velocity.runtime.parser.node.ASTMethod.execute(ASTMethod.java:270)
+	at org.apache.velocity.runtime.parser.node.ASTReference.execute(ASTReference.java:252)
+	at org.apache.velocity.runtime.parser.node.ASTReference.value(ASTReference.java:493)
+	at org.apache.velocity.runtime.parser.node.ASTExpression.value(ASTExpression.java:71)
+	at org.apache.velocity.runtime.parser.node.ASTSetDirective.render(ASTSetDirective.java:142)
+	at org.apache.velocity.runtime.parser.node.ASTBlock.render(ASTBlock.java:72)
+	at org.apache.velocity.runtime.parser.node.SimpleNode.render(SimpleNode.java:336)
+	at org.apache.velocity.runtime.parser.node.ASTIfStatement.render(ASTIfStatement.java:106)
+	at org.apache.velocity.runtime.parser.node.SimpleNode.render(SimpleNode.java:336)
+	at org.xwiki.velocity.internal.DefaultVelocityEngine.evaluate(DefaultVelocityEngine.java:196)
+	at org.xwiki.velocity.internal.DefaultVelocityEngine.evaluate(DefaultVelocityEngine.java:161)
+	at com.xpn.xwiki.render.XWikiVelocityRenderer.evaluate(XWikiVelocityRenderer.java:116)
+	at com.xpn.xwiki.XWiki.evaluateTemplate(XWiki.java:1895)
+	at com.xpn.xwiki.XWiki.parseTemplate(XWiki.java:1833)
+	at com.xpn.xwiki.api.XWiki.parseTemplate(XWiki.java:860)
+	at sun.reflect.GeneratedMethodAccessor137.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.velocity.util.introspection.UberspectImpl$VelMethodImpl.doInvoke(UberspectImpl.java:389)
+	at org.apache.velocity.util.introspection.UberspectImpl$VelMethodImpl.invoke(UberspectImpl.java:378)
+	at org.apache.velocity.runtime.parser.node.ASTMethod.execute(ASTMethod.java:270)
+	at org.apache.velocity.runtime.parser.node.ASTReference.execute(ASTReference.java:252)
+	at org.apache.velocity.runtime.parser.node.ASTReference.render(ASTReference.java:332)
+	at org.apache.velocity.runtime.parser.node.ASTBlock.render(ASTBlock.java:72)
+	at org.apache.velocity.runtime.directive.VelocimacroProxy.render(VelocimacroProxy.java:212)
+	at org.apache.velocity.runtime.directive.RuntimeMacro.render(RuntimeMacro.java:247)
+	at org.apache.velocity.runtime.parser.node.ASTDirective.render(ASTDirective.java:175)
+	at org.apache.velocity.runtime.parser.node.ASTBlock.render(ASTBlock.java:72)
+	at org.apache.velocity.runtime.parser.node.ASTIfStatement.render(ASTIfStatement.java:87)
+	at org.apache.velocity.runtime.parser.node.ASTBlock.render(ASTBlock.java:72)
+	at org.apache.velocity.runtime.parser.node.SimpleNode.render(SimpleNode.java:336)
+	at org.apache.velocity.runtime.parser.node.ASTIfStatement.render(ASTIfStatement.java:106)
+	at org.apache.velocity.runtime.parser.node.SimpleNode.render(SimpleNode.java:336)
+	at org.xwiki.velocity.internal.DefaultVelocityEngine.evaluate(DefaultVelocityEngine.java:196)
+	at org.xwiki.velocity.internal.DefaultVelocityEngine.evaluate(DefaultVelocityEngine.java:161)
+	at com.xpn.xwiki.render.XWikiVelocityRenderer.evaluate(XWikiVelocityRenderer.java:116)
+	at com.xpn.xwiki.XWiki.parseTemplate(XWiki.java:1943)
+	at com.xpn.xwiki.XWiki.evaluateTemplate(XWiki.java:1856)
+	at com.xpn.xwiki.web.Utils.parseTemplate(Utils.java:154)
+	at com.xpn.xwiki.web.XWikiAction.execute(XWikiAction.java:226)
+	at com.xpn.xwiki.web.XWikiAction.execute(XWikiAction.java:117)
+	at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:431)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:236)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1196)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:414)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.xpn.xwiki.web.ActionFilter.doFilter(ActionFilter.java:129)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.xpn.xwiki.wysiwyg.server.filter.ConversionFilter.doFilter(ConversionFilter.java:152)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.xwiki.container.servlet.filters.internal.SavedRequestRestorerFilter.doFilter(SavedRequestRestorerFilter.java:218)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.xwiki.container.servlet.filters.internal.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:112)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:433)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:568)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:286)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:845)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:583)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:354)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: Traceback (most recent call last):
+  File "&lt;string&gt;", line 3, in &lt;module&gt;
+  File "&lt;string&gt;", line 3, in &lt;module&gt;
+  File "__pyclasspath__/pygments/lexers/__init__.py", line 199, in guess_lexer
+  File "__pyclasspath__/pygments/util.py", line 116, in text_analyse
+TypeError: float() argument must be a string or a number
+
+	at org.python.core.PyException.fillInStackTrace(PyException.java:70)
+	at java.lang.Throwable.&lt;init&gt;(Throwable.java:181)
+	at java.lang.Exception.&lt;init&gt;(Exception.java:29)
+	at java.lang.RuntimeException.&lt;init&gt;(RuntimeException.java:32)
+	at org.python.core.PyException.&lt;init&gt;(PyException.java:46)
+	at org.python.core.PyException.&lt;init&gt;(PyException.java:43)
+	at org.python.core.PyException.&lt;init&gt;(PyException.java:61)
+	at org.python.core.Py.TypeError(Py.java:221)
+	at org.python.core.PyFloat.float_new(PyFloat.java:69)
+	at org.python.core.PyFloat$exposed___new__.new_impl(Unknown Source)
+	at org.python.core.PyType.invokeNew(PyType.java:466)
+	at org.python.core.PyType.type___call__(PyType.java:1558)
+	at org.python.core.PyType.__call__(PyType.java:1548)
+	at org.python.core.PyObject.__call__(PyObject.java:387)
+	at org.python.core.PyObject.__call__(PyObject.java:391)
+	at pygments.util$py.text_analyse$9(__pyclasspath__/pygments/util.py:116)
+	at pygments.util$py.call_function(__pyclasspath__/pygments/util.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:165)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:134)
+	at org.python.core.PyFunction.__call__(PyFunction.java:317)
+	at pygments.lexers$py.guess_lexer$10(__pyclasspath__/pygments/lexers/__init__.py:206)
+	at pygments.lexers$py.call_function(__pyclasspath__/pygments/lexers/__init__.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:165)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:301)
+	at org.python.core.PyFunction.function___call__(PyFunction.java:376)
+	at org.python.core.PyFunction.__call__(PyFunction.java:371)
+	at org.python.pycode._pyx2364577.f$0(&lt;string&gt;:5)
+	at org.python.pycode._pyx2364577.call_function(&lt;string&gt;)
+	at org.python.core.PyTableCode.call(PyTableCode.java:165)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1261)
+	at org.python.core.Py.exec(Py.java:1305)
+	at org.python.util.PythonInterpreter.exec(PythonInterpreter.java:206)
+	at org.xwiki.rendering.internal.parser.pygments.PygmentsParser.getLexer(PygmentsParser.java:267)
+	at org.xwiki.rendering.internal.parser.pygments.PygmentsParser.highlight(PygmentsParser.java:222)
+	at org.xwiki.rendering.internal.parser.pygments.PygmentsParser.highlight(PygmentsParser.java:193)
+	at org.xwiki.rendering.internal.macro.code.CodeMacro.highlight(CodeMacro.java:146)
+	at org.xwiki.rendering.internal.macro.code.CodeMacro.parseContent(CodeMacro.java:105)
+	... 92 more
+</tt></span> descriptions to <span class="box code"><span style="color: #666666; ">/</span>opt<span style="color: #666666; ">/</span>OSOL0chime<span style="color: #666666; ">/</span>displays</span> or another of its subdirectories later as you find out which new traces are useful. &nbsp;In that case, if you specified the DTrace program as a file with a relative pathname, you may need to update that pathname relative to the new location.&nbsp;&nbsp;</p><h3 id="HAddDrilldown"><span>Add Drilldown</span></h3><p>Drilldown lets you answer questions about values of interest. For example, for a selected executable you could get a breakdown of its system calls by function. Click <span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/drilldown">here</a></span> to continue this walk-through by adding drilldown to your new trace.</p><div class="wikimodel-emptyline"></div><p><span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/view/Project+dtrace-chime/WebHome">Back to Chime</a></span> | <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/view/Project+dtrace-chime/wizard">Back to top</a></span></p>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:13<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by Tom Erickson on 2011/01/05 01:15
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Project dtrace-chime Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/articles">Articles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/changelog">Change Log</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/displays">Traces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/install">Installation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/java_dtrace_api">Java DTrace API</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/jdtrace">jdtrace Example</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/javaone2007_screens">JavaOne 2007 Screenshots</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/new_displays">Adding New Traces</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/cmdgen">Command Line</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/wizard">New Trace Wizard</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/xml">XML Properties</a></span></li>
+</ul></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2012, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

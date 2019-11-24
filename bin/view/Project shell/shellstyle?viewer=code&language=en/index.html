@@ -1,0 +1,1858 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <title>
+                  Shell coding style guidelines (Project shell.shellstyle) - XWiki
+              </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="imagetoolbar" content="no"/>
+                <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+shell/shellstyle" />
+                        <meta name="document" content="Project shell.shellstyle"/>
+    <meta name="space" content="Project shell"/>
+    <meta name="page" content="shellstyle"/>
+        <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Shell coding style guidelines" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="fleyta" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+
+        <!-- com.xpn.xwiki.plugin.skinx.LinkExtensionPlugin -->
+    <link href="/bin/skin/skins/oso/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/oso/os_base1.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/oso/print.css" rel="stylesheet" type="text/css" media="print" />
+        
+
+
+    
+
+    <link href="/resources/js/xwiki/fullscreenedit/fullscreenEdit.css" rel="stylesheet" type="text/css" />
+<link href="/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript">
+var script1 = document.createElement('script')
+script1.src = "/resources/js/prototype/prototype.js"
+var script2 = document.createElement('script')
+script2.src = "/bin/skin/resources/js/xwiki/xwiki.js"
+var script3 = document.createElement('script')
+script3.src = "/resources/js/xwiki/suggest/ajaxSuggest.js"
+document.getElementsByTagName('head')[0].appendChild(script1);
+document.getElementsByTagName('head')[0].appendChild(script2);
+document.getElementsByTagName('head')[0].appendChild(script3);
+</script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.editor = "";
+XWiki.viewer = "";
+// ]]>
+</script>
+
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js'></script><script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js'></script>
+
+  </head>
+    	<body id="body" class="xwiki viewbody hideright">
+  <!-- These elements will be closed in the footer vm file -->
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+
+  <br/>
+  <br/>
+  <div id="Masthead">
+    <h1><a href="/bin/view/Main/">OpenSolaris</a></h1>
+    <a href="/bin/view/Main/" id="MastheadLogo"></a>
+    <a href="/bin/view/Main/" title="Home" rel="home"></a>
+    <div id="Iconbar">
+	<a id="CollectivesIcon" href="/bin/view/Main/collectives">Collectives</a>
+	<a id="DiscussionsIcon" href="/bin/view/Main/discussions">Discussions</a>
+	<a id="DocumentationIcon" href="/bin/view/Main/documentation">Documentation</a>
+	<a id="DownloadIcon" href="/bin/view/Main/downloads">Download</a>
+	<a id="SourceBrowserIcon" href="http://src.opensolaris.org">Source Browser</a>
+	<a id="FreeCD" href="http://www.opensolaris.org/os/TryOpenSolaris/">Free CD</a>
+    </div>
+  </div>
+
+
+ <div class="layoutsection">
+<div class="minwidthb"></div>
+
+    <div style="text-align:right;">
+      <a class="glink" href="http://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bshell%2Fshellstyle%3Fviewer%3Dcode%26%2338%3Blanguage%3Den" id="headerlogin">Log-in</a><span class="separator"> | </span>
+  <span class="glink" id="headerlanguages">
+  <a href="/bin/view/Project+shell/shellstyle?language=en">en</a>
+    </span>
+    </div> 
+</div>
+
+ <div id="headerspace" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+  <div id="breadcrumbs">
+    <span class="breadcrumbspace"><a href="/bin/view/Project+shell/">Project shell</a>: </span>
+<a href='/bin/view/Project+shell/shellstyle'>Shell coding style guidelines</a>
+  </div>
+<hr/>
+</div>
+
+
+<div id="menuview"> 
+  <div id="actionmenu" class="layoutsubsection">
+<h3 id="xwikimenutitle" class="hidden">Top Menu</h3>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+<div class="topmenuentry" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmShow">
+<a class="tme"  href="/bin/view/Project+shell/shellstyle?viewer=code&amp;language=en" ><strong>Show</strong></a><span class="hidden menucolon">: </span><span class="submenu hidden">
+<span class="submenuitem"><a href="/bin/view/Project+shell/shellstyle?viewer=comments&amp;language=en" id="tmShowComments">Comments</a></span>
+<span class="submenuitem"><a href="/bin/view/Project+shell/shellstyle?viewer=attachments&amp;language=en" id="tmShowAttachments">Attachments</a></span>
+<span class="submenuitem"><a href="/bin/view/Project+shell/shellstyle?viewer=history&amp;language=en" id="tmShowHistory">History</a></span>
+<span class="submenuitem"><a href="/bin/view/Project+shell/shellstyle?viewer=information&amp;language=en" id="tmShowInformation">Information</a></span>
+</span></div>
+ <div class="topmenuentry" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmPrint">
+<a class="tme"  href="javascript:window.print()" ><strong>Print</strong></a><span class="hidden menucolon">: </span><span class="submenu hidden">
+<span class="submenuitem"><a href="javascript:window.print()" id="tmPrintAction">Print</a></span>
+<span class="submenuitem"><a href="/bin/view/Project+shell/shellstyle?xpage=print&amp;language=en" id="tmPrintPreview">Print preview</a></span>
+<span class="submenuseparator">&nbsp;</span>
+<span class="submenuitem"><a href="/bin/export/Project+shell/shellstyle?format=pdf&amp;language=en" id="tmExportPdf">Export as PDF</a></span>
+<span class="submenuitem"><a href="/bin/export/Project+shell/shellstyle?format=rtf&amp;language=en" id="tmExportRtf">Export as RTF</a></span>
+<span class="submenuitem"><a href="/bin/export/Project+shell/shellstyle?format=html&amp;language=en" id="tmExportHtml">Export as HTML</a></span>
+<span class="submenuitem"><a href="/bin/export/Project+shell/shellstyle?format=xar&amp;name=Project+shell.shellstyle&amp;pages=Project+shell.shellstyle&amp;language=en" id="tmExportXar">Export as XAR</a></span>
+</span></div>
+</div>
+</div>
+
+</div>
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+<div class="main layoutsubsection">
+<h1><span>Wiki code for <em>Shell coding style guidelines</em></span></h1>
+<a href="/bin/view/Project+shell/shellstyle?viewer=code&showlinenumbers=0&language=en">Hide Line numbers</a>
+<br />
+<br />
+<textarea readonly="readonly" style="width: 100%; height: 300px;">
+1: = //[DRAFT]// Bourne/Korn Shell Coding Conventions
+2: 
+3: === // This page is currently work-in-progress until it is approved by the OS/Net community. Please send any comments to {{code}}&#60;[[shell-discuss@opensolaris.org&#62;&#62;mailto:shell-discuss@opensolaris.org]]&#62;{{/code}}. //
+4: 
+5: ===
+6: 
+7: ----
+8: 
+9: **Table of Contents**
+10: 
+11: ; [[Intro&#62;&#62;#intro]]
+12: ; [[Rules&#62;&#62;#rules]]
+13: :
+14: ; [[General&#62;&#62;#general]]
+15: :
+16: ; [[Basic Format&#62;&#62;#basic_format]]
+17: ; [[Commenting&#62;&#62;#commenting]]
+18: ; [[Interpreter magic&#62;&#62;#interpreter_magic]]
+19: ; [[Harden the script against unexpected (user) input&#62;&#62;#harden_your_script_against_unexpected_input]]
+20: ; [[[[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Use builtin commands if the shell provides them&#62;&#62;#use_builtin_commands]]
+21: ; [[[[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Use blocks and not subshells if possible&#62;&#62;#use_blocks_not_subshells]]
+22: ; [[[[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] use long options for &#34;{{code}}set{{/code}}&#34;&#62;&#62;#use_long_options_for_set_builtin]]
+23: ; [[[[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] Use {{code}}$(...){{/code}} instead of {{code}}`...`{{/code}} command substitutions&#62;&#62;#use_posix_command_substitutions_syntax]]
+24: ; [[[[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] Always put the result of a {{code}}$(...){{/code}} or {{code}}$( ...;){{/code}} command substitution in quotes&#62;&#62;#put_command_substitution_result_in_quotes]]
+25: ; [[Scripts should always set their {{code}}PATH{{/code}}&#62;&#62;#always_set_path]]
+26: ; [[Make sure that commands from other packages/applications are really installed on the machine&#62;&#62;#make_sure_commands_are_available]]
+27: ; [[Check how boolean values are used/implemented in your application&#62;&#62;#check_usage_of_boolean_variables]]
+28: ; [[[[image:images/tag_i18n.png||alt=&#34;[i18n]&#34;height=&#34;&#34;]] The shell always operates on //characters// not bytes&#62;&#62;#shell_uses_characters_not_bytes]]
+29: ; [[[[image:images/tag_i18n.png||alt=&#34;[i18n]&#34;height=&#34;&#34;]] Multibyte locales and input&#62;&#62;#multibyte_locale_input]]
+30: ; [[[[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Only use external filters like {{code}}grep{{/code}}/{{code}}sed{{/code}}/{{code}}awk{{/code}}/etc. if you want to process lots of data with them&#62;&#62;#use_external_filters_only_for_large_datasets]]
+31: ; [[If the first operand of a command is a variable, use {{code}}~--{{/code}}&#62;&#62;#use_dashdash_if_first_arg_is_variable]]
+32: ; [[[[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Use {{code}}$ export FOOBAR=val #{{/code}} instead of {{code}}$ FOOBAR=val ; export FOOBAR #{{/code}}&#62;&#62;#use_export]]
+33: ; [[Use a subshell (e.g. {{code}}$ ( mycmd ) #{{/code}}) around places which use {{code}}set ~-- $(mycmd){{/code}} and/or {{code}}shift{{/code}}&#62;&#62;#use_subshell_around_set_dashdash_usage]]
+34: ; [[Be careful with using TABS in script code, they are not portable between editors or platforms&#62;&#62;#be_careful_with_tabs_in_script_code]]
+35: ; [[If you have multiple points where your application exits with an error message create a central function for this purpose&#62;&#62;#centralise_error_exit]]
+36: ; [[[[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] Think about using {{code}}$ set -o nounset #{{/code}} by default&#62;&#62;#use_set_o_nounset]]
+37: ; [[Avoid using {{code}}eval{{/code}} unless absolutely necessary&#62;&#62;#avoid_eval_builtin]]
+38: ; [[[[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Use the string/array concatenation operator {{code}}+={{/code}}&#62;&#62;#use_concatenation_operator]]
+39: ; [[[[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Use {{code}}source{{/code}} instead of &#8217;{{code}}.{{/code}} &#8217;(dot) to include other shell script fragments&#62;&#62;#use_source_not_dot]]
+40: ; [[[[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] [[image:images/tag_l10n.png||alt=&#34;[l10n]&#34;height=&#34;&#34;]] Use {{code}}$&#34;...&#34;{{/code}} instead of {{code}}gettext ... &#34;...&#34;{{/code}} for strings that need to be localized for different locales&#62;&#62;#use_builtin_localisation_support]]
+41: ; [[[[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Use {{code}}set -o noglob{{/code}} if you do not need to expand files&#62;&#62;#use_set_o_noglob]]
+42: ; [[[[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Use {{code}}IFS={{/code}} to avoid problems with spaces in filenames&#62;&#62;#use_empty_ifs_to_handle_spaces]]
+43: ; [[Set the message locale if you process output of tools which may be localised&#62;&#62;#set_locale_when_comparing_against_localised_output]]
+44: ; [[Cleanup after yourself.&#62;&#62;#cleanup_after_yourself]]
+45: ; [[Use a proper {{code}}exit{{/code}} code&#62;&#62;#use_proper_exit_code]]
+46: ; [[[[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Use {{code}}shcomp -n scriptname.sh /dev/null{{/code}} to check for common errors&#62;&#62;#shell_lint]]
+47: ; [[Functions&#62;&#62;#functions]]
+48: :
+49: ; [[Use functions to break up your code&#62;&#62;#use_functions]]
+50: ; [[Do not use function names which are reserved keywords in C/C++/JAVA or the POSIX shell standard&#62;&#62;#do_not_reserved_keywords_for_function_names]]
+51: ; [[[[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Use ksh-style {{code}}function{{/code}}&#62;&#62;#use_ksh_style_function_syntax]]
+52: ; [[Use a proper {{code}}return{{/code}} code&#62;&#62;#use_proper_return_code]]
+53: ; [[[[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] Use {{code}}FPATH{{/code}} to load common functions, not {{code}}source{{/code}}&#62;&#62;#use_fpath_to_load_common_code]]
+54: ; [[{{code}}if{{/code}}, {{code}}for{{/code}} and {{code}}while{{/code}}&#62;&#62;#if_for_while]]
+55: :
+56: ; [[Format&#62;&#62;#if_for_while_format]]
+57: ; [[{{code}}test{{/code}} Builtin&#62;&#62;#test_builtin]]
+58: ; [[[[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Use &#34;{{code}}[[ expr ]]{{/code}}&#34; instead of &#34;{{code}}[ expr ]{{/code}}&#34;&#62;&#62;#use_ksh_test_syntax]]
+59: ; [[[[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] Use &#34;{{code}}(( ... )){{/code}}&#34; for arithmetic expressions&#62;&#62;#use_posix_arithmetic_expressions]]
+60: ; [[[[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Compare exit code using arithmetic expressions expressions&#62;&#62;#compare_exit_code_using_math]]
+61: ; [[[[image:images/tag_bourne.png||alt=&#34;[Bourne]&#34;height=&#34;&#34;]] Use builtin commands in conditions for {{code}}while{{/code}} endless loops&#62;&#62;#use_builtin_commands_in_loops]]
+62: ; [[Single-line if-statements&#62;&#62;#single_line_if_statements]]
+63: ; [[Exit Status and {{code}}if{{/code}}/{{code}}while{{/code}} statements&#62;&#62;#exit_status_and_if_for_while]]
+64: ; [[Variable types, naming and usage&#62;&#62;#variables]]
+65: :
+66: ; [[Names of local, non-environment, non-constant variables should be lowercase&#62;&#62;#names_should_be_lowercase]]
+67: ; [[Do not use variable names which are reserved keywords/variable names in C/C++/JAVA or the POSIX shell standard&#62;&#62;#do_not_reserved_keywords_for_variable_names]]
+68: ; [[Always use {{code}}&#8217;{&#8217;{{/code}}+{{code}}&#8217;}&#8217;{{/code}} when using variable names longer than one character&#62;&#62;#use_brackets_around_long_names]]
+69: ; [[//Always// put variables into quotes when handling filenames or user input&#62;&#62;#quote_variables_containing_filenames_or_userinput]]
+70: ; [[[[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Use typed variables if possible.&#62;&#62;#use_typed_variables]]
+71: ; [[[[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Store lists in arrays or associative arrays&#62;&#62;#store_lists_in_arrays]]
+72: ; [[[[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Use compound variables or associative arrays to group similar variables together&#62;&#62;#use_compound_variables_or_lists_for_grouping]]
+73: ; [[I/O&#62;&#62;#io]]
+74: :
+75: ; [[Avoid using the &#34;{{code}}echo{{/code}}&#34; command for output&#62;&#62;#avoid_echo]]
+76: ; [[[[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Use {{code}}redirect{{/code}} and not {{code}}exec{{/code}} to open files&#62;&#62;#use_redirect_not_exec_to_open_files]]
+77: ; [[[[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Avoid redirections per command when the output goes into the same file, e.g. {{code}}$ echo &#34;foo&#34; &#62;xxx ; echo &#34;bar&#34; &#62;&#62;xxx ; echo &#34;baz&#34; &#62;&#62;xxx #{{/code}}&#62;&#62;#group_identical_redirections_together]]
+78: ; [[[[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Avoid the creation of temporary files and store the values in variables instead&#62;&#62;#avoid_using_temporary_files]]
+79: ; [[If you create more than one temporary file create an unique subdir&#62;&#62;#create_subdirs_for_multiple_temporary_files]]
+80: ; [[[[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Use {n}&#60;file instead of fixed file descriptor numbers&#62;&#62;#use_dynamic_file_descriptors]]
+81: ; [[[[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Use inline here documents instead of {{code}}echo &#34;$x&#34; | command{{/code}}&#62;&#62;#use_inline_here_documents]]
+82: ; [[[[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Use the {{code}}-r{{/code}} option of {{code}}read{{/code}} to read a line&#62;&#62;#use_read_r]]
+83: ; [[[[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Print compound variables using {{code}}print -C varname{{/code}} or {{code}}print -v varname{{/code}}&#62;&#62;#print_compound_variables_using_print_C]]
+84: ; [[Put the command name and arguments before redirections&#62;&#62;#command_name_before_redirections]]
+85: ; [[[[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Enable the {{code}}gmacs{{/code}} editor mode when reading user input using the {{code}}read{{/code}} builtin&#62;&#62;#enable_gmacs_editor_mode_for_user_prompts]]
+86: ; [[Math&#62;&#62;#math]]
+87: :
+88: ; [[[[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Use builtin arithmetic expressions instead of external applications&#62;&#62;#use_builtin_arithmetic_expressions]]
+89: ; [[[[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Use floating-point arithmetic expressions if calculations may trigger a division by zero or other exceptions&#62;&#62;#use_floating_point_arithmetic_expressions]]
+90: ; [[[[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Use {{code}}printf &#34;%a&#34;{{/code}} when passing floating-point values&#62;&#62;#use_printf_a_for_passing_float_values]]
+91: ; [[[[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Put constant values into readonly variables&#62;&#62;#put_constants_into_readonly_variables]]
+92: ; [[[[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Avoid string to number (and/or number to string) conversions in arithmetic expressions expressions&#62;&#62;#avoid_unnecessary_string_number_conversions]]
+93: ; [[[[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Set {{code}}LC_NUMERIC{{/code}} when using floating-point constants&#62;&#62;#set_lc_numeric_when_using_floating_point]]
+94: ; [[Misc&#62;&#62;#misc]]
+95: :
+96: ; [[Put {{code}}[${LINENO}]{{/code}} in your {{code}}PS4{{/code}}&#62;&#62;#debug_use_lineno_in_ps4]]
+97: 
+98: == Intro
+99: 
+100: This document describes the shell coding style used for all the SMF script changes integrated into (Open)Solaris.
+101: 
+102: All new SMF shell code should conform to this coding standard, which is intended to match our existing C coding standard.
+103: 
+104: When in doubt, think &#34;what would be the C-Style equivalent ?&#34; and &#34;What does the POSIX (shell) standard say ?&#34;
+105: 
+106: == Rules
+107: 
+108: === General
+109: 
+110: ==== Basic Format
+111: 
+112: Similar to {{code}}cstyle{{/code}}, the basic format is that all lines are indented by TABs or eight spaces, and continuation lines (which in the shell end with &#34;\&#34;) are indented by an equivalent number of TABs and then an additional four spaces, e.g.
+113: 
+114: {{{
+115: 
+116: cp foo bar
+117: cp some_realllllllllllllllly_realllllllllllllly_long_path \
+118:    to_another_really_long_path
+119: 
+120: }}}
+121: 
+122: The encoding used for the shell scripts is either {{code}}ASCII{{/code}} or {{code}}UTF-8{{/code}}, alternative encodings are only allowed when the application requires this.
+123: 
+124: ==== Commenting
+125: 
+126: Shell comments are preceded by the &#8217;{{code}}#{{/code}}&#8217; character. Place single-line comments in the right-hand margin. Use an extra &#8217;{{code}}#{{/code}}&#8217; above and below the comment in the case of multi-line comments:
+127: 
+128: {{{
+129: 
+130: cp foo bar		# Copy foo to bar
+131: 
+132: #
+133: # Modify the permissions on bar.  We need to set them to root/sys
+134: # in order to match the package prototype.
+135: #
+136: chown root bar
+137: chgrp sys bar
+138: 
+139: }}}
+140: 
+141: ==== Interpreter magic
+142: 
+143: The proper interpreter magic for your shell script should be one of these:
+144: 
+145: {{{
+146: 
+147: #!/bin/sh        Standard Bourne shell script
+148: #!/bin/ksh -p    Standard Korn shell 88 script.  You should always write ksh
+149:                  scripts with -p so that ${ENV} (if set by the user) is not
+150:                  sourced into your script by the shell.
+151: #!/bin/ksh93     Standard Korn shell 93 script (-p is not needed since ${ENV} is
+152:                  only used for interactive shell sessions).
+153: 
+154: }}}
+155: 
+156: ==== Harden the script against unexpected (user) input
+157: 
+158: Harden your script against unexpected (user) input, including command line options, filenames with blanks (or other special characters) in the name, or file input
+159: 
+160: ==== [[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Use builtin commands if the shell provides them
+161: 
+162:  Use builtin commands if the shell provides them. For example ksh93s+ (ksh93, version &#8217;s+&#8217;) delivered with Solaris (as defined by PSARC 2006/550) supports the following builtins: basename, cat, chgrp, chmod, chown, cmp, comm, cp, cut, date, dirname, expr, fds, fmt, fold, getconf, head, id, join, ln, logname, mkdir, mkfifo, mv, paste, pathchk, rev, rm, rmdir, stty, tail, tee, tty, uname, uniq, wc, sync Those builtins can be enabled via {{code}}$ builtin name_of_builtin #{{/code}} in shell scripts (note that ksh93 builtins implement exact POSIX behaviour - some commands in Solaris {{code}}/usr/bin/{{/code}} directory implement pre-POSIX behaviour. Add {{code}}/usr/xpg6/bin/:/usr/xpg4/bin{{/code}} before {{code}}/usr/bin/{{/code}} in {{code}}${PATH}{{/code}} to test whether your script works with the XPG6/POSIX versions)
+163: 
+164: ==== [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Use blocks and not subshells if possible
+165: 
+166: Use blocks and not subshells if possible, e.g. use {{code}}$ { print &#34;foo&#34; ; print &#34;bar&#34; ; }{{/code}} instead of {{code}}$ (print &#34;foo&#34; ; print &#34;bar&#34;) #{{/code}} - blocks are faster since they do not require to save the subshell context (ksh93) or trigger a shell child process (Bourne shell, bash, ksh88 etc.)
+167: 
+168: ==== [[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] use long options for &#34;{{code}}set{{/code}}&#34;
+169: 
+170: use long options for &#34;{{code}}set{{/code}}&#34;, for example instead of {{code}}$ set -x #{{/code}} use {{code}}$ set -o xtrace #{{/code}} to make the code more readable.
+171: 
+172: ==== [[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] Use {{code}}$(...){{/code}} instead of {{code}}`...`{{/code}} command substitutions
+173: 
+174: Use {{code}}$(...){{/code}} instead of {{code}}`...`{{/code}} - {{code}}`...`{{/code}} is an obsolete construct in ksh+POSIX sh scripts and {{code}}$(...){{/code}}.is a cleaner design, requires no escaping rules, allows easy nesting etc.
+175: 
+176: === [[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] {{code}}${ ...;}{{/code}}-style command substitutions
+177: 
+178: ksh93 has support for an alternative version of command substitutions with the syntax {{code}}${ ...;}{{/code}} which do not run in a subshell.
+179: 
+180: ==== [[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] Always put the result of a {{code}}$(...){{/code}} or {{code}}$( ...;){{/code}} command substitution in quotes
+181: 
+182: Always put the result of {{code}}$( ... ){{/code}} or {{code}}$( ...;){{/code}} in quotes (e.g. {{code}}foo=&#34;$( ... )&#34;{{/code}} or {{code}}foo=&#34;$( ...;)&#34;{{/code}}) unless there is a very good reason for not doing it
+183: 
+184: ==== Scripts should always set their {{code}}PATH{{/code}}
+185: 
+186: Scripts should always set their {{code}}PATH{{/code}} to make sure they do not use alternative commands by accident (unless the value of {{code}}PATH{{/code}} is well-known and guaranteed to be set by the caller)
+187: 
+188: ==== Make sure that commands from other packages/applications are really installed on the machine
+189: 
+190: Scripts should make sure that commands in optional packages are really there, e.g. add a &#34;precheck&#34; block in scipts to avoid later failure when doing the main job
+191: 
+192: ==== Check how boolean values are used/implemented in your application
+193: 
+194: Check how boolean values are used in your application.
+195: 
+196: For example:
+197: 
+198: {{{
+199: 
+200: mybool=0
+201: # do something
+202: if [ $mybool -eq 1 ] ; then do_something_1 ; fi
+203: 
+204: }}}
+205: 
+206:  could be rewritten like this:
+207: 
+208: {{{
+209: 
+210: mybool=false # (valid values are &#34;true&#34; or &#34;false&#34;, pointing
+211: # to the builtin equivalents of /bin/true or /bin/false)
+212: # do something
+213: if ${mybool} ; then do_something_1 ; fi
+214: 
+215: }}}
+216: 
+217:  or
+218: 
+219: {{{
+220: 
+221: integer mybool=0 # values are 0 or 1
+222: # do something
+223: if (( mybool==1 )) ; then do_something_1 ; fi
+224: 
+225: }}}
+226: 
+227: ==== [[image:images/tag_i18n.png||alt=&#34;[i18n]&#34;height=&#34;&#34;]] The shell always operates on //characters// not bytes
+228: 
+229: Shell scripts operate on characters and //not// bytes. Some locales use multiple bytes (called &#34;multibyte locales&#34;) to represent one character
+230: 
+231: === Note
+232: 
+233: ksh93 has support for binary variables which explicitly operate on bytes, not characters. This is the //only// allowed exception.
+234: 
+235: ==== [[image:images/tag_i18n.png||alt=&#34;[i18n]&#34;height=&#34;&#34;]] Multibyte locales and input
+236: 
+237: Think about whether your application has to handle file names or variables in multibyte locales and make sure all commands used in your script can handle such characters (e.g. lots of commands in Solaris&#8217;s {{code}}/usr/bin/{{/code}} are //not// able to handle such values - either use ksh93 builtin constructs (which are guaranteed to be multibyte-aware) or commands from {{code}}/usr/xpg4/bin/{{/code}} and/or {{code}}/usr/xpg6/bin{{/code}})
+238: 
+239: ==== [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Only use external filters like {{code}}grep{{/code}}/{{code}}sed{{/code}}/{{code}}awk{{/code}}/etc. if you want to process lots of data with them
+240: 
+241: Only use external filters like {{code}}grep{{/code}}/{{code}}sed{{/code}}/{{code}}awk{{/code}}/etc. if a significant amount of data is processed by the filter or if benchmarking shows that the use of builtin commands is significantly slower (otherwise the time and resources needed to start the filter are far greater then the amount of data being processed, creating a performance problem).
+242: 
+243: For example:
+244: 
+245: {{{
+246: 
+247: if [ &#34;$(echo &#34;$x&#34; | egrep &#8217;.*foo.*&#8217;)&#34; != &#34;&#34; ] ; then
+248:     do_something ;
+249: done
+250: 
+251: }}}
+252: 
+253:  can be re-written using ksh93 builtin constructs, saving several {{code}}|fork()|+|exec()|{{/code}}&#8217;s:
+254: 
+255: {{{
+256: 
+257: if [[ &#34;${x}&#34; == ~(E).*foo.* ]] ; then
+258:     do_something ;
+259: done
+260: 
+261: }}}
+262: 
+263: ==== If the first operand of a command is a variable, use {{code}}~--{{/code}}
+264: 
+265: If the first operand of a command is a variable, use {{code}}~--{{/code}} for any command that accepts this as end of argument to avoid problems if the variable expands to a value starting with {{code}}-{{/code}}.
+266: 
+267: === Note
+268: 
+269:  At least print, /usr/bin/fgrep, /usr/xpg4/bin/fgrep, /usr/bin/grep, /usr/xpg4/bin/grep, /usr/bin/egrep, /usr/xpg4/bin/egrep support {{code}}~--{{/code}} as &#34;end of arguments&#34;-terminator.
+270: 
+271: ==== [[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Use {{code}}$ export FOOBAR=val #{{/code}} instead of {{code}}$ FOOBAR=val ; export FOOBAR #{{/code}}
+272: 
+273: Use {{code}}$ export FOOBAR=val # instead of $ FOOBAR=val ; export FOOBAR #{{/code}} - this is much faster.
+274: 
+275: ==== Use a subshell (e.g. {{code}}$ ( mycmd ) #{{/code}}) around places which use {{code}}set ~-- $(mycmd){{/code}} and/or {{code}}shift{{/code}}
+276: 
+277: Use a subshell (e.g. {{code}}$ ( mycmd ) #{{/code}}) around places which use {{code}}set ~-- $(mycmd){{/code}} and/or {{code}}shift{{/code}} unless the variable affected is either a local one or if it&#8217;s guaranteed that this variable will no longer be used (be careful for loadable functions, e.g. ksh/ksh93&#8217;s {{code}}autoload{{/code}} !!!!)
+278: 
+279: ==== Be careful with using TABS in script code, they are not portable between editors or platforms
+280: 
+281: Be careful with using TABS in script code, they are not portable between editors or platforms.
+282: 
+283: If you use ksh93 use {{code}}$&#8217;\t&#8217;{{/code}} to include TABs in sources, not the TAB character itself.
+284: 
+285: ==== If you have multiple points where your application exits with an error message create a central function for this purpose
+286: 
+287: If you have multiple points where your application exits with an error message create a central function for this, e.g.
+288: 
+289: {{{
+290: 
+291: if [ -z &#34;$tmpdir&#34; ] ; then
+292:         print -u2 &#34;mktemp failed to produce output; aborting.&#34;
+293:         exit 1
+294: fi
+295: if [ ! -d $tmpdir ] ; then
+296:         print -u2 &#34;mktemp failed to create a directory; aborting.&#34;
+297:         exit 1
+298: fi
+299: 
+300: }}}
+301: 
+302:  should be replaced with
+303: 
+304: {{{
+305: 
+306: function fatal_error
+307: {
+308:     print -u2 &#34;${progname}: $*&#34;
+309:     exit 1
+310: }
+311: # do something (and save ARGV[0] to variable &#34;progname&#34;)
+312: if [ -z &#34;$tmpdir&#34; ] ; then
+313:         fatal_error &#34;mktemp failed to produce output; aborting.&#34;
+314: fi
+315: if [ ! -d &#34;$tmpdir&#34; ] ; then
+316:         fatal_error &#34;mktemp failed to create a directory; aborting.&#34;
+317: fi
+318: 
+319: }}}
+320: 
+321: ==== [[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] Think about using {{code}}$ set -o nounset #{{/code}} by default
+322: 
+323: Think about using {{code}}$ set -o nounset #{{/code}} by default (or at least during the script&#8217;s development phase) to catch errors where variables are used when they are not set (yet), e.g.
+324: 
+325: {{{
+326: 
+327: $ **{{code}}(set -o nounset ; print ${foonotset}){{/code}}**
+328: /bin/ksh93: foonotset: parameter not set
+329: 
+330: }}}
+331: 
+332: ==== Avoid using {{code}}eval{{/code}} unless absolutely necessary
+333: 
+334: Avoid using {{code}}eval{{/code}} unless absolutely necessary. Subtle things can happen when a string is passed back through the shell parser. You can use name references to avoid uses such as {{code}}eval $name=&#34;$value&#34;{{/code}}.
+335: 
+336: ==== [[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Use the string/array concatenation operator {{code}}+={{/code}}
+337: 
+338: Use {{code}}+={{/code}} instead of manually adding strings/array elements, e.g.
+339: 
+340: {{{
+341: 
+342: foo=&#34;&#34;
+343: foo=&#34;${foo}a&#34;
+344: foo=&#34;${foo}b&#34;
+345: foo=&#34;${foo}c&#34;
+346: 
+347: }}}
+348: 
+349:  should be replaced with
+350: 
+351: {{{
+352: 
+353: foo=&#34;&#34;
+354: foo+=&#34;a&#34;
+355: foo+=&#34;b&#34;
+356: foo+=&#34;c&#34;
+357: 
+358: }}}
+359: 
+360: ==== [[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Use {{code}}source{{/code}} instead of &#8217;{{code}}.{{/code}} &#8217;(dot) to include other shell script fragments
+361: 
+362: Use {{code}}source{{/code}} instead of &#8217;{{code}}.{{/code}}&#8217; (dot) to include other shell script fragments - the new form is much more readable than the tiny dot and a failure can be caught within the script.
+363: 
+364: ==== [[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] [[image:images/tag_l10n.png||alt=&#34;[l10n]&#34;height=&#34;&#34;]] Use {{code}}$&#34;...&#34;{{/code}} instead of {{code}}gettext ... &#34;...&#34;{{/code}} for strings that need to be localized for different locales
+365: 
+366: Use $&#34;...&#34; instead of {{code}}gettext ... &#34;...&#34;{{/code}} for strings that need to be localized for different locales. {{code}}gettext{{/code}} will require a {{code}}fork()+exec(){{/code}} and reads the whole catalog each time it&#8217;s called, creating a huge overhead for localisation (and the {{code}}$&#34;...&#34;{{/code}} is easier to use, e.g. you only have to put a {{code}}${{/code}} in front of the catalog and the string will be localised).
+367: 
+368: ==== [[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Use {{code}}set -o noglob{{/code}} if you do not need to expand files
+369: 
+370: If you don&#8217;t expect to expand files, you can do set {{code}}-f{{/code}} ({{code}}set -o noglob{{/code}}) as well. This way the need to use {{code}}&#34;&#34;{{/code}} is greatly reduced.
+371: 
+372: ==== [[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Use {{code}}IFS={{/code}} to avoid problems with spaces in filenames
+373: 
+374: Unless you want to do word splitting, put {{code}}IFS={{/code}} at the beginning of a command. This way spaces in file names won&#8217;t be a problem. You can do {{code}}IFS=&#8217;delims&#8217; read -r{{/code}} line to override {{code}}IFS{{/code}} just for the {{code}}read{{/code}} command. However, you can&#8217;t do this for the {{code}}set{{/code}} builtin.
+375: 
+376: ==== Set the message locale if you process output of tools which may be localised
+377: 
+378: Set the message locale ({{code}}LC_MESSAGES{{/code}}) if you process output of tools which may be localised
+379: 
+380: **Example�1.�Set {{code}}LC_MESSAGES{{/code}} when testing for specific outout of the {{code}}/usr/bin/file{{/code}} utility:**
+381: 
+382: {{{
+383: 
+384: # set french as default message locale
+385: export LC_MESSAGES=fr_FR.UTF-8
+386: 
+387: ...
+388: 
+389: # test whether the file &#34;/tmp&#34; has the filetype &#34;directory&#34; or not
+390: # we set LC_MESSAGES to &#34;C&#34; to ensure the returned message is in english
+391: if [[ &#34;$(LC_MESSAGES=C file /tmp)&#34; = *directory ]] ; then
+392:     print &#34;is a directory&#34;
+393: fi
+394: 
+395: }}}
+396: 
+397: === Note
+398: 
+399: The environment variable {{code}}LC_ALL{{/code}} always overrides any other {{code}}LC_*{{/code}} environment variables (and {{code}}LANG{{/code}}, too), including {{code}}LC_MESSAGES{{/code}}. if there is the chance that {{code}}LC_ALL{{/code}} may be set replace {{code}}LC_MESSAGES{{/code}} with {{code}}LC_ALL{{/code}} in the example above.
+400: 
+401: ==== Cleanup after yourself.
+402: 
+403: Cleanup after yourself. For example ksh/ksh93 have an {{code}}EXIT{{/code}} trap which is very useful for this.
+404: 
+405: === Note
+406: 
+407:  Note that the {{code}}EXIT{{/code}} trap is executed for a subshell and each subshell level can run it&#8217;s own {{code}}EXIT{{/code}} trap, for example
+408: 
+409: {{{
+410: 
+411: $ **{{code}}(trap &#34;print bam&#34; EXIT ; (trap &#34;print snap&#34; EXIT ; print &#34;foo&#34;)){{/code}}**
+412: foo
+413: snap
+414: bam
+415: 
+416: }}}
+417: 
+418: ==== Use a proper {{code}}exit{{/code}} code
+419: 
+420: Explicitly set the exit code of a script, otherwise the exit code from the last command executed will be used which may trigger problems if the value is unexpected.
+421: 
+422: ==== [[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Use {{code}}shcomp -n scriptname.sh /dev/null{{/code}} to check for common errors
+423: 
+424: Use {{code}}shcomp -n scriptname.sh /dev/null{{/code}} to check for common problems (such as insecure, depreciated or ambiguous constructs) in shell scripts.
+425: 
+426: === Functions
+427: 
+428: ==== Use functions to break up your code
+429: 
+430: Use functions to break up your code into smaller, logical blocks.
+431: 
+432: ==== Do not use function names which are reserved keywords in C/C++/JAVA or the POSIX shell standard
+433: 
+434: Do not use function names which are reserved keywords (or function names) in C/C++/JAVA or the POSIX shell standard (to avoid confusion and/or future changes/updates to the shell language).
+435: 
+436: ==== [[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Use ksh-style {{code}}function{{/code}}
+437: 
+438: It is //highly// recommended to use ksh style functions ({{code}}function foo { ... }{{/code}}) instead of Bourne-style functions ({{code}}foo() { ... }{{/code}}) if possible (and local variables instead of spamming the global namespace).
+439: 
+440: === Warning
+441: 
+442:  The difference between old-style Bourne functions and ksh functions is one of the major differences between ksh88 and ksh93 - ksh88 allowed variables to be local for Bourne-style functions while ksh93 conforms to the POSIX standard and will use a function-local scope for variables declared in Bourne-style functions.
+443: 
+444: Example (note that &#34;{{code}}integer{{/code}}&#34; is an alias for &#34;{{code}}typeset -li{{/code}}&#34;):
+445: 
+446: {{{
+447: 
+448: # new style function with local variable
+449: $ ksh93 -c &#8217;integer x=2 ; function foo { integer x=5 ; } ; print &#34;x=$x&#34;
+450: ; foo ; print &#34;x=$x&#34; ;&#8217;
+451: x=2
+452: x=2
+453: # old style function with an attempt to create a local variable
+454: $ ksh93 -c &#8217;integer x=2 ; foo() { integer x=5 ; } ; print &#34;x=$x&#34; ; foo ;
+455: print &#34;x=$x&#34; ;&#8217;
+456: x=2
+457: x=5
+458: 
+459: }}}
+460: 
+461: {{code}}[[usr/src/lib/libshell/common/COMPATIBILITY&#62;&#62;Project ksh93-integration.compatibility]]{{/code}} says about this issue:
+462: 
+463: &#62; Functions, defined with name() with ksh-93 are compatible with the POSIX standard, not with ksh-88. No local variables are permitted, and there is no separate scope. Functions defined with the function name syntax, maintain compatibility. This also affects function traces.
+464: 
+465:  (this issue also affects {{code}}/usr/xpg4/bin/sh{{/code}} in Solaris 10 because it is based on ksh88. This is a bug.).
+466: 
+467: ==== Use a proper {{code}}return{{/code}} code
+468: 
+469: Explicitly set the return code of a function - otherwise the exit code from the last command executed will be used which may trigger problems if the value is unexpected.
+470: 
+471: The only allowed exception is if a function uses the shell&#8217;s {{code}}errexit{{/code}} mode to leave a function, subshell or the script if a command returns a non-zero exit code.
+472: 
+473: ==== [[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] Use {{code}}FPATH{{/code}} to load common functions, not {{code}}source{{/code}}
+474: 
+475:  Use the ksh {{code}}FPATH{{/code}} (function path) feature to load functions which are shared between scripts and not {{code}}source{{/code}} - this allows to load such a function on demand and not all at once.
+476: 
+477: === {{code}}if{{/code}}, {{code}}for{{/code}} and {{code}}while{{/code}}
+478: 
+479: ==== Format
+480: 
+481: To match {{code}}cstyle{{/code}}, the shell token equivalent to the {{code}}C{{/code}} &#34;{{code}}{{{/code}}&#34; should appear on the same line, separated by a &#34;{{code}};{{/code}}&#34;, as in:
+482: 
+483: {{{
+484: 
+485: if [ &#34;$x&#34; = &#34;hello&#34; ] ; then
+486:     echo $x
+487: fi
+488: 
+489: if [[ &#34;$x&#34; = &#34;hello&#34; ]] ; then
+490:     print $x
+491: fi
+492: 
+493: for i in 1 2 3; do
+494:     echo $i
+495: done
+496: 
+497: for ((i=0 ; i &#60; 3 ; i++)); do
+498:     print $i
+499: done
+500: 
+501: while [ $# -gt 0 ]; do
+502:     echo $1
+503:     shift
+504: done
+505: 
+506: while (( $# &#62; 0 )); do
+507:   print $1
+508:   shift
+509: done
+510: 
+511: }}}
+512: 
+513: ==== {{code}}test{{/code}} Builtin
+514: 
+515: DO NOT use the test builtin. Sorry, executive decision.
+516: 
+517: In our Bourne shell, the {{code}}test{{/code}} built-in is the same as the &#34;[&#34; builtin (if you don&#8217;t believe me, try &#34;type test&#34; or refer to {{code}}usr/src/cmd/sh/msg.c{{/code}}).
+518: 
+519:  So please do not write:
+520: 
+521: {{{
+522: 
+523: if test $# -gt 0 ; then
+524: 
+525: }}}
+526: 
+527:  instead use:
+528: 
+529: {{{
+530: 
+531: if [ $# -gt 0 ] ; then
+532: 
+533: }}}
+534: 
+535: ==== [[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Use &#34;{{code}}[[ expr ]]{{/code}}&#34; instead of &#34;{{code}}[ expr ]{{/code}}&#34;
+536: 
+537: Use &#34;{{code}}[[ expr ]]{{/code}}&#34; instead of &#34;{{code}}[ expr ]{{/code}}&#34; if possible since it avoids going through the whole pattern expansion/etc. machinery and adds additional operators not available in the Bourne shell, such as short-circuit {{code}}&#38;&#38;{{/code}} and {{code}}||{{/code}}.
+538: 
+539: ==== [[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] Use &#34;{{code}}(( ... )){{/code}}&#34; for arithmetic expressions
+540: 
+541: Use &#34;{{code}}(( ... )){{/code}}&#34; instead of &#34;{{code}}[ expr ]{{/code}}&#34; or &#34;{{code}}[[ expr ]]{{/code}}&#34; expressions.
+542: 
+543:  Example: Replace
+544: 
+545: {{{
+546: 
+547: i=5
+548: # do something
+549: if [ $i -gt 5 ] ; then
+550: 
+551: }}}
+552: 
+553:  with
+554: 
+555: {{{
+556: 
+557: i=5
+558: # do something
+559: if (( i &#62; 5 )) ; then
+560: 
+561: }}}
+562: 
+563: ==== [[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Compare exit code using arithmetic expressions expressions
+564: 
+565: Use POSIX arithmetic expressions to test for exit/return codes of commands and functions. For example turn
+566: 
+567: {{{
+568: 
+569: if [ $? -gt 0 ] ; then
+570: 
+571: }}}
+572: 
+573:  into
+574: 
+575: {{{
+576: 
+577: if (( $? &#62; 0 )) ; then
+578: 
+579: }}}
+580: 
+581: ==== [[image:images/tag_bourne.png||alt=&#34;[Bourne]&#34;height=&#34;&#34;]] Use builtin commands in conditions for {{code}}while{{/code}} endless loops
+582: 
+583: Make sure that your shell has a &#34;{{code}}true{{/code}}&#34; builtin (like ksh93) when executing endless loops like {{code}}$ while true ; do do_something ; done #{{/code}} - otherwise each loop cycle runs a {{code}}|fork()|+|exec()|{{/code}}-cycle to run {{code}}/bin/true{{/code}}
+584: 
+585: ==== Single-line if-statements
+586: 
+587: It is permissible to use {{code}}&#38;&#38;{{/code}} and {{code}}||{{/code}} to construct shorthand for an &#34;{{code}}if{{/code}}&#34; statement in the case where the if statement has a single consequent line:
+588: 
+589: {{{
+590: 
+591: [ $# -eq 0 ] &#38;&#38; exit 0
+592: 
+593: }}}
+594: 
+595:  instead of the longer:
+596: 
+597: {{{
+598: 
+599: if [ $# -eq 0 ]; then
+600:   exit 0
+601: fi
+602: 
+603: }}}
+604: 
+605: ==== Exit Status and {{code}}if{{/code}}/{{code}}while{{/code}} statements
+606: 
+607: Recall that &#34;{{code}}if{{/code}}&#34; and &#34;{{code}}while{{/code}}&#34; operate on the exit status of the statement to be executed. In the shell, zero (0) means true and non-zero means false. The exit status of the last command which was executed is available in the $? variable. When using &#34;{{code}}if{{/code}}&#34; and &#34;{{code}}while{{/code}}&#34;, it is typically not necessary to use {{code}}$?{{/code}} explicitly, as in:
+608: 
+609: {{{
+610: 
+611: grep foo /etc/passwd &#62;/dev/null 2&#62;&#38;1
+612: if [ $? -eq 0 ]; then
+613:   echo &#34;found&#34;
+614: fi
+615: 
+616: }}}
+617: 
+618:  Instead, you can more concisely write:
+619: 
+620: {{{
+621: 
+622: if grep foo /etc/passwd &#62;/dev/null 2&#62;&#38;1; then
+623:   echo &#34;found&#34;
+624: fi
+625: 
+626: }}}
+627: 
+628:  Or, when appropriate:
+629: 
+630: {{{
+631: 
+632: grep foo /etc/passwd &#62;/dev/null 2&#62;&#38;1 &#38;&#38; echo &#34;found&#34;
+633: 
+634: }}}
+635: 
+636: === Variable types, naming and usage
+637: 
+638: ==== Names of local, non-environment, non-constant variables should be lowercase
+639: 
+640: Names of variables local to the current script which are not exported to the environment should be lowercase while variable names which are exported to the environment should be uppercase.
+641: 
+642: The only exception are global constants (=global readonly variables, e.g. {{code}}$ float -r M_PI=3.14159265358979323846 #{{/code}} (taken from &#60;math.h&#62;)) which may be allowed to use uppercase names, too.
+643: 
+644: === Warning
+645: 
+646:  Uppercase variable names should be avoided because there is a good chance of naming collisions with either special variable names used by the shell (e.g. {{code}}PWD{{/code}}, {{code}}SECONDS{{/code}} etc.).
+647: 
+648: ==== Do not use variable names which are reserved keywords/variable names in C/C++/JAVA or the POSIX shell standard
+649: 
+650: Do not use variable names which are reserved keywords in C/C++/JAVA or the POSIX shell standard (to avoid confusion and/or future changes/updates to the shell language).
+651: 
+652: === Note
+653: 
+654: The Korn Shell and the POSIX shell standard have many more reserved variable names than the original Bourne shell. All these reserved variable names are spelled uppercase.
+655: 
+656: ==== Always use {{code}}&#8217;{&#8217;{{/code}}+{{code}}&#8217;}&#8217;{{/code}} when using variable names longer than one character
+657: 
+658: Always use {{code}}&#8217;{&#8217;{{/code}}+{{code}}&#8217;}&#8217;{{/code}} when using variable names longer than one character unless a simple variable name is followed by a blank, {{code}}/{{/code}}, {{code}};{{/code}}, or {{code}}${{/code}} character (to avoid problems with array, compound variables or accidental misinterpretation by users/shell)
+659: 
+660: {{{
+661: 
+662: print &#34;$foo=info&#34;
+663: 
+664: }}}
+665: 
+666:  should be rewritten to
+667: 
+668: {{{
+669: 
+670: print &#34;${foo}=info&#34;
+671: 
+672: }}}
+673: 
+674: ==== //Always// put variables into quotes when handling filenames or user input
+675: 
+676: //Always// put variables into quotes when handling filenames or user input, even if the values are hardcoded or the values appear to be fixed. Otherwise at least two things may go wrong:
+677: 
+678: * a malicious user may be able to exploit a script&#8217;s inner working to infect his/her own code
+679: * a script may (fatally) misbehave for unexpected input (e.g. file names with blanks and/or special symbols which are interpreted by the shell)
+680: 
+681: === Note
+682: 
+683:  As alternative a script may set {{code}}IFS=&#8217;&#8217; ; set -o noglob{{/code}} to turn off the interpretation of any field seperators and the pattern globbing.
+684: 
+685: ==== [[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Use typed variables if possible.
+686: 
+687: For example the following is very inefficient since it transforms the integer values to strings and back several times:
+688: 
+689: {{{
+690: 
+691: a=0
+692: b=1
+693: c=2
+694: # more code
+695: if [ $a -lt 5 -o $b -gt c ] ; then do_something ; fi
+696: 
+697: }}}
+698: 
+699:  This could be rewritten using ksh constructs:
+700: 
+701: {{{
+702: 
+703: integer a=0
+704: integer b=1
+705: integer c=2
+706: # more code
+707: if (( a &#60; 5 || b &#62; c )) ; then do_something ; fi
+708: 
+709: }}}
+710: 
+711: ==== [[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Store lists in arrays or associative arrays
+712: 
+713: Store lists in arrays or associative arrays - this is usually easier to manage.
+714: 
+715:  For example:
+716: 
+717: {{{
+718: 
+719: x=&#34;
+720: /etc/foo
+721: /etc/bar
+722: /etc/baz
+723: &#34;
+724: echo $x
+725: 
+726: }}}
+727: 
+728:  can be replaced with
+729: 
+730: {{{
+731: 
+732: typeset -a mylist
+733: mylist[0]=&#34;/etc/foo&#34;
+734: mylist[1]=&#34;/etc/bar&#34;
+735: mylist[2]=&#34;/etc/baz&#34;
+736: print &#34;${mylist[@]}&#34;
+737: 
+738: }}}
+739: 
+740:  or (ksh93-style append entries to a normal (non-associative) array)
+741: 
+742: {{{
+743: 
+744: typeset -a mylist
+745: mylist+=( &#34;/etc/foo&#34; )
+746: mylist+=( &#34;/etc/bar&#34; )
+747: mylist+=( &#34;/etc/baz&#34; )
+748: print &#34;${mylist[@]}&#34;
+749: 
+750: }}}
+751: 
+752: === Difference between expanding arrays with mylist[@] and mylist[*] subscript operators
+753: 
+754:  Arrays may be expanded using two similar subscript operators, @ and *. These subscripts differ only when the variable expansion appears within double quotes. If the variable expansion is between double-quotes, &#34;${mylist[*]}&#34; expands to a single string with the value of each array member separated by the first character of the {{code}}IFS{{/code}} variable, and &#34;${mylist[@]}&#34; expands each element of name to a separate string.
+755: 
+756: **Example�2.�Difference between [@] and [*] when expanding arrays**
+757: 
+758: {{{
+759: 
+760: typeset -a mylist
+761: mylist+=( &#34;/etc/foo&#34; )
+762: mylist+=( &#34;/etc/bar&#34; )
+763: mylist+=( &#34;/etc/baz&#34; )
+764: IFS=&#34;,&#34;
+765: printf &#34;mylist[*]={ 0=|%s| 1=|%s| 2=|%s| 3=|%s| }\n&#34; &#34;${mylist[*]}&#34;
+766: printf &#34;mylist[@]={ 0=|%s| 1=|%s| 2=|%s| 3=|%s| }\n&#34; &#34;${mylist[@]}&#34;
+767: 
+768: }}}
+769: 
+770: will print:
+771: 
+772: {{{
+773: 
+774: mylist[*]={ 0=|/etc/foo,/etc/bar,/etc/baz| 1=|| 2=|| 3=|| }
+775: mylist[@]={ 0=|/etc/foo| 1=|/etc/bar| 2=|/etc/baz| 3=|| }
+776: 
+777: }}}
+778: 
+779: ==== [[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Use compound variables or associative arrays to group similar variables together
+780: 
+781: Use compound variables or associative arrays to group similar variables together.
+782: 
+783:  For example:
+784: 
+785: {{{
+786: 
+787: box_width=56
+788: box_height=10
+789: box_depth=19
+790: echo &#34;${box_width} ${box_height} ${box_depth}&#34;
+791: 
+792: }}}
+793: 
+794:  could be rewritten to (&#34;associative array&#34;-style)
+795: 
+796: {{{
+797: 
+798: typeset -A -E box=( [width]=56 [height]=10 [depth]=19 )
+799: print ~-- &#34;${box[width]} ${box[height]} ${box[depth]}&#34;
+800: 
+801: }}}
+802: 
+803:  or (&#34;compound variable&#34;-style
+804: 
+805: {{{
+806: 
+807: box=(
+808:     float width=56
+809:     float height=10
+810:     float depth=19
+811:     )
+812: print ~-- &#34;${box.width} ${box.height} ${box.depth}&#34;
+813: 
+814: }}}
+815: 
+816: === I/O
+817: 
+818: ==== Avoid using the &#34;{{code}}echo{{/code}}&#34; command for output
+819: 
+820: The behaviour of &#34;{{code}}echo{{/code}}&#34; is not portable (e.g. System V, BSD, UCB and ksh93/bash shell builtin versions all slightly differ in functionality) and should be avoided if possible. POSIX defines the &#34;{{code}}printf{{/code}}&#34; command as replacement which provides more flexible and portable behaviour.
+821: 
+822: === [[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] Use &#34;{{code}}print{{/code}}&#34; and not &#34;{{code}}echo{{/code}}&#34; in Korn Shell scripts
+823: 
+824: Korn shell scripts should prefer the &#34;{{code}}print{{/code}}&#34; builtin which was introduced as replacement for &#34;{{code}}echo{{/code}}&#34;.
+825: 
+826: === Caution
+827: 
+828: Use {{code}}$ print ~-- ${varname}&#34; #{{/code}} when there is the slightest chance that the variable &#34;{{code}}varname{{/code}}&#34; may contain symbols like &#34;-&#34;. Or better use &#34;{{code}}printf{{/code}}&#34; instead, for example
+829: 
+830: {{{
+831: 
+832: integer fx
+833: # do something
+834: print $fx
+835: 
+836: }}}
+837: 
+838:  may fail if &#34;f&#34; contains a negative value. A better way may be to use
+839: 
+840: {{{
+841: 
+842: integer fx
+843: # do something
+844: printf &#34;%d\n&#34; fx
+845: 
+846: }}}
+847: 
+848: ==== [[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Use {{code}}redirect{{/code}} and not {{code}}exec{{/code}} to open files
+849: 
+850: Use {{code}}redirect{{/code}} and not {{code}}exec{{/code}} to open files - {{code}}exec{{/code}} will terminate the current function or script if an error occurs while {{code}}redirect{{/code}} just returns a non-zero exit code which can be caught.
+851: 
+852: Example:
+853: 
+854: {{{
+855: 
+856: if redirect 5&#60;/etc/profile ; then
+857:     print &#34;file open ok&#34;
+858:     head &#60;&#38;5
+859: else
+860:     print &#34;could not open file&#34;
+861: fi
+862: 
+863: }}}
+864: 
+865: ==== [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Avoid redirections per command when the output goes into the same file, e.g. {{code}}$ echo &#34;foo&#34; &#62;xxx ; echo &#34;bar&#34; &#62;&#62;xxx ; echo &#34;baz&#34; &#62;&#62;xxx #{{/code}}
+866: 
+867: Each of the redirections above trigger an {{code}}|open()|,|write()|,|close()|{{/code}}-sequence. It is much more efficient (and faster) to group the rediction into a block, e.g. {{code}}{ echo &#34;foo&#34; ; echo &#34;bar&#34; ; echo &#34;baz&#34; } &#62;xxx #{{/code}}
+868: 
+869: ==== [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Avoid the creation of temporary files and store the values in variables instead
+870: 
+871: Avoid the creation of temporary files and store the values in variables instead if possible
+872: 
+873:  Example:
+874: 
+875: {{{
+876: 
+877: ls -1 &#62;xxx
+878: for i in $(cat xxx) ; do
+879:     do_something ;
+880: done
+881: 
+882: }}}
+883: 
+884:  can be replaced with
+885: 
+886: {{{
+887: 
+888: x=&#34;$(ls -1)&#34;
+889: for i in ${x} ; do
+890:     do_something ;
+891: done
+892: 
+893: }}}
+894: 
+895: === Note
+896: 
+897: ksh93 supports binary variables (e.g. {{code}}typeset -b varname{{/code}}) which can hold any value.
+898: 
+899: ==== If you create more than one temporary file create an unique subdir
+900: 
+901: If you create more than one temporary file create an unique subdir for these files and make sure the dir is writable. Make sure you cleanup after yourself (unless you are debugging).
+902: 
+903: ==== [[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Use {n}&#60;file instead of fixed file descriptor numbers
+904: 
+905: When opening a file use {n}&#60;file, where {{code}}n{{/code}} is an integer variable rather than specifying a fixed descriptor number.
+906: 
+907: This is highly recommended in functions to avoid that fixed file descriptor numbers interfere with the calling script.
+908: 
+909: **Example�3.�Open a network connection and store the file descriptor number in a variable**
+910: 
+911: {{{
+912: 
+913: function cat_http
+914: {
+915:     integer netfd
+916: 
+917: ...
+918: 
+919:     # open TCP channel
+920:     redirect {netfd}&#60;&#62;&#34;/dev/tcp/${host}/${port}&#34;
+921: 
+922:     # send HTTP request
+923:     request=&#34;GET /${path} HTTP/1.1\n&#34;
+924:     request+=&#34;Host: ${host}\n&#34;
+925:     request+=&#34;User-Agent: demo code/ksh93 (2007-08-30; $(uname -s -r -p))\n&#34;
+926:     request+=&#34;Connection: close\n&#34;
+927:     print &#34;${request}\n&#34; &#62;&#38;${netfd}
+928: 
+929:     # collect response and send it to stdout
+930:     cat &#60;&#38;${netfd}
+931: 
+932:     # close connection
+933:     exec {netfd}&#60;&#38;-
+934: 
+935: ...
+936: 
+937: }
+938: 
+939: }}}
+940: 
+941: ==== [[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Use inline here documents instead of {{code}}echo &#34;$x&#34; | command{{/code}}
+942: 
+943: Use inline here documents, for example
+944: 
+945: {{{
+946: 
+947: command &#60;&#60;&#60; $x
+948: 
+949: }}}
+950: 
+951:  rather than
+952: 
+953: {{{
+954: 
+955: print -r ~-- &#34;$x&#34; | command
+956: 
+957: }}}
+958: 
+959: ==== [[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Use the {{code}}-r{{/code}} option of {{code}}read{{/code}} to read a line
+960: 
+961: Use the {{code}}-r{{/code}} option of {{code}}read{{/code}} to read a line. You never know when a line will end in {{code}}\{{/code}} and without a {{code}}-r{{/code}} multiple lines can be read.
+962: 
+963: ==== [[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Print compound variables using {{code}}print -C varname{{/code}} or {{code}}print -v varname{{/code}}
+964: 
+965: Print compound variables using {{code}}print -C varname{{/code}} or {{code}}print -v varname{{/code}} to make sure that non-printable characters are correctly encoded.
+966: 
+967: **Example�4.�Print compound variable with non-printable characters**
+968: 
+969: {{{
+970: 
+971: compound x=(
+972:     a=5
+973:     b=&#34;hello&#34;
+974:     c=(
+975:         d=9
+976:         e=&#34;$(printf &#34;1\v3&#34;)&#34; [[image:images/callouts/1.png||alt=&#34;1&#34;height=&#34;&#34;]]
+977:     )
+978: )
+979: print -v x
+980: 
+981: }}}
+982: 
+983: will print:
+984: 
+985: {{{
+986: 
+987: (
+988:         a=5
+989:         b=hello
+990:         c=(
+991:                 d=9
+992:                 e=$&#8217;1\0133&#8217; [[image:images/callouts/1.png||alt=&#34;1&#34;height=&#34;&#34;]]
+993:         )
+994: )
+995: 
+996: }}}
+997: 
+998: |[[[[image:images/callouts/1.png||alt=&#34;1&#34;height=&#34;&#34;]]&#62;&#62;#co.vertical_tab1]] [[[[image:images/callouts/1.png||alt=&#34;1&#34;height=&#34;&#34;]]&#62;&#62;#co.vertical_tab2]]|
+999: vertical tab, {{code}}\v{{/code}}, octal={{code}}\013{{/code}}.
+1000: 
+1001: ==== Put the command name and arguments before redirections
+1002: 
+1003: Put the command name and arguments before redirections. You can legally do {{code}}$ &#62; file date{{/code}} instead of {{code}}date &#62; file{{/code}} but don&#8217;t do it.
+1004: 
+1005: ==== [[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Enable the {{code}}gmacs{{/code}} editor mode when reading user input using the {{code}}read{{/code}} builtin
+1006: 
+1007: Enable the {{code}}gmacs{{/code}}editor mode before reading user input using the {{code}}read{{/code}} builtin to enable the use of cursor+backspace+delete keys in the edit line
+1008: 
+1009: **Example�5.�Prompt user for a string with gmacs editor mode enabled**
+1010: 
+1011: {{{
+1012: 
+1013: set -o gmacs [[image:images/callouts/1.png||alt=&#34;1&#34;height=&#34;&#34;]]
+1014: typeset inputstring=&#34;default value&#34;
+1015: ...
+1016: read -v[[image:images/callouts/2.png||alt=&#34;2&#34;height=&#34;&#34;]] inputstring[[image:images/callouts/3.png||alt=&#34;3&#34;height=&#34;&#34;]]?&#34;Please enter a string: &#34;[[image:images/callouts/4.png||alt=&#34;4&#34;height=&#34;&#34;]]
+1017: ...
+1018: printf &#34;The user entered the following string: &#8217;%s&#8217;\n&#34; &#34;${inputstring}&#34;
+1019: 
+1020: ...
+1021: 
+1022: }}}
+1023: 
+1024: |[[[[image:images/callouts/1.png||alt=&#34;1&#34;height=&#34;&#34;]]&#62;&#62;#co.enable_gmacs]]|
+1025: Enable gmacs editor mode.
+1026: |[[[[image:images/callouts/2.png||alt=&#34;2&#34;height=&#34;&#34;]]&#62;&#62;#co.read_v]]|
+1027: The value of the variable is displayed and used as a default value.
+1028: |[[[[image:images/callouts/3.png||alt=&#34;3&#34;height=&#34;&#34;]]&#62;&#62;#co.readvar]]|
+1029: Variable used to store the result.
+1030: |[[[[image:images/callouts/4.png||alt=&#34;4&#34;height=&#34;&#34;]]&#62;&#62;#co.prompt]]|
+1031: Prompt string which is displayed in stderr.
+1032: 
+1033: === Math
+1034: 
+1035: ==== [[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Use builtin arithmetic expressions instead of external applications
+1036: 
+1037: Use builtin (POSIX shell) arithmetic expressions instead of {{code}}expr{{/code}}, {{code}}bc{{/code}}, {{code}}dc{{/code}}, {{code}}awk{{/code}}, {{code}}nawk{{/code}} or {{code}}perl{{/code}}.
+1038: 
+1039: === Note
+1040: 
+1041: ksh93 supports C99-like floating-point arithmetic including special values such as +Inf, -Inf, +NaN, -NaN.
+1042: 
+1043: ==== [[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Use floating-point arithmetic expressions if calculations may trigger a division by zero or other exceptions
+1044: 
+1045: Use floating-point arithmetic expressions if calculations may trigger a division by zero or other exceptions - floating point arithmetic expressions in ksh93 support special values such as {{code}}+Inf{{/code}}/{{code}}-Inf{{/code}} and {{code}}+NaN{{/code}}/{{code}}-NaN{{/code}} which can greatly simplify testing for error conditions, e.g. instead of a {{code}}trap{{/code}} or explicit {{code}}if ... then... else{{/code}} checks for every sub-expression you can check the results for such special values.
+1046: 
+1047: Example:
+1048: 
+1049: {{{
+1050: 
+1051: $ **{{code}}ksh93 -c &#8217;integer i=0 j=5 ; print ~-- &#34;x=$((j/i)) &#34;&#8217;{{/code}}**
+1052: ksh93: line 1: j/i: divide by zero
+1053: $ **{{code}}ksh93 -c &#8217;float i=0 j=-5 ; print ~-- &#34;x=$((j/i)) &#34;&#8217;{{/code}}**
+1054: x=-Inf
+1055: 
+1056: }}}
+1057: 
+1058: ==== [[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Use {{code}}printf &#34;%a&#34;{{/code}} when passing floating-point values
+1059: 
+1060: Use {{code}}printf &#34;%a&#34;{{/code}} when passing floating-point values between scripts or as output of a function to avoid rounding errors when converting between bases.
+1061: 
+1062:  Example:
+1063: 
+1064: {{{
+1065: 
+1066: function xxx
+1067: {
+1068:     float val
+1069: 
+1070:     (( val=sin(5.) ))
+1071:     printf &#34;%a\n&#34; val
+1072: }
+1073: float out
+1074: (( out=$(xxx) ))
+1075: xxx
+1076: print ~-- $out
+1077: 
+1078: }}}
+1079: 
+1080:  This will print:
+1081: 
+1082: {{{
+1083: 
+1084: -0.9589242747
+1085: -0x1.eaf81f5e09933226af13e5563bc6p-01
+1086: 
+1087: }}}
+1088: 
+1089: ==== [[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Put constant values into readonly variables
+1090: 
+1091: Put constant values into readonly variables
+1092: 
+1093: For example:
+1094: 
+1095: {{{
+1096: 
+1097: float -r M_PI=3.14159265358979323846
+1098: 
+1099: }}}
+1100: 
+1101:  or
+1102: 
+1103: {{{
+1104: 
+1105: float M_PI=3.14159265358979323846
+1106: readonly M_PI
+1107: 
+1108: }}}
+1109: 
+1110: ==== [[image:images/tag_ksh.png||alt=&#34;[ksh]&#34;height=&#34;&#34;]] [[image:images/tag_perf.png||alt=&#34;[perf]&#34;height=&#34;&#34;]] Avoid string to number (and/or number to string) conversions in arithmetic expressions expressions
+1111: 
+1112: Avoid string to number and/or number to string conversions in arithmetic expressions expressions to avoid performance degradation and rounding errors.
+1113: 
+1114: **Example�6.�(( x=$x*2 )) vs. (( x=x*2 ))**
+1115: 
+1116: {{{
+1117: 
+1118: float x
+1119: ...
+1120: (( x=$x*2 ))
+1121: 
+1122: }}}
+1123: 
+1124:  will convert the variable &#34;x&#34; (stored in the machine&#8217;s native {{code}}|long double|{{/code}} datatype) to a string value in base10 format, apply pattern expansion (globbing), then insert this string into the arithmetic expressions and parse the value which converts it into the internal |long double| datatype format again. This is both slow and generates rounding errors when converting the floating-point value between the internal base2 and the base10 representation of the string.
+1125: 
+1126:  The correct usage would be:
+1127: 
+1128: {{{
+1129: 
+1130: float x
+1131: ...
+1132: (( x=x*2 ))
+1133: 
+1134: }}}
+1135: 
+1136:  e.g. omit the &#8217;$&#8217; because it&#8217;s (at least) redundant within arithmetic expressions.
+1137: 
+1138: **Example�7.�x=$(( y+5.5 )) vs. (( x=y+5.5 ))**
+1139: 
+1140: {{{
+1141: 
+1142: float x
+1143: float y=7.1
+1144: ...
+1145: x=$(( y+5.5 ))
+1146: 
+1147: }}}
+1148: 
+1149:  will calculate the value of {{code}}y+5.5{{/code}}, convert it to a base-10 string value amd assign the value to the floating-point variable {{code}}x{{/code}} again which will convert the string value back to the internal |long double| datatype format again.
+1150: 
+1151:  The correct usage would be:
+1152: 
+1153: {{{
+1154: 
+1155: float x
+1156: float y=7.1
+1157: ...
+1158: (( x=y+5.5 ))
+1159: 
+1160: }}}
+1161: 
+1162:  i.e. this will save the string conversions and avoid any base2~--&#62;base10~--&#62;base2-conversions.
+1163: 
+1164: ==== [[image:images/tag_ksh93.png||alt=&#34;[ksh93]&#34;height=&#34;&#34;]] Set {{code}}LC_NUMERIC{{/code}} when using floating-point constants
+1165: 
+1166: Set {{code}}LC_NUMERIC{{/code}} when using floating-point constants to avoid problems with radix-point representations which differ from the representation used in the script, for example the {{code}}de_DE.*{{/code}} locale use &#8217;,&#8217; instead of &#8217;.&#8217; as default radix point symbol.
+1167: 
+1168: For example:
+1169: 
+1170: {{{
+1171: 
+1172: # Make sure all math stuff runs in the &#34;C&#34; locale to avoid problems with alternative
+1173: # radix point representations (e.g. &#8217;,&#8217; instead of &#8217;.&#8217; in de_DE.*-locales). This
+1174: # needs to be set _before_ any floating-point constants are defined in this script)
+1175: if [[ &#34;${LC_ALL}&#34; != &#34;&#34; ]] ; then
+1176:     export \
+1177:         LC_MONETARY=&#34;${LC_ALL}&#34; \
+1178:         LC_MESSAGES=&#34;${LC_ALL}&#34; \
+1179:         LC_COLLATE=&#34;${LC_ALL}&#34; \
+1180:         LC_CTYPE=&#34;${LC_ALL}&#34;
+1181:         unset LC_ALL
+1182: fi
+1183: export LC_NUMERIC=C
+1184: ...
+1185: float -r M_PI=3.14159265358979323846
+1186: 
+1187: }}}
+1188: 
+1189: === Note
+1190: 
+1191: The environment variable {{code}}LC_ALL{{/code}} always overrides all other {{code}}LC_*{{/code}} variables, including {{code}}LC_NUMERIC{{/code}}. The script should always protect itself against custom {{code}}LC_NUMERIC{{/code}} and {{code}}LC_ALL{{/code}} values as shown in the example above.
+1192: 
+1193: === Misc
+1194: 
+1195: ==== Put {{code}}[${LINENO}]{{/code}} in your {{code}}PS4{{/code}}
+1196: 
+1197: Put {{code}}[${LINENO}]{{/code}} in your {{code}}PS4{{/code}} prompt so that you will get line numbers with you run with {{code}}-x{{/code}}. If you are looking at performance issues put {{code}}$SECONDS{{/code}} in the {{code}}PS4{{/code}} prompt as well.
+</textarea>
+
+<div class="clearfloats">
+</div>
+</div>    </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded Search">
+<h5 class="xwikipaneltitle hidden" onclick="togglePanelVisibility(this.parentNode);">Search</h5>
+<div class="xwikipanelcontents">
+  <form action="/bin/view/Main/WebSearch">
+    <div id="globalsearch">
+      <input id="globalsearchinput" type="text" name="text" value="search..." size="15" onfocus="if (this.value == 'search...') value=''; this.select();" onblur="if (this.value == '') value='search...'; this.blur()"/>
+&nbsp;
+      <input class="button" value="Go" type="image" src="/skins/oso/go.png"/>
+    </div>
+  </form>
+</div>
+</div>
+                        <div class="panel expanded OSNav">
+<h5 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSNav','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSNav'); togglePanelVisibility(this.parentNode);">Collectives</h5>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavCommunity Group">
+            <div id="xwikinavCommunity GroupHeader" class="accordionTabTitleBar"><h6>Community Group</h6>
+            </div>
+            <div id="xwikinavCommunity GroupContent" class="accordionTabContentBox">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+edu/">Academic and Research</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+accessibility/">Accessibility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+advocacy/">Advocacy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+appliances/">Appliances</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+approachability/">Approachability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/">Architecture Process and Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+brandz/">BrandZ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+chinese_users/">Chinese Users</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/">Community Advisory Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+databases/">Databases</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+desktop/">Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/">Device Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+distribution/">Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+dtrace/">DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+emerging_platforms/">Emerging Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+fm/">Fault Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+games/">Games on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ha%2Dclusters/">HA Clusters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+hpcdev/">HPC Developer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+install/">Installation and Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+int_localization/">Internationalization and Localization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+laptop/">Laptop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ldoms/">Logical Domains</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+mdb/">Modular Debugger (MDB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/">Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+nfs/">NFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+observability/">Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ogb/">OpenSolaris Governing Board (OGB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+printing/">OpenSolaris Printing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/">OS/Net (ON)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/">Performance</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+pm/">Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+power_pc/">PowerPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/">Security</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+smf/">Service Management Facility (smf(5))</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sw%2Dporters/">Software Porters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+volume_manager/">Solaris Volume Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+storage/">Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sysadmin/">Systems Administration Community Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+testing/">Testing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/">Tools Home</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ufs/">Unix File Systems (UFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+web/">Website Community</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+x_win/">X Window System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+xen/">Xen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/">ZFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/">Zones</a></span></li>
+</ul>
+                                        </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavProject">
+            <div id="xwikinavProjectHeader" class="accordionTabTitleBar"><h6>Project</h6>
+            </div>
+            <div id="xwikinavProjectContent" class="accordionTabContentBox">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+adsl/">ADSL Modem Enhancement</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+arc%2Dprocess/">ARC Process Definition</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osarm/">ARM Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+adm/">Automatic Data Migration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bind/">BIND Update</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bluetooth/">Bluetooth Stack & Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dinitiator/">Brocade FC HBA &#45; Initiator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dtarget/">Brocade FC HBA &#45; Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brussels/">Brussels &#45; unified network link configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/">Caiman, Solaris Install Revisited</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+celeste/">Celeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cz/">Český portál</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/">Chime Visualization Tool for DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smbfs/">CIFS client for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cifs%2Dserver/">CIFS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+clearview/">Clearview: Network Interface Coherence</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dinformix/">Cluster Agent: Informix Dynamic Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dcontainer/">Cluster Agent: OpenSolaris Container</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dxvm/">Cluster Agent: OpenSolaris xVM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Debs/">Cluster Agent: Oracle E&#45;Business Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dpostgresql/">Cluster agent: PostgreSQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dsmb/">Cluster Agent: Samba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dtomcat/">Cluster Agent: Tomcat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cmt/">CMT</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+data%2Dflow/">Coarse Data Flow Parallelism</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+colorado/">Colorado: Open HA Cluster on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+commandassist/">Command Assistant</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cam/">Common Array Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+companion/">Companion &#45; /opt/sfw: Free and Open Source software</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/">COMSTAR: Common Multiprotocol SCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+content/">Content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+contest/">Contest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpufs/">CPU Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpg/">Credentials Process Groups</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crossbow/">Crossbow: Network Virtualization and Resource Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmsagenttoolkit/">Crypto KMS Agent Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/">Cryptographic Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dmm/">Data Migration Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+datatethers/">Data Tethers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+de/">Deutsches Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ddtool/">Device Detection Tool</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+driver%2Dutility/">Device Driver Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devicemgr/">Device Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devmapper/">Device Mapper</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dri/">Direct Rendering Infrastructure & 3D drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Ddoc/">DTrace Guide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/">Duckwater: Simplified name services management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+phpEasyTools/">Easy Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emancipation/">Emancipation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex/">Emulex Fibre Channel Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex-cna/">Emulex Advanced Ethernet Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+intel%2Dplatform/">Enable/Enhance Solaris support for Intel Platform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webcams/">Enhance the support of USB webcams</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Dprofiles/">Enhanced SMF Profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+amd/">Enhancements for AMD&#45;based Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+erlang%2Ddtrace/">Erlang DTrace Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ethbridge/">Ethernet bridge module for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+conary%2Deval/">Evaluate Conary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+events%2Dregistry/">Events Registry</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ext3/">Ext3 file system support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkgbase/">F/OSS Package Base</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+facilitation/">Facilitation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fcoe/">Fibre Channel over Ethernet</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fgap/">Fine Grained Access Policy (FGAP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fingerprint%2Dauthentication/">Fingerprint Authentication</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fmac/">Flexible Mandatory Access Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+forensics/">Forensic Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fox/">Fully Open X Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fuse/">Fuse on Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gcore/">gcore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+generic%2Dmca/">Generic Machine Check Architecture Improvements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+summerofcode/">Google SOC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Djboss/">HA&#45;JBoss</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dmysql/">HA&#45;MySQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livehadoop/">Hadoop Live CD</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hitachi/">Hitachi</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+honeycomb/">HoneyComb Fixed Content Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hpc%2Dstack/">HPC Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/">Image Packaging System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+perfmib/">Improved Performance MIB</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/">Indiana</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+awards/">Innovation Awards</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/">Input Method</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+intelgraphics/">Intel Graphics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ikev2/">Internet Key Exchange, version 2</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+irm/">Interrupt Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ip%2Drefactor/">IP Datapath Refactoring</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ipoib/">IP over Infiniband</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tref/">IPsec Tunnel Reform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iser/">iSCSI Extensions for Remote DMA (iSER)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isns/">iSNS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jeos/">JeOS &#45; Just enough Operating System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jkstat/">JKstat &#45; a java binding for libkstat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jfs/">Journaled File System (JFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kde/">K Desktop Environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kerberos/">Kerberos</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kernel%2Dsockets/">Kernel Sockets</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kssl/">Kernel SSL Enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmf/">Key Management Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ksh93%2Dintegration/">Korn Shell 93 integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+txipsec/">Labeled IPsec</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+latencytop/">LatencyTOP</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+l2filter/">Layer 2 Filtering</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ldoms%2Dmgr/">LDoms Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lending/">Lending</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+libmicro/">libMicro &#45; portable microbenchmarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lld/">Link Layer Discovery</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livemedia/">Live Media: Technologies for distributions running from CD and other media</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+localedata/">Locale Data</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+loficc/">lofi compression and cryptography support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lx64/">lx64 brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mms/">Media Management System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mega_sas/">Mega_sas</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mx/">Mexico</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+milax/">MilaX minimal Live Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mips/">MIPS Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mozilla%2Ddtrace/">Mozilla DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohac%2Davs/">MRSL.NONsharedDevice</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+glossary/">Multi&#45;lingual Glossary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mpxio/">Multi&#45;pathing software (MPxIO)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+large%2Dsector/">Multiple disk sector size support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+multiple%2Ddoi/">Multiple DOI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+muskoka/">Muskoka: An open repository for OpenSolaris technical content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+navigator/">Navigator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nemo/">Nemo: A Framework for High&#45;Performance Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/">Network Auto&#45;Magic</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ndmp/">Network Data Management Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+net%2Dmib/">Network MIBs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npp/">Network Performance Projects</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nws/">Network Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ntp/">Network Time Protocol (NTP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nv%2Dg11n/">Nevada Globalization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+4over6/">New Design of 4over6 Mechanism Based on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsrdma/">NFS RDMA transport update and performance analysis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dzones/">NFS Server in non&#45;Global Zones</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsv41/">NFS version 4.1 pNFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dnamespace/">NFSv4 namespace extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nightingale/">Nightingale: Port Songbird to OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npiv/">NPort ID Virtualization (NPIV)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+numa/">NUMA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osd/">Object Storage Device (OSD) support for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohacge%2Dsbp/">OHACGE Script Based Plug&#45;in</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+onnv/">ON/Nevada (ONNV) Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opendev/">Open Development Infrastructure</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dutilities/">Open HA Cluster Utilities</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opensound/">Open Sound System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/">OpenGrok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cim%2Dserver/">OpenPegasus CIM Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+openrti/">OpenRTI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+busybox/">OpenSolaris Busybox</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/">OpenSolaris Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+es/">OpenSolaris Hispano</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+audit/">OpenSolaris Security Audit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/">OpenSolaris support for the QEMU processor emulator: host and guest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pef/">PEF: Packet Event Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+performance%2Dwrappers/">Performance Wrappers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkgfactory/">Pkgfactory</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pl/">Polski Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fr/">Portail Francophone</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+br/">Portal Brasil</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+portals/">Portals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmui/">Power Management Usability Interfaces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+presto/">Presto: Automatic Printing Configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmpsm/">Printable Many Page Solaris Manuals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+promise%2Dstorage/">Promise SuperTrak RAID HBA Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qlogic-cna/">QLogic Converged Network Adapter GLDv3 NIC Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+quagga/">Quagga Routing Protocol Suite Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+raidcfg/">RAID Configuration Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rbridges/">RBridge (IETF TRILL) support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rof/">RDMA Offload Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+reno/">Reno: Login Process Enhancements for Interop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/">Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+s10brand/">s10brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+samqfs/">SAM/QFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+scm%2Dmigration/">SCM Migration Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+srp/">SCSI RDMA Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sdcard%2Ddrivers/">SDcard Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sensors/">Sensor Abstraction Layer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dsip/">Session Initiation Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sfwnv/">SFW</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+shell/">Shell: bourne shell, korn shell, C shell, etc.</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sierra/">Sierra: Intel WiFi Chipsets Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+simplepanels/">Simple Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sm%2Dhba/">SM&#45;HBA Based SAS HBA Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Ddoc/">SMF Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iscsitgt/">Solaris iSCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/">Solaris PowerPC Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sourcejuicer/">SourceJuicer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/">Sparks: name service switch/nscd enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+squashfs/">Squashfs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+star/">Star integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starfish/">Starfish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starterkit/">Starter Kit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+storagepm/">Storage Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sst/">Sun Security Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+avs/">Sun StorageTek Availability Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ofuv/">Support for OpenFabrics User Verbs / API on OpenSolaris OS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/">Support gcc4/GCCfss in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+suspend%2Dresume/">Suspend/Resume</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+svr4_packaging/">SVR4 Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+systemz/">Systemz</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tamarack/">Tamarack: Removable Media Enhancements in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tesla/">Tesla: OpenSolaris Enhanced Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+test%2Ddev/">Test Development</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/">Tickless Kernel Architecture</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tipc/">TIPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+branding/">Trademarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tnipdb/">Trusted networking interface policy database for Trusted Extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tpm/">Trusted Platform Module support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+usecase/">Use Case</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+valex/">Validated Execution Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vconsole/">Virtual Console</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vnm/">Virtual Network Machines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/">Visual Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+visualization%2Dhpc/">Visualization for HPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+volo/">Volo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vrrp/">VRRP: Virtual Router Redundancy Protocol Implementation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vscan/">VSCAN service</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/">Web Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+website/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+winchester/">Winchester: Schema mapping and ID mapping for AD Interoperability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wusb/">Wireless USB Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wwan/">Wireless Wide Area Network</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x%2Dcons/">X Consolidation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x86gentopo/">x86 Generic FMA Topology Enumerator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xen%2Dgate/">Xen Gate</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xfce/">Xfce: A lightweight desktop environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfsboot/">ZFS Boot and Install</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfs%2Dcrypto/">ZFS on disk encryption support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonemgr/">Zone Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonestat/">Zone Statistics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ru/">Русский портал</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ar/">البوابة العربية</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+in/">भारतीय पोर्टल</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cn/">中国门户</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/">日本ポータル</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kr/">한국 포탈</a></span></li>
+</ul>
+                                        </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavUser Group">
+            <div id="xwikinavUser GroupHeader" class="accordionTabTitleBar"><h6>User Group</h6>
+            </div>
+            <div id="xwikinavUser GroupContent" class="accordionTabContentBox">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/User+Group+adl%2Dauosug/">Adelaide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+aosug/">Argentina</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+azosug/">Arizona</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+atl%2Dosug/">Atlanta</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bwosug/">Baltimore&#45;Washington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bosug/">Bangalore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bkkosug/">Bangkok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bdosug/">Bangladesh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bjosug/">Beijing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+blmosug/">Bélem</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+brosug/">Berlin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bvrm%2Dosug/">Bhimavaram</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+btn%2Dosug/">Bloomington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+os_user_groups_amb/">Campus Ambassadors</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+crosug/">Capital Region</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cfosug/">Cardiff</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ceosug/">Ceara</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cltosug/">Charlotte</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cdosug/">Chengdu</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chennai/">Chennai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chmxosug/">Chihuahua</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+closug/">Chile</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cle%2Dosug/">Cleveland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+colosug/">Colombia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cmh%2Dosug/">Columbus</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ctosug/">Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+knp%2Duek/">Cracow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+czosug/">Czech</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfw%2Dosug/">Dallas/Ft. Worth</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dosug/">Danish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+deosug/">Delaware</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+eduosug/">Edinburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+egosug/">Egypt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fiosug/">Finland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+flosug/">Florida</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+frosug/">Front Range</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fzosug/">FuZhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+glug/">Great Lakes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+grosug/">Greece</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hzosug/">Hangzhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hi%2Dosug/">Hawaii</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hfosug/">HeFei</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hugs/">Houston</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hkosug/">Hong Kong</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hosug/">Hyderabad</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+idosug/">Indonesia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ie%2Dosug/">Irish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+iosug/">Israel</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+itl%2Dosug/">Italian</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jnosug/">Jinan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jogja-osug/">Jogja</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kbosug/">Kabul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kc%2Dosug/">Kansas City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+lavosug/">Latvia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+losug/">London</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madosug/">Madurai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mansug/">Manchester</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mssosug/">Mato Grosso</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+msosug/">Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mgosug/">Minas Gerais</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mnosug/">Minnesota</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mtlosug/">Montreal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mosug/">Moscow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mmosug/">Mumbai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mucosug/">Munich</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+neaosug/">NEA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nlosug/">Netherlands</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ne%2Dosug/">New England</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nycosug/">New York City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nzosug/">New Zealand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nit%2Dhamirpur%2Dosug/">NIT Hamirpur</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+norosug/">Noroeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nerosug/">Nuremberg-Erlangen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+okcosug/">Oklahoma City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ososug/">Osnabrück</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+peosug/">Peru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+paosug/">Philadelphia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+piaski%2Dosug/">Piaski</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ptosug/">Pittsburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+poaosug/">Porto Alegre</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+psosug/">Puget Sound</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+posug/">Pune</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+qosug/">Queensland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+riosug/">Rio de Janeiro</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rtp%2Dosug/">Research Triangle Park</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ro%2Dosug/">Romania</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ruosug/">Russia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+alamo%2Dosug/">San Antonio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sdosug/">San Diego</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sfosug/">San Francisco</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sampaosug/">São Paulo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+scosug/">Scottish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rs%2Dosug/">Serbia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+shosug/">Shanghai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szosug/">Shenzhen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svosug/">Silicon Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sgosug/">Singapore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+skosug/">Slovak</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+saosug/">South African</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+soctosug/">Southern Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+stl%2Dosug/">St. Louis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svgosug/">Stavanger</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+swosug/">Sweden</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chosug/">Switzerland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sosug/">Sydney</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szc%2Dosug/">Szczecin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+twosug/">Taiwan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ostug/">Tecum</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tvosug/">Thames Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tsug/">Tokyo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+torosug/">Toronto</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+trosug/">Trondheim</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+toss/">Tulsa</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tosug/">Turkey</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ufaosug/">Ufa</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+uaosug/">Ukraine</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+unimelb%2Dosug/">University of Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+valeosug/">Vale do Paraíba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vanosug/">Vancouver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vosug/">Venezuela</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wosug/">Welsh &#45; Cymru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wiosug/">Wisconsin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+xaosug/">Xi'an</a></span></li>
+</ul>
+                                        </div>
+        </div>
+    </div>
+</div><p/><p/>
+<script type="text/javascript">
+var obj = {div:'xwikinav',no:-1,height:250};
+var acc = createAccordion(obj);
+</script>
+</div>
+</div>
+                        <div class="panel expanded Subsites">
+<h5 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.Subsites','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.Subsites'); togglePanelVisibility(this.parentNode);">Subsites</h5>
+<div class="xwikipanelcontents">
+<span class="wikiexternallink"><a href="http://cr.opensolaris.org">Code Reviews</a></span><br/>
+<span class="wikiexternallink"><a href="http://repo.opensolaris.org">Code Repositories</a></span><br/>
+<span class="wikiexternallink"><a href="http://pkg.opensolaris.org">Package Search</a></span><br/>
+<span class="wikiexternallink"><a href="http://bugs.opensolaris.org">Bugster</a></span><br/>
+<span class="wikiexternallink"><a href="http://defect.opensolaris.org">Bugzilla</a></span><br/>
+<span class="wikiexternallink"><a href="http://test.opensolaris.org">Test Machines</a></span><br/>
+<span class="wikiexternallink"><a href="http://planet.opensolaris.org">Planet</a></span><br/>
+<span class="wikiexternallink"><a href="http://mail.opensolaris.org">Mailing Lists</a></span><br/>
+<span class="wikiexternallink"><a href="http://poll.opensolaris.org">Elections & Polls</a></span><br/>
+<span class="wikiexternallink"><a href="http://arc.opensolaris.org">ARC Case Logs</a></span><br/>
+<span class="wikiexternallink"><a href="http://jucr.opensolaris.org">Source Juicer</a></span><br/>
+<span class="wikiexternallink"><a href="http://pkgfactory.opensolaris.org">Package Factory</a></span><br/>
+<span class="wikiexternallink"><a href="http://auth.opensolaris.org">User Authentication</a></span><br/>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h5 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSDocs','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSDocs'); togglePanelVisibility(this.parentNode);">Project shell Pages</h5>
+<div class="xwikipanelcontents"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+shell/shellstyle">Shell coding style guidelines</a></span></li>
+</ul>
+            </div>
+</div>
+                        
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+  <div id="xwikilicence">&copy; Sun Microsystems Inc. 2009</div>
+          <div id="xwikiplatformversion">XWiki Enterprise 1.8.2.19075 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div> 
+    <div><a href="/bin/view/Main/tou">Terms Of Use</a> |
+         <a href="http://www.sun.com/privacy/">Privacy</a> | 
+         <a href="/bin/view/Main/trademark">Trademarks</a> |
+         <a href="/bin/view/Main/copyrights">Copyright Policy</a> |
+         <a href="/bin/view/Main/site_guidelines">Site Guidelines</a> |
+         <a href="/bin/view/Main/site%2Dmap">Site map</a> |
+         <a href="/bin/view/Main/help">Help</a></div>
+    <div>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.</div>
+<hr/>
+</div>
+
+</div></div></body>
+</html>

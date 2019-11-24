@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Adding Drilldown (Project dtrace-chime.drilldown) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+dtrace%2Dchime/drilldown" />
+                    <link rel="canonical" href="/bin/view/Project+dtrace%2Dchime/drilldown" />
+                            <meta name="document" content="Project dtrace-chime.drilldown"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Project dtrace-chime"/>
+    <meta name="page" content="drilldown"/>
+    <meta name="version" content="41.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Project+dtrace-chime/pages/drilldown"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Adding Drilldown" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="Tom Erickson" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project dtrace-chime";
+XWiki.currentPage = "drilldown";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Project+dtrace%2Dchime/drilldown";
+window.docediturl = "/bin/edit/Project+dtrace%2Dchime/drilldown";
+window.docsaveurl = "/bin/save/Project+dtrace%2Dchime/drilldown";
+window.docgeturl = "/bin/get/Project+dtrace%2Dchime/drilldown";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Project_dtrace-chime viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bdtrace-chime%2Fdrilldown"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+dtrace%2Dchime/"><strong>Project dtrace-chime</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Project+dtrace%2Dchime" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+            </td>
+            <td id="logo-text" style="width: 1%;">
+                Solaris
+            </td>         
+            <td style="width: 98%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                                          <a href='/bin/view/Project+dtrace%2Dchime/new_displays'>Adding New Traces</a> <span class='separator'>&#187;</span> <a href='/bin/view/Project+dtrace%2Dchime/wizard'>New Trace Wizard</a> <span class='separator'>&#187;</span> <span class='current'>Adding Drilldown</span>
+                      </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+dtrace%2Dchime/drilldown?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+dtrace%2Dchime/drilldown?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+dtrace%2Dchime/drilldown?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+dtrace%2Dchime/drilldown?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+dtrace%2Dchime/drilldown?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+dtrace%2Dchime/drilldown?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+dtrace%2Dchime/drilldown?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+dtrace%2Dchime/drilldown?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+dtrace%2Dchime/drilldown?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+dtrace%2Dchime/drilldown?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+dtrace%2Dchime/drilldown?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>Adding Drilldown</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h2 id="HAddingDrilldowntoanExistingChimeDisplay"><span>Adding Drilldown to an Existing Chime Display</span></h2><p>This page continues the walk-through started in the <span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/wizard">New Display Wizard</a></span> page and adds drilldown to the "System Calls" display created there. The following assumes that you have gone through those steps to create the display and are now ready to add drilldown.&nbsp;&nbsp;</p><p>Once again, it helps to have a picture in your mind of what you want to see. Look at the display just created:</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace%2Dchime/wizard/wizarddisplay.gif" alt="New System Calls Display"/></p><p>Let's say you want to replace the "Executable" column with a "Function" column, so that someone could, for example, select "Xorg" and get a breakdown of Xorg system calls by function.&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/drilldown/syscallsdrilldown.gif" alt="Drilldown by Function"/></p><p>Notice that only the "Executable" column is replaced. The "History" and "Calls Per Second" columns are unchanged. When you specify a drilldown option, Chime assumes that you will be replacing all columns associated with the aggregation key of the previous display with one or more new key columns.&nbsp;&nbsp;</p><p>First, open the wizard by clicking the <img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/drilldown/New16.gif" alt="New Display Wizard Icon"/>&nbsp;toolbar button in the main Chime window (the first button on the left under the <strong>File</strong> menu):&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace%2Dchime/wizard/wizarddescresult.gif" alt="Main Chime Window"/></p><p>When the wizard appears, click the <strong>Browse ...</strong> button in the top right corner of the window after <strong>Modify Existing Display</strong>, then open "system_calls.xml" (the one you just created) in the file chooser that appears. This will populate the <strong>Title</strong> and <strong>Output</strong> fields automatically:&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/drilldown/wizardmodifyexisting.gif" alt="Wizard Modify Existing System Calls Display"/></p><p>Click <strong>Next</strong>. &nbsp;<br/> &nbsp;<br/>In step <strong>2. Set DTrace Program</strong> we can insert the substitution variables required to support drilldown. If you remember, the message in the (disabled) <span class="wikiexternallink"><a href="https://markebrooks.github.io/bin/download/Project+dtrace%2Dchime/wizard/wizarddrilldowndisabled.gif"><strong>Add Drilldown Support</strong></a></span> screen referred us back to this step:</p><blockquote><p>&nbsp;Drilldown support requires that your DTrace program use the tuple substitution variable and one or more predicate substitution variables. If you want to add drilldown menu items, first go back to the <strong>Set DTrace Program</strong> step and use right-click popup menus in the <strong>Program</strong> tab to insert tuple and predicate placeholders.</p></blockquote><p>Using the recommended right-click popup makes this easier. Highlight the aggregation key "execname" inside the square brackets, right click on it, and select <strong>Insert Tuple Variable</strong> from the popup menu.&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/drilldown/wizarddrilldowntuple.gif" alt="Wizard Drilldown Program Tuple"/></p><p>This replaces "execname" with the special substitution variable <span class="box code">??T??</span> and sets "execname" as the default value for the first element (T0) of the aggregation key.&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/drilldown/wizarddrilldowntupledone.gif" alt="Wizard Drilldown Finished Program Tuple"/></p><p>Next, click after "syscall:::entry" and press <span class="box code">Enter</span> to insert a blank row before the open curly brace. Right click in the blank row and select <strong>Insert Predicate Variable</strong> from the popup menu.&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/drilldown/wizarddrilldownpredicate.gif" alt="Wizard Drilldown Program Predicate"/></p><p>This inserts the special substitution variable <span class="box code">??P0??</span> as a placeholder for the first predicate and sets the default initial value to <em>no predicate</em> (blank after <span class="box code">??P0</span>).&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/drilldown/wizarddrilldownpredicatedone.gif" alt="Wizard Drilldown Finished Program Predicate"/></p><p>To specify a non-blank predicate, such as <span class="box code"><span style="color: #666666; ">/</span> pid <span style="color: #666666; ">==</span> $pid <span style="color: #666666; ">/</span></span>, you would add it without the enclosing forward slashes:</p><blockquote><p>&nbsp;??P0 pid == $pid</p></blockquote><p>As before, you can click the <strong>Check Compile</strong> button to make sure you inserted the substitution variables correctly. Note that the <span class="box code">??</span> syntax is not understood by the DTrace compiler, so Chime performs substitution before compiling. When your program looks like the one pictured above, click <strong>Next</strong>.&nbsp;&nbsp;</p><p>Steps 3 through 6 are already specified and do not need to be repeated. Skip them by clicking <strong>Next</strong> until you reach step <strong>7. Add Drilldown Support</strong>:&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/drilldown/wizarddrilldownaddmenuitem.gif" alt="Wizard Drilldown Add Menu Item"/></p><p>Right click on the root of the empty decision tree labeled "Menu Items" and select <strong>Add Menu Item</strong> from the popup menu.&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/drilldown/wizarddrilldowncolumns.gif" alt="Wizard Drilldown Specify Columns"/></p><p>This adds an <span class="box code"><span style="color: #666666; ">&lt;</span>unspecified<span style="color: #666666; ">&gt;</span></span> entry preceded by a red "X". Select that entry to open the <strong>Columns</strong> specifier in the right pane. Enter "Function" as shown above to label the new column header, then click <strong>Next</strong>.&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/drilldown/wizarddrilldowncol1a.gif" alt="Wizard Drilldown Specify Column Data"/></p><p>The "Function" column will replace the "Executable" column to display system call counts by function for one or more selected executables. This screen anticipates what we want. The "Function" column will display the first (and only) element of the new aggregation key, [probefunc], exactly what the wizard already specifies: <strong>TupleMember</strong> is selected, and <strong>Tuple Index</strong> is 0. Simply click <strong>Next</strong>.&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/drilldown/wizarddrilldowncol1b.gif" alt="Wizard Drilldown Set Column Properties"/></p><p>Here we must specify the element of the aggregation key displayed in this column. Select "probefunc" from the <strong>Tuple Member</strong> pulldown. Below that are optional column properties.&nbsp;&nbsp;</p><p>Choose "right" in the <strong>Alignment</strong> pulldown. &nbsp;<br/>Choose "Count" in the <strong>Total</strong> pulldown. &nbsp;<br/>Enter "function" in the <strong>Singular Total Label</strong> field. What you type is echoed in the <strong>Plural Total Label</strong> field, so to finish all you need to do is press the <span class="box code">Tab</span> key (tab into the next field) then press the 's' key. &nbsp;<br/>Click <strong>Next</strong>.&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/drilldown/wizarddrilldowncolsconfirm.gif" alt="Wizard Drilldown Confirm Columns"/></p><p>Once all the new columns are specified (in this case there is only one new column; replacing the aggregation key leaves the "History" and "Calls Per Second" columns unchanged), the wizard returns to the <strong>Columns</strong> table to confirm the intended columns. Click <strong>Finish</strong>.&nbsp;&nbsp;</p><p>Congratulations! You have just added drilldown to your new display. To run it, select "New Displays" from the <strong>Trace Group</strong> pulldown in the main Chime window, then double-click "System Calls" in the <strong>Traces</strong> list.</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace%2Dchime/wizard/newdisplays.gif" alt="Main Chime Window"/></p><p>Your new display looks the same as before, but it has a new right-click menu item:</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/drilldown/wizarddrilldownresulta.gif" alt="System Calls Initial Display"/></p><p>Let's try it out. Right-click "Xorg" and select <strong>Xorg by Function</strong> from the popup menu. The drilldown display replaces the Executable column with the new Function column and adds "Xorg" to the title bar. (You could also select multiple executables, and they would instead be listed in a subtitle.)&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/drilldown/wizarddrilldownresultb.gif" alt="System Calls Drilldown Display"/></p><p>Notice that the new breakdown by function lacks a drilldown item in its popup menu, because we did not specify one (although we could have).&nbsp;&nbsp;</p><p>Next, select <strong>Display DTrace Program</strong> from the right-click popup menu of both displays and compare their programs side by side:&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/drilldown/wizarddrilldownproga.gif" alt="System Calls Initial Program"/></p><p>You can see how the placeholders you inserted in your program earlier actually work: "execname" in square brackets is replaced with "probefunc", and the predicate / execname == "Xorg" / is inserted before the open curly brace.&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/drilldown/wizarddrilldownprogb.gif" alt="System Calls Drilldown Program"/></p><p>The predicate can grow to support multiple levels of drilldown. For example, the "System Calls" display that comes installed with Chime has multiple levels of drilldown. To see what that looks like, simply open the installed display "syscall.xml" with the wizard (this is a good way to see how almost any feature of an installed display is specified in the wizard whenever you want to do something similar).&nbsp;&nbsp;</p><p>In the wizard step <strong>1. Set Title and Output File</strong>, click on the <strong>Browse ...</strong> button in the upper right corner after the <strong>Modify Existing Display</strong> field. The file chooser initially shows all displays in the "New Displays" group. To see the installed displays, just go up one level in the file system.</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/drilldown/wizarddrilldownup.gif" alt="Wizard Modify Initial Displays"/></p><p>Click the first button at the top with the up arrow on the file folder (the actual icon may differ depending on the Look &amp; Feel you specified in the Chime <strong>Options</strong> menu).&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/drilldown/wizarddrilldownsyscalls.gif" alt="Wizard Modify Existing Displays"/></p><p>Select "syscall.xml" and click <strong>Open</strong>. Click <strong>Next</strong> in the wizard until you get to step <strong>7. Add Drilldown Support</strong>.&nbsp;&nbsp;</p><p><img src="https://markebrooks.github.io/bin/download/Project+dtrace-chime/drilldown/wizarddrilldownsyscallsmenu.gif" alt="System Calls Drilldown Menu"/></p><p>This is an example of a more complex decision tree with multiple levels of drilldown, and you can run it by selecting "Initial Displays" from the <strong>Trace Group</strong> pulldown in the main Chime window and double-clicking the installed "System Calls" display in the <strong>Traces</strong> list.&nbsp;&nbsp;</p><p>Try it yourself! Drilldown is a powerful feature that makes your display more dynamic, more able to answer the questions it provokes. Since your display will be more useful, you might also take the time to <span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/displays">share</a></span> it. Chime is designed to make sharing displays easy, and your displays are welcome on the project page.</p>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:13<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by Tom Erickson on 2009/12/16 01:07
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Project dtrace-chime Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/articles">Articles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/changelog">Change Log</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/displays">Traces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/install">Installation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/java_dtrace_api">Java DTrace API</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/jdtrace">jdtrace Example</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/javaone2007_screens">JavaOne 2007 Screenshots</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/new_displays">Adding New Traces</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/cmdgen">Command Line</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/wizard">New Trace Wizard</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/xml">XML Properties</a></span></li>
+</ul></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2012, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

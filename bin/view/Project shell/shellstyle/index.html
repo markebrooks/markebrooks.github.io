@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Shell coding style guidelines (Project shell.shellstyle) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+shell/shellstyle" />
+                    <link rel="canonical" href="/bin/view/Project+shell/shellstyle" />
+                            <meta name="document" content="Project shell.shellstyle"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Project shell"/>
+    <meta name="page" content="shellstyle"/>
+    <meta name="version" content="2.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Project+shell/pages/shellstyle"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Shell coding style guidelines" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="fleyta" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project shell";
+XWiki.currentPage = "shellstyle";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Project+shell/shellstyle";
+window.docediturl = "/bin/edit/Project+shell/shellstyle";
+window.docsaveurl = "/bin/save/Project+shell/shellstyle";
+window.docgeturl = "/bin/get/Project+shell/shellstyle";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Project_shell viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bshell%2Fshellstyle"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+shell/"><strong>Project shell</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Project+shell" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <div id="header_banner">
+	<table style="width: 100%;">
+	    <tr>
+		<td style="width: 1%;">
+		    <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+		</td>
+		<td id="logo-text" style="width: 1%;">
+		    Solaris
+		</td>         
+		<td style="width: 98%;">
+		    <table id="loading-indicator">
+			<tr>
+			    <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+				    alt="Loading" title="Loading"/></td>
+			    <td>Loading...</td>
+			</tr>
+		    </table>
+		</td>
+		<td style="width: 1%;">
+		    <table id="iconbar">
+			<tr>
+			<td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+			    Collectives</a></td>
+			<td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+				Discussions</a></td>
+			<td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+				Documentation</a></td>
+			<td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+				Download</a></td>
+			<td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+				Source Browser</a></td>
+			</tr>
+		    </table>
+		</td>
+	    </tr>
+	</table>
+    </div>
+    <div id="site-notice">
+	<span>
+	    <a href="https://markebrooks.github.io/bin/view/Main/">ATTENTION: This website and all services within the opensolaris.org domain will be unavailable after March 24, 2013.</a>	   
+	</span>
+    </div>
+</div>
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                  <span class='current'>Shell coding style guidelines</span>
+          </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+shell/shellstyle?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+shell/shellstyle?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+shell/shellstyle?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+shell/shellstyle?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+shell/shellstyle?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+shell/shellstyle?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+shell/shellstyle?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+shell/shellstyle?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+shell/shellstyle?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+shell/shellstyle?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+shell/shellstyle?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>Shell coding style guidelines</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h1 id="H5BDRAFT5DBourne2FKornShellCodingConventions"><span><em>[DRAFT]</em> Bourne/Korn Shell Coding Conventions</span></h1><h3 id="HThispageiscurrentlywork-in-progressuntilitisapprovedbytheOS2FNetcommunity.Pleasesendanycommentsto."><span><em>&nbsp;This page is currently work-in-progress until it is approved by the OS/Net community. Please send any comments to <span class="box code"><span style="color: #666666; ">&lt;</span>[[shell<span style="color: #666666; ">-</span>discuss@opensolaris.org<span style="color: #666666; ">&gt;&gt;</span>mailto:shell<span style="color: #666666; ">-</span>discuss@opensolaris.org]]<span style="color: #666666; ">&gt;</span></span>.&nbsp;</em></span></h3><h3 id="H"><span></span></h3><hr/><p><strong>Table of Contents</strong></p><dl><dt><span class="wikilink"><a href="#intro">Intro</a></span></dt><dt><span class="wikilink"><a href="#rules">Rules</a></span><br/>:</dt><dt><span class="wikilink"><a href="#general">General</a></span><br/>:</dt><dt><span class="wikilink"><a href="#basic_format">Basic Format</a></span></dt><dt><span class="wikilink"><a href="#commenting">Commenting</a></span></dt><dt><span class="wikilink"><a href="#interpreter_magic">Interpreter magic</a></span></dt><dt><span class="wikilink"><a href="#harden_your_script_against_unexpected_input">Harden the script against unexpected (user) input</a></span></dt><dt><span class="wikilink"><a href="#use_builtin_commands"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use builtin commands if the shell provides them</a></span></dt><dt><span class="wikilink"><a href="#use_blocks_not_subshells"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use blocks and not subshells if possible</a></span></dt><dt><span class="wikilink"><a href="#use_long_options_for_set_builtin"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/>&nbsp;use long options for "<span class="box code">set</span>"</a></span></dt><dt><span class="wikilink"><a href="#use_posix_command_substitutions_syntax"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/>&nbsp;Use <span class="box code">$(...)</span> instead of <span class="box code">`...`</span> command substitutions</a></span></dt><dt><span class="wikilink"><a href="#put_command_substitution_result_in_quotes"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/>&nbsp;Always put the result of a <span class="box code">$(...)</span> or <span class="box code">$( ...;)</span> command substitution in quotes</a></span></dt><dt><span class="wikilink"><a href="#always_set_path">Scripts should always set their <span class="box code">PATH</span></a></span></dt><dt><span class="wikilink"><a href="#make_sure_commands_are_available">Make sure that commands from other packages/applications are really installed on the machine</a></span></dt><dt><span class="wikilink"><a href="#check_usage_of_boolean_variables">Check how boolean values are used/implemented in your application</a></span></dt><dt><span class="wikilink"><a href="#shell_uses_characters_not_bytes"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_i18n.png" alt="[i18n]" height=""/>&nbsp;The shell always operates on <em>characters</em> not bytes</a></span></dt><dt><span class="wikilink"><a href="#multibyte_locale_input"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_i18n.png" alt="[i18n]" height=""/>&nbsp;Multibyte locales and input</a></span></dt><dt><span class="wikilink"><a href="#use_external_filters_only_for_large_datasets"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Only use external filters like <span class="box code">grep</span>/<span class="box code">sed</span>/<span class="box code">awk</span>/etc. if you want to process lots of data with them</a></span></dt><dt><span class="wikilink"><a href="#use_dashdash_if_first_arg_is_variable">If the first operand of a command is a variable, use <span class="box code"><span style="color: #666666; ">--</span></span></a></span></dt><dt><span class="wikilink"><a href="#use_export"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use <span class="box code">$ export FOOBAR=val #</span> instead of <span class="box code">$ FOOBAR=val ; export FOOBAR #</span></a></span></dt><dt><span class="wikilink"><a href="#use_subshell_around_set_dashdash_usage">Use a subshell (e.g. <span class="box code">$ ( mycmd ) #</span>) around places which use <span class="box code">set <span style="color: #666666; ">--</span> $(mycmd)</span> and/or <span class="box code">shift</span></a></span></dt><dt><span class="wikilink"><a href="#be_careful_with_tabs_in_script_code">Be careful with using TABS in script code, they are not portable between editors or platforms</a></span></dt><dt><span class="wikilink"><a href="#centralise_error_exit">If you have multiple points where your application exits with an error message create a central function for this purpose</a></span></dt><dt><span class="wikilink"><a href="#use_set_o_nounset"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/>&nbsp;Think about using <span class="box code">$ set <span style="color: #666666; ">-</span>o nounset #</span> by default</a></span></dt><dt><span class="wikilink"><a href="#avoid_eval_builtin">Avoid using <span class="box code">eval</span> unless absolutely necessary</a></span></dt><dt><span class="wikilink"><a href="#use_concatenation_operator"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use the string/array concatenation operator <span class="box code"><span style="color: #666666; ">+</span>=</span></a></span></dt><dt><span class="wikilink"><a href="#use_source_not_dot"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use <span class="box code">source</span> instead of '<span class="box code">.</span> '(dot) to include other shell script fragments</a></span></dt><dt><span class="wikilink"><a href="#use_builtin_localisation_support"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/> <img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/> <img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_l10n.png" alt="[l10n]" height=""/>&nbsp;Use <span class="box code">$"..."</span> instead of <span class="box code">gettext ... "..."</span> for strings that need to be localized for different locales</a></span></dt><dt><span class="wikilink"><a href="#use_set_o_noglob"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use <span class="box code">set <span style="color: #666666; ">-</span>o noglob</span> if you do not need to expand files</a></span></dt><dt><span class="wikilink"><a href="#use_empty_ifs_to_handle_spaces"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use <span class="box code">IFS=</span> to avoid problems with spaces in filenames</a></span></dt><dt><span class="wikilink"><a href="#set_locale_when_comparing_against_localised_output">Set the message locale if you process output of tools which may be localised</a></span></dt><dt><span class="wikilink"><a href="#cleanup_after_yourself">Cleanup after yourself.</a></span></dt><dt><span class="wikilink"><a href="#use_proper_exit_code">Use a proper <span class="box code">exit</span> code</a></span></dt><dt><span class="wikilink"><a href="#shell_lint"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use <span class="box code">shcomp <span style="color: #666666; ">-</span>n scriptname.sh <span style="color: #666666; ">/</span>dev<span style="color: #666666; ">/</span>null</span> to check for common errors</a></span></dt><dt><span class="wikilink"><a href="#functions">Functions</a></span><br/>:</dt><dt><span class="wikilink"><a href="#use_functions">Use functions to break up your code</a></span></dt><dt><span class="wikilink"><a href="#do_not_reserved_keywords_for_function_names">Do not use function names which are reserved keywords in C/C++/JAVA or the POSIX shell standard</a></span></dt><dt><span class="wikilink"><a href="#use_ksh_style_function_syntax"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use ksh-style <span class="box code"><span style="font-weight: bold; color: #008000; ">function</span></span></a></span></dt><dt><span class="wikilink"><a href="#use_proper_return_code">Use a proper <span class="box code"><span style="font-weight: bold; color: #008000; ">return</span></span> code</a></span></dt><dt><span class="wikilink"><a href="#use_fpath_to_load_common_code"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/>&nbsp;Use <span class="box code">FPATH</span> to load common functions, not <span class="box code">source</span></a></span></dt><dt><span class="wikilink"><a href="#if_for_while"><span class="box code"><span style="font-weight: bold; color: #008000; ">if</span></span>, <span class="box code"><span style="font-weight: bold; color: #008000; ">for</span></span> and <span class="box code"><span style="font-weight: bold; color: #008000; ">while</span></span></a></span><br/>:</dt><dt><span class="wikilink"><a href="#if_for_while_format">Format</a></span></dt><dt><span class="wikilink"><a href="#test_builtin"><span class="box code">test</span> Builtin</a></span></dt><dt><span class="wikicreatelink"><a href="/bin/create/images%2Ftag_perf/png%7C%7Calt%3D%22%5Bperf%5D%22height%3D%22%22%5D%5D+Use+%22%7B%7Bcode%7D%7D%5B%5B+expr+?parent=Project+shell.shellstyle"><span class="wikigeneratedlinkcontent">png||alt="[perf]"height=""]] Use "{{code}}[[ expr </span></a></span>{{/code}}" instead of "<span class="box code">[ expr ]</span>"&gt;&gt;#use_ksh_test_syntax]]</dt><dt><span class="wikilink"><a href="#use_posix_arithmetic_expressions"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/>&nbsp;Use "<span class="box code">(( ... ))</span>" for arithmetic expressions</a></span></dt><dt><span class="wikilink"><a href="#compare_exit_code_using_math"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Compare exit code using arithmetic expressions expressions</a></span></dt><dt><span class="wikilink"><a href="#use_builtin_commands_in_loops"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_bourne.png" alt="[Bourne]" height=""/>&nbsp;Use builtin commands in conditions for <span class="box code"><span style="font-weight: bold; color: #008000; ">while</span></span> endless loops</a></span></dt><dt><span class="wikilink"><a href="#single_line_if_statements">Single-line if-statements</a></span></dt><dt><span class="wikilink"><a href="#exit_status_and_if_for_while">Exit Status and <span class="box code"><span style="font-weight: bold; color: #008000; ">if</span></span>/<span class="box code"><span style="font-weight: bold; color: #008000; ">while</span></span> statements</a></span></dt><dt><span class="wikilink"><a href="#variables">Variable types, naming and usage</a></span><br/>:</dt><dt><span class="wikilink"><a href="#names_should_be_lowercase">Names of local, non-environment, non-constant variables should be lowercase</a></span></dt><dt><span class="wikilink"><a href="#do_not_reserved_keywords_for_variable_names">Do not use variable names which are reserved keywords/variable names in C/C++/JAVA or the POSIX shell standard</a></span></dt><dt><span class="wikilink"><a href="#use_brackets_around_long_names">Always use <span class="box code"><span style="color: #BA2121; ">'{'</span></span>+<span class="box code"><span style="color: #BA2121; ">'}'</span></span> when using variable names longer than one character</a></span></dt><dt><span class="wikilink"><a href="#quote_variables_containing_filenames_or_userinput"><em>Always</em> put variables into quotes when handling filenames or user input</a></span></dt><dt><span class="wikilink"><a href="#use_typed_variables"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use typed variables if possible.</a></span></dt><dt><span class="wikilink"><a href="#store_lists_in_arrays"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Store lists in arrays or associative arrays</a></span></dt><dt><span class="wikilink"><a href="#use_compound_variables_or_lists_for_grouping"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use compound variables or associative arrays to group similar variables together</a></span></dt><dt><span class="wikilink"><a href="#io">I/O</a></span><br/>:</dt><dt><span class="wikilink"><a href="#avoid_echo">Avoid using the "<span class="box code">echo</span>" command for output</a></span></dt><dt><span class="wikilink"><a href="#use_redirect_not_exec_to_open_files"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use <span class="box code">redirect</span> and not <span class="box code">exec</span> to open files</a></span></dt><dt><span class="wikicreatelink"><a href="/bin/create/Project+shell/xxx+%3B+echo+%22baz%22+%3E%3Exxx+%23%7B%7B%2Fcode%7D%7D%3E%3E?parent=Project+shell.shellstyle#group_identical_redirections_together"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Avoid redirections per command when the output goes into the same file, e.g. <span class="box code">$ echo "foo" <span style="color: #666666; ">&gt;</span>xxx ; echo "bar"&nbsp;</span></a></span></dt><dt><span class="wikilink"><a href="#avoid_using_temporary_files"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Avoid the creation of temporary files and store the values in variables instead</a></span></dt><dt><span class="wikilink"><a href="#create_subdirs_for_multiple_temporary_files">If you create more than one temporary file create an unique subdir</a></span></dt><dt><span class="wikilink"><a href="#use_dynamic_file_descriptors"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use {n}&lt;file instead of fixed file descriptor numbers</a></span></dt><dt><span class="wikilink"><a href="#use_inline_here_documents"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/> <img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use inline here documents instead of <span class="box code">echo "$x" <span style="color: #666666; ">|</span> command</span></a></span></dt><dt><span class="wikilink"><a href="#use_read_r"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use the <span class="box code"><span style="color: #666666; ">-</span>r</span> option of <span class="box code">read</span> to read a line</a></span></dt><dt><span class="wikilink"><a href="#print_compound_variables_using_print_C"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Print compound variables using <span class="box code">print <span style="color: #666666; ">-</span>C varname</span> or <span class="box code">print <span style="color: #666666; ">-</span>v varname</span></a></span></dt><dt><span class="wikilink"><a href="#command_name_before_redirections">Put the command name and arguments before redirections</a></span></dt><dt><span class="wikilink"><a href="#enable_gmacs_editor_mode_for_user_prompts"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Enable the <span class="box code">gmacs</span> editor mode when reading user input using the <span class="box code">read</span> builtin</a></span></dt><dt><span class="wikilink"><a href="#math">Math</a></span><br/>:</dt><dt><span class="wikilink"><a href="#use_builtin_arithmetic_expressions"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use builtin arithmetic expressions instead of external applications</a></span></dt><dt><span class="wikilink"><a href="#use_floating_point_arithmetic_expressions"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use floating-point arithmetic expressions if calculations may trigger a division by zero or other exceptions</a></span></dt><dt><span class="wikilink"><a href="#use_printf_a_for_passing_float_values"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use <span class="box code">printf "<span style="font-weight: italic; color: #408080; ">%a"</span></span> when passing floating-point values</a></span></dt><dt><span class="wikilink"><a href="#put_constants_into_readonly_variables"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Put constant values into readonly variables</a></span></dt><dt><span class="wikilink"><a href="#avoid_unnecessary_string_number_conversions"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Avoid string to number (and/or number to string) conversions in arithmetic expressions expressions</a></span></dt><dt><span class="wikilink"><a href="#set_lc_numeric_when_using_floating_point"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Set <span class="box code">LC_NUMERIC</span> when using floating-point constants</a></span></dt><dt><span class="wikilink"><a href="#misc">Misc</a></span><br/>:</dt><dt><span class="wikilink"><a href="#debug_use_lineno_in_ps4">Put <span class="box code">[<span style="color: #BC7A00; ">${</span>LINENO<span style="color: #BC7A00; ">}</span>]</span> in your <span class="box code">PS4</span></a></span></dt></dl><h2 id="HIntro"><span>Intro</span></h2><p>This document describes the shell coding style used for all the SMF script changes integrated into (Open)Solaris.</p><p>All new SMF shell code should conform to this coding standard, which is intended to match our existing C coding standard.</p><p>When in doubt, think "what would be the C-Style equivalent ?" and "What does the POSIX (shell) standard say ?"</p><h2 id="HRules"><span>Rules</span></h2><h3 id="HGeneral"><span>General</span></h3><h4 id="HBasicFormat"><span>Basic Format</span></h4><p>Similar to <span class="box code">cstyle</span>, the basic format is that all lines are indented by TABs or eight spaces, and continuation lines (which in the shell end with "\") are indented by an equivalent number of TABs and then an additional four spaces, e.g.</p><pre>
+
+cp foo bar
+cp some_realllllllllllllllly_realllllllllllllly_long_path \
+   to_another_really_long_path
+
+</pre><p>The encoding used for the shell scripts is either <span class="box code">ASCII</span> or <span class="box code">UTF<span style="color: #666666; ">-</span>8</span>, alternative encodings are only allowed when the application requires this.</p><h4 id="HCommenting"><span>Commenting</span></h4><p>Shell comments are preceded by the '<span class="box code"><span style="font-weight: italic; color: #408080; ">#</span></span>' character. Place single-line comments in the right-hand margin. Use an extra '<span class="box code"><span style="font-weight: italic; color: #408080; ">#</span></span>' above and below the comment in the case of multi-line comments:</p><pre>
+
+cp foo bar		# Copy foo to bar
+
+#
+# Modify the permissions on bar.  We need to set them to root/sys
+# in order to match the package prototype.
+#
+chown root bar
+chgrp sys bar
+
+</pre><h4 id="HInterpretermagic"><span>Interpreter magic</span></h4><p>The proper interpreter magic for your shell script should be one of these:</p><pre>
+
+#!/bin/sh        Standard Bourne shell script
+#!/bin/ksh -p    Standard Korn shell 88 script.  You should always write ksh
+                 scripts with -p so that ${ENV} (if set by the user) is not
+                 sourced into your script by the shell.
+#!/bin/ksh93     Standard Korn shell 93 script (-p is not needed since ${ENV} is
+                 only used for interactive shell sessions).
+
+</pre><h4 id="HHardenthescriptagainstunexpected28user29input"><span>Harden the script against unexpected (user) input</span></h4><p>Harden your script against unexpected (user) input, including command line options, filenames with blanks (or other special characters) in the name, or file input</p><h4 id="HUsebuiltincommandsiftheshellprovidesthem"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use builtin commands if the shell provides them</span></h4><p>&nbsp;Use builtin commands if the shell provides them. For example ksh93s+ (ksh93, version 's+') delivered with Solaris (as defined by PSARC 2006/550) supports the following builtins: basename, cat, chgrp, chmod, chown, cmp, comm, cp, cut, date, dirname, expr, fds, fmt, fold, getconf, head, id, join, ln, logname, mkdir, mkfifo, mv, paste, pathchk, rev, rm, rmdir, stty, tail, tee, tty, uname, uniq, wc, sync Those builtins can be enabled via <span class="box code">$ builtin name_of_builtin #</span> in shell scripts (note that ksh93 builtins implement exact POSIX behaviour - some commands in Solaris <span class="box code"><span style="color: #666666; ">/</span>usr<span style="color: #666666; ">/</span>bin<span style="color: #666666; ">/</span></span> directory implement pre-POSIX behaviour. Add <span class="box code"><span style="color: #666666; ">/</span>usr<span style="color: #666666; ">/</span>xpg6<span style="color: #666666; ">/</span>bin<span style="color: #666666; ">/</span>:<span style="color: #666666; ">/</span>usr<span style="color: #666666; ">/</span>xpg4<span style="color: #666666; ">/</span>bin</span> before <span class="box code"><span style="color: #666666; ">/</span>usr<span style="color: #666666; ">/</span>bin<span style="color: #666666; ">/</span></span> in <span class="box code"><span style="color: #BC7A00; ">${</span>PATH<span style="color: #BC7A00; ">}</span></span> to test whether your script works with the XPG6/POSIX versions)</p><h4 id="HUseblocksandnotsubshellsifpossible"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use blocks and not subshells if possible</span></h4><p>Use blocks and not subshells if possible, e.g. use <span class="box code">$ { print "foo" ; print "bar" ; }</span> instead of <span class="box code">$ (print "foo" ; print "bar") #</span> - blocks are faster since they do not require to save the subshell context (ksh93) or trigger a shell child process (Bourne shell, bash, ksh88 etc.)</p><h4 id="Huselongoptionsfor2222"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/>&nbsp;use long options for "<span class="box code">set</span>"</span></h4><p>use long options for "<span class="box code">set</span>", for example instead of <span class="box code">$ set <span style="color: #666666; ">-</span>x #</span> use <span class="box code">$ set <span style="color: #666666; ">-</span>o xtrace #</span> to make the code more readable.</p><h4 id="HUseinsteadofcommandsubstitutions"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/>&nbsp;Use <span class="box code">$(...)</span> instead of <span class="box code">`...`</span> command substitutions</span></h4><p>Use <span class="box code">$(...)</span> instead of <span class="box code">`...`</span> - <span class="box code">`...`</span> is an obsolete construct in ksh+POSIX sh scripts and <span class="box code">$(...)</span>.is a cleaner design, requires no escaping rules, allows easy nesting etc.</p><h3 id="H-stylecommandsubstitutions"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/> <span class="box code"><span style="color: #BC7A00; ">${</span> <span style="color: #666666; ">...</span>;<span style="color: #BC7A00; ">}</span></span>-style command substitutions</span></h3><p>ksh93 has support for an alternative version of command substitutions with the syntax <span class="box code"><span style="color: #BC7A00; ">${</span> <span style="color: #666666; ">...</span>;<span style="color: #BC7A00; ">}</span></span> which do not run in a subshell.</p><h4 id="HAlwaysputtheresultofaorcommandsubstitutioninquotes"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/>&nbsp;Always put the result of a <span class="box code">$(...)</span> or <span class="box code">$( ...;)</span> command substitution in quotes</span></h4><p>Always put the result of <span class="box code">$( ... )</span> or <span class="box code">$( ...;)</span> in quotes (e.g. <span class="box code">foo="$( ... )"</span> or <span class="box code">foo="$( ...;)"</span>) unless there is a very good reason for not doing it</p><h4 id="HScriptsshouldalwayssettheir"><span>Scripts should always set their <span class="box code">PATH</span></span></h4><p>Scripts should always set their <span class="box code">PATH</span> to make sure they do not use alternative commands by accident (unless the value of <span class="box code">PATH</span> is well-known and guaranteed to be set by the caller)</p><h4 id="HMakesurethatcommandsfromotherpackages2Fapplicationsarereallyinstalledonthemachine"><span>Make sure that commands from other packages/applications are really installed on the machine</span></h4><p>Scripts should make sure that commands in optional packages are really there, e.g. add a "precheck" block in scipts to avoid later failure when doing the main job</p><h4 id="HCheckhowbooleanvaluesareused2Fimplementedinyourapplication"><span>Check how boolean values are used/implemented in your application</span></h4><p>Check how boolean values are used in your application.</p><p>For example:</p><pre>
+
+mybool=0
+# do something
+if [ $mybool -eq 1 ] ; then do_something_1 ; fi
+
+</pre><p>&nbsp;could be rewritten like this:</p><pre>
+
+mybool=false # (valid values are "true" or "false", pointing
+# to the builtin equivalents of /bin/true or /bin/false)
+# do something
+if ${mybool} ; then do_something_1 ; fi
+
+</pre><p>&nbsp;or</p><pre>
+
+integer mybool=0 # values are 0 or 1
+# do something
+if (( mybool==1 )) ; then do_something_1 ; fi
+
+</pre><h4 id="HTheshellalwaysoperatesoncharactersnotbytes"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_i18n.png" alt="[i18n]" height=""/>&nbsp;The shell always operates on <em>characters</em> not bytes</span></h4><p>Shell scripts operate on characters and <em>not</em> bytes. Some locales use multiple bytes (called "multibyte locales") to represent one character</p><h3 id="HNote"><span>Note</span></h3><p>ksh93 has support for binary variables which explicitly operate on bytes, not characters. This is the <em>only</em> allowed exception.</p><h4 id="HMultibytelocalesandinput"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_i18n.png" alt="[i18n]" height=""/>&nbsp;Multibyte locales and input</span></h4><p>Think about whether your application has to handle file names or variables in multibyte locales and make sure all commands used in your script can handle such characters (e.g. lots of commands in Solaris's <span class="box code"><span style="color: #666666; ">/</span>usr<span style="color: #666666; ">/</span>bin<span style="color: #666666; ">/</span></span> are <em>not</em> able to handle such values - either use ksh93 builtin constructs (which are guaranteed to be multibyte-aware) or commands from <span class="box code"><span style="color: #666666; ">/</span>usr<span style="color: #666666; ">/</span>xpg4<span style="color: #666666; ">/</span>bin<span style="color: #666666; ">/</span></span> and/or <span class="box code"><span style="color: #666666; ">/</span>usr<span style="color: #666666; ">/</span>xpg6<span style="color: #666666; ">/</span>bin</span>)</p><h4 id="HOnlyuseexternalfilterslike2F2F2Fetc.ifyouwanttoprocesslotsofdatawiththem"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Only use external filters like <span class="box code">grep</span>/<span class="box code">sed</span>/<span class="box code">awk</span>/etc. if you want to process lots of data with them</span></h4><p>Only use external filters like <span class="box code">grep</span>/<span class="box code">sed</span>/<span class="box code">awk</span>/etc. if a significant amount of data is processed by the filter or if benchmarking shows that the use of builtin commands is significantly slower (otherwise the time and resources needed to start the filter are far greater then the amount of data being processed, creating a performance problem).</p><p>For example:</p><pre>
+
+if [ "$(echo "$x" | egrep '.*foo.*')" != "" ] ; then
+    do_something ;
+done
+
+</pre><p>&nbsp;can be re-written using ksh93 builtin constructs, saving several <span class="box code"><span style="color: #666666; ">|</span>fork()<span style="color: #666666; ">|+|</span>exec()<span style="color: #666666; ">|</span></span>'s:</p><pre>
+
+if [[ "${x}" == ~(E).*foo.* ]] ; then
+    do_something ;
+done
+
+</pre><h4 id="HIfthefirstoperandofacommandisavariable2Cuse"><span>If the first operand of a command is a variable, use <span class="box code"><span style="color: #666666; ">~--</span></span></span></h4><p>If the first operand of a command is a variable, use <span class="box code"><span style="color: #666666; ">~--</span></span> for any command that accepts this as end of argument to avoid problems if the variable expands to a value starting with <span class="box code"><span style="color: #666666; ">-</span></span>.</p><h3 id="HNote-1"><span>Note</span></h3><p>&nbsp;At least print, /usr/bin/fgrep, /usr/xpg4/bin/fgrep, /usr/bin/grep, /usr/xpg4/bin/grep, /usr/bin/egrep, /usr/xpg4/bin/egrep support <span class="box code"><span style="color: #666666; ">~--</span></span> as "end of arguments"-terminator.</p><h4 id="HUseinsteadof"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use <span class="box code">$ export FOOBAR=val #</span> instead of <span class="box code">$ FOOBAR=val ; export FOOBAR #</span></span></h4><p>Use <span class="box code">$ export FOOBAR=val # instead of $ FOOBAR=val ; export FOOBAR #</span> - this is much faster.</p><h4 id="HUseasubshell28e.g.29aroundplaceswhichuseand2For"><span>Use a subshell (e.g. <span class="box code">$ ( mycmd ) #</span>) around places which use <span class="box code">set <span style="color: #666666; ">~--</span> $(mycmd)</span> and/or <span class="box code">shift</span></span></h4><p>Use a subshell (e.g. <span class="box code">$ ( mycmd ) #</span>) around places which use <span class="box code">set <span style="color: #666666; ">~--</span> $(mycmd)</span> and/or <span class="box code">shift</span> unless the variable affected is either a local one or if it's guaranteed that this variable will no longer be used (be careful for loadable functions, e.g. ksh/ksh93's <span class="box code">autoload</span> !!!!)</p><h4 id="HBecarefulwithusingTABSinscriptcode2Ctheyarenotportablebetweeneditorsorplatforms"><span>Be careful with using TABS in script code, they are not portable between editors or platforms</span></h4><p>Be careful with using TABS in script code, they are not portable between editors or platforms.</p><p>If you use ksh93 use <span class="box code">$<span style="color: #BA2121; ">'\t'</span></span> to include TABs in sources, not the TAB character itself.</p><h4 id="HIfyouhavemultiplepointswhereyourapplicationexitswithanerrormessagecreateacentralfunctionforthispurpose"><span>If you have multiple points where your application exits with an error message create a central function for this purpose</span></h4><p>If you have multiple points where your application exits with an error message create a central function for this, e.g.</p><pre>
+
+if [ -z "$tmpdir" ] ; then
+        print -u2 "mktemp failed to produce output; aborting."
+        exit 1
+fi
+if [ ! -d $tmpdir ] ; then
+        print -u2 "mktemp failed to create a directory; aborting."
+        exit 1
+fi
+
+</pre><p>&nbsp;should be replaced with</p><pre>
+
+function fatal_error
+{
+    print -u2 "${progname}: $*"
+    exit 1
+}
+# do something (and save ARGV[0] to variable "progname")
+if [ -z "$tmpdir" ] ; then
+        fatal_error "mktemp failed to produce output; aborting."
+fi
+if [ ! -d "$tmpdir" ] ; then
+        fatal_error "mktemp failed to create a directory; aborting."
+fi
+
+</pre><h4 id="HThinkaboutusingbydefault"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/>&nbsp;Think about using <span class="box code">$ set <span style="color: #666666; ">-</span>o nounset #</span> by default</span></h4><p>Think about using <span class="box code">$ set <span style="color: #666666; ">-</span>o nounset #</span> by default (or at least during the script's development phase) to catch errors where variables are used when they are not set (yet), e.g.</p><pre>
+
+$ **{{code}}(set -o nounset ; print ${foonotset}){{/code}}**
+/bin/ksh93: foonotset: parameter not set
+
+</pre><h4 id="HAvoidusingunlessabsolutelynecessary"><span>Avoid using <span class="box code">eval</span> unless absolutely necessary</span></h4><p>Avoid using <span class="box code">eval</span> unless absolutely necessary. Subtle things can happen when a string is passed back through the shell parser. You can use name references to avoid uses such as <span class="box code">eval $name="$value"</span>.</p><h4 id="HUsethestring2Farrayconcatenationoperator"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use the string/array concatenation operator <span class="box code"><span style="color: #666666; ">+</span>=</span></span></h4><p>Use <span class="box code"><span style="color: #666666; ">+</span>=</span> instead of manually adding strings/array elements, e.g.</p><pre>
+
+foo=""
+foo="${foo}a"
+foo="${foo}b"
+foo="${foo}c"
+
+</pre><p>&nbsp;should be replaced with</p><pre>
+
+foo=""
+foo+="a"
+foo+="b"
+foo+="c"
+
+</pre><h4 id="HUseinsteadof272728dot29toincludeothershellscriptfragments"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use <span class="box code">source</span> instead of '<span class="box code">.</span> '(dot) to include other shell script fragments</span></h4><p>Use <span class="box code">source</span> instead of '<span class="box code">.</span>' (dot) to include other shell script fragments - the new form is much more readable than the tiny dot and a failure can be caught within the script.</p><h4 id="HUseinsteadofforstringsthatneedtobelocalizedfordifferentlocales"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/> <img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/> <img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_l10n.png" alt="[l10n]" height=""/>&nbsp;Use <span class="box code">$"..."</span> instead of <span class="box code">gettext ... "..."</span> for strings that need to be localized for different locales</span></h4><p>Use $"..." instead of <span class="box code">gettext ... "..."</span> for strings that need to be localized for different locales. <span class="box code">gettext</span> will require a <span class="box code">fork()<span style="color: #666666; ">+</span>exec()</span> and reads the whole catalog each time it's called, creating a huge overhead for localisation (and the <span class="box code">$"..."</span> is easier to use, e.g. you only have to put a <span class="box code">$</span> in front of the catalog and the string will be localised).</p><h4 id="HUseifyoudonotneedtoexpandfiles"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use <span class="box code">set <span style="color: #666666; ">-</span>o noglob</span> if you do not need to expand files</span></h4><p>If you don't expect to expand files, you can do set <span class="box code"><span style="color: #666666; ">-</span>f</span> (<span class="box code">set <span style="color: #666666; ">-</span>o noglob</span>) as well. This way the need to use <span class="box code">""</span> is greatly reduced.</p><h4 id="HUsetoavoidproblemswithspacesinfilenames"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use <span class="box code">IFS=</span> to avoid problems with spaces in filenames</span></h4><p>Unless you want to do word splitting, put <span class="box code">IFS=</span> at the beginning of a command. This way spaces in file names won't be a problem. You can do <span class="box code">IFS=<span style="color: #BA2121; ">'delims'</span> read <span style="color: #666666; ">-</span>r</span> line to override <span class="box code">IFS</span> just for the <span class="box code">read</span> command. However, you can't do this for the <span class="box code">set</span> builtin.</p><h4 id="HSetthemessagelocaleifyouprocessoutputoftoolswhichmaybelocalised"><span>Set the message locale if you process output of tools which may be localised</span></h4><p>Set the message locale (<span class="box code">LC_MESSAGES</span>) if you process output of tools which may be localised</p><p><strong>Example�1.�Set <span class="box code">LC_MESSAGES</span> when testing for specific outout of the <span class="box code"><span style="color: #666666; ">/</span>usr<span style="color: #666666; ">/</span>bin<span style="color: #666666; ">/</span>file</span> utility:</strong></p><pre>
+
+# set french as default message locale
+export LC_MESSAGES=fr_FR.UTF-8
+
+...
+
+# test whether the file "/tmp" has the filetype "directory" or not
+# we set LC_MESSAGES to "C" to ensure the returned message is in english
+if [[ "$(LC_MESSAGES=C file /tmp)" = *directory ]] ; then
+    print "is a directory"
+fi
+
+</pre><h3 id="HNote-2"><span>Note</span></h3><p>The environment variable <span class="box code">LC_ALL</span> always overrides any other <span class="box code">LC_<span style="color: #666666; ">*</span></span> environment variables (and <span class="box code">LANG</span>, too), including <span class="box code">LC_MESSAGES</span>. if there is the chance that <span class="box code">LC_ALL</span> may be set replace <span class="box code">LC_MESSAGES</span> with <span class="box code">LC_ALL</span> in the example above.</p><h4 id="HCleanupafteryourself."><span>Cleanup after yourself.</span></h4><p>Cleanup after yourself. For example ksh/ksh93 have an <span class="box code">EXIT</span> trap which is very useful for this.</p><h3 id="HNote-3"><span>Note</span></h3><p>&nbsp;Note that the <span class="box code">EXIT</span> trap is executed for a subshell and each subshell level can run it's own <span class="box code">EXIT</span> trap, for example</p><pre>
+
+$ **{{code}}(trap "print bam" EXIT ; (trap "print snap" EXIT ; print "foo")){{/code}}**
+foo
+snap
+bam
+
+</pre><h4 id="HUseapropercode"><span>Use a proper <span class="box code">exit</span> code</span></h4><p>Explicitly set the exit code of a script, otherwise the exit code from the last command executed will be used which may trigger problems if the value is unexpected.</p><h4 id="HUsetocheckforcommonerrors"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use <span class="box code">shcomp <span style="color: #666666; ">-</span>n scriptname.sh <span style="color: #666666; ">/</span>dev<span style="color: #666666; ">/</span>null</span> to check for common errors</span></h4><p>Use <span class="box code">shcomp <span style="color: #666666; ">-</span>n scriptname.sh <span style="color: #666666; ">/</span>dev<span style="color: #666666; ">/</span>null</span> to check for common problems (such as insecure, depreciated or ambiguous constructs) in shell scripts.</p><h3 id="HFunctions"><span>Functions</span></h3><h4 id="HUsefunctionstobreakupyourcode"><span>Use functions to break up your code</span></h4><p>Use functions to break up your code into smaller, logical blocks.</p><h4 id="HDonotusefunctionnameswhicharereservedkeywordsinC2FC2B2B2FJAVAorthePOSIXshellstandard"><span>Do not use function names which are reserved keywords in C/C++/JAVA or the POSIX shell standard</span></h4><p>Do not use function names which are reserved keywords (or function names) in C/C++/JAVA or the POSIX shell standard (to avoid confusion and/or future changes/updates to the shell language).</p><h4 id="HUseksh-style"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use ksh-style <span class="box code"><span style="font-weight: bold; color: #008000; ">function</span></span></span></h4><p>It is <em>highly</em> recommended to use ksh style functions (<span class="box code"><span style="font-weight: bold; color: #008000; ">function</span><span style="border: 1px solid #FF0000; ">&nbsp;foo { ... }</span></span>) instead of Bourne-style functions (<span class="box code">foo() { ... }</span>) if possible (and local variables instead of spamming the global namespace).</p><h3 id="HWarning"><span>Warning</span></h3><p>&nbsp;The difference between old-style Bourne functions and ksh functions is one of the major differences between ksh88 and ksh93 - ksh88 allowed variables to be local for Bourne-style functions while ksh93 conforms to the POSIX standard and will use a function-local scope for variables declared in Bourne-style functions.</p><p>Example (note that "<span class="box code">integer</span>" is an alias for "<span class="box code">typeset <span style="color: #666666; ">-</span>li</span>"):</p><pre>
+
+# new style function with local variable
+$ ksh93 -c 'integer x=2 ; function foo { integer x=5 ; } ; print "x=$x"
+; foo ; print "x=$x" ;'
+x=2
+x=2
+# old style function with an attempt to create a local variable
+$ ksh93 -c 'integer x=2 ; foo() { integer x=5 ; } ; print "x=$x" ; foo ;
+print "x=$x" ;'
+x=2
+x=5
+
+</pre><p><span class="box code">[[usr<span style="color: #666666; ">/</span>src<span style="color: #666666; ">/</span>lib<span style="color: #666666; ">/</span>libshell<span style="color: #666666; ">/</span>common<span style="color: #666666; ">/</span>COMPATIBILITY<span style="color: #666666; ">&gt;&gt;</span>Project ksh93<span style="color: #666666; ">-</span>integration.compatibility]]</span> says about this issue:</p><blockquote><p>&nbsp;Functions, defined with name() with ksh-93 are compatible with the POSIX standard, not with ksh-88. No local variables are permitted, and there is no separate scope. Functions defined with the function name syntax, maintain compatibility. This also affects function traces.</p></blockquote><p>&nbsp;(this issue also affects <span class="box code"><span style="color: #666666; ">/</span>usr<span style="color: #666666; ">/</span>xpg4<span style="color: #666666; ">/</span>bin<span style="color: #666666; ">/</span>sh</span> in Solaris 10 because it is based on ksh88. This is a bug.).</p><h4 id="HUseapropercode-1"><span>Use a proper <span class="box code"><span style="font-weight: bold; color: #008000; ">return</span></span> code</span></h4><p>Explicitly set the return code of a function - otherwise the exit code from the last command executed will be used which may trigger problems if the value is unexpected.</p><p>The only allowed exception is if a function uses the shell's <span class="box code">errexit</span> mode to leave a function, subshell or the script if a command returns a non-zero exit code.</p><h4 id="HUsetoloadcommonfunctions2Cnot"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/>&nbsp;Use <span class="box code">FPATH</span> to load common functions, not <span class="box code">source</span></span></h4><p>&nbsp;Use the ksh <span class="box code">FPATH</span> (function path) feature to load functions which are shared between scripts and not <span class="box code">source</span> - this allows to load such a function on demand and not all at once.</p><h3 id="H2Cand"><span><span class="box code"><span style="font-weight: bold; color: #008000; ">if</span></span>, <span class="box code"><span style="font-weight: bold; color: #008000; ">for</span></span> and <span class="box code"><span style="font-weight: bold; color: #008000; ">while</span></span></span></h3><h4 id="HFormat"><span>Format</span></h4><p>To match <span class="box code">cstyle</span>, the shell token equivalent to the <span class="box code">C</span> "<span class="box code">{</span>" should appear on the same line, separated by a "<span class="box code">;</span>", as in:</p><pre>
+
+if [ "$x" = "hello" ] ; then
+    echo $x
+fi
+
+if [[ "$x" = "hello" ]] ; then
+    print $x
+fi
+
+for i in 1 2 3; do
+    echo $i
+done
+
+for ((i=0 ; i &lt; 3 ; i++)); do
+    print $i
+done
+
+while [ $# -gt 0 ]; do
+    echo $1
+    shift
+done
+
+while (( $# &gt; 0 )); do
+  print $1
+  shift
+done
+
+</pre><h4 id="HBuiltin"><span><span class="box code">test</span> Builtin</span></h4><p>DO NOT use the test builtin. Sorry, executive decision.</p><p>In our Bourne shell, the <span class="box code">test</span> built-in is the same as the "[" builtin (if you don't believe me, try "type test" or refer to <span class="box code">usr<span style="color: #666666; ">/</span>src<span style="color: #666666; ">/</span>cmd<span style="color: #666666; ">/</span>sh<span style="color: #666666; ">/</span>msg.c</span>).</p><p>&nbsp;So please do not write:</p><pre>
+
+if test $# -gt 0 ; then
+
+</pre><p>&nbsp;instead use:</p><pre>
+
+if [ $# -gt 0 ] ; then
+
+</pre><h4 id="HUse2222insteadof2222"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use "<span class="box code">[[ expr ]]</span>" instead of "<span class="box code">[ expr ]</span>"</span></h4><p>Use "<span class="box code">[[ expr ]]</span>" instead of "<span class="box code">[ expr ]</span>" if possible since it avoids going through the whole pattern expansion/etc. machinery and adds additional operators not available in the Bourne shell, such as short-circuit <span class="box code"><span style="color: #666666; ">&amp;&amp;</span></span> and <span class="box code"><span style="color: #666666; ">||</span></span>.</p><h4 id="HUse2222forarithmeticexpressions"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/>&nbsp;Use "<span class="box code">(( ... ))</span>" for arithmetic expressions</span></h4><p>Use "<span class="box code">(( ... ))</span>" instead of "<span class="box code">[ expr ]</span>" or "<span class="box code">[[ expr ]]</span>" expressions.</p><p>&nbsp;Example: Replace</p><pre>
+
+i=5
+# do something
+if [ $i -gt 5 ] ; then
+
+</pre><p>&nbsp;with</p><pre>
+
+i=5
+# do something
+if (( i &gt; 5 )) ; then
+
+</pre><h4 id="HCompareexitcodeusingarithmeticexpressionsexpressions"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Compare exit code using arithmetic expressions expressions</span></h4><p>Use POSIX arithmetic expressions to test for exit/return codes of commands and functions. For example turn</p><pre>
+
+if [ $? -gt 0 ] ; then
+
+</pre><p>&nbsp;into</p><pre>
+
+if (( $? &gt; 0 )) ; then
+
+</pre><h4 id="HUsebuiltincommandsinconditionsforendlessloops"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_bourne.png" alt="[Bourne]" height=""/>&nbsp;Use builtin commands in conditions for <span class="box code"><span style="font-weight: bold; color: #008000; ">while</span></span> endless loops</span></h4><p>Make sure that your shell has a "<span class="box code">true</span>" builtin (like ksh93) when executing endless loops like <span class="box code">$ <span style="font-weight: bold; color: #008000; ">while</span> true ; do do_something ; done #</span> - otherwise each loop cycle runs a <span class="box code"><span style="color: #666666; ">|</span>fork()<span style="color: #666666; ">|+|</span>exec()<span style="color: #666666; ">|</span></span>-cycle to run <span class="box code"><span style="color: #666666; ">/</span>bin<span style="color: #666666; ">/</span>true</span></p><h4 id="HSingle-lineif-statements"><span>Single-line if-statements</span></h4><p>It is permissible to use <span class="box code"><span style="color: #666666; ">&amp;&amp;</span></span> and <span class="box code"><span style="color: #666666; ">||</span></span> to construct shorthand for an "<span class="box code"><span style="font-weight: bold; color: #008000; ">if</span></span>" statement in the case where the if statement has a single consequent line:</p><pre>
+
+[ $# -eq 0 ] &amp;&amp; exit 0
+
+</pre><p>&nbsp;instead of the longer:</p><pre>
+
+if [ $# -eq 0 ]; then
+  exit 0
+fi
+
+</pre><h4 id="HExitStatusand2Fstatements"><span>Exit Status and <span class="box code"><span style="font-weight: bold; color: #008000; ">if</span></span>/<span class="box code"><span style="font-weight: bold; color: #008000; ">while</span></span> statements</span></h4><p>Recall that "<span class="box code"><span style="font-weight: bold; color: #008000; ">if</span></span>" and "<span class="box code"><span style="font-weight: bold; color: #008000; ">while</span></span>" operate on the exit status of the statement to be executed. In the shell, zero (0) means true and non-zero means false. The exit status of the last command which was executed is available in the $? variable. When using "<span class="box code"><span style="font-weight: bold; color: #008000; ">if</span></span>" and "<span class="box code"><span style="font-weight: bold; color: #008000; ">while</span></span>", it is typically not necessary to use <span class="box code">$?</span> explicitly, as in:</p><pre>
+
+grep foo /etc/passwd &gt;/dev/null 2&gt;&amp;1
+if [ $? -eq 0 ]; then
+  echo "found"
+fi
+
+</pre><p>&nbsp;Instead, you can more concisely write:</p><pre>
+
+if grep foo /etc/passwd &gt;/dev/null 2&gt;&amp;1; then
+  echo "found"
+fi
+
+</pre><p>&nbsp;Or, when appropriate:</p><pre>
+
+grep foo /etc/passwd &gt;/dev/null 2&gt;&amp;1 &amp;&amp; echo "found"
+
+</pre><h3 id="HVariabletypes2Cnamingandusage"><span>Variable types, naming and usage</span></h3><h4 id="HNamesoflocal2Cnon-environment2Cnon-constantvariablesshouldbelowercase"><span>Names of local, non-environment, non-constant variables should be lowercase</span></h4><p>Names of variables local to the current script which are not exported to the environment should be lowercase while variable names which are exported to the environment should be uppercase.</p><p>The only exception are global constants (=global readonly variables, e.g. <span class="box code">$ float <span style="color: #666666; ">-</span>r M_PI=3.14159265358979323846 #</span> (taken from &lt;math.h&gt;)) which may be allowed to use uppercase names, too.</p><h3 id="HWarning-1"><span>Warning</span></h3><p>&nbsp;Uppercase variable names should be avoided because there is a good chance of naming collisions with either special variable names used by the shell (e.g. <span class="box code">PWD</span>, <span class="box code">SECONDS</span> etc.).</p><h4 id="HDonotusevariablenameswhicharereservedkeywords2FvariablenamesinC2FC2B2B2FJAVAorthePOSIXshellstandard"><span>Do not use variable names which are reserved keywords/variable names in C/C++/JAVA or the POSIX shell standard</span></h4><p>Do not use variable names which are reserved keywords in C/C++/JAVA or the POSIX shell standard (to avoid confusion and/or future changes/updates to the shell language).</p><h3 id="HNote-4"><span>Note</span></h3><p>The Korn Shell and the POSIX shell standard have many more reserved variable names than the original Bourne shell. All these reserved variable names are spelled uppercase.</p><h4 id="HAlwaysuse2Bwhenusingvariablenameslongerthanonecharacter"><span>Always use <span class="box code"><span style="color: #BA2121; ">'{'</span></span>+<span class="box code"><span style="color: #BA2121; ">'}'</span></span> when using variable names longer than one character</span></h4><p>Always use <span class="box code"><span style="color: #BA2121; ">'{'</span></span>+<span class="box code"><span style="color: #BA2121; ">'}'</span></span> when using variable names longer than one character unless a simple variable name is followed by a blank, <span class="box code"><span style="color: #666666; ">/</span></span>, <span class="box code">;</span>, or <span class="box code">$</span> character (to avoid problems with array, compound variables or accidental misinterpretation by users/shell)</p><pre>
+
+print "$foo=info"
+
+</pre><p>&nbsp;should be rewritten to</p><pre>
+
+print "${foo}=info"
+
+</pre><h4 id="HAlwaysputvariablesintoquoteswhenhandlingfilenamesoruserinput"><span><em>Always</em> put variables into quotes when handling filenames or user input</span></h4><p><em>Always</em> put variables into quotes when handling filenames or user input, even if the values are hardcoded or the values appear to be fixed. Otherwise at least two things may go wrong:</p><ul><li>a malicious user may be able to exploit a script's inner working to infect his/her own code</li><li>a script may (fatally) misbehave for unexpected input (e.g. file names with blanks and/or special symbols which are interpreted by the shell)</li></ul><h3 id="HNote-5"><span>Note</span></h3><p>&nbsp;As alternative a script may set <span class="box code">IFS=<span style="color: #BA2121; ">''</span> ; set <span style="color: #666666; ">-</span>o noglob</span> to turn off the interpretation of any field seperators and the pattern globbing.</p><h4 id="HUsetypedvariablesifpossible."><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use typed variables if possible.</span></h4><p>For example the following is very inefficient since it transforms the integer values to strings and back several times:</p><pre>
+
+a=0
+b=1
+c=2
+# more code
+if [ $a -lt 5 -o $b -gt c ] ; then do_something ; fi
+
+</pre><p>&nbsp;This could be rewritten using ksh constructs:</p><pre>
+
+integer a=0
+integer b=1
+integer c=2
+# more code
+if (( a &lt; 5 || b &gt; c )) ; then do_something ; fi
+
+</pre><h4 id="HStorelistsinarraysorassociativearrays"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Store lists in arrays or associative arrays</span></h4><p>Store lists in arrays or associative arrays - this is usually easier to manage.</p><p>&nbsp;For example:</p><pre>
+
+x="
+/etc/foo
+/etc/bar
+/etc/baz
+"
+echo $x
+
+</pre><p>&nbsp;can be replaced with</p><pre>
+
+typeset -a mylist
+mylist[0]="/etc/foo"
+mylist[1]="/etc/bar"
+mylist[2]="/etc/baz"
+print "${mylist[@]}"
+
+</pre><p>&nbsp;or (ksh93-style append entries to a normal (non-associative) array)</p><pre>
+
+typeset -a mylist
+mylist+=( "/etc/foo" )
+mylist+=( "/etc/bar" )
+mylist+=( "/etc/baz" )
+print "${mylist[@]}"
+
+</pre><h3 id="HDifferencebetweenexpandingarrayswithmylist5B405Dandmylist5B2A5Dsubscriptoperators"><span>Difference between expanding arrays with mylist[@] and mylist[*] subscript operators</span></h3><p>&nbsp;Arrays may be expanded using two similar subscript operators, @ and *. These subscripts differ only when the variable expansion appears within double quotes. If the variable expansion is between double-quotes, "${mylist[*]}" expands to a single string with the value of each array member separated by the first character of the <span class="box code">IFS</span> variable, and "${mylist[@]}" expands each element of name to a separate string.</p><p><strong>Example�2.�Difference between [@] and [*] when expanding arrays</strong></p><pre>
+
+typeset -a mylist
+mylist+=( "/etc/foo" )
+mylist+=( "/etc/bar" )
+mylist+=( "/etc/baz" )
+IFS=","
+printf "mylist[*]={ 0=|%s| 1=|%s| 2=|%s| 3=|%s| }\n" "${mylist[*]}"
+printf "mylist[@]={ 0=|%s| 1=|%s| 2=|%s| 3=|%s| }\n" "${mylist[@]}"
+
+</pre><p>will print:</p><pre>
+
+mylist[*]={ 0=|/etc/foo,/etc/bar,/etc/baz| 1=|| 2=|| 3=|| }
+mylist[@]={ 0=|/etc/foo| 1=|/etc/bar| 2=|/etc/baz| 3=|| }
+
+</pre><h4 id="HUsecompoundvariablesorassociativearraystogroupsimilarvariablestogether"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use compound variables or associative arrays to group similar variables together</span></h4><p>Use compound variables or associative arrays to group similar variables together.</p><p>&nbsp;For example:</p><pre>
+
+box_width=56
+box_height=10
+box_depth=19
+echo "${box_width} ${box_height} ${box_depth}"
+
+</pre><p>&nbsp;could be rewritten to ("associative array"-style)</p><pre>
+
+typeset -A -E box=( [width]=56 [height]=10 [depth]=19 )
+print ~-- "${box[width]} ${box[height]} ${box[depth]}"
+
+</pre><p>&nbsp;or ("compound variable"-style</p><pre>
+
+box=(
+    float width=56
+    float height=10
+    float depth=19
+    )
+print ~-- "${box.width} ${box.height} ${box.depth}"
+
+</pre><h3 id="HI2FO"><span>I/O</span></h3><h4 id="HAvoidusingthe2222commandforoutput"><span>Avoid using the "<span class="box code">echo</span>" command for output</span></h4><p>The behaviour of "<span class="box code">echo</span>" is not portable (e.g. System V, BSD, UCB and ksh93/bash shell builtin versions all slightly differ in functionality) and should be avoided if possible. POSIX defines the "<span class="box code">printf</span>" command as replacement which provides more flexible and portable behaviour.</p><h3 id="HUse2222andnot2222inKornShellscripts"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/>&nbsp;Use "<span class="box code">print</span>" and not "<span class="box code">echo</span>" in Korn Shell scripts</span></h3><p>Korn shell scripts should prefer the "<span class="box code">print</span>" builtin which was introduced as replacement for "<span class="box code">echo</span>".</p><h3 id="HCaution"><span>Caution</span></h3><p>Use <span class="box code">$ print ~-- <span style="color: #BC7A00; ">${</span>varname<span style="color: #BC7A00; ">}</span>" #</span> when there is the slightest chance that the variable "<span class="box code">varname</span>" may contain symbols like "-". Or better use "<span class="box code">printf</span>" instead, for example</p><pre>
+
+integer fx
+# do something
+print $fx
+
+</pre><p>&nbsp;may fail if "f" contains a negative value. A better way may be to use</p><pre>
+
+integer fx
+# do something
+printf "%d\n" fx
+
+</pre><h4 id="HUseandnottoopenfiles"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use <span class="box code">redirect</span> and not <span class="box code">exec</span> to open files</span></h4><p>Use <span class="box code">redirect</span> and not <span class="box code">exec</span> to open files - <span class="box code">exec</span> will terminate the current function or script if an error occurs while <span class="box code">redirect</span> just returns a non-zero exit code which can be caught.</p><p>Example:</p><pre>
+
+if redirect 5&lt;/etc/profile ; then
+    print "file open ok"
+    head &lt;&amp;5
+else
+    print "could not open file"
+fi
+
+</pre><h4 id="HAvoidredirectionspercommandwhentheoutputgoesintothesamefile2Ce.g."><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Avoid redirections per command when the output goes into the same file, e.g. <span class="box code">$ echo "foo" <span style="color: #666666; ">&gt;</span>xxx ; echo "bar" <span style="color: #666666; ">&gt;&gt;</span>xxx ; echo "baz" <span style="color: #666666; ">&gt;&gt;</span>xxx #</span></span></h4><p>Each of the redirections above trigger an <span class="box code"><span style="color: #666666; ">|</span>open()<span style="color: #666666; ">|</span>,<span style="color: #666666; ">|</span>write()<span style="color: #666666; ">|</span>,<span style="color: #666666; ">|</span>close()<span style="color: #666666; ">|</span></span>-sequence. It is much more efficient (and faster) to group the rediction into a block, e.g. <span class="box code">{ echo "foo" ; echo "bar" ; echo "baz" } <span style="color: #666666; ">&gt;</span>xxx #</span></p><h4 id="HAvoidthecreationoftemporaryfilesandstorethevaluesinvariablesinstead"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Avoid the creation of temporary files and store the values in variables instead</span></h4><p>Avoid the creation of temporary files and store the values in variables instead if possible</p><p>&nbsp;Example:</p><pre>
+
+ls -1 &gt;xxx
+for i in $(cat xxx) ; do
+    do_something ;
+done
+
+</pre><p>&nbsp;can be replaced with</p><pre>
+
+x="$(ls -1)"
+for i in ${x} ; do
+    do_something ;
+done
+
+</pre><h3 id="HNote-6"><span>Note</span></h3><p>ksh93 supports binary variables (e.g. <span class="box code">typeset <span style="color: #666666; ">-</span>b varname</span>) which can hold any value.</p><h4 id="HIfyoucreatemorethanonetemporaryfilecreateanuniquesubdir"><span>If you create more than one temporary file create an unique subdir</span></h4><p>If you create more than one temporary file create an unique subdir for these files and make sure the dir is writable. Make sure you cleanup after yourself (unless you are debugging).</p><h4 id="HUse7Bn7D3Cfileinsteadoffixedfiledescriptornumbers"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use {n}&lt;file instead of fixed file descriptor numbers</span></h4><p>When opening a file use {n}&lt;file, where <span class="box code">n</span> is an integer variable rather than specifying a fixed descriptor number.</p><p>This is highly recommended in functions to avoid that fixed file descriptor numbers interfere with the calling script.</p><p><strong>Example�3.�Open a network connection and store the file descriptor number in a variable</strong></p><pre>
+
+function cat_http
+{
+    integer netfd
+
+...
+
+    # open TCP channel
+    redirect {netfd}&lt;&gt;"/dev/tcp/${host}/${port}"
+
+    # send HTTP request
+    request="GET /${path} HTTP/1.1\n"
+    request+="Host: ${host}\n"
+    request+="User-Agent: demo code/ksh93 (2007-08-30; $(uname -s -r -p))\n"
+    request+="Connection: close\n"
+    print "${request}\n" &gt;&amp;${netfd}
+
+    # collect response and send it to stdout
+    cat &lt;&amp;${netfd}
+
+    # close connection
+    exec {netfd}&lt;&amp;-
+
+...
+
+}
+
+</pre><h4 id="HUseinlineheredocumentsinsteadof"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/> <img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use inline here documents instead of <span class="box code">echo "$x" <span style="color: #666666; ">|</span> command</span></span></h4><p>Use inline here documents, for example</p><pre>
+
+command &lt;&lt;&lt; $x
+
+</pre><p>&nbsp;rather than</p><pre>
+
+print -r ~-- "$x" | command
+
+</pre><h4 id="HUsetheoptionoftoreadaline"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use the <span class="box code"><span style="color: #666666; ">-</span>r</span> option of <span class="box code">read</span> to read a line</span></h4><p>Use the <span class="box code"><span style="color: #666666; ">-</span>r</span> option of <span class="box code">read</span> to read a line. You never know when a line will end in <span class="box code"><span style="color: #666666; ">\</span></span> and without a <span class="box code"><span style="color: #666666; ">-</span>r</span> multiple lines can be read.</p><h4 id="HPrintcompoundvariablesusingor"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Print compound variables using <span class="box code">print <span style="color: #666666; ">-</span>C varname</span> or <span class="box code">print <span style="color: #666666; ">-</span>v varname</span></span></h4><p>Print compound variables using <span class="box code">print <span style="color: #666666; ">-</span>C varname</span> or <span class="box code">print <span style="color: #666666; ">-</span>v varname</span> to make sure that non-printable characters are correctly encoded.</p><p><strong>Example�4.�Print compound variable with non-printable characters</strong></p><pre>
+
+compound x=(
+    a=5
+    b="hello"
+    c=(
+        d=9
+        e="$(printf "1\v3")" [[image:images/callouts/1.png||alt="1"height=""]]
+    )
+)
+print -v x
+
+</pre><p>will print:</p><pre>
+
+(
+        a=5
+        b=hello
+        c=(
+                d=9
+                e=$'1\0133' [[image:images/callouts/1.png||alt="1"height=""]]
+        )
+)
+
+</pre><table><tr><td><span class="wikilink"><a href="#co.vertical_tab1"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Fcallouts%2F1.png" alt="1" height=""/></a></span> <span class="wikilink"><a href="#co.vertical_tab2"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Fcallouts%2F1.png" alt="1" height=""/></a></span></td><td><br/>vertical tab, <span class="box code"><span style="color: #666666; ">\</span>v</span>, octal=<span class="box code"><span style="color: #666666; ">\</span>013</span>.</td></tr></table><h4 id="HPutthecommandnameandargumentsbeforeredirections"><span>Put the command name and arguments before redirections</span></h4><p>Put the command name and arguments before redirections. You can legally do <span class="box code">$ <span style="color: #666666; ">&gt;</span> file date</span> instead of <span class="box code">date <span style="color: #666666; ">&gt;</span> file</span> but don't do it.</p><h4 id="HEnabletheeditormodewhenreadinguserinputusingthebuiltin"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Enable the <span class="box code">gmacs</span> editor mode when reading user input using the <span class="box code">read</span> builtin</span></h4><p>Enable the <span class="box code">gmacs</span>editor mode before reading user input using the <span class="box code">read</span> builtin to enable the use of cursor+backspace+delete keys in the edit line</p><p><strong>Example�5.�Prompt user for a string with gmacs editor mode enabled</strong></p><pre>
+
+set -o gmacs [[image:images/callouts/1.png||alt="1"height=""]]
+typeset inputstring="default value"
+...
+read -v[[image:images/callouts/2.png||alt="2"height=""]] inputstring[[image:images/callouts/3.png||alt="3"height=""]]?"Please enter a string: "[[image:images/callouts/4.png||alt="4"height=""]]
+...
+printf "The user entered the following string: '%s'\n" "${inputstring}"
+
+...
+
+</pre><table><tr><td><span class="wikilink"><a href="#co.enable_gmacs"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Fcallouts%2F1.png" alt="1" height=""/></a></span></td><td><br/>Enable gmacs editor mode.</td></tr><tr><td><span class="wikilink"><a href="#co.read_v"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Fcallouts%2F2.png" alt="2" height=""/></a></span></td><td><br/>The value of the variable is displayed and used as a default value.</td></tr><tr><td><span class="wikilink"><a href="#co.readvar"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Fcallouts%2F3.png" alt="3" height=""/></a></span></td><td><br/>Variable used to store the result.</td></tr><tr><td><span class="wikilink"><a href="#co.prompt"><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Fcallouts%2F4.png" alt="4" height=""/></a></span></td><td><br/>Prompt string which is displayed in stderr.</td></tr></table><h3 id="HMath"><span>Math</span></h3><h4 id="HUsebuiltinarithmeticexpressionsinsteadofexternalapplications"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Use builtin arithmetic expressions instead of external applications</span></h4><p>Use builtin (POSIX shell) arithmetic expressions instead of <span class="box code">expr</span>, <span class="box code">bc</span>, <span class="box code">dc</span>, <span class="box code">awk</span>, <span class="box code">nawk</span> or <span class="box code">perl</span>.</p><h3 id="HNote-7"><span>Note</span></h3><p>ksh93 supports C99-like floating-point arithmetic including special values such as +Inf, -Inf, +NaN, -NaN.</p><h4 id="HUsefloating-pointarithmeticexpressionsifcalculationsmaytriggeradivisionbyzeroorotherexceptions"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use floating-point arithmetic expressions if calculations may trigger a division by zero or other exceptions</span></h4><p>Use floating-point arithmetic expressions if calculations may trigger a division by zero or other exceptions - floating point arithmetic expressions in ksh93 support special values such as <span class="box code"><span style="color: #666666; ">+</span>Inf</span>/<span class="box code"><span style="color: #666666; ">-</span>Inf</span> and <span class="box code"><span style="color: #666666; ">+</span>NaN</span>/<span class="box code"><span style="color: #666666; ">-</span>NaN</span> which can greatly simplify testing for error conditions, e.g. instead of a <span class="box code">trap</span> or explicit <span class="box code"><span style="font-weight: bold; color: #008000; ">if</span> ... then... <span style="font-weight: bold; color: #008000; ">else</span></span> checks for every sub-expression you can check the results for such special values.</p><p>Example:</p><pre>
+
+$ **{{code}}ksh93 -c 'integer i=0 j=5 ; print ~-- "x=$((j/i)) "'{{/code}}**
+ksh93: line 1: j/i: divide by zero
+$ **{{code}}ksh93 -c 'float i=0 j=-5 ; print ~-- "x=$((j/i)) "'{{/code}}**
+x=-Inf
+
+</pre><h4 id="HUsewhenpassingfloating-pointvalues"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Use <span class="box code">printf "<span style="font-weight: italic; color: #408080; ">%a"</span></span> when passing floating-point values</span></h4><p>Use <span class="box code">printf "<span style="font-weight: italic; color: #408080; ">%a"</span></span> when passing floating-point values between scripts or as output of a function to avoid rounding errors when converting between bases.</p><p>&nbsp;Example:</p><pre>
+
+function xxx
+{
+    float val
+
+    (( val=sin(5.) ))
+    printf "%a\n" val
+}
+float out
+(( out=$(xxx) ))
+xxx
+print ~-- $out
+
+</pre><p>&nbsp;This will print:</p><pre>
+
+-0.9589242747
+-0x1.eaf81f5e09933226af13e5563bc6p-01
+
+</pre><h4 id="HPutconstantvaluesintoreadonlyvariables"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Put constant values into readonly variables</span></h4><p>Put constant values into readonly variables</p><p>For example:</p><pre>
+
+float -r M_PI=3.14159265358979323846
+
+</pre><p>&nbsp;or</p><pre>
+
+float M_PI=3.14159265358979323846
+readonly M_PI
+
+</pre><h4 id="HAvoidstringtonumber28and2Fornumbertostring29conversionsinarithmeticexpressionsexpressions"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh.png" alt="[ksh]" height=""/> <img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_perf.png" alt="[perf]" height=""/>&nbsp;Avoid string to number (and/or number to string) conversions in arithmetic expressions expressions</span></h4><p>Avoid string to number and/or number to string conversions in arithmetic expressions expressions to avoid performance degradation and rounding errors.</p><p><strong>Example�6.�(( x=$x*2 )) vs. (( x=x*2 ))</strong></p><pre>
+
+float x
+...
+(( x=$x*2 ))
+
+</pre><p>&nbsp;will convert the variable "x" (stored in the machine's native <span class="box code"><span style="color: #666666; ">|</span>long double<span style="color: #666666; ">|</span></span> datatype) to a string value in base10 format, apply pattern expansion (globbing), then insert this string into the arithmetic expressions and parse the value which converts it into the internal |long double| datatype format again. This is both slow and generates rounding errors when converting the floating-point value between the internal base2 and the base10 representation of the string.</p><p>&nbsp;The correct usage would be:</p><pre>
+
+float x
+...
+(( x=x*2 ))
+
+</pre><p>&nbsp;e.g. omit the '$' because it's (at least) redundant within arithmetic expressions.</p><p><strong>Example�7.�x=$(( y+5.5 )) vs. (( x=y+5.5 ))</strong></p><pre>
+
+float x
+float y=7.1
+...
+x=$(( y+5.5 ))
+
+</pre><p>&nbsp;will calculate the value of <span class="box code">y<span style="color: #666666; ">+</span>5.5</span>, convert it to a base-10 string value amd assign the value to the floating-point variable <span class="box code">x</span> again which will convert the string value back to the internal |long double| datatype format again.</p><p>&nbsp;The correct usage would be:</p><pre>
+
+float x
+float y=7.1
+...
+(( x=y+5.5 ))
+
+</pre><p>&nbsp;i.e. this will save the string conversions and avoid any base2--&gt;base10--&gt;base2-conversions.</p><h4 id="HSetwhenusingfloating-pointconstants"><span><img src="https://markebrooks.github.io/bin/download/Project+shell/shellstyle/images%2Ftag_ksh93.png" alt="[ksh93]" height=""/>&nbsp;Set <span class="box code">LC_NUMERIC</span> when using floating-point constants</span></h4><p>Set <span class="box code">LC_NUMERIC</span> when using floating-point constants to avoid problems with radix-point representations which differ from the representation used in the script, for example the <span class="box code">de_DE<span style="color: #666666; ">.*</span></span> locale use ',' instead of '.' as default radix point symbol.</p><p>For example:</p><pre>
+
+# Make sure all math stuff runs in the "C" locale to avoid problems with alternative
+# radix point representations (e.g. ',' instead of '.' in de_DE.*-locales). This
+# needs to be set _before_ any floating-point constants are defined in this script)
+if [[ "${LC_ALL}" != "" ]] ; then
+    export \
+        LC_MONETARY="${LC_ALL}" \
+        LC_MESSAGES="${LC_ALL}" \
+        LC_COLLATE="${LC_ALL}" \
+        LC_CTYPE="${LC_ALL}"
+        unset LC_ALL
+fi
+export LC_NUMERIC=C
+...
+float -r M_PI=3.14159265358979323846
+
+</pre><h3 id="HNote-8"><span>Note</span></h3><p>The environment variable <span class="box code">LC_ALL</span> always overrides all other <span class="box code">LC_<span style="color: #666666; ">*</span></span> variables, including <span class="box code">LC_NUMERIC</span>. The script should always protect itself against custom <span class="box code">LC_NUMERIC</span> and <span class="box code">LC_ALL</span> values as shown in the example above.</p><h3 id="HMisc"><span>Misc</span></h3><h4 id="HPutinyour"><span>Put <span class="box code">[<span style="color: #BC7A00; ">${</span>LINENO<span style="color: #BC7A00; ">}</span>]</span> in your <span class="box code">PS4</span></span></h4><p>Put <span class="box code">[<span style="color: #BC7A00; ">${</span>LINENO<span style="color: #BC7A00; ">}</span>]</span> in your <span class="box code">PS4</span> prompt so that you will get line numbers with you run with <span class="box code"><span style="color: #666666; ">-</span>x</span>. If you are looking at performance issues put <span class="box code">$SECONDS</span> in the <span class="box code">PS4</span> prompt as well.</p>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by Administrator on 2009/10/26 12:17<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by fleyta on 2009/11/02 19:27
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Project shell Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+shell/shellstyle">Shell coding style guidelines</a></span></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2013, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

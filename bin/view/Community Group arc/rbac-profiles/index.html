@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Building RBAC Rights Profiles (Community Group arc.rbac-profiles) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Community+Group+arc/rbac%2Dprofiles" />
+                    <link rel="canonical" href="/bin/view/Community+Group+arc/rbac%2Dprofiles" />
+                            <meta name="document" content="Community Group arc.rbac-profiles"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Community Group arc"/>
+    <meta name="page" content="rbac-profiles"/>
+    <meta name="version" content="3.1"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Community+Group+arc/pages/rbac-profiles"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Building RBAC Rights Profiles" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="Asa Romberger" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Community Group arc";
+XWiki.currentPage = "rbac-profiles";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Community+Group+arc/rbac%2Dprofiles";
+window.docediturl = "/bin/edit/Community+Group+arc/rbac%2Dprofiles";
+window.docsaveurl = "/bin/save/Community+Group+arc/rbac%2Dprofiles";
+window.docgeturl = "/bin/get/Community+Group+arc/rbac%2Dprofiles";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Community_Group_arc viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FCommunity%2BGroup%2Barc%2Frbac-profiles"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+arc/"><strong>Community Group arc</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Community+Group+arc" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+            </td>
+            <td id="logo-text" style="width: 1%;">
+                Solaris
+            </td>         
+            <td style="width: 98%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                              <a href='/bin/view/Community+Group+arc/bestpractices'>ARC Best Practices</a> <span class='separator'>&#187;</span> <span class='current'>Building RBAC Rights Profiles</span>
+                </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Community+Group+arc/rbac%2Dprofiles?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Community+Group+arc/rbac%2Dprofiles?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+arc/rbac%2Dprofiles?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Community+Group+arc/rbac%2Dprofiles?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Community+Group+arc/rbac%2Dprofiles?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Community+Group+arc/rbac%2Dprofiles?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+arc/rbac%2Dprofiles?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+arc/rbac%2Dprofiles?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+arc/rbac%2Dprofiles?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Community+Group+arc/rbac%2Dprofiles?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Community+Group+arc/rbac%2Dprofiles?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+                      
+<div id="document-title"><h1>Building RBAC Rights Profiles</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h1 class='hidden'>Building RBAC Rights Profiles</h1><p>Copyright 2006, Sun Microsystems, Inc</p><h3 id="HPolicySynopsis"><span>Policy Synopsis</span></h3><p>HOWTO guide for adding RBAC Rights Profiles</p><h3 id="HContents"><span>Contents</span></h3><ul><li><span class="wikilink"><a href="#HAdvice">Advice</a></span></li><li><span class="wikilink"><a href="#HCaseHistory">CaseHistory</a></span></li><li><span class="wikilink"><a href="#HReferences">References</a></span></li></ul><h3 id="HOverview"><span>Overview</span></h3><table><tr><th scope="col">Category</th><th scope="col">Software.RBAC</th></tr><tr><td>Owner</td><td>SAC</td></tr><tr><td>Author</td><td>Gary Winiger</td></tr><tr><td>Changes</td><td><span class="wikiexternallink"><a href="mailto:Gary.Winiger@Sun.COM">Gary.Winiger@Sun.COM</a></span></td></tr><tr><td>Authority</td><td>SAC</td></tr><tr><td>Policy Version</td><td>1.0</td></tr><tr><td>Status</td><td>DRAFT 2006/01/16</td></tr><tr><td>Effective</td><td>Solaris 2.10</td></tr></table><h2 id="HAdvice"><span>Advice</span></h2><p>You might need to build a Rights Profile from scratch if there is not already one that seems appropriate. First check the current ON gate .../usr/src/lib/libsecdb/prof_attr.txt prof_attr(4) contains the names of the current Rights Profiles, see the short description and the contents of the matching .../usr/src/lib/libsecdb/exec_attr.txt (exec_attr(4)) entries to see if it is a match for your needs. If it is, your can add to it. Generally you would not add authorizations to existing Rights Profiles unless you are adding authorizations in the same family. I.e., if new Audit authorizations are added to solaris.audit.*, then they would be candidates to add to the "Audit Control" profile. See <span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://sac.eng/cgi-bin/bp.cgi?NAME=RBAC.bp"><span class="wikigeneratedlinkcontent">http://sac.eng/cgi-bin/bp.cgi?NAME=RBAC.bp</span></a></span> for guidance about suid programs and authorizations.</p><p>Authorizations should be assigned to Rights Profiles in prof_attr(4) an auths= list and the Rights Profile assigned to a user via the profs= list in user_attr(4), rather than the obsolete use of auths= in user_attr(4). If you need to build a Rights Profile from scratch, here's a suggestion on how to proceed.</p><h3 id="HAddinganewRightsProfilewhichcontainscommandstoON"><span>Adding a new Rights Profile which contains commands to ON</span></h3><ol><li>Pick a Rights Profile Name that doesn't conflict with a current name. Note there is more than one place that profiles are found. ON profiles are in <span class="box code">...<span style="color: #666666; ">./</span>usr<span style="color: #666666; ">/</span>src<span style="color: #666666; ">/</span>lib<span style="color: #666666; ">/</span>libsecdb<span style="color: #666666; ">/</span>prof_attr.txt</span>. Be aware that other gates may also deliver prof_attr entries. In the admin gate profiles are in<br/><span class="box code">..<span style="color: #666666; ">./</span>src<span style="color: #666666; ">/</span>bundled<span style="color: #666666; ">/</span>app<span style="color: #666666; ">/</span>drm<span style="color: #666666; ">/</span>rbac<span style="color: #666666; ">/</span>security<span style="color: #666666; ">/</span>prof_attr</span><br/><span class="box code">..<span style="color: #666666; ">./</span>src<span style="color: #666666; ">/</span>bundled<span style="color: #666666; ">/</span>app<span style="color: #666666; ">/</span>wbem<span style="color: #666666; ">/</span>solaris<span style="color: #666666; ">/</span>rbac<span style="color: #666666; ">/</span>security<span style="color: #666666; ">/</span>prof_attr</span><br/><span class="box code">..<span style="color: #666666; ">./</span>src<span style="color: #666666; ">/</span>bundled<span style="color: #666666; ">/</span>app<span style="color: #666666; ">/</span>webmgt<span style="color: #666666; ">/</span>webconsole<span style="color: #666666; ">/</span>conf<span style="color: #666666; ">/</span>prof_attr</span><br/>&nbsp;The the CDE gate profiles are in<br/><span class="box code">..<span style="color: #666666; ">./</span>cdesrc<span style="color: #666666; ">/</span>cde1<span style="color: #666666; ">/</span>rbac<span style="color: #666666; ">/</span>security<span style="color: #666666; ">/</span>prof_attr</span><br/>&nbsp;For this example, name the Rights Profile "Xx Yy Zz"</li><li>Add a line (alphabetically would be nice ;-) to prof_attr that reads:<br/><span class="box code">Xx Yy Zz:::Short Description:help=RtXxYyZz.html</span></li><li>For Solaris 10 and later releases, for each CLI in the Rights Profile add to <span class="box code">..<span style="color: #666666; ">./</span>lib<span style="color: #666666; ">/</span>libsecdb<span style="color: #666666; ">/</span>exec_attr</span> line(s) that read:<br/><span class="box code">&nbsp;Xx Yy Zz:solaris:cmd:::<span style="color: #666666; ">&lt;</span>full path to command<span style="color: #666666; ">&gt;</span>:<span style="color: #666666; ">&lt;</span>attributes<span style="color: #666666; ">&gt;</span></span><br/>&nbsp;such that the &lt;attributes&gt; take on the least privileged values needed to do the function, choose from privs=&lt;privilege set&gt;, limitprivs=&lt;privilege set&gt;, euid=&lt;uid&gt;, egid=&lt;gid&gt;, uid=&lt;uid&gt;, gid=&lt;gid&gt; (see privileges(5), exec_attr(4)).<br/>&nbsp;For systems prior to Solaris 10 only, for each CLI in the Rights Profile add to <span class="box code">..<span style="color: #666666; ">./</span>lib<span style="color: #666666; ">/</span>libsecdb<span style="color: #666666; ">/</span>exec_attr</span> line(s) that read:<br/><span class="box code">Xx Yy Zz:suser:cmd:::<span style="color: #666666; ">&lt;</span>full path to command<span style="color: #666666; ">&gt;</span>:<span style="color: #666666; ">&lt;</span>attributes<span style="color: #666666; ">&gt;</span></span><br/>&nbsp;such that the &lt;attributes&gt; take on the least privileged value needed to do the function, choose from euid=&lt;uid&gt;, egid=&lt;gid&gt;, uid=&lt;uid&gt;, gid=&lt;gid&gt; (see exec_attr(4)).</li><li>Create a simple HTML help file in .../lib/libsecdb/help/profiles. The file name for this example is RtXxYyZz.html. Update the Makefile. Use an existing help file for the HTML syntax and describe help for the profile that you've just created.</li><li>Update the help file packages SUNWcsu, SUNW0on. in SUNWcsu/prototype_com<br/><span class="box code">f none usr<span style="color: #666666; ">/</span>lib<span style="color: #666666; ">/</span>help<span style="color: #666666; ">/</span>profiles<span style="color: #666666; ">/</span>locale<span style="color: #666666; ">/</span>C<span style="color: #666666; ">/</span>RtXxYyZz.html 444 root bin</span><br/>&nbsp;in SUNW0on/prototype_com<br/><span class="box code">f none usr<span style="color: #666666; ">/</span>lib<span style="color: #666666; ">/</span>help<span style="color: #666666; ">/</span>profiles<span style="color: #666666; ">/</span>locale<span style="color: #666666; ">/</span>RtXxYyZz.html 444 root bin</span><br/>&nbsp;N.B. The difference between the paths ("C" -vs- none).</li></ol><h3 id="HAddingcommandstoanexistingRightsProfiletoON:"><span>Adding commands to an existing Rights Profile to ON:</span></h3><ol><li>Pick an existing Rights Profile which matches the commands to be added. For this example call it "Xx Yy Zz"</li><li>For Solaris 10 and later releases, for each CLI in the Rights Profile add to <span class="box code">..<span style="color: #666666; ">./</span>lib<span style="color: #666666; ">/</span>libsecdb<span style="color: #666666; ">/</span>exec_attr</span> line(s) that read:<br/><span class="box code">&nbsp;Xx Yy Zz:solaris:cmd:::<span style="color: #666666; ">&lt;</span>full path to command<span style="color: #666666; ">&gt;</span>:<span style="color: #666666; ">&lt;</span>attributes<span style="color: #666666; ">&gt;</span></span><br/>&nbsp;such that the &lt;attributes&gt; take on the least privileged values needed to do the function, choose from privs=&lt;privilege set&gt;, limitprivs=&lt;privilege set&gt;, euid=&lt;uid&gt;, egid=&lt;gid&gt;, uid=&lt;uid&gt;, gid=&lt;gid&gt; (see privileges(5), exec_attr(4)).<br/>&nbsp;For systems prior to Solaris 10 only, for each CLI in the Rights Profile add to <span class="box code">..<span style="color: #666666; ">./</span>lib<span style="color: #666666; ">/</span>libsecdb<span style="color: #666666; ">/</span>exec_attr</span> line(s) that read:<br/><span class="box code">Xx Yy Zz:suser:cmd:::<span style="color: #666666; ">&lt;</span>full path to command<span style="color: #666666; ">&gt;</span>:<span style="color: #666666; ">&lt;</span>attributes<span style="color: #666666; ">&gt;</span></span><br/>&nbsp;such that the &lt;attributes&gt; take on the least privileged value needed to do the function, choose from euid=&lt;uid&gt;, egid=&lt;gid&gt;, uid=&lt;uid&gt;, gid=&lt;gid&gt; (see exec_attr(4)).</li></ol><h3 id="HAddinganewRightsProfiletoothergates"><span>Adding a new Rights Profile to other gates</span></h3><ol><li>Do pretty much the same steps with local sources for prof_attr and exec_attr.<br/>&nbsp;If this is the first Rights Profile for this gate, the prof_attr and exec_attr files should use the rbac class action script and deliver into <span class="box code"><span style="color: #666666; ">/</span>etc<span style="color: #666666; ">/</span>security<span style="color: #666666; ">/</span>{prof,exec}_attr</span>. I.e., in prototype_com:<br/><span class="box code">e rbac etc<span style="color: #666666; ">/</span>security<span style="color: #666666; ">/</span>prof_attr 644 root sys</span><br/>&nbsp;HTML help files should be delivered by the ``usr'' and ``globalization'' (G11N) packages (as equivalent to SUNWcsu, SUNW0on)<br/>&nbsp;in SUNW``usr''/prototype_com<br/><span class="box code">f none usr<span style="color: #666666; ">/</span>lib<span style="color: #666666; ">/</span>help<span style="color: #666666; ">/</span>profiles<span style="color: #666666; ">/</span>locale<span style="color: #666666; ">/</span>C<span style="color: #666666; ">/</span>RtXxYyZz.html 444 root bin</span><br/>&nbsp;in SUNW0``G11N''/prototype_com<br/><span class="box code">f none usr<span style="color: #666666; ">/</span>lib<span style="color: #666666; ">/</span>help<span style="color: #666666; ">/</span>profiles<span style="color: #666666; ">/</span>locale<span style="color: #666666; ">/</span>C<span style="color: #666666; ">/</span>RtXxYyZz.html 444 root bin</span></li></ol><h2 id="HCaseHistory"><span>CaseHistory</span></h2><table><tr><th scope="col">Case</th><th scope="col">Type</th><th scope="col">Name</th></tr><tr><td><span class="wikiexternallink"><a href="http://arc.opensolaris.org/caselog/PSARC/1997/332">PSARC/1997/332</a></span></td><td>OnePager</td><td>Execution Profiles for Restricted Environments  </td></tr><tr><td><span class="wikiexternallink"><a href="http://arc.opensolaris.org/caselog/PSARC/2002/188">PSARC/2002/188</a></span></td><td>OnePager</td><td>Least Privilege for Solaris  </td></tr></table><hr/><h2 id="HReferences"><span>References</span></h2><p><span class="wikiexternallink"><a href="http://www.sun.com/software/whitepapers/wp-rbac/wp-rbac.pdf">&nbsp;RBAC in the Solaris[tm] Operating Environment - White Paper</a></span><br/><span class="wikiexternallink"><a href="http://soldc.sun.com/articles/ais.html">&nbsp;Authorization Infrastructure in Solaris - Developer Connection</a></span></p><table><tr><td><br/></td></tr></table>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:07<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by Asa Romberger on 2010/03/05 16:30
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Community Group arc Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/ARCAgenda">ARCAgenda</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dfaq">FAQ</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dalias%2Dusage">Use of the OpenSolaris aliases</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dfasttrack%2Dhandbook">ARC Fasttrack Handbook</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dlifecycle">When should developers interact with the ARC?</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dproject%2Dsize">What sort of changes need ARC approval?</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dpublish%2Dhistorical%2Dchecklist">How do I publish/request an existing Sun ARC Case?</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dreview%2Dadvice">How to succeed with an Architectural review</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dreview%2Doverview">What is an ARC Review?</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dreview%2Dprep">Planning for the Architectural Review</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dsponsor%2Dhandbook">ARC Fast&#45;Track Sponsor Duties</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/faq%2Dprinciples%2Dfor%2Dchanges">General Principles for Requiring Changes to Projects</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/sun%2Darc%2Dcharter">Announcing the Systems Architecture Process</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dglossary">Glossary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bestpractices">ARC Best Practices</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Darc%2Dalias%2Dusage">ARC Alias Usage Guidelines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Darch%2Dcomponents%2Dinterfaces">Architecture = Components + Interfaces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Dcommandlines">Command Lines and arguments</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Dconfigfiles">Configuration Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Ddevice%2Ddrivers">Device Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Denvariables">Environment Variables</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Dhardware%2Ddependencies">Hardware Platform Dependencies</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Di18n">Internationalization (I18n)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Dinterfaces">Changes to interfaces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Dinterproject%2Dcompatibility">Inter&#45;Project Compatibility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Dlibraries">Libraries</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Dnamespaces">Namespace Management and Conventions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Dos%2Ddependencies">Operating System Compatibility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Dperformance">Performance</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Dsignals">Signals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/bp%2Dstandards">Standards Conformance</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/overview%2Dadmin%2Dsecurity">Administrative and Security Precedents and Policies</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/passwords%2Dcli">Reusable Passwords In Command Line Arguments and Environment Variables</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/passwords%2Dfiles">Storing Reusable Passwords on a Filesystem</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/rbac%2Dauths">Adding RBAC Authorizations</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/rbac%2Dintro">When to use setuid &#45;vs&#45; RBAC roles and profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/rbac%2Dprofiles">Building RBAC Rights Profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/security%2Dquestions">Security Questions</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/caselog">Caselog</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/handbook">ARC Handbook</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Ddev%2Dprocess">ARC Process Proposal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dgoals">Goals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dinvite">Introduction to the ARC message for project teams</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/arc%2Dscope">Responsibilities</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/case%2Dpub%2Dtool%2Dinfo">Case Publishing Tool Information</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/consolidation%2Dcharter">Chartering a Consolidation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/contract">Template for interface "contract"</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/onepager">Template for ARC Project creation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/opinion">Template for ARC Opinion</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/questionnaire">10 Questions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/sun%2Dreviewprocess">Reference: Sun’s current internal ARC process</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/policies">ARC Policies</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/ITS">Install Time Security</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/NITS%2Dpolicy">Network Install&#45;Time Security</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/PAM">Plugable Authentication Modules</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/SMF%2Dpolicy">Service Management Facility (SMF) usage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/audit%2Dpolicy">Audit Policy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/fma%2Devent%2Dprotocol">FMA Event Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/install%2Dlocations">Recommended Installation Locations for Solaris&#45;compatible Software Components</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/interface%2Dtaxonomy">Interface Taxonomy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/libraries">Library and Shared Object Requirements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/obsolete%2Deof">Obsolete and the EOF process</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/release%2Dtaxonomy">Release Taxonomy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/secure%2Dby%2Ddefault">Secure &#45; By Default</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/shared%2Dsharable">Packaging rules for system extensions (Shared and sharable components)</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/projects">Projects</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/testbed">Testing area for automated scripts</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/Developers">OpenSolaris Developers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/Distros">OpenSolaris Distros</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/Users">OpenSolaris Users</a></span></li>
+</ul></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2012, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>

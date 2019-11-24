@@ -1,0 +1,1098 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <title>
+                  SunPinyin代码导读-SLM部分 (Project input-method.sunpinyin_code_tour_slm) - XWiki
+              </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="imagetoolbar" content="no"/>
+                <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+input%2Dmethod/sunpinyin_code_tour_slm" />
+                        <meta name="document" content="Project input-method.sunpinyin_code_tour_slm"/>
+    <meta name="space" content="Project input-method"/>
+    <meta name="page" content="sunpinyin_code_tour_slm"/>
+        <meta name="revisit-after" content="7 days" />
+<meta name="description" content="SunPinyin代码导读-SLM部分" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+
+        <!-- com.xpn.xwiki.plugin.skinx.LinkExtensionPlugin -->
+    <link href="/bin/skin/skins/oso/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/oso/os_base1.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/oso/print.css" rel="stylesheet" type="text/css" media="print" />
+        
+
+
+    
+
+    <link href="/resources/js/xwiki/fullscreenedit/fullscreenEdit.css" rel="stylesheet" type="text/css" />
+<link href="/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript">
+var script1 = document.createElement('script')
+script1.src = "/resources/js/prototype/prototype.js"
+var script2 = document.createElement('script')
+script2.src = "/bin/skin/resources/js/xwiki/xwiki.js"
+var script3 = document.createElement('script')
+script3.src = "/resources/js/xwiki/suggest/ajaxSuggest.js"
+document.getElementsByTagName('head')[0].appendChild(script1);
+document.getElementsByTagName('head')[0].appendChild(script2);
+document.getElementsByTagName('head')[0].appendChild(script3);
+</script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.editor = "";
+XWiki.viewer = "";
+// ]]>
+</script>
+
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js'></script><script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js'></script>
+
+  </head>
+    	<body id="body" class="xwiki viewbody hideright">
+  <!-- These elements will be closed in the footer vm file -->
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+
+  <br/>
+  <br/>
+  <div id="Masthead">
+    <h1><a href="/bin/view/Main/">OpenSolaris</a></h1>
+    <a href="/bin/view/Main/" id="MastheadLogo"></a>
+    <a href="/bin/view/Main/" title="Home" rel="home"></a>
+    <div id="Iconbar">
+	<a id="CollectivesIcon" href="/bin/view/Main/collectives">Collectives</a>
+	<a id="DiscussionsIcon" href="/bin/view/Main/discussions">Discussions</a>
+	<a id="DocumentationIcon" href="/bin/view/Main/documentation">Documentation</a>
+	<a id="DownloadIcon" href="/bin/view/Main/downloads">Download</a>
+	<a id="SourceBrowserIcon" href="http://src.opensolaris.org">Source Browser</a>
+	<a id="FreeCD" href="http://www.opensolaris.org/os/TryOpenSolaris/">Free CD</a>
+    </div>
+  </div>
+
+
+ <div class="layoutsection">
+<div class="minwidthb"></div>
+
+    <div style="text-align:right;">
+      <a class="glink" href="http://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Binput%252Dmethod%2Fsunpinyin_code_tour_slm%3Fviewer%3Dcode%26%2338%3Blanguage%3Den" id="headerlogin">Log-in</a><span class="separator"> | </span>
+  <span class="glink" id="headerlanguages">
+  <a href="/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_slm?language=en">en</a>
+    </span>
+    </div> 
+</div>
+
+ <div id="headerspace" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+  <div id="breadcrumbs">
+    <span class="breadcrumbspace"><a href="/bin/view/Project+input%2Dmethod/">Project input-method</a>: </span>
+<a href='/bin/view/Project+input%2Dmethod/documents'>Documents</a> &gt; <a href='/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_slm'>SunPinyin代码导读-SLM部分</a>
+  </div>
+<hr/>
+</div>
+
+
+<div id="menuview"> 
+  <div id="actionmenu" class="layoutsubsection">
+<h3 id="xwikimenutitle" class="hidden">Top Menu</h3>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+<div class="topmenuentry" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmShow">
+<a class="tme"  href="/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_slm?viewer=code&amp;language=en" ><strong>Show</strong></a><span class="hidden menucolon">: </span><span class="submenu hidden">
+<span class="submenuitem"><a href="/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_slm?viewer=comments&amp;language=en" id="tmShowComments">Comments</a></span>
+<span class="submenuitem"><a href="/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_slm?viewer=attachments&amp;language=en" id="tmShowAttachments">Attachments</a></span>
+<span class="submenuitem"><a href="/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_slm?viewer=history&amp;language=en" id="tmShowHistory">History</a></span>
+<span class="submenuitem"><a href="/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_slm?viewer=information&amp;language=en" id="tmShowInformation">Information</a></span>
+</span></div>
+ <div class="topmenuentry" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);" id="tmPrint">
+<a class="tme"  href="javascript:window.print()" ><strong>Print</strong></a><span class="hidden menucolon">: </span><span class="submenu hidden">
+<span class="submenuitem"><a href="javascript:window.print()" id="tmPrintAction">Print</a></span>
+<span class="submenuitem"><a href="/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_slm?xpage=print&amp;language=en" id="tmPrintPreview">Print preview</a></span>
+<span class="submenuseparator">&nbsp;</span>
+<span class="submenuitem"><a href="/bin/export/Project+input%2Dmethod/sunpinyin_code_tour_slm?format=pdf&amp;language=en" id="tmExportPdf">Export as PDF</a></span>
+<span class="submenuitem"><a href="/bin/export/Project+input%2Dmethod/sunpinyin_code_tour_slm?format=rtf&amp;language=en" id="tmExportRtf">Export as RTF</a></span>
+<span class="submenuitem"><a href="/bin/export/Project+input%2Dmethod/sunpinyin_code_tour_slm?format=html&amp;language=en" id="tmExportHtml">Export as HTML</a></span>
+<span class="submenuitem"><a href="/bin/export/Project+input%2Dmethod/sunpinyin_code_tour_slm?format=xar&amp;name=Project+input%2Dmethod.sunpinyin_code_tour_slm&amp;pages=Project+input%2Dmethod.sunpinyin_code_tour_slm&amp;language=en" id="tmExportXar">Export as XAR</a></span>
+</span></div>
+</div>
+</div>
+
+</div>
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+<div class="main layoutsubsection">
+<h1><span>Wiki code for <em>SunPinyin代码导读-SLM部分</em></span></h1>
+<a href="/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_slm?viewer=code&showlinenumbers=0&language=en">Hide Line numbers</a>
+<br />
+<br />
+<textarea readonly="readonly" style="width: 100%; height: 300px;">
+1: ==  0. 综述
+2: 
+3:  首先check out输入法项目的代码：
+4:  $ hg clone ssh://anon//@//hg.opensolaris.org/hg/nv-g11n/inputmethod
+5:  或者到[[www.opensolaris.org&#62;&#62;http://www.opensolaris.org]]上的[[input-method&#62;&#62;Project input-method.WebHome]]项目，下载最新的[[代码仓库快照&#62;&#62;attach:Project input-method.files@inputmethod-repo-snapshot.tar.gz]]。（但是其中并不包括ime/data目录下那些较大的数据文件，你可以到[[这里&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/data/]]下载它们）
+6:  inputmethod/sunpinyin目录下是SunPinyin的代码，其中包括两部分，slm目录下是统计语言模型的代码（slm: statistical language model），ime目录下是和输入法相关的接口（ime: input method engine）。
+7:  slm中的代码用来构建一个支持back-off（回退）的n-gram（n元语法）静态统计语言模型。
+8:  首先执行下面的步骤来编译各个工具：
+9:  $ ./autogen.sh ~--prefix=/usr
+10:  $ make
+11:  build：这个目录下保存编译好的各个工具（以及它们的object文件），例如ids2ngram、slmbuild等。通过查看这个目录下的Makefile.am，你可以了解如何一步一步地构建词库和统计语言模型的二进制文件。
+12:  $ export LC_ALL=zh_CN.UTF-8
+13:  因为语料库和词表都使用UTF-8的编码，因此在进行后续步骤之前，需要将当前的语言环境设置为任意一个UTF-8的locale。
+14:  $ make test_corpus (或real_corpus)
+15:  这一步在raw目录中，建立一个corpus.utf8的符号链接。你完全可以手工建立这个链接。
+16:  $ make trigram
+17:  这一步建立一个trigram语言模型。
+18: 
+19: 1. 首先使用mmseg（最大正向分词），根据词表，对语料库进行分词，并将词的ID序列输出到一个文件中（../swap/lm_sc.ids）。
+20: 1. 然后使用ids2ngram，对所有3元组出现的次数进行统计，并输出到一个文件中。例如下面的句子：ABCEBCA。得到的3元序列包括：(&#60;S&#62; A B), (A B C), (B C E) ... ( B C A), (C A &#8217;。&#8217;), (A &#8217;。&#8217; &#60;/S&#62;)。&#60;S&#62;和&#60;/S&#62;分别表示句首和句尾。
+21: 1. 使用slmbuild来构造一个back-off的trigram语言模型，但是未经裁剪。
+22: 1. 使用slmprune对刚输出的trigram语言模型进行剪裁，使用的算法是基于熵的剪裁算法。
+23: 1. 使用slmthread对剪裁后的语言模型进行线索化，加快back-off（回退）查找的速度。将最终的结果输出到../data/lm_sc.t3g。
+24: 
+25:  $ make bs_trigram
+26:  这个目标和上面的类似，不同的是使用slmseg进行分词，它借助刚刚生成的基于最大正向分词得到的语言模型，对语料库进行重新分词。这样可以进一步提高语言模型的精确程度。
+27:  $ make lexicon
+28:  根据生成语言模型中的unigram数据，对词表进行处理，得到一个支持不完全拼音的词库文件。
+29:  代码的细节我们随后再详述。
+30: 
+31: ==  1. 词典与分词
+32: 
+33:  如前所说，在SunPinyin中，第一遍分词使用的正向最大匹配方法（FMM，forward maximum matching）。辞典加载之后，保存在trie树的数据结构中，其key是以USC-4编码（32位）的字符。其中某些节点是有效的词，例如在下图中最左侧的一条路径中，“中国”是一个有效的词。而有些节点，则是不成词的。例如“中华人民共和国”这个路径中的，“共”节点，就不成为一个有效的词。（和[[参考3&#62;&#62;http://xiecc.itpub.net/post/1476/52479]]中的数据结构相似）
+34:  需要注意的是，root的所有子节点都是有效词，因为所有的“字”都被被视为“单字词”。
+35: [[image:http://blogs.sun.com/yongsun/resource/dict_trie.png]]
+36: [[sim_dict.[h&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/sim_dict.h]]|[[cpp&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/sim_dict.cpp]]]:
+37: 
+38: &#62; [[parseText&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/sim_dict.cpp#66]] ()   : 加载text格式的辞典，并以trie树的形式保存在内存中。
+39: [[matchLongest&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/sim_dict.cpp#51]] (): 进行最长匹配，并返回匹配的长度。
+40: [[step&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/sim_dict.cpp#41]] ()        : 从当前节点转移到匹配给定key的一个孩子节点，并返回。
+41: 
+42: [[mmseg/mmseg.cpp&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/mmseg/mmseg.cpp]]:
+43: 
+44: &#62;  在[[processSingleFile&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/mmseg/mmseg.cpp]]()中，逐句读取语料库，例如，&#34;为人民办实事的精神&#34;，然后进行调用[[SIMDict::matchLongest&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/sim_dict.cpp#51]]()进行最长匹配。
+45:  因为辞典中有“为人民”这个词条，因此分割到的第一个词是“为人民”，其长度为3，然后调用[[getAmbiLen&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/mmseg/mmseg.cpp#173]]()，来分析是否有交集歧义,并返回最大交集歧义的长度。下面是每次迭代的情况：
+46: 1. 人民, 办实事的精神 -&#62; i=1, len=2, word_len=3, 对“人民办实事”进行最长匹配，分割到的词为“人民”，其长度为2，
+47: 1. 民办, 实事的精神 -&#62; i=2, len=2, word_len=4, 对“民办实事”进行最长匹配，分割到的词为“民办”，其长度为2，因为i与len的合超过了最初传入的word_len，则设置word_len为4，继续迭代。可以看出，此时歧义已经检测到了。
+48: 1. 办实事, 的精神 -&#62; i=3, len=3, word_len=6
+49: 1. 实事, 的精神 -&#62; i=4, len=2, word_len=6
+50: 1. 事, 的精神 -&#62; i=5, len=1, word_len=6, 最后歧义的长度为6
+51: 1. 退出循环，返回得到的长度，即6 如果指定了ambiguous-id，则会将这6个字符作为一个AMBI-ID（由参数-a指定），输出到分词的结果中。然后跳过这6个字符，继续进行分词。当句子结束时，如果使用二进制格式输出，则会[[输出一个句子结束的ID&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/mmseg/mmseg.cpp#231]]（由参数-s指定）。最后得到的结果是:
+52:  $ echo &#34;为人民办实事的精神&#34; | ./mmseg -d ../raw/dict.utf8 -f text -s 10  -a 9
+53:  &#60;ambi&#62;为人民办实事&#60;/ambi&#62; 的 精神
+54: 
+55:  那么，我们最终得到的分词结果中，所有的交集歧义都作为作为一个词AMBI-ID，相当于我们忽略了这部分信息（这个比例并不低）。这样在我们后面的统计中，绝大部分的3元组都可以保证是有意义和有价值的。进而训练得到的统计语言模型，能够排除交集歧义的影响。然后，可以这个模型，使用slmseg，重新对语料库进行分词，并计算新的语言模型。这一次，原来忽略的带有歧义的信息，我们也加以利用了。
+56:  $ echo &#34;为人民办实事的精神&#34; | ./slmseg -d ../raw/dict.utf8 -f text -s 10 -m ../data/lm_sc.t3g
+57:  为人民 办实事 的 精神
+58:  （注，因为版权的原因，我们无法公开内部使用的生语料库。不过，要使用slmseg，您可以在slm/data目录中，建立一个指向ime/data/lm_sc.t3g.&#60;arch&#62;的符号链接。）
+59:  References:
+60: 
+61: 1. [[数学之美 系列二 ~-- 谈谈中文分词&#62;&#62;http://googlechinablog.com/2006/04/blog-post_10.html]]
+62: 1. [[中文搜索引擎技术揭密：中文分词&#62;&#62;http://www.stlchina.org/twiki/bin/view.pl/Main/SESegment]]
+63: 1. [[“天堂的阶梯”设计的中文分词算法&#62;&#62;http://xiecc.itpub.net/post/1476/52479]]
+64: 
+65: ==  2. 统计三元组
+66: 
+67:  分词并ID化之后，是统计每个三元组出现的次数：
+68: {{code}}$ make m3_idngram
+69:  ./ids2ngram -n 3 -s ../swap/swap -o ../swap/lm_sc.id3gram -p 5000000 ../swap/lm_sc.ids{{/code}}
+70: [[ids2ngram.cpp&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/ids2ngram/ids2ngram.cpp]]：
+71: **[[ProcessingRead&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/ids2ngram/ids2ngram.cpp#59]]()**：
+72: 
+73: &#62;  读取上一步生成的ID文件。首先读取N-1个ID（也就是2个词），保存到ngram对象中的ids成员数组中。然后读取一个词，保存为ids数组的第三个（也就是ids[N-1]）元素。使用std::map的operator []，以ids[0..2]为key，取出该三元组对应的出现次数（如果是第一次出现，[]操作符会将这个&#60;key,0&#62;对儿加入到map中），并加1。将ids数组向左移动一个单位，继续迭代上述过程。
+74:  在迭代过程中，还会判断是否map的大小超过了预先设置的段的最大值（paraMax）。这是为了防止map在内存占用了过多的空间。如果超过了，则将map写入到交换文件中，记录下该段在交换文件的偏移，然后将map清空，继续统计。值得提醒的是，在使用iterator迭代std::map时是有序的，因为其内部是一个平衡的有序二叉树（通常为红黑树，即rb-tree）。后面会对这些段进行一个归并排序。
+75: 
+76: **[[ProcessingIdngramMerge&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/ids2ngram/idngram_merge.h#65]]()**：
+77: 
+78: &#62;  归并排序。对多个已经有序的数据段（或队列）进行归并排序，就是找出最小（或）最大的队头元素并输出，然后将该元素所在队列的队头后移一个单元，重复上面的过程，直至所有队列为空。如果归并的路数比较多时，对队头元素的排序就成为一个重要的步骤。在SunPinyin中，有一个模板类类处理文件的多路归并，即[[slm/sim_fmerge.h&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/sim_fmerge.h]]；它使用了heap（堆）算法，对队头元素进行排序。[[getBest&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/sim_fmerge.h#130]]()从heap中得到具有最小队头元素的分段，[[next&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/sim_fmerge.h#135]]()将该队列的后续元素重新插入到heap中。
+79: 
+80:  最后，我们得到了一个没有进行任何平滑的原始trigram，即所有出现的三元组以及其出现的次数。
+81: 
+82: ==  3. 构造back-off的n-gram语言模型
+83: 
+84:  接下来是构建一个支持back-off的n-gram模型：
+85: {{code}}$ make m3_slm
+86:  ./slmbuild -n 3 -o ../swap/lm_sc.3gram  -w 120000 -c 0,2,2 -d ABS,0.0005 -d ABS -d ABS,0.6 -b 10 -e 9 ../swap/lm_sc.id3gram{{/code}}
+87:  首先让我们了解一下何为n-gram。
+88:  对基于概率统计的自然语言处理来说，计算一个句子（S=W1,W2,...Wn）的概率，根据链式规则，为：
+89: {{code}}P(S) = P(W1).P(W2|W1).P(W3|W1,W2).P(W4|W1,W2,W3)...P(Wn|W1,W2,...Wn-1)
+90:       = P(W1).prod_i^n (P(Wi|W1,W2,...Wi-1))
+91: {{/code}}
+92:  为了在字符模式下表示数学公式，这里使用类Latex的公式语言。用Latex表示上面的公式，P(S) = P(W_1)\prod_i^nP(W_i|W_1,W_2,...W_{i-1})，其图像的表示为：
+93: 
+94: &#62; [[image:http://www.sitmo.com/latex/latex2png.php?eq=P%28S%29%20=%20P%28W_1%29%5Cprod_i%5EnP%28W_i%7CW_1,W_2,...W_%7Bi-1%7D%29]]
+95: 
+96:  而在现实中，因为数据稀疏性的问题，是不可能按照这个式子去计算的。一种可行的方案是，假定P(Wi|W1,W2,...Wi-1)只依赖于前面的N个词，即Wi-N+1,Wi-N+2,...Wi-1。具体来说，我们有unigram（N=0，context-free grammer，上下文无关文法），bigram（N=1），trigram（N=2），以及fourgram（N=3）。通常实际使用的多为trigram。
+97:  我们再了解几个常用的术语：
+98: 
+99: * types（型）：单词表（或词典）的大小
+100: * tokens（例）：语料库的大小
+101: * vector/solution space（解空间）：对于N-gram模型来说，V = types^N
+102: * data sparseness（数据稀疏性）：tokens &#60;&#60; V，也就是说语料库的大小远远小于解空间的大小。
+103: * Maximum likelihood（最大似然估计）：Pml(Wi|Wi-2,Wi-1) = C(Wi-2,Wi-1,Wi)/C(Wi-2,Wi-1)，C表示出现的次数。这个式子的意思是，P(Wi|Wi-2,Wi-1)的最大似然估计为，(Wi-2,Wi-1,Wi)出现的次数除以(Wi-2,Wi-1)出现的次数。
+104: 
+105:  许多可能的词序列，也许并没有被收集到训练语料库中。如果Pml(Wi|h)为0，那么整个句子的概率也就化为乌有了。例如，如果在语料库中只出现过&#34;Tom read a book&#34;，而没有出现过&#34;Yong read xxx&#34;的序列，那么Pml(Yong read a book) = 0。因此我们必须要对语言模型进行平滑处理（smoothing）。所谓平滑，就是将已知（已见到）事件的概率分出一小部分，匀给未知（或未见到）的事件，也就是出现次数等于0的事件。
+106:  平滑的方法有许多种：
+107: 
+108: * 简单有加1（或加delta）平滑，单独使用效果很差。
+109: * discounting（打折）平滑：例如Absolute Discounting，线性平滑，Witten-Bell方法，Good-Turing方法等等
+110: * 复合平滑，包括back-off平滑，插值平滑等
+111: 
+112:  一般的back-off模型的表示如下：
+113: {{code}}Ps(Wi|h) = Pd(Wi|h)         ~-- C(h,Wi) &#62; 0
+114:             bow(h).Ps(Wi|h&#8217;) ~-- C(h,Wi) == 0{{/code}}
+115: 
+116: * h&#8217;是h去掉其第一个词，对trigram (A,B,Wi)来说，h为(A,B)，h&#8217;为B。
+117: * Pd(Wi|h) &#60; Pml(Wi|h)，对最大似然估计进行打折（discount），可使用多种不同的打折方法。
+118: * bow(h)被称为back-off weight（回退权重），对于给定的h，bow(h)是一个**常数**，并且可以通过下面的方法来确定Ps(W1|h)+Ps(W2|h)+...+Ps(Wn|h) = sum_i (Ps(Wi|h)) = 1
+119: * 上面这个式子是递归的，如果(h&#8217;,Wi)出现次数为0，还会继续回退，也许会回退到Wi，甚至回退到平均分配（如果Wi也未出现）
+120: * 如果h在训练中没有见到，则P(Wi|h) = P(Wi|h&#8217;)
+121: 
+122:  Katz的back-off模型使用的是Good-Turing方法。Kneser-Ney是另一种back-off模型，其平滑效果要好于Katz方法。Stanley Chen和Joshua Goodman专门写过一篇[[论文&#62;&#62;http://www.cs.cmu.edu/%7Esfc/papers/h015a-techreport.ps.gz]]，详细比较了各种平滑方法的优劣，有兴趣可以去读一读。
+123:  下面来看代码。
+124: [[sim_slmbuilder.[h&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/sim_slmbuilder.h]]|[[cpp&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/sim_slmbuilder.cpp]]]：
+125: **[[CSlmBuilder::Create&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/sim_slmbuilder.cpp#96]](n)**：
+126: 
+127: &#62;  根据n初始化level数组，level[0]为pseudo root，其意义为平均分布。level[1]为unigram，level[2]为bigram，level[3]为trigram...对trigram来说，level[3]上的节点为叶子节点。叶子节点是没有bow信息的，因为它属于C(h,Wi)&#62;0的情况。
+128: 
+129: **[[CSlmBuilder::AddNGram&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/sim_slmbuilder.cpp#160]](ngram, fr)**：
+130: 
+131: &#62;  调用isExcludeId()来判断ngram的第一个词是否为排除在外的词（我们在参数中指定为9，也就是之前所说的AMBI-ID）。对数组level[1..n]的每个成员，检查其预留（reserve）的空间是否已经用尽，如果用尽，则分配更多的内存。如果第一个词不是排除在外的词，则将这个三元组出现的次数，累加到level[0][0]（也就是pseudo root）上。将ngram中的每个id加入到level[i] (0&#60;i&#60;=n) 的数组中，并累加前继节点的出现次数。对于level[n]（即leaf level），只有ngram的出现次数大于指定的cut number，才会加入；这样做是为了避免叶节点的数目过于庞大（可能达到数千万个）而无法保存在内存中。
+132:  其间还要判断，如果ngram[i] (0&#60;i&#60;=n-1) 为排除在外的词，则只统计ngram[0..i-1]的出现次数；如果ngram[i] (0&#60;=i&#60;=n-1) 为句子分割词的ID（我们在参数中指定为10），则只统计ngram[0..i]的出现次数。举例来说，如果某个trigram为(9, x, y)，则直接就跳过了；如果是(x, 9, y)，则只统计unigram (x)；如果是(10, x, y)，则统计unigram (10)；如果是(x, 10, y)，则统计unigram(x)和bigram (x, 10)。
+133: 
+134: **[[CSlmBuilder::Build&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/sim_slmbuilder.cpp#486]]()**：
+135: 
+136: &#62;  构建back-off的n-gram语言模型。
+137: 
+138: **[[CSlmBuilder::CountNr&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/sim_slmbuilder.cpp#209]]()**：
+139: 
+140: &#62;  统计出现次数小于SLM_MAX_R（即16）的n-gram的个数。例如nr[3][0]表示trigram的总数，nr[3][10]表示出现次数为10的trigram的总数（只可能是10的倍数，例如500）。这些数据是在进行打折时需要的。
+141: 
+142: **[[CSlmBuilder::AppendTails&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/sim_slmbuilder.cpp#299]]()**：
+143: 
+144: &#62;  为每个level添加一个tail，方便后面迭代条件的判断。
+145: 
+146: [[image:http://blogs.sun.com/yongsun/resource/backoff-trigram-data-structure.png]]
+147: **[[CSlmBuilder::Cut&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/sim_slmbuilder.cpp#276]]()**：
+148: 
+149: &#62;  将每个level中出现次数小于指定值的n元组删除。我们指定的cut数组为（-c 0,2,2），这表示我们将忽略出现次数小于等于2的bigram和trigram，但是并不对unigram进行裁剪。
+150: 
+151: **[[CSlmBuilder::Discount&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/sim_slmbuilder.cpp#337]]()**：
+152: 
+153: &#62;  初始化每个level所使用的discounter。由高的level到低的level，调用DiscountOneLevel()来为每个level执行打折。将level[0]（pseudo root）设为平均分布，其概率为1除以词的总数（由参数-w指定，本例为120000）。
+154: 
+155: **[[CSlmBuilder::DiscountOneLevel&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/sim_slmbuilder.cpp#317]](v, ch, disc ...)**：
+156: 
+157: &#62;  参数v是上一个level，例如，如果为level[3]执行打折，那么传入的第一个参数是level[2]。要为level[m]打折，遍历level[m-1]的每个节点，对每个节点的后续节点（[it-&#62;child, itnext-&#62;child)）进行打折。这里折扣掉的是出现的次数（frenquency），而非概率值。然后除以前继节点上记录的次数（root_freq），得到条件概率，并保存在原节点上。
+158: 
+159: **[[CSlmBuilder::CalcBOW&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/sim_slmbuilder.cpp#395]]()**：
+160: 
+161: &#62;  计算back-off weight，是从低的level向高的level进行的。base[i]指向的是level[i]的第一个元素，idx[i]表示在每个level上的游标，(base[i])[idx[i]]就是当前遍历的节点（这里利用了这样一个事实，那就是std::vector中分配的内存空间是连续的，可以通过指针偏移或数组下标来直接访问）。
+162: 
+163: &#62;  我们以计算level[2]上的BOW为例。此时lvl为2，迭代base[2]的每个词。首先用一个for循环，找到这个词的前继，例如idx[2]指向上图的level[2][1]（C），则其前继为level[1][0]（A），将它们放到words数组中，words[4]={0, A, C, .}。然后调用CalcNodeBow()来计算这个节点的BOW值，这个函数的最后两个参数，表示该节点的后续节点范围，[ch+node.child, ch+nodenext.child)。
+164: 
+165: **[[CalcNodeBow&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/sim_slmbuilder.cpp#367]](...)**：
+166: 
+167: &#62;  遍历[chh, cht)，将每个节点的概率值累加起来，放到sumnext变量中；同时调用builder-&#62;getPr(lvl, words+2)得到一个概率值，累加到sum变量中。words+2实际的作用是，去掉h最前面的那个词。沿用上面的例子，在第一次迭代时，words[4]={0, A, C, D}，那么words+2为{C, D}，getPr()得到的概率值为Ps(D|C)（注意，getPr()本身是一个递归函数，且当lvl为0时，返回level[0]的平均分布概率）。BOW值为(1.0-sumnext)/(1.0-sum)。
+168: 
+169: &#62;  我们前面介绍过，BOW的值是通过公式sum_i (Ps(Wi|h)) = 1来求解的。通过下面的转换，你就可以看出sumnext和sum各自的含义了。
+170: 
+171: &#62; [[image:http://blogs.sun.com/yongsun/resource/bow-calculation.png]]
+172: 
+173: ==  4. 基于熵对back-off模型进行剪枝
+174: 
+175:  这一回我们要介绍的是，如何基于熵对back-off模型进行剪枝（pruning）。
+176: {{code}}$ make m3_prune
+177:  ./slmprune ../swap/lm_sc.3gram ../swap/lm_sc.3gm R 100000 1250000 1000000{{/code}}
+178:  首先来看熵的定义，设p(x)是随即变量X的概率密度函数，则X的熵为：
+179: [[image:http://blogs.sun.com/yongsun/resource/entropy-equation.png]]
+180:  注：log均是以2为底的对数，且假定0log 0 = 0。
+181:  熵用来描述随机事件的不确定性的大小。熵值越大，不确定性就越高。等式的后半部分表明，熵实际上是log(1/p(X))的期望。假如p(X=xi)的概率为1/256，那么log(1/p(xi))=log(256)=8，也就是说要传输xi所表示的随机事件，需要用8个bit。而H(p)是对这个值的期望（加权平均），即平均信息长度。
+182:  再来看看相对熵（即Kullback-Leibler距离）：
+183: [[image:http://blogs.sun.com/yongsun/resource/relative-entropy.png]]
+184:  它表示的含义是，如果一个随机变量X的分布为p，我们却用概率分布q为其编码，所要多使用的比特位。
+185:  条件相对熵的计算公式为：
+186: [[image:http://blogs.sun.com/yongsun/resource/conditional-relative-entropy.png]]
+187:  注：这个公式的证明，请参见 &#34;[[Elements of Information Theory&#62;&#62;http://www.amazon.com/exec/obidos/ASIN/0471062596/qid%3D1117706264/sr%3D11-1/ref%3Dsr%5F11%5F1/104-5677540-4720753]]&#34; （《[[信息论基础&#62;&#62;http://www.china-pub.com/computers/common/info.asp?id=25215]]》，机械工业出版社）。
+188:  下面来看看如何应用相对熵来对back-off语言模型进行剪枝。下面的分析源自 &#34;[[Entropy-based Pruning of Backoff Language Models&#62;&#62;http://www.speech.sri.com/papers/darpa98-lm-pruning.ps.gz]]&#34; 一文。
+189:  回忆一下back-off模型的一般形式
+190: {{code}}
+191:  Ps(Wi|h) = Pd(Wi|h)         ~-- C(h,Wi) &#62; 0
+192:             bow(h).Ps(Wi|h&#8217;) ~-- C(h,Wi) == 0{{/code}}
+193:  剪枝的目标，就是要从模型中删除某些有明确估计（explicit estimation，即C(h,Wi) &#62; 0）的n-gram，以降低模型的参数规模，同时尽可能减少准确度的损失。（注意，在剪枝之后，剩余的那些有明确估计的n-gram，其概率并不改变。）
+194:  剪枝的步骤是：
+195: 
+196: 1. 选取阈值，
+197: 1. 分别计算剪去每个n-gram所引起的相对熵的增长
+198: 1. 将增长幅度偏低的那些n-gram从模型中删除，然后重新计算back-off weights。
+199: 
+200:  假设从模型中删除(h, w)后，再计算p(w|h)时，就需要进行回退估计（back-off or implicit estimation）了。要保证概率模型的规整性，即sum_wi p(wi|h) = 1，bow(h)必须重新计算，记为bow&#8217;(h)，则p&#8217;(w|h) = bow&#8217;(h).p(w|h&#8217;)。同时，原模型中所有涉及h的回退估计都会受到影响，将这种情况记为BO(wi,h)（实际上就是C(h,wi) == 0的情况）。我们可以得到：
+201: [[image:http://blogs.sun.com/yongsun/resource/relative-entropy-for-pruning-1.png]]
+202:  注意，h和w都是给定的、具体的。且除了(h,w)之外的，原先有明确估计的n-gram，其概率不变，因此相互抵消掉了。
+203:  最后（推导过程见上面引用的那篇论文），我们可以得到：
+204: [[image:http://blogs.sun.com/yongsun/resource/relative-entropy-for-pruning-2.png]]
+205:  其中，p(h) = p(h1)p(h2|h1)...，并且，我们知道：
+206: [[image:http://www.sitmo.com/latex/latex2png.php?eq=%5Csum_%7Bw_i:BO%28w_i,h%29%7D%20p%28w_i%7Ch%29%20=%201%20-%20%5Csum_%7Bw_i:%5Cneg%20BO%28w_i,h%29%7D%20p%28w_i%7Ch%29]]
+207:  那么接下来的问题就是，如何计算bow&#8217;(h)了。
+208: [[image:http://blogs.sun.com/yongsun/resource/bow%28h%29%20and%20bow%27%28h%29.png]]
+209:  计算bow&#8217;(h)，就是将计算bow(h)公式分子分母中的求合式中，去掉已经剪枝的w。因为bow(h)是已知的，我们求得分子，也就可以得到分母，然后在分子和分母上分别加上p(w|h)和p(w|h&#8217;)。这样就可以得到bow&#8217;(h)了。
+210:  下面来看代码，
+211: [[slmprune.cpp&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/slmprune/slmprune.cpp]]：
+212: **
+213: [[CSlmPruner::Prune&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/slmprune/slmprune.cpp#85]]()**：
+214: 
+215: &#62;  从level[N]到level[1]，调用PrunLevel(lvl)进行剪枝。完成后调用CalcBOW()重新计算level[0..N-1]上各节点的back-off weight。
+216: 
+217: **[[CSlmPruner::PruneLevel&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/slmprune/slmprune.cpp#142]](lvl)**：
+218: 
+219: &#62;  sz[lvl]是level[lvl]中节点的数量，其中包括一个尾节点（pseudo tail），减1为实际的节点数，赋值给n。cut[lvl]中是要剪去的n-gram的数量。分配TNodeInfo[n]数组，赋给pbuf。迭代level[lvl]中的节点，用一个for循环找出该节点的前继节点，然后将这个n-gram放到hw[0..lvl]中，并将各个level上的下标保存在idx[0..lvl]中。判断这个节点是否有子节点（(pn+1)-&#62;child &#62; pn-&#62;child），如果有子节点，则这个节点不可被剪掉。如果没有子节点，调用CalcDistance(lvl, idx, hw)计算剪掉这个节点所引起的相对熵的增量。将上述信息保存到pbuf中。继续迭代level[lvl]的下一个节点。
+220:  迭代完成后，对TNodeInfo数组进行一个堆排序。然后迭代TNodeInfo数组的前cut[lvl]个元素，将level[lvl][pinfo-&#62;idx]上节点的概率值标为1.0。然后执行CutLevel()，将标记概率有1.0的节点从level[lvl]中删除，并修改level[lvl-1]前继节点的child下标。将level[lvl]新的大小赋值给sz[lvl]。清理分配的内存空间和成员变量，然后退出。
+221: 
+222: **[[CSlmPruner::CalcDistance&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/slmprune/slmprune.cpp#275]](lvl, idx[], hw[0..lvl])**：
+223: 
+224: &#62;  首先从parent节点上得到bow(h)，保存在BOW变量中。然后计算p(h)，p(h) = p(hw1).p(hw2|hw1)...p(hwlvl-1|hw1hw2...hwlvl-2)，保存在PH变量中。然后level[lvl][idx[lvl]]节点上概率值，即为p(w|h)，保存在PHW变量中。调用getPr(lvl-1, hw+2)，得到p(w|h&#8217;)的概率指，保存在PH_W变量中。
+225:  如果cache_level不是lvl-1（那么只可能是-1），或者cache_idx不等于idx[lvl-1]（那么只可能是-1），则将cache_level和cache_idx分别赋值，并且将cache_PA和cache_PB初始化有1.0。迭代父节点的所有子节点[parent-&#62;child, (parent+1)-&#62;child)，得到每个子节点上的概率值pr（即p(wi|h)），并从cache_PA中减去；将hw[lvl]赋值为当前子节点的词id，调用getPr(lvl-1, hw+2)，得到概率值p_r（即p(wi|h&#8217;)），并从cache_PB中减去。迭代结束之后，PA = sum_{w_i:BO(w_i,h)} P(w_i|h)，而PB = sum_{w_i:BO(w_i,h)} P(w_i|h&#8217;)。然后分别加上p(w|h)和p(w|h&#8217;)，相除得到bow&#8217;(h)，保存在_BOW中。
+226:  最后套用公式，得到D(p||p&#8217;)，并返回。
+227: 
+228: **[[CSlmPruner::CalcBOW&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/slmprune/slmprune.cpp#236]]()，[[CalcNodeBow&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/slmprune/slmprune.cpp#217]](...)**：
+229: 
+230: &#62;  和上一节中的**CSlmBuilder::CalcBOW()**和**CalcNodeBow(...)**基本雷同。就不再赘述了。
+231: 
+232: ==  5. 语言模型线索化
+233: 
+234:  让我们来看看最后一个步骤，将剪枝后的语言模型线索化（threading）。
+235: {{code}}$ make m3_thread
+236:  ./slmthread ../swap/lm_sc.3gm ../data/lm_sc.t3g
+237: {{/code}}
+238:  线索化的目的是为了加快语言模型的查找速度。以trigram为例，如果我们要计算句子“ABCDE。”的概率，P(S) = P(A).P(B|A).P(C|AB).P(D|BC).P(E|CD).P(&#60;EOS&#62;|DE)，并假定这些条件概率的求解无需回退。
+239:  首先我们从level[1]（unigram中），可以通过二分查找，找到P(A)；然后从A的孩子节点中，二分找到B，得到P(B|A)；然后从B的孩子节点二分找到C，得到P(C|AB)。再接下来呢，我们要计算的是P(D|BC)。这时，我们只有重新在unigram中二分找到B，然后再在B的孩子节点中二分找到C，才能计算P(D|BC)的值。这无疑是很低效的。如果我们在计算P(C|AB)时，能够从它的节点上，直接定位到(B,C)，就可以大大加快查找的速度。
+240:  我们用(level, idx)来标识一个节点，节点上的信息用(W, h&#8217;, p, b, c)来表示，其中：
+241: 
+242: * W：跟在history后面的词ID。这个节点所在位置，还隐含了一个信息，就是它的历史由来。
+243: * h&#8217;：指向下一步要回退到的节点，用(level&#8217;, idx&#8217;)来表示。
+244: * p：p(W|h)
+245: * b：bow(h)
+246: * c：其下一个level中后续节点的开始位置
+247: 
+248:  当然，叶子节点上是没有b和c的。现在，回退模型的结构，就从一棵树变成了一个网。它的基本操作是：在当前历史状态hi(level,idx)下，输入一个词W，则转移到一个新的历史状态hj(level&#8217;, idx&#8217;)，并返回P(W|h)。新节点hj的level&#8217;，并不总等于level-1。例如，C(ABC)&#62;0，但是(B,C)在训练时没有见到，则这个节点的h&#8217;就是level[1]上的C节点。如果C也没有统计到，则h&#8217;就是pseudo root节点（level[0][0]）了。
+249:  让我们考察下面一个片段。
+250: {{code}}                                  level+1
+251:  h (level,idx)    ~-----------&#62;   W1,p1,h&#8217;1,[b,c]
+252:      h&#8217;,bow       \              ... ...
+253:                    \             Wi,pi,h&#8217;i,[b,c]
+254:                     \            ... ...
+255:                      ~--------&#62;   Wk,pk,h&#8217;k,[b,c]
+256: {{/code}}
+257:  输入一个词W。如果W出现在h的孩子节点中，记为(level+1,idx&#8217;)，其p值就是P(W|h)。
+258:      如果该节点有子节点，那么(level+1,idx&#8217;)就是新的历史节点；
+259:      如果该节点没有子节点，则它的h&#8217;，即为新的历史节点。
+260:  如果W没有出现在h的孩子节点中，则从(level,idx)节点中的h&#8217;开始，继续进行上面相同的操作，找到新的历史节点，并将得到的概率值乘上bow(h)，作为P(W|h)返回。注意，这是一个递归的过程。
+261:  下面来看看代码：
+262: [[slmthread.cpp&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/thread/slmthread.cpp]]：
+263: **[[CSIMSlmWithIteration::getIdString&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/thread/slmthread.cpp#124]](it, history)**：
+264: 
+265: &#62;  成员变量m_history中保存的是各个level中的index，将节点上的词ID保存到传入的history参数中。next()方法将m_history最后面的下标（即当前level的下标）加1，然后调用adjustIterator()，找出新节点各前继节点的下标，保存在m_history中。
+266: 
+267: **[[CSIMSlmWithIteration::findBackOffState&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/thread/slmthread.cpp#110]](n, hw, bol, bon)**：
+268: 
+269: &#62;  寻找某个n-gram（长度为n，保存在hw[1..n]中）的回退节点（h&#8217;），返回它的level和idx。调用findState()去查找hw[2..n]在level[n-1]上的下标idx，如果下标&#62;=0且该节点(n-1, idx)有子节点，则返回h&#8217;的位置。否则调用findState()查找hw[3..n]在level[n-2]上的下标，...，如果循环到hw[n]还是找不到，则返回pseudo root节点。
+270:  举例来说，查找trigram (A,B,C)的回退节点。查找(B,C)是否存在，如果存在则返回(2, idx_BC)。否则，查找(C)是否存在，如果存在则返回(1, idx_C)。否则返回(0, 0)。
+271: 
+272: **[[CSIMSlmWithIteration::findState&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/thread/slmthread.cpp#85]](n, hw)**：
+273: 
+274: &#62;  寻找n-gram（长度为n，保存在hw[1..n]中）在level[n]上状态节点的下标。如果该n-gram没有找到，则返回-1。
+275: 
+276:  在threading的过程中，还对32位浮点数进行了压缩。其中bow被压缩到14个bits，pr被压缩到16个bits。大致思想是，对在bow（或pr）中出现的所有浮点数进行统计，将距离比较近的浮点数进行“合并”，将浮点数的总数控制在1&#60;&#60;BITS_BOW（或1&#60;&#60;BITS_PR）内；在生成的语言模型二进制文件中，会有两个浮点数的表，通过查表来得到原来的浮点数值。我对这个算法的细节还不是很清楚，有机会请原作者[[张磊&#62;&#62;http://www.opensolaris.org/viewProfile.jspa?id=43520]]来讲解一下。
+277:  现在，我们就得到了最终的语言模型~--lm_sc.t3g。你可以用tslminfo来查看它的信息：
+278: {{code}}$ make m3_tslminfo
+279:  ./tslminfo -p -v -l ../raw/dict.utf8 ../data/lm_sc.t3g &#62;../swap/lm_sc.t3g.arpa
+280:  $ tail ../swap/lm_sc.t3g.arpa
+281:  点击 率 也   0.036363638937 (2,839922)
+282:  点击 率 最高   0.081818044186 (2,840054)
+283:  点击 率 的   0.096969485283 (2,840080)
+284:  点击 率 达到   0.036363638937 (2,840122)
+285:  点击 量 达   0.485714286566 (2,1132198)
+286:  点击 鼠标 ，   0.400000005960 (1,1)
+287:  点击 鼠标 左   0.309090882540 (2,1186378)
+288:  率队 取得 &#60;unknown&#62;   0.479999989271 (2,366031)
+289:  率队 在 &#60;unknown&#62;   0.130769222975 (2,431213)
+290:  率队 打 了   0.479999989271 (2,642183)
+291: {{/code}}
+292:  我们可以通过[[CThreadSlm&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/slm.h]]类来访问或使用它，下一节将以[[slmseg&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/slmseg/slmseg.cpp]]为例，看看如何利用最终生成的语言模型来进行搜索。
+293: 
+294: ==  6. 如何使用生成的语言模型
+295: 
+296:  我们在上面的步骤中，已经得到了线索化（threaded）的语言模型。那么如何来访问或使用这个模型呢？让我们看看[[slm.h&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/slm.h]]文件，CThreadSlm类的public方法，只有下面几个：
+297: 
+298: 1. load()：将语言模型加载到内存中
+299: 1. free()：释放语言模型所占据的内存
+300: 1. isUseLogPr()：是否使用log值作为概率值
+301: 1. transfer(history, wid, result)：从历史状态history，给定输入wid，转移到一个新的状态result，并返回P(wid|history)的概率值。
+302: 1. transferNegLog(history, wid, result)：和上面的方法一样，只不过返回的是-log(p(wid|history)。
+303: 1. history_state_of(st)：求得状态st的h&#8217;，并返回。
+304: 1. historify(st)：将状态st设置为它的h&#8217;。
+305: 1. lastWordId(st)：返回状态st的最后一个词的id。设st为(lvl, idx)，如果lvl&#62;=N，则返回m_Levels[N][idx]；如果0&#60;lvl&#60;N，则返回m_level[lvl][idx]；如果lvl==0，且idx==0，则返回pseudo root的wid（即0），**但如果idx&#62;0，就返回idx**（我们将来在介绍输入法的[[history cache&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/src/ic_history.h]]时，会涉及到这种情况）。
+306: 
+307:  让我们看看[[slmseg&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/slmseg/slmseg.cpp]]如何使用CThreadSlm类来进行基本的搜索。
+308: {{code}}$ make slmids3
+309:  ./slmseg -d ../raw/dict.utf8 -f bin -s 10 -m ../data/lm_sc.t3g ../raw/corpus.utf8 &#62;../swap/lm_sc.ids
+310: {{/code}}
+311:  来看[[slmseg/slmseg.cpp&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/slmseg/slmseg.cpp]]的代码：
+312: 
+313: {{code}}struct TLatticeWord {
+314:    int m_left;
+315:    int m_right;   //[m_left, m_right)为这个词在lattice上的位置范围
+316:    int m_wordId;  //词的ID
+317:  };
+318:  struct TLatticeStateValue{
+319:    double             m_pr;       //该状态节点上的概率值。
+320:    TLatticeWord*      mp_btword;  //回溯的(back-trace)词，即由哪个词跳转到当前状态的
+321:    CThreadSlm::TState m_btstate;  //回溯的(back-trace）状态节点，即由哪个状态跳转过来的
+322:  };
+323:  /* 语言模型的状态节点，及其状态信息 */
+324:  typedef std::map&#60;CThreadSlm::TState, TLatticeStateValue&#62; TLatticeColumnStates;
+325:  /* 表示lattice上的一列 */
+326:  struct TLatticeColumn {
+327:    TLatticeWordVec m_wordstarting;  //{{/code}}{{code}}起始于{{/code}}{{code}}该列上的词。其实就是在扩展本列状态节点时，{{/code}}{{code}}将要输入的词。{{/code}}{{code}}
+328:                                     //转移得到的新状态节点，位于后面的lattice[word.m_right]上。
+329:    TLatticeColumnStates m_states;   //该列上的状态节点及其对应的状态信息
+330:  };
+331: {{/code}} **
+332: [[processSingleFile&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/slmseg/slmseg.cpp#329]]()：**
+333: 
+334: &#62;  逐句读取文件。对每个句子，调用buildLattice()构建搜索需要的lattice（栅格），然后调用searchBest()进行搜索，通过getBestPath()得到最佳的切分，最后调用output()将其输出。
+335: 
+336: **[[buildLattice&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/slmseg/slmseg.cpp#245]](sentence, lattice)**：
+337: 
+338: &#62;  将lattice[0]上的状态，设置为pseudo root。将i初始化为0，对sntnc[i..n]进行最大正向匹配，得到词长len。然后调用getAmbiLen()得到最大交集歧义长度ambilen。如果ambilen&#60;=len，则无交集歧义，调用insertLatticeWord()，将分词得到的词([i,i+len),Wid)，加入到lattice[i]的词列表中；令i=i+len，继续循环。如果有歧义，则调用fullSegBuildLattice()，对sntnc的[i..i+ambilen)子句进行全切分，将所有可能的词划分（包括所有的单字词），假设其位置为[left, right)，加入到lattice[left]中；然后i=i+ambilen，继续循环。遍历完整个句子之后，在最后面加入一个句子结束的标识（下面的例子中，我们用“。”来表示）。
+339:  我们还借用[[第二回&#62;&#62;http://blogs.sun.com/yongsun/entry/sunpinyin%E4%BB%A3%E7%A0%81%E5%AF%BC%E8%AF%BB_%E4%BA%8C]]中的例子：
+340: 
+341: &#62; [[image:http://blogs.sun.com/yongsun/resource/slmseg_build_lattice.png]]
+342: 
+343: &#62;  对例句进行最大正向匹配，得到的词为“发扬”，且无歧义，则将“发扬”加入到lattice[0]上的词列表中。然后i=2，继续循环。FMM得到的词是“为人民”，但是歧义长度为6，则需要对sntnc[2..7]进行全切分。将idx由2向7移动，将idx上所有可能的词（包括单字词），加入到lattice[idx]中。然后i=2+6=8，继续循环。FMM得到的词为“的”，且无歧义。然后i=9，最大正向匹配得到的词为“精神”，且无歧义。循环结束，最后在末尾加上一个句子结束的ID。可以看到lattice[1]上没有词，而lattice[2]中的词有：“为”、“为人”和“为人民”。依次类推...
+344: 
+345: **[[searchBest&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/slmseg/slmseg.cpp#276]](lattice)**：
+346: 
+347: &#62;  从0开始，遍历lattice。对lattice[i]上的所有状态节点，用该列上的各个词([left, right), Wid)，来扩展它（调用CThreadSlm::transferNegLog()），将新状态节点的h&#8217;（CThreadSlm::historify(his)），保存在lattice[word.m_right].m_states中。注意，两个不同的状态节点，例如(A, C)和(B, C)，给定一个输入词D，可能得到相同的h&#8217;（即(C, D)），那么这两条路径中只保留概率大者就可以了。
+348: 
+349: [[image:http://blogs.sun.com/yongsun/resource/slmseg_search_best.png]]
+350: 
+351: &#62;  首先从lattice[0]的states开始，我们在buildLattice()时，已经将它设置为pseudo root节点(0, 0)了。lattice[0]上只有一个词，“发扬”；调用CThreadSlm::transferNegLog((0,0), wid_of(&#34;发扬&#34;))，得到新的状态节点和概率值（P(&#34;发扬&#34;)），将该节点的h&#8217;（lvl=1, idx)，及其状态信息（概率值和回溯信息），放到lattice[2]上。然后查看lattice[1]，它上面没有要扩展的状态节点。进而判断lattice[2]，有一个状态节点，并有三个词（“为”，“为人”，“为人民”），将三个新的h&#8217;状态节点，分别保存在lattice[3]，lattice[4]和lattice[5]上。依次类推...
+352:  这是一个动态规划（dynamic programming）问题，这里使用的是Viterbi网格（Viterbi Lattice）算法。
+353: 
+354: **[[getBestPath&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/slm/slmseg/slmseg.cpp#304]](lattice, segResult)：**
+355: 
+356: &#62;  从后向前，回溯lattice，将回溯的词id放到segResult中。最后再将segResult翻转一下，就得到了最佳的切分。对本例来说，就是上图中的蓝色路径。
+357: 
+358: ==  7. 生成拼音词表
+359: 
+360:  slm模块的最后一步是，生成拼音词表（lexicon）：
+361: {{code}}$ make lexicon
+362:  ./genpyt ../raw/dict.utf8 ../data/pydict_sc.bin ../swap/pydict_sc.log.utf8 ../data/lm_sc.t3g
+363: {{/code}}
+364:  这一步操作包括，建立一个支持不完全拼音的键树（Key Tree）；将节点上的候选词，按语言模型中的unigram进行排序。
+365:  我 们这里还要说明一下，在训练语言模型时对多音字词的处理。在处理语料库时，理想的情况下，应该将不同的读音视为不同的词ID。但是要准确地进行拼音标注， 本身就十分困难，特别第一遍用FMM分词训练语言模型时。我们使用了下面的折衷方法：在词典文件dict.utf8中，我们对读音的常见程度进行了标记。 例如“长”，它的两个读音“zhang”和“chang”都比较常见，分别被标为1；而“她”（ta），另一个读音“chi”则十分罕见，因此将其标为- 1。在训练时，我们将所有遇到的“她”，都认为是“ta”，然后为“chi”的读音分配一定的概率，并为其分配一个新的词ID。
+366:  下面来看代码：
+367: [[lexicon/pytrie_gen.cpp&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/lexicon/pytrie_gen.cpp]]:
+368: **[[CPinyinTrieMaker::constructFromLexicon&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/lexicon/pytrie_gen.cpp#181]](fileName)：**
+369: 
+370: &#62;  将 词典文件的每一行读取到buf中，然后调用parseLine()进行解析，返回词的buf（word_buf，UTF-8编码）、ID和发音（可能有多 个，每个发音有一个cost值，缺省为0）的集合~--pyset。判断这个词的编码类型，0x0为GB2312，0x1为GBK，0x2为 GB18030。将m_Lexicon[id]赋值为word_buf。遍历这个词的所有读音，调用insertFullPinyinPair(t, wid)，将拼音串为t的词wid，插入到trie树中。在处理完词典文件中的词之后，调用threadNonCompletePinyin()，扩展不 完全拼音的节点。
+371: 
+372: **[[CPinyinTrieMaker::insertFullPinyinPair&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/lexicon/pytrie_gen.cpp#347]](pinyin, wid)：**
+373: 
+374: &#62;  将pnode 设为trie树的根节点。遍历pinyin串，如果*p==&#8217;\&#8217;&#8217;（即音节分割符），则将pnode节点的 m_bFullSyllableTransfer设置为true。调用insertTransfer(pnode, *p)，在pnode的子转移节点（m_Trans ）中查找是否已经存在*p，如果不存在，则创建一个新节点，累计到m_AllNodes，并赋值给m_Trans[c]；最后返回*p对应的节点（依旧赋 值给pnode）。将pnode的m_bExpanded设为true，并插入到其自身的m_PrimitiveNodes中。遍历结束后，如果 pinyin串不是以&#8217;\&#8217;&#8217;结尾，则插入一个音节分割符的节点。最后，调用insertWordId()，将wid插入到pnode的 m_WordIdSet中。
+375:  在将所有完全拼音节点插入完毕之后，trie树上的所有节点（累计在m_AllNodes），都被标记为已扩展，且其m_PrimitiveNodes中，只有其本身一个节点。
+376: 
+377: **[[CPinyinTrieMaker::threadNonCompletePinyin&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/lexicon/pytrie_gen.cpp#371]]()：**
+378: 
+379: &#62;  遍 历m_AllNodes中的节点，如果这个节点还没有扩展过（也就是后来加入的不完全拼音的节点），则调用expandNode(pnode)，扩展该节 点。如果这个节点的syllable prefix（音节前缀）长度&#62;0，且这个前缀不是一个完整音节（即没有被注册到m_FullSyllables中），并且pnode的转发子节点 中没有&#8217;\&#8217;&#8217;，则调用addNonCompleteSyllableTransfer()为pnode节点添加不完整拼音的转发节点。
+380: 
+381: **[[CPinyinTrieMaker::addNonCompleteSyllableTransfer&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/lexicon/pytrie_gen.cpp#452]](pnode)：**
+382: 
+383: &#62;  调用findSyllableChildren()，在pnode-&#62;m_PrimitiveNodes个节点的子树（m_Trans）中，递归查找同级的音节边界节点。如果pnode的音节前缀是&#34;c&#34;、&#34;z&#34;或&#34;s&#34;，则查找时忽略&#8217;h&#8217;的子树。
+384:  例如我们有：
+385: {{code}}[[image:http://blogs.sun.com/yongsun/resource/lexicon_example.png]]{{/code}}{{code}}
+386: {{/code}} N0节点的primitive node就是自身，syChildren为N1和N2两个节点。
+387:  在m_StateMap 中查找syChildren（本例中是N1和N2两个节点的集合）对应的节点。如果不存在，则创建一个新的TNode节点pChildNoe，将它加入到m_AllNodes的尾部，其 m_PrimitiveNodes为syChildren，且其m_bExpanded为false。将syChildren中各节点的候选词，合并到新节点中。最后将pChildNode作为pnode节点中的&#8217;\&#8217;&#8217;转移。即有：
+388: {{code}}[[image:http://blogs.sun.com/yongsun/resource/lexicon_example1.png]]
+389: {{/code}} 再 如，/~--c~--a~--&#8217;~--h~--a~--n~--&#8217;~--(擦汗..)在这条路径上，当遍历到节点N3时，找到的音节边界节点为N5，它可以在m_StateMap中找到（当 初在insertFullPinyinPair()时，所有节点的primitive node都登记在m_StateMap中了）。因此N3节点上新加入的&#8217;\&#8217;&#8217;转移，直接指向了尾节点。
+390: 
+391: **[[CPinyinTrieMaker::expandNode&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/lexicon/pytrie_gen.cpp#394]](pnode)：
+392: **
+393: 
+394: &#62;  遍 历pnode节点的 primitive nodes，将每个节点的转移节点（除&#8217;\&#8217;&#8217;外），都并入到combTrans中。例如，要扩展上图中的N7节点（即c&#8217;）节点，其primitive nodes为N1和N2，遍历它们各自的转移节点，并入到combTrans中。combTrans[&#8217;h&#8217;]中有两个节点，分别为上图的N3和 N4，这两个节点作为一个集合在以前没有遇到过，因此创建一个新TNode节点pChildNode，将它的primitive nodes设置为[N3, N4]，且其m_bExpanded为false，然后加到m_AllNodes的尾部，并作为N7对&#8217;h&#8217;的转移节点，但它自己的转移节点尚为空，这个新节点以后也将被扩展。 combTrans[&#8217;d&#8217;]中只有一个节点~--N6，且已经见过，将它直接作为N7对&#8217;d&#8217;的转移节点。
+395: [[image:http://blogs.sun.com/yongsun/resource/lexicon_example2.png]]
+396:  让我们看看最后扩展的结果：
+397:  c&#8217; 采 擦 才 嚓
+398:  c&#8217;d&#8217; 菜单
+399:  c&#8217;da&#8217; 菜单
+400:  c&#8217;dan&#8217; 菜单
+401:  c&#8217;h&#8217; 才华 擦汗
+402:  c&#8217;ha&#8217; 擦汗
+403:  c&#8217;han&#8217; 擦汗
+404:  c&#8217;hu&#8217; 才华
+405:  c&#8217;hua&#8217; 才华
+406:  ca&#8217; 擦 嚓
+407:  ca&#8217;h&#8217; 擦汗
+408:  ca&#8217;ha&#8217; 擦汗
+409:  ca&#8217;han&#8217; 擦汗
+410:  cai&#8217; 采 才
+411:  cai&#8217;d&#8217; 菜单
+412:  cai&#8217;da&#8217; 菜单
+413:  cai&#8217;dan&#8217; 菜单
+414:  cai&#8217;h&#8217; 才华
+415:  cai&#8217;hu&#8217; 才华
+416:  cai&#8217;hua&#8217; 才华
+417:  ch&#8217; 查 察
+418:  cha&#8217; 查 察
+419: 
+420: **[[CPinyinTrieMaker::write&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/lexicon/pytrie_gen.cpp#515]](fp, psrt)：**
+421: 
+422: &#62;  遍 历所有m_AllNodes中 的所有，计算每个节点保存到文件中的偏移量，记录在nodeOffsetMap中。遍历m_Lexicon中的词，记录要保存这些词所需要的空间。再次遍 历m_AllNodes，如果节点上的m_WordIdSet不为空，则用传入的psrt（CWordEvaluator，实际使用的是 CUnigramSorter），得到每个词的cost（即unigram的概率）；然后对该节点上的候选词表进行排序。将节点输出到文件中。在遍历完 m_AllNodes之后，把词表m_Lexicon也输出到文件中。
+423: 
+424:  最终生成的词表文件，保存到data/pydict_sc.bin中，我们可以通过[[CPinyinTrie&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/src/lexicon/pytrie.h]]类来访问它。CPinyinTrie中包括加载词表文件，释放内存空间，以及若干的transfer()方法：即输入一个拼音字符（或字符串），从当前状态（亦可能是root），转移新的状态节点。在后面介绍[[ime&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/ime/]]部分的代码时，会涉及到对这个类的使用。
+425:  至此，[[slm&#62;&#62;http://src.opensolaris.org/source/xref/nv-g11n/inputmethod/sunpinyin/slm/]]部分的代码就基本介绍完了，希望能对大家了解n-gram语言模型、和SunPinyin训练语言模型的代码细节，有稍许帮助。
+</textarea>
+
+<div class="clearfloats">
+</div>
+</div>    </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded Search">
+<h5 class="xwikipaneltitle hidden" onclick="togglePanelVisibility(this.parentNode);">Search</h5>
+<div class="xwikipanelcontents">
+  <form action="/bin/view/Main/WebSearch">
+    <div id="globalsearch">
+      <input id="globalsearchinput" type="text" name="text" value="search..." size="15" onfocus="if (this.value == 'search...') value=''; this.select();" onblur="if (this.value == '') value='search...'; this.blur()"/>
+&nbsp;
+      <input class="button" value="Go" type="image" src="/skins/oso/go.png"/>
+    </div>
+  </form>
+</div>
+</div>
+                        <div class="panel expanded OSNav">
+<h5 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSNav','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSNav'); togglePanelVisibility(this.parentNode);">Collectives</h5>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavCommunity Group">
+            <div id="xwikinavCommunity GroupHeader" class="accordionTabTitleBar"><h6>Community Group</h6>
+            </div>
+            <div id="xwikinavCommunity GroupContent" class="accordionTabContentBox">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Community+Group+edu/">Academic and Research</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+accessibility/">Accessibility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+advocacy/">Advocacy</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+appliances/">Appliances</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+approachability/">Approachability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+arc/">Architecture Process and Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+brandz/">BrandZ</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+chinese_users/">Chinese Users</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+cab/">Community Advisory Board</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+databases/">Databases</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+desktop/">Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+device_drivers/">Device Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+distribution/">Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+documentation/">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+dtrace/">DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+emerging_platforms/">Emerging Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+fm/">Fault Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+games/">Games on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ha%2Dclusters/">HA Clusters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+hpcdev/">HPC Developer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+install/">Installation and Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+int_localization/">Internationalization and Localization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+laptop/">Laptop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ldoms/">Logical Domains</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+mdb/">Modular Debugger (MDB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+networking/">Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+nfs/">NFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+observability/">Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ogb/">OpenSolaris Governing Board (OGB)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+printing/">OpenSolaris Printing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+on/">OS/Net (ON)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+performance/">Performance</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+pm/">Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+power_pc/">PowerPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+security/">Security</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+smf/">Service Management Facility (smf(5))</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sw%2Dporters/">Software Porters</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+volume_manager/">Solaris Volume Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+storage/">Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+sysadmin/">Systems Administration Community Group</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+testing/">Testing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+tools/">Tools Home</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+ufs/">Unix File Systems (UFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+web/">Website Community</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+x_win/">X Window System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+xen/">Xen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zfs/">ZFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Community+Group+zones/">Zones</a></span></li>
+</ul>
+                                        </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavProject">
+            <div id="xwikinavProjectHeader" class="accordionTabTitleBar"><h6>Project</h6>
+            </div>
+            <div id="xwikinavProjectContent" class="accordionTabContentBox">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+adsl/">ADSL Modem Enhancement</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+arc%2Dprocess/">ARC Process Definition</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osarm/">ARM Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+adm/">Automatic Data Migration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bind/">BIND Update</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+bluetooth/">Bluetooth Stack & Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dinitiator/">Brocade FC HBA &#45; Initiator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brocade%2Dtarget/">Brocade FC HBA &#45; Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+brussels/">Brussels &#45; unified network link configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+caiman/">Caiman, Solaris Install Revisited</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+celeste/">Celeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cz/">Český portál</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Dchime/">Chime Visualization Tool for DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smbfs/">CIFS client for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cifs%2Dserver/">CIFS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+clearview/">Clearview: Network Interface Coherence</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dinformix/">Cluster Agent: Informix Dynamic Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dcontainer/">Cluster Agent: OpenSolaris Container</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dxvm/">Cluster Agent: OpenSolaris xVM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Debs/">Cluster Agent: Oracle E&#45;Business Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dpostgresql/">Cluster agent: PostgreSQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dsmb/">Cluster Agent: Samba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dtomcat/">Cluster Agent: Tomcat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cmt/">CMT</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+data%2Dflow/">Coarse Data Flow Parallelism</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+colorado/">Colorado: Open HA Cluster on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+commandassist/">Command Assistant</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cam/">Common Array Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+companion/">Companion &#45; /opt/sfw: Free and Open Source software</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+comstar/">COMSTAR: Common Multiprotocol SCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+content/">Content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+contest/">Contest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpufs/">CPU Observability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cpg/">Credentials Process Groups</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crossbow/">Crossbow: Network Virtualization and Resource Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmsagenttoolkit/">Crypto KMS Agent Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+crypto/">Cryptographic Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dmm/">Data Migration Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+datatethers/">Data Tethers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+de/">Deutsches Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ddtool/">Device Detection Tool</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+driver%2Dutility/">Device Driver Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devicemgr/">Device Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+devmapper/">Device Mapper</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dri/">Direct Rendering Infrastructure & 3D drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+dtrace%2Ddoc/">DTrace Guide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+duckwater/">Duckwater: Simplified name services management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+phpEasyTools/">Easy Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emancipation/">Emancipation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex/">Emulex Fibre Channel Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+emulex-cna/">Emulex Advanced Ethernet Device Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+intel%2Dplatform/">Enable/Enhance Solaris support for Intel Platform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webcams/">Enhance the support of USB webcams</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Dprofiles/">Enhanced SMF Profiles</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+amd/">Enhancements for AMD&#45;based Platforms</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+erlang%2Ddtrace/">Erlang DTrace Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ethbridge/">Ethernet bridge module for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+conary%2Deval/">Evaluate Conary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+events%2Dregistry/">Events Registry</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ext3/">Ext3 file system support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkgbase/">F/OSS Package Base</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+facilitation/">Facilitation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fcoe/">Fibre Channel over Ethernet</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fgap/">Fine Grained Access Policy (FGAP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fingerprint%2Dauthentication/">Fingerprint Authentication</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fmac/">Flexible Mandatory Access Control</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+forensics/">Forensic Tools</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fox/">Fully Open X Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fuse/">Fuse on Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gcore/">gcore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+generic%2Dmca/">Generic Machine Check Architecture Improvements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+summerofcode/">Google SOC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Djboss/">HA&#45;JBoss</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dmysql/">HA&#45;MySQL</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livehadoop/">Hadoop Live CD</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hitachi/">Hitachi</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+honeycomb/">HoneyComb Fixed Content Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+hpc%2Dstack/">HPC Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkg/">Image Packaging System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+perfmib/">Improved Performance MIB</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+indiana/">Indiana</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+awards/">Innovation Awards</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/">Input Method</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+intelgraphics/">Intel Graphics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ikev2/">Internet Key Exchange, version 2</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+irm/">Interrupt Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ip%2Drefactor/">IP Datapath Refactoring</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ipoib/">IP over Infiniband</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tref/">IPsec Tunnel Reform</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iser/">iSCSI Extensions for Remote DMA (iSER)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+isns/">iSNS Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jeos/">JeOS &#45; Just enough Operating System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jkstat/">JKstat &#45; a java binding for libkstat</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jfs/">Journaled File System (JFS)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kde/">K Desktop Environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kerberos/">Kerberos</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kernel%2Dsockets/">Kernel Sockets</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kssl/">Kernel SSL Enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kmf/">Key Management Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ksh93%2Dintegration/">Korn Shell 93 integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+txipsec/">Labeled IPsec</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+latencytop/">LatencyTOP</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+l2filter/">Layer 2 Filtering</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ldoms%2Dmgr/">LDoms Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lending/">Lending</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+libmicro/">libMicro &#45; portable microbenchmarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lld/">Link Layer Discovery</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+livemedia/">Live Media: Technologies for distributions running from CD and other media</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+localedata/">Locale Data</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+loficc/">lofi compression and cryptography support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+lx64/">lx64 brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mms/">Media Management System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mega_sas/">Mega_sas</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mx/">Mexico</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+milax/">MilaX minimal Live Distribution</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mips/">MIPS Platform Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mozilla%2Ddtrace/">Mozilla DTrace</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohac%2Davs/">MRSL.NONsharedDevice</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+glossary/">Multi&#45;lingual Glossary</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+mpxio/">Multi&#45;pathing software (MPxIO)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+large%2Dsector/">Multiple disk sector size support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+multiple%2Ddoi/">Multiple DOI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+muskoka/">Muskoka: An open repository for OpenSolaris technical content</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+navigator/">Navigator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nemo/">Nemo: A Framework for High&#45;Performance Networking</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nwam/">Network Auto&#45;Magic</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ndmp/">Network Data Management Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+net%2Dmib/">Network MIBs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npp/">Network Performance Projects</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nws/">Network Storage</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ntp/">Network Time Protocol (NTP)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nv%2Dg11n/">Nevada Globalization</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+4over6/">New Design of 4over6 Mechanism Based on OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsrdma/">NFS RDMA transport update and performance analysis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dzones/">NFS Server in non&#45;Global Zones</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfsv41/">NFS version 4.1 pNFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nfs%2Dnamespace/">NFSv4 namespace extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+nightingale/">Nightingale: Port Songbird to OpenSolaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+npiv/">NPort ID Virtualization (NPIV)</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+numa/">NUMA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+osd/">Object Storage Device (OSD) support for Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ohacge%2Dsbp/">OHACGE Script Based Plug&#45;in</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+onnv/">ON/Nevada (ONNV) Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opendev/">Open Development Infrastructure</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ha%2Dutilities/">Open HA Cluster Utilities</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opensound/">Open Sound System</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+opengrok/">OpenGrok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cim%2Dserver/">OpenPegasus CIM Server</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+openrti/">OpenRTI</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+busybox/">OpenSolaris Busybox</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jds/">OpenSolaris Desktop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+es/">OpenSolaris Hispano</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+audit/">OpenSolaris Security Audit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qemu/">OpenSolaris support for the QEMU processor emulator: host and guest</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pef/">PEF: Packet Event Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+performance%2Dwrappers/">Performance Wrappers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pkgfactory/">Pkgfactory</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pl/">Polski Portal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+fr/">Portail Francophone</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+br/">Portal Brasil</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+portals/">Portals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmui/">Power Management Usability Interfaces</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+presto/">Presto: Automatic Printing Configuration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+pmpsm/">Printable Many Page Solaris Manuals</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+promise%2Dstorage/">Promise SuperTrak RAID HBA Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+qlogic-cna/">QLogic Converged Network Adapter GLDv3 NIC Driver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+quagga/">Quagga Routing Protocol Suite Integration</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+raidcfg/">RAID Configuration Utility</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rbridges/">RBridge (IETF TRILL) support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rof/">RDMA Offload Framework</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+reno/">Reno: Login Process Enhancements for Interop</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+rm/">Resource Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+s10brand/">s10brand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+samqfs/">SAM/QFS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+scm%2Dmigration/">SCM Migration Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+srp/">SCSI RDMA Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sdcard%2Ddrivers/">SDcard Drivers</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sensors/">Sensor Abstraction Layer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+network%2Dsip/">Session Initiation Protocol</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sfwnv/">SFW</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+shell/">Shell: bourne shell, korn shell, C shell, etc.</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sierra/">Sierra: Intel WiFi Chipsets Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+simplepanels/">Simple Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sm%2Dhba/">SM&#45;HBA Based SAS HBA Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+smf%2Ddoc/">SMF Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+iscsitgt/">Solaris iSCSI Target</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ppc%2Ddev/">Solaris PowerPC Port</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sourcejuicer/">SourceJuicer</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sparks/">Sparks: name service switch/nscd enhancements</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+squashfs/">Squashfs</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+star/">Star integration/migration project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starfish/">Starfish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+starterkit/">Starter Kit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+storagepm/">Storage Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+sst/">Sun Security Toolkit</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+avs/">Sun StorageTek Availability Suite</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ofuv/">Support for OpenFabrics User Verbs / API on OpenSolaris OS</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+gccfss%2Don/">Support gcc4/GCCfss in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+suspend%2Dresume/">Suspend/Resume</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+svr4_packaging/">SVR4 Packaging</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+systemz/">Systemz</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tamarack/">Tamarack: Removable Media Enhancements in Solaris</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tesla/">Tesla: OpenSolaris Enhanced Power Management</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+test%2Ddev/">Test Development</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tickless/">Tickless Kernel Architecture</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tipc/">TIPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+branding/">Trademarks</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tnipdb/">Trusted networking interface policy database for Trusted Extensions</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+tpm/">Trusted Platform Module support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+usecase/">Use Case</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+valex/">Validated Execution Project</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vconsole/">Virtual Console</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vnm/">Virtual Network Machines</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vpanels/">Visual Panels</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+visualization%2Dhpc/">Visualization for HPC</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+volo/">Volo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vrrp/">VRRP: Virtual Router Redundancy Protocol Implementation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+vscan/">VSCAN service</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/">Web Stack</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+website/">Website</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+winchester/">Winchester: Schema mapping and ID mapping for AD Interoperability</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wusb/">Wireless USB Support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+wwan/">Wireless Wide Area Network</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x%2Dcons/">X Consolidation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+x86gentopo/">x86 Generic FMA Topology Enumerator</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xen%2Dgate/">Xen Gate</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+xfce/">Xfce: A lightweight desktop environment</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfsboot/">ZFS Boot and Install</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zfs%2Dcrypto/">ZFS on disk encryption support</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonemgr/">Zone Manager</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+zonestat/">Zone Statistics</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ru/">Русский портал</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+ar/">البوابة العربية</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+in/">भारतीय पोर्टल</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+cn/">中国门户</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+jp/">日本ポータル</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+kr/">한국 포탈</a></span></li>
+</ul>
+                                        </div>
+        </div>
+    </div>
+    <div id="xwikinav" class="accordion">
+        <div id="xwikinavUser Group">
+            <div id="xwikinavUser GroupHeader" class="accordionTabTitleBar"><h6>User Group</h6>
+            </div>
+            <div id="xwikinavUser GroupContent" class="accordionTabContentBox">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/User+Group+adl%2Dauosug/">Adelaide</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+aosug/">Argentina</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+azosug/">Arizona</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+atl%2Dosug/">Atlanta</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bwosug/">Baltimore&#45;Washington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bosug/">Bangalore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bkkosug/">Bangkok</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bdosug/">Bangladesh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bjosug/">Beijing</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+blmosug/">Bélem</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+brosug/">Berlin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+bvrm%2Dosug/">Bhimavaram</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+btn%2Dosug/">Bloomington</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+os_user_groups_amb/">Campus Ambassadors</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+crosug/">Capital Region</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cfosug/">Cardiff</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ceosug/">Ceara</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cltosug/">Charlotte</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cdosug/">Chengdu</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chennai/">Chennai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chmxosug/">Chihuahua</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+closug/">Chile</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cle%2Dosug/">Cleveland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+colosug/">Colombia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+cmh%2Dosug/">Columbus</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ctosug/">Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+knp%2Duek/">Cracow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+czosug/">Czech</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dfw%2Dosug/">Dallas/Ft. Worth</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+dosug/">Danish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+deosug/">Delaware</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+eduosug/">Edinburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+egosug/">Egypt</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fiosug/">Finland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+flosug/">Florida</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+frosug/">Front Range</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+fzosug/">FuZhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+glug/">Great Lakes</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+grosug/">Greece</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hzosug/">Hangzhou</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hi%2Dosug/">Hawaii</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hfosug/">HeFei</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hugs/">Houston</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hkosug/">Hong Kong</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+hosug/">Hyderabad</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+idosug/">Indonesia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ie%2Dosug/">Irish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+iosug/">Israel</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+itl%2Dosug/">Italian</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jnosug/">Jinan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+jogja-osug/">Jogja</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kbosug/">Kabul</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+kc%2Dosug/">Kansas City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+lavosug/">Latvia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+losug/">London</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+madosug/">Madurai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mansug/">Manchester</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mssosug/">Mato Grosso</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+msosug/">Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mgosug/">Minas Gerais</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mnosug/">Minnesota</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mtlosug/">Montreal</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mosug/">Moscow</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mmosug/">Mumbai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+mucosug/">Munich</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+neaosug/">NEA</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nlosug/">Netherlands</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ne%2Dosug/">New England</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nycosug/">New York City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nzosug/">New Zealand</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nit%2Dhamirpur%2Dosug/">NIT Hamirpur</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+norosug/">Noroeste</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+nerosug/">Nuremberg-Erlangen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+okcosug/">Oklahoma City</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ososug/">Osnabrück</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+peosug/">Peru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+paosug/">Philadelphia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+piaski%2Dosug/">Piaski</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ptosug/">Pittsburgh</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+poaosug/">Porto Alegre</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+psosug/">Puget Sound</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+posug/">Pune</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+qosug/">Queensland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+riosug/">Rio de Janeiro</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rtp%2Dosug/">Research Triangle Park</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ro%2Dosug/">Romania</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ruosug/">Russia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+alamo%2Dosug/">San Antonio</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sdosug/">San Diego</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sfosug/">San Francisco</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sampaosug/">São Paulo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+scosug/">Scottish</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+rs%2Dosug/">Serbia</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+shosug/">Shanghai</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szosug/">Shenzhen</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svosug/">Silicon Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sgosug/">Singapore</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+skosug/">Slovak</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+saosug/">South African</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+soctosug/">Southern Connecticut</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+stl%2Dosug/">St. Louis</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+svgosug/">Stavanger</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+swosug/">Sweden</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+chosug/">Switzerland</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+sosug/">Sydney</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+szc%2Dosug/">Szczecin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+twosug/">Taiwan</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ostug/">Tecum</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tvosug/">Thames Valley</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tsug/">Tokyo</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+torosug/">Toronto</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+trosug/">Trondheim</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+toss/">Tulsa</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+tosug/">Turkey</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+ufaosug/">Ufa</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+uaosug/">Ukraine</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+unimelb%2Dosug/">University of Melbourne</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+valeosug/">Vale do Paraíba</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vanosug/">Vancouver</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+vosug/">Venezuela</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wosug/">Welsh &#45; Cymru</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+wiosug/">Wisconsin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/User+Group+xaosug/">Xi'an</a></span></li>
+</ul>
+                                        </div>
+        </div>
+    </div>
+</div><p/><p/>
+<script type="text/javascript">
+var obj = {div:'xwikinav',no:-1,height:250};
+var acc = createAccordion(obj);
+</script>
+</div>
+</div>
+                        <div class="panel expanded Subsites">
+<h5 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.Subsites','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.Subsites'); togglePanelVisibility(this.parentNode);">Subsites</h5>
+<div class="xwikipanelcontents">
+<span class="wikiexternallink"><a href="http://cr.opensolaris.org">Code Reviews</a></span><br/>
+<span class="wikiexternallink"><a href="http://repo.opensolaris.org">Code Repositories</a></span><br/>
+<span class="wikiexternallink"><a href="http://pkg.opensolaris.org">Package Search</a></span><br/>
+<span class="wikiexternallink"><a href="http://bugs.opensolaris.org">Bugster</a></span><br/>
+<span class="wikiexternallink"><a href="http://defect.opensolaris.org">Bugzilla</a></span><br/>
+<span class="wikiexternallink"><a href="http://test.opensolaris.org">Test Machines</a></span><br/>
+<span class="wikiexternallink"><a href="http://planet.opensolaris.org">Planet</a></span><br/>
+<span class="wikiexternallink"><a href="http://mail.opensolaris.org">Mailing Lists</a></span><br/>
+<span class="wikiexternallink"><a href="http://poll.opensolaris.org">Elections & Polls</a></span><br/>
+<span class="wikiexternallink"><a href="http://arc.opensolaris.org">ARC Case Logs</a></span><br/>
+<span class="wikiexternallink"><a href="http://jucr.opensolaris.org">Source Juicer</a></span><br/>
+<span class="wikiexternallink"><a href="http://pkgfactory.opensolaris.org">Package Factory</a></span><br/>
+<span class="wikiexternallink"><a href="http://auth.opensolaris.org">User Authentication</a></span><br/>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h5 class="xwikipaneltitle" onclick="if(eltHasClass(this.parentNode, 'expanded')) createCookie('XWiki.XWikiGuest_Panels.OSDocs','collapsed', ''); else eraseCookie('XWiki.XWikiGuest_Panels.OSDocs'); togglePanelVisibility(this.parentNode);">Project input-method Pages</h5>
+<div class="xwikipanelcontents"><p/>
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/documents">Documents</a></span><ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/building_ibus">Build and use iBus</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/building_iiimf">Build IIIMF</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/building_scim">Build SCIM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/building_sunpinyin">Build SunPinyin</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/building_uim">Build UIM</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/howtos">Howtos</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_ime">SunPinyin代码导读&#45;IME部分</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_slm">SunPinyin代码导读&#45;SLM部分</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/sunpinyin_code_tour_slm_en">SunPinyin Code Tour &#45; SLM</a></span></li>
+</ul></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+input%2Dmethod/repository">Repository</a></span></li>
+</ul>
+            </div>
+</div>
+                        
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+  <div id="xwikilicence">&copy; Sun Microsystems Inc. 2009</div>
+          <div id="xwikiplatformversion">XWiki Enterprise 1.8.2.19075 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div> 
+    <div><a href="/bin/view/Main/tou">Terms Of Use</a> |
+         <a href="http://www.sun.com/privacy/">Privacy</a> | 
+         <a href="/bin/view/Main/trademark">Trademarks</a> |
+         <a href="/bin/view/Main/copyrights">Copyright Policy</a> |
+         <a href="/bin/view/Main/site_guidelines">Site Guidelines</a> |
+         <a href="/bin/view/Main/site%2Dmap">Site map</a> |
+         <a href="/bin/view/Main/help">Help</a></div>
+    <div>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.</div>
+<hr/>
+</div>
+
+</div></div></body>
+</html>

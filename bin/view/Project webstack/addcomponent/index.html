@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                    <title>Creating Web Stack Components (Project webstack.addcomponent) - XWiki</title>
+                <meta http-equiv="Content-Script-Type" content="text/javascript" />
+                        <meta http-equiv="imagetoolbar" content="no"/>
+                      <link rel="alternate" type="application/x-wiki" title="Edit" href="/bin/edit/Project+webstack/addcomponent" />
+                    <link rel="canonical" href="/bin/view/Project+webstack/addcomponent" />
+                            <meta name="document" content="Project webstack.addcomponent"/>
+    <meta name="wiki" content="xwiki"/>
+    <meta name="space" content="Project webstack"/>
+    <meta name="page" content="addcomponent"/>
+    <meta name="version" content="1.2"/>
+    <meta name="restURL" content="/rest/wikis/xwiki/spaces/Project+webstack/pages/addcomponent"/>
+                <meta name="gwt:property" content="locale=en" />
+                <meta name="revisit-after" content="7 days" />
+<meta name="description" content="Creating Web Stack Components" />
+<meta name="keywords" content="wiki " />
+<meta name="distribution" content="GLOBAL" />
+<meta name="rating" content="General" />
+<meta name="author" content="admin" />
+<meta http-equiv="reply-to" content="" />
+<meta name="language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="/bin/view/Main/WebRss?xpage=rdf" />
+<link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/bin/view/Blog/GlobalBlogRss?xpage=plain" />
+<link rel="shortcut icon" href="/resources/icons/oso/icon.png">
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<link href="https://markebrooks.github.io/static/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/style.css?colorTheme=ColorThemes.Oso" rel="stylesheet" type="text/css" media="all" />
+<link href="/bin/skin/skins/colibri/print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if IE]>
+  <link href="/bin/skin/skins/colibri/ie%2Dall.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/bin/skin/skins/colibri/ie%2D6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Settings?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/AnnotationCode/Style?language=en'/><link rel='stylesheet' type='text/css' href='/bin/ssx/XWiki/SharePage?language=en'/>
+<link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/modalPopup.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/js/xwiki/widgets/jumpToPage.css?language=en'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/confirmationBox.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/resources/uicomponents/widgets/notification.css'/><link rel='stylesheet' type='text/css' href='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.css'/>
+
+    
+    <link href="/bin/skin/resources/js/xwiki/suggest/ajaxSuggest.css" rel="stylesheet" type="text/css" />
+<link href="/bin/skin/resources/js/xwiki/lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+  <link href="/bin/skin/resources/js/xwiki/lightbox/lightboxIE.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/resources/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="/bin/skin/resources/js/xwiki/xwiki.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+XWiki.webapppath = "";
+XWiki.servletpath = "bin/";
+XWiki.contextPath = "";
+XWiki.mainWiki = "xwiki";
+XWiki.currentWiki = "xwiki";
+XWiki.currentSpace = "Project webstack";
+XWiki.currentPage = "addcomponent";
+XWiki.editor = "";
+XWiki.viewer = "";
+XWiki.contextaction = "view";
+XWiki.docisnew = false;
+XWiki.docsyntax = "xwiki/2.0";
+XWiki.blacklistedSpaces = [ "Import","Panels","Scheduler","Stats","XAppClasses","XAppSheets","XAppTemplates","XWiki","WatchCode","WatchSheets","XApp","WatchAdmin","Watch","ColorThemes","AnnotationCode" ];
+XWiki.hasEdit = false;
+XWiki.hasProgramming = false;
+XWiki.hasBackupPackImportRights = false;
+window.docviewurl = "/bin/view/Project+webstack/addcomponent";
+window.docediturl = "/bin/edit/Project+webstack/addcomponent";
+window.docsaveurl = "/bin/save/Project+webstack/addcomponent";
+window.docgeturl = "/bin/get/Project+webstack/addcomponent";
+// ]]>
+</script>
+<script type='text/javascript' src='/bin/skin/resources/js/scriptaculous/effects.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/modalPopup.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/js/xwiki/widgets/jumpToPage.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmationBox.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/confirmedAjaxRequest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/resources/uicomponents/widgets/notification.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/uicomponents/widgets/list/xlist.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/suggest/ajaxSuggest.js' defer='defer'></script>
+<script type='text/javascript' src='/bin/skin/skins/colibri/resources/uicomponents/viewers/tags.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/scriptaculous/scriptaculous.js' defer='defer'></script>
+<script type='text/javascript' src='/resources/js/xwiki/accordion/accordion.js' defer='defer'></script>
+
+<script type='text/javascript' src='/bin/jsx/XWiki/WebDAV?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Settings?language=en' defer='defer'></script>
+<script type='text/javascript' src='/bin/jsx/AnnotationCode/Script?language=en' defer='defer'></script>
+
+<script type="text/javascript" src="/resources/js/xwiki/compatibility.js" defer="defer"></script>
+
+  </head>
+  <body id="body" class="wiki-xwiki space-Project_webstack viewbody hideright">
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+
+  <div id="menuview">
+    <div id="mainmenu" class="layoutsubsection actionmenu">
+<strong id="xwikimenutitle" class="hidden">General Actions:</strong>
+<div class="rightmenu">
+      <div id="tmLogin" class="tmLogin topmenuentry ">
+   <a class="tme" href="https://auth.opensolaris.org/login.action?targetUrl=http%3A%2F%2Fmarkebrooks.github.io%2Fbin%2Fview%2FProject%2Bwebstack%2Faddcomponent"><strong>Log-in</strong></a>
+  </div>
+  </div>
+<div class="leftmenu">
+  <div id="tmWiki" class="tmWiki topmenuentry hasIcon">
+   <a class="tme" href="/bin/view/Main/"><strong>Wiki</strong></a>
+  </div>
+  <div id="tmSpace" class="tmSpace topmenuentry dropdownmenuentry  hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+webstack/"><strong>Project webstack</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+                <span class="submenuitem "><a href="/bin/view/Main/SpaceIndex?space=Project+webstack" id="tmSpaceDocumentIndex" class="tmSpaceDocumentIndex">Document Index</a></span>
+    </span></div>
+
+<div id="tmSubSites" class="tmSubSites topmenuentry dropdownmenuentry dropdownnolink hasIcon" onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Subsites</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem hasIcon"><a href="https://cr.opensolaris.org/" id="tmCR" class="tmCR">Code Reviews</a></span>
+<span class="submenuitem hasIcon"><a href="http://repo.opensolaris.org/" id="tmRepo" class="tmRepo">SCM Management</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkg.opensolaris.org/" id="tmPkg" class="tmPkg">Package Search</a></span>
+<span class="submenuitem hasIcon"><a href="http://bugs.opensolaris.org/" id="tmBugs" class="tmBugs">Bugster</a></span>
+<span class="submenuitem hasIcon"><a href="http://defect.opensolaris.org/" id="tmDefect" class="tmDefect">Bugzilla</a></span>
+<span class="submenuitem hasIcon"><a href="http://test.opensolaris.org/" id="tmTest" class="tmTest">Test Machines</a></span>
+<span class="submenuitem hasIcon"><a href="http://planet.opensolaris.org/" id="tmPlanet" class="tmPlanet">Planet</a></span>
+<span class="submenuitem hasIcon"><a href="http://mail.opensolaris.org/" id="tmMail" class="tmMail">Mailing Lists</a></span>
+<span class="submenuitem hasIcon"><a href="http://poll.opensolaris.org/" id="tmPoll" class="tmPoll">Elections &amp; Polls</a></span>
+<span class="submenuitem hasIcon"><a href="http://arc.opensolaris.org/" id="tmArc" class="tmArc">ARC Case Logs</a></span>
+<span class="submenuitem hasIcon"><a href="http://jucr.opensolaris.org/" id="tmJucr" class="tmJucr">Source Juicer</a></span>
+<span class="submenuitem hasIcon"><a href="http://pkgfactory.opensolaris.org/" id="tmPkgfactory" class="tmPkgfactory">Package Factory</a></span>
+<span class="submenuitem hasIcon"><a href="http://auth.opensolaris.org/" id="tmAuth" class="tmAuth">Auth</a></span>
+</span></div>
+
+</div>
+</div>
+
+  </div>
+ <div id="header" class="layoutsection">
+<div class="minwidthb"></div>
+
+  <div id="header">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 1%;">
+                 <a href="https://markebrooks.github.io/bin/view/Main/"><div id="logo"></div></a>  
+            </td>
+            <td id="logo-text" style="width: 1%;">
+                Solaris
+            </td>         
+            <td style="width: 98%;">
+                <table id="loading-indicator">
+                    <tr>
+                        <td><img src="https://markebrooks.github.io:443/static/images/busy.gif"
+                                 alt="Loading" title="Loading"/></td>
+                        <td>Loading...</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 1%;">
+                <table id="iconbar">
+                    <tr>
+                    <td><a id="collectives-icon" href="https://markebrooks.github.io/bin/view/Main/collectives">
+                        Collectives</a></td>
+                    <td><a id="discussions-icon" href="https://markebrooks.github.io/bin/view/Main/discussions">
+                            Discussions</a></td>
+                    <td><a id="documentation-icon" href="https://markebrooks.github.io/bin/view/Main/documentation">
+                            Documentation</a></td>
+                    <td><a id="download-icon" href="https://markebrooks.github.io/bin/view/Main/downloads">
+                            Download</a></td>
+                    <td><a id="source-browser-icon" href="http://src.opensolaris.org/source">
+                            Source Browser</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+ </div> 
+  <div id="globallinks">
+    <form action="/bin/view/Main/Search">
+      <div class="globalsearch">
+        <label class="hidden" for="headerglobalsearchinput">Search</label><input class="globalsearchinput withTip" id="headerglobalsearchinput" type="text" name="text" value="search..." size="15"/><input class="button" type="image" value="Go" alt="Go" src="/resources/icons/xwiki/search.png"/>
+      </div>
+    </form>
+  </div> <div style="float:left;">
+
+                
+
+   <div id="hierarchy">
+                  <span class='current'>Creating Web Stack Components</span>
+          </div>
+
+</div>
+  <span class="glink" id="headerlanguages" style="float:right">
+        <a href="/bin/view/Project+webstack/addcomponent?language=en" class="language-default language-current">en</a>
+    </span>
+
+
+<div class="contenthideright" id="contentcontainer">
+<div id="contentcontainerinner">
+<div class="leftsidecolumns">
+  <div id="contentcolumn"> 
+          <div class="main layoutsubsection">
+      <div id="contentmenu" class="actionmenu">
+    <strong id="xwikicontentmenutitle" class="hidden">Page Actions:</strong>
+<div class="rightmenu">
+</div>
+<div class="leftmenu">
+  <div id="tmExport" class="tmExport topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>Export</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/export/Project+webstack/addcomponent?format=pdf&amp;language=en" id="tmExportPdf" class="tmExportPdf">Export as PDF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+webstack/addcomponent?format=rtf&amp;language=en" id="tmExportRtf" class="tmExportRtf">Export as RTF</a></span>
+  <span class="submenuitem "><a href="/bin/export/Project+webstack/addcomponent?format=html&amp;language=en" id="tmExportHtml" class="tmExportHtml">Export as HTML</a></span>
+    </span></div>
+
+<div id="tmShow" class="tmShow topmenuentry dropdownmenuentry  " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme" href="/bin/view/Project+webstack/addcomponent?viewer=code&amp;language=en"><strong>View</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+<span class="submenuitem "><a href="/bin/view/Project+webstack/addcomponent?viewer=comments&amp;language=en" id="tmViewComments" class="tmViewComments">Comments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+webstack/addcomponent?viewer=attachments&amp;language=en" id="tmViewAttachments" class="tmViewAttachments">Attachments</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+webstack/addcomponent?viewer=history&amp;language=en" id="tmViewHistory" class="tmViewHistory">History</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+webstack/addcomponent?viewer=information&amp;language=en" id="tmViewInformation" class="tmViewInformation">Information</a></span>
+<span class="submenuitem "><a href="/bin/view/Project+webstack/addcomponent?viewer=code&amp;language=en" id="tmViewSource" class="tmViewSource">View Source</a></span>
+</span></div>
+
+  <div id="tmMoreActions" class="tmMoreActions topmenuentry dropdownmenuentry dropdownnolink " onmouseover="showsubmenu(this);" onmouseout="hidesubmenu(this);">
+<span class="tme-extensible">
+   <a class="tme"><strong>More actions</strong></a>
+    <span class="hidden menucolon">: </span>
+</span><span class="submenu hidden">
+  <span class="submenuitem "><a href="/bin/view/Project+webstack/addcomponent?xpage=print&amp;language=en" id="tmPrintPreview" class="tmPrintPreview">Print preview</a></span>
+          <span class="submenuitem "><a href="/bin/view/Project+webstack/addcomponent?xpage=copy" id="tmActionCopy" class="tmActionCopy">Copy</a></span>
+      </span></div>
+</div>
+
+    </div>
+    <div id="mainContentArea">
+      
+
+
+
+
+
+
+
+
+    
+<div id="document-title"><h1>Creating Web Stack Components</h1></div>
+
+
+
+
+
+              <div id="document-info">
+    <div>
+          </div>
+    <div class="clearfloats"></div>
+  </div>
+
+<div id="xwikicontent">
+<h2 id="HAddingacomponentintotheWebStackProjectRepository"><span>Adding a component into the Web Stack Project Repository</span></h2><p>The Web Stack Project Repository is here: <span class="wikiexternallink"><a href="http://pkg.opensolaris.org/webstack/"><span class="wikiexternallink"><a class="wikimodel-freestanding" href="http://pkg.opensolaris.org/webstack"><span class="wikigeneratedlinkcontent">http://pkg.opensolaris.org/webstack</span></a></span></a></span></p><p>If you are interested in adding a new web tier component (and becoming its maintainer), read on!</p><h3 id="HSummaryofSteps"><span>Summary of Steps</span></h3><ol><li>Sun legal approvals</li><li>Create a buildable workspace which can hook into Web Stack builds</li><li>Create a proposal, discuss with webstack-discuss</li><li>Request a Web Stack source repository and check it in</li><li>Iterate between community discussion and working on the build</li></ol><h3 id="HHigh-levelDetail"><span>High-level Detail</span></h3><ol><li>Sun legal approvals</li></ol><p>Unfortunately the first stage of the process can only be done inside Sun as it involves getting various internal approvals for publishing the component. Contact webstack-discuss to request a Sun employee to help process these approvals.</p><p>For external contributors, a <span class="wikilink"><a href="/bin/view/Main/oracle_contributor_agreement">contributor agreement</a></span> is also needed.</p><p>2. Create a Buildable Workspace</p><p>You'll probably start by creating a first cut of the build workspace privately just to explore what it takes to build the component and make it work since you will need some of this information in order to write a first draft proposal.</p><p>Strictly speaking the only requirements in order to hook up into the Web Stack build system are as follows:</p><ul><li>There must be a Makefile at the top level of the source tree.</li><li>The Web Stack RE process will set PKG_REPO to point to the relevant IPS repository and call 'make publish'. Thus, your Makefile must have a 'publish' target which will publish the built package into IPS.</li><li>The Web Stack RE process will set PKG_REPO to point to the relevant IPS repository and call 'make publish-src'. Thus, your Makefile must have a 'publish-src' target. Source packages are optional so this can be an empty target or a target which publishes a -source package to IPS.</li></ul><p>In practice, while not required, you should most likely take advantage of the webstack-dev-tools package which helps you accomplish this integration with much less manual work. Refer to the Build Details section later in this document for more information.</p><p>3. Proposal</p><p>Next, create a document describing the details of the package. Important details to include are:</p><ul><li>An introduction/summary of the component being proposed. What is it, what does it do, who will typically use it, some common use cases. This section should be short, but do provide enough information to those who are unfamiliar with the component to have a sense of what is it about.</li><li>File layout - what directories and files will the package deliver where? Which files can the user edit? What files can the component create during runtime? And any other file details...</li><li>Package name(s)</li><li>Configuration details - many components have a number of compile-time configuration options. Which ones will be enabled and/or disabled and why?</li><li>Dependencies - does the new component depend on any interfaces (APIs, file locations, CLIs and such) from any other components? Which ones?</li><li>Interfaces - what interfaces does this new component make available for consumers? How stable do you expect these interfaces to be over time? Read the <span class="wikilink"><a href="/bin/view/Community+Group+arc/interface%2Dtaxonomy">interface taxonomy</a></span> for some background on this.</li><li>In short, the proposal should serve as a draft for a possible future <span class="wikilink"><a href="/bin/view/Community+Group+arc/">ARC case</a></span>. While we don't require an approved ARC case for Web Stack project repository inclusion you'll want to write it with this purpose in mind because it'll help collect all the important information and if a decision is made to formalize the component later then you'll have the materials ready to go without duplicating effort. Check out some past Web Stack ARC cases for inspiration: <span class="wikicreatelink"><a href="/bin/create/Community+Group+arc/ruby%2Dtxt?parent=Project+webstack.addcomponent">Ruby</a></span>, <span class="wikicreatelink"><a href="/bin/create/Community+Group+arc/apache%2Dtxt?parent=Project+webstack.addcomponent">Apache 2.2.6 update</a></span>.</li></ul><p>The proposal and implementation can be done as an iterative process so don't worry about making a perfect proposal in the first draft. Start with just enough information so others on webstack-discuss can start giving feedback.</p><p>4. Repository</p><p>Request a source repository to be created for this project. If you have a contact already from step#1, ask the same person. Once it is ready, populate it with your build tree.</p><p>5. Iterate...</p><p>After the build is stable, we'll add it to the nightly build system which in turn will cause it to show up (a bit later) on the Web Stack project repository. Ask everyone to install the package and try it out and give feedback. Continue improving the integration details until everyone is happy ;-)</p><h3 id="HBuildDetails"><span>Build Details</span></h3><p>Note we may have (at least) two kinds of source repositories under Web Stack. This document covers components which only support building for (and on) OpenSolaris. There will be some component repositories which support multi-platform builds because they are also used for the <span class="wikiexternallink"><a href="http://www.sun.com/software/solaris/amp/">Sun Web Stack</a></span> product. This will be documented elsewhere.</p><p>As mentioned in the previous section, technically the only build requirement is the component must support a 'publish' target and a 'publish-src' target (which may be empty).</p><p>But in practice you will want to both conform to the layout and style of other Web Stack components and you'll want to leverage the webstack-dev-tools package if at all possible.</p><p>A build system is best described by example, so use existing Web Stack components such as varnish, nginx or others as a template when creating a new one.</p><p>Some key points to follow:</p><ul><li>Store the upstream source archive (tarball) <strong>as-is</strong> at the top level of the source tree.</li><li>Add target to 'extract' the tarball into ./build/$COMPONENTNAME/ dir.</li><li>Add target to 'configure' (if applicable) it and 'build' it. If you must change the source (try to avoid it), create a 'patches' directory and store your patch files (one patch per bug) in there and apply them before building. Never modify the upstream tarball.</li><li>Avoid generating any build-time content outside of the ./build/ directory. This way we can just add 'build' to .hgignore.</li><li>Add a target to 'install' the component into ./build/proto/ directory. The ./build/proto/ dir contains all the filesystem entries delivered by this component. For example if the package will deliver /usr/bin/foo, you'll have ./build/proto/usr/bin/foo. There are two approaches for doing the 'install' target:<ul><li>(Preferred!) Use wsproto tool by creating a template file (./etc/wsproto.data) which specifies the layout and files and package details. The just call wsproto from the 'install' target to do the work. Again, examples help here more than text so take a look at existing Web Stack components. Also, after installing the webstack-dev-tools package ('pkg install webstack-dev-tools') read the comments on /usr/bin/wsproto for the latest info on how to use it.</li><li>Alternatively, use the 'make install' target provided by most upstream components to install it into ./build/proto/ area. While this may work well most of the time, you'll want to avoid it if at all possible due to the next step.</li></ul></li><li>Add a target to 'publish' the component into IPS. If you used wsproto above, your work is done already. Simply call the ./build/proto/publish script which wsproto created and it takes care of publishing the package to IPS. If not, you'll have to manually handle defining and publishing the package to IPS. So try to use wsproto (if it doesn't work let us know why and hopefully it can be enhanced instead).</li><li>If you want to support a -source package add a publish-src target to publish it. If not, just create an empty publish-src target. webstack-dev-tools includes 'wsmksrc', a tool to help set up the source packages. At this point it is fairly rudimentary though and source packages are themselves just an experiment, so they're not required.</li><li>Create a METADATA toplevel file containing the OSR number and BUILDDEPS packages.</li></ul><p>Please note the Web Stack build infrastructure (layout, tools and invocation) are all relatively new and subject to continuous improvement. We'll almost certainly change it a number of times in ways that break the builds. We'll either fix your build or work with you to fix it, but do be prepared for some growing pains.</p>
+</div>
+
+
+    <div class="clearfloats"></div>
+  </div>      <div id="xdocFooter">
+  
+                
+
+       <div class="doc-tags" id="xdocTags">
+        Tags:
+        </div>
+  
+  <div id="xdocAuthors">
+    <div class="xdocCreation">       Created by admin on 2009/10/26 12:18<br/>
+          </div>
+    <div class="xdocLastModification">       Last modified by admin on 2010/11/10 15:11
+    </div>
+  </div>
+</div>
+<div id="xwikidata" class="layoutsubsection">
+        </div>  
+    </div>      </div><div id="leftPanels" class="panels left">
+                  <div class="panel expanded OSNav">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSNav');">Collectives</h1>
+<div class="xwikipanelcontents">
+<div id="xwikinavcontainer">
+<span class="wikilink"><a href="/bin/view/Main/communities">Community Groups</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/projects">Projects</a></span><br/>
+<span class="wikilink"><a href="/bin/view/Main/usergroups">User Groups</a></span>
+</div><p/>
+<script type="text/javascript">
+document.observe('xwiki:dom:loaded', function() {
+var obj = {div:'xwikinav',no:$count,height:250};
+var acc = createAccordion(obj);
+});
+</script>
+</div>
+</div>
+                        <div class="panel expanded OSDocs">
+<h1 class="xwikipaneltitle" onclick="XWiki.togglePanelVisibility(this.parentNode, 'XWiki.XWikiGuest_Panels.OSDocs');">Project webstack Pages</h1>
+<div class="xwikipanelcontents">
+<ul class="star">
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/Documentation">Documentation</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/Links">Useful Links</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/Mailing_LIsts">Mailing Lists</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/addcomponent">Creating Web Stack Components</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/coolstack">Cool Stack Info</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/files">Files</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/license">Web Stack License</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/repository">Web Stack Project Repository</a></span></li>
+<li><span class="wikilink"><a href="/bin/view/Project+webstack/sunwebstack">Sun Web Stack</a></span></li>
+</ul>
+                              </div>
+</div>
+      </div>
+
+  </div>
+<div class="clearfloats"></div>
+  </div></div><div id="footerglobal" class="layoutsection">
+<div class="minwidth"></div>
+<hr/>
+        <div id="xwikiplatformversion">XWiki Enterprise 2.7.1.34853 - <a onclick="openURL('http://enterprise.xwiki.org/xwiki/bin/view/Main/Documentation', '_blank'); return false;" href="http://www.xwiki.org/xwiki/bin/view/Main/Documentation">Documentation</a></div>
+<br/>
+  
+      <div id="footer">
+    <p>
+                <a href="https://markebrooks.github.io/bin/view/Main/tou/">Terms of Use</a>
+                |
+                <a href="http://www.oracle.com/html/privacy.html">Privacy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/trademark/">Trademarks</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/copyrights/">Copyright Policy</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site_guidelines/">Site Guidelines</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/site-map/">Site Map</a>
+                |
+                <a href="https://markebrooks.github.io/bin/view/Main/help/">Help</a>
+                <br/>Your use of this web site or any of its content or software indicates your agreement to be bound by these Terms of Use.<br/>
+                &copy; 2012, Oracle Corporation and/or its affiliates.<br/><img src="https://markebrooks.github.io:443/static/images/logo_oracle_footer.gif" alt="Oracle Logo"/>
+            </p>
+        </div>
+
+  
+</div>
+
+</div></div></body>
+</html>
